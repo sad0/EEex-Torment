@@ -14593,7 +14593,7 @@
 },
 "CVisibilityMap": {
 "bg_size": 112,
-"pt_size": 112,
+"pt_size": 120,
 "items": {
 "m_pMap": {
 "bg": 0,
@@ -15722,21 +15722,21 @@
 },
 "CAIScript": {
 "bg_size": 64,
-"pt_size": null,
+"pt_size": 64,
 "items": {
 "cResRef": {
 "bg": 0,
-"pt": null,
+"pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": null
+"how": "manual"
 },
 "m_caList": {
 "bg": 8,
-"pt": null,
+"pt": 8,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAIConditionResponse*>",
-"how": null
+"how": "adjacent"
 }
 }
 },
@@ -25744,1466 +25744,1466 @@
 },
 "m_tSkillPointsRace": {
 "bg": 392,
-"pt": null,
+"pt": 1136,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSkillPointsDex": {
 "bg": 448,
-"pt": null,
+"pt": 1192,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSkillPointsBard": {
 "bg": 504,
-"pt": null,
+"pt": 1248,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSkillPointsRanger": {
 "bg": 560,
-"pt": null,
+"pt": 1304,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSkillPointsShaman": {
 "bg": 616,
-"pt": null,
+"pt": 1360,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAbilityRaceReq": {
 "bg": 672,
-"pt": null,
+"pt": 1416,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tAbilityRaceAdj": {
 "bg": 728,
-"pt": null,
+"pt": 1472,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tAbilityClassReq": {
 "bg": 784,
-"pt": null,
+"pt": 1528,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tAbilityClassMod": {
 "bg": 840,
-"pt": null,
+"pt": 1584,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tAbilityDualClassSrcReq": {
 "bg": 896,
-"pt": null,
+"pt": 1640,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAbilityDualClassDstReq": {
 "bg": 952,
-"pt": null,
+"pt": 1696,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowPriest": {
 "bg": 1008,
-"pt": null,
+"pt": 1752,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowWarrior": {
 "bg": 1064,
-"pt": null,
+"pt": 1808,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowWizard": {
 "bg": 1120,
-"pt": null,
+"pt": 1864,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowRogue": {
 "bg": 1176,
-"pt": null,
+"pt": 1920,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tSavingThrowDwarfHalfling": {
 "bg": 1232,
-"pt": null,
+"pt": 1976,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowGnome": {
 "bg": 1288,
-"pt": null,
+"pt": 2032,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSavingThrowMonk": {
 "bg": 1344,
-"pt": null,
+"pt": 2088,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tClassHitPointsTables": {
 "bg": 1400,
-"pt": null,
+"pt": 2144,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tHitPointsCONBonus": {
 "bg": 1456,
-"pt": null,
+"pt": 2200,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tStartingGold": {
 "bg": 1512,
-"pt": null,
+"pt": 2256,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tTHAC0": {
 "bg": 1568,
-"pt": null,
+"pt": 2312,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsPriest": {
 "bg": 1624,
-"pt": null,
+"pt": 2368,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsPriestPaladin": {
 "bg": 1680,
-"pt": null,
+"pt": 2424,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsPriestRanger": {
 "bg": 1736,
-"pt": null,
+"pt": 2480,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tMaxSpellsMage": {
 "bg": 1792,
-"pt": null,
+"pt": 2536,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsMageBard": {
 "bg": 1848,
-"pt": null,
+"pt": 2592,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsMageSorcerer": {
 "bg": 1904,
-"pt": null,
+"pt": 2648,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsMageDragonDisciple": {
 "bg": 1960,
-"pt": null,
+"pt": 2704,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsShaman": {
 "bg": 2016,
-"pt": null,
+"pt": 2760,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tMaxSpellsPriestWISBonus": {
 "bg": 2072,
-"pt": null,
+"pt": 2816,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMaxSpellsPriestDruid": {
 "bg": 2128,
-"pt": null,
+"pt": 2872,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tKnownSpellsSorcerer": {
 "bg": 2184,
-"pt": null,
+"pt": 2928,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tKnownSpellsShaman": {
 "bg": 2240,
-"pt": null,
+"pt": 2984,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tBackstabMultiplier": {
 "bg": 2296,
-"pt": null,
+"pt": 3040,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tSneakAttack": {
 "bg": 2352,
-"pt": null,
+"pt": 3096,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tCripplingStrike": {
 "bg": 2408,
-"pt": null,
+"pt": 3152,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tExperienceLevels": {
 "bg": 2464,
-"pt": null,
+"pt": 3208,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tLayOnHandsAmount": {
 "bg": 2520,
-"pt": null,
+"pt": 3264,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_lInstantActions": {
 "bg": 2576,
-"pt": null,
+"pt": 3320,
 "size": 112,
 "type": "CAIIdList",
-"how": null
+"how": "adjacent"
 },
 "m_lAllowWhileSleepingActions": {
 "bg": 2688,
-"pt": null,
+"pt": 3432,
 "size": 112,
 "type": "CAIIdList",
-"how": null
+"how": "extrap"
 },
 "m_tMonsterSummon1": {
 "bg": 2800,
-"pt": null,
+"pt": 3544,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMonsterSummon2": {
 "bg": 2856,
-"pt": null,
+"pt": 3600,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMonsterSummon3": {
 "bg": 2912,
-"pt": null,
+"pt": 3656,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAnimalSummon1": {
 "bg": 2968,
-"pt": null,
+"pt": 3712,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tAnimalSummon2": {
 "bg": 3024,
-"pt": null,
+"pt": 3768,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tStrengthMod": {
 "bg": 3080,
-"pt": null,
+"pt": 3824,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tStrengthModExtra": {
 "bg": 3136,
-"pt": null,
+"pt": 3880,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tIntoxicationMod": {
 "bg": 3192,
-"pt": null,
+"pt": 3936,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tFatigueMod": {
 "bg": 3248,
-"pt": null,
+"pt": 3992,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tEffectText": {
 "bg": 3304,
-"pt": null,
+"pt": 4048,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tPlayerInteraction": {
 "bg": 3360,
-"pt": null,
+"pt": 4104,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tNumSpells": {
 "bg": 3416,
-"pt": null,
+"pt": 4160,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tToolTips": {
 "bg": 3472,
-"pt": null,
+"pt": 4216,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tStartArea": {
 "bg": 3528,
-"pt": null,
+"pt": 4272,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tStartPos": {
 "bg": 3584,
-"pt": null,
+"pt": 4328,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tSparkleColors": {
 "bg": 3640,
-"pt": null,
+"pt": 4384,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tMonths": {
 "bg": 3696,
-"pt": null,
+"pt": 4440,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "extrap"
 },
 "m_tYears": {
 "bg": 3752,
-"pt": null,
+"pt": 4496,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tDexterityMod": {
 "bg": 3808,
-"pt": null,
+"pt": 4552,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "manual"
 },
 "m_tPostDialog": {
 "bg": 3864,
-"pt": null,
+"pt": 4608,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tCharacterSounds": {
 "bg": 3920,
-"pt": null,
+"pt": 4664,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomEquipment": {
 "bg": 3976,
-"pt": null,
+"pt": 4720,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomTreasure": {
 "bg": 4032,
-"pt": null,
+"pt": 4776,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomTreasureIWD": {
 "bg": 4088,
-"pt": null,
+"pt": 4832,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomMagic": {
 "bg": 4144,
-"pt": null,
+"pt": 4888,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomScroll": {
 "bg": 4200,
-"pt": null,
+"pt": 4944,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tRandomWeapon": {
 "bg": 4256,
-"pt": null,
+"pt": 5000,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tInteractionDialog": {
 "bg": 4312,
-"pt": null,
+"pt": 5056,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tIntelligenceMod": {
 "bg": 4368,
-"pt": null,
+"pt": 5112,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tDonateRumor": {
 "bg": 4424,
-"pt": null,
+"pt": 5168,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAreaLinkageCaching": {
 "bg": 4480,
-"pt": null,
+"pt": 5224,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAreaLinkageCachingSingle": {
 "bg": 4536,
-"pt": null,
+"pt": 5280,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tCacheValidation": {
 "bg": 4592,
-"pt": null,
+"pt": 5336,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tScriptDescription": {
 "bg": 4648,
-"pt": null,
+"pt": 5392,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tCharacterStateDescription": {
 "bg": 4704,
-"pt": null,
+"pt": 5448,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tMasterArea": {
 "bg": 4760,
-"pt": null,
+"pt": 5504,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tMovieDescription": {
 "bg": 4816,
-"pt": null,
+"pt": 5560,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tSpellDescription": {
 "bg": 4872,
-"pt": null,
+"pt": 5616,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tBountyChance": {
 "bg": 4928,
-"pt": null,
+"pt": 5672,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tNPCLevel": {
 "bg": 4984,
-"pt": null,
+"pt": 5728,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tNPCLevel25": {
 "bg": 5040,
-"pt": null,
+"pt": 5784,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tDeathSounds": {
 "bg": 5096,
-"pt": null,
+"pt": 5840,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tAlignment": {
 "bg": 5152,
-"pt": null,
+"pt": 5896,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tReputationStoreMod": {
 "bg": 5208,
-"pt": null,
+"pt": 5952,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tReputationStart": {
 "bg": 5264,
-"pt": null,
+"pt": 6008,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tXPCap": {
 "bg": 5320,
-"pt": null,
+"pt": 6064,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "adjacent"
 },
 "m_tWeaponSpecialization": {
 "bg": 5376,
-"pt": null,
+"pt": 6176,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "manual"
 },
 "m_tWeaponAttacks": {
 "bg": 5432,
-"pt": null,
+"pt": 6232,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tLore": {
 "bg": 5488,
-"pt": null,
+"pt": 6288,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tLoreBonus": {
 "bg": 5544,
-"pt": null,
+"pt": 6344,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tCharismaStoreMod": {
 "bg": 5600,
-"pt": null,
+"pt": 6400,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tRaiseDeadCost": {
 "bg": 5656,
-"pt": null,
+"pt": 6456,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tHappiness": {
 "bg": 5712,
-"pt": null,
+"pt": 6512,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tReputationDescription": {
 "bg": 5768,
-"pt": null,
+"pt": 6568,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tPortraitReplacement": {
 "bg": 5824,
-"pt": null,
+"pt": 6624,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tIntoxication": {
 "bg": 5880,
-"pt": null,
+"pt": 6680,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tCustomSound": {
 "bg": 5936,
-"pt": null,
+"pt": 6736,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tExclusiveItems": {
 "bg": 5992,
-"pt": null,
+"pt": 6792,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_lChaseActions": {
 "bg": 6048,
-"pt": null,
+"pt": 6848,
 "size": 112,
 "type": "CAIIdList",
-"how": null
+"how": "interp"
 },
 "m_lVEFProjectile": {
 "bg": 6160,
-"pt": null,
+"pt": 6960,
 "size": 112,
 "type": "CAIIdList",
-"how": null
+"how": "interp"
 },
 "m_lProjectile": {
 "bg": 6272,
-"pt": null,
+"pt": 7072,
 "size": 112,
 "type": "CAIIdList",
-"how": null
+"how": "interp"
 },
 "m_tContingencyConditions": {
 "bg": 6384,
-"pt": null,
+"pt": 7184,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tContingencyTargets": {
 "bg": 6440,
-"pt": null,
+"pt": 7240,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tAbilitiesStart": {
 "bg": 6496,
-"pt": null,
+"pt": 7296,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tWeaponProficiencies": {
 "bg": 6552,
-"pt": null,
+"pt": 7352,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesFighterTrue": {
 "bg": 6608,
-"pt": null,
+"pt": 7408,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesFighterBerserker": {
 "bg": 6664,
-"pt": null,
+"pt": 7464,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesFighterWizardslayer": {
 "bg": 6720,
-"pt": null,
+"pt": 7520,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesFighterKensai": {
 "bg": 6776,
-"pt": null,
+"pt": 7576,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesPaladinTrue": {
 "bg": 6832,
-"pt": null,
+"pt": 7632,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesPaladinCavalier": {
 "bg": 6888,
-"pt": null,
+"pt": 7688,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesPaladinInquisitor": {
 "bg": 6944,
-"pt": null,
+"pt": 7744,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesPaladinUndeadhunter": {
 "bg": 7000,
-"pt": null,
+"pt": 7800,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesPaladinFallen": {
 "bg": 7056,
-"pt": null,
+"pt": 7856,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesRangerTrue": {
 "bg": 7112,
-"pt": null,
+"pt": 7912,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesRangerFeralan": {
 "bg": 7168,
-"pt": null,
+"pt": 7968,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesRangerStalker": {
 "bg": 7224,
-"pt": null,
+"pt": 8024,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesRangerBeastmaster": {
 "bg": 7280,
-"pt": null,
+"pt": 8080,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesRangerFallen": {
 "bg": 7336,
-"pt": null,
+"pt": 8136,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesThiefTrue": {
 "bg": 7392,
-"pt": null,
+"pt": 8192,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesThiefAssassin": {
 "bg": 7448,
-"pt": null,
+"pt": 8248,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesThiefBountyhunter": {
 "bg": 7504,
-"pt": null,
+"pt": 8304,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesThiefSwashbuckler": {
 "bg": 7560,
-"pt": null,
+"pt": 8360,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesBardTrue": {
 "bg": 7616,
-"pt": null,
+"pt": 8416,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesBardBlade": {
 "bg": 7672,
-"pt": null,
+"pt": 8472,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesBardJester": {
 "bg": 7728,
-"pt": null,
+"pt": 8528,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesBardSkald": {
 "bg": 7784,
-"pt": null,
+"pt": 8584,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesDruidTrue": {
 "bg": 7840,
-"pt": null,
+"pt": 8640,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesShamanTrue": {
 "bg": 7896,
-"pt": null,
+"pt": 8696,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesDruidTotemicdruid": {
 "bg": 7952,
-"pt": null,
+"pt": 8752,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesDruidShapeshifter": {
 "bg": 8008,
-"pt": null,
+"pt": 8808,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesDruidBeastfriend": {
 "bg": 8064,
-"pt": null,
+"pt": 8864,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesClericTrue": {
 "bg": 8120,
-"pt": null,
+"pt": 8920,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesClericTalos": {
 "bg": 8176,
-"pt": null,
+"pt": 8976,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesClericHelm": {
 "bg": 8232,
-"pt": null,
+"pt": 9032,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesClericLathander": {
 "bg": 8288,
-"pt": null,
+"pt": 9088,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageTrue": {
 "bg": 8344,
-"pt": null,
+"pt": 9144,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageAbjurer": {
 "bg": 8400,
-"pt": null,
+"pt": 9200,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageNecromancer": {
 "bg": 8456,
-"pt": null,
+"pt": 9256,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageTransmuter": {
 "bg": 8512,
-"pt": null,
+"pt": 9312,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageDiviner": {
 "bg": 8568,
-"pt": null,
+"pt": 9368,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageConjurer": {
 "bg": 8624,
-"pt": null,
+"pt": 9424,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageInvoker": {
 "bg": 8680,
-"pt": null,
+"pt": 9480,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageIllusionist": {
 "bg": 8736,
-"pt": null,
+"pt": 9536,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMageEnchanter": {
 "bg": 8792,
-"pt": null,
+"pt": 9592,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMonkTrue": {
 "bg": 8848,
-"pt": null,
+"pt": 9648,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMonkDarkMoon": {
 "bg": 8904,
-"pt": null,
+"pt": 9704,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesMonkSunSoul": {
 "bg": 8960,
-"pt": null,
+"pt": 9760,
 "size": 56,
 "type": "C2DArray",
-"how": null
+"how": "interp"
 },
 "m_tClassAbilitiesBarbarianTrue": {
 "bg": 9016,
 "pt": 9816,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSpellAutmaticPicker": {
 "bg": 9072,
 "pt": 9872,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSpellAutmaticPickerShaman": {
 "bg": 9128,
 "pt": 9928,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tDualClassAllowed": {
 "bg": 9184,
 "pt": 9984,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tRandomColors": {
 "bg": 9240,
 "pt": 10040,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSpawnGroup": {
 "bg": 9296,
 "pt": 10096,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tItemUseAnimation": {
 "bg": 9352,
 "pt": 10152,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tRangerHatedRace": {
 "bg": 9408,
 "pt": 10208,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tXPBonus": {
 "bg": 9464,
 "pt": 10264,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tCleanAir": {
 "bg": 9520,
 "pt": 10320,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSplashScreens": {
 "bg": 9576,
 "pt": 10376,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tLevelModWildMage": {
 "bg": 9632,
 "pt": 10432,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tKitTable": {
 "bg": 9688,
 "pt": 10488,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tKitList": {
 "bg": 9744,
 "pt": 10544,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_apKitList": {
 "bg": 9800,
 "pt": 10600,
 "size": 2048,
 "type": "Array<C2DArray*,256>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSoundEnvironmentResRef": {
 "bg": 11848,
 "pt": 12648,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSoundEnvironmentEnvirons": {
 "bg": 11904,
 "pt": 12704,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tItemDialog": {
 "bg": 11960,
 "pt": 12760,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tLoadingHints": {
 "bg": 12016,
 "pt": 12816,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSchoolMessage": {
 "bg": 12072,
 "pt": 12872,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSecTypeMessage": {
 "bg": 12128,
 "pt": 12928,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tContingencyExceptions": {
 "bg": 12184,
 "pt": 12984,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tClassAbbreviations": {
 "bg": 12240,
 "pt": 13040,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tNumLevelUpAbilities": {
 "bg": 12296,
 "pt": 13096,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tXPList": {
 "bg": 12352,
 "pt": 13152,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tTracking": {
 "bg": 12408,
 "pt": 13208,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tMovieSoundOverride": {
 "bg": 12464,
 "pt": 13264,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_t25StartEquipment": {
 "bg": 12520,
 "pt": 13320,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tWish": {
 "bg": 12576,
 "pt": 13376,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tEntries": {
 "bg": 12632,
 "pt": 13432,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tLoadingHints25": {
 "bg": 12688,
 "pt": 13488,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tStartingWeapon": {
 "bg": 12744,
 "pt": 13544,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tFamiliars": {
 "bg": 12800,
 "pt": 13600,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tThiefSkills": {
 "bg": 12856,
 "pt": 13656,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tThiefScaling": {
 "bg": 12912,
 "pt": 13712,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tClassTHAC0": {
 "bg": 12968,
 "pt": 13768,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tClassInnateSkills": {
 "bg": 13024,
 "pt": 13824,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tTBPStartparty": {
 "bg": 13080,
 "pt": 13880,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tExtraAnimations": {
 "bg": 13136,
 "pt": 13936,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tExtraAnimationSpeeds": {
 "bg": 13192,
 "pt": 13992,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tWildMagic": {
 "bg": 13248,
 "pt": 14048,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tItemType": {
 "bg": 13304,
 "pt": 14104,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tRaceTHAC0Bonus": {
 "bg": 13360,
 "pt": 14160,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tClassColours": {
 "bg": 13416,
 "pt": 14216,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tRaceColours": {
 "bg": 13472,
 "pt": 14272,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSlotSteal": {
 "bg": 13528,
 "pt": 14328,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tNumWeaponSlots": {
 "bg": 13584,
 "pt": 14384,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tItemUse": {
 "bg": 13640,
 "pt": 14440,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tRaceText": {
 "bg": 13696,
 "pt": 14496,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tTokenText": {
 "bg": 13752,
 "pt": 14552,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tClassText": {
 "bg": 13808,
 "pt": 14608,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSetSnareLimit": {
 "bg": 13864,
 "pt": 14664,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSummonLimit": {
 "bg": 13920,
 "pt": 14720,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tWeaponStyleBonus": {
 "bg": 13976,
 "pt": 14776,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tBanterTimings": {
 "bg": 14032,
 "pt": 14832,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tClassRaceRestrictions": {
 "bg": 14088,
 "pt": 14888,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tMageRaceRestrictions": {
 "bg": 14144,
 "pt": 14944,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tClassSpecialBonuses": {
 "bg": 14200,
 "pt": 15000,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tMonkFists": {
 "bg": 14256,
 "pt": 15056,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "interp"
 },
 "m_tSpellsToHide": {
 "bg": 14312,
 "pt": 15112,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSpellProtections": {
 "bg": 14368,
@@ -28725,59 +28725,59 @@
 },
 "lEngines": {
 "bg": 88,
-"pt": null,
+"pt": 80,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CWarp*>",
-"how": "adjacent"
+"how": "manual"
 },
 "nIterations": {
 "bg": 144,
-"pt": 132,
+"pt": 136,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "interp"
 },
 "pStartingEngine": {
 "bg": 152,
 "pt": 144,
 "size": 8,
 "type": "CWarp*",
-"how": "adjacent"
+"how": "interp"
 },
 "nTimer": {
 "bg": 160,
 "pt": 152,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "interp"
 },
 "nTimerRes": {
 "bg": 164,
 "pt": 156,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_sCommandLine": {
 "bg": 168,
 "pt": 160,
 "size": 8,
 "type": "CString",
-"how": "adjacent"
+"how": "interp"
 },
 "m_rClient": {
 "bg": 176,
 "pt": 168,
 "size": 16,
 "type": "CRect",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bReInitializing": {
 "bg": 192,
 "pt": 184,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bScreenEdgeScroll": {
 "bg": 193,
@@ -29166,21 +29166,21 @@
 },
 "bPointerUpdated": {
 "bg": 3988,
-"pt": 4044,
+"pt": null,
 "size": 4,
 "type": "int",
 "how": "evidence"
 },
 "cMousePosition": {
 "bg": 3992,
-"pt": 4048,
+"pt": null,
 "size": 8,
 "type": "CPoint",
 "how": "evidence"
 },
 "nAUCounter": {
 "bg": 4000,
-"pt": 4056,
+"pt": null,
 "size": 4,
 "type": "int",
 "how": "evidence"
@@ -29194,10 +29194,10 @@
 },
 "m_AIStale": {
 "bg": 4008,
-"pt": null,
+"pt": 4040,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_displayStale": {
 "bg": 4012,
@@ -29783,7 +29783,7 @@
 },
 "CInfinity": {
 "bg_size": 1176,
-"pt_size": 1104,
+"pt_size": 1120,
 "items": {
 "pTileSets": {
 "bg": 0,
@@ -30214,10 +30214,10 @@
 },
 "m_nLastTickCount": {
 "bg": 752,
-"pt": null,
+"pt": 688,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_ptCurrentPosExact": {
 "bg": 756,
@@ -30231,42 +30231,42 @@
 "pt": 700,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "interp"
 },
 "m_ptScrollDest": {
 "bg": 768,
-"pt": null,
+"pt": 704,
 "size": 8,
 "type": "CPoint",
-"how": null
+"how": "manual"
 },
 "m_nScrollAttempts": {
 "bg": 776,
-"pt": null,
+"pt": 712,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_nOldScrollState": {
 "bg": 780,
-"pt": null,
+"pt": 716,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_nScrollDelay": {
 "bg": 784,
-"pt": null,
+"pt": 720,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_bMovieBroadcast": {
 "bg": 785,
-"pt": null,
+"pt": 721,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_bStartLightning": {
 "bg": 788,
@@ -30924,42 +30924,42 @@
 },
 "CGameSpriteEquipment": {
 "bg_size": 336,
-"pt_size": 336,
+"pt_size": 32,
 "items": {
 "m_items": {
 "bg": 0,
 "pt": 0,
-"size": 312,
+"size": 8,
 "type": "Array<CItem*,39>",
-"how": "assumed"
+"how": "manual"
 },
 "m_selectedWeapon": {
 "bg": 312,
-"pt": 312,
+"pt": 8,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_selectedWeaponAbility": {
 "bg": 314,
-"pt": 314,
+"pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_pTempItem": {
 "bg": 320,
-"pt": 320,
+"pt": 16,
 "size": 8,
 "type": "CItem*",
-"how": "assumed"
+"how": "manual"
 },
 "m_pSprite": {
 "bg": 328,
-"pt": 328,
+"pt": 24,
 "size": 8,
 "type": "CGameSprite*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -31694,42 +31694,42 @@
 "pt": null,
 "size": 8,
 "type": "CPathSearch*",
-"how": null
+"how": "adjacent"
 },
 "m_listGrid": {
 "bg": 26272,
-"pt": null,
+"pt": 41600,
 "size": 8,
 "type": "CPathNode**",
-"how": null
+"how": "adjacent"
 },
 "m_arrayOpenList": {
 "bg": 26280,
-"pt": null,
+"pt": 41608,
 "size": 8,
 "type": "CPathNode**",
-"how": null
+"how": "adjacent"
 },
 "m_group": {
 "bg": 26288,
-"pt": null,
+"pt": 41616,
 "size": 64,
 "type": "CAIGroup",
-"how": null
+"how": "manual"
 },
 "m_allies": {
 "bg": 26352,
 "pt": 41680,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_familiars": {
 "bg": 26408,
 "pt": 41736,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_resrefFamiliarsDefault": {
 "bg": 26464,
@@ -31806,42 +31806,42 @@
 "pt": null,
 "size": 2400,
 "type": "Array<int,600>",
-"how": null
+"how": "adjacent"
 },
 "m_pKeymapFlags": {
 "bg": 35048,
-"pt": null,
+"pt": 49600,
 "size": 2400,
 "type": "Array<int,600>",
-"how": null
+"how": "adjacent"
 },
 "m_variables": {
 "bg": 37448,
-"pt": null,
+"pt": 52000,
 "size": 16,
 "type": "CVariableHash",
-"how": null
+"how": "manual"
 },
 "m_namedCreatures": {
 "bg": 37464,
-"pt": null,
+"pt": 52016,
 "size": 16,
 "type": "CVariableHash",
-"how": null
+"how": "interp"
 },
 "m_soundNeedParty": {
 "bg": 37480,
-"pt": null,
+"pt": 52032,
 "size": 40,
 "type": "STR_RES",
-"how": null
+"how": "interp"
 },
 "m_soundAreaTransitionRefused": {
 "bg": 37520,
-"pt": null,
+"pt": 52072,
 "size": 40,
 "type": "STR_RES",
-"how": null
+"how": "interp"
 },
 "m_bForceDither": {
 "bg": 37560,
@@ -35972,10 +35972,10 @@
 },
 "m_cMessageHandler": {
 "bg": 5992,
-"pt": null,
+"pt": 5984,
 "size": 64,
 "type": "CMessageHandler",
-"how": null
+"how": "manual"
 },
 "m_bFontRectOutline": {
 "bg": 6056,
@@ -36911,192 +36911,192 @@
 },
 "m_nSavedTime": {
 "bg": 1308,
-"pt": null,
+"pt": 1324,
 "size": 4,
 "type": "unsigned int",
-"how": null
+"how": "adjacent"
 },
 "m_cGameAreaNotes": {
 "bg": 1312,
-"pt": null,
+"pt": 1328,
 "size": 168,
 "type": "CGameAreaNotes",
-"how": null
+"how": "manual"
 },
 "m_cInfinity": {
 "bg": 1480,
-"pt": null,
+"pt": 1496,
 "size": 1176,
 "type": "CInfinity",
-"how": null
+"how": "manual"
 },
 "m_search": {
 "bg": 2656,
-"pt": null,
+"pt": 2616,
 "size": 336,
 "type": "CSearchBitmap",
-"how": null
+"how": "manual"
 },
 "m_visibility": {
 "bg": 2992,
-"pt": null,
+"pt": 2952,
 "size": 112,
 "type": "CVisibilityMap",
-"how": null
+"how": "manual"
 },
 "m_pDynamicHeight": {
 "bg": 3104,
-"pt": null,
+"pt": 3072,
 "size": 8,
 "type": "unsigned __int8*",
-"how": null
+"how": "adjacent"
 },
 "m_startedMusic": {
 "bg": 3112,
-"pt": null,
+"pt": 3080,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_startedMusicCounter": {
 "bg": 3116,
-"pt": null,
+"pt": 3084,
 "size": 4,
 "type": "unsigned int",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSort": {
 "bg": 3120,
-"pt": null,
+"pt": 3088,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "manual"
 },
 "m_lVertSortBack": {
 "bg": 3176,
-"pt": null,
+"pt": 3144,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "manual"
 },
 "m_lVertSortFlight": {
 "bg": 3232,
-"pt": null,
+"pt": 3200,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortUnder": {
 "bg": 3288,
-"pt": null,
+"pt": 3256,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortAdd": {
 "bg": 3344,
-"pt": null,
+"pt": 3312,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortBackAdd": {
 "bg": 3400,
-"pt": null,
+"pt": 3368,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortFlightAdd": {
 "bg": 3456,
-"pt": null,
+"pt": 3424,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortUnderAdd": {
 "bg": 3512,
-"pt": null,
+"pt": 3480,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortRemove": {
 "bg": 3568,
-"pt": null,
+"pt": 3536,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,__POSITION*>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortBackRemove": {
 "bg": 3624,
-"pt": null,
+"pt": 3592,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,__POSITION*>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortFlightRemove": {
 "bg": 3680,
-"pt": null,
+"pt": 3648,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,__POSITION*>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortUnderRemove": {
 "bg": 3736,
-"pt": null,
+"pt": 3704,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,__POSITION*>",
-"how": null
+"how": "adjacent"
 },
 "m_lTiledObjects": {
 "bg": 3792,
-"pt": null,
+"pt": 3760,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CTiledObject*>",
-"how": null
+"how": "adjacent"
 },
 "m_lGameTextObjects": {
 "bg": 3848,
-"pt": null,
+"pt": 3816,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_lVertSortTransition": {
 "bg": 3904,
-"pt": null,
+"pt": 3872,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": null
+"how": "adjacent"
 },
 "m_ptOldViewPos": {
 "bg": 3960,
-"pt": null,
+"pt": 3928,
 "size": 8,
 "type": "CPoint",
-"how": null
+"how": "adjacent"
 },
 "m_variables": {
 "bg": 3968,
-"pt": null,
+"pt": 3936,
 "size": 16,
 "type": "CVariableHash",
-"how": null
+"how": "adjacent"
 },
 "m_namedCreatures": {
 "bg": 3984,
-"pt": null,
+"pt": 3952,
 "size": 16,
 "type": "CVariableHash",
-"how": null
+"how": "adjacent"
 },
 "m_bPermitNewCharacters": {
 "bg": 4000,
-"pt": null,
+"pt": 3968,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_nCurrentSong": {
 "bg": 4002,
@@ -42086,70 +42086,70 @@
 },
 "m_knownSpellsPriest": {
 "bg": 1992,
-"pt": null,
+"pt": 1984,
 "size": 392,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileKnownSpell*>,7>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_knownSpellsMage": {
 "bg": 2384,
-"pt": 2072,
+"pt": 2376,
 "size": 504,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileKnownSpell*>,9>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_knownSpellsInnate": {
 "bg": 2888,
-"pt": 2576,
+"pt": 2880,
 "size": 56,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileKnownSpell*>,1>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsLevelPriest": {
 "bg": 2944,
-"pt": 2632,
+"pt": 2936,
 "size": 56,
 "type": "Array<CCreatureFileMemorizedSpellLevel*,7>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsLevelMage": {
 "bg": 3000,
-"pt": 2688,
+"pt": 2992,
 "size": 72,
 "type": "Array<CCreatureFileMemorizedSpellLevel*,9>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsLevelInnate": {
 "bg": 3072,
-"pt": 2760,
+"pt": 3064,
 "size": 8,
 "type": "Array<CCreatureFileMemorizedSpellLevel*,1>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsPriest": {
 "bg": 3080,
-"pt": 2768,
+"pt": 3072,
 "size": 392,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileMemorizedSpell*>,7>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsMage": {
 "bg": 3472,
-"pt": 3160,
+"pt": 3464,
 "size": 504,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileMemorizedSpell*>,9>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_memorizedSpellsInnate": {
 "bg": 3976,
-"pt": 3664,
+"pt": 3968,
 "size": 56,
 "type": "Array<CTypedPtrList<CPtrList,CCreatureFileMemorizedSpell*>,1>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_equipment": {
 "bg": 4032,
-"pt": 3720,
+"pt": 4024,
 "size": 336,
 "type": "CGameSpriteEquipment",
 "how": "evidence"
@@ -42159,14 +42159,14 @@
 "pt": 4056,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "interp"
+"how": "adjacent"
 },
 "m_nDialogData": {
 "bg": 4376,
 "pt": 4064,
 "size": 4,
 "type": "unsigned int",
-"how": "interp"
+"how": "adjacent"
 },
 "m_derivedStats": {
 "bg": 4384,
@@ -42562,52 +42562,52 @@
 },
 "m_animationRunning": {
 "bg": 16232,
-"pt": null,
+"pt": 15484,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_posZDelta": {
 "bg": 16236,
-"pt": null,
+"pt": 15488,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_doBounce": {
 "bg": 16240,
-"pt": null,
+"pt": 15492,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_nMirrorImages": {
 "bg": 16241,
-"pt": null,
+"pt": 15493,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "manual"
 },
 "m_bBlur": {
 "bg": 16242,
-"pt": null,
+"pt": 15494,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_bInvisible": {
 "bg": 16243,
-"pt": null,
+"pt": 15495,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_bSanctuary": {
 "bg": 16244,
-"pt": null,
+"pt": 15496,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "adjacent"
 },
 "m_sanctuaryVidCell": {
 "bg": 16248,

@@ -10,6 +10,21 @@ PACK = os.path.join(REPO, r'ref\InfinityLoader\Core-Shared-Files\generate_bindin
 OUTD = os.path.join(REPO, r'bindings\in')
 os.makedirs(OUTD, exist_ok=True)
 L = json.load(open(os.path.join(HERE, 'ptlayout.json')))
+# STRICT=1: only fields proven by evidence or by hand stay visible (audit build for EEex.dll);
+# small structs (<= 0x40 bytes) may keep assumed-identical fields.
+STRICT = os.environ.get('PTEE_STRICT') == '1'
+if STRICT:
+    OUTD = os.path.join(REPO, r'bindings\in_strict'); os.makedirs(OUTD, exist_ok=True)
+MANUALF = json.load(open(os.path.join(HERE, 'manual_fields.json'))).get('fields', {}) if os.path.exists(os.path.join(HERE, 'manual_fields.json')) else {}
+PROVEN = {'evidence', 'manual'}
+
+
+def visible(lay, it):
+    if not STRICT:
+        return True
+    if it.get('how') in PROVEN:
+        return True
+    return (lay['bg_size'] or 0) <= 0x40 and it.get('how') in ('assumed', None) and it['pt'] == it['bg']
 
 txt = open(IDA, encoding='utf-8', errors='ignore').read()
 hdr_rx = re.compile(r'^(struct|union) (__cppobj )?(__declspec\(align\(\d+\)\) )?([^\n:{]+?)( : ([^\n{]+))?\n\{\n(.*?)^\};', re.M | re.S)
@@ -57,7 +72,7 @@ def rewrite(m):
     if not lay or kind != 'struct':
         return m.group(0)
     items = lay['items']
-    same = lay['pt_size'] == lay['bg_size'] and all(v['pt'] == v['bg'] for v in items.values())
+    same = lay['pt_size'] == lay['bg_size'] and all(v['pt'] == v['bg'] and visible(lay, v) for v in items.values())
     if same:
         report['kept'].append(name)
         return m.group(0)
@@ -79,8 +94,13 @@ def rewrite(m):
         it = items.get(iname)
         if iname == '__vftable' and cur == 0:
             lines += ilines; cur = 8; placed += 1; continue
-        if not it or it['pt'] is None:
+        if not it or it['pt'] is None or not visible(lay, it):
             continue
+        mt = MANUALF.get(name, {}).get(iname, {})
+        if isinstance(mt, dict) and mt.get('type'):
+            # hand-verified type change (e.g. inline array in BG, pointer in PTEE)
+            it = dict(it, size=int(mt['size'], 16), type=mt['type'])
+            ilines = [f'	{mt["type"]} {iname};']
         sz = psize(it, lay)
         if sz is None or it['pt'] < cur:
             continue

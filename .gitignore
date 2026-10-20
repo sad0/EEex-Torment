@@ -17,3 +17,6 @@ tools/*.json
 bindings/generated/
 tools/bindings/__pycache__/
 bindings/LuaBindings-PTEE/*.vcxproj.user
+eeexdll/generated/
+bindings/in_strict/
+tools/bindings/*.log

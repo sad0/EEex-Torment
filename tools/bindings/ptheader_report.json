@@ -2,7 +2,7 @@
 "rewritten": [
 [
 "CChitin",
-97,
+96,
 104
 ],
 [
@@ -42,7 +42,7 @@
 ],
 [
 "CRuleTables",
-88,
+237,
 243
 ],
 [
@@ -52,17 +52,22 @@
 ],
 [
 "CInfGame",
-106,
+114,
 128
 ],
 [
 "CInfinity",
-71,
+77,
 90
 ],
 [
+"CVisibilityMap",
+9,
+9
+],
+[
 "CGameArea",
-76,
+103,
 105
 ],
 [
@@ -89,11 +94,6 @@
 "CStore",
 10,
 11
-],
-[
-"CAIScript",
-0,
-2
 ],
 [
 "Item_ability_st",
@@ -242,7 +242,7 @@
 ],
 [
 "CBaldurChitin",
-42,
+43,
 47
 ],
 [
@@ -251,8 +251,13 @@
 68
 ],
 [
+"CGameSpriteEquipment",
+5,
+5
+],
+[
 "CGameSprite",
-260,
+268,
 338
 ],
 [
@@ -306,9 +311,7 @@
 47
 ]
 ],
-"opaque": [
-"CAIScript"
-],
+"opaque": [],
 "kept": [
 "CObject",
 "CObList",
@@ -457,7 +460,6 @@
 "CAreaUserNote",
 "CGameAreaNotes",
 "CSearchBitmap",
-"CVisibilityMap",
 "CMemINI",
 "CPathSearch",
 "CPathNode",
@@ -474,6 +476,7 @@
 "CMemINISection",
 "CSpawnFile",
 "CResItem",
+"CAIScript",
 "CAIResponseSet",
 "CAICondition",
 "CAIResponse",
@@ -543,7 +546,6 @@
 "CGameEffectBase",
 "CGameEffect",
 "CAIAction",
-"CGameSpriteEquipment",
 "CAbilityId",
 "CButtonData",
 "CGameSaveCharacter",

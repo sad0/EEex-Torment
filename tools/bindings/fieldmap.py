@@ -124,6 +124,7 @@ print('roots: typed functions', len(entry_types), 'returns', len(ret_types), 'gl
 # ---- evidence ----------------------------------------------------------------------------------
 EV = collections.defaultdict(collections.Counter)   # (struct, bg_abs, size) -> Counter(pt_abs)
 CALLARGS = collections.defaultdict(collections.Counter)  # (callee, argreg) -> Counter(struct)
+SITES = collections.defaultdict(list)  # (struct, bg_abs) -> [(bg fn, pt fn, bg insn, bg base off, pt base off)]
 
 
 def type_at(sname, off):
@@ -169,6 +170,9 @@ def run(bgf, ptf, roots):
         if mop is not None and mop.mem.index == 0 and mop.mem.base in st:
             s, ob, op_ = st[mop.mem.base]
             bg_abs = ob + mop.mem.disp
+            sl = SITES[(s, bg_abs)]
+            if len(sl) < 40:
+                sl.append((bgf, ptf, i.address, ob, op_))
             if pmop is not None and op_ is not None and pmop.mem.base == mop.mem.base and i.mnemonic != 'lea':
                 EV[(s, bg_abs, mop.size)][op_ + pmop.mem.disp] += 1
                 n += 1
@@ -246,7 +250,7 @@ def run(bgf, ptf, roots):
 
 if __name__ == '__main__':
     for rnd in range(4):
-        EV.clear(); CALLARGS.clear()
+        EV.clear(); CALLARGS.clear(); SITES.clear()
         tot = 0; nf = 0
         for bgf, ptf in F.items():
             roots = entry_types.get(bgf, {})
@@ -266,3 +270,5 @@ if __name__ == '__main__':
             break
     print('functions with evidence', nf, 'observations', tot, 'keys', len(EV), file=sys.stderr)
     json.dump({f'{s}|{hex(o)}|{z}': {hex(a): c for a, c in v.items()} for (s, o, z), v in EV.items()}, open('bindings/field_evidence.json', 'w'), indent=0)
+    json.dump({f'{s}|{hex(o)}': [[hex(a) if a is not None else None for a in t] for t in v] for (s, o), v in SITES.items()},
+              open('bindings/field_sites.json', 'w'), indent=0)

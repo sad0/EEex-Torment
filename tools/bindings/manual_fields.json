@@ -1,0 +1,123 @@
+{
+ "_doc": "Hand-verified Torment.exe v3.2.2.0 field offsets (hex). Each entry: pt offset + how it was proven.",
+ "fields": {
+  "CBaldurChitin": {
+   "m_cMessageHandler": {
+    "pt": "0x1760",
+    "why": "every AddMessage call site: mov rcx,[g_pBaldurChitin]; add rcx,0x1760 (BG 0x1768)"
+   }
+  },
+  "CChitin": {
+   "lEngines": {
+    "pt": "0x50",
+    "why": "fieldprobe: list head reads [rcx+0x58] vs BG [rcx+0x60], 2 aligned sites"
+   },
+   "m_AIStale": {
+    "pt": "0xfc8",
+    "why": "fieldprobe: 9 aligned cmp [rax+0xfc8] vs BG 0xfa8"
+   }
+  },
+  "CGameArea": {
+   "m_cGameAreaNotes": {
+    "pt": "0x530",
+    "why": "fieldprobe: 4 lea rcx,[reg+0x530] vs BG 0x520"
+   },
+   "m_cInfinity": {
+    "pt": "0x5d8",
+    "why": "fieldprobe: 30 lea rcx,[rbp+0x5d8] vs BG 0x5c8 (CInfinity itself is 0x40 smaller before +0x2e8)"
+   },
+   "m_search": {
+    "pt": "0xa38",
+    "why": "fieldprobe: 11 lea [reg+0xa38] vs BG 0xa60"
+   },
+   "m_visibility": {
+    "pt": "0xb88",
+    "why": "fieldprobe: pointer/lea at field start [reg+0xb88] vs BG 0xbb0"
+   },
+   "m_lVertSort": {
+    "pt": "0xc10",
+    "why": "fieldprobe: list head [rcx+0xc18] vs BG [rcx+0xc38]; m_lVertSortBack 0x38 later as in BG"
+   },
+   "m_lVertSortBack": {
+    "pt": "0xc48",
+    "why": "fieldprobe: list head [rcx+0xc50] vs BG [rcx+0xc70]"
+   }
+  },
+  "CInfinity": {
+   "m_nLastTickCount": {
+    "pt": "0x2b0",
+    "why": "CInfinity::SetScrollDest: SDL_GetTicks result stored to [rbx+0x2b0] (BG 0x2f0)"
+   },
+   "m_ptScrollDest": {
+    "pt": "0x2c0",
+    "why": "CInfinity::SetScrollDest: destination stored to [rcx+0x2c0]/[rbx+0x2c4] (BG 0x300)"
+   }
+  },
+  "CInfGame": {
+   "m_group": {
+    "pt": "0xa290",
+    "why": "fieldprobe: 51 aligned accesses (BG 0x66b0)"
+   },
+   "m_variables": {
+    "pt": "0xcb20",
+    "why": "fieldprobe: 37 lea rcx,[reg+0xcb20] (BG 0x9248)"
+   }
+  },
+  "CRuleTables": {
+   "m_tDexterityMod": {
+    "pt": "0x11c8",
+    "why": "CRuleTables ctor (PT 0x296583): C2DArray::Load after the DEXMOD CString (BG 0xee0)"
+   },
+   "m_tWeaponSpecialization": {
+    "pt": "0x1820",
+    "why": "CRuleTables ctor (PT 0x29695d): C2DArray::Load after the WSPECIAL CString (BG 0x1500)"
+   }
+  },
+  "CGameSprite": {
+   "m_nMirrorImages": {
+    "pt": "0x3c85",
+    "why": "dispfind: 8/8 aligned accesses incl. CGameEffect::CheckSave (BG 0x3f71)"
+   },
+   "m_equipment": {
+    "pt": "0xfb8",
+    "why": "339 reads mov r64,[sprite+0xfb8] (items pointer) and ~120 movzx [sprite+0xfc0] (m_selectedWeapon); 0xfb8+0x20 = m_pDialogData 0xfd8"
+   }
+  },
+  "CAIScript": {
+   "cResRef": {
+    "pt": "0x0",
+    "why": "PT CAIScript::Construct (0x176d80) runs the CResRef ctor on this; next member (CObList) moves from +8 to +0x10"
+   }
+  },
+  "CGameSpriteEquipment": {
+   "m_items": {
+    "pt": "0x0",
+    "type": "CItem**",
+    "size": "0x8",
+    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+   },
+   "m_selectedWeapon": {
+    "pt": "0x8",
+    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+   },
+   "m_selectedWeaponAbility": {
+    "pt": "0xa",
+    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+   },
+   "m_pTempItem": {
+    "pt": "0x10",
+    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+   },
+   "m_pSprite": {
+    "pt": "0x18",
+    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+   }
+  }
+ },
+ "sizes": {
+  "CGameSpriteEquipment": {
+   "pt": "0x20",
+   "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+  }
+ }
+}

@@ -1,0 +1,2634 @@
+{
+ "CVideo.pCurrentMode": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "WED_PolyPoint_st.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "WED_PolyPoint_st.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2",
+  "pt": "0x2",
+  "votes": []
+ },
+ "NECK_POINTS.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "NECK_POINTS.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2",
+  "pt": "0x2",
+  "votes": []
+ },
+ "CVIDPOLY_VERTEX.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CVIDPOLY_VERTEX.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2",
+  "pt": "0x2",
+  "votes": []
+ },
+ "WED_PolyList_st.nHeight": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x9",
+  "pt": "0x9",
+  "votes": []
+ },
+ "ResFixedHeader_st.nSize": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "PLTHeader_st.nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "PLTHeader_st.nHeight": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x14",
+  "pt": "0x14",
+  "votes": []
+ },
+ "Marker.count": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "MOSAICQUAD.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "MOSAICQUAD.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "MOSAICQUAD.w": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "MOSAICQUAD.h": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "MOSAICHEADERV2.nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "MOSAICHEADERV2.nHeight": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "CResInfTile.flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CPARTICLE_POINT.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CPARTICLE_POINT.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CPARTICLE_POINT.z": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CParticle.m_pos": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CImmunitiesItemTypeEquip.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CImmunitiesItemTypeEquip.m_error": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CGameTimer.m_id": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CGameRemoteObjectListEntry.pNext": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameRemoteObjectDeletion.pNext": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CGameRemoteObjectControlChange.pNext": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameOptions.m_graphicsFontZoom": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x38",
+  "pt": "0x38",
+  "votes": []
+ },
+ "CGameOptions.m_nEffectTextLevel": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x64",
+  "pt": "0x64",
+  "votes": []
+ },
+ "CGameOptions.m_bNightmareMode": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1f8",
+  "pt": "0x1f8",
+  "votes": []
+ },
+ "CGameAnimation.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CGameAnimation.m_overrides": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CGameAnimation.m_personalSpace": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CCreatureFileMemorizedSpellLevel.m_spellLevel": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CBounceEntry.m_effectId": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "uiMenu.ha": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x58",
+  "pt": "0x60",
+  "votes": []
+ },
+ "uiMenu.va": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x5c",
+  "pt": "0x64",
+  "votes": []
+ },
+ "slicedRect.tl": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "slicedRect.t": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "slicedRect.tr": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x20",
+  "pt": "0x20",
+  "votes": []
+ },
+ "slicedRect.r": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x30",
+  "pt": "0x30",
+  "votes": []
+ },
+ "slicedRect.br": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x40",
+  "pt": "0x40",
+  "votes": []
+ },
+ "slicedRect.b": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x50",
+  "pt": "0x50",
+  "votes": []
+ },
+ "slicedRect.bl": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x60",
+  "pt": "0x60",
+  "votes": []
+ },
+ "slicedRect.l": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x70",
+  "pt": "0x70",
+  "votes": []
+ },
+ "slicedRect.c": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x80",
+  "pt": "0x80",
+  "votes": []
+ },
+ "slicedRect.d": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x90",
+  "pt": "0x90",
+  "votes": []
+ },
+ "slicedRect.name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x98",
+  "pt": "0x98",
+  "votes": []
+ },
+ "slicedRect.flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xa0",
+  "pt": "0xa0",
+  "votes": []
+ },
+ "ConstCharString.data": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CharString.data": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CTimerWorld.m_gameTime": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAIId.m_id": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAIId.m_line": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CResUI.pHeader": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x58",
+  "pt": "0x58",
+  "votes": []
+ },
+ "CResTileSet.h": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x58",
+  "pt": "0x58",
+  "votes": []
+ },
+ "CResSpell.pHeader": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "CResPng.texture": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x60",
+  "pt": "0x60",
+  "votes": []
+ },
+ "CResPVR.size": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x64",
+  "pt": "0x64",
+  "votes": [
+   [
+    "0x64",
+    2
+   ]
+  ]
+ },
+ "CResMosaic.texture": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x64",
+  "pt": "0x64",
+  "votes": []
+ },
+ "CResItem.pHeader": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "CResBitmap.texture": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x60",
+  "pt": "0x60",
+  "votes": []
+ },
+ "CAOEEntry.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CVIDMODE_RETICLE_DESCRIPTION.cursor": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CMarker.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CPersistantEffect.m_done": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CMapStringToString.m_nCount": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x14",
+  "pt": "0x14",
+  "votes": [
+   [
+    "0x14",
+    1
+   ]
+  ]
+ },
+ "CStringList.m_pNodeHead": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CStringList.m_nCount": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CPtrList.m_pNodeHead": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CPtrList.m_nCount": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CAICondition.m_triggerList": {
+  "status": "confirmed",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": [
+   [
+    "0x0",
+    3
+   ]
+  ]
+ },
+ "CMessageUpdateMachineState.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageUpdateImmunities.m_cImmunitiesAIType": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageUnlock.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageTriggerStatus.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageStartScroll.m_speed": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CMessageSetActiveImprisonment.m_active": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageSetActive.m_active": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageRemoveReplies.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageDoorStatus.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageDisplayTextRefSend.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageDisplayTextRef.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageDisplayText.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageContainerStatus.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameAreaClairvoyanceEntry.m_id": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CAIGroup.m_memberList": {
+  "status": "confirmed",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": [
+   [
+    "0x8",
+    21
+   ]
+  ]
+ },
+ "uiItem.type": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "uiItem.menu": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "uiItem.name": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "uiItem.instanceId": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "uiItem.templateName": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x20",
+  "pt": "0x20",
+  "votes": []
+ },
+ "uiItem.ha": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "uiItem.va": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x6c",
+  "pt": "0x6c",
+  "votes": []
+ },
+ "uiItem.uiTemplate": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xd0",
+  "pt": "0xd0",
+  "votes": []
+ },
+ "uiItem.bam": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xd8",
+  "pt": "0xd8",
+  "votes": []
+ },
+ "uiItem.scrollbar": {
+  "status": "conflict",
+  "how": "adjacent",
+  "bg": "0x180",
+  "pt": "0x180",
+  "votes": [
+   [
+    "0x1a8",
+    1
+   ]
+  ]
+ },
+ "font_t.name": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "font_t.newLineMetrics": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xb8",
+  "pt": "0xb8",
+  "votes": []
+ },
+ "CAreaVariable.m_name": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CVisualEffectBase.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2c",
+  "pt": "0x2c",
+  "votes": []
+ },
+ "CVisibilityMap.m_nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "CVidTile.pRes": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x100",
+  "pt": "0x100",
+  "votes": []
+ },
+ "CVidTile.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x108",
+  "pt": "0x108",
+  "votes": []
+ },
+ "CSearchRequest.m_sourceId": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x38",
+  "pt": "0x38",
+  "votes": []
+ },
+ "CAbilityId.m_res": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x6",
+  "pt": "0x6",
+  "votes": [
+   [
+    "0x6",
+    1
+   ]
+  ]
+ },
+ "CMessageAddVVCInternal.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageFamiliarRemoveResRef.m_resRef": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageRemoveVVCInternal.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageStartVEF.m_res": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": [
+   [
+    "0x10",
+    1
+   ]
+  ]
+ },
+ "CMessageStaticPalette.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageStoreRemoveItem.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x20",
+  "pt": "0x20",
+  "votes": []
+ },
+ "STR_RES.szText": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CSearchBitmap.m_pArea": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x140",
+  "pt": "0x140",
+  "votes": []
+ },
+ "CPortraitIcon.bam": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CVidFont.foreground": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": [
+   [
+    "0x18",
+    3
+   ]
+  ]
+ },
+ "CScreenCreateParty.m_firstCall": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xa8",
+  "pt": "0xb0",
+  "votes": []
+ },
+ "CScreenMap.m_pArea": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x890",
+  "pt": "0x900",
+  "votes": []
+ },
+ "CScreenStart.m_firstCall": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xb4",
+  "pt": "0xbc",
+  "votes": []
+ },
+ "CCacheStatus.m_nProgressBarCaption": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CCacheStatus.m_nParchmentCaption": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x14",
+  "pt": "0x14",
+  "votes": []
+ },
+ "CCacheStatus.m_bWaiting": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CInfToolTip.m_sText": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x138",
+  "pt": "0x138",
+  "votes": []
+ },
+ "CInfToolTip.m_textFont": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x158",
+  "pt": "0x158",
+  "votes": []
+ },
+ "CGameDialogReply.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAbilityData.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CAreaFileHeader.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "CAreaFileProjectileObject.m_posZ": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CAreaFileStaticObject.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAreaFileStaticObject.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x34",
+  "pt": "0x34",
+  "votes": []
+ },
+ "CCriticalEntry.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CCriticalEntry.m_bonus": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CImmunitiesItemEquip.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CImmunitiesItemEquip.m_error": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CImmunitySpell.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CImmunitySpell.m_error": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CCreatureFileKnownSpell.m_spellLevel": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "UI_PanelHeader_st.x": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "UI_PanelHeader_st.y": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x6",
+  "pt": "0x6",
+  "votes": []
+ },
+ "UI_PanelHeader_st.nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "UI_PanelHeader_st.nHeight": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xa",
+  "pt": "0xa",
+  "votes": []
+ },
+ "Spell_ability_st.type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "Spell_ability_st.damageType": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1c",
+  "pt": "0x1c",
+  "votes": []
+ },
+ "Spell_Header_st.genericName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "Spell_Header_st.identifiedName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "Spell_Header_st.itemType": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1c",
+  "pt": "0x1c",
+  "votes": []
+ },
+ "Item_Header_st.genericName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "Item_Header_st.identifiedName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "Item_Header_st.itemType": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1c",
+  "pt": "0x1c",
+  "votes": []
+ },
+ "CWorldMapData.m_nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CWorldMapData.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x38",
+  "pt": "0x38",
+  "votes": []
+ },
+ "CWorldMapArea.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x30",
+  "pt": "0x30",
+  "votes": []
+ },
+ "CVVCHashEntry.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CVEFEvent.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CVEFEvent.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CScreenStoreItem.m_nCount": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x24",
+  "pt": "0x24",
+  "votes": []
+ },
+ "CSavedGamePartyCreature.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc0",
+  "pt": "0xc0",
+  "votes": []
+ },
+ "CProjectileFileFormat.m_speed": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2",
+  "pt": "0x2",
+  "votes": []
+ },
+ "CProjectileFileFormat.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CProjectileFileFormat.m_lanceWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x22",
+  "pt": "0x22",
+  "votes": []
+ },
+ "CProjectileFileFormat.m_extFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x24",
+  "pt": "0x24",
+  "votes": []
+ },
+ "CProgressBar.m_nSecondsToTimeout": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CProgressBar.m_nProgressBarCaption": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4",
+  "pt": "0x4",
+  "votes": []
+ },
+ "CProgressBar.m_nParchmentCaption": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CProgressBar.m_nActionProgress": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "CProgressBar.m_nActionTarget": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CProgressBar.m_bTravelActive": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x14",
+  "pt": "0x14",
+  "votes": []
+ },
+ "CProgressBar.m_bWaiting": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x15",
+  "pt": "0x15",
+  "votes": []
+ },
+ "CProgressBar.m_nWaitingReason": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CProgressBar.m_bDisableMinibars": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1c",
+  "pt": "0x1c",
+  "votes": []
+ },
+ "CProgressBar.m_bTimeoutVisible": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1d",
+  "pt": "0x1d",
+  "votes": []
+ },
+ "CProgressBar.m_bProgressBarActivated": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1e",
+  "pt": "0x1e",
+  "votes": []
+ },
+ "CPlex.pNext": {
+  "status": "confirmed",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": [
+   [
+    "0x0",
+    1
+   ]
+  ]
+ },
+ "CNetwork.m_version": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x78",
+  "pt": "0x78",
+  "votes": []
+ },
+ "CChitin.bEngineActive": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x4c",
+  "pt": "0x40",
+  "votes": []
+ },
+ "CChitin.m_nRenderTickCount": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x1c4",
+  "pt": "0x1bc",
+  "votes": []
+ },
+ "CChitin.m_nRenderPerSec": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x1c8",
+  "pt": "0x1c0",
+  "votes": []
+ },
+ "CChitin.m_nRenderElasped": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x1cc",
+  "pt": "0x1c4",
+  "votes": []
+ },
+ "CChitin.cProgressBar": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xfbc",
+  "pt": "0xff4",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_nArmorClass": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x48",
+  "pt": "0x48",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_nACCrushingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4a",
+  "pt": "0x4a",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_nACMissileMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4c",
+  "pt": "0x4c",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_nACPiercingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x4e",
+  "pt": "0x4e",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_nACSlashingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x50",
+  "pt": "0x50",
+  "votes": []
+ },
+ "CMessageSpriteUpdate.m_bSanctuary": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x6f",
+  "pt": "0x6f",
+  "votes": []
+ },
+ "CInfinity.nCurrentX": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0xc0",
+  "pt": "0xc0",
+  "votes": []
+ },
+ "CInfinity.nCurrentY": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0xc4",
+  "pt": "0xc4",
+  "votes": []
+ },
+ "CInfinity.m_pArea": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x340",
+  "pt": "0x2f8",
+  "votes": []
+ },
+ "CInfinity.m_fZoom": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x484",
+  "pt": "0x43c",
+  "votes": [
+   [
+    "0x43c",
+    3
+   ]
+  ]
+ },
+ "CInfButtonArray.m_nState": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1fe4",
+  "pt": "0x1fe4",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_nArmorClass": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2c",
+  "pt": "0x2c",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_nACCrushingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x2e",
+  "pt": "0x2e",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_nACMissileMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x30",
+  "pt": "0x30",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_nACPiercingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x32",
+  "pt": "0x32",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_nACSlashingMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x34",
+  "pt": "0x34",
+  "votes": []
+ },
+ "CGameSpriteLastUpdate.m_bSanctuary": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x5a",
+  "pt": "0x5a",
+  "votes": []
+ },
+ "CGameSpriteEquipment.m_items": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CGameSpriteEquipment.m_selectedWeapon": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x138",
+  "pt": "0x138",
+  "votes": []
+ },
+ "CGameSpriteEquipment.m_selectedWeaponAbility": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x13a",
+  "pt": "0x13a",
+  "votes": []
+ },
+ "CMessageSpriteEquipment.m_equipment": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameSave.m_bArenaMode": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x340",
+  "pt": "0x340",
+  "votes": []
+ },
+ "CInfGame.m_allies": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x66f0",
+  "pt": "0xa2d0",
+  "votes": [
+   [
+    "0xa2d0",
+    9
+   ],
+   [
+    "0xa308",
+    3
+   ]
+  ]
+ },
+ "CInfGame.m_familiars": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x6728",
+  "pt": "0xa308",
+  "votes": [
+   [
+    "0xa308",
+    45
+   ]
+  ]
+ },
+ "CInfGame.m_options": {
+  "status": "conflict",
+  "how": "adjacent",
+  "bg": "0x7cd0",
+  "pt": "0xb8b0",
+  "votes": [
+   [
+    "0xb8b4",
+    235
+   ],
+   [
+    "0xb8b8",
+    132
+   ],
+   [
+    "0xb8b0",
+    76
+   ]
+  ]
+ },
+ "CInfGame.SAVE_OBJECT_LIST": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x94b0",
+  "pt": "0xcd88",
+  "votes": []
+ },
+ "CGameEffectBase.m_version": {
+  "status": "confirmed",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": [
+   [
+    "0x0",
+    2
+   ]
+  ]
+ },
+ "CGameEffectBase.m_effectId": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CGameEffectBase.m_spellLevel": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameEffectBase.m_effectAmount": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x14",
+  "pt": "0x14",
+  "votes": []
+ },
+ "CGameEffectBase.m_dWFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CGameEffectBase.m_res": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CGameEffectBase.m_savingThrow": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x38",
+  "pt": "0x38",
+  "votes": []
+ },
+ "CGameEffectBase.m_saveMod": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x3c",
+  "pt": "0x3c",
+  "votes": []
+ },
+ "CGameEffectBase.m_special": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x40",
+  "pt": "0x40",
+  "votes": []
+ },
+ "CGameEffectBase.m_school": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x44",
+  "pt": "0x44",
+  "votes": []
+ },
+ "CGameEffectBase.m_JeremyIsAnIdiot": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x48",
+  "pt": "0x48",
+  "votes": []
+ },
+ "CGameEffectBase.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x54",
+  "pt": "0x54",
+  "votes": []
+ },
+ "CGameEffectBase.m_effectAmount2": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x58",
+  "pt": "0x58",
+  "votes": []
+ },
+ "CGameEffectBase.m_res2": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "CGameEffectBase.m_sourceType": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x88",
+  "pt": "0x88",
+  "votes": []
+ },
+ "CGameEffectBase.m_sourceRes": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8c",
+  "pt": "0x8c",
+  "votes": []
+ },
+ "CGameEffectBase.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xa0",
+  "pt": "0xa0",
+  "votes": []
+ },
+ "CGameEffectBase.m_firstCall": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc4",
+  "pt": "0xc4",
+  "votes": []
+ },
+ "CGameEffect.m_sourceId": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x110",
+  "pt": "0x110",
+  "votes": []
+ },
+ "CGameEffect.m_done": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x114",
+  "pt": "0x114",
+  "votes": []
+ },
+ "CGameAnimationType.m_personalSpace": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x5f0",
+  "pt": "0x5f0",
+  "votes": []
+ },
+ "CDerivedStatsTemplate.m_generalState": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": [
+   [
+    "0x0",
+    4
+   ]
+  ]
+ },
+ "CDerivedStatsTemplate.m_nHitBonus": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x1f4",
+  "pt": "0x200",
+  "votes": []
+ },
+ "CDerivedStatsTemplate.m_nSchoolSaveBonus": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x20c",
+  "pt": "0x218",
+  "votes": []
+ },
+ "CDerivedStatsTemplate.m_bImmuneToTimeStop": {
+  "status": "conflict",
+  "how": "adjacent",
+  "bg": "0x2d8",
+  "pt": "0x2e4",
+  "votes": [
+   [
+    "0x2e0",
+    1
+   ]
+  ]
+ },
+ "CDerivedStatsTemplate.m_nStoneSkinsGolem": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x2e0",
+  "pt": "0x2ec",
+  "votes": []
+ },
+ "CDerivedStats.m_cImmunitiesAIType": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x360",
+  "pt": "0x368",
+  "votes": [
+   [
+    "0x368",
+    5
+   ]
+  ]
+ },
+ "CDerivedStats.m_cImmunitiesWeapon": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x3c0",
+  "pt": "0x3c8",
+  "votes": [
+   [
+    "0x3c8",
+    5
+   ]
+  ]
+ },
+ "CDerivedStats.m_cToHitBonusList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x3f8",
+  "pt": "0x400",
+  "votes": [
+   [
+    "0x400",
+    5
+   ]
+  ]
+ },
+ "CDerivedStats.m_cContingencyList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x8b0",
+  "pt": "0x8b8",
+  "votes": [
+   [
+    "0x8b8",
+    6
+   ]
+  ]
+ },
+ "CDerivedStats.m_disabledSpellTypes": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xb60",
+  "pt": "0xb68",
+  "votes": []
+ },
+ "CDerivedStats.m_disableSpells": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0xb6c",
+  "pt": "0xb74",
+  "votes": []
+ },
+ "CDerivedStats.m_cProtectionList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0xbe0",
+  "pt": "0xbe8",
+  "votes": [
+   [
+    "0xbe8",
+    6
+   ]
+  ]
+ },
+ "CDerivedStats.m_cSelectiveWeaponTypeList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0xc18",
+  "pt": "0xc20",
+  "votes": [
+   [
+    "0xc20",
+    6
+   ]
+  ]
+ },
+ "CDerivedStats.m_spellStates": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0xc88",
+  "pt": "0xc90",
+  "votes": []
+ },
+ "CCreatureFileMemorizedSpell.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CCreatureFileHeader.m_name": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CCreatureFileHeader.m_flags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CCreatureFileHeader.m_generalState": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CCreatureFileHeader.m_mageSpecUpperWord": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x23c",
+  "pt": "0x23c",
+  "votes": []
+ },
+ "CCreatureFileHeader.m_mageSpecialization": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x23e",
+  "pt": "0x23e",
+  "votes": []
+ },
+ "CBlood.m_pArea": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CBlood.m_pos": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x80",
+  "pt": "0x80",
+  "votes": []
+ },
+ "CBlood.m_posZ": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x88",
+  "pt": "0x88",
+  "votes": []
+ },
+ "CAreaUserNote.m_id": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0xc",
+  "pt": "0xc",
+  "votes": []
+ },
+ "CAreaFileSoundObject.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAreaFileSoundObject.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x90",
+  "pt": "0x90",
+  "votes": []
+ },
+ "CAreaFileRestEncounter.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CGameArea.m_id": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x200",
+  "pt": "0x200",
+  "votes": [
+   [
+    "0x200",
+    1
+   ]
+  ]
+ },
+ "CGameArea.m_iPicked": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x244",
+  "pt": "0x244",
+  "votes": []
+ },
+ "CGameArea.m_lGameTextObjects": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0xf08",
+  "pt": "0xee8",
+  "votes": []
+ },
+ "CGameArea.m_variables": {
+  "status": "conflict",
+  "how": "adjacent",
+  "bg": "0xf80",
+  "pt": "0xf60",
+  "votes": [
+   [
+    "0xfa0",
+    40
+   ]
+  ]
+ },
+ "CAreaFileRandomMonsterSpawningPoint.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAreaFileContainer.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAreaFileContainer.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CAreaFileContainer.m_posXTrapOrigin": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x34",
+  "pt": "0x34",
+  "votes": []
+ },
+ "CAreaFileContainer.m_posYTrapOrigin": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x36",
+  "pt": "0x36",
+  "votes": []
+ },
+ "CAIObjectType.m_name": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CAIAction.m_specificID": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x50",
+  "pt": "0x50",
+  "votes": []
+ },
+ "CSelectiveWeaponType.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CSelectiveBonus.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x0",
+  "pt": "0x0",
+  "votes": []
+ },
+ "CSelectiveBonus.m_bonus": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x18",
+  "pt": "0x18",
+  "votes": []
+ },
+ "CMessageSetLastObject.m_lAttacker": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CMessageSetLastObject.m_type": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x28",
+  "pt": "0x28",
+  "votes": []
+ },
+ "CMessageSetLastAttacker.m_lAttacker": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x10",
+  "pt": "0x10",
+  "votes": []
+ },
+ "CGameObject.m_objectType": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": []
+ },
+ "CGameObject.m_canBeSeen": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x4c",
+  "pt": "0x4c",
+  "votes": []
+ },
+ "CGameChunk.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x70",
+  "pt": "0x70",
+  "votes": []
+ },
+ "CGameFireball3d.m_speed": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x200",
+  "pt": "0x200",
+  "votes": []
+ },
+ "CVEFVidCell.m_done": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x3a8",
+  "pt": "0x3a8",
+  "votes": []
+ },
+ "CProjectile.m_speed": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x64",
+  "pt": "0x64",
+  "votes": []
+ },
+ "CProjectile.m_sourceId": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "CProjectile.m_targetId": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x6c",
+  "pt": "0x6c",
+  "votes": []
+ },
+ "CProjectile.m_dwFlags": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x16c",
+  "pt": "0x16c",
+  "votes": []
+ },
+ "CProjectile.m_lanceWidth": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x186",
+  "pt": "0x186",
+  "votes": []
+ },
+ "CProjectile.m_extFlags": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x188",
+  "pt": "0x188",
+  "votes": []
+ },
+ "CProjectileTravelDoor.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1b8",
+  "pt": "0x1b8",
+  "votes": []
+ },
+ "CProjectileTravelDoor.m_nState": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x420",
+  "pt": "0x420",
+  "votes": []
+ },
+ "CProjectileSpellHit.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1b8",
+  "pt": "0x1b8",
+  "votes": []
+ },
+ "CProjectileSkyStrike.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1b8",
+  "pt": "0x1b8",
+  "votes": []
+ },
+ "CProjectileCastingGlow.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x1b8",
+  "pt": "0x1b8",
+  "votes": []
+ },
+ "CProjectileFall.m_sideMove": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x3b8",
+  "pt": "0x3b8",
+  "votes": []
+ },
+ "CProjectileFall.m_nSideSpeed": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x3bc",
+  "pt": "0x3bc",
+  "votes": []
+ },
+ "CGameText.m_nWidth": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x60",
+  "pt": "0x60",
+  "votes": []
+ },
+ "CGameText.m_textFont": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x68",
+  "pt": "0x68",
+  "votes": []
+ },
+ "CGameText.m_sText": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x98",
+  "pt": "0x98",
+  "votes": []
+ },
+ "CGameTemporal.m_animation": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x70",
+  "pt": "0x70",
+  "votes": []
+ },
+ "CAITrigger.m_triggerCause": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x8",
+  "pt": "0x8",
+  "votes": [
+   [
+    "0x8",
+    2
+   ]
+  ]
+ },
+ "CGameAIBase.m_lAttacker": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x60",
+  "pt": "0x60",
+  "votes": []
+ },
+ "CGameAIBase.m_lAttackStyle": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x78",
+  "pt": "0x78",
+  "votes": []
+ },
+ "CGameAIBase.m_lOrderedBy": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x80",
+  "pt": "0x80",
+  "votes": []
+ },
+ "CGameAIBase.m_lHitter": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0xe0",
+  "pt": "0xe0",
+  "votes": []
+ },
+ "CGameAIBase.m_lHelp": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0xf8",
+  "pt": "0xf8",
+  "votes": []
+ },
+ "CGameAIBase.m_lTrigger": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x110",
+  "pt": "0x110",
+  "votes": []
+ },
+ "CGameAIBase.m_lSeen": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x128",
+  "pt": "0x128",
+  "votes": []
+ },
+ "CGameAIBase.m_lTalkedTo": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x140",
+  "pt": "0x140",
+  "votes": []
+ },
+ "CGameAIBase.m_lHeard": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x158",
+  "pt": "0x158",
+  "votes": []
+ },
+ "CGameAIBase.m_lSummonedBy": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x170",
+  "pt": "0x170",
+  "votes": []
+ },
+ "CGameAIBase.m_lKilled": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x188",
+  "pt": "0x188",
+  "votes": []
+ },
+ "CGameAIBase.m_lAttackerSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x1b8",
+  "pt": "0x1b8",
+  "votes": []
+ },
+ "CGameAIBase.m_lOrderedBySent": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x1d0",
+  "pt": "0x1d0",
+  "votes": []
+ },
+ "CGameAIBase.m_lHitterSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x230",
+  "pt": "0x230",
+  "votes": []
+ },
+ "CGameAIBase.m_lHelpSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x248",
+  "pt": "0x248",
+  "votes": []
+ },
+ "CGameAIBase.m_lTriggerSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x260",
+  "pt": "0x260",
+  "votes": []
+ },
+ "CGameAIBase.m_lSeenSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x278",
+  "pt": "0x278",
+  "votes": []
+ },
+ "CGameAIBase.m_lTalkedToSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x290",
+  "pt": "0x290",
+  "votes": []
+ },
+ "CGameAIBase.m_lHeardSent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x2a8",
+  "pt": "0x2a8",
+  "votes": []
+ },
+ "CGameAIBase.m_lSummonedBySent": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x2c0",
+  "pt": "0x2c0",
+  "votes": []
+ },
+ "CGameAIBase.m_lKilledSent": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x2d8",
+  "pt": "0x2d8",
+  "votes": []
+ },
+ "CGameAIBase.m_overrideScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x2f0",
+  "pt": "0x2f0",
+  "votes": []
+ },
+ "CGameAIBase.m_areaScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x2f8",
+  "pt": "0x2f8",
+  "votes": []
+ },
+ "CGameAIBase.m_specificsScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x300",
+  "pt": "0x300",
+  "votes": []
+ },
+ "CGameAIBase.m_classScript": {
+  "status": "confirmed",
+  "how": "extrap",
+  "bg": "0x308",
+  "pt": "0x308",
+  "votes": [
+   [
+    "0x308",
+    1
+   ]
+  ]
+ },
+ "CGameAIBase.m_raceScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x310",
+  "pt": "0x310",
+  "votes": []
+ },
+ "CGameAIBase.m_generalScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x318",
+  "pt": "0x318",
+  "votes": []
+ },
+ "CGameAIBase.m_defaultScript": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x320",
+  "pt": "0x320",
+  "votes": []
+ },
+ "CGameAIBase.m_pendingTriggers": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x368",
+  "pt": "0x368",
+  "votes": []
+ },
+ "CGameAIBase.m_firstCall": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x4ac",
+  "pt": "0x49c",
+  "votes": []
+ },
+ "CGameAIBase.m_bNewTrigger": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x4c8",
+  "pt": "0x4b8",
+  "votes": []
+ },
+ "CGameTrigger.m_dwFlags": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x580",
+  "pt": "0x558",
+  "votes": []
+ },
+ "CGameTrigger.m_scriptName": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x59c",
+  "pt": null,
+  "votes": []
+ },
+ "CGameTrigger.m_posTrapOrigin": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x5c4",
+  "pt": "0x59c",
+  "votes": []
+ },
+ "CGameTiledObject.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x548",
+  "pt": "0x538",
+  "votes": []
+ },
+ "CGameTiledObject.m_scriptName": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x598",
+  "pt": "0x588",
+  "votes": []
+ },
+ "CGameSprite.m_type": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x548",
+  "pt": "0x540",
+  "votes": []
+ },
+ "CGameSprite.m_derivedStats": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x1120",
+  "pt": "0xfe8",
+  "votes": [
+   [
+    "0xfe8",
+    2
+   ],
+   [
+    "0xff0",
+    1
+   ],
+   [
+    "0xfe6",
+    1
+   ]
+  ]
+ },
+ "CGameSprite.m_bonusStats": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x2a70",
+  "pt": "0x2948",
+  "votes": []
+ },
+ "CGameSprite.m_activeImprisonment": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x3bfc",
+  "pt": "0x390c",
+  "votes": [
+   [
+    "0x390c",
+    1
+   ]
+  ]
+ },
+ "CGameSprite.m_bSanctuary": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x3f74",
+  "pt": "0x3c88",
+  "votes": []
+ },
+ "CGameSprite.m_equipedEffectList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x49b0",
+  "pt": "0x46c8",
+  "votes": [
+   [
+    "0x46c8",
+    3
+   ]
+  ]
+ },
+ "CGameSprite.m_timedEffectList": {
+  "status": "confirmed",
+  "how": "interp",
+  "bg": "0x4a00",
+  "pt": "0x4718",
+  "votes": [
+   [
+    "0x4718",
+    3
+   ]
+  ]
+ },
+ "CGameSprite.m_speedFactor": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x4b4c",
+  "pt": "0x4864",
+  "votes": []
+ },
+ "CGameSprite.m_liveTypeAI": {
+  "status": "confirmed",
+  "how": "adjacent",
+  "bg": "0x4b50",
+  "pt": "0x4868",
+  "votes": [
+   [
+    "0x4868",
+    4
+   ]
+  ]
+ },
+ "CGameSprite.m_attackFrame": {
+  "status": "nosites",
+  "how": "adjacent",
+  "bg": "0x4b9a",
+  "pt": "0x48b2",
+  "votes": []
+ },
+ "CGameSprite.m_pLocalVariables": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x4eb8",
+  "pt": "0x4bd0",
+  "votes": []
+ },
+ "CGameSprite.m_hitBonusesLeft": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x5048",
+  "pt": "0x4df0",
+  "votes": []
+ },
+ "CGameSprite.m_hitBonusesRight": {
+  "status": "nosites",
+  "how": "interp",
+  "bg": "0x5050",
+  "pt": "0x4df8",
+  "votes": []
+ },
+ "CGameDoor.m_dwFlags": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x56c",
+  "pt": "0x570",
+  "votes": []
+ },
+ "CGameDoor.m_scriptName": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x5f0",
+  "pt": null,
+  "votes": []
+ },
+ "CGameDoor.m_posXTrapOrigin": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x64c",
+  "pt": "0x650",
+  "votes": []
+ },
+ "CGameDoor.m_posYTrapOrigin": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x64e",
+  "pt": "0x652",
+  "votes": []
+ },
+ "CGameContainer.m_dwFlags": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x95c",
+  "pt": "0x954",
+  "votes": []
+ },
+ "CGameContainer.m_posTrapOrigin": {
+  "status": "nosites",
+  "how": "extrap",
+  "bg": "0x968",
+  "pt": "0x960",
+  "votes": []
+ },
+ "CContingency.m_dwFlags": {
+  "status": "nosites",
+  "how": "assumed",
+  "bg": "0x70",
+  "pt": "0x70",
+  "votes": []
+ }
+}

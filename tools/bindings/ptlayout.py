@@ -84,6 +84,24 @@ pt_off = collections.defaultdict(dict)   # s -> item name -> pt offset
 pt_size = {}
 how = collections.defaultdict(dict)
 
+# hand-verified fields/sizes (manual_fields.json): {"fields": {S: {f: off}}, "sizes": {S: size}}
+MANUAL = {'fields': {}, 'sizes': {}}
+if os.path.exists(os.path.join(HERE, 'manual_fields.json')):
+    MANUAL = json.load(open(os.path.join(HERE, 'manual_fields.json')))
+for _s, _fs in MANUAL.get('fields', {}).items():
+    for _f, _v in _fs.items():
+        if not _f.startswith('_'):
+            pt_off[_s][_f] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
+            how[_s][_f] = 'manual'
+# manual item size change (BG inline array -> PTEE pointer): MSIZE[S][f]
+MSIZE = collections.defaultdict(dict)
+for _s, _fs in MANUAL.get('fields', {}).items():
+    for _f, _v in _fs.items():
+        if isinstance(_v, dict) and 'size' in _v:
+            MSIZE[_s][_f] = int(_v['size'], 16)
+for _s, _v in MANUAL.get('sizes', {}).items():
+    pt_size[_s] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
+
 
 def flat(s, r, depth=0):
     """PT relative offset for BG relative offset r inside struct s, if known."""
@@ -187,7 +205,7 @@ def adjacency(s):
         if a.off + a.size != b.off:
             continue
         ua, na = item_struct(a)
-        sa = (pt_size[ua] * na if ua in pt_size else None) if ua else a.size
+        sa = MSIZE[s].get(a.name) or ((pt_size[ua] * na if ua in pt_size else None) if ua else a.size)
         if sa is None:
             continue
         if a.name in pt_off[s] and b.name not in pt_off[s]:
@@ -221,7 +239,7 @@ def infer_sizes2():
         if s not in pt_size and items and items[-1].name in pt_off[s]:
             last = items[-1]
             u, n = item_struct(last)
-            lsz = (pt_size.get(u) * n if u in pt_size else None) if u else last.size
+            lsz = MSIZE[s].get(last.name) or ((pt_size.get(u) * n if u in pt_size else None) if u else last.size)
             if lsz is not None:
                 tail = st.size - (last.off + last.size)
                 if 0 <= tail < 16:
@@ -256,10 +274,12 @@ for it in range(24):
         break
 
 # ---- consistency: PT order must follow BG order, no overlaps, size covers all items ----------
-RANK = {'evidence': 0, 'interp': 1, 'adjacent': 2, 'extrap': 3, 'assumed': 4}
+RANK = {'manual': -1, 'evidence': 0, 'interp': 1, 'adjacent': 2, 'extrap': 3, 'assumed': 4}
 
 
 def isize(s, f):
+    if f.name in MSIZE[s]:
+        return MSIZE[s][f.name]
     u, n = item_struct(f)
     if u:
         return pt_size[u] * n if u in pt_size else None
@@ -368,7 +388,7 @@ for _ in range(60):
         break
 
 out = {s: {'bg_size': T.structs[s].size, 'pt_size': pt_size.get(s),
-           'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': f.size, 'type': f.type, 'how': how[s].get(f.name)} for f in own_items(s)}}
+           'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': MSIZE[s].get(f.name, f.size), 'type': f.type, 'how': how[s].get(f.name)} for f in own_items(s)}}
        for s in T.structs}
 json.dump(out, open(os.path.join(HERE, 'ptlayout.json'), 'w'), indent=0)
 if __name__ == '__main__':
