@@ -38,6 +38,7 @@
     <ClCompile Include="$(ILROOT)lib_source\ImGui\implot_items.cpp" />
     <ClCompile Include="generated\Baldur_generated_internal_pointers.cpp" />
     <ClCompile Include="source\ptee_stubs.cpp" />
+    <ClCompile Include="source\ptee_engine.cpp" />
     <ClCompile Include="generated\EEexLua_generated.cpp" />
     <ClCompile Include="generated\EEexLua_generated_baseclass_offsets.cpp" />
   </ItemGroup>
@@ -136,7 +137,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -161,7 +162,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>

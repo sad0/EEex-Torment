@@ -11,6 +11,9 @@ Pattern=40534883EC20488BD94885C97458
 [CResFont::GetFont]
 Pattern=40534883EC20488BD9E852F4
 
+[PTEE-CGameSprite::GetEffectiveAlignment]
+Pattern=48895C2418574883EC3083
+
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F
 

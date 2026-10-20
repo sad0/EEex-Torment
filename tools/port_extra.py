@@ -18,6 +18,8 @@ FUNCS = {
 # EEex-PTEE dev labels (not in upstream): CScreenStart::TimerAsynchronousUpdate first tick plays
 # PlayMovie("LOGO") then PlayMovieNext("OPENING") (0x346a54..0x346aab); used by PTEE_SkipIntro.lua
 LABELS = {
+    # Torment-only engine functions bound by eeexdll/source/ptee_engine.cpp
+    'PTEE-CGameSprite::GetEffectiveAlignment': 0x3c4fe0,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }

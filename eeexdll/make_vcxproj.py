@@ -20,11 +20,12 @@ s = re.sub(r'\s*<ClInclude Include="headers[^"]*" />', '', s)
 # they are replaced by source/ptee_stubs.cpp, which logs when one of them is reached.
 s = re.sub(r'\s*<ClCompile Include="[^"]*\\(uncap_fps|visibility_map|engine_reimplementations|debug)\.cpp" />', '', s)
 s = s.replace('<ClCompile Include="generated\\Baldur_generated_internal_pointers.cpp" />',
-              '<ClCompile Include="generated\\Baldur_generated_internal_pointers.cpp" />\n    <ClCompile Include="source\\ptee_stubs.cpp" />')
+              '<ClCompile Include="generated\\Baldur_generated_internal_pointers.cpp" />\n    <ClCompile Include="source\\ptee_stubs.cpp" />'
+              '\n    <ClCompile Include="source\\ptee_engine.cpp" />')
 # Torment semantic patches (patch_sources.py): compile the patched copies instead of upstream
 for _f in ('EEex.cpp',):
     s = s.replace(rf'<ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\{_f}" />', rf'<ClCompile Include="generated\src\{_f}" />')
-s = s.replace('<AdditionalIncludeDirectories>$(ProjectDir)generated;', r'<AdditionalIncludeDirectories>$(ProjectDir)generated;$(ILROOT)EEex-Core-Shared-Files\source;')
+s = s.replace('<AdditionalIncludeDirectories>$(ProjectDir)generated;', r'<AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;')
 open(os.path.join(HERE, 'EEex-PTEE.vcxproj'), 'w', encoding='utf-8').write(s)
 print(re.findall(r'ClCompile Include="([^"]+)"', s)[-5:])
 print(re.findall(r'<AdditionalIncludeDirectories>[^<]*', s)[:1])

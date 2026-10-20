@@ -22,6 +22,43 @@ PATCHES = {
 	const bool isLeftHand = lastSwing && pLeftHandItem != nullptr && pLeftHandItem->pRes->pHeader->itemType != 12;""",
          """	// EEex-PTEE: Torment has no off-hand slot (slot 9 is TATTOO3 in ITMSLOTS.2DA)
 	const bool isLeftHand = false;"""),
+        # Bind Torment-only engine functions before anything else uses them
+        ('''void EEex::InitEEex() {
+''', '''void EEex::InitEEex() {
+
+	PTEE::BindEngine();
+'''),
+        ('''#include "Baldur_generated.h"
+''', '''#include "Baldur_generated.h"
+#include "ptee_engine.hpp"
+'''),
+        # op319 (CGameEffectUsability::CheckUsability), Torment rules (PT 0x1ed180): param2 = 8 compares
+        # the effective alignment (Nameless One: from the Law/Good globals) and PT adds param2 = 12, a
+        # byte of the creature header at +0x87 (BG m_trackingTarget bytes, reused by PTEE).
+        ('''			case 8: {
+				match = pAIType->m_Alignment == this->m_effectAmount;
+				break;
+			}''', '''			case 8: {
+				// EEex-PTEE: Torment compares the effective alignment (PT 0x3c4fe0). The type is passed
+				// by value: the callee destroys the copy (its CString), as the engine's caller expects.
+				alignas(CAIObjectType) byte aiTypeCopyStorage[sizeof(CAIObjectType)];
+				CAIObjectType *const pAITypeCopy = reinterpret_cast<CAIObjectType*>(aiTypeCopyStorage);
+				pAITypeCopy->Construct(pAIType);
+				match = PTEE::p_CGameSprite_GetEffectiveAlignment(pSprite, pAITypeCopy) == this->m_effectAmount;
+				break;
+			}'''),
+        ('''				#pragma warning(default:6054)
+				break;
+			}
+		}''', '''				#pragma warning(default:6054)
+				break;
+			}
+			case 12: {
+				// EEex-PTEE: Torment-only mode, creature header byte +0x87
+				match = reinterpret_cast<const byte*>(&pSprite->m_baseStats)[0x87] == this->m_effectAmount;
+				break;
+			}
+		}'''),
     ],
 }
 
