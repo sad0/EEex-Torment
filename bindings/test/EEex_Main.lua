@@ -11,6 +11,7 @@ end
 local ok, err = pcall(function()
 	EEex_DoFile("EEex_Assembly")
 	EEex_DoFile("EEex_Assembly_Patch")
+	EEex_DoFile("PTEE_SkipIntro")
 	-- Same as EEex_Main.lua: redirect the engine's tolua event functions to the bindings' versions
 	EEex_OpenLuaBindings("LuaBindings", function() EEex_DoFile("EEex_LuaBindings_Patch") end)
 	-- Phase 4: EEex.dll (C++ core) for Torment

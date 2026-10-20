@@ -15,10 +15,21 @@ FUNCS = {
     'CRes::Demand': (0x3f6d50, 0x47d9b0),
     'CResFont::GetFont': (0x3f78f0, 0x47e550),
 }
+# EEex-PTEE dev labels (not in upstream): CScreenStart::TimerAsynchronousUpdate first tick plays
+# PlayMovie("LOGO") then PlayMovieNext("OPENING") (0x346a54..0x346aab); used by PTEE_SkipIntro.lua
+LABELS = {
+    'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
+    'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
+}
 lines = ['; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db',
          '; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,',
          ';   Hook-drawItem()-CheckScrollbarContentHeight, Hook-drawItem()-FixForcedScrollbarDivideByZero2', '']
 for name, (bg, pt) in FUNCS.items():
+    p, start = unique_at(pt)
+    ops = f'ADD {pt - start}' if pt != start else ''
+    lines += [f'[{name}]', f'Pattern={p}'] + ([f'Operations={ops}'] if ops else []) + ['']
+    print(name, hex(pt), p, ops)
+for name, pt in LABELS.items():
     p, start = unique_at(pt)
     ops = f'ADD {pt - start}' if pt != start else ''
     lines += [f'[{name}]', f'Pattern={p}'] + ([f'Operations={ops}'] if ops else []) + ['']

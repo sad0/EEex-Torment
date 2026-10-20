@@ -10,3 +10,9 @@ Pattern=40534883EC20488BD94885C97458
 
 [CResFont::GetFont]
 Pattern=40534883EC20488BD9E852F4
+
+[Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
+Pattern=488D1579AF2F
+
+[Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies]
+Pattern=84DB0F841704
