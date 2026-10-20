@@ -36,5 +36,18 @@
 | CDerivedStats::GetAtOffset (extended stats) | Lua hook | n/a | valid: PT accepts the same engine stat range 1..202 (bound 0xc9), FIRST_EXTENDED_STAT_ID 203 stays |
 | CVisibilityMap::*, CInfinity::*, CScreenWorld::*, CChitin::Update/WinMain, render | stubs | 0.32..1.00 | phase 4d |
 
+| Projectile start positions (CProjectileBAM / SpellHit / TravelDoor) | EEex.cpp | 0.78 / 0.69 / 0.94 | valid: start/target/distance logic identical in PT's Fire functions (differences: DetermineHeight call, which EEex already uses; jump-table data with the same object-type mapping; a sound channel) |
+| IsDefaultAttackCursor | EEex.cpp | n/a | logic valid (EA cut-offs from engine constants, EA.IDS identical); the cursor ids tested by B3AttackInfo.lua (12, 101) are phase 5 |
+| Fix_Hook_ImplementWSPECIALSpeedColumn | EEex.cpp | n/a | **disabled for PT**: Torment's WSPECIAL.2DA has no SPEED column |
+| Hand bonus feedback (+Right / +Left) | EEex.cpp | n/a | fixed: m_hitBonusesRight/Left are CStrings (engine appends "(text)"), upstream formatted them with %d |
+| Engine constants in identical code (trigger ids in Hold/ApplyTriggers/SetTrigger/SetLastObject, opcode 187, colour 0xBED7D7, dead-state mask 0xFC0) | EEex.cpp | 1.00 | valid: same values in PT's own code |
+
+## In-game test of the exports (bindings/test/EEex_Main.lua, save ptee-test)
+All 19 standalone exports run without error on Torment: CanAttackWithLeftHand, GetWeaponHitChance (35%,
+full PT breakdown), FakeAttackRoll, IsImmuneToWeapon, GetExtendedStatValue, GetHighestRefreshRate,
+GetMicroseconds, Get/SetINIString (round trip), GetTextWidthHeight, IsDefaultAttackCursor,
+IsMarshallingCopy, IsPlayerScript, ShouldEffectBypassOp120, MatchObject, FormatPointerAsEngine, DeepCopy.
+The other exports need the phase-5 Lua layer (menus/templates, sliced rects, profiler, Uncap FPS).
+
 Overrides are only reached when EEex's Lua patches redirect the engine (phase 5); until then the
 engine's own PT functions run.

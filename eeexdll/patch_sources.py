@@ -245,6 +245,16 @@ PATCHES = {
 		sFormatString->Format(" +Fist of Iron:%d", nFistOfIron);
 		*sFeedbackString += sFormatString;
 	}'''),
+        # Hand bonus breakdown: m_hitBonusesRight/Left are CStrings (the engine appends "(" text ")");
+        # upstream EEex formats them with %d (prints an address).
+        ('''		sFormatString->Format(" +Right:%d (%d)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusRight), pThis->m_hitBonusesRight);''',
+         '''		sFormatString->Format(" +Right:%d (%s)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusRight), pThis->m_hitBonusesRight.m_pchData);'''),
+        ('''		sFormatString->Format(" +Left:%d (%d)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusLeft), pThis->m_hitBonusesLeft);''',
+         '''		sFormatString->Format(" +Left:%d (%s)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusLeft), pThis->m_hitBonusesLeft.m_pchData);'''),
+        # WSPECIAL.2DA has no SPEED column in Torment (HIT, DAMAGE only): EEex's BG fix does not apply.
+        ('@body void EEex::Fix_Hook_ImplementWSPECIALSpeedColumn(', '''{
+	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement
+}'''),
     ],
 }
 

@@ -83,6 +83,35 @@ local function dumpParty(game)
 	log("m_equipment.m_selectedWeapon:", eq.m_selectedWeapon, "ability:", eq.m_selectedWeaponAbility,
 		"m_pSprite==sprite:", EEex_UDToPtr(eq.m_pSprite) == EEex_UDToPtr(sprite))
 	log("m_equipment.m_items:", pcall(function() return tostring(eq.m_items) end))
+
+	-- Phase 4b: every EEex.dll export that works without the phase-5 Lua patches
+	local target = EEex_CastUD(getObject(game.m_characters:get(1)), "CGameSprite")
+	local function t(name, f)
+		local res = {pcall(f)}
+		local out = {}
+		for i = 2, #res do out[#out + 1] = tostring(res[i]) end
+		log(string.format("EXPORT %-28s %s %s", name, res[1] and "ok" or "ERROR", table.concat(out, " | ")))
+	end
+	local weaponPtr = EEex_ReadPtr(EEex_UDToPtr(eq.m_items) + 8 * eq.m_selectedWeapon)
+	local weapon = weaponPtr ~= 0 and EEex_PtrToUD(weaponPtr, "CItem") or nil
+	log("selected weapon item:", weaponPtr ~= 0 and weapon.cResRef:get() or "none")
+	t("GetWeaponHitChance", function() return EEex.GetWeaponHitChance(sprite, target, weapon, eq.m_selectedWeaponAbility, 0) end)
+	t("FakeAttackRoll", function() return EEex.FakeAttackRoll(sprite, target, weapon, eq.m_selectedWeaponAbility, 0) end)
+	t("IsImmuneToWeapon", function() return EEex.IsImmuneToWeapon(target, sprite, eq.m_selectedWeapon, weapon, eq.m_selectedWeaponAbility) end)
+	t("GetExtendedStatValue", function() return EEex.GetExtendedStatValue(sprite, 203) end)
+	t("GetHighestRefreshRate", function() return EEex.GetHighestRefreshRate() end)
+	t("GetMicroseconds", function() return EEex.GetMicroseconds() end)
+	t("SetINIString", function() return EEex.SetINIString("./EEex_PTEE_test.ini", "Test", "Key", "Value42") end)
+	t("GetINIString", function() return EEex.GetINIString("./EEex_PTEE_test.ini", "Test", "Key", "default") end)
+	t("GetTextWidthHeight", function() return EEex.GetTextWidthHeight("Hello Sigil", "BOOKMANI", 14, false) end)
+	t("IsDefaultAttackCursor", function() return EEex.IsDefaultAttackCursor() end)
+	t("IsMarshallingCopy", function() return EEex.IsMarshallingCopy() end)
+	t("IsPlayerScript", function() return EEex.IsPlayerScript(sprite.m_overrideScript) end)
+	t("ShouldEffectBypassOp120", function() return EEex.ShouldEffectBypassOp120(nil) end)
+	t("MatchObject", function() return EEex.MatchObject(sprite, "return true", 0, 300, 0) end)
+	t("MatchObject Party", function() return EEex.MatchObject(sprite, "Player2", 0, 300, 0) end)
+	t("FormatPointerAsEngine", function() return EEex.FormatPointerAsEngine(EEex_UDToPtr(target)) end)
+	t("DeepCopy", function() local c = EEex.DeepCopy({a = {b = 1}}); return c and c.a.b end)
 end
 
 local engineDone, partyDone, ticks = false, false, 0
