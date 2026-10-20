@@ -1,0 +1,8 @@
+﻿ref/
+ghidra/
+*.gpr
+*.rep/
+build/
+x64/
+*.pdb
+.vs/
