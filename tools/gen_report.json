@@ -1,0 +1,6557 @@
+{
+ "C2DArray::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x294fa0"
+ },
+ "C2DArray::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x13f4d0"
+ },
+ "C2DArray::GetAt(const CString*,const CString*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x122c50"
+ },
+ "C2DArray::Load": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x122de0"
+ },
+ "CAIAction::Construct(CAIAction*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x124370"
+ },
+ "CAIAction::Construct(short,CPoint*,int,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x124650"
+ },
+ "CAIAction::Decode": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x123be0"
+ },
+ "CAIAction::Destruct": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CAIAction::operator=": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x124990"
+ },
+ "CAICondition::Hold": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x123f70"
+ },
+ "CAICondition::TriggerHolds": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1242b0"
+ },
+ "CAIGroup::AddToSearch": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x124d40"
+ },
+ "CAIGroup::FollowLeader": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x125080"
+ },
+ "CAIGroup::GetFacings": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x125340"
+ },
+ "CAIGroup::GetOffsets": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x125720"
+ },
+ "CAIGroup::GroupSetTarget(CPoint,int,short,CPoint)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x127320"
+ },
+ "CAIGroup::RemoveFromSearch": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x128610"
+ },
+ "CAIIdList::Construct()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x128af0"
+ },
+ "CAIIdList::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x128b90"
+ },
+ "CAIIdList::Find(int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x128d50"
+ },
+ "CAIIdList::LoadList(CResRef,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1291c0"
+ },
+ "CAIObjectType::Construct(byte,byte,byte,byte,byte,byte,byte,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1292f0"
+ },
+ "CAIObjectType::Decode": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x129470"
+ },
+ "CAIObjectType::GetShare": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x12b340"
+ },
+ "CAIObjectType::GetShareType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12b6f0"
+ },
+ "CAIObjectType::OfType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12ba40"
+ },
+ "CAIObjectType::Set": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12c140"
+ },
+ "CAIObjectType::operator==": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x129420"
+ },
+ "CAIScript::Construct(CResRef,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x176d80"
+ },
+ "CAIScript::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12cef0"
+ },
+ "CAIScriptFile::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12da40"
+ },
+ "CAIScriptFile::DecodeActionType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12dd70"
+ },
+ "CAIScriptFile::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12db90"
+ },
+ "CAIScriptFile::ParseConditionalString": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1397d0"
+ },
+ "CAIScriptFile::ParseObjectType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x139ca0"
+ },
+ "CAIScriptFile::ParseResponseString": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x13a940"
+ },
+ "CAITrigger::Construct(CAITrigger*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x123e40"
+ },
+ "CAITrigger::OfType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x13e870"
+ },
+ "CAbilityId::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x176e10"
+ },
+ "CButtonData::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x176e80"
+ },
+ "CContingencyList::Process": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15b350"
+ },
+ "CContingencyList::ProcessTrigger": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15b6f0"
+ },
+ "CDerivedStats::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15bfe0"
+ },
+ "CDerivedStats::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1bb9c0",
+  "replaced": "0x5dbf26"
+ },
+ "CDerivedStats::GetAtOffset": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x15f1f4"
+ },
+ "CDerivedStats::GetAverageLevel": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15fe90"
+ },
+ "CDerivedStats::GetCriticalValue": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "no candidate"
+ },
+ "CDerivedStats::GetPriestLevelCast": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1608d0"
+ },
+ "CDerivedStats::GetSpellState": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CDerivedStats::GetWizardLevelCast": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x160db0"
+ },
+ "CGameAIBase::ApplyEffectToParty": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x163bd0"
+ },
+ "CGameAIBase::ForceSpell": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x17f950"
+ },
+ "CGameAIBase::ForceSpellPoint": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameAIBase::GetTargetShare": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1731c0"
+ },
+ "CGameAIBase::GetTargetShareType(CAIObjectType*,byte)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x173250"
+ },
+ "CGameAIBase::GetTargetShareType(byte)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x173440"
+ },
+ "CGameArea::AdjustTarget": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x190040"
+ },
+ "CGameArea::ApplyEffect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1902d0"
+ },
+ "CGameArea::CheckLOS": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x190790"
+ },
+ "CGameArea::CheckWalkable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x190b30"
+ },
+ "CGameArea::GetAllInRange(CPoint*,CAIObjectType*,short,byte*,CTypedPtrList<CPtrList,long>*,int,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1930e0"
+ },
+ "CGameArea::GetAllInRange(__POSITION*,CPoint*,CAIObjectType*,short,byte*,CTypedPtrList<CPtrList,long>*,int,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1932d0"
+ },
+ "CGameArea::GetNearest": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1948b0"
+ },
+ "CGameArea::GetNearest(CPoint,CAIObjectType*,short,byte*,int,int,byte)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x195210"
+ },
+ "CGameArea::OnActionButtonClickGround": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameArea::ShowMonstersInArea": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1a0f90"
+ },
+ "CGameAreaNotes::UpdateButtonPositions": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1a5ae0"
+ },
+ "CGameContainer::SetDrawPoly": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1ab490"
+ },
+ "CGameDoor::SetDrawPoly": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1b43f0"
+ },
+ "CGameEffect::DecodeEffect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1fe380"
+ },
+ "CGameEffect::DecodeEffectFromBase": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2036f0"
+ },
+ "CGameObject::InControl": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x3d0e60"
+ },
+ "CGameObjectArray::GetShare": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2db2d0"
+ },
+ "CGameSave::SetInputMode": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x20f570"
+ },
+ "CGameSprite::CheckQuickLists": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3bebd0"
+ },
+ "CGameSprite::Copy": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameSprite::Damage": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x1948b0"
+ },
+ "CGameSprite::DisableOffhand": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c37a0"
+ },
+ "CGameSprite::FeedBack": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x40eb20"
+ },
+ "CGameSprite::GetActiveStats": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x172860"
+ },
+ "CGameSprite::GetCasterLevel": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4130f0"
+ },
+ "CGameSprite::GetInternalButtonList": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3c6bf0"
+ },
+ "CGameSprite::GetKitMask": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x4133d0",
+  "replaced": "0x413490"
+ },
+ "CGameSprite::GetKnownSpellInnate": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c7820",
+  "replaced": "0x359115"
+ },
+ "CGameSprite::GetKnownSpellMage": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c7850"
+ },
+ "CGameSprite::GetKnownSpellPriest": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c7880",
+  "replaced": "0x258d78"
+ },
+ "CGameSprite::GetLauncher": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameSprite::GetLauncherSlot": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameSprite::GetName": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3c9310"
+ },
+ "CGameSprite::GetNameRef": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3c93f0",
+  "replaced": "0x1661ba"
+ },
+ "CGameSprite::GetQuickButtons": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1c0230"
+ },
+ "CGameSprite::MakeGlobal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3d28c0",
+  "replaced": "0x270a90"
+ },
+ "CGameSprite::PlaySound": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3d7c40"
+ },
+ "CGameSprite::ReadyOffInternalList": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameSprite::ReadySpell": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3daa00"
+ },
+ "CGameSprite::ShouldAvertCriticalHit": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameSprite::SpellPoint": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x42f775"
+ },
+ "CGameSprite::UpdateTarget": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x435e60"
+ },
+ "CGameTrigger::SetDrawPoly": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x1b43f0"
+ },
+ "CImmunitiesAIType::OnList": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21be60"
+ },
+ "CInfButtonArray::SetQuickSlot": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2c8880"
+ },
+ "CInfButtonArray::SetState": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2c8a20"
+ },
+ "CInfCursor::SetCursor": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2ce280"
+ },
+ "CInfGame::GetCharacterPortraitNum": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2db140"
+ },
+ "CInfGame::GetFamiliar": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2db6f1"
+ },
+ "CInfGame::GetScrollSpeed": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2ddcf0"
+ },
+ "CInfGame::OnPortraitLDblClick": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2ea460"
+ },
+ "CInfGame::SelectCharacter": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2f2230"
+ },
+ "CInfGame::SelectToolbar": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2f24d0",
+  "replaced": "0x2328c0"
+ },
+ "CInfGame::SetIconIndex": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x294210"
+ },
+ "CInfGame::SetState": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CInfGame::UnselectAll": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2fbdc0"
+ },
+ "CInfinity::FitViewPosition": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CInfinity::ScreenToViewport": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x308360"
+ },
+ "CInfinity::ScreenToWorld": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x308410"
+ },
+ "CInfinity::SetScrollDest": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CInfinity::SetViewPosition": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x309630"
+ },
+ "CInfinity::SetZoom": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3096b0"
+ },
+ "CItem::Construct(CResRef,ushort,ushort,ushort,ushort,uint)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21dab0"
+ },
+ "CItem::Demand": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21df60"
+ },
+ "CItem::GetAbility": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21e4c0"
+ },
+ "CMessageHandler::AddMessage": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x228390"
+ },
+ "CMessageStartVEF::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1bb690"
+ },
+ "CObList::AddTail": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48e2f0"
+ },
+ "CObList::Construct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x48e0d0"
+ },
+ "CObList::Destruct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) sig",
+  "conf": "high",
+  "note": "no candidate -> direct callee pattern",
+  "addr": "0x48e100",
+  "replaced": "0x4c27a8d7"
+ },
+ "CObList::Find": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48e420"
+ },
+ "CObList::RemoveAll": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48e660"
+ },
+ "CObList::RemoveAt": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48e6a0"
+ },
+ "CObList::RemoveHead": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48e720"
+ },
+ "CProjectile::AddEffect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x279a80"
+ },
+ "CProjectile::ClearEffects": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x27beb0"
+ },
+ "CProjectile::DetermineHeight": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x283590"
+ },
+ "CProjectile::GetStart": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x28dde0"
+ },
+ "CRes::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x47d2a0"
+ },
+ "CRes::Destruct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x47d5c0"
+ },
+ "CResHelper<CResCRE,1009>::SetResRef": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x156ab0"
+ },
+ "CRuleTables::IsProtectedFromSpell": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x4c3a90"
+ },
+ "CRuleTables::MapCharacterSpecializationToSchool": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key outside BG function"
+ },
+ "CScreenWorld::TogglePauseGame": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CSearchBitmap::GetCost": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2adab0"
+ },
+ "CSearchBitmap::GetLOSCost": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2addc0"
+ },
+ "CSearchBitmap::GetNearestOpenSquare": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2adfd0"
+ },
+ "CSearchBitmap::GetStructureHeight": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key outside BG function"
+ },
+ "CSelectiveBonusList::GetBonus": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21bd70"
+ },
+ "CSound::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x493fe0"
+ },
+ "CSound::Destruct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4941a0"
+ },
+ "CSoundMixer::GetListenPosition": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x496170"
+ },
+ "CSpell::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x177240"
+ },
+ "CString::Construct(CString*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4842c0"
+ },
+ "CString::Construct(char*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x484330"
+ },
+ "CString::Destruct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4843c0"
+ },
+ "CString::MakeUpper": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4852f0"
+ },
+ "CString::operator=(CString*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4843f0"
+ },
+ "CString::operator=(char*)": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x484490"
+ },
+ "CTlkTable::Fetch": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a0840"
+ },
+ "CUtil::UtilRandInt": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x486d80"
+ },
+ "CVariable::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x163410"
+ },
+ "CVariableHash::AddKey": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b43b0"
+ },
+ "CVariableHash::FindKey": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b4960"
+ },
+ "CVidBitmap::Construct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x497850"
+ },
+ "CVidBitmap::Destruct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x497ed0"
+ },
+ "CVidBitmap::GetPixelColor": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49a370"
+ },
+ "CVidBitmap::GetPixelValue(int,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49a3e0"
+ },
+ "CVidBitmap::SetResRef": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1a0950"
+ },
+ "CVisualEffect::Load": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2baed0"
+ },
+ "CompareCResByTypeThenName": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4870e0"
+ },
+ "OpenIniFile": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48ffc0"
+ },
+ "SDL_GetDisplayForWindow": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d59b0"
+ },
+ "SDL_GetKeyFromName": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d2dc0"
+ },
+ "SDL_GetKeyName": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d2f20"
+ },
+ "bsearch": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x595a18"
+ },
+ "findMenu": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43ee90"
+ },
+ "popupActive": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x454f90"
+ },
+ "rand": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x59192c"
+ },
+ "restoreMenuStack": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x43f130"
+ },
+ "saveMenuStack": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43f560"
+ },
+ "stopEditCapture": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4562e0"
+ },
+ "uiIsHidden": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4582a0"
+ },
+ "uiIsMenuOnStack": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4582c0"
+ },
+ "uiKillCapture": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4585f0"
+ },
+ "uiLoadMenu": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x459e00"
+ },
+ "CAIObjectType::ANYONE": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x71e2e8"
+ },
+ "CAIObjectType::NOONE": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x71e300"
+ },
+ "CChitin::ENGINE_MODE": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CChitin::TIMER_UPDATES_PER_SECOND": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7211fc"
+ },
+ "CChitin::m_sGameName": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7cb738"
+ },
+ "CGameObject::DEFAULT_TERRAIN_TABLE": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x62c8c0"
+ },
+ "CGameObject::DEFAULT_VISIBLE_TERRAIN_TABLE": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62c8b0"
+ },
+ "CGameSprite::DEFAULT_ATTACK": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x6491d8"
+ },
+ "CInfinity::MAXZOOM_OUT": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x71e554"
+ },
+ "CVidMode::NUM_FADE_FRAMES": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CVidMode::SCREENHEIGHT": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CVidMode::SCREENWIDTH": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CVidPalette::RANGE_COLORS": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x65dad0"
+ },
+ "CVidPalette::m_SuppressTintMasks": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x72170c"
+ },
+ "CVisibilityMap::m_SSToVSTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x639748"
+ },
+ "SDL_GetWindowFlags": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d6180"
+ },
+ "SDL_GetWindowFromID": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d61d0"
+ },
+ "afxPchNil": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7210b0"
+ },
+ "capture": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7b8290"
+ },
+ "d3d": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "fingerDown": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "g_backgroundMenu": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7b8268",
+  "replaced": "-0x7a728fad"
+ },
+ "g_drawBackend": {
+  "kind": "?",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "ops?"
+ },
+ "g_keywords": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x71fec0"
+ },
+ "g_letters": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x601af30"
+ },
+ "g_lua": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x72c8c8"
+ },
+ "g_overlayMenu": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7b8270"
+ },
+ "g_pBaldurChitin": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x72c278"
+ },
+ "gl": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "glGetUniformLocation": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "glUniform1i": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "lang": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7cae40"
+ },
+ "menuLength": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "menuSrc": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "menuStack": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7b75c0"
+ },
+ "menus": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7addc0"
+ },
+ "nextStackMenuIdx": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7b7dc0"
+ },
+ "numMenus": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x7b7dc8"
+ },
+ "optionsHaveChanged": {
+  "kind": "?",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "ops?"
+ },
+ "resources": {
+  "kind": "?",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "ops?"
+ },
+ "slicedRects": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "tooltip": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "transition": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x7b82c8",
+  "replaced": "0x1101baf"
+ },
+ "yyRuleInfo": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64b4a0"
+ },
+ "yy_action": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64b610"
+ },
+ "yy_default": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64cf50"
+ },
+ "yy_lookahead": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64c520"
+ },
+ "yy_reduce_ofst": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64ce40"
+ },
+ "yy_shift_ofst": {
+  "kind": "C",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x64ccb0"
+ },
+ "Data-CBounceList::Add()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x159da4"
+ },
+ "Data-CBounceList::Add()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x159e04"
+ },
+ "Data-CBounceList::Add()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x159de8"
+ },
+ "Data-CGameAIBase::FireItem()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x17d560"
+ },
+ "Data-CGameAIBase::FireItem()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x17d582"
+ },
+ "Data-CGameAIBase::FireItem()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x17d44f"
+ },
+ "Data-CGameAIBase::FireItemPoint()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::FireItemPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::FireSpell()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x17df39"
+ },
+ "Data-CGameAIBase::FireSpell()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x17e0a6"
+ },
+ "Data-CGameAIBase::FireSpell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x17de0b",
+  "replaced": "0x17de02"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x17eeeb"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::ForceSpell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::ForceSpellPoint()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameEffect::DecodeEffectFromBase()-After-CGameEffect::CopyFromBase()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x203771"
+ },
+ "Data-CGameEffect::FireSpell()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x20506b"
+ },
+ "Data-CGameEffect::FireSpell()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2050ed",
+  "replaced": "0x196124"
+ },
+ "Data-CGameEffect::FireSpell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x204e72"
+ },
+ "Data-CGameEffect::vftable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x621350"
+ },
+ "Data-CGameEffectCastingGlow::ApplyEffect()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1c30fd"
+ },
+ "Data-CGameEffectChangeStatic::ApplyEffect()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1c3481"
+ },
+ "Data-CGameEffectSummon::ApplyVisualEffect()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1eb34b"
+ },
+ "Data-CGameEffectVisualSpellHitIWD::ApplyEffect()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1e9bec",
+  "replaced": "0x12caf3"
+ },
+ "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x17d8c2"
+ },
+ "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-3": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::SpellPoint()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x4377a5"
+ },
+ "Data-CGameSprite::SpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4339df",
+  "replaced": "0x4339d5"
+ },
+ "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-3": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UpdateAOE()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItemPoint()-CProjectile::AddEffect()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItemPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CInfButtonArray::SetState()-IndirectJumpTable": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "no candidate"
+ },
+ "Data-CMessageFireProjectile::Run()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x23613a"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-3": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2829f3"
+ },
+ "Data-CProjectileArea::CreateSecondary()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Data-CProjectileArea::Explode()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Data-CProjectileChain::AIUpdate()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x262df9"
+ },
+ "Data-CProjectileChain::Fire()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2852c6"
+ },
+ "Data-CProjectileFall::AIUpdate()-CProjectile::DecodeProjectile()-RetPtr": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2631da"
+ },
+ "Data-EngineConsoleAttachedPtr": {
+  "kind": "?",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "ops?"
+ },
+ "Data-LUA_REGISTRYINDEX": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe62c1"
+ },
+ "BGGetPrivateProfileInt": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48fc20",
+  "replaced": "0x351cd02b"
+ },
+ "CBaldurEngine::OnLeftPanelButtonClick": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CChitin::GetVersionString": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) sig",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x4a3240",
+  "replaced": "0x15d74851"
+ },
+ "CChitin::ParseCommandLine": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a4270"
+ },
+ "CChitin::ProcessEvents": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x44e540"
+ },
+ "CChitin::Update": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a6350"
+ },
+ "CGameArea::GetTintColor": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x196f90"
+ },
+ "CGameArea::OnActivation": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x19cfb0"
+ },
+ "CGameArea::OnDeactivation": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x19d450"
+ },
+ "CGameArea::Render": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x19e500"
+ },
+ "CGameDialogSprite::EndDialog": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameDialogSprite::ResetDialogStates": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1af1a0"
+ },
+ "CGameEffect::CheckSave": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CGameEffect::Construct": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1b5440"
+ },
+ "CGameEffect::CopyFromBase": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1fce30"
+ },
+ "CGameEffect::GetItemEffect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x205400"
+ },
+ "CGameSprite::Construct(byte*,int,ushort,uint,ushort,ushort,uint,CPoint,ushort,int)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3b09c0"
+ },
+ "CImmunitiesWeapon::OnList": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21c0e0"
+ },
+ "CInfGame::GetArea": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2da390"
+ },
+ "CInfGame::SetVisibleArea": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2f3340"
+ },
+ "CInfinity::GetViewPosition": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x305c30"
+ },
+ "CNetwork::ThreadLoop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x493d10"
+ },
+ "CProjectile::DecodeProjectile": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x27c4a0"
+ },
+ "CResPVR::Demand": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x47da20"
+ },
+ "CResRef::CopyToString": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x486aa0",
+  "replaced": "0x32ade2"
+ },
+ "CResRef::operator==(const char*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4866e0"
+ },
+ "CSelectiveWeaponTypeList::OverrideWeaponType": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21c200"
+ },
+ "CString::Format": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x485620"
+ },
+ "CString::operator+=(CString*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4846a0"
+ },
+ "CString::operator+=(char*)": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4846f0"
+ },
+ "CTimerWorld::StartTime": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2b3360"
+ },
+ "CVidCell::GetCurrentCenterPoint": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x499d70"
+ },
+ "CVidCell::GetCurrentFrameSize": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x499e90"
+ },
+ "CVidFont::Construct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49b750"
+ },
+ "CVidFont::Destruct": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49b7d0",
+  "replaced": "0x29a250"
+ },
+ "CVidFont::GetStringHeight": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CVidFont::GetStringLength": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CVidFont::RenderTextWrap": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49ba60"
+ },
+ "CVidFont::SetResRef": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop1",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49bd20"
+ },
+ "CVidMode::ApplyBrightnessContrast": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "no candidate"
+ },
+ "CVidMode::FillRect3d": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49f520"
+ },
+ "CVidMode::Flip": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a6f20"
+ },
+ "CVidPalette::GetAdd": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CVidPalette::GetLight": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CVidPalette::GetReservedEntries": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4aaa60"
+ },
+ "CVidPalette::GetTint": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4aaaa0"
+ },
+ "CVidPalette::SetAUCounter": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4ab820"
+ },
+ "Chitin_GetSectionCallback": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x443850"
+ },
+ "DecodeUTF8Char": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4c8930"
+ },
+ "DrawAlpha": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "DrawBegin": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c170"
+ },
+ "DrawBeginScaled": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c190"
+ },
+ "DrawBindTexture": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c200"
+ },
+ "DrawBlendFunc": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c220"
+ },
+ "DrawClear": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "DrawColor": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c2c0"
+ },
+ "DrawColorTone": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c2e0"
+ },
+ "DrawDisable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c350"
+ },
+ "DrawEnable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c370"
+ },
+ "DrawEnd": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c390"
+ },
+ "DrawEndScaled": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c3b0"
+ },
+ "DrawOrtho11Begin": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c760"
+ },
+ "DrawOrtho11End": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c780"
+ },
+ "DrawPopState": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c4f0"
+ },
+ "DrawPushState": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c510"
+ },
+ "DrawQuad(CRect*,CRect*)": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49e580"
+ },
+ "DrawReadPixels_DX": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4b35a0"
+ },
+ "DrawReadPixels_GL": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4b6ed0"
+ },
+ "DrawTexCoord": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c660"
+ },
+ "DrawTransformFromScreenH": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c7a0",
+  "replaced": "0x17a2c5"
+ },
+ "DrawTransformFromScreenW": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c7c0"
+ },
+ "DrawTransformToScreen": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "no candidate"
+ },
+ "DrawTransformToScreenH": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c800"
+ },
+ "DrawTransformToScreenW": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": " -> direct callee pattern",
+  "addr": "0x49c820"
+ },
+ "DrawVertex": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c680"
+ },
+ "SDL_Delay": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) prop0",
+  "conf": "high",
+  "note": "fmap says callee 0x4d1ad0 -> direct callee pattern",
+  "addr": "0x4d1ad0",
+  "replaced": "-0x3e6a37bc"
+ },
+ "SDL_GL_SetSwapInterval": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d5380"
+ },
+ "SDL_GetModState": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4d30b0"
+ },
+ "SDL_GetTicks": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d1b40"
+ },
+ "SDL_Log": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d0fa0"
+ },
+ "SDL_ShowSimpleMessageBox": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4d7dc0"
+ },
+ "SearchThreadMain": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2aeab0"
+ },
+ "XScreenToZoomed": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c840"
+ },
+ "YScreenToZoomed": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c860"
+ },
+ "applycolor": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x49c080"
+ },
+ "bootstrapLua": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x144420"
+ },
+ "chWriteInifile": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x490340",
+  "replaced": "-0x7eb27602"
+ },
+ "dimmDump": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x489c30"
+ },
+ "dimmGetResObject": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x48a380"
+ },
+ "dimmResolveFileName": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48c620"
+ },
+ "dimmServiceFromMemory": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x48cb90"
+ },
+ "drawLetters": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "drawMenu": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "drawSlice": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4519e0"
+ },
+ "drawSliceSide": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x451b20"
+ },
+ "drawTop": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "eventMenu": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x44a590"
+ },
+ "fadeSounds": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x478b80",
+  "replaced": "0x2cd5c7"
+ },
+ "fontAddTempGlyph": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4c9b80"
+ },
+ "fontGetGlyphIndex": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4ca710"
+ },
+ "fontGetGlyphMap": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4ca7f0"
+ },
+ "fontGetKernAdvance": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4ca920"
+ },
+ "fontIsCommandLetter": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4cae40"
+ },
+ "fwrite": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x59aea0"
+ },
+ "l_log_print": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x144bf0"
+ },
+ "operator_new": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x580078"
+ },
+ "panic": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x144dd0"
+ },
+ "stbtt_FindGlyphIndex": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4cc760"
+ },
+ "strtoul": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x5918a8"
+ },
+ "uiDrawSlicedRect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x45b120",
+  "replaced": "0x1a3640"
+ },
+ "uiExecLuaInt": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) fuzzy0(1.00)",
+  "conf": "medium",
+  "note": " -> direct callee pattern",
+  "addr": "0x43fb40"
+ },
+ "uiHandleTooltip": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "uiPop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x45a440"
+ },
+ "uiPush": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x45a660"
+ },
+ "uiSetHidden": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x45ab20"
+ },
+ "uiVariantAsInt": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x440500"
+ },
+ "va": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x486dd0"
+ },
+ "wordwrap": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4cf800"
+ },
+ "CGameChunk::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x6494d8"
+ },
+ "CGameText::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CMessageAddClairvoyance::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x622ef0"
+ },
+ "CMessageAddEffect::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x621db0"
+ },
+ "CMessageDisplayText::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CMessageDisplayTextRef::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x6214b0"
+ },
+ "CMessageExitDialogMode::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62d890"
+ },
+ "CMessageSetDirection::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CMessageSetTrigger::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x61f150"
+ },
+ "CMessageUpdateMachineState::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62dd98"
+ },
+ "CMessageUpdateReaction::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x622130"
+ },
+ "CProjectile::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x62f1d8"
+ },
+ "CProjectileAmbiant::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CProjectileArea::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x6300c8"
+ },
+ "CProjectileBAM::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62f328"
+ },
+ "CProjectileChain::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CProjectileColorSpray::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CProjectileConeOfCold::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62f7b8"
+ },
+ "CProjectileFall::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CProjectileFireHands::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62fac0"
+ },
+ "CProjectileInstant::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x630700"
+ },
+ "CProjectileMulti::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CProjectileMushroom::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x62f7b8"
+ },
+ "CProjectileNewScorcher::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CProjectileScorcher::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "CProjectileSegment::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x62fdc0"
+ },
+ "CProjectileSkyStrike::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x6309a0"
+ },
+ "CProjectileSkyStrikeBAM::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x630f10"
+ },
+ "CProjectileSpellHit::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x630af0"
+ },
+ "CProjectileTravelDoor::VFTable": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "CScreenMap::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x63fe30"
+ },
+ "CSparkleCluster::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:probable (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x62e318"
+ },
+ "CVEFVidCell::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x639650"
+ },
+ "CVisualEffect::VFTable": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x639848"
+ },
+ "Hardcoded_luaL_error": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6260"
+ },
+ "Hardcoded_luaL_loadbufferx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7330"
+ },
+ "Hardcoded_luaL_loadfilex": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6ca0"
+ },
+ "Hardcoded_luaL_loadstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7380"
+ },
+ "Hardcoded_luaL_newmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe62b0"
+ },
+ "Hardcoded_luaL_newstate": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe83f0"
+ },
+ "Hardcoded_luaL_openlibs": {
+  "kind": null,
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "nopattern"
+ },
+ "Hardcoded_luaL_ref": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe69d0"
+ },
+ "Hardcoded_luaL_traceback": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5ab0"
+ },
+ "Hardcoded_lua_atpanic": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b10"
+ },
+ "Hardcoded_lua_callk": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4d50"
+ },
+ "Hardcoded_lua_concat": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5480"
+ },
+ "Hardcoded_lua_createtable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe47d0"
+ },
+ "Hardcoded_lua_gc": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe51d0"
+ },
+ "Hardcoded_lua_getfield": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe46d0"
+ },
+ "Hardcoded_lua_getglobal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4610"
+ },
+ "Hardcoded_lua_getmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4860"
+ },
+ "Hardcoded_lua_gettable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe46a0"
+ },
+ "Hardcoded_lua_gettop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b30"
+ },
+ "Hardcoded_lua_insert": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3bf0"
+ },
+ "Hardcoded_lua_iscfunction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d40"
+ },
+ "Hardcoded_lua_isnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d70"
+ },
+ "Hardcoded_lua_isstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3dc0"
+ },
+ "Hardcoded_lua_isuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e00"
+ },
+ "Hardcoded_lua_load": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe50e0"
+ },
+ "Hardcoded_lua_newuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5550"
+ },
+ "Hardcoded_lua_next": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5440"
+ },
+ "Hardcoded_lua_pcallk": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4ef0"
+ },
+ "Hardcoded_lua_pushboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe45d0"
+ },
+ "Hardcoded_lua_pushcclosure": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe44c0"
+ },
+ "Hardcoded_lua_pushfstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4460"
+ },
+ "Hardcoded_lua_pushinteger": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe42b0"
+ },
+ "Hardcoded_lua_pushlightuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe45f0"
+ },
+ "Hardcoded_lua_pushlstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe42d0"
+ },
+ "Hardcoded_lua_pushnil": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4270"
+ },
+ "Hardcoded_lua_pushnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4290"
+ },
+ "Hardcoded_lua_pushstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4350"
+ },
+ "Hardcoded_lua_pushvalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3cd0"
+ },
+ "Hardcoded_lua_rawequal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e30"
+ },
+ "Hardcoded_lua_rawget": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4750"
+ },
+ "Hardcoded_lua_rawgeti": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4790"
+ },
+ "Hardcoded_lua_rawlen": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) sig",
+  "conf": "high",
+  "note": "key in unmatched region -> direct callee pattern",
+  "addr": "0xe41a0"
+ },
+ "Hardcoded_lua_rawset": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4a60"
+ },
+ "Hardcoded_lua_rawseti": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4b30"
+ },
+ "Hardcoded_lua_remove": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3ba0"
+ },
+ "Hardcoded_lua_setfield": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe49e0"
+ },
+ "Hardcoded_lua_setglobal": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4920"
+ },
+ "Hardcoded_lua_setmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4bc0"
+ },
+ "Hardcoded_lua_settable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe49b0"
+ },
+ "Hardcoded_lua_settop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b50"
+ },
+ "Hardcoded_lua_toboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe40b0"
+ },
+ "Hardcoded_lua_tocfunction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe41f0"
+ },
+ "Hardcoded_lua_tointegerx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3f40"
+ },
+ "Hardcoded_lua_tolstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe40e0"
+ },
+ "Hardcoded_lua_tonumberx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e90"
+ },
+ "Hardcoded_lua_touserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4230"
+ },
+ "Hardcoded_lua_type": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d00"
+ },
+ "Hardcoded_lua_typename": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d30"
+ },
+ "Hardcoded_tolua_bnd_cast": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120d20"
+ },
+ "Hardcoded_tolua_bnd_release": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120df0"
+ },
+ "Hardcoded_tolua_bnd_releaseownership": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120eb0"
+ },
+ "Hardcoded_tolua_bnd_takeownership": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120f50"
+ },
+ "Hardcoded_tolua_bnd_type": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121060"
+ },
+ "Hardcoded_tolua_cclass": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121090"
+ },
+ "Hardcoded_tolua_constant": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121290"
+ },
+ "Hardcoded_tolua_endmodule": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1212d0"
+ },
+ "Hardcoded_tolua_error": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120250"
+ },
+ "Hardcoded_tolua_function": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1212e0"
+ },
+ "Hardcoded_tolua_getmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121320"
+ },
+ "Hardcoded_tolua_isboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120410"
+ },
+ "Hardcoded_tolua_ismodulemetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120170"
+ },
+ "Hardcoded_tolua_isnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1204f0"
+ },
+ "Hardcoded_tolua_isstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120570"
+ },
+ "Hardcoded_tolua_isusertype": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120770"
+ },
+ "Hardcoded_tolua_moduleevents": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1201e0"
+ },
+ "Hardcoded_tolua_newmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121490"
+ },
+ "Hardcoded_tolua_pushboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe45d0"
+ },
+ "Hardcoded_tolua_pushnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4290"
+ },
+ "Hardcoded_tolua_pushstring": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x121cb0"
+ },
+ "Hardcoded_tolua_toboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121e70"
+ },
+ "Hardcoded_tolua_tonumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121ed0"
+ },
+ "Hardcoded_tolua_tostring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121f30"
+ },
+ "Hardcoded_tolua_tousertype": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121f90"
+ },
+ "Hardcoded_tolua_typename": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120950"
+ },
+ "Hardcoded_tolua_variable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121b00"
+ },
+ "class_index_event": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x11f5c0"
+ },
+ "class_newindex_event": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x11f8e0"
+ },
+ "mapinheritance": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120a60"
+ },
+ "mapsuper": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120b00"
+ },
+ "module_index_event": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x11fc20"
+ },
+ "module_newindex_event": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x11fd70"
+ },
+ "tolua_beginmodule": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x120cc0"
+ },
+ "tolua_cclass": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121090"
+ },
+ "tolua_module": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121360"
+ },
+ "tolua_open": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x121510"
+ },
+ "tolua_usertype": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1219f0"
+ },
+ "CGameSprite::SetCurrAction()-LastCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x42bbd6"
+ },
+ "Hook-CAIGroup::IsPartyLeader()-Override": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x12853a"
+ },
+ "Hook-CAIObjectType::Decode()-DefaultJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1297b2"
+ },
+ "Hook-CAIObjectType::Decode()-NormalBranch": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CAIObjectType::Decode()-ReturnBranch": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CAIObjectType::Decode()-TargetNameOverride": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1294eb"
+ },
+ "Hook-CAIScript::Construct()-OnCopy1": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CAIScript::Construct()-OnCopy2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CAIScript::Destruct()-OnDestruct": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CAIScript::Read()-OnRead": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CChitin::ProcessEvents()-SDL_PollEvent()-1": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CChitin::ProcessEvents()-SDL_PollEvent()-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4a5e2a"
+ },
+ "Hook-CChitin::ShutDown()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a5fd0"
+ },
+ "Hook-CChitin::SynchronousUpdate()-CVidMode::Flip()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4a62b2"
+ },
+ "Hook-CChitin::SynchronousUpdate()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4a6120"
+ },
+ "Hook-CChitin::Update()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4a6350"
+ },
+ "Hook-CChitin::WinMain()-FirstInstruction": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4a65c0"
+ },
+ "Hook-CDerivedStats::Construct()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15c00b"
+ },
+ "Hook-CDerivedStats::Destruct()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1bb9f0",
+  "replaced": "0x5dbf56"
+ },
+ "Hook-CDerivedStats::GetAtOffset()-OutOfBoundsJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15f1fe"
+ },
+ "Hook-CDerivedStats::GetSpellState()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CDerivedStats::SetSpellState()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CDerivedStats::operator_equ()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x15c91c",
+  "replaced": "0x15c8f8"
+ },
+ "Hook-CDerivedStats::operator_plus_equ()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x15d5d6"
+ },
+ "Hook-CGameAIBase::ApplyTriggers()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1640c0"
+ },
+ "Hook-CGameAIBase::EvaluateStatusTrigger()-DefaultJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1657ac"
+ },
+ "Hook-CGameAIBase::ExecuteAction()-DefaultCase": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x172220"
+ },
+ "Hook-CGameAIBase::ExecuteAction()-DefaultJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameAIBase::ExecuteAction()-NormalBranch": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CGameAIBase::SetTrigger()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x175df0"
+ },
+ "Hook-CGameArea::AddClairvoyanceObject(CGameSprite*,CPoint,int)-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x18fc60"
+ },
+ "Hook-CGameArea::OnActivation()-LastCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CGameArea::OnDeactivation()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x19d450"
+ },
+ "Hook-CGameArea::OnMouseMove()-OnAfterAreaEdgeScrollPossiblyStarted": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x19e032"
+ },
+ "Hook-CGameArea::RenderZoomed()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x19f8a0"
+ },
+ "Hook-CGameContainer::Render()-B3EmptyContainer": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1aaed5"
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrref": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefBody": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefElse": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::CheckAdd()-FixSpellImmunityShouldSkipItemIndexing": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::CheckAdd()-LastProbabilityJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1ebaa1"
+ },
+ "Hook-CGameEffect::CheckAdd()-ProbabilityFailed": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::CopyFromBase()-FirstCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffect::DecodeEffect()-DefaultJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1fe3b6",
+  "replaced": "0x1fe3b1"
+ },
+ "Hook-CGameEffect::DecodeEffect()-Fail": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2030ad"
+ },
+ "Hook-CGameEffect::DecodeEffect()-Success": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2030a3"
+ },
+ "Hook-CGameEffect::Destruct()_FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x159cb0",
+  "replaced": "0x3452b4"
+ },
+ "Hook-CGameEffectApplyEffectEquipItem::ApplyEffect()-CheckRetVal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1c103e"
+ },
+ "Hook-CGameEffectApplySpell::ApplyEffect()-OverrideSplprotContext": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1c1312"
+ },
+ "Hook-CGameEffectCastSpell::ApplyEffect()-CMessageHandler::AddMessage()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffectCastSpellPoint::ApplyEffect()-CMessageHandler::AddMessage()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x1c2e9f",
+  "replaced": "0x1c2e9e"
+ },
+ "Hook-CGameEffectCopySelf::ApplyEffect()-CGameSprite::Copy()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1c5211"
+ },
+ "Hook-CGameEffectDamage::ApplyEffect()-OnDone": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffectDamage::ApplyEffect()-StartingCalculations": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffectForceSurge::ApplyEffect()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1cf460"
+ },
+ "Hook-CGameEffectList::Marshal()-OverrideSize": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x206254"
+ },
+ "Hook-CGameEffectList::Marshal()-WriteExtra": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x20625d"
+ },
+ "Hook-CGameEffectList::Unmarshal()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x209870"
+ },
+ "Hook-CGameEffectMeleeEffect::ApplyEffect()-AddTail": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1d6bfb",
+  "replaced": "0x175853"
+ },
+ "Hook-CGameEffectOverrideAnimation::ApplyEffect()-LastParam2Jmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1d80f8"
+ },
+ "Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffectProtectionCircle::ApplyEffect()-AddTail": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1dad30"
+ },
+ "Hook-CGameEffectRangeEffect::ApplyEffect()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1dc600"
+ },
+ "Hook-CGameEffectRangeEffect::ApplyEffect()-AddTail": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1dc67a"
+ },
+ "Hook-CGameEffectSaveVsDeath::ApplyEffect()-ImmediateSaveWriteOffset": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameEffectSecondaryCastList::ApplyEffect()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x1e1c80"
+ },
+ "Hook-CGameEffectSetSnare::ApplyEffect()-SetSnareTrapCapCompareJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1e3809"
+ },
+ "Hook-CGameEffectStaticCharge::ApplyEffect()-CopyOp333Call": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1e68ca"
+ },
+ "Hook-CGameEffectUsability::CheckUsability()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameObjectArray::Clean()-DestructJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2d6b55"
+ },
+ "Hook-CGameObjectArray::Clean()-LastJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2d6bb4"
+ },
+ "Hook-CGameObjectArray::Delete()-DeleteJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2d707f"
+ },
+ "Hook-CGameSprite::AddEffect()-noSave-Override": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3fb165"
+ },
+ "Hook-CGameSprite::AddSpecialAbility()-LastCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3ba447",
+  "replaced": "0x1d3293"
+ },
+ "Hook-CGameSprite::CheckCombatStats()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::CheckCombatStatsWeapon()-NonZeroWeapProfCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3bd35c"
+ },
+ "Hook-CGameSprite::CheckIfVisible()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3be370"
+ },
+ "Hook-CGameSprite::CheckQuickLists()-CallListeners": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3bebd0"
+ },
+ "Hook-CGameSprite::ConcentrationFailed()-CHECK_MODE-Redirect": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c1a90"
+ },
+ "Hook-CGameSprite::Construct1()-FirstCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Construct2()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:manual",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3b0a02"
+ },
+ "Hook-CGameSprite::Destruct()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3b36bd"
+ },
+ "Hook-CGameSprite::EquipMostDamagingMelee()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::ExecuteAction()-DefaultJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::GetActiveWeaponStyleAndLevel()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::GetMaxDamage()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::GetMinDamage()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3c8e5f"
+ },
+ "Hook-CGameSprite::GetRatingWithItem()-CGameSprite::Copy()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::GetStatBreakdown()-GetProfBonuses-SaveItem": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3ce929"
+ },
+ "Hook-CGameSprite::Hit()-FirstCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Hit()-FormatRollCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Hit()-MeleeingWithRangedPenalty": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x415180"
+ },
+ "Hook-CGameSprite::IsOver()-B3Invis": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3d1ab9"
+ },
+ "Hook-CGameSprite::Marshal()-CGameEffectList::Marshal()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::OneSwing()-GetAttackFrameType()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x41e4b2"
+ },
+ "Hook-CGameSprite::ProcessAI()-BeforeReturn": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::ProcessEffectList()-AfterListsResolved-1": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x425cd7"
+ },
+ "Hook-CGameSprite::ProcessEffectList()-AfterListsResolved-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x425ce0"
+ },
+ "Hook-CGameSprite::ProcessEffectList()-AfterListsResolved-3": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x425ce5"
+ },
+ "Hook-CGameSprite::ProcessEffectList()-AfterRandCalls": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x423613",
+  "replaced": "0x1e0511"
+ },
+ "Hook-CGameSprite::ProcessEffectList()-CDerivedStats::Reload()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x423d3a"
+ },
+ "Hook-CGameSprite::ProcessEffectList()-FirstRandCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x423528"
+ },
+ "Hook-CGameSprite::QuickLoad()-CDerivedStats::Reload()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3d9dbf"
+ },
+ "Hook-CGameSprite::Render()-B3Invis": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3dd99e"
+ },
+ "Hook-CGameSprite::RenderMarkers()-B3Invis1": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3e1b2f"
+ },
+ "Hook-CGameSprite::RenderMarkers()-B3Invis2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3e1bb5",
+  "replaced": "0x3e1bb8"
+ },
+ "Hook-CGameSprite::Rest()-OnResetQuickListCounts": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::SetCurrAction()-FirstCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::SetCursor()-SetCharacterToolTip()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CGameSprite::SetVisualRange()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x42bd70"
+ },
+ "Hook-CGameSprite::Spell()-ApplyCastingEffect()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Spell()-CheckDirectionJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::SpellPoint()-ApplyCastingEffect()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x43065b"
+ },
+ "Hook-CGameSprite::SpellPoint()-CheckDirectionJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x42f895"
+ },
+ "Hook-CGameSprite::Swing()-CGameSprite::Damage()-1": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Swing()-CGameSprite::Damage()-2": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Melee": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Ranged": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Swing()-GetAttackFrameType()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x433a2a"
+ },
+ "Hook-CGameSprite::Swing()-NoCImmunitiesWeaponElseContinue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4340bc"
+ },
+ "Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-1": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-2": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3ee6c5"
+ },
+ "Hook-CGameSprite::Unmarshal()-CGameEffectList::Unmarshal()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CGameSprite::WildSpell()-CGameSprite::Feedback()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43c694",
+  "replaced": "0x2ffc22"
+ },
+ "Hook-CGameSprite::WildSpell()-CMessageHandler::AddMessage()-SPFLESHS": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43d453"
+ },
+ "Hook-CGameSprite::WildSpell()-CVisualEffect::Load()-SPFLESHS": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43d396"
+ },
+ "Hook-CGameSprite::WildSpell()-OverrideSurgeNumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43bdb5"
+ },
+ "Hook-CGameSprite::WildSpell()-SuppressVisualEffectJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43c6c5"
+ },
+ "Hook-CGameSprite::WildSpell()-operator_new()-SPFLESHS": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43d3be"
+ },
+ "Hook-CGameText::Render()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CImmunitiesEffect::OnList()-Entry": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x21bed0"
+ },
+ "Hook-CInfButtonArray::OnLButtonPressed()-HasFullThieving": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2c6e1e"
+ },
+ "Hook-CInfButtonArray::SetState()-CInfButtonArray::UpdateButtons()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-CInfButtonArray::SetState()-SaveArg": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2c8a5c"
+ },
+ "Hook-CInfButtonArray::UpdateButtons()-LastCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2cd8cf",
+  "replaced": "0x1e7d66"
+ },
+ "Hook-CInfGame::CharacterExport()-CGameSprite::Marshal()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2d3e77",
+  "replaced": "0x3e92a1"
+ },
+ "Hook-CInfGame::DestroyGame()-LastCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2d861d",
+  "replaced": "0x2d85c7"
+ },
+ "Hook-CInfGame::Unmarshal()-AfterGlobalVariablesUnmarshalled": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:probable (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x2fa574"
+ },
+ "Hook-CInfinity::AdjustViewPosition()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x302090"
+ },
+ "Hook-CInfinity::FitViewPosition()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CInfinity::Render()-HandleScreenShakeJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CInfinity::Render()-HandleScreenShakePostJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CInfinity::Scroll()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3084d0"
+ },
+ "Hook-CInfinity::SetScreenShake()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x3093d0"
+ },
+ "Hook-CInfinity::SetScrollDest()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CItem::GetUsabilityText()-IsOp319InvertedJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2227c2"
+ },
+ "Hook-CMessageSetLastObject::Run()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2384a0"
+ },
+ "Hook-CProjectile::DecodeProjectile()-LastCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:probable",
+  "conf": "low",
+  "note": "",
+  "addr": "0x253215"
+ },
+ "Hook-CRuleTables::Construct()-CHECK_MODE-ConvertStrToInt": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x297f3a"
+ },
+ "Hook-CRuleTables::GetProfBonuses()-IgnoreWeaponStyles": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2a5350"
+ },
+ "Hook-CRuleTables::IsProtectedFromSpell()-CompareStatCall": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CScreenMap::CenterViewPort()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x33ab90"
+ },
+ "Hook-CScreenMap::TimerAsynchronousUpdate()-ScrollHandlingJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x33cb23"
+ },
+ "Hook-CScreenWorld::AsynchronousUpdate()-AutoZoomJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x353b8f"
+ },
+ "Hook-CScreenWorld::EndDialog()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x357830",
+  "replaced": "0x3327b0"
+ },
+ "Hook-CScreenWorld::EngineDeactivated()-FirstCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x35802d"
+ },
+ "Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CScreenWorld::OnKeyDown()-ThievingHotkeyPressSpecialAbilitiesCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x35d090"
+ },
+ "Hook-CScreenWorld::ResetZoom()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x363080"
+ },
+ "Hook-CScreenWorld::StartScroll()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x366ac0"
+ },
+ "Hook-CScreenWorld::ZoomToMap()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x3686e0"
+ },
+ "Hook-CVidMode::SetDisplayMode()-DrawInit()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CVidTile::RenderTexture()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4aed20"
+ },
+ "Hook-CVisibilityMap::AddCharacter()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b7a30"
+ },
+ "Hook-CVisibilityMap::Construct()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b7680"
+ },
+ "Hook-CVisibilityMap::Destruct()-FirstInstruction": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-CVisibilityMap::IsCharacterIdOnMap()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b88c0"
+ },
+ "Hook-CVisibilityMap::RemoveCharacter()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b8bd0",
+  "replaced": "0x2557e0"
+ },
+ "Hook-CVisibilityMap::UpDate()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x2b95e0"
+ },
+ "Hook-DrawReadPixels()-FirstInstruction": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x49c530"
+ },
+ "Hook-Infinity_DestroyAnimation()-TemplateMenuOverride": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x444634"
+ },
+ "Hook-Infinity_DestroyAnimation()-free()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x44469a"
+ },
+ "Hook-Infinity_InstanceAnimation()-TemplateMenuOverride": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4468cd",
+  "replaced": "0x4468e5"
+ },
+ "Hook-Infinity_TransitionMenu()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x44a1f0"
+ },
+ "Hook-OpenIniFile()-_wfopen()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x490051"
+ },
+ "Hook-RenderListCallback()-drawItem()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-SDL_main()-CBaldurChitin::Init()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x144e82"
+ },
+ "Hook-SDL_main()-CLUAConsole::LuaInit()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-WinMain$filt$0-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x6191f0"
+ },
+ "Hook-bsearchrange()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4879b0"
+ },
+ "Hook-chReadIniFile()-CheckDoBackupProcessingJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x490159"
+ },
+ "Hook-chReadIniFile()-luaL_loadfilexptr()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x490115"
+ },
+ "Hook-continueEditCapture()-ActionHandlerCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x44c63a"
+ },
+ "Hook-continueTextCapture()-ActionHandlerCall": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x44e3a7"
+ },
+ "Hook-dimmInit()-uiLoadFunctions()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-dimmInit()-uiLoadMenu()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "manual: string xref + call graph",
+  "conf": "high",
+  "note": "PTEE moved UI.MENU (res 0x408) loading out of dimmInit() into fn 0x140d10 ('Error loading menu: %s'); call uiLoadMenu(rcx=rdi) matches BG sequence lua_gettop/uiLoadMenu/lua_gettop/lua_pcallk; callee aligns 0.98 with BG uiLoadMenu",
+  "addr": "0x140ead"
+ },
+ "Hook-dimmInit-uiDoFile()": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-drawItem()-FixForcedScrollbarDivideByZero1": {
+  "kind": "A",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": ""
+ },
+ "Hook-drawTop()-HandleTransitionMenuFadeJmp": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x4521f3"
+ },
+ "Hook-fontGetGlyphIndex()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4ca710"
+ },
+ "Hook-fontWrap()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4cbb40"
+ },
+ "Hook-saveMenus()-CheckItemSave": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x43f72c"
+ },
+ "Hook-uiDoFile()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x456d60"
+ },
+ "Hook-uiDrawMenuStack()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "vote:ported",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x456f60"
+ },
+ "Hook-uiEventMenuStack()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "fmap+vote:probable",
+  "conf": "medium",
+  "note": "",
+  "addr": "0x457b40"
+ },
+ "Hook-uiKillCapture()-FirstInstruction": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4585f0"
+ },
+ "Hook-uiRefreshMenu()-restoreMenuStack()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x45a9b6"
+ },
+ "Hook-uiRefreshMenu()-saveMenuStack()": {
+  "kind": "A",
+  "status": "ported",
+  "method": "align+vote:ported",
+  "conf": "high",
+  "note": "",
+  "addr": "0x45a7ac"
+ },
+ "Hook-wordwrap()-FirstInstruction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x4cf800"
+ },
+ "luaL_addlstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6760"
+ },
+ "luaL_addstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe67b0"
+ },
+ "luaL_addvalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6880"
+ },
+ "luaL_argerror": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5fc0"
+ },
+ "luaL_checkinteger": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6600"
+ },
+ "luaL_checknumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6560"
+ },
+ "luaL_checkudata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe63e0"
+ },
+ "luaL_error": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6260"
+ },
+ "luaL_getmetafield": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe73e0"
+ },
+ "luaL_getsubtable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7c30"
+ },
+ "luaL_gsub": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7f40"
+ },
+ "luaL_len": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe74a0"
+ },
+ "luaL_loadbufferx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7330"
+ },
+ "luaL_loadfilex": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6ca0"
+ },
+ "luaL_loadstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7380"
+ },
+ "luaL_newmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe62b0"
+ },
+ "luaL_newstate": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe83f0"
+ },
+ "luaL_optlstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe64d0"
+ },
+ "luaL_prepbuffsize": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe66a0"
+ },
+ "luaL_pushresult": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6810"
+ },
+ "luaL_ref": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe69d0"
+ },
+ "luaL_requiref": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7d70"
+ },
+ "luaL_setfuncs": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe77f0"
+ },
+ "luaL_tolstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe7550"
+ },
+ "luaL_traceback": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5ab0"
+ },
+ "luaL_where": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe6150"
+ },
+ "lua_atpanic": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b10"
+ },
+ "lua_callk": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4d50"
+ },
+ "lua_checkstack": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3a50"
+ },
+ "lua_concat": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5480"
+ },
+ "lua_createtable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe47d0"
+ },
+ "lua_error": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5430"
+ },
+ "lua_gc": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe51d0"
+ },
+ "lua_getfield": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe46d0"
+ },
+ "lua_getglobal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4610"
+ },
+ "lua_getinfo": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x104670"
+ },
+ "lua_getlocal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x1041c0"
+ },
+ "lua_getmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4860"
+ },
+ "lua_gettable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe46a0"
+ },
+ "lua_gettop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b30"
+ },
+ "lua_getuservalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe48d0"
+ },
+ "lua_insert": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3bf0"
+ },
+ "lua_iscfunction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d40"
+ },
+ "lua_isnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d70"
+ },
+ "lua_isstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3dc0"
+ },
+ "lua_isuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e00"
+ },
+ "lua_len": {
+  "kind": "B",
+  "status": "ported",
+  "method": "vote:ported (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0xe5520"
+ },
+ "lua_load": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe50e0"
+ },
+ "lua_newstate": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0x106770"
+ },
+ "lua_newuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5550"
+ },
+ "lua_next": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe5440"
+ },
+ "lua_pcallk": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4ef0"
+ },
+ "lua_pushboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe45d0"
+ },
+ "lua_pushcclosure": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe44c0"
+ },
+ "lua_pushfstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4460"
+ },
+ "lua_pushinteger": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe42b0"
+ },
+ "lua_pushlightuserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe45f0"
+ },
+ "lua_pushlstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe42d0"
+ },
+ "lua_pushnil": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4270"
+ },
+ "lua_pushnumber": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4290"
+ },
+ "lua_pushstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4350"
+ },
+ "lua_pushvalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3cd0"
+ },
+ "lua_pushvfstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe43f0"
+ },
+ "lua_rawequal": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e30"
+ },
+ "lua_rawget": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4750"
+ },
+ "lua_rawgeti": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4790"
+ },
+ "lua_rawlen": {
+  "kind": "B",
+  "status": "ported",
+  "method": "fmap(callee) sig",
+  "conf": "high",
+  "note": "key in unmatched region -> direct callee pattern",
+  "addr": "0xe41a0"
+ },
+ "lua_rawset": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4a60"
+ },
+ "lua_rawseti": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4b30"
+ },
+ "lua_remove": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3ba0"
+ },
+ "lua_resume": {
+  "kind": "A",
+  "status": "unsupported",
+  "method": "manual",
+  "conf": "-",
+  "note": "Lua coroutine library stripped from Torment.exe (string \"cannot resume non-suspended coroutine\" absent)"
+ },
+ "lua_setfield": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe49e0"
+ },
+ "lua_setglobal": {
+  "kind": "B",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0xe4920"
+ },
+ "lua_setmetatable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4bc0"
+ },
+ "lua_settable": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe49b0"
+ },
+ "lua_settop": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3b50"
+ },
+ "lua_setupvalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe55e0"
+ },
+ "lua_setuservalue": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4cc0"
+ },
+ "lua_toboolean": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe40b0"
+ },
+ "lua_tocfunction": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe41f0"
+ },
+ "lua_tointegerx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3f40"
+ },
+ "lua_tolstring": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe40e0"
+ },
+ "lua_tonumberx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3e90"
+ },
+ "lua_tounsignedx": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3ff0"
+ },
+ "lua_touserdata": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe4230"
+ },
+ "lua_type": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d00"
+ },
+ "lua_typename": {
+  "kind": "B",
+  "status": "ported",
+  "method": "align+curdb+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xe3d30"
+ },
+ "lua_xmove": {
+  "kind": "A",
+  "status": "unsupported",
+  "method": "manual",
+  "conf": "-",
+  "note": "not present in Torment.exe: Lua 5.2 lua_xmove has no standalone body (coroutine lib stripped, debug lib inlines it); old POC pattern actually resolved lua_atpanic"
+ },
+ "luaopen_base": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xea530"
+ },
+ "luaopen_bit32": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0xf03b0"
+ },
+ "luaopen_coroutine": {
+  "kind": "B",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "key in unmatched region"
+ },
+ "luaopen_debug": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+vote:confirmed (db pattern kept)",
+  "conf": "medium",
+  "note": "",
+  "addr": "0xf3330"
+ },
+ "luaopen_math": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xf1020"
+ },
+ "luaopen_package": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xf50b0"
+ },
+ "luaopen_string": {
+  "kind": "A",
+  "status": "ported",
+  "method": "curdb+fmap+vote:confirmed (db pattern kept)",
+  "conf": "high",
+  "note": "",
+  "addr": "0xef660"
+ },
+ "luaopen_table": {
+  "kind": "?",
+  "status": "unresolved",
+  "method": "-",
+  "conf": "-",
+  "note": "ops?"
+ }
+}

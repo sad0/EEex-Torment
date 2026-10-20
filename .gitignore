@@ -8,3 +8,8 @@ x64/
 .vs/
 poc/*.exe
 poc/*.dll
+tools/__pycache__/
+tools/*.log
+tools/*.json
+!tools/manual.json
+!tools/gen_report.json
