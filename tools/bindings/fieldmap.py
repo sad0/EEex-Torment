@@ -89,13 +89,18 @@ for fn, args in T.free_sigs.items():
 _n_before = len(entry_types)
 for _a, _name in json.load(open('bgnames.json')).items():
     if '::' not in _name:
-        continue
-    _cls, _fn = _name.rsplit('::', 1)
-    args = T.member_sigs.get((_cls, _fn))
+        # free function with a declared signature (drawSlice, uiDrawSlicedRect, ...)
+        _cls, _fn = None, _name
+        args = T.free_sigs.get(_name)
+        if args is None:
+            continue
+    else:
+        _cls, _fn = _name.rsplit('::', 1)
+        args = T.member_sigs.get((_cls, _fn))
     _a = int(_a, 16)
     if _a in entry_types:
         continue
-    if args is None:
+    if args is None and _cls:
         # no declared signature: a method of a struct with fields gets this = rcx (static-only
         # holder classes have no fields; CGameObjectArray's methods are static)
         st_ = T.structs.get(_cls)

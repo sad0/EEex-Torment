@@ -5538,7 +5538,7 @@
 },
 "CGameObjectArray": {
 "bg_size": 1,
-"pt_size": 1,
+"pt_size": 8,
 "items": {}
 },
 "CGameJournalEntry": {
@@ -12562,14 +12562,14 @@
 "pt": 384,
 "size": 56,
 "type": "uiItem::scrollbar_t",
-"how": "adjacent"
+"how": "manual"
 },
 "slider": {
 "bg": 440,
 "pt": 440,
 "size": 40,
 "type": "uiItem::slider_t",
-"how": "adjacent"
+"how": "manual"
 },
 "edit": {
 "bg": 480,
@@ -12580,28 +12580,28 @@
 },
 "mosaic": {
 "bg": 520,
-"pt": 528,
+"pt": null,
 "size": 16,
 "type": "uiItem::mosaic_t",
 "how": "adjacent"
 },
 "movie": {
 "bg": 536,
-"pt": 544,
+"pt": 536,
 "size": 48,
 "type": "uiItem::movie_t",
-"how": "adjacent"
+"how": "manual"
 },
 "button": {
 "bg": 584,
-"pt": 592,
+"pt": 584,
 "size": 80,
 "type": "uiItem::button_t",
-"how": "adjacent"
+"how": "manual"
 },
 "map": {
 "bg": 664,
-"pt": 672,
+"pt": 664,
 "size": 4,
 "type": "uiItem::map_t",
 "how": "adjacent"
@@ -12611,123 +12611,123 @@
 "pt": null,
 "size": 24,
 "type": "uiItem::progressBar_t",
-"how": null
+"how": "adjacent"
 },
 "slot": {
 "bg": 696,
 "pt": null,
 "size": 40,
 "type": "uiItem::slot_t",
-"how": null
+"how": "adjacent"
 },
 "rectangle": {
 "bg": 736,
-"pt": null,
+"pt": 672,
 "size": 16,
 "type": "uiItem::rectangle_t",
-"how": null
+"how": "manual"
 },
 "action": {
 "bg": 752,
-"pt": null,
+"pt": 752,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "actionDbl": {
 "bg": 756,
-"pt": null,
+"pt": 756,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "actionAlt": {
 "bg": 760,
-"pt": null,
+"pt": 760,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "actionDrag": {
 "bg": 764,
-"pt": 852,
+"pt": 764,
 "size": 4,
 "type": "int",
 "how": "adjacent"
 },
 "actionEnter": {
 "bg": 768,
-"pt": 856,
+"pt": 848,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionExit": {
 "bg": 772,
-"pt": 860,
+"pt": 852,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionUpdate": {
 "bg": 776,
-"pt": 864,
+"pt": 856,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionSimpleDrag": {
 "bg": 780,
-"pt": 868,
+"pt": 860,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionSimpleDrop": {
 "bg": 784,
-"pt": 872,
+"pt": 880,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionHold": {
 "bg": 788,
-"pt": 876,
+"pt": 884,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "actionScroll": {
 "bg": 792,
-"pt": 880,
+"pt": 888,
 "size": 4,
 "type": "int",
 "how": "adjacent"
 },
 "framesHeld": {
 "bg": 796,
-"pt": 884,
+"pt": 892,
 "size": 4,
 "type": "int",
 "how": "adjacent"
 },
 "tooltip": {
 "bg": 800,
-"pt": 888,
+"pt": 896,
 "size": 32,
 "type": "uiItem::tooltip_t",
 "how": "adjacent"
 },
 "glow": {
 "bg": 832,
-"pt": 920,
+"pt": 928,
 "size": 8,
 "type": "uiVariant*",
 "how": "adjacent"
 },
 "pulse": {
 "bg": 840,
-"pt": 928,
+"pt": null,
 "size": 8,
 "type": "uiVariant*",
 "how": "adjacent"
@@ -15014,7 +15014,7 @@
 "pt": 368,
 "size": 8,
 "type": "ISteamUserStats*",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -15859,7 +15859,7 @@
 },
 "CGameDialogSprite": {
 "bg_size": 136,
-"pt_size": 144,
+"pt_size": 232,
 "items": {
 "m_file": {
 "bg": 0,
@@ -17225,7 +17225,7 @@
 },
 "CVidMode": {
 "bg_size": 792,
-"pt_size": 800,
+"pt_size": 792,
 "items": {
 "m_nPrintFile": {
 "bg": 0,
@@ -17379,7 +17379,7 @@
 "pt": 384,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nBrightnessCorrection": {
 "bg": 385,
@@ -17425,38 +17425,38 @@
 },
 "rgbTint": {
 "bg": 408,
-"pt": 412,
+"pt": null,
 "size": 4,
 "type": "tagRGBQUAD",
 "how": "evidence"
 },
 "bPointerEnabled": {
 "bg": 412,
-"pt": 416,
+"pt": 412,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "rPointerStorage": {
 "bg": 416,
-"pt": 420,
+"pt": 416,
 "size": 16,
 "type": "CRect",
 "how": "interp"
 },
 "m_rLockedRect": {
 "bg": 432,
-"pt": 436,
+"pt": 432,
 "size": 16,
 "type": "CRect",
-"how": "interp"
+"how": "manual"
 },
 "m_lastCursor": {
 "bg": 448,
-"pt": null,
+"pt": 448,
 "size": 8,
 "type": "CVidCell*",
-"how": "evidence"
+"how": "manual"
 },
 "m_lastCursorFrame": {
 "bg": 456,
@@ -17516,10 +17516,10 @@
 },
 "m_rgbMasterBitmap": {
 "bg": 504,
-"pt": null,
+"pt": 504,
 "size": 288,
 "type": "CVidBitmap",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -17764,11 +17764,11 @@
 "pt": 320,
 "size": 1176,
 "type": "Array<CKeyInfo,98>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pVirtualKeysFlags": {
 "bg": 1488,
-"pt": 1592,
+"pt": 1496,
 "size": 392,
 "type": "Array<int,98>",
 "how": "adjacent"
@@ -17999,10 +17999,10 @@
 },
 "m_nMaxProficiencySlots": {
 "bg": 1968,
-"pt": null,
+"pt": 2072,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_nCurrentPortrait": {
 "bg": 1976,
@@ -18838,98 +18838,98 @@
 "pt": 1760,
 "size": 56,
 "type": "CPtrList",
-"how": "extrap"
+"how": "manual"
 },
 "m_nLastPicked": {
 "bg": 1704,
 "pt": 1816,
 "size": 2,
 "type": "__int16",
-"how": "extrap"
+"how": "manual"
 },
 "m_nErrorState": {
 "bg": 1708,
 "pt": 1820,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_strErrorText": {
 "bg": 1712,
 "pt": 1824,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "interp"
 },
 "m_nNumErrorButtons": {
 "bg": 1716,
 "pt": 1828,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_strErrorButtonText": {
 "bg": 1720,
 "pt": 1832,
 "size": 12,
 "type": "Array<unsigned int,3>",
-"how": "extrap"
+"how": "interp"
 },
 "m_bSelectWorldOnUp": {
 "bg": 1732,
 "pt": 1844,
 "size": 1,
 "type": "unsigned __int8",
-"how": "extrap"
+"how": "manual"
 },
 "m_preLoadFontRealms": {
 "bg": 1736,
 "pt": 1848,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_preLoadFontTool": {
 "bg": 1776,
 "pt": 1888,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_preLoadFontStnSml": {
 "bg": 1816,
 "pt": 1928,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_noteStrref": {
 "bg": 1856,
 "pt": 1968,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_bShiftKeyDown": {
 "bg": 1860,
 "pt": 1972,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_bCapsLockKeyOn": {
 "bg": 1864,
 "pt": 1976,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_bCtrlKeyDown": {
 "bg": 1868,
 "pt": 1980,
 "size": 1,
 "type": "unsigned __int8",
-"how": "extrap"
+"how": "manual"
 },
 "m_nClairvoyanceCaster": {
 "bg": 1872,
@@ -19041,7 +19041,7 @@
 "pt": 2412,
 "size": 16,
 "type": "CRect",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -19152,49 +19152,49 @@
 "pt": 1856,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_preLoadFontStnSml": {
 "bg": 1792,
 "pt": 1896,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_preLoadFontTool": {
 "bg": 1832,
 "pt": 1936,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bSentGameDemand": {
 "bg": 1872,
 "pt": 1976,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "m_playerNames": {
 "bg": 1880,
 "pt": 1984,
 "size": 48,
 "type": "Array<CString,6>",
-"how": "extrap"
+"how": "manual"
 },
 "m_characterNames": {
 "bg": 1928,
 "pt": 2032,
 "size": 48,
 "type": "Array<CString,6>",
-"how": "extrap"
+"how": "manual"
 },
 "m_characterPortrait": {
 "bg": 1976,
 "pt": 2080,
 "size": 48,
 "type": "Array<CString,6>",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -19416,14 +19416,14 @@
 "pt": 1756,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "m_bCapsLockKeyOn": {
 "bg": 1656,
 "pt": 1760,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nTopGameSlot": {
 "bg": 1660,
@@ -19451,77 +19451,77 @@
 "pt": 1776,
 "size": 32,
 "type": "CTypedPtrArray<CPtrArray,CSaveGameSlot*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_lPopupStack": {
 "bg": 1704,
 "pt": 1808,
 "size": 56,
 "type": "CPtrList",
-"how": "adjacent"
+"how": "manual"
 },
 "m_strErrorText": {
 "bg": 1760,
 "pt": 1864,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_strErrorButtonText": {
 "bg": 1764,
 "pt": 1868,
 "size": 12,
 "type": "Array<unsigned int,3>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nNumErrorButtons": {
 "bg": 1776,
 "pt": 1880,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nCurrentGameSlot": {
 "bg": 1780,
 "pt": 1884,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nMaxSlotNumber": {
 "bg": 1784,
 "pt": 1888,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bCtrlKeyDown": {
 "bg": 1788,
 "pt": 1892,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "m_preLoadFontRealms": {
 "bg": 1792,
 "pt": 1896,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_preLoadFontStnSml": {
 "bg": 1832,
 "pt": 1936,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_bPauseState": {
 "bg": 1872,
 "pt": 1976,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -19660,21 +19660,21 @@
 "pt": 296,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nDlcState": {
 "bg": 292,
 "pt": 300,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_preloadFontStnSml": {
 "bg": 296,
 "pt": 304,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -19854,14 +19854,14 @@
 "pt": 344,
 "size": 40,
 "type": "CVidFont",
-"how": "extrap"
+"how": "manual"
 },
 "m_openSnd": {
 "bg": 384,
 "pt": 384,
 "size": 32,
 "type": "CSound",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -22879,7 +22879,7 @@
 "pt": null,
 "size": 8,
 "type": "LCharString<8>",
-"how": "evidence"
+"how": "manual"
 },
 "m_bLocalCopy": {
 "bg": 268,
@@ -22938,35 +22938,35 @@
 "pt": 1752,
 "size": 1,
 "type": "unsigned __int8",
-"how": "extrap"
+"how": "manual"
 },
 "m_bShiftKeyDown": {
 "bg": 1649,
 "pt": 1753,
 "size": 1,
 "type": "unsigned __int8",
-"how": "extrap"
+"how": "interp"
 },
 "m_bCapsLockKeyOn": {
 "bg": 1652,
 "pt": 1756,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_lPopupStack": {
 "bg": 1656,
 "pt": 1760,
 "size": 56,
 "type": "CPtrList",
-"how": "extrap"
+"how": "manual"
 },
 "m_mapSize": {
 "bg": 1712,
 "pt": 1816,
 "size": 8,
 "type": "CSize",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nEngineState": {
 "bg": 1720,
@@ -23117,31 +23117,31 @@
 },
 "m_aAreaRect": {
 "bg": 3776,
-"pt": 3888,
+"pt": null,
 "size": 32,
 "type": "CArray<CRect,CRect*>",
 "how": "adjacent"
 },
 "m_aAreaMarker": {
 "bg": 3808,
-"pt": null,
+"pt": 3888,
 "size": 32,
 "type": "CArray<CRect,CRect*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pChatDisplay": {
 "bg": 3840,
-"pt": null,
+"pt": 3920,
 "size": 8,
 "type": "CUIControlTextDisplay*",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nChatMessageCount": {
 "bg": 3848,
-"pt": null,
+"pt": 3928,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bInControl": {
 "bg": 3852,
@@ -23438,42 +23438,42 @@
 },
 "m_newText": {
 "bg": 236,
-"pt": 404,
+"pt": 316,
 "size": 4,
 "type": "int",
 "how": "adjacent"
 },
 "m_vidFont": {
 "bg": 240,
-"pt": 408,
+"pt": 320,
 "size": 40,
 "type": "CVidFont",
 "how": "adjacent"
 },
 "m_vidFont2": {
 "bg": 280,
-"pt": 448,
+"pt": 360,
 "size": 40,
 "type": "CVidFont",
 "how": "adjacent"
 },
 "m_pVirtualKeys": {
 "bg": 320,
-"pt": 488,
+"pt": 400,
 "size": 1176,
 "type": "Array<CKeyInfo,98>",
 "how": "adjacent"
 },
 "m_pVirtualKeysFlags": {
 "bg": 1496,
-"pt": 1664,
+"pt": 1576,
 "size": 392,
 "type": "Array<int,98>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_internalLoadedDialog": {
 "bg": 1888,
-"pt": 2056,
+"pt": 1968,
 "size": 136,
 "type": "CGameDialogSprite",
 "how": "adjacent"
@@ -24257,10 +24257,10 @@
 },
 "m_fOriginalZoom": {
 "bg": 3056,
-"pt": null,
+"pt": 3232,
 "size": 4,
 "type": "float",
-"how": "adjacent"
+"how": "manual"
 },
 "m_storedGroup": {
 "bg": 3064,
@@ -24280,7 +24280,7 @@
 },
 "CScreenWizSpell": {
 "bg_size": 1712,
-"pt_size": 1888,
+"pt_size": null,
 "items": {
 "m_pVirtualKeys": {
 "bg": 80,
@@ -24364,35 +24364,35 @@
 "pt": 1784,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bControlled": {
 "bg": 1688,
-"pt": 1864,
+"pt": 1792,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_bPauseState": {
 "bg": 1692,
-"pt": 1868,
+"pt": 1796,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_bContingency": {
 "bg": 1696,
 "pt": 1872,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_resEraseSpell": {
 "bg": 1700,
-"pt": 1876,
+"pt": null,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -24808,21 +24808,21 @@
 "pt": 1872,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_preLoadFontStnSml": {
 "bg": 1808,
 "pt": 1912,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_preLoadFontTool": {
 "bg": 1848,
 "pt": 1952,
 "size": 40,
 "type": "CVidFont",
-"how": "adjacent"
+"how": "manual"
 },
 "m_stSpellsDisabled": {
 "bg": 1888,
@@ -24836,21 +24836,21 @@
 "pt": 1996,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_strLearnSpellFailedReason": {
 "bg": 1896,
 "pt": 2000,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bPauseState": {
 "bg": 1900,
 "pt": 2004,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -29187,10 +29187,10 @@
 },
 "bInTimer": {
 "bg": 4004,
-"pt": null,
+"pt": 4036,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_AIStale": {
 "bg": 4008,
@@ -30133,119 +30133,119 @@
 "pt": 320,
 "size": 8,
 "type": "CPoint",
-"how": "adjacent"
+"how": "manual"
 },
 "m_glowVidCell": {
 "bg": 328,
 "pt": 328,
 "size": 312,
 "type": "CVidCell",
-"how": "adjacent"
+"how": "manual"
 },
 "m_lAOE": {
 "bg": 640,
-"pt": null,
+"pt": 640,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAOEEntry*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_RasterizedPolys": {
 "bg": 696,
-"pt": null,
+"pt": 696,
 "size": 24,
 "type": "std::vector<unsigned char*,std::allocator<unsigned char*>>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_DownsampledPolys": {
 "bg": 720,
-"pt": null,
+"pt": 720,
 "size": 24,
 "type": "std::vector<std::vector<WED_PolyPoint_st,std::allocator<WED_PolyPoint_st>>,std::allocator<std::vector<WED_PolyPoint_st,std::allocator<WED_PolyPoint_st>>>>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_areaType": {
 "bg": 744,
-"pt": 680,
+"pt": null,
 "size": 2,
 "type": "unsigned __int16",
 "how": "evidence"
 },
 "m_renderDayNightCode": {
 "bg": 746,
-"pt": 682,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "m_oldRenderDayNightCode": {
 "bg": 747,
-"pt": 683,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
 "how": "interp"
 },
 "m_dayLightIntensity": {
 "bg": 748,
-"pt": 684,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence"
+"how": "manual"
 },
 "m_requestDayNightCode": {
 "bg": 749,
-"pt": 685,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "m_oldRequestDualTileCode": {
 "bg": 750,
-"pt": 686,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
 "how": "interp"
 },
 "m_bResizedViewPort": {
 "bg": 751,
-"pt": 687,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
 "how": "evidence"
 },
 "m_nLastTickCount": {
 "bg": 752,
-"pt": 688,
+"pt": null,
 "size": 4,
 "type": "unsigned int",
 "how": "manual"
 },
 "m_ptCurrentPosExact": {
 "bg": 756,
-"pt": 692,
+"pt": null,
 "size": 8,
 "type": "CPoint",
 "how": "evidence"
 },
 "m_autoScrollSpeed": {
 "bg": 764,
-"pt": 700,
+"pt": 764,
 "size": 2,
 "type": "__int16",
-"how": "interp"
+"how": "manual"
 },
 "m_ptScrollDest": {
 "bg": 768,
-"pt": 704,
+"pt": null,
 "size": 8,
 "type": "CPoint",
 "how": "manual"
 },
 "m_nScrollAttempts": {
 "bg": 776,
-"pt": 712,
+"pt": 776,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nOldScrollState": {
 "bg": 780,
@@ -30256,98 +30256,98 @@
 },
 "m_nScrollDelay": {
 "bg": 784,
-"pt": 716,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
 "how": "evidence"
 },
 "m_bMovieBroadcast": {
 "bg": 785,
-"pt": 717,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence"
+"how": "manual"
 },
 "m_bStartLightning": {
 "bg": 788,
-"pt": 720,
+"pt": null,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_bStopLightning": {
 "bg": 792,
-"pt": 724,
+"pt": null,
 "size": 4,
 "type": "int",
 "how": "evidence"
 },
 "m_lightningStrikeProb": {
 "bg": 796,
-"pt": 728,
+"pt": 796,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "m_rgbRainColor": {
 "bg": 800,
-"pt": 732,
+"pt": 800,
 "size": 4,
 "type": "unsigned int",
-"how": "interp"
+"how": "manual"
 },
 "m_rgbLightningGlobalLighting": {
 "bg": 804,
-"pt": 736,
+"pt": 804,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "m_rgbOverCastGlobalLighting": {
 "bg": 808,
-"pt": 740,
+"pt": 808,
 "size": 4,
 "type": "unsigned int",
 "how": "interp"
 },
 "m_rgbGlobalLighting": {
 "bg": 812,
-"pt": 744,
+"pt": 812,
 "size": 4,
 "type": "unsigned int",
 "how": "interp"
 },
 "m_rgbTimeOfDayGlobalLighting": {
 "bg": 816,
-"pt": 748,
+"pt": 816,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "m_rgbTimeOfDayRainColor": {
 "bg": 820,
-"pt": 752,
+"pt": null,
 "size": 4,
 "type": "unsigned int",
 "how": "evidence"
 },
 "m_updateListenPosition": {
 "bg": 824,
-"pt": 756,
+"pt": null,
 "size": 4,
 "type": "int",
 "how": "evidence"
 },
 "m_pArea": {
 "bg": 832,
-"pt": 760,
+"pt": null,
 "size": 8,
 "type": "CGameArea*",
 "how": "evidence"
 },
 "m_vbMessageScreen": {
 "bg": 840,
-"pt": 768,
+"pt": null,
 "size": 288,
 "type": "CVidBitmap",
 "how": "interp"
@@ -31586,24 +31586,24 @@
 },
 "m_sSaveScreenArea": {
 "bg": 25552,
-"pt": null,
+"pt": 40888,
 "size": 8,
 "type": "CString",
-"how": null
+"how": "adjacent"
 },
 "m_rgbMasterBitmap": {
 "bg": 25560,
-"pt": null,
+"pt": 40896,
 "size": 288,
 "type": "CVidBitmap",
-"how": null
+"how": "manual"
 },
 "m_objectsArray": {
 "bg": 25848,
-"pt": null,
+"pt": 41184,
 "size": 1,
 "type": "CGameObjectArray",
-"how": null
+"how": "manual"
 },
 "m_remoteObjectsArray": {
 "bg": 25856,
@@ -31789,28 +31789,28 @@
 },
 "m_cGameJournal": {
 "bg": 32568,
-"pt": null,
+"pt": 47928,
 "size": 40,
 "type": "CGameJournal",
-"how": null
+"how": "manual"
 },
 "m_cWorldMap": {
 "bg": 32608,
 "pt": null,
 "size": 40,
 "type": "CWorldMap",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pKeymap": {
 "bg": 32648,
-"pt": null,
+"pt": 48000,
 "size": 2400,
 "type": "Array<int,600>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pKeymapFlags": {
 "bg": 35048,
-"pt": 49600,
+"pt": null,
 "size": 2400,
 "type": "Array<int,600>",
 "how": "adjacent"
@@ -32013,21 +32013,21 @@
 },
 "m_entanglePalette": {
 "bg": 38232,
-"pt": null,
+"pt": 52784,
 "size": 48,
 "type": "CVidPalette",
-"how": null
+"how": "manual"
 },
 "m_webHoldPalette": {
 "bg": 38280,
-"pt": null,
+"pt": 52832,
 "size": 48,
 "type": "CVidPalette",
-"how": null
+"how": "manual"
 },
 "m_nCharacterTerminationSequenceDelay": {
 "bg": 38328,
-"pt": 52884,
+"pt": 52880,
 "size": 4,
 "type": "int",
 "how": "adjacent"
@@ -32048,31 +32048,31 @@
 },
 "m_cMoveList": {
 "bg": 38344,
-"pt": null,
+"pt": 52912,
 "size": 56,
 "type": "CMoveList",
-"how": null
+"how": "manual"
 },
 "m_cLimboList": {
 "bg": 38400,
-"pt": null,
+"pt": 52968,
 "size": 56,
 "type": "CMoveList",
-"how": null
+"how": "manual"
 },
 "m_lTransitionPiles": {
 "bg": 38456,
 "pt": 53024,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,SAreaFileWrapper*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_transitionPilesResref": {
 "bg": 38512,
 "pt": 53080,
 "size": 8,
 "type": "CString",
-"how": "adjacent"
+"how": "manual"
 },
 "m_transitionPilesPtDest": {
 "bg": 38520,
@@ -32254,21 +32254,21 @@
 "pt": 53432,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CSavedGameStoredLocation*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_storedLocationsPocketPlane": {
 "bg": 38824,
 "pt": 53488,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CSavedGameStoredLocation*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_VVCPriorities": {
 "bg": 38880,
 "pt": 53544,
 "size": 16,
 "type": "CVVCHash",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nCurrentVVCPriority": {
 "bg": 38896,
@@ -32807,7 +32807,7 @@
 "pt": 2992,
 "size": 288,
 "type": "CVidBitmap",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -34461,14 +34461,14 @@
 },
 "m_memorizedSpellsLevelPriest": {
 "bg": 2736,
-"pt": null,
+"pt": 2744,
 "size": 112,
 "type": "Array<CCreatureFileMemorizedSpellLevel,7>",
-"how": "evidence"
+"how": "manual"
 },
 "m_disabledButtons": {
 "bg": 2848,
-"pt": 2824,
+"pt": null,
 "size": 64,
 "type": "Array<int,16>",
 "how": "adjacent"
@@ -35396,7 +35396,7 @@
 "pt": 256,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_vidFont": {
 "bg": 264,
@@ -35930,14 +35930,14 @@
 },
 "m_pEngineMovies": {
 "bg": 4416,
-"pt": null,
+"pt": 4472,
 "size": 8,
 "type": "CScreenMovies*",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pEngineDLC": {
 "bg": 4424,
-"pt": 4472,
+"pt": null,
 "size": 8,
 "type": "CScreenDLC*",
 "how": "evidence"
@@ -36907,7 +36907,7 @@
 "pt": 1316,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nSavedTime": {
 "bg": 1308,
@@ -37278,7 +37278,7 @@
 "pt": 4380,
 "size": 8,
 "type": "CSize",
-"how": "adjacent"
+"how": "manual"
 },
 "m_cWalkableRenderCache": {
 "bg": 4288,
@@ -37292,14 +37292,14 @@
 "pt": 4408,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndAmbientNight": {
 "bg": 4344,
 "pt": 4440,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndAmbientVolume": {
 "bg": 4376,
@@ -38236,14 +38236,14 @@
 "pt": 472,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "mTimeOfDay": {
 "bg": 476,
 "pt": 476,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -39366,7 +39366,7 @@
 "pt": 1016,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -39497,7 +39497,7 @@
 },
 "CProjectile": {
 "bg_size": 440,
-"pt_size": 504,
+"pt_size": 440,
 "items": {
 "m_projectileType": {
 "bg": 96,
@@ -39721,18 +39721,18 @@
 "pt": 364,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_maxBounces": {
 "bg": 368,
-"pt": null,
+"pt": 368,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_visualEffectRef": {
 "bg": 376,
-"pt": 368,
+"pt": null,
 "size": 8,
 "type": "CString",
 "how": "evidence"
@@ -39837,10 +39837,10 @@
 },
 "m_ignoreDamage": {
 "bg": 432,
-"pt": 424,
+"pt": 432,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -39908,14 +39908,14 @@
 "pt": 504,
 "size": 312,
 "type": "CVidCell",
-"how": "adjacent"
+"how": "manual"
 },
 "m_newPalette": {
 "bg": 752,
 "pt": 816,
 "size": 288,
 "type": "CVidBitmap",
-"how": "adjacent"
+"how": "manual"
 },
 "m_dwRenderFlags": {
 "bg": 1040,
@@ -39954,14 +39954,14 @@
 "pt": 504,
 "size": 312,
 "type": "CVidCell",
-"how": "adjacent"
+"how": "manual"
 },
 "m_palette": {
 "bg": 752,
 "pt": 816,
 "size": 48,
 "type": "CVidPalette",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bGlow": {
 "bg": 800,
@@ -39981,63 +39981,63 @@
 },
 "CProjectileInstant": {
 "bg_size": 440,
-"pt_size": 504,
+"pt_size": 440,
 "items": {}
 },
 "CProjectileCallLightning": {
 "bg_size": 440,
-"pt_size": 504,
+"pt_size": 440,
 "items": {}
 },
 "CProjectileCastingGlow": {
 "bg_size": 1048,
-"pt_size": 1112,
+"pt_size": 1048,
 "items": {
 "m_animation": {
 "bg": 440,
-"pt": 504,
+"pt": 440,
 "size": 312,
 "type": "CVidCell",
 "how": "assumed"
 },
 "m_newPalette": {
 "bg": 752,
-"pt": 816,
+"pt": 752,
 "size": 288,
 "type": "CVidBitmap",
 "how": "assumed"
 },
 "m_dwRenderFlags": {
 "bg": 1040,
-"pt": 1104,
+"pt": 1040,
 "size": 4,
 "type": "unsigned int",
 "how": "assumed"
 },
 "m_bNewPalette": {
 "bg": 1044,
-"pt": 1108,
+"pt": 1044,
 "size": 1,
 "type": "unsigned __int8",
 "how": "assumed"
 },
 "m_transparency": {
 "bg": 1045,
-"pt": 1109,
+"pt": 1045,
 "size": 1,
 "type": "unsigned __int8",
 "how": "assumed"
 },
 "m_duration": {
 "bg": 1046,
-"pt": 1110,
+"pt": 1046,
 "size": 1,
 "type": "unsigned __int8",
 "how": "assumed"
 },
 "m_delay": {
 "bg": 1047,
-"pt": 1111,
+"pt": 1047,
 "size": 1,
 "type": "unsigned __int8",
 "how": "assumed"
@@ -40134,17 +40134,17 @@
 },
 "m_render": {
 "bg": 540,
-"pt": 620,
+"pt": 616,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_newPalette": {
 "bg": 544,
 "pt": 624,
 "size": 288,
 "type": "CVidBitmap",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bNewPalette": {
 "bg": 832,
@@ -40269,7 +40269,7 @@
 "pt": 984,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_explosionRange": {
 "bg": 960,
@@ -40374,7 +40374,7 @@
 "pt": null,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_centerBam": {
 "bg": 1032,
@@ -40642,14 +40642,14 @@
 "pt": 984,
 "size": 1,
 "type": "unsigned __int8",
-"how": "extrap"
+"how": "manual"
 },
 "m_deltaZ": {
 "bg": 956,
 "pt": 988,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "itsAffectedCreatures": {
 "bg": 960,
@@ -40790,21 +40790,21 @@
 "pt": 992,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nAreaRange": {
 "bg": 964,
 "pt": 996,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "interp"
 },
 "m_targetType": {
 "bg": 968,
 "pt": 1000,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -40843,35 +40843,35 @@
 "pt": 984,
 "size": 2,
 "type": "__int16",
-"how": "extrap"
+"how": "manual"
 },
 "m_nDelay": {
 "bg": 954,
 "pt": 986,
 "size": 2,
 "type": "__int16",
-"how": "extrap"
+"how": "interp"
 },
 "m_bOriginCaster": {
 "bg": 956,
 "pt": 988,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "m_secondaryProjectileType": {
 "bg": 960,
 "pt": 992,
 "size": 2,
 "type": "unsigned __int16",
-"how": "extrap"
+"how": "interp"
 },
 "m_carrierProjectile": {
 "bg": 968,
 "pt": 1000,
 "size": 8,
 "type": "CProjectile*",
-"how": "adjacent"
+"how": "manual"
 },
 "m_carrierArrived": {
 "bg": 976,
@@ -41655,42 +41655,42 @@
 },
 "m_bJustAttacked": {
 "bg": 1008,
-"pt": null,
+"pt": 1008,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_curAction": {
 "bg": 1016,
-"pt": 1008,
+"pt": null,
 "size": 136,
 "type": "CAIAction",
 "how": "evidence"
 },
 "m_nExpectedProcessPendingTriggersCalls": {
 "bg": 1152,
-"pt": null,
+"pt": 1136,
 "size": 4,
 "type": "int",
 "how": "evidence"
 },
 "m_nMissedProcessPendingTriggerCalls": {
 "bg": 1156,
-"pt": null,
+"pt": 1156,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "m_nAlertnessPeriod": {
 "bg": 1158,
 "pt": null,
 "size": 2,
 "type": "__int16",
-"how": "interp"
+"how": "adjacent"
 },
 "m_scriptName": {
 "bg": 1160,
-"pt": 1144,
+"pt": null,
 "size": 32,
 "type": "LCharString<32>",
 "how": "manual"
@@ -41971,7 +41971,7 @@
 "pt": 1336,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 1352,
@@ -42020,7 +42020,7 @@
 "pt": 1424,
 "size": 32,
 "type": "LCharString<32>",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -42033,7 +42033,7 @@
 "pt": 1336,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_type": {
 "bg": 1352,
@@ -42187,7 +42187,7 @@
 "pt": 10568,
 "size": 3240,
 "type": "CDerivedStats",
-"how": "adjacent"
+"how": "manual"
 },
 "m_gameSaveData": {
 "bg": 14104,
@@ -42198,17 +42198,17 @@
 },
 "m_sName": {
 "bg": 14632,
-"pt": null,
+"pt": 13856,
 "size": 8,
 "type": "CString",
-"how": null
+"how": "manual"
 },
 "m_lastCharacterCount": {
 "bg": 14640,
-"pt": null,
+"pt": 13864,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "interp"
 },
 "m_cGameStats": {
 "bg": 14648,
@@ -42271,25 +42271,25 @@
 "pt": 14257,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_sndReady": {
 "bg": 15040,
-"pt": 14296,
+"pt": 14264,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndDeath": {
 "bg": 15072,
-"pt": 14328,
+"pt": 14296,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndMagic": {
 "bg": 15104,
-"pt": 14360,
+"pt": 14328,
 "size": 32,
 "type": "CSound",
 "how": "adjacent"
@@ -42299,14 +42299,14 @@
 "pt": 14392,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndSpriteEffect": {
 "bg": 15168,
 "pt": 14424,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nNumberOfTimesTalkedTo": {
 "bg": 15200,
@@ -42327,25 +42327,25 @@
 "pt": 14464,
 "size": 8,
 "type": "CResRef",
-"how": "interp"
+"how": "manual"
 },
 "m_nNumberOfTimesInteractedWith": {
 "bg": 15216,
-"pt": null,
+"pt": 14472,
 "size": 96,
 "type": "Array<int,24>",
-"how": "evidence"
+"how": "manual"
 },
 "m_nHappiness": {
 "bg": 15312,
-"pt": 14560,
+"pt": null,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "m_nOldHappiness": {
 "bg": 15314,
-"pt": 14562,
+"pt": null,
 "size": 2,
 "type": "__int16",
 "how": "interp"
@@ -43825,60 +43825,60 @@
 "pt": 19356,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bForceVisualEffects": {
 "bg": 20104,
-"pt": null,
+"pt": 19360,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_currentActionId": {
 "bg": 20108,
-"pt": null,
+"pt": 19364,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "m_bPlayedEncumberedStopped": {
 "bg": 20112,
-"pt": null,
+"pt": 19368,
 "size": 4,
 "type": "int",
 "how": "interp"
 },
 "m_bPlayedEncumberedSlowed": {
 "bg": 20116,
-"pt": null,
+"pt": 19372,
 "size": 4,
 "type": "int",
 "how": "interp"
 },
 "m_nPlayedEncumberedStopped": {
 "bg": 20120,
-"pt": null,
+"pt": 19376,
 "size": 4,
 "type": "int",
 "how": "interp"
 },
 "m_nPlayedEncumberedSlowed": {
 "bg": 20124,
-"pt": null,
+"pt": 19380,
 "size": 4,
 "type": "int",
 "how": "interp"
 },
 "m_nPlayedPoisonedDamage": {
 "bg": 20128,
-"pt": null,
+"pt": 19384,
 "size": 2,
 "type": "__int16",
 "how": "interp"
 },
 "m_nEffectListCalls": {
 "bg": 20130,
-"pt": null,
+"pt": 19386,
 "size": 2,
 "type": "__int16",
 "how": "interp"
@@ -43990,14 +43990,14 @@
 },
 "m_cBanter": {
 "bg": 20400,
-"pt": 19664,
+"pt": null,
 "size": 136,
 "type": "CGameDialogSprite",
 "how": "adjacent"
 },
 "m_bForceVisRangeRedraw": {
 "bg": 20536,
-"pt": 19808,
+"pt": null,
 "size": 1,
 "type": "unsigned __int8",
 "how": "adjacent"
@@ -44405,21 +44405,21 @@
 "pt": 1336,
 "size": 8,
 "type": "CResRef",
-"how": "extrap"
+"how": "manual"
 },
 "m_rOpenBounding": {
 "bg": 1352,
 "pt": 1344,
 "size": 16,
 "type": "CRect",
-"how": "extrap"
+"how": "manual"
 },
 "m_rClosedBounding": {
 "bg": 1368,
 "pt": 1360,
 "size": 16,
 "type": "CRect",
-"how": "adjacent"
+"how": "manual"
 },
 "m_cursorType": {
 "bg": 1384,
@@ -44643,14 +44643,14 @@
 "pt": 1648,
 "size": 8,
 "type": "CPoint",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sndDoor": {
 "bg": 1656,
 "pt": 1656,
 "size": 32,
 "type": "CSound",
-"how": "adjacent"
+"how": "manual"
 },
 "m_strNotPickable": {
 "bg": 1688,
@@ -44684,7 +44684,7 @@
 "pt": 1336,
 "size": 16,
 "type": "CRect",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pPolygon": {
 "bg": 1360,
@@ -44810,7 +44810,7 @@
 "pt": null,
 "size": 32,
 "type": "LCharString<32>",
-"how": "interp"
+"how": "manual"
 },
 "m_keyType": {
 "bg": 2450,

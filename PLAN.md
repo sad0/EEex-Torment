@@ -45,7 +45,9 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
    Phase 4 completion checklist (John: 100%, zero blind spots):
    - [ ] 4a Fields: every bindings field proven (evidence / manual / span) or removed; coverage report
    - [ ] 4b Semantic audit of every EEex.dll function vs the PT engine; in-game test of every export
-   - [ ] 4c 13 Unsupported patterns: PT alternative or proven absence
+   - [x] 4c 13 Unsupported patterns: each proven absent / not applicable in PT (PATTERNS.md); EEex.dll
+         uses no coroutine API; phase 5 must guard the labels in EEex_Fix_Patch.lua (op33 + CheckAdd
+         spell-immunity fixes), EEex_Projectile.lua (UpdateAOE, Multi MM decode), EEex_Script_Patch.lua (OnCopy)
    - [ ] 4d Port stubbed code: Uncap FPS, visibility map, engine reimplementations, debug.cpp,
          CGameSprite::MakeLocal, function_names.db, extra-DB menu hooks
 5. [ ] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.

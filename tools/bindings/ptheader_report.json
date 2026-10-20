@@ -2,7 +2,7 @@
 "rewritten": [
 [
 "CChitin",
-96,
+97,
 104
 ],
 [
@@ -12,7 +12,7 @@
 ],
 [
 "CVidMode",
-40,
+41,
 42
 ],
 [
@@ -46,6 +46,11 @@
 243
 ],
 [
+"CGameObjectArray",
+0,
+0
+],
+[
 "CAreaFileRestEncounter",
 15,
 15
@@ -57,12 +62,12 @@
 ],
 [
 "CInfGame",
-117,
+125,
 128
 ],
 [
 "CInfinity",
-86,
+71,
 90
 ],
 [
@@ -147,7 +152,7 @@
 ],
 [
 "CScreenCreateChar",
-109,
+110,
 110
 ],
 [
@@ -197,7 +202,7 @@
 ],
 [
 "CScreenWizSpell",
-16,
+15,
 16
 ],
 [
@@ -207,7 +212,7 @@
 ],
 [
 "CScreenWorld",
-145,
+146,
 151
 ],
 [
@@ -227,7 +232,7 @@
 ],
 [
 "CScreenWorldMap",
-37,
+39,
 42
 ],
 [
@@ -262,7 +267,7 @@
 ],
 [
 "CGameAIBase",
-64,
+65,
 68
 ],
 [
@@ -277,7 +282,7 @@
 ],
 [
 "CGameSprite",
-304,
+311,
 338
 ],
 [
@@ -329,11 +334,6 @@
 "CStoreFileItem",
 6,
 6
-],
-[
-"CProjectileInstant",
-0,
-0
 ],
 [
 "CProjectileSkyStrike",
@@ -396,11 +396,6 @@
 9
 ],
 [
-"CProjectileCallLightning",
-0,
-0
-],
-[
 "CProjectileLightningBounce",
 1,
 1
@@ -417,7 +412,7 @@
 ],
 [
 "uiItem",
-41,
+43,
 47
 ],
 [
@@ -454,11 +449,6 @@
 "CProjectileMulti",
 1,
 1
-],
-[
-"CProjectileCastingGlow",
-7,
-7
 ],
 [
 "CProjectileConeOfCold",
@@ -502,6 +492,7 @@
 ]
 ],
 "opaque": [
+"CScreenWizSpell",
 "CScreenWorld"
 ],
 "kept": [
@@ -625,7 +616,6 @@
 "TILE_CODE",
 "VRAM_FLAGS",
 "CResInfTile",
-"CGameObjectArray",
 "CGameRemoteObjectListEntry",
 "CGameRemoteObjectControlChange",
 "CGameRemoteObjectDeletion",
@@ -856,6 +846,7 @@
 "CMessageStoreReplaceItem",
 "CMessageMakeGlobal",
 "CGameAreaClairvoyanceEntry",
+"CProjectileInstant",
 "CMessageWeaponImmumityUpdate",
 "CMessageSetInDialog",
 "CMessageAllowDialogInterrupt",
@@ -943,6 +934,7 @@
 "CMessageStopEscapeArea",
 "CSelectiveWeaponType",
 "CMessageSetStateOverrideFlag",
+"CProjectileCallLightning",
 "CMessageSetSound",
 "CMessageSetTrigger",
 "CMessageSpriteDeath",
@@ -971,6 +963,7 @@
 "CVoice",
 "UI_ControlTableEntry_st",
 "CResUI",
+"CProjectileCastingGlow",
 "PLTHeader_st",
 "CResPLT",
 "SDL_MessageBoxButtonData",

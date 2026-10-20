@@ -5,6 +5,10 @@
    "m_cMessageHandler": {
     "pt": "0x1760",
     "why": "every AddMessage call site: mov rcx,[g_pBaldurChitin]; add rcx,0x1760 (BG 0x1768)"
+   },
+   "m_pEngineMovies": {
+    "pt": "0x1178",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CChitin": {
@@ -15,6 +19,10 @@
    "m_AIStale": {
     "pt": "0xfc8",
     "why": "fieldprobe: 9 aligned cmp [rax+0xfc8] vs BG 0xfa8"
+   },
+   "bInTimer": {
+    "pt": "0xfc4",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CGameArea": {
@@ -49,6 +57,22 @@
    "m_namedCreatures": {
     "pt": "0xfb0",
     "why": "fieldprobe: 2 aligned sites [area+0xfb0] vs BG 0xf90"
+   },
+   "m_lightmapRatio": {
+    "pt": "0x111c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndAmbientDay": {
+    "pt": "0x1138",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndAmbientNight": {
+    "pt": "0x1158",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bRecentlySaved": {
+    "pt": "0x524",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CInfinity": {
@@ -59,6 +83,70 @@
    "m_ptScrollDest": {
     "pt": "0x2c0",
     "why": "CInfinity::SetScrollDest: destination stored to [rcx+0x2c0]/[rbx+0x2c4] (BG 0x300)"
+   },
+   "cLightningPoint": {
+    "pt": "0x140",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_glowVidCell": {
+    "pt": "0x148",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lAOE": {
+    "pt": "0x280",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_RasterizedPolys": {
+    "pt": "0x2b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_DownsampledPolys": {
+    "pt": "0x2d0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bMovieBroadcast": {
+    "pt": "0x2cd",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_dayLightIntensity": {
+    "pt": "0x2ac",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_requestDayNightCode": {
+    "pt": "0x2ad",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_renderDayNightCode": {
+    "pt": "0x2aa",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nScrollAttempts": {
+    "pt": "0x308",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lightningStrikeProb": {
+    "pt": "0x31c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rgbRainColor": {
+    "pt": "0x320",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_autoScrollSpeed": {
+    "pt": "0x2fc",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bStartLightning": {
+    "pt": "0x2d0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rgbTimeOfDayGlobalLighting": {
+    "pt": "0x330",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rgbLightningGlobalLighting": {
+    "pt": "0x324",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CInfGame": {
@@ -69,6 +157,58 @@
    "m_variables": {
     "pt": "0xcb20",
     "why": "fieldprobe: 37 lea rcx,[reg+0xcb20] (BG 0x9248)"
+   },
+   "m_cGameJournal": {
+    "pt": "0xbb38",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_cWorldMap": {
+    "pt": "0xbb58",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_objectsArray": {
+    "pt": "0xa0e0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_transitionPilesResref": {
+    "pt": "0xcf58",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lTransitionPiles": {
+    "pt": "0xcf20",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_storedLocations": {
+    "pt": "0xd0b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_storedLocationsPocketPlane": {
+    "pt": "0xd0f0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_cMoveList": {
+    "pt": "0xceb0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_cLimboList": {
+    "pt": "0xcee8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_pKeymap": {
+    "pt": "0xbb80",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_entanglePalette": {
+    "pt": "0xce30",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rgbMasterBitmap": {
+    "pt": "0x9fc0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_webHoldPalette": {
+    "pt": "0xce60",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CRuleTables": {
@@ -977,6 +1117,54 @@
    "m_equipment": {
     "pt": "0xfb8",
     "why": "339 reads mov r64,[sprite+0xfb8] (items pointer) and ~120 movzx [sprite+0xfc0] (m_selectedWeapon); 0xfb8+0x20 = m_pDialogData 0xfd8"
+   },
+   "m_sName": {
+    "pt": "0x3620",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_resref": {
+    "pt": "0x538",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_specificScriptName": {
+    "pt": "0x3880",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nNumberOfTimesInteractedWith": {
+    "pt": "0x3888",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_currentActionId": {
+    "pt": "0x4ba4",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nLastLevelUpHPRoll": {
+    "pt": "0x4b9c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bForceVisualEffects": {
+    "pt": "0x4ba0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndReady": {
+    "pt": "0x37b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bonusStats": {
+    "pt": "0x2948",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndVoice": {
+    "pt": "0x3838",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nHappiness": {
+    "pt": "0x38e0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndDeath": {
+    "pt": "0x37d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CAIScript": {
@@ -1261,6 +1449,14 @@
    "m_scriptName": {
     "pt": "0x478",
     "why": "fills exactly evidence m_curAction end (0x3f0+0x88) .. m_inCutScene 0x498 (32 bytes)"
+   },
+   "m_nMissedProcessPendingTriggerCalls": {
+    "pt": "0x484",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bJustAttacked": {
+    "pt": "0x3f0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   },
   "CGameOptions": {
@@ -1599,6 +1795,483 @@
    "m_bExpireTraps": {
     "pt": "0x268",
     "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   }
+  },
+  "CVidMode": {
+   "m_nGammaCorrection": {
+    "pt": "0x180",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lastCursor": {
+    "pt": "0x1c0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rLockedRect": {
+    "pt": "0x1b0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rgbMasterBitmap": {
+    "pt": "0x1f8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "bPointerEnabled": {
+    "pt": "0x19c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "SteamUGCDetails_t": {},
+  "CAIScriptFile": {},
+  "CStore": {
+   "m_pVersion": {
+    "pt": "0x104",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CBaldurProjector": {
+   "m_cSubtitles": {
+    "pt": "0x100",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CDerivedStats": {
+   "m_memorizedSpellsLevelPriest": {
+    "pt": "0xab8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenCharacter": {},
+  "CScreenCreateChar": {
+   "m_pVirtualKeys": {
+    "pt": "0x140",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nMaxProficiencySlots": {
+    "pt": "0x818",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenInventory": {
+   "m_bPauseState": {
+    "pt": "0x7d4",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_strLearnSpellFailedReason": {
+    "pt": "0x7d0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontTool": {
+    "pt": "0x7a0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontRealms": {
+    "pt": "0x750",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontStnSml": {
+    "pt": "0x778",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenJournal": {},
+  "CScreenMap": {
+   "m_lPopupStack": {
+    "pt": "0x6e0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontRealms": {
+    "pt": "0x738",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontTool": {
+    "pt": "0x760",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontStnSml": {
+    "pt": "0x788",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bSelectWorldOnUp": {
+    "pt": "0x734",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bCtrlKeyDown": {
+    "pt": "0x7bc",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nLastPicked": {
+    "pt": "0x718",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_noteStrref": {
+    "pt": "0x7b0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rMap": {
+    "pt": "0x96c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenOptions": {},
+  "CScreenPriestSpell": {},
+  "CScreenSave": {
+   "m_aGameSlots": {
+    "pt": "0x6f0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nMaxSlotNumber": {
+    "pt": "0x760",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lPopupStack": {
+    "pt": "0x710",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontRealms": {
+    "pt": "0x768",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontStnSml": {
+    "pt": "0x790",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bShiftKeyDown": {
+    "pt": "0x6dc",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bPauseState": {
+    "pt": "0x7b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bCtrlKeyDown": {
+    "pt": "0x764",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_strErrorText": {
+    "pt": "0x748",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nNumErrorButtons": {
+    "pt": "0x758",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nCurrentGameSlot": {
+    "pt": "0x75c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bCapsLockKeyOn": {
+    "pt": "0x6e0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenStart": {
+   "m_preloadFontStnSml": {
+    "pt": "0x130",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_nLastImageUpdate": {
+    "pt": "0x128",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenWizSpell": {
+   "m_resEraseSpell": {
+    "pt": "0x70c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bContingency": {
+    "pt": "0x750",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bPauseState": {
+    "pt": "0x704",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bControlled": {
+    "pt": "0x700",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenWorld": {
+   "m_fOriginalZoom": {
+    "pt": "0xca0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_pVirtualKeysFlags": {
+    "pt": "0x628",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenStore": {},
+  "CScreenMultiPlayer": {
+   "m_preLoadFontRealms": {
+    "pt": "0x740",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontStnSml": {
+    "pt": "0x768",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_preLoadFontTool": {
+    "pt": "0x790",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_playerNames": {
+    "pt": "0x7c0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_characterNames": {
+    "pt": "0x7f0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_characterPortrait": {
+    "pt": "0x820",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bSentGameDemand": {
+    "pt": "0x7b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenConnection": {},
+  "CScreenWorldMap": {
+   "m_bCtrlKeyDown": {
+    "pt": "0x6d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_lPopupStack": {
+    "pt": "0x6e0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_mapSize": {
+    "pt": "0x718",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_aAreaMarker": {
+    "pt": "0xf30",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CScreenMovies": {},
+  "CScreenDLC": {},
+  "CBaldurMessage": {},
+  "CProjectile": {
+   "m_ignoreDamage": {
+    "pt": "0x1b0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_maxBounces": {
+    "pt": "0x170",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameContainer": {
+   "m_rBounding": {
+    "pt": "0x538",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_ownedBy": {
+    "pt": "0x96a",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileSpellHit": {
+   "m_animation": {
+    "pt": "0x1f8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_newPalette": {
+    "pt": "0x330",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileBAM": {
+   "m_render": {
+    "pt": "0x268",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_newPalette": {
+    "pt": "0x270",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameTrigger": {},
+  "CProjectileSkyStrike": {
+   "m_animation": {
+    "pt": "0x1f8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_palette": {
+    "pt": "0x330",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameDoor": {
+   "m_rClosedBounding": {
+    "pt": "0x550",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_resID": {
+    "pt": "0x538",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_rOpenBounding": {
+    "pt": "0x540",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_ptClosedDest": {
+    "pt": "0x670",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_sndDoor": {
+    "pt": "0x678",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileFall": {
+   "m_targetType": {
+    "pt": "0x3e8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileChain": {
+   "m_numProjectile": {
+    "pt": "0x3d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_carrierProjectile": {
+    "pt": "0x3e8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_bOriginCaster": {
+    "pt": "0x3dc",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileArea": {
+   "m_resref": {
+    "pt": "0x3d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_checkForNonSprites": {
+    "pt": "0x1e8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameTiledObject": {
+   "m_scriptName": {
+    "pt": "0x590",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_resID": {
+    "pt": "0x538",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameStatic": {},
+  "CProjectileLightningBounce": {},
+  "uiItem": {
+   "scrollbar": {
+    "pt": "0x180",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "slider": {
+    "pt": "0x1b8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "movie": {
+    "pt": "0x218",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "button": {
+    "pt": "0x248",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "rectangle": {
+    "pt": "0x2a0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "action": {
+    "pt": "0x2f0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionSimpleDrop": {
+    "pt": "0x370",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionHold": {
+    "pt": "0x374",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionEnter": {
+    "pt": "0x350",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionExit": {
+    "pt": "0x354",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionSimpleDrag": {
+    "pt": "0x35c",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "actionUpdate": {
+    "pt": "0x358",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileTravelDoor": {},
+  "CProjectileNewScorcher": {
+   "m_nSegments": {
+    "pt": "0x3d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CProjectileMulti": {},
+  "CProjectileCastingGlow": {},
+  "CProjectileLightningBoltGround": {},
+  "CProjectileScorcher": {},
+  "CNetwork": {},
+  "CSteam": {
+   "m_UserStats": {
+    "pt": "0x170",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CSoundMixerImp": {},
+  "CInfToolTip": {
+   "m_textFont": {
+    "pt": "0x158",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "m_openSnd": {
+    "pt": "0x180",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CInfButtonSettings": {},
+  "CGameSave": {},
+  "CSpawn": {
+   "mSequentialStartValue": {
+    "pt": "0x1d8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   },
+   "mTimeOfDay": {
+    "pt": "0x1dc",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CGameSaveCharacter": {},
+  "CGameAnimationType": {
+   "m_newPalette": {
+    "pt": "0xbb0",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
+   }
+  },
+  "CSaveGameSlot": {},
+  "CVEFVidCell": {
+   "m_priority": {
+    "pt": "0x3f8",
+    "why": "autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)"
    }
   }
  },
