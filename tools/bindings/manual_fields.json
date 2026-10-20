@@ -240,6 +240,140 @@
     "pt": "0x8",
     "why": "same object-type constants written/compared at byte [obj+8] in both exes (ctor mov 0x14/0xa/0x1e/0xc8/0x70/0x50; cmp 0x31 SPRITE x12 in PT)"
    }
+  },
+  "CGameAIBase": {
+   "m_lAttacker": {
+    "pt": "0x60",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lAttackStyle": {
+    "pt": "0x78",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lOrderedBy": {
+    "pt": "0x80",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_protecting": {
+    "pt": "0x98",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_protector": {
+    "pt": "0xb0",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTargeted": {
+    "pt": "0xc8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHitter": {
+    "pt": "0xe0",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHelp": {
+    "pt": "0xf8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTrigger": {
+    "pt": "0x110",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lSeen": {
+    "pt": "0x128",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTalkedTo": {
+    "pt": "0x140",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHeard": {
+    "pt": "0x158",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lSummonedBy": {
+    "pt": "0x170",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lKilled": {
+    "pt": "0x188",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lEnteredBy": {
+    "pt": "0x1a0",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lAttackerSent": {
+    "pt": "0x1b8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lOrderedBySent": {
+    "pt": "0x1d0",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_protectingSent": {
+    "pt": "0x1e8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_protectorSent": {
+    "pt": "0x200",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTargetedSent": {
+    "pt": "0x218",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHitterSent": {
+    "pt": "0x230",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHelpSent": {
+    "pt": "0x248",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTriggerSent": {
+    "pt": "0x260",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lSeenSent": {
+    "pt": "0x278",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lTalkedToSent": {
+    "pt": "0x290",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lHeardSent": {
+    "pt": "0x2a8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lSummonedBySent": {
+    "pt": "0x2c0",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_lKilledSent": {
+    "pt": "0x2d8",
+    "why": "span CGameObject end 0x60 .. scripts 0x2f0 (evidence) identical to BG; identity votes on m_lAttacker(20) m_lOrderedBy(18) m_lTrigger(19) m_lKilled(10) m_lKilledSent(9) m_lHelp/TalkedTo/Heard/SummonedBy(4-5); conflicting votes come from ctor lea shuffles and one anchor2 sink (PT 0x176d12)"
+   },
+   "m_PAICallCounterNoMod": {
+    "pt": "0x3a4",
+    "why": "8-byte access [ai+0x3a0] covers both counters (evidence 0x3a0|8 -> 0x3a0)"
+   },
+   "m_timers": {
+    "pt": "0x3a8",
+    "why": "inner member 0x3b0 -> 0x3b0 (3 votes); single 0x3a8->0x330 vote is noise"
+   },
+   "m_queuedActions": {
+    "pt": "0x330",
+    "why": "between evidence m_achievementScript 0x328 and m_PAICallCounter 0x3a0: span identical to BG; ClearTriggers (1.00) uses lea [ai+0x368] in both"
+   },
+   "m_pendingTriggers": {
+    "pt": "0x368",
+    "why": "between evidence m_achievementScript 0x328 and m_PAICallCounter 0x3a0: span identical to BG; ClearTriggers (1.00) uses lea [ai+0x368] in both"
+   },
+   "m_scriptName": {
+    "pt": "0x478",
+    "why": "fills exactly evidence m_curAction end (0x3f0+0x88) .. m_inCutScene 0x498 (32 bytes)"
+   }
   }
  },
  "sizes": {

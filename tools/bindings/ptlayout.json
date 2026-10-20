@@ -41336,196 +41336,196 @@
 "pt": 96,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lAttackStyle": {
 "bg": 120,
 "pt": 120,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "m_lOrderedBy": {
 "bg": 128,
 "pt": 128,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_protecting": {
 "bg": 152,
 "pt": 152,
 "size": 24,
 "type": "CAIObjectType",
-"how": "adjacent"
+"how": "manual"
 },
 "m_protector": {
 "bg": 176,
 "pt": 176,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lTargeted": {
 "bg": 200,
 "pt": 200,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lHitter": {
 "bg": 224,
 "pt": 224,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lHelp": {
 "bg": 248,
 "pt": 248,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lTrigger": {
 "bg": 272,
 "pt": 272,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lSeen": {
 "bg": 296,
 "pt": 296,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lTalkedTo": {
 "bg": 320,
 "pt": 320,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lHeard": {
 "bg": 344,
 "pt": 344,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lSummonedBy": {
 "bg": 368,
 "pt": 368,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lKilled": {
 "bg": 392,
 "pt": 392,
 "size": 24,
 "type": "CAIObjectType",
-"how": "extrap"
+"how": "manual"
 },
 "m_lEnteredBy": {
 "bg": 416,
 "pt": 416,
 "size": 24,
 "type": "CAIObjectType",
-"how": "adjacent"
+"how": "manual"
 },
 "m_lAttackerSent": {
 "bg": 440,
 "pt": 440,
 "size": 24,
 "type": "CAIObjectType",
-"how": "evidence"
+"how": "manual"
 },
 "m_lOrderedBySent": {
 "bg": 464,
 "pt": 464,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_protectingSent": {
 "bg": 488,
 "pt": 488,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_protectorSent": {
 "bg": 512,
 "pt": 512,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lTargetedSent": {
 "bg": 536,
 "pt": 536,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lHitterSent": {
 "bg": 560,
 "pt": 560,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lHelpSent": {
 "bg": 584,
 "pt": 584,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lTriggerSent": {
 "bg": 608,
 "pt": 608,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lSeenSent": {
 "bg": 632,
 "pt": 632,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lTalkedToSent": {
 "bg": 656,
 "pt": 656,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lHeardSent": {
 "bg": 680,
 "pt": 680,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lSummonedBySent": {
 "bg": 704,
 "pt": 704,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_lKilledSent": {
 "bg": 728,
 "pt": 728,
 "size": 24,
 "type": "CAIObjectType",
-"how": "interp"
+"how": "manual"
 },
 "m_overrideScript": {
 "bg": 752,
@@ -41588,14 +41588,14 @@
 "pt": 816,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAIAction*>",
-"how": "interp"
+"how": "manual"
 },
 "m_pendingTriggers": {
 "bg": 872,
 "pt": 872,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAITrigger*>",
-"how": "interp"
+"how": "manual"
 },
 "m_PAICallCounter": {
 "bg": 928,
@@ -41606,17 +41606,17 @@
 },
 "m_PAICallCounterNoMod": {
 "bg": 932,
-"pt": null,
+"pt": 932,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_timers": {
 "bg": 936,
-"pt": null,
+"pt": 936,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CGameTimer*>",
-"how": "evidence"
+"how": "manual"
 },
 "m_curResponseNum": {
 "bg": 992,
@@ -41693,7 +41693,7 @@
 "pt": 1144,
 "size": 32,
 "type": "LCharString<32>",
-"how": "interp"
+"how": "manual"
 },
 "m_inCutScene": {
 "bg": 1192,
