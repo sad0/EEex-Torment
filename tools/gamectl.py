@@ -36,9 +36,13 @@ def client_rect(h):
 
 
 def focus(h):
+    """Bring the game to the front; refuse to send input if another window keeps the foreground
+    (the user may be working in it: input would land in their window)."""
     user32.ShowWindow(h, 9)
     user32.SetForegroundWindow(h)
     time.sleep(0.3)
+    if user32.GetForegroundWindow() != h:
+        sys.exit('game window is not in the foreground; no input sent')
 
 
 class MOUSEINPUT(ctypes.Structure):
