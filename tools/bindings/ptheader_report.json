@@ -52,7 +52,7 @@
 ],
 [
 "CGameOptions",
-96,
+152,
 153
 ],
 [
@@ -89,11 +89,6 @@
 "CAIScriptFile",
 12,
 13
-],
-[
-"CStoreFileHeader",
-35,
-35
 ],
 [
 "CStore",
@@ -329,6 +324,11 @@
 "CGameTrigger",
 20,
 21
+],
+[
+"CStoreFileItem",
+6,
+6
 ],
 [
 "CProjectileInstant",
@@ -659,6 +659,7 @@
 "CWorldMapData",
 "CWorldMapArea",
 "CFile",
+"CStoreFileHeader",
 "CVVCHashEntry",
 "CGameObject",
 "CObjectMarker",
@@ -847,7 +848,6 @@
 "CMessageSetMusic",
 "CMessageContainerStatus",
 "CMessageClearActions",
-"CStoreFileItem",
 "CMessageDisableAI",
 "CMessageAnimationChange",
 "CAreaPoint",

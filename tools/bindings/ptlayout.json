@@ -73,14 +73,14 @@
 "pt": 0,
 "size": 8,
 "type": "SDL_Cursor*",
-"how": "assumed"
+"how": "manual"
 },
 "driverdata": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -98,21 +98,21 @@
 "pt": 0,
 "size": 8,
 "type": "char*",
-"how": "assumed"
+"how": "manual"
 },
 "data": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "next": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "SDL_WindowUserData*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -168,14 +168,14 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nNumPolys": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -188,14 +188,14 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -278,7 +278,7 @@
 "pt": 0,
 "size": 8,
 "type": "CSteamID::SteamID_t",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -296,28 +296,28 @@
 "pt": 0,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "tileNE": {
 "bg": 1,
 "pt": 1,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "tileSW": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "tileSE": {
 "bg": 3,
 "pt": 3,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -330,21 +330,21 @@
 "pt": 0,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "minor": {
 "bg": 1,
 "pt": 1,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "patch": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -357,21 +357,21 @@
 "pt": 0,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "g": {
 "bg": 1,
 "pt": 1,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "b": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -384,28 +384,28 @@
 "pt": 0,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "g": {
 "bg": 1,
 "pt": 1,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "b": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "a": {
 "bg": 3,
 "pt": 3,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -418,14 +418,14 @@
 "pt": 0,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "colorKey": {
 "bg": 0,
 "pt": null,
 "size": 4,
 "type": "SDL_Color",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -438,14 +438,14 @@
 "pt": 0,
 "size": 4,
 "type": "WindowShapeMode",
-"how": "assumed"
+"how": "manual"
 },
 "parameters": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "SDL_WindowShapeParams",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -526,21 +526,21 @@
 "pt": 0,
 "size": 4,
 "type": "EResult",
-"how": "assumed"
+"how": "manual"
 },
 "m_bUserNeedsToAcceptWorkshopLegalAgreement": {
 "bg": 4,
 "pt": 4,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPublishedFileId": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -553,21 +553,21 @@
 "pt": 0,
 "size": 4,
 "type": "EResult",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPublishedFileId": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_bUserNeedsToAcceptWorkshopLegalAgreement": {
 "bg": 16,
 "pt": 16,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -720,35 +720,35 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nHeight": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nCenterX": {
 "bg": 4,
 "pt": 4,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "nCenterY": {
 "bg": 6,
 "pt": 6,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "___u4": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "frameTableEntry_st::_C3D261E28D53B12983426B9B0D118A61",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -952,56 +952,56 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFrames": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nSequences": {
 "bg": 10,
 "pt": 10,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "nTransparentColor": {
 "bg": 11,
 "pt": 11,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "nTableOffset": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nPaletteOffset": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFrameListOffset": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1150,91 +1150,91 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nLayers": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "nTiledObjects": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "nOffsetToLayerHeaders": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nOffsetToPolyHeader": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nOffsetToTiledObjects": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nOffsetToObjectTileList": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nVisiblityRange": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "nChanceOfRain": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "nChanceOfFog": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "nChanceOfSnow": {
 "bg": 38,
 "pt": 38,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "dwFlags": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -1309,35 +1309,35 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToPolyList": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToPointList": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToScreenSectionList": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToScreenPolyList": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1405,35 +1405,35 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nPanels": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToControlTable": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToPanelTable": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1446,14 +1446,14 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nControlSize": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1466,14 +1466,14 @@
 "pt": 0,
 "size": 8,
 "type": "const char**",
-"how": "assumed"
+"how": "manual"
 },
 "m_nNumStrings": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1486,42 +1486,42 @@
 "pt": 0,
 "size": 8,
 "type": "SDL_Window*",
-"how": "assumed"
+"how": "manual"
 },
 "userx": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "usery": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "mode": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "SDL_WindowShapeMode",
-"how": "assumed"
+"how": "manual"
 },
 "hasshape": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 },
 "driverdata": {
 "bg": 32,
 "pt": 32,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1534,63 +1534,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "event": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "data1": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "data2": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1603,42 +1603,42 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "code": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "data1": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "data2": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1651,63 +1651,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "touchId": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "__int64",
-"how": "assumed"
+"how": "manual"
 },
 "fingerId": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "__int64",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "dx": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "dy": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "pressure": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1720,21 +1720,21 @@
 "pt": 0,
 "size": 3,
 "type": "SDL_version",
-"how": "assumed"
+"how": "manual"
 },
 "subsystem": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "SDL_SYSWM_TYPE",
-"how": "assumed"
+"how": "manual"
 },
 "msg": {
 "bg": 8,
 "pt": 8,
 "size": 32,
 "type": "SDL_SysWMmsg::msg_t",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1747,21 +1747,21 @@
 "pt": 0,
 "size": 3,
 "type": "SDL_version",
-"how": "assumed"
+"how": "manual"
 },
 "subsystem": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "SDL_SYSWM_TYPE",
-"how": "assumed"
+"how": "manual"
 },
 "info": {
 "bg": 8,
 "pt": 8,
 "size": 16,
 "type": "SDL_SysWMinfo::info_t",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1774,21 +1774,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "msg": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "SDL_SysWMmsg*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1806,14 +1806,14 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1826,28 +1826,28 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "colors": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "SDL_Color*",
-"how": "assumed"
+"how": "manual"
 },
 "version": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "refcount": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1860,63 +1860,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "touchId": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "__int64",
-"how": "assumed"
+"how": "manual"
 },
 "dTheta": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "dDist": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "numFingers": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "padding": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1929,49 +1929,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "direction": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1984,63 +1984,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "state": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "xrel": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "yrel": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2053,70 +2053,70 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "button": {
 "bg": 16,
 "pt": 16,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "state": {
 "bg": 17,
 "pt": 17,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "clicks": {
 "bg": 18,
 "pt": 18,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 19,
 "pt": 19,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2129,49 +2129,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "window": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "SDL_Window*",
-"how": "assumed"
+"how": "manual"
 },
 "title": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 },
 "message": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 },
 "numbuttons": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "buttons": {
 "bg": 40,
 "pt": 40,
 "size": 8,
 "type": "const SDL_MessageBoxButtonData*",
-"how": "assumed"
+"how": "manual"
 },
 "colorScheme": {
 "bg": 48,
 "pt": 48,
 "size": 8,
 "type": "const SDL_MessageBoxColorScheme*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2184,21 +2184,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "buttonid": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "text": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2211,28 +2211,28 @@
 "pt": 0,
 "size": 4,
 "type": "SDL_Scancode",
-"how": "assumed"
+"how": "manual"
 },
 "sym": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "SDL_Keycode",
-"how": "assumed"
+"how": "manual"
 },
 "mod": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "unused": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2245,56 +2245,56 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "state": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "repeat": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "keysym": {
 "bg": 16,
 "pt": 16,
 "size": 16,
 "type": "SDL_Keysym",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2307,49 +2307,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "hat": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "value": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2362,21 +2362,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2389,49 +2389,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "button": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "state": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2444,63 +2444,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "ball": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "xrel": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "yrel": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2513,63 +2513,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "axis": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "value": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "padding4": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2582,28 +2582,28 @@
 "pt": 0,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 },
 "HAS_WGL_EXT_swap_control_tear": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 },
 "HAS_WGL_EXT_create_context_es2_profile": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 },
 "HAS_WGL_ARB_context_flush_control": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2616,35 +2616,35 @@
 "pt": 0,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "dll_handle": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "egl_display": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "egl_config": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "egl_swapinterval": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2657,21 +2657,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "file": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "char*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2684,56 +2684,56 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "touchId": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "__int64",
-"how": "assumed"
+"how": "manual"
 },
 "gestureId": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "__int64",
-"how": "assumed"
+"how": "manual"
 },
 "numFingers": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "error": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2746,35 +2746,35 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "refresh_rate": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "driverdata": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2787,63 +2787,63 @@
 "pt": 0,
 "size": 8,
 "type": "char*",
-"how": "extrap"
+"how": "manual"
 },
 "max_display_modes": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "num_display_modes": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "display_modes": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "SDL_DisplayMode*",
-"how": "adjacent"
+"how": "manual"
 },
 "desktop_mode": {
 "bg": 24,
 "pt": 24,
 "size": 24,
 "type": "SDL_DisplayMode",
-"how": "evidence"
+"how": "manual"
 },
 "current_mode": {
 "bg": 48,
 "pt": 48,
 "size": 24,
 "type": "SDL_DisplayMode",
-"how": "evidence"
+"how": "manual"
 },
 "fullscreen_window": {
 "bg": 72,
 "pt": 72,
 "size": 8,
 "type": "SDL_Window*",
-"how": "evidence"
+"how": "manual"
 },
 "device": {
 "bg": 80,
 "pt": 80,
 "size": 8,
 "type": "SDL_VideoDevice*",
-"how": "interp"
+"how": "manual"
 },
 "driverdata": {
 "bg": 88,
 "pt": 88,
 "size": 8,
 "type": "void*",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -2856,21 +2856,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2883,49 +2883,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "button": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "state": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -2938,63 +2938,63 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "axis": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "value": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "padding4": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3007,14 +3007,14 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3027,133 +3027,133 @@
 "pt": 0,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "assumed"
+"how": "manual"
 },
 "src_w": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "src_h": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "src_pitch": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "src_skip": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "dst": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "assumed"
+"how": "manual"
 },
 "dst_w": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "dst_h": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "dst_pitch": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "dst_skip": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "src_fmt": {
 "bg": 48,
 "pt": 48,
 "size": 8,
 "type": "SDL_PixelFormat*",
-"how": "assumed"
+"how": "manual"
 },
 "dst_fmt": {
 "bg": 56,
 "pt": 56,
 "size": 8,
 "type": "SDL_PixelFormat*",
-"how": "assumed"
+"how": "manual"
 },
 "table": {
 "bg": 64,
 "pt": 64,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "assumed"
+"how": "manual"
 },
 "flags": {
 "bg": 72,
 "pt": 72,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "colorkey": {
 "bg": 76,
 "pt": 76,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "r": {
 "bg": 80,
 "pt": 80,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "g": {
 "bg": 81,
 "pt": 81,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "b": {
 "bg": 82,
 "pt": 82,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "a": {
 "bg": 83,
 "pt": 83,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3166,42 +3166,42 @@
 "pt": 0,
 "size": 8,
 "type": "SDL_Surface*",
-"how": "assumed"
+"how": "manual"
 },
 "identity": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "data": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "info": {
 "bg": 32,
 "pt": 32,
 "size": 88,
 "type": "SDL_BlitInfo",
-"how": "assumed"
+"how": "manual"
 },
 "dst_palette_version": {
 "bg": 120,
 "pt": 120,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "src_palette_version": {
 "bg": 124,
 "pt": 124,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3214,49 +3214,49 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "which": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "iscapture": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding2": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding3": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3269,35 +3269,35 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nNumber": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nSize": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nTableOffset": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3310,42 +3310,42 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nLayers": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nCompressed": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nWidth": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nHeight": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3392,49 +3392,49 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "sx": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "sy": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3447,42 +3447,42 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nWidth": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nHeight": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nQuads": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToQuads": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3495,35 +3495,35 @@
 "pt": 0,
 "size": 8,
 "type": "CSteamID",
-"how": "assumed"
+"how": "manual"
 },
 "m_nGlobalRank": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nScore": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_cDetails": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_hUGC": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3706,14 +3706,14 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nMapOffset": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -4465,213 +4465,213 @@
 "items": {
 "m_gore": {
 "bg": 0,
-"pt": 4,
+"pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_goreOption": {
 "bg": 4,
-"pt": 8,
+"pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_scrollSpeed": {
 "bg": 8,
-"pt": 12,
+"pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_displayVerbalText": {
 "bg": 12,
-"pt": 16,
+"pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_guiFeedBackLevel": {
 "bg": 16,
-"pt": 20,
+"pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_locatorFeedBackLevel": {
 "bg": 20,
-"pt": 24,
+"pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundMusicVolume": {
 "bg": 24,
-"pt": 28,
+"pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundFXVolume": {
 "bg": 28,
-"pt": 32,
+"pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundDialogVolume": {
 "bg": 32,
-"pt": 36,
+"pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nVolumeAmbients": {
 "bg": 36,
-"pt": 40,
+"pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundMovieVolume": {
 "bg": 40,
-"pt": 44,
+"pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundFootStepsOn": {
 "bg": 44,
-"pt": 48,
+"pt": 44,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_soundVoicesNo": {
 "bg": 48,
-"pt": 52,
+"pt": 48,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "interp"
 },
 "m_graphicsBrightness": {
 "bg": 52,
-"pt": 56,
+"pt": 52,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_graphicsFontZoom": {
 "bg": 56,
-"pt": 60,
+"pt": 56,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_spriteBlurAmount": {
 "bg": 60,
 "pt": 64,
 "size": 4,
 "type": "float",
-"how": "extrap"
+"how": "manual"
 },
 "m_graphicsTranslucentShadows": {
 "bg": 64,
 "pt": 68,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_graphicsForceMirroringOff": {
 "bg": 68,
 "pt": 72,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "interp"
 },
 "m_graphicsTranslucentEffects": {
 "bg": 72,
 "pt": 76,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "interp"
 },
 "m_toolTips": {
 "bg": 76,
 "pt": 80,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nBoredTime": {
 "bg": 80,
 "pt": 84,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nCommandSoundsFrequency": {
 "bg": 84,
 "pt": 88,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nSelectionSoundsFrequency": {
 "bg": 88,
 "pt": 92,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_bAlwaysDither": {
 "bg": 92,
 "pt": 96,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nKeyBoardScrollAmount": {
 "bg": 96,
 "pt": 100,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nEffectTextLevel": {
 "bg": 100,
 "pt": 104,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nTutorialState": {
 "bg": 104,
 "pt": 108,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nAttackSounds": {
 "bg": 108,
 "pt": 112,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nAutoPauseState": {
 "bg": 112,
 "pt": 116,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_bAutoPauseCenter": {
 "bg": 116,
 "pt": 120,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nDifficultyMultiplier": {
 "bg": 120,
@@ -4692,837 +4692,837 @@
 "pt": 132,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bAutoUseMagicAmmo": {
 "bg": 132,
 "pt": 136,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bNoExtraXP": {
 "bg": 136,
 "pt": 140,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bInfravision": {
 "bg": 140,
 "pt": 144,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bStupidQuickItemStuff": {
 "bg": 144,
 "pt": 148,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bWeatherEnabled": {
 "bg": 148,
 "pt": 152,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bCheatsEnabled": {
 "bg": 152,
 "pt": 156,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bEnvironmentalAudio": {
 "bg": 156,
 "pt": 160,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bRestHealParty": {
 "bg": 160,
 "pt": 164,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bTerrainHugging": {
 "bg": 164,
 "pt": 168,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bHPOverHead": {
 "bg": 168,
 "pt": 172,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bDebugMode": {
 "bg": 172,
 "pt": 176,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bUIEditMode": {
 "bg": 176,
 "pt": 180,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bCloudSavesEnabled": {
 "bg": 180,
 "pt": 184,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bNeverShowNuisanceSOD": {
 "bg": 184,
 "pt": 188,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nActiveCampaign": {
 "bg": 188,
-"pt": 192,
-"size": 4,
-"type": "int",
-"how": "adjacent"
-},
-"m_bDeveloperMode": {
-"bg": 192,
 "pt": 196,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bForceDialogPause": {
-"bg": 196,
+"m_bDeveloperMode": {
+"bg": 192,
 "pt": 200,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bUse3dAnimations": {
-"bg": 200,
+"m_bForceDialogPause": {
+"bg": 196,
 "pt": 204,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
-"m_bCriticalHitScreenShake": {
-"bg": 204,
+"m_bUse3dAnimations": {
+"bg": 200,
 "pt": 208,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
-"m_bHotkeysOnToolTips": {
-"bg": 208,
+"m_bCriticalHitScreenShake": {
+"bg": 204,
 "pt": 212,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bVeryLowPerformance": {
-"bg": 212,
+"m_bHotkeysOnToolTips": {
+"bg": 208,
 "pt": 216,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bDisplayExtraCombatInfo": {
-"bg": 216,
+"m_bVeryLowPerformance": {
+"bg": 212,
 "pt": 220,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
+},
+"m_bDisplayExtraCombatInfo": {
+"bg": 216,
+"pt": 224,
+"size": 4,
+"type": "int",
+"how": "interp"
 },
 "m_nAreaEffectsDensity": {
 "bg": 220,
-"pt": 224,
+"pt": 228,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bDuplicateFloatingText": {
 "bg": 224,
-"pt": null,
+"pt": 232,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_nTilesPrecachePercent": {
 "bg": 228,
-"pt": null,
+"pt": 236,
 "size": 1,
 "type": "unsigned __int8",
-"how": null
+"how": "manual"
 },
 "m_bColorCircles": {
 "bg": 232,
-"pt": null,
+"pt": 240,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bClassicCircles": {
 "bg": 236,
-"pt": null,
+"pt": 244,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_nCombatUI": {
 "bg": 240,
-"pt": null,
+"pt": 248,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bOverConfirmEverything": {
 "bg": 244,
-"pt": null,
+"pt": 252,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bShowLearnableSpells": {
 "bg": 248,
-"pt": null,
+"pt": 256,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bShowTriggersOnTab": {
 "bg": 252,
-"pt": null,
+"pt": 260,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bShowBlackSpace": {
 "bg": 256,
-"pt": null,
+"pt": 264,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bUseNearestNeighbourScaling": {
 "bg": 260,
-"pt": null,
+"pt": 268,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_showAOE": {
 "bg": 264,
-"pt": null,
+"pt": 272,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bEquipmentComparison": {
 "bg": 268,
-"pt": null,
+"pt": 276,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bDisableCastingGlows": {
 "bg": 272,
-"pt": null,
+"pt": 280,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bLowMemSounds1": {
 "bg": 276,
-"pt": null,
+"pt": 284,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bLowMemSounds2": {
 "bg": 280,
-"pt": null,
+"pt": 288,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bDisableVEFVidCells": {
 "bg": 284,
-"pt": null,
+"pt": 292,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bDisableDisplayText": {
 "bg": 288,
-"pt": null,
+"pt": 296,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bMidLevelBrighten": {
 "bg": 292,
-"pt": null,
+"pt": 300,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bHighLevelBrighten": {
 "bg": 296,
-"pt": null,
+"pt": 304,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_nAreaEffectsRefreshProb": {
 "bg": 300,
-"pt": null,
+"pt": 308,
 "size": 2,
 "type": "unsigned __int16",
-"how": null
+"how": "adjacent"
 },
 "m_bEnhancedPathSearch": {
 "bg": 304,
 "pt": null,
 "size": 4,
 "type": "int",
-"how": null
+"how": "adjacent"
 },
 "m_bPausingMap": {
 "bg": 308,
-"pt": null,
+"pt": 312,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bExtraFeedback": {
 "bg": 312,
-"pt": null,
+"pt": 316,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bFilterGames": {
 "bg": 316,
-"pt": null,
+"pt": 320,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bAllLearnSpellInfo": {
 "bg": 320,
-"pt": null,
+"pt": 324,
 "size": 4,
 "type": "int",
-"how": null
+"how": "manual"
 },
 "m_bDisableStaticsDuringCombat": {
 "bg": 324,
-"pt": null,
+"pt": 328,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bDisableFootstepsDuringCombat": {
 "bg": 328,
-"pt": null,
+"pt": 332,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bDisablePlacedSoundsDuringCombat": {
 "bg": 332,
-"pt": null,
+"pt": 336,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nSuperDesperateSpeedAttempt": {
 "bg": 336,
-"pt": null,
+"pt": 340,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedSpeedAdjusting": {
 "bg": 340,
-"pt": null,
+"pt": 344,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedGraphicsTranslucentShadows": {
 "bg": 344,
-"pt": null,
+"pt": 348,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedVeryLowPerformance": {
 "bg": 348,
-"pt": null,
+"pt": 352,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedLowPerformance": {
 "bg": 352,
-"pt": null,
+"pt": 356,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedDisableBrightest": {
 "bg": 356,
-"pt": null,
+"pt": 360,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedLimitTransparency": {
 "bg": 360,
-"pt": null,
+"pt": 364,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedDisableCastingGlows": {
 "bg": 364,
-"pt": null,
+"pt": 368,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedDisableVEFVidCells": {
 "bg": 368,
-"pt": null,
+"pt": 372,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedMidLevelBrighten": {
 "bg": 372,
-"pt": null,
+"pt": 376,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedHighLevelBrighten": {
 "bg": 376,
-"pt": null,
+"pt": 380,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedSoundFootStepsOn": {
 "bg": 380,
-"pt": null,
+"pt": 384,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedAttackSounds": {
 "bg": 384,
-"pt": null,
+"pt": 388,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedUse3dAnimations": {
 "bg": 388,
-"pt": null,
+"pt": 392,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedDisableVVCSounds": {
 "bg": 392,
-"pt": null,
+"pt": 396,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_bAutomatedFasterBlur": {
 "bg": 396,
-"pt": null,
+"pt": 400,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedGraphicsTranslucentShadows": {
 "bg": 400,
-"pt": null,
+"pt": 404,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedVeryLowPerformance": {
 "bg": 404,
-"pt": null,
+"pt": 408,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedLowPerformance": {
 "bg": 408,
-"pt": null,
+"pt": 412,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedDisableBrightest": {
 "bg": 412,
-"pt": null,
+"pt": 416,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedLimitTransparency": {
 "bg": 416,
-"pt": null,
+"pt": 420,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedDisableCastingGlows": {
 "bg": 420,
-"pt": null,
+"pt": 424,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedDisableVEFVidCells": {
 "bg": 424,
-"pt": null,
+"pt": 428,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedMidLevelBrighten": {
 "bg": 428,
-"pt": null,
+"pt": 432,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedHighLevelBrighten": {
 "bg": 432,
-"pt": null,
+"pt": 436,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedSoundFootStepsOn": {
 "bg": 436,
-"pt": null,
+"pt": 440,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedAttackSounds": {
 "bg": 440,
-"pt": null,
+"pt": 444,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedUse3dAnimations": {
 "bg": 444,
-"pt": null,
+"pt": 448,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedDisableVVCSounds": {
 "bg": 448,
-"pt": null,
+"pt": 452,
 "size": 4,
 "type": "int",
-"how": null
+"how": "interp"
 },
 "m_nCutAutomatedFasterBlur": {
 "bg": 452,
-"pt": 460,
+"pt": 456,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bPCOnlyCombatMode": {
 "bg": 456,
-"pt": 464,
+"pt": 460,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bFullyDisableNonVisibleDuringCombat": {
 "bg": 460,
-"pt": 468,
+"pt": 464,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bDisableVVCSounds": {
 "bg": 464,
-"pt": 472,
+"pt": 468,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bFasterBlur": {
 "bg": 468,
-"pt": 476,
+"pt": 472,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nFatFingerRadius": {
 "bg": 472,
-"pt": 480,
+"pt": 476,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bScaleUI": {
 "bg": 476,
-"pt": 484,
+"pt": 480,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nRenderActionQueue": {
 "bg": 480,
-"pt": 488,
+"pt": 484,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bConfirmDialog": {
 "bg": 484,
 "pt": 492,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bHardwareMouseCursor": {
 "bg": 488,
 "pt": 496,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bShowHealth": {
 "bg": 492,
 "pt": 500,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bMaxHP": {
 "bg": 496,
 "pt": 504,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bStoryMode": {
 "bg": 500,
 "pt": 508,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_bNightmareMode": {
 "bg": 504,
 "pt": 512,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "m_bNightmareBonusGold": {
 "bg": 508,
 "pt": 516,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bNightmareBonusXP": {
 "bg": 512,
 "pt": 520,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_b3ESneakAttack": {
 "bg": 516,
 "pt": 524,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bClericRangerFix": {
 "bg": 520,
 "pt": 528,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bShowPauseDate": {
 "bg": 524,
 "pt": 532,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bDisableCosmeticAttacks": {
 "bg": 528,
 "pt": 536,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bJournalPopups": {
 "bg": 532,
 "pt": 540,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bRenderTravelRegions": {
 "bg": 536,
 "pt": 544,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bRenderSearchMap": {
 "bg": 540,
 "pt": 548,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bRenderDynamicSearchMap": {
 "bg": 544,
 "pt": 552,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bRenderFrameTimes": {
 "bg": 548,
 "pt": 556,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bZoomLock": {
 "bg": 552,
 "pt": 560,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bDisableMultiplayerBanters": {
 "bg": 556,
-"pt": 564,
-"size": 4,
-"type": "int",
-"how": "adjacent"
-},
-"m_bRenderPath": {
-"bg": 560,
 "pt": 568,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bFogEnabled": {
-"bg": 564,
+"m_bRenderPath": {
+"bg": 560,
 "pt": 572,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
-"m_bUseSpriteShader": {
-"bg": 568,
+"m_bFogEnabled": {
+"bg": 564,
 "pt": 576,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "interp"
 },
-"m_bCharacterHighlightsEnabled": {
-"bg": 572,
+"m_bUseSpriteShader": {
+"bg": 568,
 "pt": 580,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bGreyscaleOnPauseEnabled": {
-"bg": 576,
+"m_bCharacterHighlightsEnabled": {
+"bg": 572,
 "pt": 584,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
+},
+"m_bGreyscaleOnPauseEnabled": {
+"bg": 576,
+"pt": 588,
+"size": 4,
+"type": "int",
+"how": "manual"
 },
 "m_bShortDescription": {
 "bg": 580,
-"pt": 588,
+"pt": 592,
 "size": 4,
 "type": "int",
 "how": "adjacent"
 },
 "m_nMaxStringEntries": {
 "bg": 584,
-"pt": 592,
-"size": 4,
-"type": "int",
-"how": "adjacent"
-},
-"m_bRenderExploredMap": {
-"bg": 588,
-"pt": 596,
-"size": 4,
-"type": "int",
-"how": "adjacent"
-},
-"m_bEnableDirectX": {
-"bg": 592,
 "pt": 600,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bEnableMPChatMenu": {
-"bg": 596,
+"m_bRenderExploredMap": {
+"bg": 588,
 "pt": 604,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
-"m_bExpireTraps": {
-"bg": 600,
+"m_bEnableDirectX": {
+"bg": 592,
 "pt": 608,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
+},
+"m_bEnableMPChatMenu": {
+"bg": 596,
+"pt": 612,
+"size": 4,
+"type": "int",
+"how": "manual"
+},
+"m_bExpireTraps": {
+"bg": 600,
+"pt": 616,
+"size": 4,
+"type": "int",
+"how": "manual"
 },
 "m_bAreaMapZoom": {
 "bg": 604,
-"pt": 612,
+"pt": 620,
 "size": 4,
 "type": "int",
 "how": "adjacent"
@@ -5687,42 +5687,42 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_baseCount": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_count": {
 "bg": 4,
 "pt": 4,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_magicType": {
 "bg": 6,
 "pt": 6,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_memorizedStartingSpell": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_memorizedCount": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -5824,56 +5824,56 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFrames": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nSequences": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nQuads": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nFramesOffset": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nSequencesOffset": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nQuadsOffset": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6062,70 +6062,70 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "nFileVersion": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nWidth": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nHeight": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nXTiles": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nYTiles": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nTileSize": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "nTransparentColor": {
 "bg": 18,
 "pt": 18,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "nCompressed": {
 "bg": 19,
 "pt": 19,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 },
 "nPaletteOffset": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -6248,14 +6248,14 @@
 "pt": 0,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "nStartingFrame": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6955,28 +6955,28 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "y": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "w": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "h": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -6989,203 +6989,203 @@
 "pt": 0,
 "size": 8,
 "type": "const void*",
-"how": "evidence"
+"how": "manual"
 },
 "id": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "title": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "char*",
-"how": "extrap"
+"how": "manual"
 },
 "icon": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "SDL_Surface*",
-"how": "extrap"
+"how": "manual"
 },
 "x": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "y": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "w": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "h": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "min_w": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "min_h": {
 "bg": 52,
 "pt": 52,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "max_w": {
 "bg": 56,
 "pt": 56,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "max_h": {
 "bg": 60,
 "pt": 60,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "flags": {
 "bg": 64,
 "pt": 64,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "last_fullscreen_flags": {
 "bg": 68,
 "pt": 68,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "windowed": {
 "bg": 72,
 "pt": 72,
 "size": 16,
 "type": "SDL_Rect",
-"how": "extrap"
+"how": "manual"
 },
 "fullscreen_mode": {
 "bg": 88,
 "pt": 88,
 "size": 24,
 "type": "SDL_DisplayMode",
-"how": "extrap"
+"how": "manual"
 },
 "brightness": {
 "bg": 112,
 "pt": 112,
 "size": 4,
 "type": "float",
-"how": "extrap"
+"how": "manual"
 },
 "gamma": {
 "bg": 120,
 "pt": 120,
 "size": 8,
 "type": "wchar_t*",
-"how": "extrap"
+"how": "manual"
 },
 "saved_gamma": {
 "bg": 128,
 "pt": 128,
 "size": 8,
 "type": "wchar_t*",
-"how": "extrap"
+"how": "manual"
 },
 "surface": {
 "bg": 136,
 "pt": 136,
 "size": 8,
 "type": "SDL_Surface*",
-"how": "extrap"
+"how": "manual"
 },
 "surface_valid": {
 "bg": 144,
 "pt": 144,
 "size": 4,
 "type": "SDL_bool",
-"how": "extrap"
+"how": "manual"
 },
 "is_hiding": {
 "bg": 148,
 "pt": 148,
 "size": 4,
 "type": "SDL_bool",
-"how": "extrap"
+"how": "manual"
 },
 "is_destroying": {
 "bg": 152,
 "pt": 152,
 "size": 4,
 "type": "SDL_bool",
-"how": "extrap"
+"how": "manual"
 },
 "shaper": {
 "bg": 160,
 "pt": 160,
 "size": 8,
 "type": "SDL_WindowShaper*",
-"how": "extrap"
+"how": "manual"
 },
 "hit_test_data": {
 "bg": 176,
 "pt": 176,
 "size": 8,
 "type": "void*",
-"how": "extrap"
+"how": "manual"
 },
 "data": {
 "bg": 184,
 "pt": 184,
 "size": 8,
 "type": "SDL_WindowUserData*",
-"how": "extrap"
+"how": "manual"
 },
 "driverdata": {
 "bg": 192,
 "pt": 192,
 "size": 8,
 "type": "void*",
-"how": "extrap"
+"how": "manual"
 },
 "prev": {
 "bg": 200,
 "pt": 200,
 "size": 8,
 "type": "SDL_Window*",
-"how": "extrap"
+"how": "manual"
 },
 "next": {
 "bg": 208,
 "pt": 208,
 "size": 8,
 "type": "SDL_Window*",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -7198,84 +7198,84 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "format": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "SDL_PixelFormat*",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "pitch": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "pixels": {
 "bg": 32,
 "pt": 32,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "userdata": {
 "bg": 40,
 "pt": 40,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "locked": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "lock_data": {
 "bg": 56,
 "pt": 56,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "clip_rect": {
 "bg": 64,
 "pt": 64,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "map": {
 "bg": 80,
 "pt": 80,
 "size": 8,
 "type": "SDL_BlitMap*",
-"how": "assumed"
+"how": "manual"
 },
 "refcount": {
 "bg": 88,
 "pt": 88,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -7308,14 +7308,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13499,133 +13499,133 @@
 "pt": 0,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 },
 "shape_driver": {
 "bg": 248,
 "pt": 248,
 "size": 24,
 "type": "SDL_ShapeDriver",
-"how": "assumed"
+"how": "manual"
 },
 "suspend_screensaver": {
 "bg": 472,
 "pt": 472,
 "size": 4,
 "type": "SDL_bool",
-"how": "assumed"
+"how": "manual"
 },
 "num_displays": {
 "bg": 476,
 "pt": 476,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "displays": {
 "bg": 480,
 "pt": 480,
 "size": 8,
 "type": "SDL_VideoDisplay*",
-"how": "assumed"
+"how": "manual"
 },
 "windows": {
 "bg": 488,
 "pt": 488,
 "size": 8,
 "type": "SDL_Window*",
-"how": "assumed"
+"how": "manual"
 },
 "grabbed_window": {
 "bg": 496,
 "pt": 496,
 "size": 8,
 "type": "SDL_Window*",
-"how": "assumed"
+"how": "manual"
 },
 "window_magic": {
 "bg": 504,
 "pt": 504,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "next_object_id": {
 "bg": 508,
 "pt": 508,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "clipboard_text": {
 "bg": 512,
 "pt": 512,
 "size": 8,
 "type": "char*",
-"how": "assumed"
+"how": "manual"
 },
 "gl_config": {
 "bg": 520,
 "pt": 520,
 "size": 368,
 "type": "SDL_VideoDevice::gl_config_t",
-"how": "assumed"
+"how": "manual"
 },
 "current_glwin": {
 "bg": 888,
 "pt": 888,
 "size": 8,
 "type": "SDL_Window*",
-"how": "assumed"
+"how": "manual"
 },
 "current_glctx": {
 "bg": 896,
 "pt": 896,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "current_glwin_tls": {
 "bg": 904,
 "pt": 904,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "current_glctx_tls": {
 "bg": 908,
 "pt": 908,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "driverdata": {
 "bg": 912,
 "pt": 912,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "gl_data": {
 "bg": 920,
 "pt": 920,
 "size": 8,
 "type": "SDL_GLDriverData*",
-"how": "assumed"
+"how": "manual"
 },
 "egl_data": {
 "bg": 928,
 "pt": 928,
 "size": 8,
 "type": "SDL_EGL_VideoData*",
-"how": "assumed"
+"how": "manual"
 },
 "gles_data": {
 "bg": 936,
 "pt": 936,
 "size": 8,
 "type": "SDL_PrivateGLESData*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13638,133 +13638,133 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "palette": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "SDL_Palette*",
-"how": "assumed"
+"how": "manual"
 },
 "BitsPerPixel": {
 "bg": 16,
 "pt": 16,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "BytesPerPixel": {
 "bg": 17,
 "pt": 17,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "Array<unsigned __int8,2>",
-"how": "assumed"
+"how": "manual"
 },
 "Rmask": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "Gmask": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "Bmask": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "Amask": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "Rloss": {
 "bg": 36,
 "pt": 36,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Gloss": {
 "bg": 37,
 "pt": 37,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Bloss": {
 "bg": 38,
 "pt": 38,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Aloss": {
 "bg": 39,
 "pt": 39,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Rshift": {
 "bg": 40,
 "pt": 40,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Gshift": {
 "bg": 41,
 "pt": 41,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Bshift": {
 "bg": 42,
 "pt": 42,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "Ashift": {
 "bg": 43,
 "pt": 43,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "refcount": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "next": {
 "bg": 48,
 "pt": 48,
 "size": 8,
 "type": "SDL_PixelFormat*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13777,7 +13777,7 @@
 "pt": 0,
 "size": 15,
 "type": "Array<SDL_MessageBoxColor,5>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13950,42 +13950,42 @@
 "pt": 0,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_eResult": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "EResult",
-"how": "assumed"
+"how": "manual"
 },
 "m_unNumResultsReturned": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_unTotalMatchingResults": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_bCachedData": {
 "bg": 20,
 "pt": 20,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "m_rgchNextCursor": {
 "bg": 21,
 "pt": null,
 "size": 256,
 "type": "LCharString<256>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13998,182 +13998,182 @@
 "pt": 0,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_eResult": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "EResult",
-"how": "assumed"
+"how": "manual"
 },
 "m_eFileType": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "EWorkshopFileType",
-"how": "assumed"
+"how": "manual"
 },
 "m_nCreatorAppID": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nConsumerAppID": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rgchTitle": {
 "bg": 24,
 "pt": 24,
 "size": 129,
 "type": "LCharString<129>",
-"how": "assumed"
+"how": "manual"
 },
 "m_rgchDescription": {
 "bg": 153,
 "pt": null,
 "size": 8000,
 "type": "LCharString<8000>",
-"how": "assumed"
+"how": "manual"
 },
 "m_ulSteamIDOwner": {
 "bg": 8160,
 "pt": 8160,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_rtimeCreated": {
 "bg": 8168,
 "pt": 8168,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rtimeUpdated": {
 "bg": 8172,
 "pt": 8172,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rtimeAddedToUserList": {
 "bg": 8176,
 "pt": 8176,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_eVisibility": {
 "bg": 8180,
 "pt": 8180,
 "size": 4,
 "type": "ERemoteStoragePublishedFileVisibility",
-"how": "assumed"
+"how": "manual"
 },
 "m_bBanned": {
 "bg": 8184,
 "pt": 8184,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "m_bAcceptedForUse": {
 "bg": 8185,
 "pt": 8185,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "m_bTagsTruncated": {
 "bg": 8186,
 "pt": 8186,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "m_rgchTags": {
 "bg": 8187,
 "pt": null,
 "size": 1025,
 "type": "LCharString<1025>",
-"how": "assumed"
+"how": "manual"
 },
 "m_hFile": {
 "bg": 9216,
 "pt": 9216,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_hPreviewFile": {
 "bg": 9224,
 "pt": 9224,
 "size": 8,
 "type": "unsigned __int64",
-"how": "assumed"
+"how": "manual"
 },
 "m_pchFileName": {
 "bg": 9232,
 "pt": 9232,
 "size": 260,
 "type": "LCharString<260>",
-"how": "assumed"
+"how": "manual"
 },
 "m_nFileSize": {
 "bg": 9492,
 "pt": 9492,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPreviewFileSize": {
 "bg": 9496,
 "pt": 9496,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rgchURL": {
 "bg": 9500,
 "pt": null,
 "size": 256,
 "type": "LCharString<256>",
-"how": "assumed"
+"how": "manual"
 },
 "m_unVotesUp": {
 "bg": 9756,
 "pt": 9756,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_unVotesDown": {
 "bg": 9760,
 "pt": 9760,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_flScore": {
 "bg": 9764,
 "pt": 9764,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "m_unNumChildren": {
 "bg": 9768,
 "pt": 9768,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -14186,14 +14186,14 @@
 "pt": 0,
 "size": 9776,
 "type": "SteamUGCDetails_t",
-"how": "assumed"
+"how": "manual"
 },
 "m_bCachedData": {
 "bg": 9776,
 "pt": 9776,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -14206,28 +14206,28 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "text": {
 "bg": 12,
 "pt": null,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -14240,42 +14240,42 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "timestamp": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "windowID": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "text": {
 "bg": 12,
 "pt": null,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "start": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "length": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -14288,182 +14288,182 @@
 "pt": 0,
 "size": 4,
 "type": "SDL_EventType",
-"how": "assumed"
+"how": "manual"
 },
 "common": {
 "bg": 0,
 "pt": null,
 "size": 8,
 "type": "SDL_CommonEvent",
-"how": "assumed"
+"how": "manual"
 },
 "window": {
 "bg": 0,
 "pt": null,
 "size": 24,
 "type": "SDL_WindowEvent",
-"how": "assumed"
+"how": "manual"
 },
 "key": {
 "bg": 0,
 "pt": null,
 "size": 32,
 "type": "SDL_KeyboardEvent",
-"how": "assumed"
+"how": "manual"
 },
 "edit": {
 "bg": 0,
 "pt": null,
 "size": 52,
 "type": "SDL_TextEditingEvent",
-"how": "assumed"
+"how": "manual"
 },
 "text": {
 "bg": 0,
 "pt": null,
 "size": 44,
 "type": "SDL_TextInputEvent",
-"how": "assumed"
+"how": "manual"
 },
 "motion": {
 "bg": 0,
 "pt": null,
 "size": 36,
 "type": "SDL_MouseMotionEvent",
-"how": "assumed"
+"how": "manual"
 },
 "button": {
 "bg": 0,
 "pt": null,
 "size": 28,
 "type": "SDL_MouseButtonEvent",
-"how": "assumed"
+"how": "manual"
 },
 "wheel": {
 "bg": 0,
 "pt": null,
 "size": 28,
 "type": "SDL_MouseWheelEvent",
-"how": "assumed"
+"how": "manual"
 },
 "jaxis": {
 "bg": 0,
 "pt": null,
 "size": 20,
 "type": "SDL_JoyAxisEvent",
-"how": "assumed"
+"how": "manual"
 },
 "jball": {
 "bg": 0,
 "pt": null,
 "size": 20,
 "type": "SDL_JoyBallEvent",
-"how": "assumed"
+"how": "manual"
 },
 "jhat": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_JoyHatEvent",
-"how": "assumed"
+"how": "manual"
 },
 "jbutton": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_JoyButtonEvent",
-"how": "assumed"
+"how": "manual"
 },
 "jdevice": {
 "bg": 0,
 "pt": null,
 "size": 12,
 "type": "SDL_JoyDeviceEvent",
-"how": "assumed"
+"how": "manual"
 },
 "caxis": {
 "bg": 0,
 "pt": null,
 "size": 20,
 "type": "SDL_ControllerAxisEvent",
-"how": "assumed"
+"how": "manual"
 },
 "cbutton": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_ControllerButtonEvent",
-"how": "assumed"
+"how": "manual"
 },
 "cdevice": {
 "bg": 0,
 "pt": null,
 "size": 12,
 "type": "SDL_ControllerDeviceEvent",
-"how": "assumed"
+"how": "manual"
 },
 "adevice": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_AudioDeviceEvent",
-"how": "assumed"
+"how": "manual"
 },
 "quit": {
 "bg": 0,
 "pt": null,
 "size": 8,
 "type": "SDL_QuitEvent",
-"how": "assumed"
+"how": "manual"
 },
 "user": {
 "bg": 0,
 "pt": null,
 "size": 32,
 "type": "SDL_UserEvent",
-"how": "assumed"
+"how": "manual"
 },
 "syswm": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_SysWMEvent",
-"how": "assumed"
+"how": "manual"
 },
 "tfinger": {
 "bg": 0,
 "pt": null,
 "size": 48,
 "type": "SDL_TouchFingerEvent",
-"how": "assumed"
+"how": "manual"
 },
 "mgesture": {
 "bg": 0,
 "pt": null,
 "size": 40,
 "type": "SDL_MultiGestureEvent",
-"how": "assumed"
+"how": "manual"
 },
 "dgesture": {
 "bg": 0,
 "pt": null,
 "size": 40,
 "type": "SDL_DollarGestureEvent",
-"how": "assumed"
+"how": "manual"
 },
 "drop": {
 "bg": 0,
 "pt": null,
 "size": 16,
 "type": "SDL_DropEvent",
-"how": "assumed"
+"how": "manual"
 },
 "padding": {
 "bg": 0,
 "pt": null,
 "size": 56,
 "type": "Array<unsigned __int8,56>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -16880,14 +16880,14 @@
 "pt": 0,
 "size": 8,
 "type": "CString",
-"how": "assumed"
+"how": "manual"
 },
 "cSound": {
 "bg": 8,
 "pt": 8,
 "size": 32,
 "type": "CSound",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20142,126 +20142,126 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_lastSaved": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_flags": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaEdgeNorth": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_flagsEdgeNorth": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaEdgeEast": {
 "bg": 28,
 "pt": 28,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_flagsEdgeEast": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaEdgeSouth": {
 "bg": 40,
 "pt": 40,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_flagsEdgeSouth": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaEdgeWest": {
 "bg": 52,
 "pt": 52,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_flagsEdgeWest": {
 "bg": 60,
 "pt": 60,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaType": {
 "bg": 64,
 "pt": 64,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_rainProbability": {
 "bg": 66,
 "pt": 66,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_snowProbability": {
 "bg": 68,
 "pt": 68,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_fogProbability": {
 "bg": 70,
 "pt": 70,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_lightningProbability": {
 "bg": 72,
 "pt": 72,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_waterAlpha": {
 "bg": 74,
 "pt": 74,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_unused": {
 "bg": 75,
 "pt": 75,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20274,77 +20274,77 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_effectListOffset": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_effectListCount": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_projectileID": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nDelayCount": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRepetitionCount": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 20,
 "pt": 20,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 22,
 "pt": 22,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posZ": {
 "bg": 24,
 "pt": 24,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_targetType": {
 "bg": 26,
 "pt": 26,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_portraitNum": {
 "bg": 27,
 "pt": 27,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20357,105 +20357,105 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_timeOfDayVisible": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_resref": {
 "bg": 40,
 "pt": 40,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nSequence": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 52,
 "pt": 52,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_height": {
 "bg": 56,
 "pt": 56,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_translucency": {
 "bg": 58,
 "pt": 58,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_startFrameRange": {
 "bg": 60,
 "pt": 60,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_probability": {
 "bg": 62,
 "pt": 62,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_period": {
 "bg": 63,
 "pt": 63,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_paletteResref": {
 "bg": 64,
 "pt": 64,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_sizeX": {
 "bg": 72,
 "pt": 72,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_sizeY": {
 "bg": 74,
 "pt": 74,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20618,21 +20618,21 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "evidence"
+"how": "manual"
 },
 "m_spellLevel": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "m_magicType": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -20665,49 +20665,49 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nTilesDown": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "rrTileSet": {
 "bg": 4,
 "pt": 4,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "nNumUniqueTiles": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nLayerFlags": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToTileData": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nOffsetToTileList": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20720,70 +20720,70 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 4,
 "pt": 4,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 6,
 "pt": 6,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nWidth": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nHeight": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nType": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "nControls": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "refMosaic": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "nFirstControl": {
 "bg": 24,
 "pt": 24,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "wFlags": {
 "bg": 26,
 "pt": 26,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -20796,126 +20796,126 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "quickSlotType": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "quickSlotIcon": {
 "bg": 4,
 "pt": 4,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "actionType": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "actionCount": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "range": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "minCasterLevel": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "speedFactor": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "timesPerDay": {
 "bg": 20,
 "pt": 20,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "damageDice": {
 "bg": 22,
 "pt": 22,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "damageDiceCount": {
 "bg": 24,
 "pt": 24,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "damageDiceBonus": {
 "bg": 26,
 "pt": 26,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "damageType": {
 "bg": 28,
 "pt": 28,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "effectCount": {
 "bg": 30,
 "pt": 30,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "startingEffect": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "maxUsageCount": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "usageFlags": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "missileType": {
 "bg": 38,
 "pt": 38,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -21200,105 +21200,105 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "targetType": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "spellLevel": {
 "bg": 3,
 "pt": 3,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "effectAmount": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "dwFlags": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "durationType": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "duration": {
 "bg": 14,
 "pt": null,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "probabilityUpper": {
 "bg": 18,
 "pt": 18,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "probabilityLower": {
 "bg": 19,
 "pt": 19,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "res": {
 "bg": 20,
 "pt": 20,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "numDice": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "diceSize": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "savingThrow": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "saveMod": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "special": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -21311,175 +21311,175 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "quickSlotType": {
 "bg": 2,
 "pt": 2,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "largeDamageDice": {
 "bg": 3,
 "pt": 3,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "quickSlotIcon": {
 "bg": 4,
 "pt": 4,
 "size": 8,
 "type": "CResRef",
-"how": "interp"
+"how": "manual"
 },
 "actionType": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "actionCount": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "range": {
 "bg": 14,
 "pt": 14,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "launcherType": {
 "bg": 16,
 "pt": 16,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence"
+"how": "manual"
 },
 "largeDamageDiceCount": {
 "bg": 17,
 "pt": 17,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "speedFactor": {
 "bg": 18,
 "pt": 18,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "largeDamageDiceBonus": {
 "bg": 19,
 "pt": 19,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "thac0Bonus": {
 "bg": 20,
 "pt": 20,
 "size": 2,
 "type": "__int16",
-"how": "evidence"
+"how": "manual"
 },
 "damageDice": {
 "bg": 22,
 "pt": 22,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "school": {
 "bg": 23,
 "pt": 23,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence"
+"how": "manual"
 },
 "damageDiceCount": {
 "bg": 24,
 "pt": 24,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp"
+"how": "manual"
 },
 "secondaryType": {
 "bg": 25,
 "pt": 25,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence"
+"how": "manual"
 },
 "damageDiceBonus": {
 "bg": 26,
 "pt": 26,
 "size": 2,
 "type": "__int16",
-"how": "interp"
+"how": "manual"
 },
 "damageType": {
 "bg": 28,
 "pt": 28,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "effectCount": {
 "bg": 30,
 "pt": 30,
 "size": 2,
 "type": "unsigned __int16",
-"how": "interp"
+"how": "manual"
 },
 "startingEffect": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "interp"
+"how": "manual"
 },
 "maxUsageCount": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "usageFlags": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "evidence"
+"how": "manual"
 },
 "abilityFlags": {
 "bg": 38,
 "pt": null,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "missileType": {
 "bg": 42,
 "pt": 42,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "manual"
 },
 "attackProbability": {
 "bg": 44,
 "pt": 44,
 "size": 12,
 "type": "Array<unsigned __int16,6>",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -21757,77 +21757,77 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_entryPoint": {
 "bg": 4,
 "pt": null,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_nDistanceScale": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwLinkFlags": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRandomEncounterArea0": {
 "bg": 44,
 "pt": 44,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRandomEncounterArea1": {
 "bg": 52,
 "pt": 52,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRandomEncounterArea2": {
 "bg": 60,
 "pt": 60,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRandomEncounterArea3": {
 "bg": 68,
 "pt": 68,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRandomEncounterArea4": {
 "bg": 76,
 "pt": 76,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nEncounterProbability": {
 "bg": 84,
 "pt": 84,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nUnused": {
 "bg": 88,
 "pt": 88,
 "size": 128,
 "type": "Array<unsigned int,32>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -21840,98 +21840,98 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "extrap"
+"how": "manual"
 },
 "m_nWidth": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nHeight": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nMapID": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_strTitle": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nStartCenteredOnX": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nStartCenteredOnY": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nAreas": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence"
+"how": "manual"
 },
 "m_nAreasOffset": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nOffsetToLinks": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nLinks": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_resAreaIcons": {
 "bg": 48,
 "pt": 48,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 56,
 "pt": 56,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "nUnused": {
 "bg": 60,
 "pt": 60,
 "size": 124,
 "type": "Array<unsigned int,31>",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -21944,133 +21944,133 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_resOriginalArea": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_strName": {
 "bg": 16,
 "pt": 16,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_sequence": {
 "bg": 52,
 "pt": 52,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_mapLocationX": {
 "bg": 56,
 "pt": 56,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_mapLocationY": {
 "bg": 60,
 "pt": 60,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strLabel": {
 "bg": 64,
 "pt": 64,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strAreaName": {
 "bg": 68,
 "pt": 68,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_resAreaLoadMosaic": {
 "bg": 72,
 "pt": 72,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nNorthEdgeStartingLink": {
 "bg": 80,
 "pt": 80,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nNorthEdgeCount": {
 "bg": 84,
 "pt": 84,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nWestEdgeStartingLink": {
 "bg": 88,
 "pt": 88,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nWestEdgeCount": {
 "bg": 92,
 "pt": 92,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nSouthEdgeStartingLink": {
 "bg": 96,
 "pt": 96,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nSouthEdgeCount": {
 "bg": 100,
 "pt": 100,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nEastEdgeStartingLink": {
 "bg": 104,
 "pt": 104,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nEastEdgeCount": {
 "bg": 108,
 "pt": 108,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nUnused": {
 "bg": 112,
 "pt": 112,
 "size": 128,
 "type": "Array<unsigned int,32>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -22463,313 +22463,313 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_cost": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
 "CStoreFileItem": {
 "bg_size": 28,
-"pt_size": 28,
+"pt_size": 88,
 "items": {
 "m_itemId": {
 "bg": 0,
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_wear": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_usageCount": {
 "bg": 10,
 "pt": 10,
 "size": 6,
 "type": "Array<unsigned __int16,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_dynamicFlags": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nInStock": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nStoreFlags": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
 "CStoreFileHeader": {
 "bg_size": 148,
-"pt_size": 152,
+"pt_size": 148,
 "items": {
 "m_nStoreType": {
 "bg": 0,
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strName": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nStoreFlags": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nBuyMarkUp": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nSellMarkDown": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nAdditionalMarkDown": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nStealDifficulty": {
 "bg": 24,
 "pt": 24,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nMaxItems": {
 "bg": 26,
 "pt": 26,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_script": {
 "bg": 28,
 "pt": 28,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nbuyTypesOffset": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nbuyTypesCount": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nInventoryOffset": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nInventoryCount": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nLore": {
 "bg": 52,
 "pt": 52,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nIdentifyCost": {
 "bg": 56,
 "pt": 56,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_resRumor": {
 "bg": 60,
 "pt": 60,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_drinkOffset": {
 "bg": 68,
 "pt": 68,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_drinkCount": {
 "bg": 72,
 "pt": 72,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_resDonation": {
 "bg": 76,
 "pt": 76,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nInnFlags": {
 "bg": 84,
 "pt": 84,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRoomCostPeasant": {
 "bg": 88,
 "pt": 88,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRoomCostMerchant": {
 "bg": 92,
 "pt": 92,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRoomCostNoble": {
 "bg": 96,
 "pt": 96,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRoomCostRoyal": {
 "bg": 100,
 "pt": 100,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_spellOffset": {
 "bg": 104,
 "pt": 104,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_spellCount": {
 "bg": 108,
 "pt": 108,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rouletMaxBet": {
 "bg": 112,
 "pt": 112,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_crapsMaxBet": {
 "bg": 116,
 "pt": 116,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_wheelMaxBet": {
 "bg": 120,
 "pt": 120,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rouletWinChance": {
 "bg": 124,
 "pt": 124,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_crapsWinChance": {
 "bg": 128,
 "pt": 128,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_wheelWinChance": {
 "bg": 132,
 "pt": 132,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_rouletWinAmount": {
 "bg": 136,
 "pt": 136,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_crapsWinAmount": {
 "bg": 140,
 "pt": 140,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_wheelWinAmount": {
 "bg": 144,
 "pt": 144,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -22782,28 +22782,28 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_strName": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nCost": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRumorChance": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -25309,21 +25309,21 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_xPos": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_yPos": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -25336,259 +25336,259 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_portraitId": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_creatureOffset": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_creatureSize": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_creatureResRef": {
 "bg": 12,
 "pt": 12,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_creatureFacing": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_areaName": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posViewX": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posViewY": {
 "bg": 38,
 "pt": 38,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nModalState": {
 "bg": 40,
 "pt": 40,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nHappiness": {
 "bg": 42,
 "pt": 42,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nNumberOfTimesInteractedWith": {
 "bg": 44,
 "pt": 44,
 "size": 96,
 "type": "Array<int,24>",
-"how": "assumed"
+"how": "manual"
 },
 "m_quickWeaponsItemNum": {
 "bg": 140,
 "pt": 140,
 "size": 8,
 "type": "Array<__int16,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_quickWeaponsAbilityNum": {
 "bg": 148,
 "pt": 148,
 "size": 8,
 "type": "Array<__int16,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_quickSpellsSpellId": {
 "bg": 156,
 "pt": 156,
 "size": 24,
 "type": "Array<CResRef,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_quickItemsItemNum": {
 "bg": 180,
 "pt": 180,
 "size": 6,
 "type": "Array<__int16,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_quickItemsAbilityNum": {
 "bg": 186,
 "pt": 186,
 "size": 6,
 "type": "Array<__int16,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_name": {
 "bg": 192,
 "pt": 192,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_numberTimesTalkedTo": {
 "bg": 224,
 "pt": 224,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strStrongestKillName": {
 "bg": 228,
 "pt": 228,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nStrongestKillXPValue": {
 "bg": 232,
 "pt": 232,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPreviousTimeWithParty": {
 "bg": 236,
 "pt": 236,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nJoinPartyTime": {
 "bg": 240,
 "pt": 240,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_bWithParty": {
 "bg": 244,
 "pt": 244,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_pad1": {
 "bg": 245,
 "pt": 245,
 "size": 2,
 "type": "Array<__int8,2>",
-"how": "assumed"
+"how": "manual"
 },
 "m_cFirstResSlot": {
 "bg": 247,
 "pt": 247,
 "size": 1,
 "type": "char",
-"how": "assumed"
+"how": "manual"
 },
 "m_nChapterKillsXPValue": {
 "bg": 248,
 "pt": 248,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nChapterKillsNumber": {
 "bg": 252,
 "pt": 252,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nGameKillsXPValue": {
 "bg": 256,
 "pt": 256,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nGameKillsNumber": {
 "bg": 260,
 "pt": 260,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_lSpellStatsName": {
 "bg": 264,
 "pt": 264,
 "size": 32,
 "type": "Array<CResRef,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_lSpellStatsCount": {
 "bg": 296,
 "pt": 296,
 "size": 8,
 "type": "Array<__int16,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_lWeaponStatsName": {
 "bg": 304,
 "pt": 304,
 "size": 32,
 "type": "Array<CResRef,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_lWeaponStatsCount": {
 "bg": 336,
 "pt": 336,
 "size": 8,
 "type": "Array<__int16,4>",
-"how": "assumed"
+"how": "manual"
 },
 "m_secondarySounds": {
 "bg": 344,
 "pt": 344,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -25698,322 +25698,322 @@
 },
 "CRuleTables": {
 "bg_size": 16288,
-"pt_size": 17088,
+"pt_size": 17424,
 "items": {
 "m_tReactionModCharisma": {
 "bg": 0,
 "pt": 744,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tReactionModReputation": {
 "bg": 56,
 "pt": 800,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "manual"
 },
 "m_tReputationMod": {
 "bg": 112,
 "pt": 856,
 "size": 56,
 "type": "C2DArray",
-"how": "extrap"
+"how": "manual"
 },
 "m_lNoDecodeList": {
 "bg": 168,
 "pt": 912,
 "size": 112,
 "type": "CAIIdList",
-"how": "extrap"
+"how": "interp"
 },
 "m_tProficiencySlots": {
 "bg": 280,
 "pt": 1024,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tProficiencySlotsMax": {
 "bg": 336,
 "pt": 1080,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tSkillPointsRace": {
 "bg": 392,
 "pt": 1136,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSkillPointsDex": {
 "bg": 448,
 "pt": 1192,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSkillPointsBard": {
 "bg": 504,
 "pt": 1248,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSkillPointsRanger": {
 "bg": 560,
 "pt": 1304,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSkillPointsShaman": {
 "bg": 616,
 "pt": 1360,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityRaceReq": {
 "bg": 672,
 "pt": 1416,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityRaceAdj": {
 "bg": 728,
 "pt": 1472,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityClassReq": {
 "bg": 784,
 "pt": 1528,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityClassMod": {
 "bg": 840,
 "pt": 1584,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityDualClassSrcReq": {
 "bg": 896,
 "pt": 1640,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAbilityDualClassDstReq": {
 "bg": 952,
 "pt": 1696,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowPriest": {
 "bg": 1008,
 "pt": 1752,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowWarrior": {
 "bg": 1064,
 "pt": 1808,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowWizard": {
 "bg": 1120,
 "pt": 1864,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowRogue": {
 "bg": 1176,
 "pt": 1920,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowDwarfHalfling": {
 "bg": 1232,
 "pt": 1976,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowGnome": {
 "bg": 1288,
 "pt": 2032,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSavingThrowMonk": {
 "bg": 1344,
 "pt": 2088,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassHitPointsTables": {
 "bg": 1400,
 "pt": 2144,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tHitPointsCONBonus": {
 "bg": 1456,
 "pt": 2200,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tStartingGold": {
 "bg": 1512,
 "pt": 2256,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tTHAC0": {
 "bg": 1568,
 "pt": 2312,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsPriest": {
 "bg": 1624,
 "pt": 2368,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsPriestPaladin": {
 "bg": 1680,
 "pt": 2424,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsPriestRanger": {
 "bg": 1736,
 "pt": 2480,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsMage": {
 "bg": 1792,
 "pt": 2536,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsMageBard": {
 "bg": 1848,
 "pt": 2592,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsMageSorcerer": {
 "bg": 1904,
 "pt": 2648,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsMageDragonDisciple": {
 "bg": 1960,
 "pt": 2704,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsShaman": {
 "bg": 2016,
 "pt": 2760,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsPriestWISBonus": {
 "bg": 2072,
 "pt": 2816,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMaxSpellsPriestDruid": {
 "bg": 2128,
 "pt": 2872,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tKnownSpellsSorcerer": {
 "bg": 2184,
 "pt": 2928,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tKnownSpellsShaman": {
 "bg": 2240,
 "pt": 2984,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tBackstabMultiplier": {
 "bg": 2296,
 "pt": 3040,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSneakAttack": {
 "bg": 2352,
 "pt": 3096,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tCripplingStrike": {
 "bg": 2408,
 "pt": 3152,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tExperienceLevels": {
 "bg": 2464,
 "pt": 3208,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLayOnHandsAmount": {
 "bg": 2520,
 "pt": 3264,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_lInstantActions": {
 "bg": 2576,
@@ -26034,126 +26034,126 @@
 "pt": 3544,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMonsterSummon2": {
 "bg": 2856,
 "pt": 3600,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMonsterSummon3": {
 "bg": 2912,
 "pt": 3656,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAnimalSummon1": {
 "bg": 2968,
 "pt": 3712,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tAnimalSummon2": {
 "bg": 3024,
 "pt": 3768,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tStrengthMod": {
 "bg": 3080,
 "pt": 3824,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tStrengthModExtra": {
 "bg": 3136,
 "pt": 3880,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tIntoxicationMod": {
 "bg": 3192,
 "pt": 3936,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tFatigueMod": {
 "bg": 3248,
 "pt": 3992,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tEffectText": {
 "bg": 3304,
 "pt": 4048,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tPlayerInteraction": {
 "bg": 3360,
 "pt": 4104,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tNumSpells": {
 "bg": 3416,
 "pt": 4160,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tToolTips": {
 "bg": 3472,
 "pt": 4216,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tStartArea": {
 "bg": 3528,
 "pt": 4272,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tStartPos": {
 "bg": 3584,
 "pt": 4328,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSparkleColors": {
 "bg": 3640,
 "pt": 4384,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMonths": {
 "bg": 3696,
 "pt": 4440,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tYears": {
 "bg": 3752,
 "pt": 4496,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tDexterityMod": {
 "bg": 3808,
@@ -26167,189 +26167,189 @@
 "pt": 4608,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tCharacterSounds": {
 "bg": 3920,
 "pt": 4664,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomEquipment": {
 "bg": 3976,
 "pt": 4720,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomTreasure": {
 "bg": 4032,
 "pt": 4776,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomTreasureIWD": {
 "bg": 4088,
 "pt": 4832,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tRandomMagic": {
 "bg": 4144,
 "pt": 4888,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomScroll": {
 "bg": 4200,
 "pt": 4944,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomWeapon": {
 "bg": 4256,
 "pt": 5000,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tInteractionDialog": {
 "bg": 4312,
 "pt": 5056,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tIntelligenceMod": {
 "bg": 4368,
 "pt": 5112,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tDonateRumor": {
 "bg": 4424,
 "pt": 5168,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tAreaLinkageCaching": {
 "bg": 4480,
-"pt": 5224,
-"size": 56,
-"type": "C2DArray",
-"how": "adjacent"
-},
-"m_tAreaLinkageCachingSingle": {
-"bg": 4536,
 "pt": 5280,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tCacheValidation": {
-"bg": 4592,
+"m_tAreaLinkageCachingSingle": {
+"bg": 4536,
 "pt": 5336,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tScriptDescription": {
-"bg": 4648,
+"m_tCacheValidation": {
+"bg": 4592,
 "pt": 5392,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tCharacterStateDescription": {
-"bg": 4704,
+"m_tScriptDescription": {
+"bg": 4648,
 "pt": 5448,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tMasterArea": {
-"bg": 4760,
+"m_tCharacterStateDescription": {
+"bg": 4704,
 "pt": 5504,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tMovieDescription": {
-"bg": 4816,
+"m_tMasterArea": {
+"bg": 4760,
 "pt": 5560,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tSpellDescription": {
-"bg": 4872,
+"m_tMovieDescription": {
+"bg": 4816,
 "pt": 5616,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tBountyChance": {
-"bg": 4928,
+"m_tSpellDescription": {
+"bg": 4872,
 "pt": 5672,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tNPCLevel": {
-"bg": 4984,
+"m_tBountyChance": {
+"bg": 4928,
 "pt": 5728,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tNPCLevel25": {
-"bg": 5040,
+"m_tNPCLevel": {
+"bg": 4984,
 "pt": 5784,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tDeathSounds": {
-"bg": 5096,
+"m_tNPCLevel25": {
+"bg": 5040,
 "pt": 5840,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
-"m_tAlignment": {
-"bg": 5152,
+"m_tDeathSounds": {
+"bg": 5096,
 "pt": 5896,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
+},
+"m_tAlignment": {
+"bg": 5152,
+"pt": 5952,
+"size": 56,
+"type": "C2DArray",
+"how": "manual"
 },
 "m_tReputationStoreMod": {
 "bg": 5208,
 "pt": 6008,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tReputationStart": {
 "bg": 5264,
 "pt": 6064,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tXPCap": {
 "bg": 5320,
 "pt": 6120,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tWeaponSpecialization": {
 "bg": 5376,
@@ -26363,77 +26363,77 @@
 "pt": 6232,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLore": {
 "bg": 5488,
 "pt": 6288,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLoreBonus": {
 "bg": 5544,
 "pt": 6344,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tCharismaStoreMod": {
 "bg": 5600,
 "pt": 6400,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tRaiseDeadCost": {
 "bg": 5656,
 "pt": 6456,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tHappiness": {
 "bg": 5712,
 "pt": 6512,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tReputationDescription": {
 "bg": 5768,
 "pt": 6568,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tPortraitReplacement": {
 "bg": 5824,
 "pt": 6624,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tIntoxication": {
 "bg": 5880,
 "pt": 6680,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tCustomSound": {
 "bg": 5936,
 "pt": 6736,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tExclusiveItems": {
 "bg": 5992,
 "pt": 6792,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_lChaseActions": {
 "bg": 6048,
@@ -26461,427 +26461,427 @@
 "pt": 7184,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tContingencyTargets": {
 "bg": 6440,
 "pt": 7240,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tAbilitiesStart": {
 "bg": 6496,
 "pt": 7296,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tWeaponProficiencies": {
 "bg": 6552,
 "pt": 7352,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tClassAbilitiesFighterTrue": {
 "bg": 6608,
 "pt": 7408,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesFighterBerserker": {
 "bg": 6664,
 "pt": 7464,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesFighterWizardslayer": {
 "bg": 6720,
 "pt": 7520,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesFighterKensai": {
 "bg": 6776,
 "pt": 7576,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesPaladinTrue": {
 "bg": 6832,
 "pt": 7632,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesPaladinCavalier": {
 "bg": 6888,
 "pt": 7688,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesPaladinInquisitor": {
 "bg": 6944,
 "pt": 7744,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesPaladinUndeadhunter": {
 "bg": 7000,
 "pt": 7800,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesPaladinFallen": {
 "bg": 7056,
 "pt": 7856,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesRangerTrue": {
 "bg": 7112,
 "pt": 7912,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesRangerFeralan": {
 "bg": 7168,
 "pt": 7968,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesRangerStalker": {
 "bg": 7224,
 "pt": 8024,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesRangerBeastmaster": {
 "bg": 7280,
 "pt": 8080,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesRangerFallen": {
 "bg": 7336,
 "pt": 8136,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesThiefTrue": {
 "bg": 7392,
 "pt": 8192,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesThiefAssassin": {
 "bg": 7448,
 "pt": 8248,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesThiefBountyhunter": {
 "bg": 7504,
 "pt": 8304,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesThiefSwashbuckler": {
 "bg": 7560,
 "pt": 8360,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesBardTrue": {
 "bg": 7616,
 "pt": 8416,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesBardBlade": {
 "bg": 7672,
 "pt": 8472,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesBardJester": {
 "bg": 7728,
 "pt": 8528,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesBardSkald": {
 "bg": 7784,
 "pt": 8584,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesDruidTrue": {
 "bg": 7840,
 "pt": 8640,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesShamanTrue": {
 "bg": 7896,
 "pt": 8696,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesDruidTotemicdruid": {
 "bg": 7952,
 "pt": 8752,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesDruidShapeshifter": {
 "bg": 8008,
 "pt": 8808,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesDruidBeastfriend": {
 "bg": 8064,
 "pt": 8864,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesClericTrue": {
 "bg": 8120,
 "pt": 8920,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesClericTalos": {
 "bg": 8176,
 "pt": 8976,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesClericHelm": {
 "bg": 8232,
 "pt": 9032,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesClericLathander": {
 "bg": 8288,
 "pt": 9088,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageTrue": {
 "bg": 8344,
 "pt": 9144,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageAbjurer": {
 "bg": 8400,
 "pt": 9200,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageNecromancer": {
 "bg": 8456,
 "pt": 9256,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageTransmuter": {
 "bg": 8512,
 "pt": 9312,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageDiviner": {
 "bg": 8568,
 "pt": 9368,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageConjurer": {
 "bg": 8624,
 "pt": 9424,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageInvoker": {
 "bg": 8680,
 "pt": 9480,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageIllusionist": {
 "bg": 8736,
 "pt": 9536,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMageEnchanter": {
 "bg": 8792,
 "pt": 9592,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMonkTrue": {
 "bg": 8848,
 "pt": 9648,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMonkDarkMoon": {
 "bg": 8904,
 "pt": 9704,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesMonkSunSoul": {
 "bg": 8960,
 "pt": 9760,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbilitiesBarbarianTrue": {
 "bg": 9016,
 "pt": 9816,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSpellAutmaticPicker": {
 "bg": 9072,
 "pt": 9872,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tSpellAutmaticPickerShaman": {
 "bg": 9128,
 "pt": 9928,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tDualClassAllowed": {
 "bg": 9184,
 "pt": 9984,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRandomColors": {
 "bg": 9240,
 "pt": 10040,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSpawnGroup": {
 "bg": 9296,
 "pt": 10096,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tItemUseAnimation": {
 "bg": 9352,
 "pt": 10152,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRangerHatedRace": {
 "bg": 9408,
 "pt": 10208,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tXPBonus": {
 "bg": 9464,
 "pt": 10264,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tCleanAir": {
 "bg": 9520,
 "pt": 10320,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSplashScreens": {
 "bg": 9576,
 "pt": 10376,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLevelModWildMage": {
 "bg": 9632,
 "pt": 10432,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tKitTable": {
 "bg": 9688,
 "pt": 10488,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tKitList": {
 "bg": 9744,
 "pt": 10544,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_apKitList": {
 "bg": 9800,
@@ -26895,336 +26895,336 @@
 "pt": 12648,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSoundEnvironmentEnvirons": {
 "bg": 11904,
 "pt": 12704,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tItemDialog": {
 "bg": 11960,
 "pt": 12760,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLoadingHints": {
 "bg": 12016,
 "pt": 12816,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSchoolMessage": {
 "bg": 12072,
 "pt": 12872,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSecTypeMessage": {
 "bg": 12128,
 "pt": 12928,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tContingencyExceptions": {
 "bg": 12184,
 "pt": 12984,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassAbbreviations": {
 "bg": 12240,
 "pt": 13040,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tNumLevelUpAbilities": {
 "bg": 12296,
 "pt": 13096,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tXPList": {
 "bg": 12352,
 "pt": 13152,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tTracking": {
 "bg": 12408,
 "pt": 13208,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMovieSoundOverride": {
 "bg": 12464,
 "pt": 13264,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_t25StartEquipment": {
 "bg": 12520,
 "pt": 13320,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tWish": {
 "bg": 12576,
 "pt": 13376,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tEntries": {
 "bg": 12632,
 "pt": 13432,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tLoadingHints25": {
 "bg": 12688,
 "pt": 13488,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tStartingWeapon": {
 "bg": 12744,
 "pt": 13544,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tFamiliars": {
 "bg": 12800,
 "pt": 13600,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tThiefSkills": {
 "bg": 12856,
 "pt": 13656,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tThiefScaling": {
 "bg": 12912,
 "pt": 13712,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassTHAC0": {
 "bg": 12968,
 "pt": 13768,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassInnateSkills": {
 "bg": 13024,
 "pt": 13824,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tTBPStartparty": {
 "bg": 13080,
 "pt": 13880,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tExtraAnimations": {
 "bg": 13136,
 "pt": 13936,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tExtraAnimationSpeeds": {
 "bg": 13192,
 "pt": 13992,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tWildMagic": {
 "bg": 13248,
 "pt": 14048,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tItemType": {
 "bg": 13304,
 "pt": 14104,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRaceTHAC0Bonus": {
 "bg": 13360,
 "pt": 14160,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassColours": {
 "bg": 13416,
 "pt": 14216,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRaceColours": {
 "bg": 13472,
 "pt": 14272,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSlotSteal": {
 "bg": 13528,
 "pt": 14328,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tNumWeaponSlots": {
 "bg": 13584,
 "pt": 14384,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tItemUse": {
 "bg": 13640,
 "pt": 14440,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tRaceText": {
 "bg": 13696,
 "pt": 14496,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tTokenText": {
 "bg": 13752,
 "pt": 14552,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassText": {
 "bg": 13808,
 "pt": 14608,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tSetSnareLimit": {
 "bg": 13864,
 "pt": 14664,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSummonLimit": {
 "bg": 13920,
 "pt": 14720,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tWeaponStyleBonus": {
 "bg": 13976,
 "pt": 14776,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tBanterTimings": {
 "bg": 14032,
 "pt": 14832,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tClassRaceRestrictions": {
 "bg": 14088,
 "pt": 14888,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMageRaceRestrictions": {
 "bg": 14144,
 "pt": 14944,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tClassSpecialBonuses": {
 "bg": 14200,
 "pt": 15000,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tMonkFists": {
 "bg": 14256,
 "pt": 15056,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tSpellsToHide": {
 "bg": 14312,
 "pt": 15112,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSpellProtections": {
 "bg": 14368,
 "pt": 15168,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tSpellAbilities": {
 "bg": 14424,
 "pt": 15224,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_tSummoningTables": {
 "bg": 14480,
 "pt": 15280,
 "size": 56,
 "type": "C2DArray",
-"how": "interp"
+"how": "manual"
 },
 "m_apSummoningList": {
 "bg": 14536,
@@ -27238,165 +27238,165 @@
 "pt": 15344,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tItemSpec": {
 "bg": 14600,
 "pt": 15400,
 "size": 56,
 "type": "C2DArray",
-"how": "evidence"
+"how": "manual"
 },
 "m_tRaceFeatures": {
 "bg": 14656,
 "pt": 15456,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tAreaCreatureNodes": {
 "bg": 14712,
 "pt": 15512,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tFogAreaSettings": {
 "bg": 14768,
 "pt": 15568,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tFogPointSettings": {
 "bg": 14824,
 "pt": 15624,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_tCampaign": {
 "bg": 14880,
-"pt": 15680,
-"size": 56,
-"type": "C2DArray",
-"how": "adjacent"
-},
-"m_tPartyAI": {
-"bg": 14936,
-"pt": 15736,
-"size": 56,
-"type": "C2DArray",
-"how": "adjacent"
-},
-"m_tContainerIcons": {
-"bg": 14992,
-"pt": 15792,
-"size": 56,
-"type": "C2DArray",
-"how": "adjacent"
-},
-"m_tFallen": {
-"bg": 15048,
 "pt": 15848,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
+},
+"m_tPartyAI": {
+"bg": 14936,
+"pt": 15904,
+"size": 56,
+"type": "C2DArray",
+"how": "manual"
+},
+"m_tContainerIcons": {
+"bg": 14992,
+"pt": 15960,
+"size": 56,
+"type": "C2DArray",
+"how": "manual"
+},
+"m_tFallen": {
+"bg": 15048,
+"pt": 16016,
+"size": 56,
+"type": "C2DArray",
+"how": "manual"
 },
 "m_tAchievements": {
 "bg": 15104,
-"pt": 15904,
+"pt": 16072,
 "size": 56,
 "type": "C2DArray",
 "how": "adjacent"
 },
 "m_tStatValues": {
 "bg": 15160,
-"pt": 15960,
+"pt": 16296,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_lStats": {
 "bg": 15216,
-"pt": 16016,
+"pt": 16352,
 "size": 112,
 "type": "CAIIdList",
-"how": "adjacent"
+"how": "interp"
 },
 "m_tSaveName": {
 "bg": 15328,
-"pt": 16128,
+"pt": 16464,
 "size": 56,
 "type": "C2DArray",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bPPHostile": {
 "bg": 15384,
-"pt": 16184,
+"pt": 16520,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bPPReport": {
 "bg": 15385,
-"pt": 16185,
+"pt": 16521,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bPPBreakInvis": {
 "bg": 15386,
-"pt": 16186,
+"pt": 16522,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_nConcentration": {
 "bg": 15388,
-"pt": 16188,
+"pt": 16524,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "interp"
 },
 "m_damageSounds": {
 "bg": 15392,
-"pt": 16192,
+"pt": 16528,
 "size": 128,
 "type": "Array<CResRef,16>",
-"how": "extrap"
+"how": "interp"
 },
 "m_damageEffectAnims": {
 "bg": 15520,
-"pt": 16320,
+"pt": 16656,
 "size": 128,
 "type": "Array<CResRef,16>",
-"how": "extrap"
+"how": "manual"
 },
 "m_damageSplashAnims": {
 "bg": 15648,
-"pt": 16448,
+"pt": 16784,
 "size": 128,
 "type": "Array<CResRef,16>",
 "how": "adjacent"
 },
 "m_damageStrings": {
 "bg": 15776,
-"pt": 16576,
+"pt": 16912,
 "size": 64,
 "type": "Array<unsigned int,16>",
 "how": "adjacent"
 },
 "m_speechOffsets": {
 "bg": 15840,
-"pt": 16640,
+"pt": 16976,
 "size": 224,
 "type": "Array<int,56>",
 "how": "adjacent"
 },
 "m_speechNums": {
 "bg": 16064,
-"pt": 16864,
+"pt": 17200,
 "size": 224,
 "type": "Array<int,56>",
 "how": "adjacent"
@@ -27412,147 +27412,147 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_speed": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireSoundRef": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_arrivalSoundRef": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_visualEffectRef": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_sparkleColor": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_lanceWidth": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_extFlags": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strRef": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_color": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_colorSpeed": {
 "bg": 48,
 "pt": 48,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_shake": {
 "bg": 50,
 "pt": 50,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_IDSValue1": {
 "bg": 52,
 "pt": 52,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_IDSType1": {
 "bg": 54,
 "pt": 54,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_IDSValue2": {
 "bg": 56,
 "pt": 56,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_IDSType2": {
 "bg": 58,
 "pt": 58,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_failureSpell": {
 "bg": 60,
 "pt": 60,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_successSpell": {
 "bg": 68,
 "pt": 68,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_maxBounces": {
 "bg": 76,
 "pt": 76,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "reservedSpace": {
 "bg": 80,
 "pt": 80,
 "size": 168,
 "type": "Array<unsigned int,42>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -27565,154 +27565,154 @@
 "pt": 248,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_vidCell": {
 "bg": 252,
 "pt": 252,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_shadowVidCell": {
 "bg": 260,
 "pt": 260,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_seqVidCell": {
 "bg": 268,
 "pt": 268,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_seqShadowVidCell": {
 "bg": 269,
 "pt": 269,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_glowIntensity": {
 "bg": 270,
 "pt": 270,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_glowSizeX": {
 "bg": 272,
 "pt": 272,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_glowSizeY": {
 "bg": 274,
 "pt": 274,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_paletteResRef": {
 "bg": 276,
 "pt": 276,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_colors": {
 "bg": 284,
 "pt": 284,
 "size": 7,
 "type": "Array<unsigned __int8,7>",
-"how": "assumed"
+"how": "manual"
 },
 "m_smokePeriod": {
 "bg": 291,
 "pt": 291,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_smokeColors": {
 "bg": 292,
 "pt": 292,
 "size": 7,
 "type": "Array<unsigned __int8,7>",
-"how": "assumed"
+"how": "manual"
 },
 "m_numDirections": {
 "bg": 299,
 "pt": 299,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_smokeAnimationCode": {
 "bg": 300,
 "pt": 300,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_cPuffEffect1": {
 "bg": 302,
 "pt": 302,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_cPuffEffect2": {
 "bg": 310,
 "pt": 310,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_cPuffEffect3": {
 "bg": 318,
 "pt": 318,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPuff1Spacing": {
 "bg": 326,
 "pt": 326,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPuff2Spacing": {
 "bg": 328,
 "pt": 328,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nPuff3Spacing": {
 "bg": 330,
 "pt": 330,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwPuffFlags": {
 "bg": 332,
 "pt": 332,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "reservedSpace": {
 "bg": 336,
 "pt": 336,
 "size": 168,
 "type": "Array<unsigned int,42>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -27725,168 +27725,168 @@
 "pt": 504,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_triggerRange": {
 "bg": 508,
 "pt": 508,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_explosionRange": {
 "bg": 510,
 "pt": 510,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_explodeSound": {
 "bg": 512,
 "pt": 512,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nDelay": {
 "bg": 520,
 "pt": 520,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_explodeId": {
 "bg": 522,
 "pt": 522,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_sparkleExplosionProjectile": {
 "bg": 524,
 "pt": 524,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRepetitionCount": {
 "bg": 526,
 "pt": 526,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireBallType": {
 "bg": 527,
 "pt": 527,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_ringColor": {
 "bg": 528,
 "pt": 528,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "padding1": {
 "bg": 529,
 "pt": 529,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_secondaryProjectile": {
 "bg": 530,
 "pt": 530,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_centerVVC": {
 "bg": 532,
 "pt": 532,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_coneSize": {
 "bg": 540,
 "pt": 540,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_startingAngle": {
 "bg": 542,
 "pt": 542,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireBallArea": {
 "bg": 544,
 "pt": 544,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireBallRing": {
 "bg": 552,
 "pt": 552,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireBallSound": {
 "bg": 560,
 "pt": 560,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_fireBallFlags": {
 "bg": 568,
 "pt": 568,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_targetDiceCount": {
 "bg": 572,
 "pt": 572,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_targetDiceSize": {
 "bg": 574,
 "pt": 574,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_granularity": {
 "bg": 576,
 "pt": 576,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_granDivider": {
 "bg": 578,
 "pt": 578,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "reservedSpace": {
 "bg": 580,
 "pt": 580,
 "size": 180,
 "type": "Array<unsigned int,45>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -34461,14 +34461,14 @@
 },
 "m_memorizedSpellsLevelPriest": {
 "bg": 2736,
-"pt": 2744,
+"pt": null,
 "size": 112,
 "type": "Array<CCreatureFileMemorizedSpellLevel,7>",
 "how": "evidence"
 },
 "m_disabledButtons": {
 "bg": 2848,
-"pt": null,
+"pt": 2824,
 "size": 64,
 "type": "Array<int,16>",
 "how": "adjacent"
@@ -34540,21 +34540,21 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_flags": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "structureAlignment1": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "Array<unsigned __int8,2>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -34567,28 +34567,28 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_wear": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_usageCount": {
 "bg": 10,
 "pt": 10,
 "size": 6,
 "type": "Array<unsigned __int16,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_dynamicFlags": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -34628,574 +34628,574 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_apparentName": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_flags": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_xpValue": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_xp": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_gold": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_generalState": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_hitPoints": {
 "bg": 28,
 "pt": 28,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_maxHitPointsBase": {
 "bg": 30,
 "pt": 30,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_animationType": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_colors": {
 "bg": 36,
 "pt": 36,
 "size": 7,
 "type": "Array<unsigned __int8,7>",
-"how": "assumed"
+"how": "manual"
 },
 "m_effectVersion": {
 "bg": 43,
 "pt": 43,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_portraitSmall": {
 "bg": 44,
 "pt": 44,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_portraitLarge": {
 "bg": 52,
 "pt": 52,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_reputation": {
 "bg": 60,
 "pt": 60,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_hideInShadowsBase": {
 "bg": 61,
 "pt": 61,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClass": {
 "bg": 62,
 "pt": 62,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClassBase": {
 "bg": 64,
 "pt": 64,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClassCrushingAdjustment": {
 "bg": 66,
 "pt": 66,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClassMissileAdjustment": {
 "bg": 68,
 "pt": 68,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClassPiercingAdjustment": {
 "bg": 70,
 "pt": 70,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_armorClassSlashingAdjustment": {
 "bg": 72,
 "pt": 72,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_toHitArmorClass0Base": {
 "bg": 74,
 "pt": 74,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_numberOfAttacksBase": {
 "bg": 75,
 "pt": 75,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_saveVSDeathBase": {
 "bg": 76,
 "pt": 76,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_saveVSWandsBase": {
 "bg": 77,
 "pt": 77,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_saveVSPolyBase": {
 "bg": 78,
 "pt": 78,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_saveVSBreathBase": {
 "bg": 79,
 "pt": 79,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_saveVSSpellBase": {
 "bg": 80,
 "pt": 80,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistFireBase": {
 "bg": 81,
 "pt": 81,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistColdBase": {
 "bg": 82,
 "pt": 82,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistElectricityBase": {
 "bg": 83,
 "pt": 83,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistAcidBase": {
 "bg": 84,
 "pt": 84,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistMagicBase": {
 "bg": 85,
 "pt": 85,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistMagicFireBase": {
 "bg": 86,
 "pt": 86,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistMagicColdBase": {
 "bg": 87,
 "pt": 87,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistSlashingBase": {
 "bg": 88,
 "pt": 88,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistCrushingBase": {
 "bg": 89,
 "pt": 89,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistPiercingBase": {
 "bg": 90,
 "pt": 90,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_resistMissileBase": {
 "bg": 91,
 "pt": 91,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_detectIllusionBase": {
 "bg": 92,
 "pt": 92,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_setTrapsBase": {
 "bg": 93,
 "pt": 93,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_loreBase": {
 "bg": 94,
 "pt": 94,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_lockPickingBase": {
 "bg": 95,
 "pt": 95,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_moveSilentlyBase": {
 "bg": 96,
 "pt": 96,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_trapsBase": {
 "bg": 97,
 "pt": 97,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_pickPocketBase": {
 "bg": 98,
 "pt": 98,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_fatigue": {
 "bg": 99,
 "pt": 99,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_intoxication": {
 "bg": 100,
 "pt": 100,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_luckBase": {
 "bg": 101,
 "pt": 101,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_proficiencies": {
 "bg": 102,
 "pt": 102,
 "size": 15,
 "type": "Array<__int8,15>",
-"how": "assumed"
+"how": "manual"
 },
 "m_bNightmare": {
 "bg": 117,
 "pt": 117,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_nTranslucent": {
 "bg": 118,
 "pt": 118,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_repChangeKilled": {
 "bg": 119,
 "pt": 119,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_repChangeJoined": {
 "bg": 120,
 "pt": 120,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_repChangeKicked": {
 "bg": 121,
 "pt": 121,
 "size": 1,
 "type": "__int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_undeadLevel": {
 "bg": 122,
 "pt": 122,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_trackingBase": {
 "bg": 123,
 "pt": 123,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_trackingTarget": {
 "bg": 124,
 "pt": null,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_speech": {
 "bg": 156,
 "pt": 156,
 "size": 400,
 "type": "Array<unsigned int,100>",
-"how": "assumed"
+"how": "manual"
 },
 "m_level1": {
 "bg": 556,
 "pt": 556,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_level2": {
 "bg": 557,
 "pt": 557,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_level3": {
 "bg": 558,
 "pt": 558,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_sex": {
 "bg": 559,
 "pt": 559,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_STRBase": {
 "bg": 560,
 "pt": 560,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_STRExtraBase": {
 "bg": 561,
 "pt": 561,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_INTBase": {
 "bg": 562,
 "pt": 562,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_WISBase": {
 "bg": 563,
 "pt": 563,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_DEXBase": {
 "bg": 564,
 "pt": 564,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_CONBase": {
 "bg": 565,
 "pt": 565,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_CHRBase": {
 "bg": 566,
 "pt": 566,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_morale": {
 "bg": 567,
 "pt": 567,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_moraleBreak": {
 "bg": 568,
 "pt": 568,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_hatedRace": {
 "bg": 569,
 "pt": 569,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_moraleRecoveryTime": {
 "bg": 570,
 "pt": 570,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_mageSpecUpperWord": {
 "bg": 572,
 "pt": 572,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_mageSpecialization": {
 "bg": 574,
 "pt": 574,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_scriptOverRide": {
 "bg": 576,
 "pt": 576,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_scriptClass": {
 "bg": 584,
 "pt": 584,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_scriptRace": {
 "bg": 592,
 "pt": 592,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_scriptGeneral": {
 "bg": 600,
 "pt": 600,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_scriptDefault": {
 "bg": 608,
 "pt": 608,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -36107,42 +36107,42 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_startY": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_note": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwflags": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_id": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 16,
 "pt": 16,
 "size": 36,
 "type": "Array<unsigned int,9>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -36238,119 +36238,119 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nightMusic": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_battleWinningMusic": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_battleStandOffMusic": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_battleLosingMusic": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_alt1Music0": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_alt1Music1": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_alt1Music2": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_alt1Music3": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_alt1Music4": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_dayAmbient": {
 "bg": 40,
 "pt": 40,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_dayAmbientExtended": {
 "bg": 48,
 "pt": 48,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_dayAmbientVolume": {
 "bg": 56,
 "pt": 56,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nightAmbient": {
 "bg": 60,
 "pt": 60,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nightAmbientExtended": {
 "bg": 68,
 "pt": 68,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_nightAmbientVolume": {
 "bg": 76,
 "pt": 76,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 80,
 "pt": 80,
 "size": 64,
 "type": "Array<unsigned int,16>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -36363,112 +36363,112 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_range": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "structureAlignment1": {
 "bg": 38,
 "pt": 38,
 "size": 2,
 "type": "Array<unsigned __int8,2>",
-"how": "assumed"
+"how": "manual"
 },
 "m_pitchVariance": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_volumeVariance": {
 "bg": 44,
 "pt": 44,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_volume": {
 "bg": 46,
 "pt": 46,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_soundObject": {
 "bg": 48,
 "pt": 48,
 "size": 80,
 "type": "Array<CResRef,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_soundObjectNum": {
 "bg": 128,
 "pt": 128,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "structureAlignment2": {
 "bg": 130,
 "pt": 130,
 "size": 2,
 "type": "Array<unsigned __int8,2>",
-"how": "assumed"
+"how": "manual"
 },
 "m_period": {
 "bg": 132,
 "pt": 132,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_periodVariance": {
 "bg": 136,
 "pt": 136,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_timeOfDayActive": {
 "bg": 140,
 "pt": 140,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 144,
 "pt": 144,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 148,
 "pt": 148,
 "size": 64,
 "type": "Array<unsigned int,16>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -36481,105 +36481,105 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_randomCreatureString": {
 "bg": 32,
 "pt": 32,
 "size": 40,
 "type": "Array<unsigned int,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_randomCreature": {
 "bg": 72,
 "pt": 72,
 "size": 80,
 "type": "Array<CResRef,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_randomCreatureNum": {
 "bg": 152,
 "pt": 152,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_difficulty": {
 "bg": 154,
 "pt": 154,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_lifeSpan": {
 "bg": 156,
 "pt": 156,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_huntingRange": {
 "bg": 160,
 "pt": 160,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_followRange": {
 "bg": 162,
 "pt": 162,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_maxTypeNum": {
 "bg": 164,
 "pt": 164,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_activated": {
 "bg": 166,
 "pt": 166,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_probDay": {
 "bg": 168,
 "pt": 168,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_probNight": {
 "bg": 170,
 "pt": 170,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_wFlags": {
 "bg": 172,
 "pt": 172,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_weights": {
 "bg": 174,
 "pt": 174,
 "size": 10,
 "type": "Array<unsigned __int8,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 184,
 "pt": 184,
 "size": 44,
 "type": "Array<unsigned int,11>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -37333,140 +37333,140 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_randomCreature": {
 "bg": 36,
 "pt": 36,
 "size": 80,
 "type": "Array<CResRef,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_randomCreatureNum": {
 "bg": 116,
 "pt": 116,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_difficulty": {
 "bg": 118,
 "pt": 118,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_spawningRate": {
 "bg": 120,
 "pt": 120,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_wFlags": {
 "bg": 122,
 "pt": 122,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_lifeSpan": {
 "bg": 124,
 "pt": 124,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_huntingRange": {
 "bg": 128,
 "pt": 128,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_followRange": {
 "bg": 130,
 "pt": 130,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_maxTypeNum": {
 "bg": 132,
 "pt": 132,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_activated": {
 "bg": 134,
 "pt": 134,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_timeOfDayVisible": {
 "bg": 136,
 "pt": 136,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_probDay": {
 "bg": 140,
 "pt": 140,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_probNight": {
 "bg": 142,
 "pt": 142,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_frequency": {
 "bg": 144,
 "pt": 144,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_countdown": {
 "bg": 148,
 "pt": 148,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_weights": {
 "bg": 152,
 "pt": 152,
 "size": 10,
 "type": "Array<unsigned __int8,10>",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 162,
 "pt": 162,
 "size": 38,
 "type": "Array<unsigned __int16,19>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -37479,189 +37479,189 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_posX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_containerType": {
 "bg": 36,
 "pt": 36,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_lockDifficulty": {
 "bg": 38,
 "pt": 38,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_dwFlags": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_trapDetectionDifficulty": {
 "bg": 44,
 "pt": 44,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_trapRemovalDifficulty": {
 "bg": 46,
 "pt": 46,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_trapActivated": {
 "bg": 48,
 "pt": 48,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_trapDetected": {
 "bg": 50,
 "pt": 50,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posXTrapOrigin": {
 "bg": 52,
 "pt": 52,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_posYTrapOrigin": {
 "bg": 54,
 "pt": 54,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_boundingRectLeft": {
 "bg": 56,
 "pt": 56,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_boundingRectTop": {
 "bg": 58,
 "pt": 58,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_boundingRectRight": {
 "bg": 60,
 "pt": 60,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_boundingRectBottom": {
 "bg": 62,
 "pt": 62,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_startingItem": {
 "bg": 64,
 "pt": 64,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_itemCount": {
 "bg": 68,
 "pt": 68,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_script": {
 "bg": 72,
 "pt": 72,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_pickPointStart": {
 "bg": 80,
 "pt": 80,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_pickPointCount": {
 "bg": 84,
 "pt": 84,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_triggerRange": {
 "bg": 86,
 "pt": 86,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_ownedBy": {
 "bg": 88,
 "pt": 88,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_keyType": {
 "bg": 120,
 "pt": 120,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_breakDifficulty": {
 "bg": 128,
 "pt": 128,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_strNotPickable": {
 "bg": 132,
 "pt": 132,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 136,
 "pt": 136,
 "size": 56,
 "type": "Array<unsigned int,14>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -37674,35 +37674,35 @@
 "pt": 0,
 "size": 32,
 "type": "LCharString<32>",
-"how": "assumed"
+"how": "manual"
 },
 "m_startX": {
 "bg": 32,
 "pt": 32,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_startY": {
 "bg": 34,
 "pt": 34,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_facing": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_notUsed": {
 "bg": 40,
 "pt": 40,
 "size": 64,
 "type": "Array<unsigned int,16>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },

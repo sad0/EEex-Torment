@@ -47459,6 +47459,7 @@ struct __cppobj CRuleTables
 	C2DArray m_tInteractionDialog;
 	C2DArray m_tIntelligenceMod;
 	C2DArray m_tDonateRumor;
+	nobinding unsigned __int8 _ptpad_1468[56];
 	C2DArray m_tAreaLinkageCaching;
 	C2DArray m_tAreaLinkageCachingSingle;
 	C2DArray m_tCacheValidation;
@@ -47472,7 +47473,6 @@ struct __cppobj CRuleTables
 	C2DArray m_tNPCLevel25;
 	C2DArray m_tDeathSounds;
 	C2DArray m_tAlignment;
-	nobinding unsigned __int8 _ptpad_1740[56];
 	C2DArray m_tReputationStoreMod;
 	C2DArray m_tReputationStart;
 	C2DArray m_tXPCap;
@@ -47608,18 +47608,20 @@ struct __cppobj CRuleTables
 	C2DArray m_tAreaCreatureNodes;
 	C2DArray m_tFogAreaSettings;
 	C2DArray m_tFogPointSettings;
+	nobinding unsigned __int8 _ptpad_3d40[168];
 	C2DArray m_tCampaign;
 	C2DArray m_tPartyAI;
 	C2DArray m_tContainerIcons;
 	C2DArray m_tFallen;
 	C2DArray m_tAchievements;
+	nobinding unsigned __int8 _ptpad_3f00[168];
 	C2DArray m_tStatValues;
 	CAIIdList m_lStats;
 	C2DArray m_tSaveName;
 	unsigned __int8 m_bPPHostile;
 	unsigned __int8 m_bPPReport;
 	unsigned __int8 m_bPPBreakInvis;
-	nobinding unsigned __int8 _ptpad_3f3b[1];
+	nobinding unsigned __int8 _ptpad_408b[1];
 	int m_nConcentration;
 	CResRef m_damageSounds[16];
 	CResRef m_damageEffectAnims[16];
@@ -48104,7 +48106,6 @@ struct __cppobj __declspec(align(8)) CGameSave
 /* 5711 */
 struct CGameOptions
 {
-	nobinding unsigned __int8 _ptpad_0[4];
 	unsigned int m_gore;
 	unsigned int m_goreOption;
 	unsigned int m_scrollSpeed;
@@ -48120,6 +48121,7 @@ struct CGameOptions
 	unsigned int m_soundVoicesNo;
 	unsigned int m_graphicsBrightness;
 	unsigned int m_graphicsFontZoom;
+	nobinding unsigned __int8 _ptpad_3c[4];
 	float m_spriteBlurAmount;
 	unsigned int m_graphicsTranslucentShadows;
 	unsigned int m_graphicsForceMirroringOff;
@@ -48152,6 +48154,7 @@ struct CGameOptions
 	int m_bUIEditMode;
 	int m_bCloudSavesEnabled;
 	int m_bNeverShowNuisanceSOD;
+	nobinding unsigned __int8 _ptpad_c0[4];
 	int m_nActiveCampaign;
 	int m_bDeveloperMode;
 	int m_bForceDialogPause;
@@ -48161,7 +48164,65 @@ struct CGameOptions
 	int m_bVeryLowPerformance;
 	int m_bDisplayExtraCombatInfo;
 	unsigned __int16 m_nAreaEffectsDensity;
-	nobinding unsigned __int8 _ptpad_e2[234];
+	nobinding unsigned __int8 _ptpad_e6[2];
+	int m_bDuplicateFloatingText;
+	unsigned __int8 m_nTilesPrecachePercent;
+	nobinding unsigned __int8 _ptpad_ed[3];
+	int m_bColorCircles;
+	int m_bClassicCircles;
+	int m_nCombatUI;
+	int m_bOverConfirmEverything;
+	int m_bShowLearnableSpells;
+	int m_bShowTriggersOnTab;
+	int m_bShowBlackSpace;
+	int m_bUseNearestNeighbourScaling;
+	int m_showAOE;
+	int m_bEquipmentComparison;
+	int m_bDisableCastingGlows;
+	int m_bLowMemSounds1;
+	int m_bLowMemSounds2;
+	int m_bDisableVEFVidCells;
+	int m_bDisableDisplayText;
+	int m_bMidLevelBrighten;
+	int m_bHighLevelBrighten;
+	unsigned __int16 m_nAreaEffectsRefreshProb;
+	nobinding unsigned __int8 _ptpad_136[2];
+	int m_bPausingMap;
+	int m_bExtraFeedback;
+	int m_bFilterGames;
+	int m_bAllLearnSpellInfo;
+	int m_bDisableStaticsDuringCombat;
+	int m_bDisableFootstepsDuringCombat;
+	int m_bDisablePlacedSoundsDuringCombat;
+	int m_nSuperDesperateSpeedAttempt;
+	int m_bAutomatedSpeedAdjusting;
+	int m_bAutomatedGraphicsTranslucentShadows;
+	int m_bAutomatedVeryLowPerformance;
+	int m_bAutomatedLowPerformance;
+	int m_bAutomatedDisableBrightest;
+	int m_bAutomatedLimitTransparency;
+	int m_bAutomatedDisableCastingGlows;
+	int m_bAutomatedDisableVEFVidCells;
+	int m_bAutomatedMidLevelBrighten;
+	int m_bAutomatedHighLevelBrighten;
+	int m_bAutomatedSoundFootStepsOn;
+	int m_bAutomatedAttackSounds;
+	int m_bAutomatedUse3dAnimations;
+	int m_bAutomatedDisableVVCSounds;
+	int m_bAutomatedFasterBlur;
+	int m_nCutAutomatedGraphicsTranslucentShadows;
+	int m_nCutAutomatedVeryLowPerformance;
+	int m_nCutAutomatedLowPerformance;
+	int m_nCutAutomatedDisableBrightest;
+	int m_nCutAutomatedLimitTransparency;
+	int m_nCutAutomatedDisableCastingGlows;
+	int m_nCutAutomatedDisableVEFVidCells;
+	int m_nCutAutomatedMidLevelBrighten;
+	int m_nCutAutomatedHighLevelBrighten;
+	int m_nCutAutomatedSoundFootStepsOn;
+	int m_nCutAutomatedAttackSounds;
+	int m_nCutAutomatedUse3dAnimations;
+	int m_nCutAutomatedDisableVVCSounds;
 	int m_nCutAutomatedFasterBlur;
 	int m_bPCOnlyCombatMode;
 	int m_bFullyDisableNonVisibleDuringCombat;
@@ -48170,6 +48231,7 @@ struct CGameOptions
 	int m_nFatFingerRadius;
 	int m_bScaleUI;
 	int m_nRenderActionQueue;
+	nobinding unsigned __int8 _ptpad_1e8[4];
 	int m_bConfirmDialog;
 	int m_bHardwareMouseCursor;
 	int m_bShowHealth;
@@ -48188,6 +48250,7 @@ struct CGameOptions
 	int m_bRenderDynamicSearchMap;
 	int m_bRenderFrameTimes;
 	int m_bZoomLock;
+	nobinding unsigned __int8 _ptpad_234[4];
 	int m_bDisableMultiplayerBanters;
 	int m_bRenderPath;
 	int m_bFogEnabled;
@@ -48195,13 +48258,14 @@ struct CGameOptions
 	int m_bCharacterHighlightsEnabled;
 	int m_bGreyscaleOnPauseEnabled;
 	int m_bShortDescription;
+	nobinding unsigned __int8 _ptpad_254[4];
 	int m_nMaxStringEntries;
 	int m_bRenderExploredMap;
 	int m_bEnableDirectX;
 	int m_bEnableMPChatMenu;
 	int m_bExpireTraps;
 	int m_bAreaMapZoom;
-	nobinding unsigned __int8 _ptpad_268[28];
+	nobinding unsigned __int8 _ptpad_270[20];
 	int m_nDifficultyLevel;
 };
 
@@ -48284,7 +48348,7 @@ struct __cppobj __declspec(align(8)) CVVCHash
 struct __cppobj CInfGame
 {
 	CRuleTables m_ruleTables;
-	nobinding unsigned __int8 _ptpad_42c0[13664];
+	nobinding unsigned __int8 _ptpad_4410[13328];
 	CTimerWorld m_worldTime;
 	int m_bGameLoaded;
 	unsigned __int8 m_bInLoadGame;
@@ -49003,7 +49067,6 @@ struct __cppobj CStoreFileHeader
 	unsigned int m_rouletWinAmount;
 	unsigned int m_crapsWinAmount;
 	unsigned int m_wheelWinAmount;
-	nobinding unsigned __int8 _ptpad_94[4];
 };
 
 /* 5749 */
@@ -49016,6 +49079,7 @@ struct __cppobj CStore
 {
 	CResRef m_resRef;
 	CStoreFileHeader m_header;
+	nobinding unsigned __int8 _ptpad_9c[4];
 	CTypedPtrList<CPtrList,CStoreFileItem *> m_lInventory;
 	unsigned int *m_pBuyTypes;
 	unsigned int m_nBuyTypes;
@@ -50807,8 +50871,9 @@ struct __cppobj CDerivedStats : CDerivedStatsTemplate
 	CColorRanges m_appliedColorRanges;
 	CColorEffects m_appliedColorEffects;
 	CCreatureFileMemorizedSpellLevel m_memorizedSpellsLevelMage[9];
-	CCreatureFileMemorizedSpellLevel m_memorizedSpellsLevelPriest[7];
-	nobinding unsigned __int8 _ptpad_b28[60];
+	nobinding unsigned __int8 _ptpad_ab8[80];
+	int m_disabledButtons[16];
+	nobinding unsigned __int8 _ptpad_b48[28];
 	int m_disabledSpellTypes[3];
 	int m_disableSpells;
 	nobinding unsigned __int8 _ptpad_b74[4];
@@ -54272,7 +54337,8 @@ struct __cppobj CGameAIBase : CGameObject
 	CTypedPtrList<CPtrList,CAIAction *> m_queuedActions;
 	CTypedPtrList<CPtrList,CAITrigger *> m_pendingTriggers;
 	unsigned int m_PAICallCounter;
-	nobinding unsigned __int8 _ptpad_3a4[60];
+	unsigned int m_PAICallCounterNoMod;
+	CTypedPtrList<CPtrList,CGameTimer *> m_timers;
 	__int16 m_curResponseNum;
 	__int16 m_curResponseSetNum;
 	__int16 m_curScriptNum;
@@ -63336,6 +63402,7 @@ struct __cppobj CStoreFileItem
 	unsigned int m_dynamicFlags;
 	unsigned int m_nInStock;
 	unsigned int m_nStoreFlags;
+	nobinding unsigned __int8 _ptpad_1c[60];
 };
 
 /* 6661 */

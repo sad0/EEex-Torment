@@ -74,11 +74,899 @@
   "CRuleTables": {
    "m_tDexterityMod": {
     "pt": "0x11c8",
-    "why": "CRuleTables ctor (PT 0x296583): C2DArray::Load after the DEXMOD CString (BG 0xee0)"
+    "why": "CRuleTables::CRuleTables loads DEXMOD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
    },
    "m_tWeaponSpecialization": {
     "pt": "0x1820",
-    "why": "CRuleTables ctor (PT 0x29695d): C2DArray::Load after the WSPECIAL CString (BG 0x1500)"
+    "why": "CRuleTables::CRuleTables loads WSPECIAL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReactionModReputation": {
+    "pt": "0x320",
+    "why": "CRuleTables::CRuleTables loads RModRep.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReputationMod": {
+    "pt": "0x358",
+    "why": "CRuleTables::CRuleTables loads Reputati.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tProficiencySlots": {
+    "pt": "0x400",
+    "why": "CRuleTables::CRuleTables loads Profs.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tProficiencySlotsMax": {
+    "pt": "0x438",
+    "why": "CRuleTables::CRuleTables loads ProfsMax.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSkillPointsRace": {
+    "pt": "0x470",
+    "why": "CRuleTables::CRuleTables loads SKillRac.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSkillPointsDex": {
+    "pt": "0x4a8",
+    "why": "CRuleTables::CRuleTables loads SkillDex.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSkillPointsBard": {
+    "pt": "0x4e0",
+    "why": "CRuleTables::CRuleTables loads SkillBrd.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSkillPointsRanger": {
+    "pt": "0x518",
+    "why": "CRuleTables::CRuleTables loads SkillRng.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSkillPointsShaman": {
+    "pt": "0x550",
+    "why": "CRuleTables::CRuleTables loads SkillShm.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityRaceReq": {
+    "pt": "0x588",
+    "why": "CRuleTables::CRuleTables loads AbRaceRq.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityRaceAdj": {
+    "pt": "0x5c0",
+    "why": "CRuleTables::CRuleTables loads AbRaceAd.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityClassReq": {
+    "pt": "0x5f8",
+    "why": "CRuleTables::CRuleTables loads AbClasRq.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityClassMod": {
+    "pt": "0x630",
+    "why": "CRuleTables::CRuleTables loads AbClsMod.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityDualClassSrcReq": {
+    "pt": "0x668",
+    "why": "CRuleTables::CRuleTables loads AbDCScRq.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilityDualClassDstReq": {
+    "pt": "0x6a0",
+    "why": "CRuleTables::CRuleTables loads AbDCDsRq.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowPriest": {
+    "pt": "0x6d8",
+    "why": "CRuleTables::CRuleTables loads SavePrs.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowWarrior": {
+    "pt": "0x710",
+    "why": "CRuleTables::CRuleTables loads SaveWar.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowWizard": {
+    "pt": "0x748",
+    "why": "CRuleTables::CRuleTables loads SaveWiz.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowRogue": {
+    "pt": "0x780",
+    "why": "CRuleTables::CRuleTables loads SaveRog.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowDwarfHalfling": {
+    "pt": "0x7b8",
+    "why": "CRuleTables::CRuleTables loads SaveCnDH.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowGnome": {
+    "pt": "0x7f0",
+    "why": "CRuleTables::CRuleTables loads SaveCnG.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSavingThrowMonk": {
+    "pt": "0x828",
+    "why": "CRuleTables::CRuleTables loads SaveMONK.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassHitPointsTables": {
+    "pt": "0x860",
+    "why": "CRuleTables::CRuleTables loads HPCLASS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tHitPointsCONBonus": {
+    "pt": "0x898",
+    "why": "CRuleTables::CRuleTables loads HPCONBon.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStartingGold": {
+    "pt": "0x8d0",
+    "why": "CRuleTables::CRuleTables loads StrtGold.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tTHAC0": {
+    "pt": "0x908",
+    "why": "CRuleTables::CRuleTables loads THAC0.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsPriest": {
+    "pt": "0x940",
+    "why": "CRuleTables::CRuleTables loads MxSplPrs.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsPriestPaladin": {
+    "pt": "0x978",
+    "why": "CRuleTables::CRuleTables loads MxSplPal.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsPriestRanger": {
+    "pt": "0x9b0",
+    "why": "CRuleTables::CRuleTables loads MxSplRan.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsMage": {
+    "pt": "0x9e8",
+    "why": "CRuleTables::CRuleTables loads MxSplWiz.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsMageBard": {
+    "pt": "0xa20",
+    "why": "CRuleTables::CRuleTables loads MxSplBrd.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsMageSorcerer": {
+    "pt": "0xa58",
+    "why": "CRuleTables::CRuleTables loads MxSplSRC.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsMageDragonDisciple": {
+    "pt": "0xa90",
+    "why": "CRuleTables::CRuleTables loads MXSPLDD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsShaman": {
+    "pt": "0xac8",
+    "why": "CRuleTables::CRuleTables loads MxSplSHM.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsPriestWISBonus": {
+    "pt": "0xb00",
+    "why": "CRuleTables::CRuleTables loads MxSplWIS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMaxSpellsPriestDruid": {
+    "pt": "0xb38",
+    "why": "CRuleTables::CRuleTables loads MxSplDru.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tKnownSpellsSorcerer": {
+    "pt": "0xb70",
+    "why": "CRuleTables::CRuleTables loads SplSrcKn.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tKnownSpellsShaman": {
+    "pt": "0xba8",
+    "why": "CRuleTables::CRuleTables loads SplShmKn.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tBackstabMultiplier": {
+    "pt": "0xbe0",
+    "why": "CRuleTables::CRuleTables loads Backstab.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSneakAttack": {
+    "pt": "0xc18",
+    "why": "CRuleTables::CRuleTables loads SneakAtt.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCripplingStrike": {
+    "pt": "0xc50",
+    "why": "CRuleTables::CRuleTables loads CrippStr.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tExperienceLevels": {
+    "pt": "0xc88",
+    "why": "CRuleTables::CRuleTables loads XPLevel.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLayOnHandsAmount": {
+    "pt": "0xcc0",
+    "why": "CRuleTables::CRuleTables loads LayHands.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMonsterSummon1": {
+    "pt": "0xdd8",
+    "why": "CRuleTables::CRuleTables loads MONSUM01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMonsterSummon2": {
+    "pt": "0xe10",
+    "why": "CRuleTables::CRuleTables loads MONSUM02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMonsterSummon3": {
+    "pt": "0xe48",
+    "why": "CRuleTables::CRuleTables loads MONSUM03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAnimalSummon1": {
+    "pt": "0xe80",
+    "why": "CRuleTables::CRuleTables loads ANISUM01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAnimalSummon2": {
+    "pt": "0xeb8",
+    "why": "CRuleTables::CRuleTables loads ANISUM02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStrengthMod": {
+    "pt": "0xef0",
+    "why": "CRuleTables::CRuleTables loads STRMOD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStrengthModExtra": {
+    "pt": "0xf28",
+    "why": "CRuleTables::CRuleTables loads STRMODEX.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tIntoxicationMod": {
+    "pt": "0xf60",
+    "why": "CRuleTables::CRuleTables loads INTOXMOD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tFatigueMod": {
+    "pt": "0xf98",
+    "why": "CRuleTables::CRuleTables loads FATIGMOD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tEffectText": {
+    "pt": "0xfd0",
+    "why": "CRuleTables::CRuleTables loads EFFTEXT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tPlayerInteraction": {
+    "pt": "0x1008",
+    "why": "CRuleTables::CRuleTables loads INTERACT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tNumSpells": {
+    "pt": "0x1040",
+    "why": "CRuleTables::CRuleTables loads SPELLS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tToolTips": {
+    "pt": "0x1078",
+    "why": "CRuleTables::CRuleTables loads TOOLTIP.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStartArea": {
+    "pt": "0x10b0",
+    "why": "CRuleTables::CRuleTables loads STARTARE.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStartPos": {
+    "pt": "0x10e8",
+    "why": "CRuleTables::CRuleTables loads STARTPOS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSparkleColors": {
+    "pt": "0x1120",
+    "why": "CRuleTables::CRuleTables loads SPRKLCLR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMonths": {
+    "pt": "0x1158",
+    "why": "CRuleTables::CRuleTables loads MONTHS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tYears": {
+    "pt": "0x1190",
+    "why": "CRuleTables::CRuleTables loads YEARS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tPostDialog": {
+    "pt": "0x1200",
+    "why": "CRuleTables::CRuleTables loads PDIALOG.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCharacterSounds": {
+    "pt": "0x1238",
+    "why": "CRuleTables::CRuleTables loads CHARSND.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomEquipment": {
+    "pt": "0x1270",
+    "why": "CRuleTables::CRuleTables loads RNDEQUIP.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomTreasure": {
+    "pt": "0x12a8",
+    "why": "CRuleTables::CRuleTables loads RNDTREAS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomTreasureIWD": {
+    "pt": "0x12e0",
+    "why": "CRuleTables::CRuleTables loads RNDTRES.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomMagic": {
+    "pt": "0x1318",
+    "why": "CRuleTables::CRuleTables loads RNDMAGIC.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomScroll": {
+    "pt": "0x1350",
+    "why": "CRuleTables::CRuleTables loads RNDSCROL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomWeapon": {
+    "pt": "0x1388",
+    "why": "CRuleTables::CRuleTables loads RNDWEP.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tInteractionDialog": {
+    "pt": "0x13c0",
+    "why": "CRuleTables::CRuleTables loads INTERDIA.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tIntelligenceMod": {
+    "pt": "0x13f8",
+    "why": "CRuleTables::CRuleTables loads INTMOD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tDonateRumor": {
+    "pt": "0x1430",
+    "why": "CRuleTables::CRuleTables loads DONARUMR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAreaLinkageCaching": {
+    "pt": "0x14a0",
+    "why": "CRuleTables::CRuleTables loads AREALINK.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAreaLinkageCachingSingle": {
+    "pt": "0x14d8",
+    "why": "CRuleTables::CRuleTables loads AREALINS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCacheValidation": {
+    "pt": "0x1510",
+    "why": "CRuleTables::CRuleTables loads CACHVALD.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tScriptDescription": {
+    "pt": "0x1548",
+    "why": "CRuleTables::CRuleTables loads ScrpDesc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCharacterStateDescription": {
+    "pt": "0x1580",
+    "why": "CRuleTables::CRuleTables loads StatDesc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMasterArea": {
+    "pt": "0x15b8",
+    "why": "CRuleTables::CRuleTables loads MastArea.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMovieDescription": {
+    "pt": "0x15f0",
+    "why": "CRuleTables::CRuleTables loads MoviDesc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellDescription": {
+    "pt": "0x1628",
+    "why": "CRuleTables::CRuleTables loads SpelDesc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tBountyChance": {
+    "pt": "0x1660",
+    "why": "CRuleTables::CRuleTables loads BntyChnc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tNPCLevel": {
+    "pt": "0x1698",
+    "why": "CRuleTables::CRuleTables loads NPCLevel.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tNPCLevel25": {
+    "pt": "0x16d0",
+    "why": "CRuleTables::CRuleTables loads NPCLvl25.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tDeathSounds": {
+    "pt": "0x1708",
+    "why": "CRuleTables::CRuleTables loads Death.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAlignment": {
+    "pt": "0x1740",
+    "why": "CRuleTables::CRuleTables loads Alignmnt.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReputationStoreMod": {
+    "pt": "0x1778",
+    "why": "CRuleTables::CRuleTables loads REPMODST.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReputationStart": {
+    "pt": "0x17b0",
+    "why": "CRuleTables::CRuleTables loads repstart.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tXPCap": {
+    "pt": "0x17e8",
+    "why": "CRuleTables::CRuleTables loads xpcap.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tWeaponAttacks": {
+    "pt": "0x1858",
+    "why": "CRuleTables::CRuleTables loads WSPATCK.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLore": {
+    "pt": "0x1890",
+    "why": "CRuleTables::CRuleTables loads Lore.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLoreBonus": {
+    "pt": "0x18c8",
+    "why": "CRuleTables::CRuleTables loads LoreBon.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCharismaStoreMod": {
+    "pt": "0x1900",
+    "why": "CRuleTables::CRuleTables loads CHRMODST.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRaiseDeadCost": {
+    "pt": "0x1938",
+    "why": "CRuleTables::CRuleTables loads RaisDead.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tHappiness": {
+    "pt": "0x1970",
+    "why": "CRuleTables::CRuleTables loads HAPPY.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReputationDescription": {
+    "pt": "0x19a8",
+    "why": "CRuleTables::CRuleTables loads RepTxt.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tPortraitReplacement": {
+    "pt": "0x19e0",
+    "why": "CRuleTables::CRuleTables loads Portrait.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tIntoxication": {
+    "pt": "0x1a18",
+    "why": "CRuleTables::CRuleTables loads IntoxCON.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCustomSound": {
+    "pt": "0x1a50",
+    "why": "CRuleTables::CRuleTables loads CSOUND.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tExclusiveItems": {
+    "pt": "0x1a88",
+    "why": "CRuleTables::CRuleTables loads itemexcl.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tContingencyConditions": {
+    "pt": "0x1c10",
+    "why": "CRuleTables::CRuleTables loads ContCond.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tContingencyTargets": {
+    "pt": "0x1c48",
+    "why": "CRuleTables::CRuleTables loads ContTarg.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAbilitiesStart": {
+    "pt": "0x1c80",
+    "why": "CRuleTables::CRuleTables loads ABSTART.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tWeaponProficiencies": {
+    "pt": "0x1cb8",
+    "why": "CRuleTables::CRuleTables loads WeapProf.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesFighterTrue": {
+    "pt": "0x1cf0",
+    "why": "CRuleTables::CRuleTables loads CLABFI01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesFighterBerserker": {
+    "pt": "0x1d28",
+    "why": "CRuleTables::CRuleTables loads CLABFI02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesFighterWizardslayer": {
+    "pt": "0x1d60",
+    "why": "CRuleTables::CRuleTables loads CLABFI03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesFighterKensai": {
+    "pt": "0x1d98",
+    "why": "CRuleTables::CRuleTables loads CLABFI04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesPaladinTrue": {
+    "pt": "0x1dd0",
+    "why": "CRuleTables::CRuleTables loads CLABPA01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesPaladinCavalier": {
+    "pt": "0x1e08",
+    "why": "CRuleTables::CRuleTables loads CLABPA02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesPaladinInquisitor": {
+    "pt": "0x1e40",
+    "why": "CRuleTables::CRuleTables loads CLABPA03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesPaladinUndeadhunter": {
+    "pt": "0x1e78",
+    "why": "CRuleTables::CRuleTables loads CLABPA04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesPaladinFallen": {
+    "pt": "0x1eb0",
+    "why": "CRuleTables::CRuleTables loads CLABPA05.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesRangerTrue": {
+    "pt": "0x1ee8",
+    "why": "CRuleTables::CRuleTables loads CLABRN01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesRangerFeralan": {
+    "pt": "0x1f20",
+    "why": "CRuleTables::CRuleTables loads CLABRN02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesRangerStalker": {
+    "pt": "0x1f58",
+    "why": "CRuleTables::CRuleTables loads CLABRN03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesRangerBeastmaster": {
+    "pt": "0x1f90",
+    "why": "CRuleTables::CRuleTables loads CLABRN04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesRangerFallen": {
+    "pt": "0x1fc8",
+    "why": "CRuleTables::CRuleTables loads CLABRN05.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesThiefTrue": {
+    "pt": "0x2000",
+    "why": "CRuleTables::CRuleTables loads CLABTH01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesThiefAssassin": {
+    "pt": "0x2038",
+    "why": "CRuleTables::CRuleTables loads CLABTH02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesThiefBountyhunter": {
+    "pt": "0x2070",
+    "why": "CRuleTables::CRuleTables loads CLABTH03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesThiefSwashbuckler": {
+    "pt": "0x20a8",
+    "why": "CRuleTables::CRuleTables loads CLABTH04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesBardTrue": {
+    "pt": "0x20e0",
+    "why": "CRuleTables::CRuleTables loads CLABBA01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesBardBlade": {
+    "pt": "0x2118",
+    "why": "CRuleTables::CRuleTables loads CLABBA02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesBardJester": {
+    "pt": "0x2150",
+    "why": "CRuleTables::CRuleTables loads CLABBA03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesBardSkald": {
+    "pt": "0x2188",
+    "why": "CRuleTables::CRuleTables loads CLABBA04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesDruidTrue": {
+    "pt": "0x21c0",
+    "why": "CRuleTables::CRuleTables loads CLABDR01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesShamanTrue": {
+    "pt": "0x21f8",
+    "why": "CRuleTables::CRuleTables loads CLABSH01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesDruidTotemicdruid": {
+    "pt": "0x2230",
+    "why": "CRuleTables::CRuleTables loads CLABDR02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesDruidShapeshifter": {
+    "pt": "0x2268",
+    "why": "CRuleTables::CRuleTables loads CLABDR03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesDruidBeastfriend": {
+    "pt": "0x22a0",
+    "why": "CRuleTables::CRuleTables loads CLABDR04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesClericTrue": {
+    "pt": "0x22d8",
+    "why": "CRuleTables::CRuleTables loads CLABPR01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesClericTalos": {
+    "pt": "0x2310",
+    "why": "CRuleTables::CRuleTables loads CLABPR02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesClericHelm": {
+    "pt": "0x2348",
+    "why": "CRuleTables::CRuleTables loads CLABPR03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesClericLathander": {
+    "pt": "0x2380",
+    "why": "CRuleTables::CRuleTables loads CLABPR04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageTrue": {
+    "pt": "0x23b8",
+    "why": "CRuleTables::CRuleTables loads CLABMA01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageAbjurer": {
+    "pt": "0x23f0",
+    "why": "CRuleTables::CRuleTables loads CLABMA02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageNecromancer": {
+    "pt": "0x2428",
+    "why": "CRuleTables::CRuleTables loads CLABMA03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageTransmuter": {
+    "pt": "0x2460",
+    "why": "CRuleTables::CRuleTables loads CLABMA04.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageDiviner": {
+    "pt": "0x2498",
+    "why": "CRuleTables::CRuleTables loads CLABMA05.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageConjurer": {
+    "pt": "0x24d0",
+    "why": "CRuleTables::CRuleTables loads CLABMA06.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageInvoker": {
+    "pt": "0x2508",
+    "why": "CRuleTables::CRuleTables loads CLABMA07.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageIllusionist": {
+    "pt": "0x2540",
+    "why": "CRuleTables::CRuleTables loads CLABMA08.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMageEnchanter": {
+    "pt": "0x2578",
+    "why": "CRuleTables::CRuleTables loads CLABMA09.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMonkTrue": {
+    "pt": "0x25b0",
+    "why": "CRuleTables::CRuleTables loads CLABMO01.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMonkDarkMoon": {
+    "pt": "0x25e8",
+    "why": "CRuleTables::CRuleTables loads CLABMO02.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesMonkSunSoul": {
+    "pt": "0x2620",
+    "why": "CRuleTables::CRuleTables loads CLABMO03.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbilitiesBarbarianTrue": {
+    "pt": "0x2658",
+    "why": "CRuleTables::CRuleTables loads CLABFI05.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellAutmaticPicker": {
+    "pt": "0x2690",
+    "why": "CRuleTables::CRuleTables loads SplAutoP.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellAutmaticPickerShaman": {
+    "pt": "0x26c8",
+    "why": "CRuleTables::CRuleTables loads SplAutoS.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tDualClassAllowed": {
+    "pt": "0x2700",
+    "why": "CRuleTables::CRuleTables loads DualClas.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRandomColors": {
+    "pt": "0x2738",
+    "why": "CRuleTables::CRuleTables loads RandColr.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpawnGroup": {
+    "pt": "0x2770",
+    "why": "CRuleTables::CRuleTables loads SpawnGrp.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tItemUseAnimation": {
+    "pt": "0x27a8",
+    "why": "CRuleTables::CRuleTables loads ITEMANIM.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRangerHatedRace": {
+    "pt": "0x27e0",
+    "why": "CRuleTables::CRuleTables loads HateRace.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tXPBonus": {
+    "pt": "0x2818",
+    "why": "CRuleTables::CRuleTables loads XPBonus.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCleanAir": {
+    "pt": "0x2850",
+    "why": "CRuleTables::CRuleTables loads ClearAir.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSplashScreens": {
+    "pt": "0x2888",
+    "why": "CRuleTables::CRuleTables loads SplashSc.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLevelModWildMage": {
+    "pt": "0x28c0",
+    "why": "CRuleTables::CRuleTables loads LVLModWM.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tKitTable": {
+    "pt": "0x28f8",
+    "why": "CRuleTables::CRuleTables loads KitTable.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tKitList": {
+    "pt": "0x2930",
+    "why": "CRuleTables::CRuleTables loads KitList.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSoundEnvironmentResRef": {
+    "pt": "0x3168",
+    "why": "CRuleTables::CRuleTables loads SndResRf.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSoundEnvironmentEnvirons": {
+    "pt": "0x31a0",
+    "why": "CRuleTables::CRuleTables loads SndEnvrn.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tItemDialog": {
+    "pt": "0x31d8",
+    "why": "CRuleTables::CRuleTables loads itemDial.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLoadingHints": {
+    "pt": "0x3210",
+    "why": "CRuleTables::CRuleTables loads LOADHINT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSchoolMessage": {
+    "pt": "0x3248",
+    "why": "CRuleTables::CRuleTables loads MSCHOOL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSecTypeMessage": {
+    "pt": "0x3280",
+    "why": "CRuleTables::CRuleTables loads MSECTYPE.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tContingencyExceptions": {
+    "pt": "0x32b8",
+    "why": "CRuleTables::CRuleTables loads CONTINGX.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassAbbreviations": {
+    "pt": "0x32f0",
+    "why": "CRuleTables::CRuleTables loads LUAbbr.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tNumLevelUpAbilities": {
+    "pt": "0x3328",
+    "why": "CRuleTables::CRuleTables loads LUNumAb.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tXPList": {
+    "pt": "0x3360",
+    "why": "CRuleTables::CRuleTables loads XPLIST.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tTracking": {
+    "pt": "0x3398",
+    "why": "CRuleTables::CRuleTables loads TRACKING.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMovieSoundOverride": {
+    "pt": "0x33d0",
+    "why": "CRuleTables::CRuleTables loads MVESND.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_t25StartEquipment": {
+    "pt": "0x3408",
+    "why": "CRuleTables::CRuleTables loads 25StWeap.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tWish": {
+    "pt": "0x3440",
+    "why": "CRuleTables::CRuleTables loads Wish.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tEntries": {
+    "pt": "0x3478",
+    "why": "CRuleTables::CRuleTables loads Entries.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tLoadingHints25": {
+    "pt": "0x34b0",
+    "why": "CRuleTables::CRuleTables loads LOADH25.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStartingWeapon": {
+    "pt": "0x34e8",
+    "why": "CRuleTables::CRuleTables loads STWEAPON.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tFamiliars": {
+    "pt": "0x3520",
+    "why": "CRuleTables::CRuleTables loads FAMILIAR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tThiefSkills": {
+    "pt": "0x3558",
+    "why": "CRuleTables::CRuleTables loads thiefskl.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tThiefScaling": {
+    "pt": "0x3590",
+    "why": "CRuleTables::CRuleTables loads thiefscl.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassTHAC0": {
+    "pt": "0x35c8",
+    "why": "CRuleTables::CRuleTables loads clasTHAC.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassInnateSkills": {
+    "pt": "0x3600",
+    "why": "CRuleTables::CRuleTables loads clasiskl.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tTBPStartparty": {
+    "pt": "0x3638",
+    "why": "CRuleTables::CRuleTables loads TBPPARTY.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tExtraAnimations": {
+    "pt": "0x3670",
+    "why": "CRuleTables::CRuleTables loads EXTANIM.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tExtraAnimationSpeeds": {
+    "pt": "0x36a8",
+    "why": "CRuleTables::CRuleTables loads EXTSPEED.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tWildMagic": {
+    "pt": "0x36e0",
+    "why": "CRuleTables::CRuleTables loads WILDMAG.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tItemType": {
+    "pt": "0x3718",
+    "why": "CRuleTables::CRuleTables loads ITEMTYPE.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRaceTHAC0Bonus": {
+    "pt": "0x3750",
+    "why": "CRuleTables::CRuleTables loads RACETHAC.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassColours": {
+    "pt": "0x3788",
+    "why": "CRuleTables::CRuleTables loads CLASCOLR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRaceColours": {
+    "pt": "0x37c0",
+    "why": "CRuleTables::CRuleTables loads RACECOLR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSlotSteal": {
+    "pt": "0x37f8",
+    "why": "CRuleTables::CRuleTables loads SLTSTEAL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tNumWeaponSlots": {
+    "pt": "0x3830",
+    "why": "CRuleTables::CRuleTables loads NUMWSLOT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tItemUse": {
+    "pt": "0x3868",
+    "why": "CRuleTables::CRuleTables loads ITEM_USE.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRaceText": {
+    "pt": "0x38a0",
+    "why": "CRuleTables::CRuleTables loads RACETEXT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tTokenText": {
+    "pt": "0x38d8",
+    "why": "CRuleTables::CRuleTables loads TOKENTXT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassText": {
+    "pt": "0x3910",
+    "why": "CRuleTables::CRuleTables loads CLASTEXT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSetSnareLimit": {
+    "pt": "0x3948",
+    "why": "CRuleTables::CRuleTables loads TRAPLIMT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSummonLimit": {
+    "pt": "0x3980",
+    "why": "CRuleTables::CRuleTables loads SUMMLIMT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tWeaponStyleBonus": {
+    "pt": "0x39b8",
+    "why": "CRuleTables::CRuleTables loads STYLBONU.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tBanterTimings": {
+    "pt": "0x39f0",
+    "why": "CRuleTables::CRuleTables loads BANTTIMG.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassRaceRestrictions": {
+    "pt": "0x3a28",
+    "why": "CRuleTables::CRuleTables loads CLSRCREQ.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMageRaceRestrictions": {
+    "pt": "0x3a60",
+    "why": "CRuleTables::CRuleTables loads MGSRCREQ.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tClassSpecialBonuses": {
+    "pt": "0x3a98",
+    "why": "CRuleTables::CRuleTables loads CLSWPBON.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tMonkFists": {
+    "pt": "0x3ad0",
+    "why": "CRuleTables::CRuleTables loads MONKFIST.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellsToHide": {
+    "pt": "0x3b08",
+    "why": "CRuleTables::CRuleTables loads HIDESPL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellProtections": {
+    "pt": "0x3b40",
+    "why": "CRuleTables::CRuleTables loads SPLPROT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSpellAbilities": {
+    "pt": "0x3b78",
+    "why": "CRuleTables::CRuleTables loads CLSSPLAB.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSummoningTables": {
+    "pt": "0x3bb0",
+    "why": "CRuleTables::CRuleTables loads SMTABLES.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSevenEyes": {
+    "pt": "0x3bf0",
+    "why": "CRuleTables::CRuleTables loads 7EYES.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tItemSpec": {
+    "pt": "0x3c28",
+    "why": "CRuleTables::CRuleTables loads ITEMSPEC.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tRaceFeatures": {
+    "pt": "0x3c60",
+    "why": "CRuleTables::CRuleTables loads RACEFEAT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tAreaCreatureNodes": {
+    "pt": "0x3c98",
+    "why": "CRuleTables::CRuleTables loads AREANODE.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tFogAreaSettings": {
+    "pt": "0x3cd0",
+    "why": "CRuleTables::CRuleTables loads FOGAREA.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tFogPointSettings": {
+    "pt": "0x3d08",
+    "why": "CRuleTables::CRuleTables loads FOGPT.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tCampaign": {
+    "pt": "0x3de8",
+    "why": "CRuleTables::CRuleTables loads CAMPAIGN.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tPartyAI": {
+    "pt": "0x3e20",
+    "why": "CRuleTables::CRuleTables loads PARTYAI.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tContainerIcons": {
+    "pt": "0x3e58",
+    "why": "CRuleTables::CRuleTables loads CONTAINR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tFallen": {
+    "pt": "0x3e90",
+    "why": "CRuleTables::CRuleTables loads FALLEN.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tStatValues": {
+    "pt": "0x3fa8",
+    "why": "CRuleTables::CRuleTables loads STATVAL.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tSaveName": {
+    "pt": "0x4050",
+    "why": "CRuleTables::CRuleTables loads SAVENAME.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_damageEffectAnims": {
+    "pt": "0x4110",
+    "why": "CRuleTables::CRuleTables loads DMGTYPES.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
+   },
+   "m_tReactionModCharisma": {
+    "pt": "0x2e8",
+    "why": "CRuleTables::CRuleTables loads RModCHR.2DA into this member (C2DArray::Load, by static CString name, tools/loadmap.py)"
    }
   },
   "CGameSprite": {
@@ -374,6 +1262,344 @@
     "pt": "0x478",
     "why": "fills exactly evidence m_curAction end (0x3f0+0x88) .. m_inCutScene 0x498 (32 bytes)"
    }
+  },
+  "CGameOptions": {
+   "m_gore": {
+    "pt": "0x0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_goreOption": {
+    "pt": "0x4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_scrollSpeed": {
+    "pt": "0x8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_displayVerbalText": {
+    "pt": "0xc",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_guiFeedBackLevel": {
+    "pt": "0x10",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_locatorFeedBackLevel": {
+    "pt": "0x14",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_soundMusicVolume": {
+    "pt": "0x18",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_soundFXVolume": {
+    "pt": "0x1c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_soundDialogVolume": {
+    "pt": "0x20",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nVolumeAmbients": {
+    "pt": "0x24",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_soundMovieVolume": {
+    "pt": "0x28",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_soundFootStepsOn": {
+    "pt": "0x2c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_spriteBlurAmount": {
+    "pt": "0x40",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_toolTips": {
+    "pt": "0x50",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nCommandSoundsFrequency": {
+    "pt": "0x58",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nSelectionSoundsFrequency": {
+    "pt": "0x5c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bAlwaysDither": {
+    "pt": "0x60",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nKeyBoardScrollAmount": {
+    "pt": "0x64",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nEffectTextLevel": {
+    "pt": "0x68",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nAttackSounds": {
+    "pt": "0x70",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nAutoPauseState": {
+    "pt": "0x74",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bAutoPauseCenter": {
+    "pt": "0x78",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNoExtraDamage": {
+    "pt": "0x84",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bAutoUseMagicAmmo": {
+    "pt": "0x88",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNoExtraXP": {
+    "pt": "0x8c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bInfravision": {
+    "pt": "0x90",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bWeatherEnabled": {
+    "pt": "0x98",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bRestHealParty": {
+    "pt": "0xa4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bCloudSavesEnabled": {
+    "pt": "0xb8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bColorCircles": {
+    "pt": "0xf0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bClassicCircles": {
+    "pt": "0xf4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nCombatUI": {
+    "pt": "0xf8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bOverConfirmEverything": {
+    "pt": "0xfc",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bShowBlackSpace": {
+    "pt": "0x108",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bUseNearestNeighbourScaling": {
+    "pt": "0x10c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bScaleUI": {
+    "pt": "0x1e0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bHardwareMouseCursor": {
+    "pt": "0x1f0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bShowHealth": {
+    "pt": "0x1f4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bMaxHP": {
+    "pt": "0x1f8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bStoryMode": {
+    "pt": "0x1fc",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNightmareMode": {
+    "pt": "0x200",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_b3ESneakAttack": {
+    "pt": "0x20c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bDisableCosmeticAttacks": {
+    "pt": "0x218",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bJournalPopups": {
+    "pt": "0x21c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bZoomLock": {
+    "pt": "0x230",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bUseSpriteShader": {
+    "pt": "0x244",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bCharacterHighlightsEnabled": {
+    "pt": "0x248",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bGreyscaleOnPauseEnabled": {
+    "pt": "0x24c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bRenderExploredMap": {
+    "pt": "0x25c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bEnableDirectX": {
+    "pt": "0x260",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bEnableMPChatMenu": {
+    "pt": "0x264",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_graphicsBrightness": {
+    "pt": "0x34",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_graphicsFontZoom": {
+    "pt": "0x38",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_graphicsTranslucentShadows": {
+    "pt": "0x44",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nBoredTime": {
+    "pt": "0x54",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nTutorialState": {
+    "pt": "0x6c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bStupidQuickItemStuff": {
+    "pt": "0x94",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bEnvironmentalAudio": {
+    "pt": "0xa0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bTerrainHugging": {
+    "pt": "0xa8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bHPOverHead": {
+    "pt": "0xac",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bDebugMode": {
+    "pt": "0xb0",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bUIEditMode": {
+    "pt": "0xb4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNeverShowNuisanceSOD": {
+    "pt": "0xbc",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nActiveCampaign": {
+    "pt": "0xc4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bDeveloperMode": {
+    "pt": "0xc8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bCriticalHitScreenShake": {
+    "pt": "0xd4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bHotkeysOnToolTips": {
+    "pt": "0xd8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nAreaEffectsDensity": {
+    "pt": "0xe4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bDuplicateFloatingText": {
+    "pt": "0xe8",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nTilesPrecachePercent": {
+    "pt": "0xec",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bShowLearnableSpells": {
+    "pt": "0x100",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bPausingMap": {
+    "pt": "0x138",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bExtraFeedback": {
+    "pt": "0x13c",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bFilterGames": {
+    "pt": "0x140",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bAllLearnSpellInfo": {
+    "pt": "0x144",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nRenderActionQueue": {
+    "pt": "0x1e4",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bConfirmDialog": {
+    "pt": "0x1ec",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNightmareBonusGold": {
+    "pt": "0x204",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bNightmareBonusXP": {
+    "pt": "0x208",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bClericRangerFix": {
+    "pt": "0x210",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bRenderTravelRegions": {
+    "pt": "0x220",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bDisableMultiplayerBanters": {
+    "pt": "0x238",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_nMaxStringEntries": {
+    "pt": "0x258",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   },
+   "m_bExpireTraps": {
+    "pt": "0x268",
+    "why": "CGameOptions field map BG->PT from CGameOptions::GetOption/SetOption (emulated per option id), CBaldurChitin::LoadOptions/SaveOptions and CInfGame::SaveOptions (per INI key); sources agree or follow neighbour delta (tools/optmap.py, inikeys.py)"
+   }
   }
  },
  "sizes": {
@@ -392,12 +1618,128 @@
   "SDL_Event": {
    "pt": "0x38",
    "why": "SDL2 union, sizeof 56 (compiled)"
+  },
+  "CStoreFileItem": {
+   "pt": "0x58",
+   "why": "STOR V1.1 item entries are 0x58 (88 bytes stride in all 45 PT files); CStore::SetResRef PT 0x2b1f70 news/deletes 0x58 (BG 0x1c)"
   }
  },
  "same_as_bg": {
   "CResItem": "CItem::GetItemType/GetFlagsFile/GetAbility and CResItem ability lookup PT 0x1222f0: identical [pRes+0x51/0x58/0x68] accesses",
   "CResSpell": "CSpell::GetAbilityEffect PT 0x2b02e0 reads [pRes+0x68] like BG; CResSpell ctor mapped; same CRes base as CResItem",
   "CGameEffectBase": "CGameEffectBase ctor (1.00) and CGameEffect ctor (0.99) aligned: 38/43 field accesses with delta 0",
-  "CGameEffect": "CGameEffect ctors + GetItemEffect aligned: own fields 0x10c..0x150 delta 0"
+  "CGameEffect": "CGameEffect ctors + GetItemEffect aligned: own fields 0x10c..0x150 delta 0",
+  "SDL_Cursor": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_PrivateGLESData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_WindowUserData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_version": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MessageBoxColor": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Color": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_WindowShapeParams": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_WindowShapeMode": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_WindowShaper": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_WindowEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_UserEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_TouchFingerEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_SysWMmsg": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_SysWMinfo": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_SysWMEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_ShapeDriver": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_QuitEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Palette": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MultiGestureEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MouseWheelEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MouseMotionEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MouseButtonEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MessageBoxData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MessageBoxButtonData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Keysym": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_KeyboardEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_JoyHatEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_JoyDeviceEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_JoyButtonEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_JoyBallEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_JoyAxisEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_GLDriverData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_EGL_VideoData": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_DropEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_DollarGestureEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_DisplayMode": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_VideoDisplay": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_ControllerDeviceEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_ControllerButtonEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_ControllerAxisEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_CommonEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_BlitInfo": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_BlitMap": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_AudioDeviceEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Rect": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Window": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Surface": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Point": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_VideoDevice": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_PixelFormat": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_MessageBoxColorScheme": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_TextInputEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_TextEditingEvent": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "SDL_Event": "SDL 2.0.4, same build revision hg-10001:e12c38730512 in both exes (SDL_GetVersion + revision string)",
+  "CSteamID": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "SteamUGCDetails_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "SteamParamStringArray_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "SteamUGCQueryCompleted_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "SteamUGCRequestUGCDetailsResult_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "SubmitItemUpdateResult_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "CreateItemResult_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "LeaderboardEntry_t": "Steamworks SDK structs: identical interface versions in both exes (STEAMUGC 021, REMOTESTORAGE 016, USERSTATS 013, SteamUser023)",
+  "CCreatureFileHeader": "file format: CRE V1.0 (1088 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CCreatureFileItem": "file format: CRE V1.0 (1088 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CCreatureFileKnownSpell": "file format: CRE V1.0 (1088 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CCreatureFileMemorizedSpell": "file format: CRE V1.0 (1088 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CCreatureFileMemorizedSpellLevel": "file format: CRE V1.0 (1088 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "Item_ability_st": "file format: ITM V1 / SPL V1 (730 + 168 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "Item_effect_st": "file format: ITM V1 / SPL V1 (730 + 168 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "Spell_ability_st": "file format: ITM V1 / SPL V1 (730 + 168 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileHeader": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileContainer": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileCharacterEntryPoint": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileProjectileObject": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileRandomMonsterSpawningPoint": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileRestEncounter": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileSoundObject": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaFileStaticObject": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaSoundsAndMusic": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CAreaUserNote": "file format: AREA V1.0 (208 PT files tile with BG entry sizes, tools/formatcheck.py)",
+  "CStoreFileHeader": "file format: STOR V1.1 header = BG header size 0x9c (45 PT files, tools/stocheck.py); CStore methods aligned 1.00 access header with delta 0",
+  "CStoreFileDrinks": "file format: STOR V1.1 header = BG header size 0x9c (45 PT files, tools/stocheck.py); CStore methods aligned 1.00 access header with delta 0",
+  "CStoreFileSpell": "file format: STOR V1.1 header = BG header size 0x9c (45 PT files, tools/stocheck.py); CStore methods aligned 1.00 access header with delta 0",
+  "CProjectileFileFormat": "file format: PRO V1.0 in PT data (tools/filesigs.py), same format version as BG",
+  "CProjectileAreaFileFormat": "file format: PRO V1.0 in PT data (tools/filesigs.py), same format version as BG",
+  "CProjectileBAMFileFormat": "file format: PRO V1.0 in PT data (tools/filesigs.py), same format version as BG",
+  "WED_WedHeader_st": "file format: WED V1.3 in PT data, same format version as BG",
+  "WED_LayerHeader_st": "file format: WED V1.3 in PT data, same format version as BG",
+  "WED_PolyHeader_st": "file format: WED V1.3 in PT data, same format version as BG",
+  "WED_PolyPoint_st": "file format: WED V1.3 in PT data, same format version as BG",
+  "WED_ScreenSectionList": "file format: WED V1.3 in PT data, same format version as BG",
+  "bamHeader_st": "file format: BAM V1/V2 in PT data, same format versions as BG",
+  "BAMHEADERV2": "file format: BAM V1/V2 in PT data, same format versions as BG",
+  "frameTableEntry_st": "file format: BAM V1/V2 in PT data, same format versions as BG",
+  "sequenceTableEntry_st": "file format: BAM V1/V2 in PT data, same format versions as BG",
+  "mosHeader_st": "file format: MOS V1/V2 in PT data, same format versions as BG",
+  "MOSAICHEADERV2": "file format: MOS V1/V2 in PT data, same format versions as BG",
+  "MOSAICQUAD": "file format: MOS V1/V2 in PT data, same format versions as BG",
+  "UI_Header_st": "file format: CHUI V1 in PT data, same format version as BG",
+  "UI_PanelHeader_st": "file format: CHUI V1 in PT data, same format version as BG",
+  "UI_ControlTableEntry_st": "file format: CHUI V1 in PT data, same format version as BG",
+  "CWorldMapHeader": "file format: WMAP V1.0 in PT data and saves, same format version as BG",
+  "CWorldMapData": "file format: WMAP V1.0 in PT data and saves, same format version as BG",
+  "CWorldMapArea": "file format: WMAP V1.0 in PT data and saves, same format version as BG",
+  "CWorldMapLinks": "file format: WMAP V1.0 in PT data and saves, same format version as BG",
+  "CSavedGamePartyCreature": "file format: GAME V2.0 saves (PT save BALDUR.gam), same format version as BG",
+  "CSavedGameStoredLocation": "file format: GAME V2.0 saves (PT save BALDUR.gam), same format version as BG",
+  "STR_RES": "file format: TLK V1 / KEY V1 / BIFF V1 / PLT V1 file headers, same format versions as BG",
+  "ResFixedHeader_st": "file format: TLK V1 / KEY V1 / BIFF V1 / PLT V1 file headers, same format versions as BG",
+  "PLTHeader_st": "file format: TLK V1 / KEY V1 / BIFF V1 / PLT V1 file headers, same format versions as BG",
+  "TILE_CODE": "file format: TLK V1 / KEY V1 / BIFF V1 / PLT V1 file headers, same format versions as BG",
+  "CStoreFileItem": "BG fields 0x00..0x1c: CStore methods aligned (1.00) access them with delta 0; PT-only tail 0x1c..0x58 (PST trigger strref + flags) stays opaque"
  }
 }
