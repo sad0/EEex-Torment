@@ -170,6 +170,81 @@ PATCHES = {
 		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PTEE); ignored\\n");
 	}
 }'''),
+        # Simulated attack rolls (EEex.GetWeaponHitChance / FakeAttackRoll): Torment's CGameSprite::Hit
+        # (PT 0x4147b0) differs from BG2EE's in four places, applied here.
+        # 1) Torment-only threshold modifiers right after the luck roll
+        ('''	/////////////////////
+	// Damage type mod //
+	/////////////////////
+
+	int nDamageTypeMod = 0;''', '''	////////////////////////////////////////////
+	// EEex-PTEE: Torment threshold modifiers //
+	////////////////////////////////////////////
+
+	{
+		// Attacker animation 0x7703 / 0xF04E / 0xF04F vs a PC target: +3 needed while the party has NTOKEN
+		const ushort nAnimationID = pThis->m_animation.m_animation->m_animationID;
+		if ((nAnimationID == 0x7703 || static_cast<ushort>(nAnimationID + 0x0FB2) <= 1) && target->m_typeAI.m_EnemyAlly == 2)
+		{
+			CResRef ntoken { "NTOKEN" };
+			if (PTEE::p_CGameAIBase_PartyHasItem(pThis, &ntoken))
+			{
+				*nTHAC0VsACDiffOut += 3;
+			}
+		}
+
+		// Undead (non-PC) attacking a PC during the Mortuary truce: +4 needed (global Dead_Truce == 1)
+		if (pThis->m_typeAI.m_General == 4 && pThis->m_typeAI.m_EnemyAlly != 2 && target->m_typeAI.m_EnemyAlly == 2)
+		{
+			EngineVal<CString> sTruce { "Dead_Truce" };
+			if (PTEE::p_CVariableHash_GetValue(&pGame->m_variables, &*sTruce, 0) == 1)
+			{
+				*nTHAC0VsACDiffOut += 4;
+			}
+		}
+	}
+
+	/////////////////////
+	// Damage type mod //
+	/////////////////////
+
+	int nDamageTypeMod = 0;'''),
+        # 2) no attack of opportunity in Torment mode
+        ('''	const byte nAbilityType = static_cast<byte>(pEffectiveWeaponAbility->type);
+	const bool bAllowAttackOfOpportunity = nAbilityType != 2 && nAbilityType != 4 && (pThis->m_equipment.m_selectedWeapon != 10 || pThis->virtual_GetAIType()->m_Class == 20);
+
+	if (bAllowAttackOfOpportunity && target->m_equipment.m_selectedWeapon == 10 && target->virtual_GetAIType()->m_Class != 20)''', '''	const byte nAbilityType = static_cast<byte>(pEffectiveWeaponAbility->type);
+	const bool bAllowAttackOfOpportunity = nAbilityType != 2 && nAbilityType != 4 && (pThis->m_equipment.m_selectedWeapon != 10 || pThis->virtual_GetAIType()->m_Class == 20);
+
+	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST)
+	{
+		// EEex-PTEE: Torment skips the attack of opportunity entirely (no feedback either)
+		*sFormatString = "";
+	}
+	else if (bAllowAttackOfOpportunity && target->m_equipment.m_selectedWeapon == 10 && target->virtual_GetAIType()->m_Class != 20)'''),
+        # 3) state bit 22 does not make the target count as invisible in Torment mode
+        ('''	if (!pThis->virtual_GetCanSeeInvisible() && ((target->GetActiveStats()->m_generalState & 0x10) != 0 || (target->GetActiveStats()->m_generalState & 0x400000) != 0))''',
+         '''	if (!pThis->virtual_GetCanSeeInvisible() && ((target->GetActiveStats()->m_generalState & 0x10) != 0
+		|| (static_cast<int>(*CChitin::p_ENGINE_MODE) != PTEE::ENGINE_MODE_PST && (target->GetActiveStats()->m_generalState & 0x400000) != 0)))'''),
+        # 4) Fist of Iron: +3 to the roll after the hated race bonus
+        ('''		*sFormatString = " +Hated Race:0";
+	}
+
+	*sFeedbackString += sFormatString;''', '''		*sFormatString = " +Hated Race:0";
+	}
+
+	*sFeedbackString += sFormatString;
+
+	//////////////////////////////////
+	// EEex-PTEE: Torment Fist of Iron //
+	//////////////////////////////////
+
+	{
+		const int nFistOfIron = PTEE::p_CGameSprite_HasFistOfIron(pThis) ? 3 : 0;
+		nCurModifiedAttackRoll.intVal += nFistOfIron;
+		sFormatString->Format(" +Fist of Iron:%d", nFistOfIron);
+		*sFeedbackString += sFormatString;
+	}'''),
     ],
 }
 

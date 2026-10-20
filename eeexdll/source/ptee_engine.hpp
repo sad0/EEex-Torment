@@ -21,6 +21,16 @@ namespace PTEE {
 	// Enter activates it). Called first by uiEventMenuStack; true = event consumed. PT 0x459ff0.
 	extern bool (__cdecl* p_uiNavigateEvent)(SDL_Event* pEvent, SDL_Rect* pWindow);
 
+	// To-hit rules of Torment's CGameSprite::Hit (PT 0x4147b0), used by EEex's simulated attack rolls:
+	// CGameAIBase::PartyHasItem (PT 0x174e00), the value of a global variable (PT 0x2b4b80: variable
+	// hash, name, default) and the Fist of Iron test (PT 0x3d0ae0: opcode 382 effect + animation 0x?32).
+	extern int (__fastcall* p_CGameAIBase_PartyHasItem)(CGameAIBase* pThis, CResRef* pItem);
+	extern int (__fastcall* p_CVariableHash_GetValue)(CVariableHash* pThis, CString* pName, int nDefault);
+	extern int (__fastcall* p_CGameSprite_HasFistOfIron)(CGameSprite* pThis);
+
+	// Torment's CChitin::ENGINE_MODE value (absent from the BG2EE EngineMode enum)
+	constexpr int ENGINE_MODE_PST = 3;
+
 	// Fill the pointers above (called first thing from EEex::InitEEex; not named InitBindings, which is the DLL export). Missing patterns are logged.
 	void BindEngine();
 }

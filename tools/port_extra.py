@@ -21,6 +21,9 @@ LABELS = {
     # Torment-only engine functions bound by eeexdll/source/ptee_engine.cpp
     'PTEE-CGameSprite::GetEffectiveAlignment': 0x3c4fe0,
     'PTEE-uiNavigateEvent': 0x459ff0,
+    'PTEE-CGameAIBase::PartyHasItem': 0x174e00,
+    'PTEE-CVariableHash::GetValue': 0x2b4b80,
+    'PTEE-CGameSprite::HasFistOfIron': 0x3d0ae0,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }
