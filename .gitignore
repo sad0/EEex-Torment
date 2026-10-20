@@ -16,3 +16,4 @@ tools/*.json
 !tools/fmap_manual.json
 bindings/generated/
 tools/bindings/__pycache__/
+bindings/LuaBindings-PTEE/*.vcxproj.user

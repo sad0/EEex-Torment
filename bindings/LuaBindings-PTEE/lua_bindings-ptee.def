@@ -1,0 +1,4 @@
+LIBRARY LuaBindings.dll
+EXPORTS
+	InitBindings @1
+	OpenBindings @2

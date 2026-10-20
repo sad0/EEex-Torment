@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5e1d2a6b-7c3f-4f0a-9d21-0a7f3b6c8e11}</ProjectGuid>
+    <RootNamespace>LuaBindingsv2660</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="EEexPTEE"><ILROOT>$(MSBuildProjectDirectory)\..\..\ref\InfinityLoader\</ILROOT><SolutionDir>$(ILROOT)</SolutionDir></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(ILROOT)User_Macros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(ILROOT)User_Macros.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(MSBuildProjectDirectory)\..\..\build\LuaBindings-PTEE\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\..\..\build\LuaBindings-PTEE\obj\</IntDir>
+    <TargetName>LuaBindings</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(MSBuildProjectDirectory)\..\..\build\LuaBindings-PTEE\</OutDir>
+    <TargetName>LuaBindings</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\generated;$(ProjectDir)stub;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)LuaBindings-Core-Shared-Files/headers/LuaBindings;$(SolutionDir)LuaBindings-Core-Shared-Files/headers/LuaBindings_external;$(SolutionDir)LuaBindings-Core-Shared-Files/references/header/include;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>SHARED_MEMORY_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>lua_bindings-ptee.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+    </Link>
+    
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\generated;$(ProjectDir)stub;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)LuaBindings-Core-Shared-Files/headers/LuaBindings;$(SolutionDir)LuaBindings-Core-Shared-Files/headers/LuaBindings_external;$(SolutionDir)LuaBindings-Core-Shared-Files/references/header/include;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <PreprocessorDefinitions>SHARED_MEMORY_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>lua_bindings-ptee.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+    </Link>
+    
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\source\tolua_reference\tolua_event.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\source\tolua_reference\tolua_is.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\source\tolua_reference\tolua_map.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\source\tolua_reference\tolua_push.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\source\tolua_reference\tolua_to.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\source\common.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\ptee_overrides.cpp" />
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\source\util.cpp" />
+    <ClCompile Include="..\generated\Baldur_generated_internal_pointers.cpp" />
+    <ClCompile Include="..\generated\EEexLua_generated.cpp" />
+    <ClCompile Include="..\generated\EEexLua_generated_baseclass_offsets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings\EEexLua_generated.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings\util.hpp" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings_external\gl\eglew.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings_external\gl\glew.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings_external\gl\glxew.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\headers\LuaBindings_external\gl\wglew.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\lauxlib.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\lua.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\lua.hpp" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\luaconf.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\lualib.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\tolua.h" />
+    <ClInclude Include="$(ILROOT)LuaBindings-Core-Shared-Files\references\header\include\tolua_reference\tolua_event.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COPY_TO_GAME.ps1" />
+    <None Include="lua_bindings-ptee.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
