@@ -1,0 +1,12 @@
+; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db
+; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,
+;   Hook-drawItem()-CheckScrollbarContentHeight, Hook-drawItem()-FixForcedScrollbarDivideByZero2
+
+[CChitin::OnResizeWindow]
+Pattern=48896C2418565741564883EC50488BA9
+
+[CRes::Demand]
+Pattern=40534883EC20488BD94885C97458
+
+[CResFont::GetFont]
+Pattern=40534883EC20488BD9E852F4

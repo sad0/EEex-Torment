@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\common.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\coordinate_util.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\debug_window.cpp" />
+    <ClCompile Include="generated\src\EEex.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\engine_function_names.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\font_util.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\im_rolling_line_graph.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\im_tracer.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\lua_util.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\main.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\menu_util.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\profiler.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\script_folder.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\time_util.cpp" />
+    <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\util.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\implot.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\implot_demo.cpp" />
+    <ClCompile Include="$(ILROOT)lib_source\ImGui\implot_items.cpp" />
+    <ClCompile Include="generated\Baldur_generated_internal_pointers.cpp" />
+    <ClCompile Include="source\ptee_stubs.cpp" />
+    <ClCompile Include="generated\EEexLua_generated.cpp" />
+    <ClCompile Include="generated\EEexLua_generated_baseclass_offsets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\common\eeex_api.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\coordinate_util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\debug_window.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\EEex.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\EEexLua_generated.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\engine_function_names.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\font_util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\im_rolling_line_graph.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\im_tracer.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\lua_util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\menu_util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\profiler.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\script_folder.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\time_util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\uncap_fps.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex\util.hpp" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex_external\gl\eglew.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex_external\gl\glew.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex_external\gl\glxew.h" />
+    <ClInclude Include="$(ILROOT)EEex-Core-Shared-Files\headers\EEex_external\gl\wglew.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imconfig.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imgui.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imgui_internal.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\implot.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\implot_internal.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imstb_rectpack.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imstb_textedit.h" />
+    <ClInclude Include="$(ILROOT)lib_headers\imgui\imstb_truetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COPY_TO_GAME.ps1" />
+    <None Include="eeex-ptee.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="$(ILROOT)EEex-Core-Shared-Files\source\profiler_assembly.asm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5d96a1b5-6b58-49d5-92c1-8164041dd87e}</ProjectGuid>
+    <RootNamespace>EEexv2660</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Label="EEexPTEE"><ILROOT>$(MSBuildProjectDirectory)\..\ref\InfinityLoader\</ILROOT><SolutionDir>$(ILROOT)</SolutionDir></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(ILROOT)User_Macros.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(ILROOT)User_Macros.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>EEex</TargetName>
+    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\</OutDir>
+    <TargetName>EEex</TargetName>
+    <IntDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SHARED_MEMORY_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dwmapi.lib;ntdll.lib;opengl32.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderUtil.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>eeex-ptee.def</ModuleDefinitionFile>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+    </Link>
+    
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SHARED_MEMORY_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d9.lib;dwmapi.lib;ntdll.lib;opengl32.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderUtil.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>eeex-ptee.def</ModuleDefinitionFile>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+    </Link>
+    
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

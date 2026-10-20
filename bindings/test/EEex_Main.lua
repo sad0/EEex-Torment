@@ -13,8 +13,16 @@ local ok, err = pcall(function()
 	EEex_DoFile("EEex_Assembly_Patch")
 	-- Same as EEex_Main.lua: redirect the engine's tolua event functions to the bindings' versions
 	EEex_OpenLuaBindings("LuaBindings", function() EEex_DoFile("EEex_LuaBindings_Patch") end)
+	-- Phase 4: EEex.dll (C++ core) for Torment
+	EEex_OpenLuaBindings("EEex")
+	EEex.OnTargetExecutableInitialized()
 end)
-log("EEex_OpenLuaBindings(LuaBindings)", ok, err)
+log("EEex_OpenLuaBindings(LuaBindings + EEex)", ok, err)
+if ok then
+	local n = 0
+	for _ in pairs(EEex) do n = n + 1 end
+	log("EEex table entries:", n, "GetMicroseconds:", EEex.GetMicroseconds())
+end
 if not ok then return end
 
 local fetchString -- set when the engine registers Infinity_FetchString
@@ -64,6 +72,16 @@ local function dumpParty(game)
 		end
 	end
 	log("party gold m_gameSave.m_nPartyGold =", game.m_gameSave.m_nPartyGold)
+	-- EEex.dll functions working on engine structs
+	local obj = getObject(game.m_characters:get(0))
+	local sprite = EEex_CastUD(obj, "CGameSprite")
+	log("EEex.FormatPointerAsEngine:", EEex.FormatPointerAsEngine(EEex_UDToPtr(sprite)))
+	log("EEex.CanAttackWithLeftHand(party[0]):", EEex.CanAttackWithLeftHand(sprite))
+	-- PTEE CGameSpriteEquipment: items pointer + selected slot (ITMSLOTS: 10 = FIST, 35-38 = WEAPONS)
+	local eq = sprite.m_equipment
+	log("m_equipment.m_selectedWeapon:", eq.m_selectedWeapon, "ability:", eq.m_selectedWeaponAbility,
+		"m_pSprite==sprite:", EEex_UDToPtr(eq.m_pSprite) == EEex_UDToPtr(sprite))
+	log("m_equipment.m_items:", pcall(function() return tostring(eq.m_items) end))
 end
 
 local engineDone, partyDone, ticks = false, false, 0
