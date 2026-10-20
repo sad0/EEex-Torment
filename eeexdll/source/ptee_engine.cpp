@@ -5,6 +5,9 @@
 namespace PTEE {
 
 	byte (__fastcall* p_CGameSprite_GetEffectiveAlignment)(CGameSprite* pSprite, CAIObjectType* pType) = nullptr;
+	int (__fastcall* p_CGameEffect_CheckSave)(CGameEffect* pThis, CGameSprite* pTarget, byte* saveVSDeathRollRaw,
+		byte* saveVSWandsRollRaw, byte* saveVSPolyRollRaw, byte* saveVSBreathRollRaw, byte* saveVSSpellRollRaw, byte* resistMagicRollRaw) = nullptr;
+	bool (__cdecl* p_uiNavigateEvent)(SDL_Event* pEvent, SDL_Rect* pWindow) = nullptr;
 
 	template<typename OutType>
 	static void bind(const String& patternName, OutType& pointerOut) {
@@ -19,5 +22,12 @@ namespace PTEE {
 
 	void BindEngine() {
 		bind(TEXT("PTEE-CGameSprite::GetEffectiveAlignment"), p_CGameSprite_GetEffectiveAlignment);
+		bind(TEXT("PTEE-uiNavigateEvent"), p_uiNavigateEvent);
+
+		void** pBaseEffectVtbl = nullptr;
+		bind(TEXT("Data-CGameEffect::vftable"), pBaseEffectVtbl);
+		if (pBaseEffectVtbl != nullptr) {
+			p_CGameEffect_CheckSave = reinterpret_cast<decltype(p_CGameEffect_CheckSave)>(pBaseEffectVtbl[7]);
+		}
 	}
 }

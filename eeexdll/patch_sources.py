@@ -59,6 +59,84 @@ PATCHES = {
 				break;
 			}
 		}'''),
+        # CGameEffect::CheckSave: Torment's saving-throw code differs from BG2EE's (similarity 0.41);
+        # EEex's BG reimplementation is replaced by a call to PT's own base implementation.
+        ('@body int EEex::Override_CGameEffect_CheckSave(', '''{
+	// EEex-PTEE: forward to Torment's own CGameEffect::CheckSave (PT rules)
+	return PTEE::p_CGameEffect_CheckSave(pEffect, pTarget, saveVSDeathRollRaw, saveVSWandsRollRaw, saveVSPolyRollRaw,
+		saveVSBreathRollRaw, saveVSSpellRollRaw, resistMagicRollRaw);
+}'''),
+        # uiEventMenuStack, Torment version (PT 0x457b40): keyboard/controller navigation first, the overlay
+        # menu swallows events, controller button A presses skip stacked menus, and some handled events are
+        # still passed to the engine (quit/window, mouse motion, user events, Alt+F4/Enter, Cmd+Q/F/H/M,
+        # Ctrl). EEex's capture item lifetime fix is kept.
+        ('@body bool __cdecl EEex::Override_uiEventMenuStack(', '''{
+	CBaldurChitin *const pChitin = *p_g_pBaldurChitin;
+
+	if (p_uiIsHidden() && pChitin->pActiveEngine == pChitin->m_pEngineWorld) {
+		return false;
+	}
+
+	// Fix: capture item might be deleted by the event stack processing (see upstream comment)
+	exInUseCaptureItemDeleted = false;
+	exInUseCaptureItem = p_capture->item;
+
+	bool handled = false;
+	int nIndex = getMenuStackTop();
+
+	if (PTEE::p_uiNavigateEvent(pEvent, pWindow)) {
+		handled = true;
+	}
+	else if (*p_g_overlayMenu != nullptr) {
+		p_eventMenu(*p_g_overlayMenu, pEvent, pWindow);
+		handled = true;
+	}
+	else {
+		for (uiMenu* pMenu = getStackMenu(nIndex); pMenu != nullptr; pMenu = getStackMenu(--nIndex)) {
+			// SDL_CONTROLLERBUTTONDOWN of button 0 (A): not offered to stacked menus (Torment)
+			if (static_cast<uint32_t>(pEvent->type) == 0x651 && reinterpret_cast<const byte*>(pEvent)[0xC] == 0) {
+				continue;
+			}
+			if (p_eventMenu(pMenu, pEvent, pWindow)) {
+				handled = true;
+				break;
+			}
+		}
+	}
+
+	if (handled) {
+		// Torment passes these through to the engine even when a menu handled them
+		const uint32_t type = static_cast<uint32_t>(pEvent->type);
+		if (type > 0x301) {
+			if (type == 0x400 || (type >= 0x8003 && type <= 0x8006)) {
+				handled = false;
+			}
+		}
+		else if (type >= 0x300) {
+			const int32_t sym = static_cast<int32_t>(pEvent->key.keysym.sym);
+			const uint16_t mod = static_cast<uint16_t>(pEvent->key.keysym.mod);
+			if (sym == 0x40000046 || sym == 0x400000E0 || sym == 0x400000E4) {
+				handled = false;
+			}
+			else if ((sym == 0x4000003D || sym == 0x0D || sym == 0x40000058) && (mod & 0x300) != 0) {
+				handled = false;
+			}
+			else if ((sym == 0x71 || sym == 0x66 || sym == 0x68 || sym == 0x6D) && (mod & 0xC00) != 0) {
+				handled = false;
+			}
+		}
+		else if (type == 0x100 || type == 0x200) {
+			handled = false;
+		}
+	}
+
+	if (exInUseCaptureItemDeleted) {
+		p_free(exInUseCaptureItem);
+	}
+	exInUseCaptureItem = nullptr;
+
+	return handled;
+}'''),
     ],
 }
 
@@ -66,6 +144,18 @@ os.makedirs(OUT, exist_ok=True)
 for name, reps in PATCHES.items():
     s = open(os.path.join(SRC, name), encoding='utf-8-sig').read()
     for old, new in reps:
+        if old.startswith('@body '):
+            # replace the whole body of the function whose definition starts with this signature
+            sig = old[len('@body '):]
+            if s.count(sig) != 1:
+                raise SystemExit(f'{name}: function signature matches {s.count(sig)} times: {sig}')
+            i = s.index(sig); j = s.index('{', i); depth = 0
+            for k in range(j, len(s)):
+                depth += s[k] == '{'; depth -= s[k] == '}'
+                if depth == 0:
+                    break
+            s = s[:j] + new + s[k + 1:]
+            continue
         n = s.count(old)
         if n != 1:
             raise SystemExit(f'{name}: patch matches {n} times:\n{old}')

@@ -20,6 +20,7 @@ FUNCS = {
 LABELS = {
     # Torment-only engine functions bound by eeexdll/source/ptee_engine.cpp
     'PTEE-CGameSprite::GetEffectiveAlignment': 0x3c4fe0,
+    'PTEE-uiNavigateEvent': 0x459ff0,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }

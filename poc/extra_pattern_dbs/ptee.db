@@ -14,6 +14,9 @@ Pattern=40534883EC20488BD9E852F4
 [PTEE-CGameSprite::GetEffectiveAlignment]
 Pattern=48895C2418574883EC3083
 
+[PTEE-uiNavigateEvent]
+Pattern=48895C2408574883EC30488B05D7EF
+
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F
 
