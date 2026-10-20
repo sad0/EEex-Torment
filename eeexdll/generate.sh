@@ -8,7 +8,7 @@ python "$R/scripts/generate_bindings/generate_bindings_main.py" -mode=GenerateHe
  -alreadyDefinedUsertypesFile="$C/already_defined_usertypes.txt" \
  -bindingsOutFile=./EEexLua_generated.cpp -bindingsPreludeFile="$C/bindings_prelude.txt" \
  -dllName=EEex.dll -fixupFile="$P/fixup_pt.py" -ignoreHeaderFile="$C/ignore_header_types.txt" \
- "-inFiles=NO_BINDINGS;NO_HARDCODED_BINDINGS:$C/manual_types.txt,NO_BINDINGS;NO_HARDCODED_BINDINGS:$C/manual_reimplementations_import.txt,NO_BINDINGS;NO_HARDCODED_BINDINGS:${HDR:-$P}/Torment-v3.2.2.0.h,$C/bindings.txt" \
+ "-inFiles=NO_BINDINGS;NO_HARDCODED_BINDINGS:$P/manual_types_pt.txt,NO_BINDINGS;NO_HARDCODED_BINDINGS:$C/manual_reimplementations_import.txt,NO_BINDINGS;NO_HARDCODED_BINDINGS:${HDR:-$P}/Torment-v3.2.2.0.h,$C/bindings.txt" \
  -outFile=./Baldur_generated.h -packingFile="$P/packing_pt.txt" -preludeFile="$C/prelude_eeex.txt" \
  -printFuncWideString=FPrintT -suffixFile="$C/suffix_eeex.txt" \
  -wantedFiles="$P/wanted_types_pt.txt,$C/wanted_types_eeex.txt" > gen.log 2>&1

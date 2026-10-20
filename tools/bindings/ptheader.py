@@ -19,8 +19,12 @@ MANUALF = json.load(open(os.path.join(HERE, 'manual_fields.json'))).get('fields'
 PROVEN = {'evidence', 'manual'}
 
 
+# PTEE_STRICT_ALLOW=S1,S2: structs kept as solved even in strict mode (audit one area at a time)
+STRICT_ALLOW = set(filter(None, os.environ.get('PTEE_STRICT_ALLOW', '').split(',')))
+
+
 def visible(lay, it):
-    if not STRICT:
+    if not STRICT or lay.get('_name') in STRICT_ALLOW:
         return True
     if it.get('how') in PROVEN:
         return True
@@ -69,6 +73,8 @@ def rewrite(m):
     kind, cpp, align, name, _, bases, body = m.groups()
     name = name.strip()
     lay = L.get(name)
+    if lay:
+        lay["_name"] = name
     if not lay or kind != 'struct':
         return m.group(0)
     items = lay['items']

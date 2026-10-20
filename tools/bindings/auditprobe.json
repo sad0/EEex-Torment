@@ -1435,27 +1435,6 @@
   "pt": "0x5a",
   "votes": []
  },
- "CGameSpriteEquipment.m_items": {
-  "status": "nosites",
-  "how": "assumed",
-  "bg": "0x0",
-  "pt": "0x0",
-  "votes": []
- },
- "CGameSpriteEquipment.m_selectedWeapon": {
-  "status": "nosites",
-  "how": "assumed",
-  "bg": "0x138",
-  "pt": "0x138",
-  "votes": []
- },
- "CGameSpriteEquipment.m_selectedWeaponAbility": {
-  "status": "nosites",
-  "how": "assumed",
-  "bg": "0x13a",
-  "pt": "0x13a",
-  "votes": []
- },
  "CMessageSpriteEquipment.m_equipment": {
   "status": "nosites",
   "how": "assumed",

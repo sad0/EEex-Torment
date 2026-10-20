@@ -41,6 +41,14 @@
    "m_lVertSortBack": {
     "pt": "0xc48",
     "why": "fieldprobe: list head [rcx+0xc50] vs BG [rcx+0xc70]"
+   },
+   "m_variables": {
+    "pt": "0xfa0",
+    "why": "fieldprobe: 40 aligned sites [area+0xfa0] vs BG 0xf80; +0x20 matches evidence m_nScreenFlash 0xfcc (BG 0xfac)"
+   },
+   "m_namedCreatures": {
+    "pt": "0xfb0",
+    "why": "fieldprobe: 2 aligned sites [area+0xfb0] vs BG 0xf90"
    }
   },
   "CInfinity": {
@@ -112,12 +120,150 @@
     "pt": "0x18",
     "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
    }
+  },
+  "CDerivedStatsTemplate": {
+   "m_bPreventSpellProtectionEffects": {
+    "pt": "0x288",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bImmunityToBackStab": {
+    "pt": "0x28c",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nLockPickingMTPBonus": {
+    "pt": "0x290",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nMoveSilentlyMTPBonus": {
+    "pt": "0x294",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nTrapsMTPBonus": {
+    "pt": "0x298",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nPickPocketMTPBonus": {
+    "pt": "0x29c",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nHideInShadowsMTPBonus": {
+    "pt": "0x2a0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nDetectIllusionMTPBonus": {
+    "pt": "0x2a4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nSetTrapsMTPBonus": {
+    "pt": "0x2a8",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bPreventAISlowDown": {
+    "pt": "0x2ac",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nExistanceDelayOverride": {
+    "pt": "0x2b0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bAnimationOnlyHaste": {
+    "pt": "0x2b4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bNoPermanentDeath": {
+    "pt": "0x2b8",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bImmuneToTurnUndead": {
+    "pt": "0x2bc",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nChaosShield": {
+    "pt": "0x2c0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bNPCBump": {
+    "pt": "0x2c4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bUseAnyItem": {
+    "pt": "0x2c8",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nAssassinate": {
+    "pt": "0x2cc",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bSexChanged": {
+    "pt": "0x2d0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nSpellFailureInnate": {
+    "pt": "0x2d4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bImmuneToTracking": {
+    "pt": "0x2d8",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bDeadMagic": {
+    "pt": "0x2dc",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bImmuneToTimeStop": {
+    "pt": "0x2e0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bImmuneToSequester": {
+    "pt": "0x2e4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nStoneSkinsGolem": {
+    "pt": "0x2e8",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_nLevelDrain": {
+    "pt": "0x2ec",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bDoNotDraw": {
+    "pt": "0x2f0",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   },
+   "m_bIgnoreDrainDeath": {
+    "pt": "0x2f4",
+    "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+   }
+  },
+  "CGameObject": {
+   "m_objectType": {
+    "pt": "0x8",
+    "why": "same object-type constants written/compared at byte [obj+8] in both exes (ctor mov 0x14/0xa/0x1e/0xc8/0x70/0x50; cmp 0x31 SPRITE x12 in PT)"
+   }
   }
  },
  "sizes": {
   "CGameSpriteEquipment": {
    "pt": "0x20",
    "why": "CGameSpriteEquipment::ClearMarshal PT 0x3c09a0: items via [rcx] pointer (slot count from ITMSLOTS rules table), selected weapon byte [rcx+8], ability word [rcx+0xa], [rcx+0x10]=0 at end, sprite [rcx+0x18] passed to CItem unequip"
+  },
+  "CDerivedStatsTemplate": {
+   "pt": "0x2f8",
+   "why": "CDerivedStats operator=/operator+=/BonusInit aligned (0.97): BG disp 0x1c0..0x278 -> +12, 0x280..0x2ec -> +8; BG 0x27c has no PT counterpart"
+  },
+  "CMessageSpriteEquipment": {
+   "pt": "0x30",
+   "why": "CMessage (0x10) + PTEE CGameSpriteEquipment (0x20)"
+  },
+  "SDL_Event": {
+   "pt": "0x38",
+   "why": "SDL2 union, sizeof 56 (compiled)"
   }
+ },
+ "same_as_bg": {
+  "CResItem": "CItem::GetItemType/GetFlagsFile/GetAbility and CResItem ability lookup PT 0x1222f0: identical [pRes+0x51/0x58/0x68] accesses",
+  "CResSpell": "CSpell::GetAbilityEffect PT 0x2b02e0 reads [pRes+0x68] like BG; CResSpell ctor mapped; same CRes base as CResItem",
+  "CGameEffectBase": "CGameEffectBase ctor (1.00) and CGameEffect ctor (0.99) aligned: 38/43 field accesses with delta 0",
+  "CGameEffect": "CGameEffect ctors + GetItemEffect aligned: own fields 0x10c..0x150 delta 0"
  }
 }

@@ -81,8 +81,18 @@ for b in list(ev):
                 ev[cands[0]][o][a] += n
 
 pt_off = collections.defaultdict(dict)   # s -> item name -> pt offset
-pt_size = {}
+class _SizeDict(dict):
+    """pt_size; PTEE_TRACE_SIZE=<struct> prints where that struct's size gets set."""
+    def __setitem__(self, k, v):
+        if k == os.environ.get('PTEE_TRACE_SIZE'):
+            import traceback
+            print('size', k, v, ''.join(traceback.format_stack(limit=3)[:-1]), file=sys.stderr)
+        dict.__setitem__(self, k, v)
+
+
+pt_size = _SizeDict()
 how = collections.defaultdict(dict)
+VOTES = collections.defaultdict(dict)   # s -> item -> evidence vote count (tie-break between evidence items)
 
 # hand-verified fields/sizes (manual_fields.json): {"fields": {S: {f: off}}, "sizes": {S: size}}
 MANUAL = {'fields': {}, 'sizes': {}}
@@ -101,6 +111,12 @@ for _s, _fs in MANUAL.get('fields', {}).items():
             MSIZE[_s][_f] = int(_v['size'], 16)
 for _s, _v in MANUAL.get('sizes', {}).items():
     pt_size[_s] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
+# whole structs verified identical to BG (aligned constructors/accessors): {"same_as_bg": {S: why}}
+for _s in MANUAL.get('same_as_bg', {}):
+    for _f in own_items(_s):
+        if _f.name not in pt_off[_s]:
+            pt_off[_s][_f.name] = _f.off; how[_s][_f.name] = 'manual'
+    pt_size.setdefault(_s, T.structs[_s].size)
 
 
 def flat(s, r, depth=0):
@@ -158,6 +174,7 @@ def solve_struct(s):
             b = best(cand)
             if b is not None:
                 pt_off[s][f.name] = b; how[s][f.name] = 'evidence'; changed = True
+                VOTES[s][f.name] = cand[b]
     return changed
 
 
@@ -197,6 +214,40 @@ def interpolate(s):
     return changed
 
 
+_al = {}
+PACKED = set()
+for _l in open(os.path.join(HERE, '..', '..', 'ref', 'InfinityLoader', 'Core-Shared-Files', 'generate_bindings', 'in', 'packing.txt')):
+    if _l.strip():
+        PACKED.add(_l.rsplit(' ', 1)[0].strip())
+
+
+def align_of_type(tstr, depth=0):
+    t = T.parse_type(tstr)
+    while t[0] == 'arr':
+        t = t[1]
+    if t[0] == 'ptr':
+        return 8
+    name = t[1]
+    if name in T.structs and depth < 20:
+        if name not in _al:
+            _al[name] = 1
+            a = 1
+            b = primary_base(name)
+            if b:
+                a = max(a, align_of_type(b, depth + 1))
+            for f in own_items(name):
+                a = max(a, align_of_type(f.type, depth + 1) if f.type != '?' else 1)
+            _al[name] = a
+        return _al[name]
+    prim = {'char': 1, 'bool': 1, '__int8': 1, 'unsigned __int8': 1, 'byte': 1, 'sbyte': 1, '__int16': 2, 'unsigned __int16': 2,
+            'short': 2, 'ushort': 2, 'int': 4, 'unsigned int': 4, 'uint': 4, '__int32': 4, 'unsigned __int32': 4, 'float': 4,
+            'long': 4, 'unsigned long': 4, 'double': 8, '__int64': 8, 'unsigned __int64': 8, 'size_t': 8}
+    if name in prim:
+        return prim[name]
+    # unknown named types (templates, lists, handles): assume pointer alignment when large
+    return 8 if re.search(r'List|Array|Map|<|\*|CString|Plex|POSITION', name) else 4
+
+
 def adjacency(s):
     """BG-adjacent neighbours: next = this + PT size(this), when one of them is known."""
     items = own_items(s)
@@ -209,9 +260,13 @@ def adjacency(s):
         if sa is None:
             continue
         if a.name in pt_off[s] and b.name not in pt_off[s]:
-            pt_off[s][b.name] = pt_off[s][a.name] + sa; how[s][b.name] = 'adjacent'; changed = True
+            p = pt_off[s][a.name] + sa
+            if s in PACKED or p % align_of_type(b.type) == 0:
+                pt_off[s][b.name] = p; how[s][b.name] = 'adjacent'; changed = True
         elif b.name in pt_off[s] and a.name not in pt_off[s]:
-            pt_off[s][a.name] = pt_off[s][b.name] - sa; how[s][a.name] = 'adjacent'; changed = True
+            p = pt_off[s][b.name] - sa
+            if s in PACKED or p % align_of_type(a.type) == 0:
+                pt_off[s][a.name] = p; how[s][a.name] = 'adjacent'; changed = True
     return changed
 
 
@@ -240,7 +295,9 @@ def infer_sizes2():
             last = items[-1]
             u, n = item_struct(last)
             lsz = MSIZE[s].get(last.name) or ((pt_size.get(u) * n if u in pt_size else None) if u else last.size)
-            if lsz is not None:
+            # only trust the last item if it is the furthest placed one and lies past the base
+            ok_order = pt_off[s][last.name] >= max(pt_off[s].values()) and                 (not b or pt_off[s][last.name] >= (pt_size.get(b) or 0))
+            if lsz is not None and ok_order:
                 tail = st.size - (last.off + last.size)
                 if 0 <= tail < 16:
                     pt_size[s] = pt_off[s][last.name] + lsz + tail; changed = True
@@ -286,40 +343,6 @@ def isize(s, f):
     return f.size
 
 
-_al = {}
-PACKED = set()
-for _l in open(os.path.join(HERE, '..', '..', 'ref', 'InfinityLoader', 'Core-Shared-Files', 'generate_bindings', 'in', 'packing.txt')):
-    if _l.strip():
-        PACKED.add(_l.rsplit(' ', 1)[0].strip())
-
-
-def align_of_type(tstr, depth=0):
-    t = T.parse_type(tstr)
-    while t[0] == 'arr':
-        t = t[1]
-    if t[0] == 'ptr':
-        return 8
-    name = t[1]
-    if name in T.structs and depth < 20:
-        if name not in _al:
-            _al[name] = 1
-            a = 1
-            b = primary_base(name)
-            if b:
-                a = max(a, align_of_type(b, depth + 1))
-            for f in own_items(name):
-                a = max(a, align_of_type(f.type, depth + 1) if f.type != '?' else 1)
-            _al[name] = a
-        return _al[name]
-    prim = {'char': 1, 'bool': 1, '__int8': 1, 'unsigned __int8': 1, 'byte': 1, 'sbyte': 1, '__int16': 2, 'unsigned __int16': 2,
-            'short': 2, 'ushort': 2, 'int': 4, 'unsigned int': 4, 'uint': 4, '__int32': 4, 'unsigned __int32': 4, 'float': 4,
-            'long': 4, 'unsigned long': 4, 'double': 8, '__int64': 8, 'unsigned __int64': 8, 'size_t': 8}
-    if name in prim:
-        return prim[name]
-    # unknown named types (templates, lists, handles): assume pointer alignment when large
-    return 8 if re.search(r'List|Array|Map|<|\*|CString|Plex|POSITION', name) else 4
-
-
 def consistency():
     dropped = 0
     for s in T.structs:
@@ -337,7 +360,10 @@ def consistency():
                 g = ok[-1]
                 if pt_off[s][g.name] + isize(s, g) > p:
                     # overlap / order violation: keep the better-ranked one
-                    if RANK.get(how[s].get(f.name), 5) < RANK.get(how[s].get(g.name), 5):
+                    rf, rg = RANK.get(how[s].get(f.name), 5), RANK.get(how[s].get(g.name), 5)
+                    if rf == rg == 0:
+                        rf, rg = -VOTES[s].get(f.name, 0), -VOTES[s].get(g.name, 0)
+                    if rf < rg:
                         del pt_off[s][g.name]; ok.pop(); dropped += 1
                     else:
                         del pt_off[s][f.name]; dropped += 1; continue

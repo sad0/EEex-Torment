@@ -45520,8 +45520,8 @@ struct __cppobj CChitin
 	int m_bIsTouchUI;
 	int m_bUseBGRA;
 	int m_bRenderTilesLinear;
+	nobinding unsigned __int8 _ptpad_1d8[48];
 	CString m_sFontName;
-	nobinding unsigned __int8 _ptpad_1e0[48];
 	int m_nFullFrameTimer;
 	int m_nGameTimer;
 	int m_nRenderTimer;
@@ -45639,7 +45639,9 @@ struct __declspec(align(8)) CPlex
 /* 5407 */
 struct __cppobj CWarp : CObject
 {
-	nobinding unsigned __int8 _ptpad_8[72];
+	CWarp *pLastEngine;
+	CObList lTimers;
+	nobinding unsigned __int8 _ptpad_48[8];
 };
 
 /* 5458 */
@@ -45731,8 +45733,9 @@ struct __cppobj CVidMode
 	unsigned int m_dwGreenMask;
 	unsigned int m_dwBlueMask;
 	unsigned __int8 m_bFadeTo;
+	nobinding unsigned __int8 _ptpad_19[3];
 	unsigned __int8 m_nFade;
-	nobinding unsigned __int8 _ptpad_1a[6];
+	nobinding unsigned __int8 _ptpad_1d[3];
 	SDL_Window *m_pWindow;
 	void *m_glContext;
 	CVidBitmap m_circle;
@@ -45760,15 +45763,17 @@ struct __cppobj CVidMode
 	int bPointerEnabled;
 	CRect rPointerStorage;
 	CRect m_rLockedRect;
-	nobinding unsigned __int8 _ptpad_1c4[8];
+	nobinding unsigned __int8 _ptpad_1c4[4];
 	int m_lastCursorFrame;
 	int m_lastCursorSequence;
 	int m_lastCursorNumber;
 	unsigned int m_lastCursorFlags;
 	unsigned int m_lastCursorResId;
-	nobinding unsigned __int8 _ptpad_1e0[20];
+	nobinding unsigned __int8 _ptpad_1dc[4];
+	SDL_Cursor *m_hwCursor;
+	SDL_Surface *m_hwCursorSurface;
 	int nVRamSurfaces;
-	nobinding unsigned __int8 _ptpad_1f8[296];
+	nobinding unsigned __int8 _ptpad_1f4[300];
 };
 
 /* 5507 */
@@ -47376,7 +47381,13 @@ struct /*VFT*/ CTypedPtrList<CPtrList,CAIId *>_vtbl
 /* 5584 */
 struct __cppobj CRuleTables
 {
-	nobinding unsigned __int8 _ptpad_0[1136];
+	nobinding unsigned __int8 _ptpad_0[744];
+	C2DArray m_tReactionModCharisma;
+	C2DArray m_tReactionModReputation;
+	C2DArray m_tReputationMod;
+	CAIIdList m_lNoDecodeList;
+	C2DArray m_tProficiencySlots;
+	C2DArray m_tProficiencySlotsMax;
 	C2DArray m_tSkillPointsRace;
 	C2DArray m_tSkillPointsDex;
 	C2DArray m_tSkillPointsBard;
@@ -47461,10 +47472,10 @@ struct __cppobj CRuleTables
 	C2DArray m_tNPCLevel25;
 	C2DArray m_tDeathSounds;
 	C2DArray m_tAlignment;
+	nobinding unsigned __int8 _ptpad_1740[56];
 	C2DArray m_tReputationStoreMod;
 	C2DArray m_tReputationStart;
 	C2DArray m_tXPCap;
-	nobinding unsigned __int8 _ptpad_17e8[56];
 	C2DArray m_tWeaponSpecialization;
 	C2DArray m_tWeaponAttacks;
 	C2DArray m_tLore;
@@ -48093,6 +48104,7 @@ struct __cppobj __declspec(align(8)) CGameSave
 /* 5711 */
 struct CGameOptions
 {
+	nobinding unsigned __int8 _ptpad_0[4];
 	unsigned int m_gore;
 	unsigned int m_goreOption;
 	unsigned int m_scrollSpeed;
@@ -48149,63 +48161,7 @@ struct CGameOptions
 	int m_bVeryLowPerformance;
 	int m_bDisplayExtraCombatInfo;
 	unsigned __int16 m_nAreaEffectsDensity;
-	int m_bDuplicateFloatingText;
-	unsigned __int8 m_nTilesPrecachePercent;
-	int m_bColorCircles;
-	int m_bClassicCircles;
-	int m_nCombatUI;
-	int m_bOverConfirmEverything;
-	int m_bShowLearnableSpells;
-	int m_bShowTriggersOnTab;
-	int m_bShowBlackSpace;
-	int m_bUseNearestNeighbourScaling;
-	int m_showAOE;
-	int m_bEquipmentComparison;
-	int m_bDisableCastingGlows;
-	int m_bLowMemSounds1;
-	int m_bLowMemSounds2;
-	int m_bDisableVEFVidCells;
-	int m_bDisableDisplayText;
-	int m_bMidLevelBrighten;
-	int m_bHighLevelBrighten;
-	unsigned __int16 m_nAreaEffectsRefreshProb;
-	int m_bEnhancedPathSearch;
-	int m_bPausingMap;
-	int m_bExtraFeedback;
-	int m_bFilterGames;
-	int m_bAllLearnSpellInfo;
-	int m_bDisableStaticsDuringCombat;
-	int m_bDisableFootstepsDuringCombat;
-	int m_bDisablePlacedSoundsDuringCombat;
-	int m_nSuperDesperateSpeedAttempt;
-	int m_bAutomatedSpeedAdjusting;
-	int m_bAutomatedGraphicsTranslucentShadows;
-	int m_bAutomatedVeryLowPerformance;
-	int m_bAutomatedLowPerformance;
-	int m_bAutomatedDisableBrightest;
-	int m_bAutomatedLimitTransparency;
-	int m_bAutomatedDisableCastingGlows;
-	int m_bAutomatedDisableVEFVidCells;
-	int m_bAutomatedMidLevelBrighten;
-	int m_bAutomatedHighLevelBrighten;
-	int m_bAutomatedSoundFootStepsOn;
-	int m_bAutomatedAttackSounds;
-	int m_bAutomatedUse3dAnimations;
-	int m_bAutomatedDisableVVCSounds;
-	int m_bAutomatedFasterBlur;
-	int m_nCutAutomatedGraphicsTranslucentShadows;
-	int m_nCutAutomatedVeryLowPerformance;
-	int m_nCutAutomatedLowPerformance;
-	int m_nCutAutomatedDisableBrightest;
-	int m_nCutAutomatedLimitTransparency;
-	int m_nCutAutomatedDisableCastingGlows;
-	int m_nCutAutomatedDisableVEFVidCells;
-	int m_nCutAutomatedMidLevelBrighten;
-	int m_nCutAutomatedHighLevelBrighten;
-	int m_nCutAutomatedSoundFootStepsOn;
-	int m_nCutAutomatedAttackSounds;
-	int m_nCutAutomatedUse3dAnimations;
-	int m_nCutAutomatedDisableVVCSounds;
+	nobinding unsigned __int8 _ptpad_e2[234];
 	int m_nCutAutomatedFasterBlur;
 	int m_bPCOnlyCombatMode;
 	int m_bFullyDisableNonVisibleDuringCombat;
@@ -48245,6 +48201,7 @@ struct CGameOptions
 	int m_bEnableMPChatMenu;
 	int m_bExpireTraps;
 	int m_bAreaMapZoom;
+	nobinding unsigned __int8 _ptpad_268[28];
 	int m_nDifficultyLevel;
 };
 
@@ -48375,8 +48332,8 @@ struct __cppobj CInfGame
 	__int16 m_nCharacterOverflowCount;
 	__int16 m_nReputation;
 	nobinding unsigned __int8 _ptpad_a27c[4];
+	CPathSearch *m_pathSearch;
 	CPathNode **m_listGrid;
-	CPathNode **m_arrayOpenList;
 	CAIGroup m_group;
 	CTypedPtrList<CPtrList,long *> m_allies;
 	CTypedPtrList<CPtrList,long *> m_familiars;
@@ -48389,7 +48346,7 @@ struct __cppobj CInfGame
 	nobinding unsigned __int8 _ptpad_b554[4];
 	CGameSave m_gameSave;
 	CGameOptions m_options;
-	nobinding unsigned __int8 _ptpad_bb14[1708];
+	nobinding unsigned __int8 _ptpad_bb38[1672];
 	int m_pKeymapFlags[600];
 	CVariableHash m_variables;
 	CVariableHash m_namedCreatures;
@@ -48455,7 +48412,10 @@ struct __cppobj CInfGame
 	int m_bAddInActivated;
 	CString m_sCurrentCampaign;
 	int m_bCampaignEnabled;
-	nobinding unsigned __int8 _ptpad_d054[228];
+	nobinding unsigned __int8 _ptpad_d054[100];
+	CTypedPtrList<CPtrList,CSavedGameStoredLocation *> m_storedLocations;
+	CTypedPtrList<CPtrList,CSavedGameStoredLocation *> m_storedLocationsPocketPlane;
+	CVVCHash m_VVCPriorities;
 	int m_nCurrentVVCPriority;
 	nobinding unsigned __int8 _ptpad_d13c[4];
 };
@@ -48611,17 +48571,27 @@ struct __cppobj CInfinity
 	int nRenderLightningTimer;
 	CPoint cLightningPoint;
 	CVidCell m_glowVidCell;
-	nobinding unsigned __int8 _ptpad_280[48];
+	nobinding unsigned __int8 _ptpad_280[40];
+	unsigned __int16 m_areaType;
+	unsigned __int8 m_renderDayNightCode;
+	unsigned __int8 m_oldRenderDayNightCode;
+	unsigned __int8 m_dayLightIntensity;
+	unsigned __int8 m_requestDayNightCode;
+	unsigned __int8 m_oldRequestDualTileCode;
+	unsigned __int8 m_bResizedViewPort;
 	unsigned int m_nLastTickCount;
 	CPoint m_ptCurrentPosExact;
 	__int16 m_autoScrollSpeed;
 	nobinding unsigned __int8 _ptpad_2be[2];
 	CPoint m_ptScrollDest;
 	int m_nScrollAttempts;
-	int m_nOldScrollState;
 	unsigned __int8 m_nScrollDelay;
 	unsigned __int8 m_bMovieBroadcast;
-	nobinding unsigned __int8 _ptpad_2d2[10];
+	nobinding unsigned __int8 _ptpad_2ce[2];
+	int m_bStartLightning;
+	int m_bStopLightning;
+	unsigned __int8 m_lightningStrikeProb;
+	nobinding unsigned __int8 _ptpad_2d9[3];
 	unsigned int m_rgbRainColor;
 	unsigned int m_rgbLightningGlobalLighting;
 	unsigned int m_rgbOverCastGlobalLighting;
@@ -48660,9 +48630,9 @@ struct __cppobj __declspec(align(8)) CSearchBitmap
 struct __cppobj CVisibilityMap
 {
 	unsigned __int16 *m_pMap;
-	int m_nMapSize;
-	__int16 m_nWidth;
+	nobinding unsigned __int8 _ptpad_8[2];
 	__int16 m_nHeight;
+	nobinding unsigned __int8 _ptpad_c[4];
 	unsigned __int8 m_bOutDoor;
 	nobinding unsigned __int8 _ptpad_11[7];
 	CSearchBitmap *m_pSearchMap;
@@ -48734,11 +48704,13 @@ struct __cppobj CGameArea
 	int m_bTravelSquare;
 	int m_iPickedOnDown;
 	int m_iPicked;
+	nobinding unsigned __int8 _ptpad_248[4];
 	int m_iPickedTarget;
 	int m_bPicked;
+	nobinding unsigned __int8 _ptpad_254[4];
 	int m_nToolTip;
 	CPoint m_mousePos;
-	nobinding unsigned __int8 _ptpad_25c[12];
+	nobinding unsigned __int8 _ptpad_264[4];
 	CVidBitmap m_bmLum;
 	CVidBitmap *m_pbmLumNight;
 	CVidBitmap m_bmHeight;
@@ -48757,10 +48729,14 @@ struct __cppobj CGameArea
 	int m_bInPathSearch;
 	unsigned int m_nInitialAreaID;
 	unsigned int m_nFirstObject;
+	nobinding unsigned __int8 _ptpad_514[4];
 	unsigned int m_dwLastProgressRenderTickCount;
 	unsigned int m_dwLastProgressMsgTickCount;
 	unsigned __int8 m_nRandomMonster;
-	nobinding unsigned __int8 _ptpad_51d[15];
+	nobinding unsigned __int8 _ptpad_521[1];
+	__int16 m_nVisibleMonster;
+	unsigned __int8 m_bRecentlySaved;
+	nobinding unsigned __int8 _ptpad_525[7];
 	unsigned int m_nSavedTime;
 	CGameAreaNotes m_cGameAreaNotes;
 	CInfinity m_cInfinity;
@@ -48782,13 +48758,15 @@ struct __cppobj CGameArea
 	CTypedPtrList<CPtrList,__POSITION *> m_lVertSortFlightRemove;
 	CTypedPtrList<CPtrList,__POSITION *> m_lVertSortUnderRemove;
 	CTypedPtrList<CPtrList,CTiledObject *> m_lTiledObjects;
+	nobinding unsigned __int8 _ptpad_ee8[56];
 	CTypedPtrList<CPtrList,long *> m_lGameTextObjects;
+	nobinding unsigned __int8 _ptpad_f58[8];
 	CTypedPtrList<CPtrList,long *> m_lVertSortTransition;
 	CPoint m_ptOldViewPos;
 	CVariableHash m_variables;
 	CVariableHash m_namedCreatures;
 	unsigned __int8 m_bPermitNewCharacters;
-	nobinding unsigned __int8 _ptpad_f81[65];
+	nobinding unsigned __int8 _ptpad_fc1[1];
 	__int16 m_nCurrentSong;
 	int m_nBattleSongCounter;
 	int m_nDamageCounter;
@@ -48813,20 +48791,20 @@ struct __cppobj CGameArea
 	int m_nTrapCount2ndLast;
 	int m_nUnloadCounter;
 	int m_bDisplayingHealth;
-	nobinding unsigned __int8 _ptpad_107c[4];
+	nobinding unsigned __int8 _ptpad_107c[12];
 	CMemINI INIFile;
 	CSpawnFile *mpSpawner;
+	nobinding unsigned __int8 _ptpad_10d8[64];
 	int m_nCreatureNodeCount;
 	CSize m_lightmapRatio;
-	nobinding unsigned __int8 _ptpad_10dc[4];
-	CGameArea::<unnamed_type_m_cWalkableRenderCache> m_cWalkableRenderCache;
+	nobinding unsigned __int8 _ptpad_1124[20];
 	CSound m_sndAmbientDay;
 	CSound m_sndAmbientNight;
 	unsigned __int8 m_sndAmbientVolume;
-	nobinding unsigned __int8 _ptpad_1139[1];
+	nobinding unsigned __int8 _ptpad_1179[1];
 	unsigned __int16 m_sndAmbientDayVolume;
 	unsigned __int16 m_sndAmbientNightVolume;
-	nobinding unsigned __int8 _ptpad_113e[2];
+	nobinding unsigned __int8 _ptpad_117e[2];
 };
 
 /* 5694 */
@@ -49918,12 +49896,11 @@ struct __cppobj CBaldurProjector : CBaldurEngine
 	nobinding unsigned __int8 _ptpad_d2[6];
 	void *m_pCodec;
 	int m_nFirstFrameTime;
-	nobinding unsigned __int8 _ptpad_e4[4];
-	CSound m_cSoundOverride;
+	nobinding unsigned __int8 _ptpad_e4[28];
 	CResRef m_cSubtitles;
 	CVidFont m_vidFont;
 	int m_bDisplayTOBMovie;
-	nobinding unsigned __int8 _ptpad_13c[4];
+	nobinding unsigned __int8 _ptpad_134[4];
 };
 
 /* 5765 */
@@ -50265,9 +50242,9 @@ struct __cppobj CDerivedStatsTemplate
 	__int16 m_nDEX;
 	__int16 m_nCON;
 	__int16 m_nCHR;
+	nobinding unsigned __int8 _ptpad_5c[12];
 	unsigned int m_nXPValue;
 	unsigned int m_nXP;
-	nobinding unsigned __int8 _ptpad_64[12];
 	unsigned int m_nGold;
 	unsigned int m_nMoraleBreak;
 	unsigned int m_nMoraleRecoveryTime;
@@ -50392,8 +50369,6 @@ struct __cppobj CDerivedStatsTemplate
 	int m_nFistDamageBonus;
 	unsigned int m_sClassStringOverrideMixed;
 	unsigned int m_sClassStringOverrideLower;
-	__int16 m_nClassTypeOverrideMixed;
-	__int16 m_nClassTypeOverrideLower;
 	int m_bPreventSpellProtectionEffects;
 	int m_bImmunityToBackStab;
 	int m_nLockPickingMTPBonus;
@@ -50799,7 +50774,7 @@ struct /*VFT*/ CCriticalEntryList_vtbl
 /* 5839 */
 struct __cppobj CDerivedStats : CDerivedStatsTemplate
 {
-	nobinding unsigned __int8 _ptpad_2fc[52];
+	CImmunitiesProjectile m_cImmunitiesProjectile;
 	CImmunitiesEffect m_cImmunitiesEffect;
 	CImmunitiesAIType m_cImmunitiesAIType;
 	CImmunitiesSpellLevel m_cImmunitiesSpellLevel;
@@ -50833,9 +50808,10 @@ struct __cppobj CDerivedStats : CDerivedStatsTemplate
 	CColorEffects m_appliedColorEffects;
 	CCreatureFileMemorizedSpellLevel m_memorizedSpellsLevelMage[9];
 	CCreatureFileMemorizedSpellLevel m_memorizedSpellsLevelPriest[7];
-	int m_disabledButtons[16];
+	nobinding unsigned __int8 _ptpad_b28[60];
 	int m_disabledSpellTypes[3];
 	int m_disableSpells;
+	nobinding unsigned __int8 _ptpad_b74[4];
 	CApplyEffectList m_cExtraMeleeEffects;
 	CApplyEffectList m_cExtraRangedEffects;
 	CSelectiveBonusList m_cProtectionList;
@@ -50847,27 +50823,48 @@ struct __cppobj CDerivedStats : CDerivedStatsTemplate
 /* 5840 */
 struct __cppobj CScreenCharacter : CBaldurEngine
 {
-	nobinding unsigned __int8 _ptpad_58[188];
+	nobinding unsigned __int8 _ptpad_58[168];
 	CKeyInfo m_pVirtualKeys[98];
 	int m_pVirtualKeysFlags[98];
-	nobinding unsigned __int8 _ptpad_734[56];
+	CPtrList m_lPopupStack;
 	unsigned __int8 m_nDualClass;
-	nobinding unsigned __int8 _ptpad_76d[15];
+	nobinding unsigned __int8 _ptpad_759[7];
+	CStringList *m_pScripts;
 	int m_nScriptIndex;
 	int m_nErrorState;
+	nobinding unsigned __int8 _ptpad_770[20];
 	int m_nCharacterIndex;
 	CStringList *m_pCharacters;
+	nobinding unsigned __int8 _ptpad_790[8];
 	int m_bMultiPlayerViewable;
 	int m_bMultiPlayerModifyable;
 	__POSITION *m_nCurrentPortrait;
 	CStringList *m_pAppearancePortraits;
 	CStringList *m_pPortraits;
+	nobinding unsigned __int8 _ptpad_7b8[8];
 	int m_nCustomSoundSetIndex;
 	int m_nCustomSoundIndex;
 	CResRef m_cResPortraitSmall;
 	CResRef m_cResPortraitLarge;
 	unsigned __int8 m_aColor[7];
-	nobinding unsigned __int8 _ptpad_7cf[461];
+	nobinding unsigned __int8 _ptpad_7df[1];
+	CString m_sScript;
+	int m_bSmartScriptFlags[11];
+	nobinding unsigned __int8 _ptpad_814[4];
+	CString m_sNewScript;
+	CResRef m_cResPortraitSmallTemp;
+	CResRef m_cResPortraitMediumTemp;
+	unsigned int m_nSpecialization;
+	nobinding unsigned __int8 _ptpad_834[4];
+	CStringList *m_pSounds;
+	CResRef m_cResSoundSet;
+	CCreatureFileHeader *m_pTempBaseStats;
+	CDerivedStats *m_pTempDerivedStats;
+	CTypedPtrList<CPtrList,CResRef *> m_lstMageSpells;
+	int m_bShiftKeyDown;
+	int m_bCapsLockKeyOn;
+	unsigned __int8 m_bCtrlKeyDown;
+	nobinding unsigned __int8 _ptpad_899[259];
 	int m_bAddInactiveAbilities;
 	int m_OldMageSpells[9];
 	int m_OldPriestSpells[7];
@@ -51057,10 +51054,10 @@ struct /*VFT*/ CGameAbilityList_vtbl
 /* 5857 */
 struct __cppobj CScreenCreateChar : CBaldurEngine
 {
-	nobinding unsigned __int8 _ptpad_58[96];
 	C2DArray m_kitList;
 	CImportGame m_importGame;
 	CKeyInfo m_pVirtualKeys[98];
+	nobinding unsigned __int8 _ptpad_5d8[96];
 	int m_pVirtualKeysFlags[98];
 	int m_bCtrlKeyDown;
 	int m_bShiftKeyDown;
@@ -51081,6 +51078,7 @@ struct __cppobj CScreenCreateChar : CBaldurEngine
 	int m_nBaseDetectIllusion;
 	int m_nBaseSetTraps;
 	unsigned __int8 m_nMinSTR;
+	nobinding unsigned __int8 _ptpad_809[1];
 	unsigned __int8 m_nMinDEX;
 	unsigned __int8 m_nMinCON;
 	unsigned __int8 m_nMinINT;
@@ -51092,11 +51090,10 @@ struct __cppobj CScreenCreateChar : CBaldurEngine
 	unsigned __int8 m_nMaxINT;
 	unsigned __int8 m_nMaxWIS;
 	unsigned __int8 m_nMaxCHR;
+	nobinding unsigned __int8 _ptpad_815[1];
 	unsigned __int8 m_nPreviousMin;
 	unsigned __int8 m_nPreviousMax;
-	nobinding unsigned __int8 _ptpad_816[2];
-	int m_nMaxProficiencySlots;
-	nobinding unsigned __int8 _ptpad_81c[4];
+	nobinding unsigned __int8 _ptpad_818[8];
 	__POSITION *m_nCurrentPortrait;
 	CStringList *m_pAppearancePortraits;
 	CPtrList m_lPopupStack;
@@ -51365,8 +51362,25 @@ struct __cppobj CScreenInventory : CBaldurEngine
 	CItem *m_pTempItem;
 	CKeyInfo m_pVirtualKeys[98];
 	int m_pVirtualKeysFlags[98];
+	nobinding unsigned __int8 _ptpad_680[96];
 	unsigned __int8 m_bCtrlKeyDown;
-	nobinding unsigned __int8 _ptpad_681[207];
+	nobinding unsigned __int8 _ptpad_6e1[3];
+	CPoint m_cLastMousePosition;
+	int m_nTopGroundItem;
+	int m_nGroundPile[6];
+	int m_bGroundPileQueried[6];
+	int m_nErrorState;
+	unsigned int m_strErrorText;
+	int m_nNumErrorButtons;
+	int m_nLastSwapPortrait;
+	unsigned int m_dwLastSwapButton;
+	int m_bMultiPlayerViewable;
+	CResRef m_cCheckLearnSpellRes;
+	int m_nCheckLearnSpellCountDown;
+	nobinding unsigned __int8 _ptpad_744[4];
+	int m_bDroppedItemInHand;
+	unsigned __int8 m_bPauseWarningDisplayed;
+	nobinding unsigned __int8 _ptpad_74d[3];
 	CVidFont m_preLoadFontRealms;
 	CVidFont m_preLoadFontStnSml;
 	CVidFont m_preLoadFontTool;
@@ -51460,6 +51474,7 @@ struct /*VFT*/ CScreenInventory_vtbl
 /* 5863 */
 struct __cppobj CScreenJournal : CBaldurEngine
 {
+	nobinding unsigned __int8 _ptpad_58[32];
 	CKeyInfo m_pVirtualKeys[98];
 	int m_pVirtualKeysFlags[98];
 	int m_bShiftKeyDown;
@@ -51467,14 +51482,14 @@ struct __cppobj CScreenJournal : CBaldurEngine
 	unsigned __int8 m_bCtrlKeyDown;
 	CResRef m_oldMosaic;
 	CResRef m_oldFont;
-	nobinding unsigned __int8 _ptpad_691[3];
+	nobinding unsigned __int8 _ptpad_6b1[3];
 	unsigned int m_rgbOldText;
 	unsigned int m_rgbOldBackground;
-	nobinding unsigned __int8 _ptpad_69c[4];
+	nobinding unsigned __int8 _ptpad_6bc[4];
 	CVidFont m_preLoadFontRealms;
 	CVidFont m_preLoadFontTool;
 	int m_bPauseState;
-	nobinding unsigned __int8 _ptpad_6f4[4];
+	nobinding unsigned __int8 _ptpad_714[4];
 };
 
 /* 5864 */
@@ -52102,6 +52117,7 @@ struct /*VFT*/ CScreenPriestSpell_vtbl
 /* 5884 */
 struct __cppobj CScreenSave : CBaldurEngine
 {
+	nobinding unsigned __int8 _ptpad_58[96];
 	int m_bQuitGameSave;
 	CKeyInfo m_pVirtualKeys[98];
 	int m_pVirtualKeysFlags[98];
@@ -52118,11 +52134,11 @@ struct __cppobj CScreenSave : CBaldurEngine
 	int m_nCurrentGameSlot;
 	int m_nMaxSlotNumber;
 	unsigned __int8 m_bCtrlKeyDown;
-	nobinding unsigned __int8 _ptpad_705[3];
+	nobinding unsigned __int8 _ptpad_765[3];
 	CVidFont m_preLoadFontRealms;
 	CVidFont m_preLoadFontStnSml;
 	int m_bPauseState;
-	nobinding unsigned __int8 _ptpad_75c[4];
+	nobinding unsigned __int8 _ptpad_7bc[4];
 };
 
 /* 5885 */
@@ -52331,9 +52347,9 @@ struct __cppobj CScreenWizSpell : CBaldurEngine
 	__int16 m_bContingencyRestrictTarget;
 	CBaldurEngine *m_pOldEngine;
 	CResRef m_refContingencyResRef;
+	nobinding unsigned __int8 _ptpad_700[72];
 	int m_bControlled;
 	int m_bPauseState;
-	nobinding unsigned __int8 _ptpad_708[72];
 	int m_bContingency;
 	CResRef m_resEraseSpell;
 	nobinding unsigned __int8 _ptpad_75c[4];
@@ -52432,7 +52448,7 @@ struct /*VFT*/ CTypedPtrArray<CPtrArray,CGameDialogEntry *>_vtbl
 };
 
 /* 5892 */
-struct __cppobj __declspec(align(8)) CGameDialogSprite
+struct __cppobj CGameDialogSprite
 {
 	CResRef m_file;
 	CTypedPtrArray<CPtrArray,CGameDialogEntry *> m_dialogEntries;
@@ -52449,8 +52465,10 @@ struct __cppobj __declspec(align(8)) CGameDialogSprite
 	unsigned int m_dWFlags;
 	int m_bPlayedStartSound;
 	int m_bItemDialog;
+	nobinding unsigned __int8 _ptpad_7c[8];
 	int m_bSuppressName;
 	int m_UpdateTime;
+	nobinding unsigned __int8 _ptpad_8c[4];
 };
 
 /* 5893 */
@@ -52588,7 +52606,7 @@ struct __cppobj CScreenWorld : CBaldurEngine
 	int m_bProtagonistInStartArea;
 	int m_nProtagonistMoveMax;
 	int m_bWaitToRender;
-	SDL_Event flickEvent;
+	nobinding unsigned __int8 _ptpad_68[56];
 	int m_bIgnoreDisplayTextTop;
 	int nCounter;
 	int m_boredCount;
@@ -52615,7 +52633,7 @@ struct __cppobj CScreenWorld : CBaldurEngine
 	unsigned __int8 m_bloodLevel;
 	unsigned __int16 m_castingGlow;
 	unsigned __int8 m_hitEffect;
-	nobinding unsigned __int8 _ptpad_ef[173];
+	nobinding unsigned __int8 _ptpad_ef[165];
 	int m_newText;
 	CVidFont m_vidFont;
 	CVidFont m_vidFont2;
@@ -52733,10 +52751,10 @@ struct __cppobj CScreenWorld : CBaldurEngine
 	float m_fPanStorage;
 	int m_bViewingContainer;
 	int m_bInDialog;
+	nobinding unsigned __int8 _ptpad_c48[4];
 	int m_bDead;
 	int m_bInCommand;
 	int m_bPickingParty;
-	nobinding unsigned __int8 _ptpad_c54[4];
 	int m_bAutoZooming;
 	float m_fPreviousZoom;
 	float m_fTargetZoom;
@@ -52746,11 +52764,6 @@ struct __cppobj CScreenWorld : CBaldurEngine
 	int m_nZoomCurStep;
 	CRect m_rOriginalViewPort;
 	CPoint m_ptOriginalView;
-	float m_fOriginalZoom;
-	nobinding unsigned __int8 _ptpad_ca4[4];
-	int *m_storedGroup;
-	int m_nStoredGroupMembers;
-	nobinding unsigned __int8 _ptpad_cb4[4];
 };
 
 /* 5904 */
@@ -53263,7 +53276,22 @@ struct __cppobj CScreenWorldMap : CBaldurEngine
 	CSize m_mapSize;
 	int m_nEngineState;
 	CPoint m_ptMapView;
-	nobinding unsigned __int8 _ptpad_72c[2028];
+	nobinding unsigned __int8 _ptpad_72c[4];
+	CVidMosaic m_vmMap;
+	CVidCell m_vcAreas;
+	CVidCell m_vcMarker;
+	CVidFont m_vfLabel;
+	tagRGBQUAD m_aPalette[256];
+	unsigned int m_wAreaForeground;
+	unsigned int m_nHighlightArea;
+	unsigned int m_nSelectedArea;
+	int m_bSelectedReachable;
+	int m_bOverSelectedArea;
+	CPoint m_ptMapStartMousePos;
+	CPoint m_ptMapStartView;
+	nobinding unsigned __int8 _ptpad_efc[4];
+	int m_bMapDragging;
+	nobinding unsigned __int8 _ptpad_f04[20];
 	CList<unsigned long,unsigned long &> *m_pPath;
 	int m_nLeavingEdge;
 	unsigned int m_nCurrentLink;
@@ -53575,10 +53603,11 @@ struct /*VFT*/ CScreenMovies_vtbl
 /* 5922 */
 struct __cppobj CScreenDLC : CBaldurEngine
 {
+	nobinding unsigned __int8 _ptpad_58[100];
 	CKeyInfo m_pVirtualKeys[98];
 	int m_pVirtualKeysFlags[98];
 	int m_bExitProgram;
-	nobinding unsigned __int8 _ptpad_67c[4];
+	nobinding unsigned __int8 _ptpad_6e0[2200];
 	CPtrList m_lPopupStack;
 	unsigned int m_dwErrorTextId;
 	unsigned int m_dwErrorState;
@@ -53587,13 +53616,13 @@ struct __cppobj CScreenDLC : CBaldurEngine
 	CTypedPtrList<CPtrList,CGameOptions *> m_lOptionsStack;
 	int m_bSpriteMirror;
 	unsigned __int8 m_bCtrlKeyDown;
-	nobinding unsigned __int8 _ptpad_70d[3];
+	nobinding unsigned __int8 _ptpad_1005[3];
 	CVidFont m_preLoadFontRealms;
 	CVidFont m_preLoadFontStnSml;
 	int m_nNumDLC;
 	int m_nCurrentDLC;
 	int m_nDlcState;
-	nobinding unsigned __int8 _ptpad_76c[4];
+	nobinding unsigned __int8 _ptpad_1064[4];
 };
 
 /* 5923 */
@@ -53718,6 +53747,7 @@ struct file_t
 	int fs;
 	int zo;
 	int zs;
+	nobinding unsigned __int8 _ptpad_14[4];
 };
 
 /* 5929 */
@@ -53794,7 +53824,7 @@ struct __cppobj CChatBuffer
 };
 
 /* 5936 */
-struct __cppobj __declspec(align(8)) CBaldurMessage
+struct __cppobj CBaldurMessage
 {
 	unsigned __int8 m_bInOnObjectAdd;
 	unsigned __int8 m_bInOnObjectDelete;
@@ -53812,14 +53842,12 @@ struct __cppobj __declspec(align(8)) CBaldurMessage
 	unsigned __int8 m_pnSignalType[24];
 	unsigned __int8 m_pnSignalData[24];
 	unsigned __int8 m_bDeleteAreaPolling;
+	nobinding unsigned __int8 _ptpad_cc[4];
 	CString m_sDeleteAreaString;
 	unsigned int m_dwDeleteAreaTimeout;
 	unsigned __int8 m_pnDeleteAreaVotes[6];
+	nobinding unsigned __int8 _ptpad_e2[2];
 	int m_pnDeleteAreaVoters[6];
-	unsigned __int8 m_bCloseSessionPolling;
-	unsigned int m_dwCloseSessionTimeout;
-	unsigned __int8 m_pnCloseSessionVotes[6];
-	int m_pnCloseSessionVoters[6];
 	int m_pRemovedPlayerID[6];
 	unsigned __int8 m_bRemovedPlayerID;
 	unsigned __int8 m_bDialogRequestPending;
@@ -53841,10 +53869,12 @@ struct __cppobj __declspec(align(8)) CBaldurMessage
 	CString m_sVersionControlShutdownClientString;
 	CString m_sVersionControlShutdownServerString;
 	unsigned __int8 m_nVersionControlShutdownReason;
+	nobinding unsigned __int8 _ptpad_139[3];
 	unsigned int m_dwSignalSecondsToTimeout;
 	unsigned __int8 m_bMultiplayerSessionShutdown;
 	unsigned __int8 m_bInReputationChange;
 	unsigned __int8 m_bInMessageSetDrawPoly;
+	nobinding unsigned __int8 _ptpad_143[5];
 };
 
 /* 5937 */
@@ -53891,9 +53921,10 @@ struct __cppobj CBaldurChitin : CChitin
 	CScreenConnection *m_pEngineConnection;
 	CScreenWorldMap *m_pEngineWorldMap;
 	CScreenChapter *m_pEngineChapter;
-	CScreenMovies *m_pEngineMovies;
+	CScreenDLC *m_pEngineDLC;
 	CTlkTable m_cTlkTable;
-	nobinding unsigned __int8 _ptpad_11e0[1408];
+	CCacheStatus m_cCachingStatus;
+	CBaldurMessage m_cBaldurMessage;
 	CMessageHandler m_cMessageHandler;
 	int m_bFontRectOutline;
 	unsigned __int8 m_bCDScanDone;
@@ -54241,8 +54272,7 @@ struct __cppobj CGameAIBase : CGameObject
 	CTypedPtrList<CPtrList,CAIAction *> m_queuedActions;
 	CTypedPtrList<CPtrList,CAITrigger *> m_pendingTriggers;
 	unsigned int m_PAICallCounter;
-	unsigned int m_PAICallCounterNoMod;
-	CTypedPtrList<CPtrList,CGameTimer *> m_timers;
+	nobinding unsigned __int8 _ptpad_3a4[60];
 	__int16 m_curResponseNum;
 	__int16 m_curResponseSetNum;
 	__int16 m_curScriptNum;
@@ -54271,6 +54301,7 @@ struct __cppobj CGameAIBase : CGameObject
 	int m_nServerLastObjectSynchDelay;
 	nobinding unsigned __int8 _ptpad_4ec[4];
 	CAITrigger triggerOverride;
+	nobinding unsigned __int8 _ptpad_530[8];
 };
 
 /* 5962 */
@@ -54431,16 +54462,16 @@ struct __cppobj CTypedPtrList<CPtrList,CFeedbackEntry *> : CPtrList
 };
 
 /* 6012 */
-struct __cppobj __declspec(align(8)) CGameSpriteLastUpdate
+struct __cppobj CGameSpriteLastUpdate
 {
 	int *m_pPath;
 	__int16 m_nPath;
 	__int16 m_currPath;
 	CPoint m_ptDest;
 	unsigned __int8 m_nMoveScale;
+	nobinding unsigned __int8 _ptpad_15[11];
 	__int16 m_nSequence;
-	CPoint m_ptPosition;
-	__int16 m_nFacing;
+	nobinding unsigned __int8 _ptpad_22[2];
 	unsigned int m_dwState;
 	__int16 m_nHitPoints;
 	__int16 m_nMaxHitPoints;
@@ -54456,17 +54487,14 @@ struct __cppobj __declspec(align(8)) CGameSpriteLastUpdate
 	unsigned __int8 m_bMoraleFailure;
 	unsigned __int8 m_nGeneral;
 	unsigned __int8 m_nGeneralLive;
+	nobinding unsigned __int8 _ptpad_45[3];
 	CString m_sAreaString;
 	unsigned __int8 m_bLevelUp;
+	nobinding unsigned __int8 _ptpad_51[3];
 	int m_nHPCONBonusTotalOld;
-	unsigned __int8 m_bSummonDisable;
-	unsigned __int8 m_bDoNotJump;
-	unsigned __int8 m_bSanctuary;
-	unsigned __int8 m_bDisableCircle;
-	unsigned __int8 m_bHeld;
-	unsigned __int8 m_bActiveImprisonment;
-	unsigned int m_spellState[8];
+	nobinding unsigned __int8 _ptpad_58[8];
 	int m_bFullUpdateRequired;
+	nobinding unsigned __int8 _ptpad_64[4];
 };
 
 /* 6013 */
@@ -54477,7 +54505,6 @@ struct __cppobj CTypedPtrList<CPtrList,CGameSprite::GroundItem *> : CPtrList
 /* 5960 */
 struct __cppobj CGameSprite : CGameAIBase
 {
-	nobinding unsigned __int8 _ptpad_530[8];
 	CResRef m_resref;
 	unsigned __int16 m_type;
 	nobinding unsigned __int8 _ptpad_542[2];
@@ -54503,10 +54530,19 @@ struct __cppobj CGameSprite : CGameAIBase
 	CDerivedStats m_derivedStats;
 	CDerivedStats m_tempStats;
 	CDerivedStats m_bonusStats;
-	nobinding unsigned __int8 _ptpad_35f8[296];
+	nobinding unsigned __int8 _ptpad_35f8[56];
+	CGameStatsSprite m_cGameStats;
+	CResRef m_currentArea;
 	unsigned __int8 m_bGlobal;
 	unsigned __int8 m_nModalState;
-	nobinding unsigned __int8 _ptpad_3722[182];
+	nobinding unsigned __int8 _ptpad_3722[6];
+	CSound m_sndWalk[2];
+	unsigned int m_nSndWalk;
+	nobinding unsigned __int8 _ptpad_376c[4];
+	CSound m_sndArmor[2];
+	unsigned __int8 m_currSndWalk;
+	unsigned __int8 m_currSndArmor;
+	nobinding unsigned __int8 _ptpad_37b2[38];
 	CSound m_sndReady;
 	CSound m_sndDeath;
 	CSound m_sndMagic;
@@ -54515,10 +54551,11 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_nNumberOfTimesTalkedTo;
 	int m_bSeenPartyBefore;
 	CResRef m_specificScriptName;
-	int m_nNumberOfTimesInteractedWith[24];
+	nobinding unsigned __int8 _ptpad_3888[88];
 	__int16 m_nHappiness;
 	__int16 m_nOldHappiness;
-	nobinding unsigned __int8 _ptpad_38ec[20];
+	nobinding unsigned __int8 _ptpad_38e4[4];
+	CAIObjectType m_interactingWith;
 	int m_triggerId;
 	int m_active;
 	int m_activeAI;
@@ -54532,15 +54569,34 @@ struct __cppobj CGameSprite : CGameAIBase
 	unsigned __int8 m_flightTerrainTable[16];
 	nobinding unsigned __int8 _ptpad_394d[3];
 	CGameAnimation m_animation;
-	nobinding unsigned __int8 _ptpad_3968[788];
+	unsigned __int16 *m_pSpriteEffectArray;
+	tagPOINT *m_pSpriteEffectArrayPosition;
+	unsigned __int8 m_nTwitches;
+	unsigned __int8 m_spriteEffectSequenceNumber;
+	unsigned __int8 m_spriteEffectDuration;
+	unsigned __int8 m_spriteEffectSequenceLength;
+	char m_spriteEffectBaseIntensity;
+	unsigned __int8 m_spriteEffectRandomIntensity;
+	nobinding unsigned __int8 _ptpad_397e[763];
+	unsigned __int8 m_effectExtendDirection;
+	unsigned __int8 m_bEscapingArea;
+	nobinding unsigned __int8 _ptpad_3c7b[1];
 	int m_animationRunning;
 	int m_posZDelta;
 	unsigned __int8 m_doBounce;
 	unsigned __int8 m_nMirrorImages;
+	nobinding unsigned __int8 _ptpad_3c86[6];
 	unsigned __int8 m_bBlur;
 	unsigned __int8 m_bInvisible;
 	unsigned __int8 m_bSanctuary;
-	nobinding unsigned __int8 _ptpad_3c89[1943];
+	nobinding unsigned __int8 _ptpad_3c8f[1601];
+	CVidCell m_webHoldVidCell;
+	long double m_fCircleChange;
+	long double m_fCurrCircleChange;
+	__int16 m_radius;
+	char m_circleFacing;
+	unsigned __int8 m_bVisibilityUpdated;
+	nobinding unsigned __int8 _ptpad_441c[4];
 	long double m_fDirectionOffset;
 	__int16 m_nSequence;
 	nobinding unsigned __int8 _ptpad_442a[2];
@@ -54641,12 +54697,16 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_inFormation;
 	int m_newEffect;
 	unsigned __int8 m_canDamage;
-	nobinding unsigned __int8 _ptpad_48c1[19];
+	nobinding unsigned __int8 _ptpad_48c1[3];
+	int m_leftAttack;
+	unsigned __int8 m_halfAttack;
+	nobinding unsigned __int8 _ptpad_48c9[3];
 	int m_hasColorEffects;
 	int m_hasColorRangeEffects;
 	int m_hasAnimationEffects;
 	int m_removeFromArea;
 	int m_forceAnimationReset;
+	nobinding unsigned __int8 _ptpad_48e0[8];
 	CMarker m_marker;
 	CMarker m_destMarker;
 	int m_targetId;
@@ -54658,12 +54718,35 @@ struct __cppobj CGameSprite : CGameAIBase
 	CResRef m_dialog;
 	CResRef m_dialogInteraction;
 	unsigned __int8 m_sequenceTest;
-	nobinding unsigned __int8 _ptpad_4995[31];
+	nobinding unsigned __int8 _ptpad_4995[3];
+	STR_RES *m_speech;
+	unsigned __int8 m_saveVSDeathRoll;
+	unsigned __int8 m_saveVSWandsRoll;
+	unsigned __int8 m_saveVSPolyRoll;
+	unsigned __int8 m_saveVSBreathRoll;
+	unsigned __int8 m_saveVSSpellRoll;
+	unsigned __int8 m_magicResistRoll;
+	unsigned __int8 m_probabilityRoll;
+	unsigned __int8 m_wildMageLevelModRoll;
+	unsigned __int8 m_wildMageSurgeRoll;
+	nobinding unsigned __int8 _ptpad_49a9[1];
+	__int16 m_wildSurgeLevel;
+	__int16 m_nSelectionCountCommon;
+	__int16 m_nSelectionCountActionRareCounter;
+	nobinding unsigned __int8 _ptpad_49b0[4];
 	int m_lastCheckedHitPoints;
 	int m_moraleFailure;
 	int m_startedSwing;
 	__int16 m_followCount;
-	nobinding unsigned __int8 _ptpad_49c2[22];
+	nobinding unsigned __int8 _ptpad_49c2[2];
+	int m_clearAIOnRemoveFromArea;
+	int m_dialogWait;
+	int m_dialogWaitTarget;
+	int m_talkingCounter;
+	unsigned __int8 m_talkingRenderCount;
+	unsigned __int8 m_inControlLastTime;
+	unsigned __int8 m_bSecondPass;
+	nobinding unsigned __int8 _ptpad_49d7[1];
 	CTypedPtrList<CPtrList,CPortraitIcon *> m_portraitIcons;
 	CVidCell m_portraitIconVidCell;
 	int m_firstActionSound;
@@ -54688,15 +54771,7 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_bMentalStateActing;
 	int m_nLastLevelUpLevel[3];
 	int m_nLastLevelUpHPRoll;
-	int m_bForceVisualEffects;
-	__int16 m_currentActionId;
-	nobinding unsigned __int8 _ptpad_4ba6[2];
-	int m_bPlayedEncumberedStopped;
-	int m_bPlayedEncumberedSlowed;
-	int m_nPlayedEncumberedStopped;
-	int m_nPlayedEncumberedSlowed;
-	__int16 m_nPlayedPoisonedDamage;
-	__int16 m_nEffectListCalls;
+	nobinding unsigned __int8 _ptpad_4ba0[28];
 	int m_bAllowEffectListCall;
 	unsigned __int8 m_nPreCutSceneMoveScale;
 	nobinding unsigned __int8 _ptpad_4bc1[3];
@@ -54718,7 +54793,7 @@ struct __cppobj CGameSprite : CGameAIBase
 	CGameDialogSprite m_cDialog;
 	CGameDialogSprite m_cBanter;
 	unsigned __int8 m_bForceVisRangeRedraw;
-	nobinding unsigned __int8 _ptpad_4d51[147];
+	nobinding unsigned __int8 _ptpad_4d61[131];
 	int m_nLastExpiryCheck;
 	int m_nLastContingencyCheck;
 	nobinding unsigned __int8 _ptpad_4dec[4];
@@ -54757,17 +54832,18 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_nLastDamageTaken;
 	int m_nDeadVisualEffectCountDown;
 	int m_bForceVisibilityCheck;
+	nobinding unsigned __int8 _ptpad_5078[4];
 	unsigned __int8 m_nVisualRange;
-	nobinding unsigned __int8 _ptpad_5099[3];
+	nobinding unsigned __int8 _ptpad_507d[3];
 	int m_bPlayAnimationBattleCry;
 	int m_bPlayAnimationSelectionSound;
 	unsigned __int8 m_aLevellupSpellsToPick[10];
-	nobinding unsigned __int8 _ptpad_50ae[2];
+	nobinding unsigned __int8 _ptpad_5092[2];
 	int m_nCrossAreaChaseCounter;
 	int m_bDidAReequipAll;
 	int m_bInEquip;
 	char m_cFirstResSlot;
-	nobinding unsigned __int8 _ptpad_50bd[3];
+	nobinding unsigned __int8 _ptpad_50a1[3];
 	int m_nNumColorRanges;
 	int m_nNumColorEffects;
 	int m_nNumWeaponImmunities;
@@ -54778,13 +54854,12 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_bDelayUpdate;
 	int m_nHalfSwingCounter;
 	bool m_bInCopy;
-	nobinding unsigned __int8 _ptpad_50e5[3];
-	CTypedPtrList<CPtrList,CGameSprite::GroundItem *> m_lstVisibleGroundItems;
+	nobinding unsigned __int8 _ptpad_50c9[59];
 	int m_nGroundItemPage;
 	float m_avgProcessAITime;
 	int m_nMaxHitPointsOnceOnlyBonus;
 	bool m_bOutline;
-	nobinding unsigned __int8 _ptpad_512d[3];
+	nobinding unsigned __int8 _ptpad_5111[7];
 };
 
 /* 5974 */
@@ -54868,14 +54943,17 @@ struct __cppobj CSearchRequest
 };
 
 /* 5988 */
-struct __cppobj __declspec(align(8)) CProjectile : CGameObject
+struct __cppobj CProjectile : CGameObject
 {
 	unsigned __int16 m_projectileType;
 	unsigned __int8 m_addToListType;
+	nobinding unsigned __int8 _ptpad_63[1];
 	__int16 m_speed;
+	nobinding unsigned __int8 _ptpad_66[2];
 	int m_sourceId;
 	int m_targetId;
 	int m_callBackProjectile;
+	nobinding unsigned __int8 _ptpad_74[4];
 	CGameEffectList m_effectList;
 	__int16 m_nType;
 	__int16 m_nFileType;
@@ -54888,6 +54966,7 @@ struct __cppobj __declspec(align(8)) CProjectile : CGameObject
 	CPoint m_posDest;
 	unsigned __int8 m_terrainTable[16];
 	unsigned __int16 m_decAmmount;
+	nobinding unsigned __int8 _ptpad_112[2];
 	int m_bSparkleTrail;
 	unsigned int m_defaultRenderFlags;
 	int m_bIgnoreTarget;
@@ -54897,12 +54976,13 @@ struct __cppobj __declspec(align(8)) CProjectile : CGameObject
 	CResRef m_arrivalSoundRef;
 	int m_loopArrivalSound;
 	unsigned __int8 m_bHasHeight;
+	nobinding unsigned __int8 _ptpad_159[1];
 	__int16 m_nDeltaZ;
 	__int16 m_nDeltaZLast;
+	nobinding unsigned __int8 _ptpad_15e[2];
 	int m_nOrigDistance;
 	CPoint m_ptBamSize;
 	int m_dwFlags;
-	int m_maxBounces;
 	CString m_visualEffectRef;
 	int m_visualEffect;
 	__int16 m_maxDuration;
@@ -54919,6 +54999,7 @@ struct __cppobj __declspec(align(8)) CProjectile : CGameObject
 	CResRef m_failureSpell;
 	CResRef m_successSpell;
 	int m_ignoreDamage;
+	nobinding unsigned __int8 _ptpad_1ac[76];
 };
 
 /* 5996 */
@@ -57050,7 +57131,6 @@ struct /*VFT*/ CTypedPtrList<CPtrList,CItem *>_vtbl
 /* 6167 */
 struct __cppobj CGameContainer : CGameAIBase
 {
-	nobinding unsigned __int8 _ptpad_530[8];
 	CRect m_rBounding;
 	CPoint *m_pPolygon;
 	unsigned __int16 m_nPolygon;
@@ -57141,7 +57221,7 @@ struct /*VFT*/ CGameContainer_vtbl
 };
 
 /* 6169 */
-struct __cppobj __declspec(align(8)) CContingency
+struct __cppobj CContingency
 {
 	CAITrigger m_cTrigger;
 	CResRef m_cSpellRes;
@@ -57149,10 +57229,13 @@ struct __cppobj __declspec(align(8)) CContingency
 	CResRef m_cSpellRes3;
 	CAIObjectType m_cTarget;
 	unsigned int m_dwFlags;
+	nobinding unsigned __int8 _ptpad_74[4];
 	CGameEffect m_parentEffect;
+	nobinding unsigned __int8 _ptpad_1d0[8];
 	unsigned int m_dwTarget;
 	unsigned int m_dwCondition;
 	unsigned int m_nLastCheck;
+	nobinding unsigned __int8 _ptpad_1e4[4];
 };
 
 /* 6170 */
@@ -57523,13 +57606,14 @@ struct /*VFT*/ CMessageSetRestEncounterProbability_vtbl
 };
 
 /* 6207 */
-struct __cppobj __declspec(align(4)) CProjectileSpellHit : CProjectile
+struct __cppobj CProjectileSpellHit : CProjectile
 {
 	CVidCell m_animation;
 	CVidBitmap m_newPalette;
 	unsigned int m_dwRenderFlags;
 	unsigned __int8 m_bNewPalette;
 	unsigned __int8 m_transparency;
+	nobinding unsigned __int8 _ptpad_456[2];
 };
 
 /* 6208 */
@@ -57578,6 +57662,7 @@ struct /*VFT*/ CProjectileSpellHit_vtbl
 /* 6209 */
 struct __cppobj CProjectileAmbiant : CProjectileSpellHit
 {
+
 };
 
 /* 6210 */
@@ -58158,10 +58243,14 @@ struct __cppobj CSparkleCluster : CGameObject
 	unsigned __int8 m_fade4Height;
 	CRect m_rBounding;
 	unsigned __int16 m_wType;
+	nobinding unsigned __int8 _ptpad_ca[2];
 	unsigned int m_nTimer;
 	unsigned __int16 m_nConjureDuration;
+	nobinding unsigned __int8 _ptpad_d2[2];
 	CPoint m_explosionDir;
+	nobinding unsigned __int8 _ptpad_dc[4];
 	int m_nGravity;
+	nobinding unsigned __int8 _ptpad_e4[4];
 };
 
 /* 6251 */
@@ -61227,18 +61316,23 @@ struct __cppobj CProjectileBAM : CProjectile
 	int m_glow;
 	CSize m_glowSize;
 	__int16 m_glowIntensity;
+	nobinding unsigned __int8 _ptpad_24e[2];
 	int m_shadow;
+	nobinding unsigned __int8 _ptpad_254[12];
 	__int16 m_numDirections;
 	__int16 m_direction;
 	__int16 m_newDirection;
+	nobinding unsigned __int8 _ptpad_266[6];
 	int m_render;
 	CVidBitmap m_newPalette;
 	unsigned __int8 m_bNewPalette;
 	unsigned __int8 m_bDuration;
+	nobinding unsigned __int8 _ptpad_392[2];
 	int m_bSmoke;
 	unsigned __int8 m_smokePeriod;
 	unsigned __int8 m_smokeColorRange[7];
 	unsigned __int8 m_smokeCount;
+	nobinding unsigned __int8 _ptpad_3a1[1];
 	unsigned __int16 m_smokeAnimationCode;
 	CResRef m_cPuffEffect1;
 	CResRef m_cPuffEffect2;
@@ -61246,9 +61340,10 @@ struct __cppobj CProjectileBAM : CProjectile
 	unsigned __int16 m_nPuff1Spacing;
 	unsigned __int16 m_nPuff2Spacing;
 	unsigned __int16 m_nPuff3Spacing;
+	nobinding unsigned __int8 _ptpad_3c2[2];
 	unsigned int m_dwPuffFlags;
 	int m_puffCounter;
-	CList<long,long> m_lstTargets;
+	nobinding unsigned __int8 _ptpad_3cc[12];
 };
 
 /* 6502 */
@@ -62277,6 +62372,10 @@ struct /*VFT*/ CGameEffectDamage_vtbl
 /* 6578 */
 struct __cppobj CGameTrigger : CGameAIBase
 {
+	unsigned __int16 m_triggerType;
+	nobinding unsigned __int8 _ptpad_53a[2];
+	CRect m_rBounding;
+	unsigned int m_cursorType;
 	unsigned __int8 m_newArea[8];
 	char m_newEntryPoint[32];
 	unsigned int m_dwFlags;
@@ -62285,7 +62384,6 @@ struct __cppobj CGameTrigger : CGameAIBase
 	unsigned __int16 m_nPolygon;
 	unsigned __int16 m_boundingRange;
 	unsigned __int8 m_scriptRes[8];
-	nobinding unsigned __int8 _ptpad_574[32];
 	unsigned __int16 m_trapDetectionDifficulty;
 	unsigned __int16 m_trapDisarmingDifficulty;
 	unsigned __int16 m_trapActivated;
@@ -63804,6 +63902,7 @@ struct __cppobj CGameAreaClairvoyanceEntry
 /* 6704 */
 struct __cppobj CProjectileInstant : CProjectile
 {
+
 };
 
 /* 6705 */
@@ -64074,12 +64173,13 @@ struct /*VFT*/ CMessageSetPortraitSmall_vtbl
 };
 
 /* 6729 */
-struct __cppobj __declspec(align(4)) CProjectileSkyStrike : CProjectile
+struct __cppobj CProjectileSkyStrike : CProjectile
 {
 	CVidCell m_animation;
 	CVidPalette m_palette;
 	int m_bGlow;
 	unsigned __int16 m_duration;
+	nobinding unsigned __int8 _ptpad_366[2];
 };
 
 /* 6730 */
@@ -65409,16 +65509,19 @@ struct /*VFT*/ CMessageSetFamiliarSummoner_vtbl
 };
 
 /* 6854 */
-struct __cppobj __declspec(align(8)) CMessageSpriteUpdate : CMessage
+struct __cppobj CMessageSpriteUpdate : CMessage
 {
 	int *m_pPath;
 	__int16 m_nPath;
 	__int16 m_currPath;
 	CPoint m_ptDest;
+	nobinding unsigned __int8 _ptpad_24[4];
 	CString m_sAreaString;
 	__int16 m_nSequence;
+	nobinding unsigned __int8 _ptpad_32[2];
 	CPoint m_ptPosition;
 	__int16 m_nFacing;
+	nobinding unsigned __int8 _ptpad_3e[2];
 	unsigned int m_dwState;
 	__int16 m_nHitPoints;
 	__int16 m_nMaxHitPoints;
@@ -65428,6 +65531,7 @@ struct __cppobj __declspec(align(8)) CMessageSpriteUpdate : CMessage
 	__int16 m_nACPiercingMod;
 	__int16 m_nACSlashingMod;
 	__int16 m_nPortraitIcons;
+	nobinding unsigned __int8 _ptpad_54[4];
 	int *m_pPortraitIcons;
 	unsigned __int8 m_nEnemyAlly;
 	unsigned __int8 m_nEnemyAllyLive;
@@ -65435,6 +65539,7 @@ struct __cppobj __declspec(align(8)) CMessageSpriteUpdate : CMessage
 	unsigned __int8 m_nGeneralLive;
 	unsigned __int8 m_bMoraleFailure;
 	unsigned __int8 m_nMoveScale;
+	nobinding unsigned __int8 _ptpad_66[2];
 	int m_nHPCONBonusTotalOld;
 	unsigned __int8 m_bLevelUp;
 	unsigned __int8 m_bSummonDisable;
@@ -65443,10 +65548,9 @@ struct __cppobj __declspec(align(8)) CMessageSpriteUpdate : CMessage
 	unsigned __int8 m_bDisableCircle;
 	unsigned __int8 m_bHeld;
 	unsigned __int8 m_bActiveImprisonment;
-	__int16 m_nTranslucency;
-	unsigned __int8 m_bImmuneToBackstabs;
-	unsigned int m_spellState[8];
+	nobinding unsigned __int8 _ptpad_73[1];
 	unsigned __int16 m_nBitsRequired;
+	nobinding unsigned __int8 _ptpad_76[10];
 };
 
 /* 6855 */
@@ -66251,25 +66355,31 @@ struct /*VFT*/ CMessageDoorOpen_vtbl
 /* 6933 */
 struct __cppobj CGameDoor : CGameAIBase
 {
-	nobinding unsigned __int8 _ptpad_530[20];
 	CResRef m_resID;
 	CRect m_rOpenBounding;
 	CRect m_rClosedBounding;
 	unsigned int m_cursorType;
 	unsigned int m_dwFlags;
-	nobinding unsigned __int8 _ptpad_574[8];
+	CPoint *m_pOpenPolygon;
 	unsigned __int16 m_nOpenPolygon;
-	nobinding unsigned __int8 _ptpad_57e[14];
+	nobinding unsigned __int8 _ptpad_572[6];
+	CPoint *m_pClosedPolygon;
 	unsigned __int16 m_nClosedPolygon;
-	nobinding unsigned __int8 _ptpad_58e[14];
+	nobinding unsigned __int8 _ptpad_582[6];
+	CPoint *m_pOpenSearch;
 	unsigned __int16 m_nOpenSearch;
-	nobinding unsigned __int8 _ptpad_59e[14];
+	nobinding unsigned __int8 _ptpad_592[6];
+	CPoint *m_pClosedSearch;
 	unsigned __int16 m_nClosedSearch;
-	nobinding unsigned __int8 _ptpad_5ae[2];
+	nobinding unsigned __int8 _ptpad_5a2[2];
 	CPoint m_ptDest1;
 	CPoint m_ptDest2;
 	unsigned __int8 m_scriptRes[8];
-	nobinding unsigned __int8 _ptpad_5c8[108];
+	nobinding unsigned __int8 _ptpad_5bc[4];
+	CTiledObject m_tiledObject;
+	char m_scriptName[32];
+	char m_triggerName[32];
+	nobinding unsigned __int8 _ptpad_628[12];
 	__int16 m_hitPoints;
 	__int16 m_armourClass;
 	CResRef m_openSound;
@@ -66287,11 +66397,11 @@ struct __cppobj CGameDoor : CGameAIBase
 	nobinding unsigned __int8 _ptpad_666[2];
 	CPoint m_ptOpenDest;
 	CPoint m_ptClosedDest;
-	nobinding unsigned __int8 _ptpad_678[36];
+	CSound m_sndDoor;
 	unsigned int m_strNotPickable;
 	int m_usedDelay;
 	unsigned __int8 m_probabilityRoll;
-	nobinding unsigned __int8 _ptpad_6a5[11];
+	nobinding unsigned __int8 _ptpad_6a1[7];
 };
 
 /* 6934 */
@@ -66684,6 +66794,7 @@ struct __cppobj CProjectileFall : CProjectileBAM
 	int m_nSideSpeed;
 	int m_bAreaEffect;
 	__int16 m_nAreaRange;
+	nobinding unsigned __int8 _ptpad_3e6[2];
 	CAIObjectType m_targetType;
 };
 
@@ -66877,19 +66988,23 @@ struct /*VFT*/ CGameEffectOverrideAnimation_vtbl
 };
 
 /* 6972 */
-struct __cppobj __declspec(align(4)) CProjectileChain : CProjectileBAM
+struct __cppobj CProjectileChain : CProjectileBAM
 {
 	__int16 m_numProjectile;
 	__int16 m_nDelay;
 	int m_bOriginCaster;
 	unsigned __int16 m_secondaryProjectileType;
+	nobinding unsigned __int8 _ptpad_3e2[6];
 	CProjectile *m_carrierProjectile;
 	int m_carrierArrived;
+	nobinding unsigned __int8 _ptpad_3f4[4];
 	CAIObjectType m_targetType;
 	int m_nHeight;
 	__int16 m_nType;
+	nobinding unsigned __int8 _ptpad_416[2];
 	int m_bUseLineOfSight;
 	__int16 m_nDelayCount;
+	nobinding unsigned __int8 _ptpad_41e[2];
 };
 
 /* 6973 */
@@ -67081,7 +67196,7 @@ struct /*VFT*/ CGameEffectDisintegrate_vtbl
 };
 
 /* 6988 */
-struct __cppobj __declspec(align(4)) CProjectileArea : CProjectileBAM
+struct __cppobj CProjectileArea : CProjectileBAM
 {
 	CResRef m_resref;
 	__int16 m_explosionRange;
@@ -67092,23 +67207,26 @@ struct __cppobj __declspec(align(4)) CProjectileArea : CProjectileBAM
 	__int16 m_nDelay;
 	__int16 m_nDelayCount;
 	int m_bDetonateOnlyIfTargets;
-	CAIObjectType m_targetType;
 	unsigned __int8 m_fireBallType;
+	nobinding unsigned __int8 _ptpad_3f5[3];
 	int m_bSparkleExplosion;
 	unsigned __int16 m_sparkleExplosionProjectile;
+	nobinding unsigned __int8 _ptpad_3fe[2];
 	int m_bDelayedTrigger;
 	int m_bChunksExplosion;
-	int m_checkForNonSprites;
 	int m_centerBam;
 	unsigned __int16 m_explodeId;
 	CResRef m_explosionSound;
 	unsigned __int8 m_ringColor;
+	nobinding unsigned __int8 _ptpad_417[1];
 	int m_bVVCAtCenter;
 	CResRef m_centerVVC;
 	int m_bConeFromCaster;
 	unsigned __int16 m_coneSize;
+	nobinding unsigned __int8 _ptpad_42a[2];
 	int m_bIgnoreLOS;
 	char m_portraitNum;
+	nobinding unsigned __int8 _ptpad_431[3];
 	int m_bResolvePortraitNum;
 	int m_centerBamWait;
 	int m_forceInitialWait;
@@ -67124,10 +67242,10 @@ struct __cppobj __declspec(align(4)) CProjectileArea : CProjectileBAM
 	unsigned __int16 m_granularity;
 	unsigned __int16 m_granDivider;
 	unsigned __int16 m_childCount;
-	int m_bPointsInited;
-	CPoint m_points[4];
+	nobinding unsigned __int8 _ptpad_476[30];
 	CPoint m_initialVector;
 	unsigned __int16 m_startingAngle;
+	nobinding unsigned __int8 _ptpad_49e[2];
 };
 
 /* 6989 */
@@ -67985,11 +68103,11 @@ struct /*VFT*/ CGameEffectImmunitySchoolDecrement_vtbl
 };
 
 /* 7055 */
-struct __cppobj __declspec(align(8)) CMessageAddEffect : CMessage
+struct __cppobj CMessageAddEffect : CMessage
 {
 	CGameEffect *m_effect;
-	__int16 m_CommType;
 	unsigned __int8 m_noSave;
+	nobinding unsigned __int8 _ptpad_19[7];
 };
 
 /* 7056 */
@@ -68415,13 +68533,13 @@ struct __cppobj CGameTiledObject : CGameAIBase
 {
 	CResRef m_resID;
 	unsigned int m_dwFlags;
-	nobinding unsigned __int8 _ptpad_53c[4];
+	nobinding unsigned __int8 _ptpad_544[4];
 	CPoint *m_pPrimarySearch;
 	unsigned __int16 m_nPrimarySearch;
-	nobinding unsigned __int8 _ptpad_54a[6];
+	nobinding unsigned __int8 _ptpad_552[6];
 	CPoint *m_pSecondarySearch;
 	unsigned __int16 m_nSecondarySearch;
-	nobinding unsigned __int8 _ptpad_55a[6];
+	nobinding unsigned __int8 _ptpad_562[6];
 	CTiledObject m_tiledObject;
 	char m_scriptName[32];
 };
@@ -68560,14 +68678,14 @@ struct /*VFT*/ CTypedPtrList<CPtrList,CVidCell *>_vtbl
 struct __cppobj CGameStatic : CGameObject
 {
 	CAreaFileStaticObject m_header;
-	CVidCell m_vidCell;
+	nobinding unsigned __int8 _ptpad_b0[8];
 	CResWebm *m_pMovie;
 	CResPVR *m_pImage;
 	int m_bRender;
 	CSize m_size;
-	CTypedPtrList<CPtrList,CVidCell *> m_secondaryVidCellList;
+	nobinding unsigned __int8 _ptpad_d4[120];
 	int m_bNewPalette;
-	CVidBitmap m_newPalette;
+	nobinding unsigned __int8 _ptpad_150[296];
 };
 
 /* 7107 */
@@ -70793,6 +70911,7 @@ struct __cppobj SteamNetworkingIdentityRender
 /* 7283 */
 struct __cppobj CProjectileCallLightning : CProjectileInstant
 {
+
 };
 
 /* 7284 */
@@ -71366,9 +71485,10 @@ struct /*VFT*/ CMessageSetNumTimesTalkedTo_vtbl
 };
 
 /* 7339 */
-struct __cppobj __declspec(align(8)) CProjectileLightningBounce : CProjectileBAM
+struct __cppobj CProjectileLightningBounce : CProjectileBAM
 {
 	int m_lifeSpan;
+	nobinding unsigned __int8 _ptpad_3dc[4];
 };
 
 /* 7340 */
@@ -76225,9 +76345,10 @@ struct _XSTATE_FEATURE
 };
 
 /* 7781 */
-struct __cppobj __declspec(align(8)) CProjectileSegment : CProjectileBAM
+struct __cppobj CProjectileSegment : CProjectileBAM
 {
 	__int16 m_counter;
+	nobinding unsigned __int8 _ptpad_3da[6];
 };
 
 /* 7782 */
@@ -76941,6 +77062,7 @@ struct _ACCESS_REASONS
 /* 7848 */
 struct __cppobj CProjectileInvisibleTravelling : CProjectileBAM
 {
+
 };
 
 /* 7849 */
@@ -78458,9 +78580,10 @@ struct _PSINJECTDATA
 };
 
 /* 8052 */
-struct __cppobj __declspec(align(8)) CProjectileFireHands : CProjectileBAM
+struct __cppobj CProjectileFireHands : CProjectileBAM
 {
 	__int16 m_counter;
+	nobinding unsigned __int8 _ptpad_3da[6];
 };
 
 /* 8053 */
@@ -82899,15 +83022,17 @@ struct _ImageArchitectureEntry
 };
 
 /* 8535 */
-struct __cppobj __declspec(align(8)) CProjectileTravelDoor : CProjectile
+struct __cppobj CProjectileTravelDoor : CProjectile
 {
 	CVidCell m_animation;
 	CVidBitmap m_newPalette;
 	unsigned int m_dwRenderFlags;
 	unsigned __int8 m_bNewPalette;
 	unsigned __int8 m_transparency;
+	nobinding unsigned __int8 _ptpad_456[2];
 	CString m_animationStr;
 	unsigned __int8 m_nState;
+	nobinding unsigned __int8 _ptpad_461[7];
 };
 
 /* 8536 */
@@ -83635,9 +83760,10 @@ struct _IMAGE_OPTIONAL_HEADER
 };
 
 /* 8608 */
-struct __cppobj __declspec(align(8)) CProjectileNewScorcher : CProjectileBAM
+struct __cppobj CProjectileNewScorcher : CProjectileBAM
 {
 	unsigned __int8 m_nSegments;
+	nobinding unsigned __int8 _ptpad_3d9[3];
 	int m_deltaZ;
 	int itsAffectedCreatures[64];
 	int itsNumAffectedCreatures;
@@ -83645,6 +83771,7 @@ struct __cppobj __declspec(align(8)) CProjectileNewScorcher : CProjectileBAM
 	int itsApplyEffectsInterval;
 	int itsClearAffectedCreaturesInterval;
 	int itsTargetID;
+	nobinding unsigned __int8 _ptpad_4f4[4];
 };
 
 /* 8609 */
@@ -84092,6 +84219,7 @@ union _FILE_SEGMENT_ELEMENT
 /* 8654 */
 struct __cppobj CProjectileLightningStorm : CProjectileChain
 {
+
 };
 
 /* 8655 */
@@ -84801,9 +84929,10 @@ struct tagWNDCLASSEXW
 };
 
 /* 8719 */
-struct __cppobj __declspec(align(8)) CProjectileConeOfCold : CProjectileBAM
+struct __cppobj CProjectileConeOfCold : CProjectileBAM
 {
 	__int16 m_counter;
+	nobinding unsigned __int8 _ptpad_3da[6];
 };
 
 /* 8720 */
@@ -86588,9 +86717,10 @@ struct GetVideoURLResult_t
 };
 
 /* 8913 */
-struct __cppobj __declspec(align(8)) CProjectileLightningBoltGround : CProjectileBAM
+struct __cppobj CProjectileLightningBoltGround : CProjectileBAM
 {
 	int m_maxBounces;
+	nobinding unsigned __int8 _ptpad_3dc[4];
 };
 
 /* 8914 */
@@ -86884,6 +87014,7 @@ struct _IMAGE_BOUND_FORWARDER_REF
 /* 8942 */
 struct __cppobj CProjectileMagicMissileMulti : CProjectileMulti
 {
+
 };
 
 /* 8943 */
@@ -86937,9 +87068,10 @@ struct _TOKEN_ORIGIN
 };
 
 /* 8945 */
-struct __cppobj __declspec(align(8)) CProjectileColorSpray : CProjectileBAM
+struct __cppobj CProjectileColorSpray : CProjectileBAM
 {
 	__int16 m_counter;
+	nobinding unsigned __int8 _ptpad_3da[6];
 };
 
 /* 8946 */
@@ -87666,6 +87798,7 @@ struct tagEMRSCALEVIEWPORTEXTEX
 /* 9021 */
 struct __cppobj CProjectileSkyStrikeBAM : CProjectileBAM
 {
+
 };
 
 /* 9022 */
@@ -87869,6 +88002,7 @@ struct TimedTrialStatus_t
 /* 9045 */
 struct __cppobj CProjectileLightningBolt : CProjectileBAM
 {
+
 };
 
 /* 9046 */
@@ -88206,6 +88340,7 @@ struct ValvePackingSentinel_t
 /* 9076 */
 struct __cppobj CProjectileMushroom : CProjectileBAM
 {
+
 };
 
 /* 9077 */
@@ -88395,12 +88530,14 @@ struct __declspec(align(8)) SDL_Finger
 };
 
 /* 9094 */
-struct __cppobj __declspec(align(8)) CProjectileScorcher : CProjectileBAM
+struct __cppobj CProjectileScorcher : CProjectileBAM
 {
 	unsigned __int8 m_lifeSpan;
 	unsigned __int8 m_nSegments;
+	nobinding unsigned __int8 _ptpad_3da[2];
 	int m_deltaZ;
 	unsigned __int8 m_bGlow;
+	nobinding unsigned __int8 _ptpad_3e1[7];
 };
 
 /* 9095 */

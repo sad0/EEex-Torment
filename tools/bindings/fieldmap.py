@@ -85,6 +85,34 @@ for fn, args in T.free_sigs.items():
     rs = ptr_struct(T.rets.get((None, fn)))
     if rs:
         ret_types[a] = rs
+# EEex's BG2EE symbol table mapped onto our BG exe (tools/bgnames.py): many more typed members
+_n_before = len(entry_types)
+for _a, _name in json.load(open('bgnames.json')).items():
+    if '::' not in _name:
+        continue
+    _cls, _fn = _name.rsplit('::', 1)
+    args = T.member_sigs.get((_cls, _fn))
+    _a = int(_a, 16)
+    if _a in entry_types:
+        continue
+    if args is None:
+        # no declared signature: a method of a struct with fields gets this = rcx (static-only
+        # holder classes have no fields; CGameObjectArray's methods are static)
+        st_ = T.structs.get(_cls)
+        if not st_ or not st_.fields or _cls in ('CGameObjectArray', 'CUtil'):
+            continue
+        args = [_cls + '*']
+    regs = {}
+    for k, arg in enumerate(args[:4]):
+        s_ = ptr_struct(argtype(arg))
+        if s_:
+            regs[ARGREGS[k]] = s_
+    if regs:
+        entry_types[_a] = regs
+    rs = ptr_struct(T.rets.get((_cls, _fn)))
+    if rs:
+        ret_types.setdefault(_a, rs)
+print('roots from bgnames.json:', len(entry_types) - _n_before, file=sys.stderr)
 # vtables: slot k of S's vtable is a method whose first argument type is declared in S::vtbl
 import struct as _st
 for n in UP:
