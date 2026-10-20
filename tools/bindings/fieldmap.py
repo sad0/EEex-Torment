@@ -158,6 +158,8 @@ print('roots: typed functions', len(entry_types), 'returns', len(ret_types), 'gl
 EV = collections.defaultdict(collections.Counter)   # (struct, bg_abs, size) -> Counter(pt_abs)
 CALLARGS = collections.defaultdict(collections.Counter)  # (callee, argreg) -> Counter(struct)
 SITES = collections.defaultdict(list)  # (struct, bg_abs) -> [(bg fn, pt fn, bg insn, bg base off, pt base off)]
+VCALLS = collections.defaultdict(collections.Counter)  # (struct, bg vtable displacement) -> Counter(pt displacement)
+VT = '@vt:'   # register value tag: vtable of the struct (loaded from [obj + 0])
 
 
 def type_at(sname, off):
@@ -200,7 +202,11 @@ def run(bgf, ptf, roots):
         mop = mem_op(i)
         pmop = mem_op(pi) if pi is not None else None
         # evidence for memory accesses through a typed base
-        if mop is not None and mop.mem.index == 0 and mop.mem.base in st:
+        if i.mnemonic == 'call' and mop is not None and mop.mem.index == 0 and mop.mem.base in st and st[mop.mem.base][0].startswith(VT):
+            # virtual call through a typed vtable: BG slot -> aligned PT slot
+            if pi is not None and pi.mnemonic == 'call' and pmop is not None and pmop.mem.index == 0:
+                VCALLS[(st[mop.mem.base][0][len(VT):], mop.mem.disp)][pmop.mem.disp] += 1
+        elif mop is not None and mop.mem.index == 0 and mop.mem.base in st and not st[mop.mem.base][0].startswith(VT):
             s, ob, op_ = st[mop.mem.base]
             bg_abs = ob + mop.mem.disp
             sl = SITES[(s, bg_abs)]
@@ -230,18 +236,20 @@ def run(bgf, ptf, roots):
                         newval = (glob[g][1], 0, 0)
                 elif src.mem.base == X.X86_REG_RSP and src.mem.index == 0:
                     newval = stack.get(src.mem.disp)
-                elif src.mem.base in st and src.mem.index == 0:
+                elif src.mem.base in st and src.mem.index == 0 and not st[src.mem.base][0].startswith(VT):
                     s, ob, op_ = st[src.mem.base]
                     tgt = type_at(s, ob + src.mem.disp)
                     if tgt:
                         newval = (tgt, 0, 0)
+                    elif ob + src.mem.disp == 0 and T.structs.get(s) is not None:
+                        newval = (VT + s, 0, 0)
         elif i.mnemonic == 'lea' and dreg is not None:
             src = i.operands[1]
             if src.mem.base == X.X86_REG_RIP:
                 g = i.address + i.size + src.mem.disp
                 if glob.get(g, (None,))[0] == 'lea':
                     newval = (glob[g][1], 0, 0)
-            elif src.mem.base in st and src.mem.index == 0:
+            elif src.mem.base in st and src.mem.index == 0 and not st[src.mem.base][0].startswith(VT):
                 s, ob, op_ = st[src.mem.base]
                 ptd = pmop.mem.disp if (pmop is not None and pi.mnemonic == 'lea' and pmop.mem.base == src.mem.base and op_ is not None) else None
                 newval = (s, ob + src.mem.disp, (op_ + ptd) if ptd is not None else None)
@@ -256,7 +264,7 @@ def run(bgf, ptf, roots):
                 tgt = i.operands[0].imm
                 for k, r in enumerate(ARGREGS):
                     v = st.get(r)
-                    if v is None:
+                    if v is None or v[0].startswith(VT):
                         continue
                     s_, ob, _ = v
                     if ob == 0:
@@ -283,7 +291,7 @@ def run(bgf, ptf, roots):
 
 if __name__ == '__main__':
     for rnd in range(4):
-        EV.clear(); CALLARGS.clear(); SITES.clear()
+        EV.clear(); CALLARGS.clear(); SITES.clear(); VCALLS.clear()
         tot = 0; nf = 0
         for bgf, ptf in F.items():
             roots = entry_types.get(bgf, {})
@@ -305,3 +313,6 @@ if __name__ == '__main__':
     json.dump({f'{s}|{hex(o)}|{z}': {hex(a): c for a, c in v.items()} for (s, o, z), v in EV.items()}, open('bindings/field_evidence.json', 'w'), indent=0)
     json.dump({f'{s}|{hex(o)}': [[hex(a) if a is not None else None for a in t] for t in v] for (s, o), v in SITES.items()},
               open('bindings/field_sites.json', 'w'), indent=0)
+    json.dump({f'{s}|{hex(d)}': {hex(a): c for a, c in v.items()} for (s, d), v in sorted(VCALLS.items())},
+              open('bindings/vtable_evidence.json', 'w'), indent=0)
+    print('virtual call keys', len(VCALLS), file=sys.stderr)

@@ -109,9 +109,27 @@ local function dumpParty(game)
 	t("IsPlayerScript", function() return EEex.IsPlayerScript(sprite.m_overrideScript) end)
 	t("ShouldEffectBypassOp120", function() return EEex.ShouldEffectBypassOp120(nil) end)
 	t("MatchObject", function() return EEex.MatchObject(sprite, "return true", 0, 300, 0) end)
-	t("MatchObject Party", function() return EEex.MatchObject(sprite, "Player2", 0, 300, 0) end)
+	t("MatchObject Party", function() return EEex.MatchObject(sprite, "return EEex_MatchObject.m_id ~= nil", 0, 300, 0) end)
 	t("FormatPointerAsEngine", function() return EEex.FormatPointerAsEngine(EEex_UDToPtr(target)) end)
 	t("DeepCopy", function() local c = EEex.DeepCopy({a = {b = 1}}); return c and c.a.b end)
+	-- Phase 4b: virtual calls in Torment slot order (tools/bindings/vtsolve.py)
+	t("virtual_GetObjectType", function() return sprite:virtual_GetObjectType() end)
+	t("virtual_GetVisualRange", function() return sprite:virtual_GetVisualRange() end)
+	t("virtual_GetAttackRange", function() return sprite:virtual_GetAttackRange() end)
+	t("virtual_GetHelpRange", function() return sprite:virtual_GetHelpRange() end)
+	t("virtual_GetCanSeeInvisible", function() return sprite:virtual_GetCanSeeInvisible() end)
+	t("virtual_GetAIType", function() return EEex_UDToPtr(sprite:virtual_GetAIType()) - EEex_UDToPtr(sprite) end)
+	t("virtual_GetVertListType", function() return sprite:virtual_GetVertListType() end)
+	t("m_activeImprisonment", function() return sprite.m_activeImprisonment end)
+	-- MatchObject diagnosis: every condition EEex_CheckMatch tests on the target (party[1])
+	t("target flags", function() return target.m_active, target.m_activeAI, target.m_activeImprisonment end)
+	t("target pos/caller pos", function() return target.m_pos.x, target.m_pos.y, sprite.m_pos.x, sprite.m_pos.y end)
+	t("target AboveGround", function() return target.m_animation.m_animation:virtual_GetAboveGround() end)
+	t("target generalState", function() return target.m_derivedStats.m_generalState, target.m_derivedStats.m_bSanctuary end)
+	t("caller vert list", function() return sprite:virtual_GetVertListPos() ~= nil, sprite:virtual_GetVertListType() end)
+	t("area vert sort count", function() return sprite.m_pArea.m_lVertSort.m_nCount end)
+	t("MatchObject counter", function() PTEE_MC = 0; local r = EEex.MatchObject(sprite, "PTEE_MC = PTEE_MC + 1 return true", 0, -1, 1); return r, PTEE_MC end)
+	t("MatchObject non-sprites", function() PTEE_MC = 0; local r = EEex.MatchObject(sprite, "PTEE_MC = PTEE_MC + 1 return true", 0, -1, 2 + 8 + 16 + 32); return r, PTEE_MC end)
 end
 
 local engineDone, partyDone, ticks = false, false, 0
@@ -125,7 +143,12 @@ local function onUI()
 		engineDone = true
 		log("engine reads", okE, okE and "" or game)
 	end
-	if okE and game and game.m_nCharacters > 0 then
+	-- wait until party[0] is placed in its area (vertical sort list), not just loaded
+	local function placed()
+		local o = getObject(game.m_characters:get(0))
+		return o and o.m_pArea and EEex_CastUD(o, "CGameSprite"):virtual_GetVertListPos() ~= nil
+	end
+	if okE and game and game.m_nCharacters > 0 and select(2, pcall(placed)) == true then
 		partyDone = true
 		local okP, errP = pcall(dumpParty, game)
 		log("dumpParty", okP, errP)

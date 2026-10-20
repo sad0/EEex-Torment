@@ -50,6 +50,9 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
          2DA names, file formats on all PT data files, library versions, allocation sizes, live memory
          checks (memprobe.py). EEex.dll and LuaBindings.dll build on it; in-game test passes.
    - [ ] 4b Semantic audit of every EEex.dll function vs the PT engine; in-game test of every export
+         Done: reimplementation verdicts + rewrites (AUDIT.md), virtual slot order solved for Torment
+         (vtsolve.py/vtheader.py, header in PT order), 19 exports + virtual calls + MatchObject OK in game.
+         Left for phase 5: B3AttackInfo cursor ids, Lua guards for unsupported labels.
    - [x] 4c 13 Unsupported patterns: each proven absent / not applicable in PT (PATTERNS.md); EEex.dll
          uses no coroutine API; phase 5 must guard the labels in EEex_Fix_Patch.lua (op33 + CheckAdd
          spell-immunity fixes), EEex_Projectile.lua (UpdateAOE, Multi MM decode), EEex_Script_Patch.lua (OnCopy)

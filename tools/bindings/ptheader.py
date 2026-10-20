@@ -175,6 +175,10 @@ def rewrite(m):
 
 
 new = hdr_rx.sub(rewrite, txt)
+# Torment virtual slot order (vtsolve.py -> vtmap.json)
+import vtheader
+new, vrep = vtheader.rewrite(new)
+print('vtables proven', len(vrep['proven']), 'unproven', len(vrep['unproven']), 'moved', len(vrep['moved']))
 open(os.path.join(OUTD, 'Torment-v3.2.2.0.h'), 'w', encoding='utf-8', newline='\n').write(new)
 pk = open(PACK).read()  # natural alignment: explicit pads already sit on aligned PT offsets
 open(os.path.join(OUTD, 'packing_pt.txt'), 'w', newline='\n').write(pk)

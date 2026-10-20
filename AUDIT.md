@@ -42,11 +42,30 @@
 | Hand bonus feedback (+Right / +Left) | EEex.cpp | n/a | fixed: m_hitBonusesRight/Left are CStrings (engine appends "(text)"), upstream formatted them with %d |
 | Engine constants in identical code (trigger ids in Hold/ApplyTriggers/SetTrigger/SetLastObject, opcode 187, colour 0xBED7D7, dead-state mask 0xFC0) | EEex.cpp | 1.00 | valid: same values in PT's own code |
 
+## Virtual slot order (tools/bindings/vtsolve.py + vtheader.py)
+Torment's vtables differ from BG2EE: CGameObject drops SetVertListType (slot 9, all later slots -1),
+CGameAIBase adds 2 slots after ClearActions, CProjectile adds one, CGameAnimationType / CVidCell /
+CInfToolTip insert slots, etc. The generated headers used BG order, so every `virtual_*` call past a
+changed slot hit the wrong function. Now:
+- BG vtable per class: constructor store, ctor/dtor named in bgnames, or the .rdata vtable whose slots
+  carry the header method names (own override required, <=20% name contradictions, unique best);
+- PT vtable: constructor counterpart, aligned LEA sites, or slot-content match;
+- slot map: same function (fmap) / same body, equal gaps between anchors, removed slots, destructor
+  slot 0, inherited prefix = base map; consensus per introducing class across all solved classes;
+- check: 213/216 typed virtual calls in aligned BG/PT code agree (3 single-vote mispairings verified).
+Header: 710 vtbl structs in PT order (72 changed; PT-only slots = `ptee_slot_N`, removed slots dropped),
+65 unproven classes keep BG order renamed `ptee_unproven_*` (not callable). Of the 305 classes in
+EEex.dll's header, 7 are unproven and unused (CException, CFileException, CTimer; Steam interfaces kept
+as SDK ABI: same interface versions).
+
 ## In-game test of the exports (bindings/test/EEex_Main.lua, save ptee-test)
 All 19 standalone exports run without error on Torment: CanAttackWithLeftHand, GetWeaponHitChance (35%,
 full PT breakdown), FakeAttackRoll, IsImmuneToWeapon, GetExtendedStatValue, GetHighestRefreshRate,
 GetMicroseconds, Get/SetINIString (round trip), GetTextWidthHeight, IsDefaultAttackCursor,
 IsMarshallingCopy, IsPlayerScript, ShouldEffectBypassOp120, MatchObject, FormatPointerAsEngine, DeepCopy.
+MatchObject finds Morte (nearest party member, match chunk ran 20 times over the area's vertical list)
+once the sprites are placed in the area. Virtual calls through the bindings return engine values
+(GetObjectType 0x31 = SPRITE, GetVisualRange 544, GetAIType = sprite + 0x30, GetAboveGround 1).
 The other exports need the phase-5 Lua layer (menus/templates, sliced rects, profiler, Uncap FPS).
 
 Overrides are only reached when EEex's Lua patches redirect the engine (phase 5); until then the

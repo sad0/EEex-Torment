@@ -16289,9 +16289,9 @@ typedef int HRESULT;
 /* 1310 */
 struct /*VFT*/ IUnknown_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
 };
 
 /* 1311 */
@@ -16867,11 +16867,11 @@ union tagBINDPTR
 /* 1329 */
 struct /*VFT*/ ITypeComp_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *Bind)(ITypeComp *this, wchar_t *, unsigned int, unsigned __int16, ITypeInfo **, tagDESCKIND *, tagBINDPTR *);
-	HRESULT (__fastcall *BindType)(ITypeComp *this, wchar_t *, unsigned int, ITypeInfo **, ITypeComp **);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_Bind)(ITypeComp *this, wchar_t *, unsigned int, unsigned __int16, ITypeInfo **, tagDESCKIND *, tagBINDPTR *);
+	HRESULT (__fastcall *ptee_unproven_BindType)(ITypeComp *this, wchar_t *, unsigned int, ITypeInfo **, ITypeComp **);
 };
 
 /* 1330 */
@@ -16916,82 +16916,82 @@ struct __declspec(align(4)) tagTLIBATTR
 /* 1334 */
 struct /*VFT*/ ITypeLib_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	unsigned int (__fastcall *GetTypeInfoCount)(ITypeLib *this);
-	HRESULT (__fastcall *GetTypeInfo)(ITypeLib *this, unsigned int, ITypeInfo **);
-	HRESULT (__fastcall *GetTypeInfoType)(ITypeLib *this, unsigned int, tagTYPEKIND *);
-	HRESULT (__fastcall *GetTypeInfoOfGuid)(ITypeLib *this, const _GUID *, ITypeInfo **);
-	HRESULT (__fastcall *GetLibAttr)(ITypeLib *this, tagTLIBATTR **);
-	HRESULT (__fastcall *GetTypeComp)(ITypeLib *this, ITypeComp **);
-	HRESULT (__fastcall *GetDocumentation)(ITypeLib *this, int, wchar_t **, wchar_t **, unsigned int *, wchar_t **);
-	HRESULT (__fastcall *IsName)(ITypeLib *this, wchar_t *, unsigned int, int *);
-	HRESULT (__fastcall *FindName)(ITypeLib *this, wchar_t *, unsigned int, ITypeInfo **, int *, unsigned __int16 *);
-	void (__fastcall *ReleaseTLibAttr)(ITypeLib *this, tagTLIBATTR *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_GetTypeInfoCount)(ITypeLib *this);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfo)(ITypeLib *this, unsigned int, ITypeInfo **);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfoType)(ITypeLib *this, unsigned int, tagTYPEKIND *);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfoOfGuid)(ITypeLib *this, const _GUID *, ITypeInfo **);
+	HRESULT (__fastcall *ptee_unproven_GetLibAttr)(ITypeLib *this, tagTLIBATTR **);
+	HRESULT (__fastcall *ptee_unproven_GetTypeComp)(ITypeLib *this, ITypeComp **);
+	HRESULT (__fastcall *ptee_unproven_GetDocumentation)(ITypeLib *this, int, wchar_t **, wchar_t **, unsigned int *, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_IsName)(ITypeLib *this, wchar_t *, unsigned int, int *);
+	HRESULT (__fastcall *ptee_unproven_FindName)(ITypeLib *this, wchar_t *, unsigned int, ITypeInfo **, int *, unsigned __int16 *);
+	void (__fastcall *ptee_unproven_ReleaseTLibAttr)(ITypeLib *this, tagTLIBATTR *);
 };
 
 /* 1335 */
 struct /*VFT*/ ITypeInfo_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetTypeAttr)(ITypeInfo *this, tagTYPEATTR **);
-	HRESULT (__fastcall *GetTypeComp)(ITypeInfo *this, ITypeComp **);
-	HRESULT (__fastcall *GetFuncDesc)(ITypeInfo *this, unsigned int, tagFUNCDESC **);
-	HRESULT (__fastcall *GetVarDesc)(ITypeInfo *this, unsigned int, tagVARDESC **);
-	HRESULT (__fastcall *GetNames)(ITypeInfo *this, int, wchar_t **, unsigned int, unsigned int *);
-	HRESULT (__fastcall *GetRefTypeOfImplType)(ITypeInfo *this, unsigned int, unsigned int *);
-	HRESULT (__fastcall *GetImplTypeFlags)(ITypeInfo *this, unsigned int, int *);
-	HRESULT (__fastcall *GetIDsOfNames)(ITypeInfo *this, wchar_t **, unsigned int, int *);
-	HRESULT (__fastcall *Invoke)(ITypeInfo *this, void *, int, unsigned __int16, tagDISPPARAMS *, tagVARIANT *, tagEXCEPINFO *, unsigned int *);
-	HRESULT (__fastcall *GetDocumentation)(ITypeInfo *this, int, wchar_t **, wchar_t **, unsigned int *, wchar_t **);
-	HRESULT (__fastcall *GetDllEntry)(ITypeInfo *this, int, tagINVOKEKIND, wchar_t **, wchar_t **, unsigned __int16 *);
-	HRESULT (__fastcall *GetRefTypeInfo)(ITypeInfo *this, unsigned int, ITypeInfo **);
-	HRESULT (__fastcall *AddressOfMember)(ITypeInfo *this, int, tagINVOKEKIND, void **);
-	HRESULT (__fastcall *CreateInstance)(ITypeInfo *this, IUnknown *, const _GUID *, void **);
-	HRESULT (__fastcall *GetMops)(ITypeInfo *this, int, wchar_t **);
-	HRESULT (__fastcall *GetContainingTypeLib)(ITypeInfo *this, ITypeLib **, unsigned int *);
-	void (__fastcall *ReleaseTypeAttr)(ITypeInfo *this, tagTYPEATTR *);
-	void (__fastcall *ReleaseFuncDesc)(ITypeInfo *this, tagFUNCDESC *);
-	void (__fastcall *ReleaseVarDesc)(ITypeInfo *this, tagVARDESC *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetTypeAttr)(ITypeInfo *this, tagTYPEATTR **);
+	HRESULT (__fastcall *ptee_unproven_GetTypeComp)(ITypeInfo *this, ITypeComp **);
+	HRESULT (__fastcall *ptee_unproven_GetFuncDesc)(ITypeInfo *this, unsigned int, tagFUNCDESC **);
+	HRESULT (__fastcall *ptee_unproven_GetVarDesc)(ITypeInfo *this, unsigned int, tagVARDESC **);
+	HRESULT (__fastcall *ptee_unproven_GetNames)(ITypeInfo *this, int, wchar_t **, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_GetRefTypeOfImplType)(ITypeInfo *this, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_GetImplTypeFlags)(ITypeInfo *this, unsigned int, int *);
+	HRESULT (__fastcall *ptee_unproven_GetIDsOfNames)(ITypeInfo *this, wchar_t **, unsigned int, int *);
+	HRESULT (__fastcall *ptee_unproven_Invoke)(ITypeInfo *this, void *, int, unsigned __int16, tagDISPPARAMS *, tagVARIANT *, tagEXCEPINFO *, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_GetDocumentation)(ITypeInfo *this, int, wchar_t **, wchar_t **, unsigned int *, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetDllEntry)(ITypeInfo *this, int, tagINVOKEKIND, wchar_t **, wchar_t **, unsigned __int16 *);
+	HRESULT (__fastcall *ptee_unproven_GetRefTypeInfo)(ITypeInfo *this, unsigned int, ITypeInfo **);
+	HRESULT (__fastcall *ptee_unproven_AddressOfMember)(ITypeInfo *this, int, tagINVOKEKIND, void **);
+	HRESULT (__fastcall *ptee_unproven_CreateInstance)(ITypeInfo *this, IUnknown *, const _GUID *, void **);
+	HRESULT (__fastcall *ptee_unproven_GetMops)(ITypeInfo *this, int, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetContainingTypeLib)(ITypeInfo *this, ITypeLib **, unsigned int *);
+	void (__fastcall *ptee_unproven_ReleaseTypeAttr)(ITypeInfo *this, tagTYPEATTR *);
+	void (__fastcall *ptee_unproven_ReleaseFuncDesc)(ITypeInfo *this, tagFUNCDESC *);
+	void (__fastcall *ptee_unproven_ReleaseVarDesc)(ITypeInfo *this, tagVARDESC *);
 };
 
 /* 1336 */
 struct /*VFT*/ IDispatch_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetTypeInfoCount)(IDispatch *this, unsigned int *);
-	HRESULT (__fastcall *GetTypeInfo)(IDispatch *this, unsigned int, unsigned int, ITypeInfo **);
-	HRESULT (__fastcall *GetIDsOfNames)(IDispatch *this, const _GUID *, wchar_t **, unsigned int, unsigned int, int *);
-	HRESULT (__fastcall *Invoke)(IDispatch *this, int, const _GUID *, unsigned int, unsigned __int16, tagDISPPARAMS *, tagVARIANT *, tagEXCEPINFO *, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfoCount)(IDispatch *this, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfo)(IDispatch *this, unsigned int, unsigned int, ITypeInfo **);
+	HRESULT (__fastcall *ptee_unproven_GetIDsOfNames)(IDispatch *this, const _GUID *, wchar_t **, unsigned int, unsigned int, int *);
+	HRESULT (__fastcall *ptee_unproven_Invoke)(IDispatch *this, int, const _GUID *, unsigned int, unsigned __int16, tagDISPPARAMS *, tagVARIANT *, tagEXCEPINFO *, unsigned int *);
 };
 
 /* 1344 */
 struct /*VFT*/ IRecordInfo_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *RecordInit)(IRecordInfo *this, void *);
-	HRESULT (__fastcall *RecordClear)(IRecordInfo *this, void *);
-	HRESULT (__fastcall *RecordCopy)(IRecordInfo *this, void *, void *);
-	HRESULT (__fastcall *GetGuid)(IRecordInfo *this, _GUID *);
-	HRESULT (__fastcall *GetName)(IRecordInfo *this, wchar_t **);
-	HRESULT (__fastcall *GetSize)(IRecordInfo *this, unsigned int *);
-	HRESULT (__fastcall *GetTypeInfo)(IRecordInfo *this, ITypeInfo **);
-	HRESULT (__fastcall *GetField)(IRecordInfo *this, void *, const wchar_t *, tagVARIANT *);
-	HRESULT (__fastcall *GetFieldNoCopy)(IRecordInfo *this, void *, const wchar_t *, tagVARIANT *, void **);
-	HRESULT (__fastcall *PutField)(IRecordInfo *this, unsigned int, void *, const wchar_t *, tagVARIANT *);
-	HRESULT (__fastcall *PutFieldNoCopy)(IRecordInfo *this, unsigned int, void *, const wchar_t *, tagVARIANT *);
-	HRESULT (__fastcall *GetFieldNames)(IRecordInfo *this, unsigned int *, wchar_t **);
-	int (__fastcall *IsMatchingType)(IRecordInfo *this, IRecordInfo *);
-	void *(__fastcall *RecordCreate)(IRecordInfo *this);
-	HRESULT (__fastcall *RecordCreateCopy)(IRecordInfo *this, void *, void **);
-	HRESULT (__fastcall *RecordDestroy)(IRecordInfo *this, void *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_RecordInit)(IRecordInfo *this, void *);
+	HRESULT (__fastcall *ptee_unproven_RecordClear)(IRecordInfo *this, void *);
+	HRESULT (__fastcall *ptee_unproven_RecordCopy)(IRecordInfo *this, void *, void *);
+	HRESULT (__fastcall *ptee_unproven_GetGuid)(IRecordInfo *this, _GUID *);
+	HRESULT (__fastcall *ptee_unproven_GetName)(IRecordInfo *this, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetSize)(IRecordInfo *this, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_GetTypeInfo)(IRecordInfo *this, ITypeInfo **);
+	HRESULT (__fastcall *ptee_unproven_GetField)(IRecordInfo *this, void *, const wchar_t *, tagVARIANT *);
+	HRESULT (__fastcall *ptee_unproven_GetFieldNoCopy)(IRecordInfo *this, void *, const wchar_t *, tagVARIANT *, void **);
+	HRESULT (__fastcall *ptee_unproven_PutField)(IRecordInfo *this, unsigned int, void *, const wchar_t *, tagVARIANT *);
+	HRESULT (__fastcall *ptee_unproven_PutFieldNoCopy)(IRecordInfo *this, unsigned int, void *, const wchar_t *, tagVARIANT *);
+	HRESULT (__fastcall *ptee_unproven_GetFieldNames)(IRecordInfo *this, unsigned int *, wchar_t **);
+	int (__fastcall *ptee_unproven_IsMatchingType)(IRecordInfo *this, IRecordInfo *);
+	void *(__fastcall *ptee_unproven_RecordCreate)(IRecordInfo *this);
+	HRESULT (__fastcall *ptee_unproven_RecordCreateCopy)(IRecordInfo *this, void *, void **);
+	HRESULT (__fastcall *ptee_unproven_RecordDestroy)(IRecordInfo *this, void *);
 };
 
 /* 1390 */
@@ -17047,13 +17047,13 @@ struct __cppobj IEnumSTATSTG : IUnknown
 /* 1396 */
 struct /*VFT*/ IEnumSTATSTG_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *Next)(IEnumSTATSTG *this, unsigned int, tagSTATSTG *, unsigned int *);
-	HRESULT (__fastcall *Skip)(IEnumSTATSTG *this, unsigned int);
-	HRESULT (__fastcall *Reset)(IEnumSTATSTG *this);
-	HRESULT (__fastcall *Clone)(IEnumSTATSTG *this, IEnumSTATSTG **);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_Next)(IEnumSTATSTG *this, unsigned int, tagSTATSTG *, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Skip)(IEnumSTATSTG *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Reset)(IEnumSTATSTG *this);
+	HRESULT (__fastcall *ptee_unproven_Clone)(IEnumSTATSTG *this, IEnumSTATSTG **);
 };
 
 /* 1397 */
@@ -18850,11 +18850,11 @@ struct __cppobj ISequentialStream : IUnknown
 /* 1641 */
 struct /*VFT*/ ISequentialStream_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
-	HRESULT (__fastcall *Write)(ISequentialStream *this, const void *, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Write)(ISequentialStream *this, const void *, unsigned int, unsigned int *);
 };
 
 /* 1642 */
@@ -19150,20 +19150,20 @@ struct __cppobj IStream : ISequentialStream
 /* 1680 */
 struct /*VFT*/ IStream_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
-	HRESULT (__fastcall *Write)(ISequentialStream *this, const void *, unsigned int, unsigned int *);
-	HRESULT (__fastcall *Seek)(IStream *this, _LARGE_INTEGER, unsigned int, _ULARGE_INTEGER *);
-	HRESULT (__fastcall *SetSize)(IStream *this, _ULARGE_INTEGER);
-	HRESULT (__fastcall *CopyTo)(IStream *this, IStream *, _ULARGE_INTEGER, _ULARGE_INTEGER *, _ULARGE_INTEGER *);
-	HRESULT (__fastcall *Commit)(IStream *this, unsigned int);
-	HRESULT (__fastcall *Revert)(IStream *this);
-	HRESULT (__fastcall *LockRegion)(IStream *this, _ULARGE_INTEGER, _ULARGE_INTEGER, unsigned int);
-	HRESULT (__fastcall *UnlockRegion)(IStream *this, _ULARGE_INTEGER, _ULARGE_INTEGER, unsigned int);
-	HRESULT (__fastcall *Stat)(IStream *this, tagSTATSTG *, unsigned int);
-	HRESULT (__fastcall *Clone)(IStream *this, IStream **);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_Read)(ISequentialStream *this, void *, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Write)(ISequentialStream *this, const void *, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Seek)(IStream *this, _LARGE_INTEGER, unsigned int, _ULARGE_INTEGER *);
+	HRESULT (__fastcall *ptee_unproven_SetSize)(IStream *this, _ULARGE_INTEGER);
+	HRESULT (__fastcall *ptee_unproven_CopyTo)(IStream *this, IStream *, _ULARGE_INTEGER, _ULARGE_INTEGER *, _ULARGE_INTEGER *);
+	HRESULT (__fastcall *ptee_unproven_Commit)(IStream *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Revert)(IStream *this);
+	HRESULT (__fastcall *ptee_unproven_LockRegion)(IStream *this, _ULARGE_INTEGER, _ULARGE_INTEGER, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_UnlockRegion)(IStream *this, _ULARGE_INTEGER, _ULARGE_INTEGER, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Stat)(IStream *this, tagSTATSTG *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Clone)(IStream *this, IStream **);
 };
 
 /* 1681 */
@@ -19174,24 +19174,24 @@ struct __cppobj IStorage : IUnknown
 /* 1682 */
 struct /*VFT*/ IStorage_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *CreateStream)(IStorage *this, const wchar_t *, unsigned int, unsigned int, unsigned int, IStream **);
-	HRESULT (__fastcall *OpenStream)(IStorage *this, const wchar_t *, void *, unsigned int, unsigned int, IStream **);
-	HRESULT (__fastcall *CreateStorage)(IStorage *this, const wchar_t *, unsigned int, unsigned int, unsigned int, IStorage **);
-	HRESULT (__fastcall *OpenStorage)(IStorage *this, const wchar_t *, IStorage *, unsigned int, wchar_t **, unsigned int, IStorage **);
-	HRESULT (__fastcall *CopyTo)(IStorage *this, unsigned int, const _GUID *, wchar_t **, IStorage *);
-	HRESULT (__fastcall *MoveElementTo)(IStorage *this, const wchar_t *, IStorage *, const wchar_t *, unsigned int);
-	HRESULT (__fastcall *Commit)(IStorage *this, unsigned int);
-	HRESULT (__fastcall *Revert)(IStorage *this);
-	HRESULT (__fastcall *EnumElements)(IStorage *this, unsigned int, void *, unsigned int, IEnumSTATSTG **);
-	HRESULT (__fastcall *DestroyElement)(IStorage *this, const wchar_t *);
-	HRESULT (__fastcall *RenameElement)(IStorage *this, const wchar_t *, const wchar_t *);
-	HRESULT (__fastcall *SetElementTimes)(IStorage *this, const wchar_t *, const _FILETIME *, const _FILETIME *, const _FILETIME *);
-	HRESULT (__fastcall *SetClass)(IStorage *this, const _GUID *);
-	HRESULT (__fastcall *SetStateBits)(IStorage *this, unsigned int, unsigned int);
-	HRESULT (__fastcall *Stat)(IStorage *this, tagSTATSTG *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_CreateStream)(IStorage *this, const wchar_t *, unsigned int, unsigned int, unsigned int, IStream **);
+	HRESULT (__fastcall *ptee_unproven_OpenStream)(IStorage *this, const wchar_t *, void *, unsigned int, unsigned int, IStream **);
+	HRESULT (__fastcall *ptee_unproven_CreateStorage)(IStorage *this, const wchar_t *, unsigned int, unsigned int, unsigned int, IStorage **);
+	HRESULT (__fastcall *ptee_unproven_OpenStorage)(IStorage *this, const wchar_t *, IStorage *, unsigned int, wchar_t **, unsigned int, IStorage **);
+	HRESULT (__fastcall *ptee_unproven_CopyTo)(IStorage *this, unsigned int, const _GUID *, wchar_t **, IStorage *);
+	HRESULT (__fastcall *ptee_unproven_MoveElementTo)(IStorage *this, const wchar_t *, IStorage *, const wchar_t *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Commit)(IStorage *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Revert)(IStorage *this);
+	HRESULT (__fastcall *ptee_unproven_EnumElements)(IStorage *this, unsigned int, void *, unsigned int, IEnumSTATSTG **);
+	HRESULT (__fastcall *ptee_unproven_DestroyElement)(IStorage *this, const wchar_t *);
+	HRESULT (__fastcall *ptee_unproven_RenameElement)(IStorage *this, const wchar_t *, const wchar_t *);
+	HRESULT (__fastcall *ptee_unproven_SetElementTimes)(IStorage *this, const wchar_t *, const _FILETIME *, const _FILETIME *, const _FILETIME *);
+	HRESULT (__fastcall *ptee_unproven_SetClass)(IStorage *this, const _GUID *);
+	HRESULT (__fastcall *ptee_unproven_SetStateBits)(IStorage *this, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Stat)(IStorage *this, tagSTATSTG *, unsigned int);
 };
 
 /* 1683 */
@@ -21794,7 +21794,7 @@ struct __cppobj _com_error
 /* 2063 */
 struct /*VFT*/ _com_error_vtbl
 {
-	void (__fastcall *~_com_error)(_com_error *this);
+	void (__fastcall *ptee_unproven_dtor__com_error)(_com_error *this);
 };
 
 /* 2064 */
@@ -21805,14 +21805,14 @@ struct __cppobj IErrorInfo : IUnknown
 /* 2065 */
 struct /*VFT*/ IErrorInfo_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetGUID)(IErrorInfo *this, _GUID *);
-	HRESULT (__fastcall *GetSource)(IErrorInfo *this, wchar_t **);
-	HRESULT (__fastcall *GetDescription)(IErrorInfo *this, wchar_t **);
-	HRESULT (__fastcall *GetHelpFile)(IErrorInfo *this, wchar_t **);
-	HRESULT (__fastcall *GetHelpContext)(IErrorInfo *this, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetGUID)(IErrorInfo *this, _GUID *);
+	HRESULT (__fastcall *ptee_unproven_GetSource)(IErrorInfo *this, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetDescription)(IErrorInfo *this, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetHelpFile)(IErrorInfo *this, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetHelpContext)(IErrorInfo *this, unsigned int *);
 };
 
 /* 2066 */
@@ -33753,8 +33753,8 @@ struct __cppobj XmppPumpNotify
 /* 3809 */
 struct /*VFT*/ XmppPumpNotify_vtbl
 {
-	void (__fastcall *~XmppPumpNotify)(XmppPumpNotify *this);
-	void (__fastcall *OnStateChange)(XmppPumpNotify *this, buzz::XmppEngine::State);
+	void (__fastcall *ptee_unproven_dtor_XmppPumpNotify)(XmppPumpNotify *this);
+	void (__fastcall *ptee_unproven_OnStateChange)(XmppPumpNotify *this, buzz::XmppEngine::State);
 };
 
 /* 3810 */
@@ -33768,8 +33768,8 @@ struct __cppobj XmppPump : talk_base::MessageHandler, talk_base::TaskRunner
 /* 3811 */
 struct /*VFT*/ XmppPump_vtbl
 {
-	void (__fastcall *OnMessage)(talk_base::MessageHandler *this, talk_base::Message *);
-	void (__fastcall *~MessageHandler)(talk_base::MessageHandler *this);
+	void (__fastcall *ptee_unproven_OnMessage)(talk_base::MessageHandler *this, talk_base::Message *);
+	void (__fastcall *ptee_unproven_dtor_MessageHandler)(talk_base::MessageHandler *this);
 };
 
 /* 3812 */
@@ -34462,15 +34462,15 @@ struct /*VFT*/ sigslot::signal1<int,sigslot::single_threaded>_vtbl
 /* 3908 */
 struct /*VFT*/ XmppSocket_vtbl
 {
-	void (__fastcall *~AsyncSocket)(buzz::AsyncSocket *this);
-	buzz::AsyncSocket::State (__fastcall *state)(buzz::AsyncSocket *this);
-	buzz::AsyncSocket::Error (__fastcall *error)(buzz::AsyncSocket *this);
-	int (__fastcall *GetError)(buzz::AsyncSocket *this);
-	bool (__fastcall *Connect)(buzz::AsyncSocket *this, const talk_base::SocketAddress *);
-	bool (__fastcall *Read)(buzz::AsyncSocket *this, char *, unsigned __int64, unsigned __int64 *);
-	bool (__fastcall *Write)(buzz::AsyncSocket *this, const char *, unsigned __int64);
-	bool (__fastcall *Close)(buzz::AsyncSocket *this);
-	bool (__fastcall *StartTls)(XmppSocket *this, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
+	void (__fastcall *ptee_unproven_dtor_AsyncSocket)(buzz::AsyncSocket *this);
+	buzz::AsyncSocket::State (__fastcall *ptee_unproven_state)(buzz::AsyncSocket *this);
+	buzz::AsyncSocket::Error (__fastcall *ptee_unproven_error)(buzz::AsyncSocket *this);
+	int (__fastcall *ptee_unproven_GetError)(buzz::AsyncSocket *this);
+	bool (__fastcall *ptee_unproven_Connect)(buzz::AsyncSocket *this, const talk_base::SocketAddress *);
+	bool (__fastcall *ptee_unproven_Read)(buzz::AsyncSocket *this, char *, unsigned __int64, unsigned __int64 *);
+	bool (__fastcall *ptee_unproven_Write)(buzz::AsyncSocket *this, const char *, unsigned __int64);
+	bool (__fastcall *ptee_unproven_Close)(buzz::AsyncSocket *this);
+	bool (__fastcall *ptee_unproven_StartTls)(XmppSocket *this, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
 };
 
 /* 3909 */
@@ -34494,17 +34494,17 @@ struct __cppobj __declspec(align(8)) XmppAuth : buzz::PreXmppAuth
 /* 3911 */
 struct /*VFT*/ XmppAuth_vtbl
 {
-	void (__fastcall *~SaslHandler)(buzz::SaslHandler *this);
-	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *ChooseBestSaslMechanism)(buzz::SaslHandler *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result, const std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > *, bool);
-	buzz::SaslMechanism *(__fastcall *CreateSaslMechanism)(buzz::SaslHandler *this, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
-	void (__fastcall *StartPreXmppAuth)(buzz::PreXmppAuth *this, const buzz::Jid *, const talk_base::SocketAddress *, const talk_base::CryptString *, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
-	bool (__fastcall *IsAuthDone)(buzz::PreXmppAuth *this);
-	bool (__fastcall *IsAuthorized)(buzz::PreXmppAuth *this);
-	bool (__fastcall *HadError)(buzz::PreXmppAuth *this);
-	int (__fastcall *GetError)(buzz::PreXmppAuth *this);
-	buzz::CaptchaChallenge *(__fastcall *GetCaptchaChallenge)(buzz::PreXmppAuth *this, buzz::CaptchaChallenge *result);
-	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *GetAuthMechanism)(buzz::PreXmppAuth *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result);
-	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *GetAuthToken)(buzz::PreXmppAuth *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result);
+	void (__fastcall *ptee_unproven_dtor_SaslHandler)(buzz::SaslHandler *this);
+	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *ptee_unproven_ChooseBestSaslMechanism)(buzz::SaslHandler *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result, const std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > *, bool);
+	buzz::SaslMechanism *(__fastcall *ptee_unproven_CreateSaslMechanism)(buzz::SaslHandler *this, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
+	void (__fastcall *ptee_unproven_StartPreXmppAuth)(buzz::PreXmppAuth *this, const buzz::Jid *, const talk_base::SocketAddress *, const talk_base::CryptString *, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *, const std::basic_string<char,std::char_traits<char>,std::allocator<char> > *);
+	bool (__fastcall *ptee_unproven_IsAuthDone)(buzz::PreXmppAuth *this);
+	bool (__fastcall *ptee_unproven_IsAuthorized)(buzz::PreXmppAuth *this);
+	bool (__fastcall *ptee_unproven_HadError)(buzz::PreXmppAuth *this);
+	int (__fastcall *ptee_unproven_GetError)(buzz::PreXmppAuth *this);
+	buzz::CaptchaChallenge *(__fastcall *ptee_unproven_GetCaptchaChallenge)(buzz::PreXmppAuth *this, buzz::CaptchaChallenge *result);
+	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *ptee_unproven_GetAuthMechanism)(buzz::PreXmppAuth *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result);
+	std::basic_string<char,std::char_traits<char>,std::allocator<char> > *(__fastcall *ptee_unproven_GetAuthToken)(buzz::PreXmppAuth *this, std::basic_string<char,std::char_traits<char>,std::allocator<char> > *result);
 };
 
 /* 3912 */
@@ -34568,22 +34568,22 @@ struct __cppobj XmppThread : talk_base::AutoThread, XmppPumpNotify, talk_base::M
 /* 3923 */
 struct /*VFT*/ XmppThread_vtbl
 {
-	void (__fastcall *~MessageQueue)(talk_base::MessageQueue *this);
-	void (__fastcall *Quit)(talk_base::MessageQueue *this);
-	bool (__fastcall *IsQuitting)(talk_base::MessageQueue *this);
-	void (__fastcall *Restart)(talk_base::MessageQueue *this);
-	bool (__fastcall *Get)(talk_base::MessageQueue *this, talk_base::Message *, int, bool);
-	bool (__fastcall *Peek)(talk_base::MessageQueue *this, talk_base::Message *, int);
-	void (__fastcall *Post)(talk_base::MessageQueue *this, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *, bool);
-	void (__fastcall *PostDelayed)(talk_base::MessageQueue *this, int, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
-	void (__fastcall *PostAt)(talk_base::MessageQueue *this, unsigned int, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
-	void (__fastcall *Clear)(talk_base::MessageQueue *this, talk_base::MessageHandler *, unsigned int, std::list<talk_base::Message,std::allocator<talk_base::Message> > *);
-	void (__fastcall *Dispatch)(talk_base::MessageQueue *this, talk_base::Message *);
-	void (__fastcall *ReceiveSends)(talk_base::MessageQueue *this);
-	int (__fastcall *GetDelay)(talk_base::MessageQueue *this);
-	void (__fastcall *Stop)(talk_base::Thread *this);
-	void (__fastcall *Run)(talk_base::Thread *this);
-	void (__fastcall *Send)(talk_base::Thread *this, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
+	void (__fastcall *ptee_unproven_dtor_MessageQueue)(talk_base::MessageQueue *this);
+	void (__fastcall *ptee_unproven_Quit)(talk_base::MessageQueue *this);
+	bool (__fastcall *ptee_unproven_IsQuitting)(talk_base::MessageQueue *this);
+	void (__fastcall *ptee_unproven_Restart)(talk_base::MessageQueue *this);
+	bool (__fastcall *ptee_unproven_Get)(talk_base::MessageQueue *this, talk_base::Message *, int, bool);
+	bool (__fastcall *ptee_unproven_Peek)(talk_base::MessageQueue *this, talk_base::Message *, int);
+	void (__fastcall *ptee_unproven_Post)(talk_base::MessageQueue *this, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *, bool);
+	void (__fastcall *ptee_unproven_PostDelayed)(talk_base::MessageQueue *this, int, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
+	void (__fastcall *ptee_unproven_PostAt)(talk_base::MessageQueue *this, unsigned int, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
+	void (__fastcall *ptee_unproven_Clear)(talk_base::MessageQueue *this, talk_base::MessageHandler *, unsigned int, std::list<talk_base::Message,std::allocator<talk_base::Message> > *);
+	void (__fastcall *ptee_unproven_Dispatch)(talk_base::MessageQueue *this, talk_base::Message *);
+	void (__fastcall *ptee_unproven_ReceiveSends)(talk_base::MessageQueue *this);
+	int (__fastcall *ptee_unproven_GetDelay)(talk_base::MessageQueue *this);
+	void (__fastcall *ptee_unproven_Stop)(talk_base::Thread *this);
+	void (__fastcall *ptee_unproven_Run)(talk_base::Thread *this);
+	void (__fastcall *ptee_unproven_Send)(talk_base::Thread *this, talk_base::MessageHandler *, unsigned int, talk_base::MessageData *);
 };
 
 /* 3924 */
@@ -46399,10 +46399,14 @@ struct tagBITMAPINFOHEADER
 /* 5499 */
 struct /*VFT*/ CVidCell_vtbl
 {
+	void (__fastcall *ptee_slot_0)(CVidCell *this);
+	void (__fastcall *ptee_slot_1)(CVidCell *this);
+	void (__fastcall *ptee_slot_2)(CVidCell *this);
 	int (__fastcall *FrameAdvance)(CVidCell *this);
 	int (__fastcall *Render)(CVidCell *this, unsigned int *, int, int, int, const CRect *, unsigned int, const CPoint *);
 	int (__fastcall *Render)(CVidCell *this, int, int, const CRect *, CVidPoly *, int, unsigned int, int);
 	void (__fastcall *StoreBackground)(CVidCell *this, int, int, const CRect *, CRect *, unsigned __int8);
+	void (__fastcall *ptee_slot_7)(CVidCell *this);
 	int (__fastcall *GetFrame)(CVidCell *this);
 };
 
@@ -47118,10 +47122,14 @@ struct __cppobj CResHelper<CResFont,1034>
 /* 5560 */
 struct /*VFT*/ CVidCellFont_vtbl
 {
+	void (__fastcall *ptee_slot_0)(CVidCell *this);
+	void (__fastcall *ptee_slot_1)(CVidCell *this);
+	void (__fastcall *ptee_slot_2)(CVidCell *this);
 	int (__fastcall *FrameAdvance)(CVidCell *this);
 	int (__fastcall *Render)(CVidCell *this, unsigned int *, int, int, int, const CRect *, unsigned int, const CPoint *);
 	int (__fastcall *Render)(CVidCell *this, int, int, const CRect *, CVidPoly *, int, unsigned int, int);
 	void (__fastcall *StoreBackground)(CVidCell *this, int, int, const CRect *, CRect *, unsigned __int8);
+	void (__fastcall *ptee_slot_7)(CVidCell *this);
 	int (__fastcall *GetFrame)(CVidCell *this);
 };
 
@@ -47225,10 +47233,14 @@ struct /*VFT*/ CSound_vtbl
 /* 5571 */
 struct /*VFT*/ CInfToolTip_vtbl
 {
+	void (__fastcall *ptee_slot_0)(CVidCell *this);
+	void (__fastcall *ptee_slot_1)(CVidCell *this);
+	void (__fastcall *ptee_slot_2)(CVidCell *this);
 	int (__fastcall *FrameAdvance)(CVidCell *this);
 	int (__fastcall *Render)(CVidCell *this, unsigned int *, int, int, int, const CRect *, unsigned int, const CPoint *);
 	int (__fastcall *Render)(CVidCell *this, int, int, const CRect *, CVidPoly *, int, unsigned int, int);
 	void (__fastcall *StoreBackground)(CVidCell *this, int, int, const CRect *, CRect *, unsigned __int8);
+	void (__fastcall *ptee_slot_7)(CVidCell *this);
 	int (__fastcall *GetFrame)(CVidCell *this);
 };
 
@@ -49207,7 +49219,6 @@ struct /*VFT*/ CGameObject_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -49386,7 +49397,6 @@ struct /*VFT*/ CObjectMarker_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -49579,7 +49589,7 @@ struct __cppobj CException : CObject
 struct /*VFT*/ CException_vtbl
 {
 	void (__fastcall *~CObject)(CObject *this);
-	int (__fastcall *GetErrorMessage)(CException *this, char *, unsigned int, unsigned int *);
+	int (__fastcall *ptee_unproven_GetErrorMessage)(CException *this, char *, unsigned int, unsigned int *);
 };
 
 /* 5744 */
@@ -49592,7 +49602,7 @@ struct __cppobj CFileException : CException
 struct /*VFT*/ CFileException_vtbl
 {
 	void (__fastcall *~CObject)(CObject *this);
-	int (__fastcall *GetErrorMessage)(CException *this, char *, unsigned int, unsigned int *);
+	int (__fastcall *ptee_unproven_GetErrorMessage)(CException *this, char *, unsigned int, unsigned int *);
 };
 
 /* 5746 */
@@ -54829,6 +54839,7 @@ struct /*VFT*/ CGameAnimationType_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -54844,6 +54855,8 @@ struct /*VFT*/ CGameAnimationType_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -54940,7 +54953,6 @@ struct /*VFT*/ CGameAIBase_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -54958,6 +54970,8 @@ struct /*VFT*/ CGameAIBase_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -55064,7 +55078,6 @@ struct /*VFT*/ CProjectile_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -55081,6 +55094,7 @@ struct /*VFT*/ CProjectile_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -55090,6 +55104,10 @@ struct /*VFT*/ CProjectile_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -55157,7 +55175,6 @@ struct /*VFT*/ CGameSprite_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -55175,6 +55192,8 @@ struct /*VFT*/ CGameSprite_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -55523,6 +55542,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterLayeredSpell_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -55538,6 +55558,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterLayeredSpell_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -55656,13 +55678,13 @@ struct __cppobj ISteamRemotePlay
 /* 6051 */
 struct /*VFT*/ ISteamRemotePlay_vtbl
 {
-	unsigned int (__fastcall *GetSessionCount)(ISteamRemotePlay *this);
-	unsigned int (__fastcall *GetSessionID)(ISteamRemotePlay *this, int);
-	CSteamID *(__fastcall *GetSessionSteamID)(ISteamRemotePlay *this, CSteamID *result, unsigned int);
-	const char *(__fastcall *GetSessionClientName)(ISteamRemotePlay *this, unsigned int);
-	ESteamDeviceFormFactor (__fastcall *GetSessionClientFormFactor)(ISteamRemotePlay *this, unsigned int);
-	bool (__fastcall *BGetSessionClientResolution)(ISteamRemotePlay *this, unsigned int, int *, int *);
-	bool (__fastcall *BSendRemotePlayTogetherInvite)(ISteamRemotePlay *this, CSteamID);
+	unsigned int (__fastcall *ptee_unproven_GetSessionCount)(ISteamRemotePlay *this);
+	unsigned int (__fastcall *ptee_unproven_GetSessionID)(ISteamRemotePlay *this, int);
+	CSteamID *(__fastcall *ptee_unproven_GetSessionSteamID)(ISteamRemotePlay *this, CSteamID *result, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetSessionClientName)(ISteamRemotePlay *this, unsigned int);
+	ESteamDeviceFormFactor (__fastcall *ptee_unproven_GetSessionClientFormFactor)(ISteamRemotePlay *this, unsigned int);
+	bool (__fastcall *ptee_unproven_BGetSessionClientResolution)(ISteamRemotePlay *this, unsigned int, int *, int *);
+	bool (__fastcall *ptee_unproven_BSendRemotePlayTogetherInvite)(ISteamRemotePlay *this, CSteamID);
 };
 
 /* 6052 */
@@ -56186,8 +56208,8 @@ struct __cppobj ISteamMatchmakingPingResponse
 /* 6098 */
 struct /*VFT*/ ISteamMatchmakingPingResponse_vtbl
 {
-	void (__fastcall *ServerResponded)(ISteamMatchmakingPingResponse *this, gameserveritem_t *);
-	void (__fastcall *ServerFailedToRespond)(ISteamMatchmakingPingResponse *this);
+	void (__fastcall *ptee_unproven_ServerResponded)(ISteamMatchmakingPingResponse *this, gameserveritem_t *);
+	void (__fastcall *ptee_unproven_ServerFailedToRespond)(ISteamMatchmakingPingResponse *this);
 };
 
 /* 6099 */
@@ -56478,44 +56500,44 @@ struct __cppobj ISteamInventory
 /* 6131 */
 struct /*VFT*/ ISteamInventory_vtbl
 {
-	EResult (__fastcall *GetResultStatus)(ISteamInventory *this, int);
-	bool (__fastcall *GetResultItems)(ISteamInventory *this, int, SteamItemDetails_t *, unsigned int *);
-	bool (__fastcall *GetResultItemProperty)(ISteamInventory *this, int, unsigned int, const char *, char *, unsigned int *);
-	unsigned int (__fastcall *GetResultTimestamp)(ISteamInventory *this, int);
-	bool (__fastcall *CheckResultSteamID)(ISteamInventory *this, int, CSteamID);
-	void (__fastcall *DestroyResult)(ISteamInventory *this, int);
-	bool (__fastcall *GetAllItems)(ISteamInventory *this, int *);
-	bool (__fastcall *GetItemsByID)(ISteamInventory *this, int *, const unsigned __int64 *, unsigned int);
-	bool (__fastcall *SerializeResult)(ISteamInventory *this, int, void *, unsigned int *);
-	bool (__fastcall *DeserializeResult)(ISteamInventory *this, int *, const void *, unsigned int, bool);
-	bool (__fastcall *GenerateItems)(ISteamInventory *this, int *, const int *, const unsigned int *, unsigned int);
-	bool (__fastcall *GrantPromoItems)(ISteamInventory *this, int *);
-	bool (__fastcall *AddPromoItem)(ISteamInventory *this, int *, int);
-	bool (__fastcall *AddPromoItems)(ISteamInventory *this, int *, const int *, unsigned int);
-	bool (__fastcall *ConsumeItem)(ISteamInventory *this, int *, unsigned __int64, unsigned int);
-	bool (__fastcall *ExchangeItems)(ISteamInventory *this, int *, const int *, const unsigned int *, unsigned int, const unsigned __int64 *, const unsigned int *, unsigned int);
-	bool (__fastcall *TransferItemQuantity)(ISteamInventory *this, int *, unsigned __int64, unsigned int, unsigned __int64);
-	void (__fastcall *SendItemDropHeartbeat)(ISteamInventory *this);
-	bool (__fastcall *TriggerItemDrop)(ISteamInventory *this, int *, int);
-	bool (__fastcall *TradeItems)(ISteamInventory *this, int *, CSteamID, const unsigned __int64 *, const unsigned int *, unsigned int, const unsigned __int64 *, const unsigned int *, unsigned int);
-	bool (__fastcall *LoadItemDefinitions)(ISteamInventory *this);
-	bool (__fastcall *GetItemDefinitionIDs)(ISteamInventory *this, int *, unsigned int *);
-	bool (__fastcall *GetItemDefinitionProperty)(ISteamInventory *this, int, const char *, char *, unsigned int *);
-	unsigned __int64 (__fastcall *RequestEligiblePromoItemDefinitionsIDs)(ISteamInventory *this, CSteamID);
-	bool (__fastcall *GetEligiblePromoItemDefinitionIDs)(ISteamInventory *this, CSteamID, int *, unsigned int *);
-	unsigned __int64 (__fastcall *StartPurchase)(ISteamInventory *this, const int *, const unsigned int *, unsigned int);
-	unsigned __int64 (__fastcall *RequestPrices)(ISteamInventory *this);
-	unsigned int (__fastcall *GetNumItemsWithPrices)(ISteamInventory *this);
-	bool (__fastcall *GetItemsWithPrices)(ISteamInventory *this, int *, unsigned __int64 *, unsigned __int64 *, unsigned int);
-	bool (__fastcall *GetItemPrice)(ISteamInventory *this, int, unsigned __int64 *, unsigned __int64 *);
-	unsigned __int64 (__fastcall *StartUpdateProperties)(ISteamInventory *this);
-	bool (__fastcall *RemoveProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *);
-	bool (__fastcall *SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, float);
-	bool (__fastcall *SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, __int64);
-	bool (__fastcall *SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, bool);
-	bool (__fastcall *SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, const char *);
-	bool (__fastcall *SubmitUpdateProperties)(ISteamInventory *this, unsigned __int64, int *);
-	bool (__fastcall *InspectItem)(ISteamInventory *this, int *, const char *);
+	EResult (__fastcall *ptee_unproven_GetResultStatus)(ISteamInventory *this, int);
+	bool (__fastcall *ptee_unproven_GetResultItems)(ISteamInventory *this, int, SteamItemDetails_t *, unsigned int *);
+	bool (__fastcall *ptee_unproven_GetResultItemProperty)(ISteamInventory *this, int, unsigned int, const char *, char *, unsigned int *);
+	unsigned int (__fastcall *ptee_unproven_GetResultTimestamp)(ISteamInventory *this, int);
+	bool (__fastcall *ptee_unproven_CheckResultSteamID)(ISteamInventory *this, int, CSteamID);
+	void (__fastcall *ptee_unproven_DestroyResult)(ISteamInventory *this, int);
+	bool (__fastcall *ptee_unproven_GetAllItems)(ISteamInventory *this, int *);
+	bool (__fastcall *ptee_unproven_GetItemsByID)(ISteamInventory *this, int *, const unsigned __int64 *, unsigned int);
+	bool (__fastcall *ptee_unproven_SerializeResult)(ISteamInventory *this, int, void *, unsigned int *);
+	bool (__fastcall *ptee_unproven_DeserializeResult)(ISteamInventory *this, int *, const void *, unsigned int, bool);
+	bool (__fastcall *ptee_unproven_GenerateItems)(ISteamInventory *this, int *, const int *, const unsigned int *, unsigned int);
+	bool (__fastcall *ptee_unproven_GrantPromoItems)(ISteamInventory *this, int *);
+	bool (__fastcall *ptee_unproven_AddPromoItem)(ISteamInventory *this, int *, int);
+	bool (__fastcall *ptee_unproven_AddPromoItems)(ISteamInventory *this, int *, const int *, unsigned int);
+	bool (__fastcall *ptee_unproven_ConsumeItem)(ISteamInventory *this, int *, unsigned __int64, unsigned int);
+	bool (__fastcall *ptee_unproven_ExchangeItems)(ISteamInventory *this, int *, const int *, const unsigned int *, unsigned int, const unsigned __int64 *, const unsigned int *, unsigned int);
+	bool (__fastcall *ptee_unproven_TransferItemQuantity)(ISteamInventory *this, int *, unsigned __int64, unsigned int, unsigned __int64);
+	void (__fastcall *ptee_unproven_SendItemDropHeartbeat)(ISteamInventory *this);
+	bool (__fastcall *ptee_unproven_TriggerItemDrop)(ISteamInventory *this, int *, int);
+	bool (__fastcall *ptee_unproven_TradeItems)(ISteamInventory *this, int *, CSteamID, const unsigned __int64 *, const unsigned int *, unsigned int, const unsigned __int64 *, const unsigned int *, unsigned int);
+	bool (__fastcall *ptee_unproven_LoadItemDefinitions)(ISteamInventory *this);
+	bool (__fastcall *ptee_unproven_GetItemDefinitionIDs)(ISteamInventory *this, int *, unsigned int *);
+	bool (__fastcall *ptee_unproven_GetItemDefinitionProperty)(ISteamInventory *this, int, const char *, char *, unsigned int *);
+	unsigned __int64 (__fastcall *ptee_unproven_RequestEligiblePromoItemDefinitionsIDs)(ISteamInventory *this, CSteamID);
+	bool (__fastcall *ptee_unproven_GetEligiblePromoItemDefinitionIDs)(ISteamInventory *this, CSteamID, int *, unsigned int *);
+	unsigned __int64 (__fastcall *ptee_unproven_StartPurchase)(ISteamInventory *this, const int *, const unsigned int *, unsigned int);
+	unsigned __int64 (__fastcall *ptee_unproven_RequestPrices)(ISteamInventory *this);
+	unsigned int (__fastcall *ptee_unproven_GetNumItemsWithPrices)(ISteamInventory *this);
+	bool (__fastcall *ptee_unproven_GetItemsWithPrices)(ISteamInventory *this, int *, unsigned __int64 *, unsigned __int64 *, unsigned int);
+	bool (__fastcall *ptee_unproven_GetItemPrice)(ISteamInventory *this, int, unsigned __int64 *, unsigned __int64 *);
+	unsigned __int64 (__fastcall *ptee_unproven_StartUpdateProperties)(ISteamInventory *this);
+	bool (__fastcall *ptee_unproven_RemoveProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *);
+	bool (__fastcall *ptee_unproven_SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, float);
+	bool (__fastcall *ptee_unproven_SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, __int64);
+	bool (__fastcall *ptee_unproven_SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, bool);
+	bool (__fastcall *ptee_unproven_SetProperty)(ISteamInventory *this, unsigned __int64, unsigned __int64, const char *, const char *);
+	bool (__fastcall *ptee_unproven_SubmitUpdateProperties)(ISteamInventory *this, unsigned __int64, int *);
+	bool (__fastcall *ptee_unproven_InspectItem)(ISteamInventory *this, int *, const char *);
 };
 
 /* 6130 */
@@ -56563,9 +56585,9 @@ struct __cppobj ISteamMatchmakingServerListResponse
 /* 6136 */
 struct /*VFT*/ ISteamMatchmakingServerListResponse_vtbl
 {
-	void (__fastcall *ServerResponded)(ISteamMatchmakingServerListResponse *this, void *, int);
-	void (__fastcall *ServerFailedToRespond)(ISteamMatchmakingServerListResponse *this, void *, int);
-	void (__fastcall *RefreshComplete)(ISteamMatchmakingServerListResponse *this, void *, EMatchMakingServerResponse);
+	void (__fastcall *ptee_unproven_ServerResponded)(ISteamMatchmakingServerListResponse *this, void *, int);
+	void (__fastcall *ptee_unproven_ServerFailedToRespond)(ISteamMatchmakingServerListResponse *this, void *, int);
+	void (__fastcall *ptee_unproven_RefreshComplete)(ISteamMatchmakingServerListResponse *this, void *, EMatchMakingServerResponse);
 };
 
 /* 6137 */
@@ -56577,23 +56599,23 @@ struct __cppobj ISteamMatchmakingServers
 /* 6142 */
 struct /*VFT*/ ISteamMatchmakingServers_vtbl
 {
-	void *(__fastcall *RequestInternetServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
-	void *(__fastcall *RequestLANServerList)(ISteamMatchmakingServers *this, unsigned int, ISteamMatchmakingServerListResponse *);
-	void *(__fastcall *RequestFriendsServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
-	void *(__fastcall *RequestFavoritesServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
-	void *(__fastcall *RequestHistoryServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
-	void *(__fastcall *RequestSpectatorServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
-	void (__fastcall *ReleaseRequest)(ISteamMatchmakingServers *this, void *);
-	gameserveritem_t *(__fastcall *GetServerDetails)(ISteamMatchmakingServers *this, void *, int);
-	void (__fastcall *CancelQuery)(ISteamMatchmakingServers *this, void *);
-	void (__fastcall *RefreshQuery)(ISteamMatchmakingServers *this, void *);
-	bool (__fastcall *IsRefreshing)(ISteamMatchmakingServers *this, void *);
-	int (__fastcall *GetServerCount)(ISteamMatchmakingServers *this, void *);
-	void (__fastcall *RefreshServer)(ISteamMatchmakingServers *this, void *, int);
-	int (__fastcall *PingServer)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingPingResponse *);
-	int (__fastcall *PlayerDetails)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingPlayersResponse *);
-	int (__fastcall *ServerRules)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingRulesResponse *);
-	void (__fastcall *CancelServerQuery)(ISteamMatchmakingServers *this, int);
+	void *(__fastcall *ptee_unproven_RequestInternetServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
+	void *(__fastcall *ptee_unproven_RequestLANServerList)(ISteamMatchmakingServers *this, unsigned int, ISteamMatchmakingServerListResponse *);
+	void *(__fastcall *ptee_unproven_RequestFriendsServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
+	void *(__fastcall *ptee_unproven_RequestFavoritesServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
+	void *(__fastcall *ptee_unproven_RequestHistoryServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
+	void *(__fastcall *ptee_unproven_RequestSpectatorServerList)(ISteamMatchmakingServers *this, unsigned int, MatchMakingKeyValuePair_t **, unsigned int, ISteamMatchmakingServerListResponse *);
+	void (__fastcall *ptee_unproven_ReleaseRequest)(ISteamMatchmakingServers *this, void *);
+	gameserveritem_t *(__fastcall *ptee_unproven_GetServerDetails)(ISteamMatchmakingServers *this, void *, int);
+	void (__fastcall *ptee_unproven_CancelQuery)(ISteamMatchmakingServers *this, void *);
+	void (__fastcall *ptee_unproven_RefreshQuery)(ISteamMatchmakingServers *this, void *);
+	bool (__fastcall *ptee_unproven_IsRefreshing)(ISteamMatchmakingServers *this, void *);
+	int (__fastcall *ptee_unproven_GetServerCount)(ISteamMatchmakingServers *this, void *);
+	void (__fastcall *ptee_unproven_RefreshServer)(ISteamMatchmakingServers *this, void *, int);
+	int (__fastcall *ptee_unproven_PingServer)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingPingResponse *);
+	int (__fastcall *ptee_unproven_PlayerDetails)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingPlayersResponse *);
+	int (__fastcall *ptee_unproven_ServerRules)(ISteamMatchmakingServers *this, unsigned int, unsigned __int16, ISteamMatchmakingRulesResponse *);
+	void (__fastcall *ptee_unproven_CancelServerQuery)(ISteamMatchmakingServers *this, int);
 };
 
 /* 6138 */
@@ -56611,17 +56633,17 @@ struct __cppobj ISteamMatchmakingRulesResponse
 /* 6139 */
 struct /*VFT*/ ISteamMatchmakingPlayersResponse_vtbl
 {
-	void (__fastcall *AddPlayerToList)(ISteamMatchmakingPlayersResponse *this, const char *, int, float);
-	void (__fastcall *PlayersFailedToRespond)(ISteamMatchmakingPlayersResponse *this);
-	void (__fastcall *PlayersRefreshComplete)(ISteamMatchmakingPlayersResponse *this);
+	void (__fastcall *ptee_unproven_AddPlayerToList)(ISteamMatchmakingPlayersResponse *this, const char *, int, float);
+	void (__fastcall *ptee_unproven_PlayersFailedToRespond)(ISteamMatchmakingPlayersResponse *this);
+	void (__fastcall *ptee_unproven_PlayersRefreshComplete)(ISteamMatchmakingPlayersResponse *this);
 };
 
 /* 6141 */
 struct /*VFT*/ ISteamMatchmakingRulesResponse_vtbl
 {
-	void (__fastcall *RulesResponded)(ISteamMatchmakingRulesResponse *this, const char *, const char *);
-	void (__fastcall *RulesFailedToRespond)(ISteamMatchmakingRulesResponse *this);
-	void (__fastcall *RulesRefreshComplete)(ISteamMatchmakingRulesResponse *this);
+	void (__fastcall *ptee_unproven_RulesResponded)(ISteamMatchmakingRulesResponse *this, const char *, const char *);
+	void (__fastcall *ptee_unproven_RulesFailedToRespond)(ISteamMatchmakingRulesResponse *this);
+	void (__fastcall *ptee_unproven_RulesRefreshComplete)(ISteamMatchmakingRulesResponse *this);
 };
 
 /* 6143 */
@@ -56915,7 +56937,6 @@ struct /*VFT*/ CGameContainer_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -56933,6 +56954,8 @@ struct /*VFT*/ CGameContainer_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -57084,7 +57107,6 @@ struct /*VFT*/ CGameAIArea_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -57102,6 +57124,8 @@ struct /*VFT*/ CGameAIArea_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -57356,7 +57380,6 @@ struct /*VFT*/ CProjectileSpellHit_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -57373,6 +57396,7 @@ struct /*VFT*/ CProjectileSpellHit_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -57382,6 +57406,10 @@ struct /*VFT*/ CProjectileSpellHit_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -57405,7 +57433,6 @@ struct /*VFT*/ CProjectileAmbiant_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -57422,6 +57449,7 @@ struct /*VFT*/ CProjectileAmbiant_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -57431,6 +57459,10 @@ struct /*VFT*/ CProjectileAmbiant_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -57465,7 +57497,6 @@ struct /*VFT*/ CGameTemporal_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -57892,6 +57923,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterMultiNew_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -57907,6 +57939,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterMultiNew_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -57987,7 +58021,6 @@ struct /*VFT*/ CSparkleCluster_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -58137,28 +58170,28 @@ struct __cppobj ISteamNetworkingUtils
 /* 6266 */
 struct /*VFT*/ ISteamNetworkingUtils_vtbl
 {
-	SteamNetworkingMessage_t *(__fastcall *AllocateMessage)(ISteamNetworkingUtils *this, int);
-	ESteamNetworkingAvailability (__fastcall *GetRelayNetworkStatus)(ISteamNetworkingUtils *this, SteamRelayNetworkStatus_t *);
-	float (__fastcall *GetLocalPingLocation)(ISteamNetworkingUtils *this, SteamNetworkPingLocation_t *);
-	int (__fastcall *EstimatePingTimeBetweenTwoLocations)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *, const SteamNetworkPingLocation_t *);
-	int (__fastcall *EstimatePingTimeFromLocalHost)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *);
-	void (__fastcall *ConvertPingLocationToString)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *, char *, int);
-	bool (__fastcall *ParsePingLocationString)(ISteamNetworkingUtils *this, const char *, SteamNetworkPingLocation_t *);
-	bool (__fastcall *CheckPingDataUpToDate)(ISteamNetworkingUtils *this, float);
-	int (__fastcall *GetPingToDataCenter)(ISteamNetworkingUtils *this, unsigned int, unsigned int *);
-	int (__fastcall *GetDirectPingToPOP)(ISteamNetworkingUtils *this, unsigned int);
-	int (__fastcall *GetPOPCount)(ISteamNetworkingUtils *this);
-	int (__fastcall *GetPOPList)(ISteamNetworkingUtils *this, unsigned int *, int);
-	__int64 (__fastcall *GetLocalTimestamp)(ISteamNetworkingUtils *this);
-	void (__fastcall *SetDebugOutputFunction)(ISteamNetworkingUtils *this, ESteamNetworkingSocketsDebugOutputType, void (__fastcall *)(ESteamNetworkingSocketsDebugOutputType, const char *));
-	bool (__fastcall *SetConfigValue)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, ESteamNetworkingConfigScope, __int64, ESteamNetworkingConfigDataType, const void *);
-	ESteamNetworkingGetConfigValueResult (__fastcall *GetConfigValue)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, ESteamNetworkingConfigScope, __int64, ESteamNetworkingConfigDataType *, void *, unsigned __int64 *);
-	bool (__fastcall *GetConfigValueInfo)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, const char **, ESteamNetworkingConfigDataType *, ESteamNetworkingConfigScope *, ESteamNetworkingConfigValue *);
-	ESteamNetworkingConfigValue (__fastcall *GetFirstConfigValue)(ISteamNetworkingUtils *this);
-	void (__fastcall *SteamNetworkingIPAddr_ToString)(ISteamNetworkingUtils *this, const SteamNetworkingIPAddr *, char *, unsigned __int64, bool);
-	bool (__fastcall *SteamNetworkingIPAddr_ParseString)(ISteamNetworkingUtils *this, SteamNetworkingIPAddr *, const char *);
-	void (__fastcall *SteamNetworkingIdentity_ToString)(ISteamNetworkingUtils *this, const SteamNetworkingIdentity *, char *, unsigned __int64);
-	bool (__fastcall *SteamNetworkingIdentity_ParseString)(ISteamNetworkingUtils *this, SteamNetworkingIdentity *, const char *);
+	SteamNetworkingMessage_t *(__fastcall *ptee_unproven_AllocateMessage)(ISteamNetworkingUtils *this, int);
+	ESteamNetworkingAvailability (__fastcall *ptee_unproven_GetRelayNetworkStatus)(ISteamNetworkingUtils *this, SteamRelayNetworkStatus_t *);
+	float (__fastcall *ptee_unproven_GetLocalPingLocation)(ISteamNetworkingUtils *this, SteamNetworkPingLocation_t *);
+	int (__fastcall *ptee_unproven_EstimatePingTimeBetweenTwoLocations)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *, const SteamNetworkPingLocation_t *);
+	int (__fastcall *ptee_unproven_EstimatePingTimeFromLocalHost)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *);
+	void (__fastcall *ptee_unproven_ConvertPingLocationToString)(ISteamNetworkingUtils *this, const SteamNetworkPingLocation_t *, char *, int);
+	bool (__fastcall *ptee_unproven_ParsePingLocationString)(ISteamNetworkingUtils *this, const char *, SteamNetworkPingLocation_t *);
+	bool (__fastcall *ptee_unproven_CheckPingDataUpToDate)(ISteamNetworkingUtils *this, float);
+	int (__fastcall *ptee_unproven_GetPingToDataCenter)(ISteamNetworkingUtils *this, unsigned int, unsigned int *);
+	int (__fastcall *ptee_unproven_GetDirectPingToPOP)(ISteamNetworkingUtils *this, unsigned int);
+	int (__fastcall *ptee_unproven_GetPOPCount)(ISteamNetworkingUtils *this);
+	int (__fastcall *ptee_unproven_GetPOPList)(ISteamNetworkingUtils *this, unsigned int *, int);
+	__int64 (__fastcall *ptee_unproven_GetLocalTimestamp)(ISteamNetworkingUtils *this);
+	void (__fastcall *ptee_unproven_SetDebugOutputFunction)(ISteamNetworkingUtils *this, ESteamNetworkingSocketsDebugOutputType, void (__fastcall *)(ESteamNetworkingSocketsDebugOutputType, const char *));
+	bool (__fastcall *ptee_unproven_SetConfigValue)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, ESteamNetworkingConfigScope, __int64, ESteamNetworkingConfigDataType, const void *);
+	ESteamNetworkingGetConfigValueResult (__fastcall *ptee_unproven_GetConfigValue)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, ESteamNetworkingConfigScope, __int64, ESteamNetworkingConfigDataType *, void *, unsigned __int64 *);
+	bool (__fastcall *ptee_unproven_GetConfigValueInfo)(ISteamNetworkingUtils *this, ESteamNetworkingConfigValue, const char **, ESteamNetworkingConfigDataType *, ESteamNetworkingConfigScope *, ESteamNetworkingConfigValue *);
+	ESteamNetworkingConfigValue (__fastcall *ptee_unproven_GetFirstConfigValue)(ISteamNetworkingUtils *this);
+	void (__fastcall *ptee_unproven_SteamNetworkingIPAddr_ToString)(ISteamNetworkingUtils *this, const SteamNetworkingIPAddr *, char *, unsigned __int64, bool);
+	bool (__fastcall *ptee_unproven_SteamNetworkingIPAddr_ParseString)(ISteamNetworkingUtils *this, SteamNetworkingIPAddr *, const char *);
+	void (__fastcall *ptee_unproven_SteamNetworkingIdentity_ToString)(ISteamNetworkingUtils *this, const SteamNetworkingIdentity *, char *, unsigned __int64);
+	bool (__fastcall *ptee_unproven_SteamNetworkingIdentity_ParseString)(ISteamNetworkingUtils *this, SteamNetworkingIdentity *, const char *);
 };
 
 /* 6265 */
@@ -58481,6 +58514,7 @@ struct /*VFT*/ CGameAnimationTypeTownStatic_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -58496,6 +58530,8 @@ struct /*VFT*/ CGameAnimationTypeTownStatic_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -58820,48 +58856,48 @@ struct __cppobj ISteamClient
 /* 6370 */
 struct /*VFT*/ ISteamClient_vtbl
 {
-	int (__fastcall *CreateSteamPipe)(ISteamClient *this);
-	bool (__fastcall *BReleaseSteamPipe)(ISteamClient *this, int);
-	int (__fastcall *ConnectToGlobalUser)(ISteamClient *this, int);
-	int (__fastcall *CreateLocalUser)(ISteamClient *this, int *, EAccountType);
-	void (__fastcall *ReleaseUser)(ISteamClient *this, int, int);
-	ISteamUser *(__fastcall *GetISteamUser)(ISteamClient *this, int, int, const char *);
-	struct ISteamGameServer *(__fastcall *GetISteamGameServer)(ISteamClient *this, int, int, const char *);
-	void (__fastcall *SetLocalIPBinding)(ISteamClient *this, const SteamIPAddress_t *, unsigned __int16);
-	ISteamFriends *(__fastcall *GetISteamFriends)(ISteamClient *this, int, int, const char *);
-	ISteamUtils *(__fastcall *GetISteamUtils)(ISteamClient *this, int, const char *);
-	ISteamMatchmaking *(__fastcall *GetISteamMatchmaking)(ISteamClient *this, int, int, const char *);
-	ISteamMatchmakingServers *(__fastcall *GetISteamMatchmakingServers)(ISteamClient *this, int, int, const char *);
-	void *(__fastcall *GetISteamGenericInterface)(ISteamClient *this, int, int, const char *);
-	ISteamUserStats *(__fastcall *GetISteamUserStats)(ISteamClient *this, int, int, const char *);
-	struct ISteamGameServerStats *(__fastcall *GetISteamGameServerStats)(ISteamClient *this, int, int, const char *);
-	ISteamApps *(__fastcall *GetISteamApps)(ISteamClient *this, int, int, const char *);
-	ISteamNetworking *(__fastcall *GetISteamNetworking)(ISteamClient *this, int, int, const char *);
-	ISteamRemoteStorage *(__fastcall *GetISteamRemoteStorage)(ISteamClient *this, int, int, const char *);
-	ISteamScreenshots *(__fastcall *GetISteamScreenshots)(ISteamClient *this, int, int, const char *);
-	ISteamGameSearch *(__fastcall *GetISteamGameSearch)(ISteamClient *this, int, int, const char *);
-	void (__fastcall *RunFrame)(ISteamClient *this);
-	unsigned int (__fastcall *GetIPCCallCount)(ISteamClient *this);
-	void (__fastcall *SetWarningMessageHook)(ISteamClient *this, void (__fastcall *)(int, const char *));
-	bool (__fastcall *BShutdownIfAllPipesClosed)(ISteamClient *this);
-	ISteamHTTP *(__fastcall *GetISteamHTTP)(ISteamClient *this, int, int, const char *);
-	void *(__fastcall *DEPRECATED_GetISteamUnifiedMessages)(ISteamClient *this, int, int, const char *);
-	ISteamController *(__fastcall *GetISteamController)(ISteamClient *this, int, int, const char *);
-	ISteamUGC *(__fastcall *GetISteamUGC)(ISteamClient *this, int, int, const char *);
-	ISteamAppList *(__fastcall *GetISteamAppList)(ISteamClient *this, int, int, const char *);
-	ISteamMusic *(__fastcall *GetISteamMusic)(ISteamClient *this, int, int, const char *);
-	ISteamMusicRemote *(__fastcall *GetISteamMusicRemote)(ISteamClient *this, int, int, const char *);
-	ISteamHTMLSurface *(__fastcall *GetISteamHTMLSurface)(ISteamClient *this, int, int, const char *);
-	void (__fastcall *DEPRECATED_Set_SteamAPI_CPostAPIResultInProcess)(ISteamClient *this, void (__fastcall *)());
-	void (__fastcall *DEPRECATED_Remove_SteamAPI_CPostAPIResultInProcess)(ISteamClient *this, void (__fastcall *)());
-	void (__fastcall *Set_SteamAPI_CCheckCallbackRegisteredInProcess)(ISteamClient *this, unsigned int (__fastcall *)(int));
-	ISteamInventory *(__fastcall *GetISteamInventory)(ISteamClient *this, int, int, const char *);
-	ISteamVideo *(__fastcall *GetISteamVideo)(ISteamClient *this, int, int, const char *);
-	ISteamParentalSettings *(__fastcall *GetISteamParentalSettings)(ISteamClient *this, int, int, const char *);
-	ISteamInput *(__fastcall *GetISteamInput)(ISteamClient *this, int, int, const char *);
-	ISteamParties *(__fastcall *GetISteamParties)(ISteamClient *this, int, int, const char *);
-	ISteamRemotePlay *(__fastcall *GetISteamRemotePlay)(ISteamClient *this, int, int, const char *);
-	void (__fastcall *DestroyAllInterfaces)(ISteamClient *this);
+	int (__fastcall *ptee_unproven_CreateSteamPipe)(ISteamClient *this);
+	bool (__fastcall *ptee_unproven_BReleaseSteamPipe)(ISteamClient *this, int);
+	int (__fastcall *ptee_unproven_ConnectToGlobalUser)(ISteamClient *this, int);
+	int (__fastcall *ptee_unproven_CreateLocalUser)(ISteamClient *this, int *, EAccountType);
+	void (__fastcall *ptee_unproven_ReleaseUser)(ISteamClient *this, int, int);
+	ISteamUser *(__fastcall *ptee_unproven_GetISteamUser)(ISteamClient *this, int, int, const char *);
+	struct ISteamGameServer *(__fastcall *ptee_unproven_GetISteamGameServer)(ISteamClient *this, int, int, const char *);
+	void (__fastcall *ptee_unproven_SetLocalIPBinding)(ISteamClient *this, const SteamIPAddress_t *, unsigned __int16);
+	ISteamFriends *(__fastcall *ptee_unproven_GetISteamFriends)(ISteamClient *this, int, int, const char *);
+	ISteamUtils *(__fastcall *ptee_unproven_GetISteamUtils)(ISteamClient *this, int, const char *);
+	ISteamMatchmaking *(__fastcall *ptee_unproven_GetISteamMatchmaking)(ISteamClient *this, int, int, const char *);
+	ISteamMatchmakingServers *(__fastcall *ptee_unproven_GetISteamMatchmakingServers)(ISteamClient *this, int, int, const char *);
+	void *(__fastcall *ptee_unproven_GetISteamGenericInterface)(ISteamClient *this, int, int, const char *);
+	ISteamUserStats *(__fastcall *ptee_unproven_GetISteamUserStats)(ISteamClient *this, int, int, const char *);
+	struct ISteamGameServerStats *(__fastcall *ptee_unproven_GetISteamGameServerStats)(ISteamClient *this, int, int, const char *);
+	ISteamApps *(__fastcall *ptee_unproven_GetISteamApps)(ISteamClient *this, int, int, const char *);
+	ISteamNetworking *(__fastcall *ptee_unproven_GetISteamNetworking)(ISteamClient *this, int, int, const char *);
+	ISteamRemoteStorage *(__fastcall *ptee_unproven_GetISteamRemoteStorage)(ISteamClient *this, int, int, const char *);
+	ISteamScreenshots *(__fastcall *ptee_unproven_GetISteamScreenshots)(ISteamClient *this, int, int, const char *);
+	ISteamGameSearch *(__fastcall *ptee_unproven_GetISteamGameSearch)(ISteamClient *this, int, int, const char *);
+	void (__fastcall *ptee_unproven_RunFrame)(ISteamClient *this);
+	unsigned int (__fastcall *ptee_unproven_GetIPCCallCount)(ISteamClient *this);
+	void (__fastcall *ptee_unproven_SetWarningMessageHook)(ISteamClient *this, void (__fastcall *)(int, const char *));
+	bool (__fastcall *ptee_unproven_BShutdownIfAllPipesClosed)(ISteamClient *this);
+	ISteamHTTP *(__fastcall *ptee_unproven_GetISteamHTTP)(ISteamClient *this, int, int, const char *);
+	void *(__fastcall *ptee_unproven_DEPRECATED_GetISteamUnifiedMessages)(ISteamClient *this, int, int, const char *);
+	ISteamController *(__fastcall *ptee_unproven_GetISteamController)(ISteamClient *this, int, int, const char *);
+	ISteamUGC *(__fastcall *ptee_unproven_GetISteamUGC)(ISteamClient *this, int, int, const char *);
+	ISteamAppList *(__fastcall *ptee_unproven_GetISteamAppList)(ISteamClient *this, int, int, const char *);
+	ISteamMusic *(__fastcall *ptee_unproven_GetISteamMusic)(ISteamClient *this, int, int, const char *);
+	ISteamMusicRemote *(__fastcall *ptee_unproven_GetISteamMusicRemote)(ISteamClient *this, int, int, const char *);
+	ISteamHTMLSurface *(__fastcall *ptee_unproven_GetISteamHTMLSurface)(ISteamClient *this, int, int, const char *);
+	void (__fastcall *ptee_unproven_DEPRECATED_Set_SteamAPI_CPostAPIResultInProcess)(ISteamClient *this, void (__fastcall *)());
+	void (__fastcall *ptee_unproven_DEPRECATED_Remove_SteamAPI_CPostAPIResultInProcess)(ISteamClient *this, void (__fastcall *)());
+	void (__fastcall *ptee_unproven_Set_SteamAPI_CCheckCallbackRegisteredInProcess)(ISteamClient *this, unsigned int (__fastcall *)(int));
+	ISteamInventory *(__fastcall *ptee_unproven_GetISteamInventory)(ISteamClient *this, int, int, const char *);
+	ISteamVideo *(__fastcall *ptee_unproven_GetISteamVideo)(ISteamClient *this, int, int, const char *);
+	ISteamParentalSettings *(__fastcall *ptee_unproven_GetISteamParentalSettings)(ISteamClient *this, int, int, const char *);
+	ISteamInput *(__fastcall *ptee_unproven_GetISteamInput)(ISteamClient *this, int, int, const char *);
+	ISteamParties *(__fastcall *ptee_unproven_GetISteamParties)(ISteamClient *this, int, int, const char *);
+	ISteamRemotePlay *(__fastcall *ptee_unproven_GetISteamRemotePlay)(ISteamClient *this, int, int, const char *);
+	void (__fastcall *ptee_unproven_DestroyAllInterfaces)(ISteamClient *this);
 };
 
 /* 6329 */
@@ -59214,20 +59250,20 @@ struct /*VFT*/ ISteamNetworking_vtbl
 /* 6347 */
 struct /*VFT*/ ISteamGameSearch_vtbl
 {
-	EGameSearchErrorCode_t (__fastcall *AddGameSearchParams)(ISteamGameSearch *this, const char *, const char *);
-	EGameSearchErrorCode_t (__fastcall *SearchForGameWithLobby)(ISteamGameSearch *this, CSteamID, int, int);
-	EGameSearchErrorCode_t (__fastcall *SearchForGameSolo)(ISteamGameSearch *this, int, int);
-	EGameSearchErrorCode_t (__fastcall *AcceptGame)(ISteamGameSearch *this);
-	EGameSearchErrorCode_t (__fastcall *DeclineGame)(ISteamGameSearch *this);
-	EGameSearchErrorCode_t (__fastcall *RetrieveConnectionDetails)(ISteamGameSearch *this, CSteamID, char *, int);
-	EGameSearchErrorCode_t (__fastcall *EndGameSearch)(ISteamGameSearch *this);
-	EGameSearchErrorCode_t (__fastcall *SetGameHostParams)(ISteamGameSearch *this, const char *, const char *);
-	EGameSearchErrorCode_t (__fastcall *SetConnectionDetails)(ISteamGameSearch *this, const char *, int);
-	EGameSearchErrorCode_t (__fastcall *RequestPlayersForGame)(ISteamGameSearch *this, int, int, int);
-	EGameSearchErrorCode_t (__fastcall *HostConfirmGameStart)(ISteamGameSearch *this, unsigned __int64);
-	EGameSearchErrorCode_t (__fastcall *CancelRequestPlayersForGame)(ISteamGameSearch *this);
-	EGameSearchErrorCode_t (__fastcall *SubmitPlayerResult)(ISteamGameSearch *this, unsigned __int64, CSteamID, EPlayerResult_t);
-	EGameSearchErrorCode_t (__fastcall *EndGame)(ISteamGameSearch *this, unsigned __int64);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_AddGameSearchParams)(ISteamGameSearch *this, const char *, const char *);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_SearchForGameWithLobby)(ISteamGameSearch *this, CSteamID, int, int);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_SearchForGameSolo)(ISteamGameSearch *this, int, int);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_AcceptGame)(ISteamGameSearch *this);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_DeclineGame)(ISteamGameSearch *this);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_RetrieveConnectionDetails)(ISteamGameSearch *this, CSteamID, char *, int);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_EndGameSearch)(ISteamGameSearch *this);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_SetGameHostParams)(ISteamGameSearch *this, const char *, const char *);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_SetConnectionDetails)(ISteamGameSearch *this, const char *, int);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_RequestPlayersForGame)(ISteamGameSearch *this, int, int, int);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_HostConfirmGameStart)(ISteamGameSearch *this, unsigned __int64);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_CancelRequestPlayersForGame)(ISteamGameSearch *this);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_SubmitPlayerResult)(ISteamGameSearch *this, unsigned __int64, CSteamID, EPlayerResult_t);
+	EGameSearchErrorCode_t (__fastcall *ptee_unproven_EndGame)(ISteamGameSearch *this, unsigned __int64);
 };
 
 /* 6349 */
@@ -59279,165 +59315,165 @@ struct /*VFT*/ ISteamController_vtbl
 /* 6354 */
 struct /*VFT*/ ISteamAppList_vtbl
 {
-	unsigned int (__fastcall *GetNumInstalledApps)(ISteamAppList *this);
-	unsigned int (__fastcall *GetInstalledApps)(ISteamAppList *this, unsigned int *, unsigned int);
-	int (__fastcall *GetAppName)(ISteamAppList *this, unsigned int, char *, int);
-	int (__fastcall *GetAppInstallDir)(ISteamAppList *this, unsigned int, char *, int);
-	int (__fastcall *GetAppBuildId)(ISteamAppList *this, unsigned int);
+	unsigned int (__fastcall *ptee_unproven_GetNumInstalledApps)(ISteamAppList *this);
+	unsigned int (__fastcall *ptee_unproven_GetInstalledApps)(ISteamAppList *this, unsigned int *, unsigned int);
+	int (__fastcall *ptee_unproven_GetAppName)(ISteamAppList *this, unsigned int, char *, int);
+	int (__fastcall *ptee_unproven_GetAppInstallDir)(ISteamAppList *this, unsigned int, char *, int);
+	int (__fastcall *ptee_unproven_GetAppBuildId)(ISteamAppList *this, unsigned int);
 };
 
 /* 6356 */
 struct /*VFT*/ ISteamMusic_vtbl
 {
-	bool (__fastcall *BIsEnabled)(ISteamMusic *this);
-	bool (__fastcall *BIsPlaying)(ISteamMusic *this);
-	AudioPlayback_Status (__fastcall *GetPlaybackStatus)(ISteamMusic *this);
-	void (__fastcall *Play)(ISteamMusic *this);
-	void (__fastcall *Pause)(ISteamMusic *this);
-	void (__fastcall *PlayPrevious)(ISteamMusic *this);
-	void (__fastcall *PlayNext)(ISteamMusic *this);
-	void (__fastcall *SetVolume)(ISteamMusic *this, float);
-	float (__fastcall *GetVolume)(ISteamMusic *this);
+	bool (__fastcall *ptee_unproven_BIsEnabled)(ISteamMusic *this);
+	bool (__fastcall *ptee_unproven_BIsPlaying)(ISteamMusic *this);
+	AudioPlayback_Status (__fastcall *ptee_unproven_GetPlaybackStatus)(ISteamMusic *this);
+	void (__fastcall *ptee_unproven_Play)(ISteamMusic *this);
+	void (__fastcall *ptee_unproven_Pause)(ISteamMusic *this);
+	void (__fastcall *ptee_unproven_PlayPrevious)(ISteamMusic *this);
+	void (__fastcall *ptee_unproven_PlayNext)(ISteamMusic *this);
+	void (__fastcall *ptee_unproven_SetVolume)(ISteamMusic *this, float);
+	float (__fastcall *ptee_unproven_GetVolume)(ISteamMusic *this);
 };
 
 /* 6358 */
 struct /*VFT*/ ISteamMusicRemote_vtbl
 {
-	bool (__fastcall *RegisterSteamMusicRemote)(ISteamMusicRemote *this, const char *);
-	bool (__fastcall *DeregisterSteamMusicRemote)(ISteamMusicRemote *this);
-	bool (__fastcall *BIsCurrentMusicRemote)(ISteamMusicRemote *this);
-	bool (__fastcall *BActivationSuccess)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *SetDisplayName)(ISteamMusicRemote *this, const char *);
-	bool (__fastcall *SetPNGIcon_64x64)(ISteamMusicRemote *this, void *, unsigned int);
-	bool (__fastcall *EnablePlayPrevious)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *EnablePlayNext)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *EnableShuffled)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *EnableLooped)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *EnableQueue)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *EnablePlaylists)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *UpdatePlaybackStatus)(ISteamMusicRemote *this, AudioPlayback_Status);
-	bool (__fastcall *UpdateShuffled)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *UpdateLooped)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *UpdateVolume)(ISteamMusicRemote *this, float);
-	bool (__fastcall *CurrentEntryWillChange)(ISteamMusicRemote *this);
-	bool (__fastcall *CurrentEntryIsAvailable)(ISteamMusicRemote *this, bool);
-	bool (__fastcall *UpdateCurrentEntryText)(ISteamMusicRemote *this, const char *);
-	bool (__fastcall *UpdateCurrentEntryElapsedSeconds)(ISteamMusicRemote *this, int);
-	bool (__fastcall *UpdateCurrentEntryCoverArt)(ISteamMusicRemote *this, void *, unsigned int);
-	bool (__fastcall *CurrentEntryDidChange)(ISteamMusicRemote *this);
-	bool (__fastcall *QueueWillChange)(ISteamMusicRemote *this);
-	bool (__fastcall *ResetQueueEntries)(ISteamMusicRemote *this);
-	bool (__fastcall *SetQueueEntry)(ISteamMusicRemote *this, int, int, const char *);
-	bool (__fastcall *SetCurrentQueueEntry)(ISteamMusicRemote *this, int);
-	bool (__fastcall *QueueDidChange)(ISteamMusicRemote *this);
-	bool (__fastcall *PlaylistWillChange)(ISteamMusicRemote *this);
-	bool (__fastcall *ResetPlaylistEntries)(ISteamMusicRemote *this);
-	bool (__fastcall *SetPlaylistEntry)(ISteamMusicRemote *this, int, int, const char *);
-	bool (__fastcall *SetCurrentPlaylistEntry)(ISteamMusicRemote *this, int);
-	bool (__fastcall *PlaylistDidChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_RegisterSteamMusicRemote)(ISteamMusicRemote *this, const char *);
+	bool (__fastcall *ptee_unproven_DeregisterSteamMusicRemote)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_BIsCurrentMusicRemote)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_BActivationSuccess)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_SetDisplayName)(ISteamMusicRemote *this, const char *);
+	bool (__fastcall *ptee_unproven_SetPNGIcon_64x64)(ISteamMusicRemote *this, void *, unsigned int);
+	bool (__fastcall *ptee_unproven_EnablePlayPrevious)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_EnablePlayNext)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_EnableShuffled)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_EnableLooped)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_EnableQueue)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_EnablePlaylists)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_UpdatePlaybackStatus)(ISteamMusicRemote *this, AudioPlayback_Status);
+	bool (__fastcall *ptee_unproven_UpdateShuffled)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_UpdateLooped)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_UpdateVolume)(ISteamMusicRemote *this, float);
+	bool (__fastcall *ptee_unproven_CurrentEntryWillChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_CurrentEntryIsAvailable)(ISteamMusicRemote *this, bool);
+	bool (__fastcall *ptee_unproven_UpdateCurrentEntryText)(ISteamMusicRemote *this, const char *);
+	bool (__fastcall *ptee_unproven_UpdateCurrentEntryElapsedSeconds)(ISteamMusicRemote *this, int);
+	bool (__fastcall *ptee_unproven_UpdateCurrentEntryCoverArt)(ISteamMusicRemote *this, void *, unsigned int);
+	bool (__fastcall *ptee_unproven_CurrentEntryDidChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_QueueWillChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_ResetQueueEntries)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_SetQueueEntry)(ISteamMusicRemote *this, int, int, const char *);
+	bool (__fastcall *ptee_unproven_SetCurrentQueueEntry)(ISteamMusicRemote *this, int);
+	bool (__fastcall *ptee_unproven_QueueDidChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_PlaylistWillChange)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_ResetPlaylistEntries)(ISteamMusicRemote *this);
+	bool (__fastcall *ptee_unproven_SetPlaylistEntry)(ISteamMusicRemote *this, int, int, const char *);
+	bool (__fastcall *ptee_unproven_SetCurrentPlaylistEntry)(ISteamMusicRemote *this, int);
+	bool (__fastcall *ptee_unproven_PlaylistDidChange)(ISteamMusicRemote *this);
 };
 
 /* 6360 */
 struct /*VFT*/ ISteamHTMLSurface_vtbl
 {
-	void (__fastcall *~ISteamHTMLSurface)(ISteamHTMLSurface *this);
-	bool (__fastcall *Init)(ISteamHTMLSurface *this);
-	bool (__fastcall *Shutdown)(ISteamHTMLSurface *this);
-	unsigned __int64 (__fastcall *CreateBrowser)(ISteamHTMLSurface *this, const char *, const char *);
-	void (__fastcall *RemoveBrowser)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *LoadURL)(ISteamHTMLSurface *this, unsigned int, const char *, const char *);
-	void (__fastcall *SetSize)(ISteamHTMLSurface *this, unsigned int, unsigned int, unsigned int);
-	void (__fastcall *StopLoad)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *Reload)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *GoBack)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *GoForward)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *AddHeader)(ISteamHTMLSurface *this, unsigned int, const char *, const char *);
-	void (__fastcall *ExecuteJavascript)(ISteamHTMLSurface *this, unsigned int, const char *);
-	void (__fastcall *MouseUp)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
-	void (__fastcall *MouseDown)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
-	void (__fastcall *MouseDoubleClick)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
-	void (__fastcall *MouseMove)(ISteamHTMLSurface *this, unsigned int, int, int);
-	void (__fastcall *MouseWheel)(ISteamHTMLSurface *this, unsigned int, int);
-	void (__fastcall *KeyDown)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers, bool);
-	void (__fastcall *KeyUp)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers);
-	void (__fastcall *KeyChar)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers);
-	void (__fastcall *SetHorizontalScroll)(ISteamHTMLSurface *this, unsigned int, unsigned int);
-	void (__fastcall *SetVerticalScroll)(ISteamHTMLSurface *this, unsigned int, unsigned int);
-	void (__fastcall *SetKeyFocus)(ISteamHTMLSurface *this, unsigned int, bool);
-	void (__fastcall *ViewSource)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *CopyToClipboard)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *PasteFromClipboard)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *Find)(ISteamHTMLSurface *this, unsigned int, const char *, bool, bool);
-	void (__fastcall *StopFind)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *GetLinkAtPosition)(ISteamHTMLSurface *this, unsigned int, int, int);
-	void (__fastcall *SetCookie)(ISteamHTMLSurface *this, const char *, const char *, const char *, const char *, unsigned int, bool, bool);
-	void (__fastcall *SetPageScaleFactor)(ISteamHTMLSurface *this, unsigned int, float, int, int);
-	void (__fastcall *SetBackgroundMode)(ISteamHTMLSurface *this, unsigned int, bool);
-	void (__fastcall *SetDPIScalingFactor)(ISteamHTMLSurface *this, unsigned int, float);
-	void (__fastcall *OpenDeveloperTools)(ISteamHTMLSurface *this, unsigned int);
-	void (__fastcall *AllowStartRequest)(ISteamHTMLSurface *this, unsigned int, bool);
-	void (__fastcall *JSDialogResponse)(ISteamHTMLSurface *this, unsigned int, bool);
-	void (__fastcall *FileLoadDialogResponse)(ISteamHTMLSurface *this, unsigned int, const char **);
+	void (__fastcall *ptee_unproven_dtor_ISteamHTMLSurface)(ISteamHTMLSurface *this);
+	bool (__fastcall *ptee_unproven_Init)(ISteamHTMLSurface *this);
+	bool (__fastcall *ptee_unproven_Shutdown)(ISteamHTMLSurface *this);
+	unsigned __int64 (__fastcall *ptee_unproven_CreateBrowser)(ISteamHTMLSurface *this, const char *, const char *);
+	void (__fastcall *ptee_unproven_RemoveBrowser)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_LoadURL)(ISteamHTMLSurface *this, unsigned int, const char *, const char *);
+	void (__fastcall *ptee_unproven_SetSize)(ISteamHTMLSurface *this, unsigned int, unsigned int, unsigned int);
+	void (__fastcall *ptee_unproven_StopLoad)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_Reload)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_GoBack)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_GoForward)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_AddHeader)(ISteamHTMLSurface *this, unsigned int, const char *, const char *);
+	void (__fastcall *ptee_unproven_ExecuteJavascript)(ISteamHTMLSurface *this, unsigned int, const char *);
+	void (__fastcall *ptee_unproven_MouseUp)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
+	void (__fastcall *ptee_unproven_MouseDown)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
+	void (__fastcall *ptee_unproven_MouseDoubleClick)(ISteamHTMLSurface *this, unsigned int, ISteamHTMLSurface::EHTMLMouseButton);
+	void (__fastcall *ptee_unproven_MouseMove)(ISteamHTMLSurface *this, unsigned int, int, int);
+	void (__fastcall *ptee_unproven_MouseWheel)(ISteamHTMLSurface *this, unsigned int, int);
+	void (__fastcall *ptee_unproven_KeyDown)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers, bool);
+	void (__fastcall *ptee_unproven_KeyUp)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers);
+	void (__fastcall *ptee_unproven_KeyChar)(ISteamHTMLSurface *this, unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers);
+	void (__fastcall *ptee_unproven_SetHorizontalScroll)(ISteamHTMLSurface *this, unsigned int, unsigned int);
+	void (__fastcall *ptee_unproven_SetVerticalScroll)(ISteamHTMLSurface *this, unsigned int, unsigned int);
+	void (__fastcall *ptee_unproven_SetKeyFocus)(ISteamHTMLSurface *this, unsigned int, bool);
+	void (__fastcall *ptee_unproven_ViewSource)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_CopyToClipboard)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_PasteFromClipboard)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_Find)(ISteamHTMLSurface *this, unsigned int, const char *, bool, bool);
+	void (__fastcall *ptee_unproven_StopFind)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_GetLinkAtPosition)(ISteamHTMLSurface *this, unsigned int, int, int);
+	void (__fastcall *ptee_unproven_SetCookie)(ISteamHTMLSurface *this, const char *, const char *, const char *, const char *, unsigned int, bool, bool);
+	void (__fastcall *ptee_unproven_SetPageScaleFactor)(ISteamHTMLSurface *this, unsigned int, float, int, int);
+	void (__fastcall *ptee_unproven_SetBackgroundMode)(ISteamHTMLSurface *this, unsigned int, bool);
+	void (__fastcall *ptee_unproven_SetDPIScalingFactor)(ISteamHTMLSurface *this, unsigned int, float);
+	void (__fastcall *ptee_unproven_OpenDeveloperTools)(ISteamHTMLSurface *this, unsigned int);
+	void (__fastcall *ptee_unproven_AllowStartRequest)(ISteamHTMLSurface *this, unsigned int, bool);
+	void (__fastcall *ptee_unproven_JSDialogResponse)(ISteamHTMLSurface *this, unsigned int, bool);
+	void (__fastcall *ptee_unproven_FileLoadDialogResponse)(ISteamHTMLSurface *this, unsigned int, const char **);
 };
 
 /* 6362 */
 struct /*VFT*/ ISteamVideo_vtbl
 {
-	void (__fastcall *GetVideoURL)(ISteamVideo *this, unsigned int);
-	bool (__fastcall *IsBroadcasting)(ISteamVideo *this, int *);
-	void (__fastcall *GetOPFSettings)(ISteamVideo *this, unsigned int);
-	bool (__fastcall *GetOPFStringForApp)(ISteamVideo *this, unsigned int, char *, int *);
+	void (__fastcall *ptee_unproven_GetVideoURL)(ISteamVideo *this, unsigned int);
+	bool (__fastcall *ptee_unproven_IsBroadcasting)(ISteamVideo *this, int *);
+	void (__fastcall *ptee_unproven_GetOPFSettings)(ISteamVideo *this, unsigned int);
+	bool (__fastcall *ptee_unproven_GetOPFStringForApp)(ISteamVideo *this, unsigned int, char *, int *);
 };
 
 /* 6364 */
 struct /*VFT*/ ISteamParentalSettings_vtbl
 {
-	bool (__fastcall *BIsParentalLockEnabled)(ISteamParentalSettings *this);
-	bool (__fastcall *BIsParentalLockLocked)(ISteamParentalSettings *this);
-	bool (__fastcall *BIsAppBlocked)(ISteamParentalSettings *this, unsigned int);
-	bool (__fastcall *BIsAppInBlockList)(ISteamParentalSettings *this, unsigned int);
-	bool (__fastcall *BIsFeatureBlocked)(ISteamParentalSettings *this, EParentalFeature);
-	bool (__fastcall *BIsFeatureInBlockList)(ISteamParentalSettings *this, EParentalFeature);
+	bool (__fastcall *ptee_unproven_BIsParentalLockEnabled)(ISteamParentalSettings *this);
+	bool (__fastcall *ptee_unproven_BIsParentalLockLocked)(ISteamParentalSettings *this);
+	bool (__fastcall *ptee_unproven_BIsAppBlocked)(ISteamParentalSettings *this, unsigned int);
+	bool (__fastcall *ptee_unproven_BIsAppInBlockList)(ISteamParentalSettings *this, unsigned int);
+	bool (__fastcall *ptee_unproven_BIsFeatureBlocked)(ISteamParentalSettings *this, EParentalFeature);
+	bool (__fastcall *ptee_unproven_BIsFeatureInBlockList)(ISteamParentalSettings *this, EParentalFeature);
 };
 
 /* 6366 */
 struct /*VFT*/ ISteamInput_vtbl
 {
-	bool (__fastcall *Init)(ISteamInput *this);
-	bool (__fastcall *Shutdown)(ISteamInput *this);
-	void (__fastcall *RunFrame)(ISteamInput *this);
-	int (__fastcall *GetConnectedControllers)(ISteamInput *this, unsigned __int64 *);
-	unsigned __int64 (__fastcall *GetActionSetHandle)(ISteamInput *this, const char *);
-	void (__fastcall *ActivateActionSet)(ISteamInput *this, unsigned __int64, unsigned __int64);
-	unsigned __int64 (__fastcall *GetCurrentActionSet)(ISteamInput *this, unsigned __int64);
-	void (__fastcall *ActivateActionSetLayer)(ISteamInput *this, unsigned __int64, unsigned __int64);
-	void (__fastcall *DeactivateActionSetLayer)(ISteamInput *this, unsigned __int64, unsigned __int64);
-	void (__fastcall *DeactivateAllActionSetLayers)(ISteamInput *this, unsigned __int64);
-	int (__fastcall *GetActiveActionSetLayers)(ISteamInput *this, unsigned __int64, unsigned __int64 *);
-	unsigned __int64 (__fastcall *GetDigitalActionHandle)(ISteamInput *this, const char *);
-	InputDigitalActionData_t (__fastcall *GetDigitalActionData)(ISteamInput *this, unsigned __int64, unsigned __int64);
-	int (__fastcall *GetDigitalActionOrigins)(ISteamInput *this, unsigned __int64, unsigned __int64, unsigned __int64, EInputActionOrigin *);
-	unsigned __int64 (__fastcall *GetAnalogActionHandle)(ISteamInput *this, const char *);
-	InputAnalogActionData_t *(__fastcall *GetAnalogActionData)(ISteamInput *this, InputAnalogActionData_t *result, unsigned __int64, unsigned __int64);
-	int (__fastcall *GetAnalogActionOrigins)(ISteamInput *this, unsigned __int64, unsigned __int64, unsigned __int64, EInputActionOrigin *);
-	const char *(__fastcall *GetGlyphForActionOrigin)(ISteamInput *this, EInputActionOrigin);
-	const char *(__fastcall *GetStringForActionOrigin)(ISteamInput *this, EInputActionOrigin);
-	void (__fastcall *StopAnalogActionMomentum)(ISteamInput *this, unsigned __int64, unsigned __int64);
-	InputMotionData_t *(__fastcall *GetMotionData)(ISteamInput *this, InputMotionData_t *result, unsigned __int64);
-	void (__fastcall *TriggerVibration)(ISteamInput *this, unsigned __int64, unsigned __int16, unsigned __int16);
-	void (__fastcall *SetLEDColor)(ISteamInput *this, unsigned __int64, unsigned __int8, unsigned __int8, unsigned __int8, unsigned int);
-	void (__fastcall *TriggerHapticPulse)(ISteamInput *this, unsigned __int64, ESteamControllerPad, unsigned __int16);
-	void (__fastcall *TriggerRepeatedHapticPulse)(ISteamInput *this, unsigned __int64, ESteamControllerPad, unsigned __int16, unsigned __int16, unsigned __int16, unsigned int);
-	bool (__fastcall *ShowBindingPanel)(ISteamInput *this, unsigned __int64);
-	ESteamInputType (__fastcall *GetInputTypeForHandle)(ISteamInput *this, unsigned __int64);
-	unsigned __int64 (__fastcall *GetControllerForGamepadIndex)(ISteamInput *this, int);
-	int (__fastcall *GetGamepadIndexForController)(ISteamInput *this, unsigned __int64);
-	const char *(__fastcall *GetStringForXboxOrigin)(ISteamInput *this, EXboxOrigin);
-	const char *(__fastcall *GetGlyphForXboxOrigin)(ISteamInput *this, EXboxOrigin);
-	EInputActionOrigin (__fastcall *GetActionOriginFromXboxOrigin)(ISteamInput *this, unsigned __int64, EXboxOrigin);
-	EInputActionOrigin (__fastcall *TranslateActionOrigin)(ISteamInput *this, ESteamInputType, EInputActionOrigin);
-	bool (__fastcall *GetDeviceBindingRevision)(ISteamInput *this, unsigned __int64, int *, int *);
-	unsigned int (__fastcall *GetRemotePlaySessionID)(ISteamInput *this, unsigned __int64);
+	bool (__fastcall *ptee_unproven_Init)(ISteamInput *this);
+	bool (__fastcall *ptee_unproven_Shutdown)(ISteamInput *this);
+	void (__fastcall *ptee_unproven_RunFrame)(ISteamInput *this);
+	int (__fastcall *ptee_unproven_GetConnectedControllers)(ISteamInput *this, unsigned __int64 *);
+	unsigned __int64 (__fastcall *ptee_unproven_GetActionSetHandle)(ISteamInput *this, const char *);
+	void (__fastcall *ptee_unproven_ActivateActionSet)(ISteamInput *this, unsigned __int64, unsigned __int64);
+	unsigned __int64 (__fastcall *ptee_unproven_GetCurrentActionSet)(ISteamInput *this, unsigned __int64);
+	void (__fastcall *ptee_unproven_ActivateActionSetLayer)(ISteamInput *this, unsigned __int64, unsigned __int64);
+	void (__fastcall *ptee_unproven_DeactivateActionSetLayer)(ISteamInput *this, unsigned __int64, unsigned __int64);
+	void (__fastcall *ptee_unproven_DeactivateAllActionSetLayers)(ISteamInput *this, unsigned __int64);
+	int (__fastcall *ptee_unproven_GetActiveActionSetLayers)(ISteamInput *this, unsigned __int64, unsigned __int64 *);
+	unsigned __int64 (__fastcall *ptee_unproven_GetDigitalActionHandle)(ISteamInput *this, const char *);
+	InputDigitalActionData_t (__fastcall *ptee_unproven_GetDigitalActionData)(ISteamInput *this, unsigned __int64, unsigned __int64);
+	int (__fastcall *ptee_unproven_GetDigitalActionOrigins)(ISteamInput *this, unsigned __int64, unsigned __int64, unsigned __int64, EInputActionOrigin *);
+	unsigned __int64 (__fastcall *ptee_unproven_GetAnalogActionHandle)(ISteamInput *this, const char *);
+	InputAnalogActionData_t *(__fastcall *ptee_unproven_GetAnalogActionData)(ISteamInput *this, InputAnalogActionData_t *result, unsigned __int64, unsigned __int64);
+	int (__fastcall *ptee_unproven_GetAnalogActionOrigins)(ISteamInput *this, unsigned __int64, unsigned __int64, unsigned __int64, EInputActionOrigin *);
+	const char *(__fastcall *ptee_unproven_GetGlyphForActionOrigin)(ISteamInput *this, EInputActionOrigin);
+	const char *(__fastcall *ptee_unproven_GetStringForActionOrigin)(ISteamInput *this, EInputActionOrigin);
+	void (__fastcall *ptee_unproven_StopAnalogActionMomentum)(ISteamInput *this, unsigned __int64, unsigned __int64);
+	InputMotionData_t *(__fastcall *ptee_unproven_GetMotionData)(ISteamInput *this, InputMotionData_t *result, unsigned __int64);
+	void (__fastcall *ptee_unproven_TriggerVibration)(ISteamInput *this, unsigned __int64, unsigned __int16, unsigned __int16);
+	void (__fastcall *ptee_unproven_SetLEDColor)(ISteamInput *this, unsigned __int64, unsigned __int8, unsigned __int8, unsigned __int8, unsigned int);
+	void (__fastcall *ptee_unproven_TriggerHapticPulse)(ISteamInput *this, unsigned __int64, ESteamControllerPad, unsigned __int16);
+	void (__fastcall *ptee_unproven_TriggerRepeatedHapticPulse)(ISteamInput *this, unsigned __int64, ESteamControllerPad, unsigned __int16, unsigned __int16, unsigned __int16, unsigned int);
+	bool (__fastcall *ptee_unproven_ShowBindingPanel)(ISteamInput *this, unsigned __int64);
+	ESteamInputType (__fastcall *ptee_unproven_GetInputTypeForHandle)(ISteamInput *this, unsigned __int64);
+	unsigned __int64 (__fastcall *ptee_unproven_GetControllerForGamepadIndex)(ISteamInput *this, int);
+	int (__fastcall *ptee_unproven_GetGamepadIndexForController)(ISteamInput *this, unsigned __int64);
+	const char *(__fastcall *ptee_unproven_GetStringForXboxOrigin)(ISteamInput *this, EXboxOrigin);
+	const char *(__fastcall *ptee_unproven_GetGlyphForXboxOrigin)(ISteamInput *this, EXboxOrigin);
+	EInputActionOrigin (__fastcall *ptee_unproven_GetActionOriginFromXboxOrigin)(ISteamInput *this, unsigned __int64, EXboxOrigin);
+	EInputActionOrigin (__fastcall *ptee_unproven_TranslateActionOrigin)(ISteamInput *this, ESteamInputType, EInputActionOrigin);
+	bool (__fastcall *ptee_unproven_GetDeviceBindingRevision)(ISteamInput *this, unsigned __int64, int *, int *);
+	unsigned int (__fastcall *ptee_unproven_GetRemotePlaySessionID)(ISteamInput *this, unsigned __int64);
 };
 
 /* 6368 */
@@ -59450,18 +59486,18 @@ struct SteamPartyBeaconLocation_t
 /* 6369 */
 struct /*VFT*/ ISteamParties_vtbl
 {
-	unsigned int (__fastcall *GetNumActiveBeacons)(ISteamParties *this);
-	unsigned __int64 (__fastcall *GetBeaconByIndex)(ISteamParties *this, unsigned int);
-	bool (__fastcall *GetBeaconDetails)(ISteamParties *this, unsigned __int64, CSteamID *, SteamPartyBeaconLocation_t *, char *, int);
-	unsigned __int64 (__fastcall *JoinParty)(ISteamParties *this, unsigned __int64);
-	bool (__fastcall *GetNumAvailableBeaconLocations)(ISteamParties *this, unsigned int *);
-	bool (__fastcall *GetAvailableBeaconLocations)(ISteamParties *this, SteamPartyBeaconLocation_t *, unsigned int);
-	unsigned __int64 (__fastcall *CreateBeacon)(ISteamParties *this, unsigned int, SteamPartyBeaconLocation_t *, const char *, const char *);
-	void (__fastcall *OnReservationCompleted)(ISteamParties *this, unsigned __int64, CSteamID);
-	void (__fastcall *CancelReservation)(ISteamParties *this, unsigned __int64, CSteamID);
-	unsigned __int64 (__fastcall *ChangeNumOpenSlots)(ISteamParties *this, unsigned __int64, unsigned int);
-	bool (__fastcall *DestroyBeacon)(ISteamParties *this, unsigned __int64);
-	bool (__fastcall *GetBeaconLocationData)(ISteamParties *this, SteamPartyBeaconLocation_t, ESteamPartyBeaconLocationData, char *, int);
+	unsigned int (__fastcall *ptee_unproven_GetNumActiveBeacons)(ISteamParties *this);
+	unsigned __int64 (__fastcall *ptee_unproven_GetBeaconByIndex)(ISteamParties *this, unsigned int);
+	bool (__fastcall *ptee_unproven_GetBeaconDetails)(ISteamParties *this, unsigned __int64, CSteamID *, SteamPartyBeaconLocation_t *, char *, int);
+	unsigned __int64 (__fastcall *ptee_unproven_JoinParty)(ISteamParties *this, unsigned __int64);
+	bool (__fastcall *ptee_unproven_GetNumAvailableBeaconLocations)(ISteamParties *this, unsigned int *);
+	bool (__fastcall *ptee_unproven_GetAvailableBeaconLocations)(ISteamParties *this, SteamPartyBeaconLocation_t *, unsigned int);
+	unsigned __int64 (__fastcall *ptee_unproven_CreateBeacon)(ISteamParties *this, unsigned int, SteamPartyBeaconLocation_t *, const char *, const char *);
+	void (__fastcall *ptee_unproven_OnReservationCompleted)(ISteamParties *this, unsigned __int64, CSteamID);
+	void (__fastcall *ptee_unproven_CancelReservation)(ISteamParties *this, unsigned __int64, CSteamID);
+	unsigned __int64 (__fastcall *ptee_unproven_ChangeNumOpenSlots)(ISteamParties *this, unsigned __int64, unsigned int);
+	bool (__fastcall *ptee_unproven_DestroyBeacon)(ISteamParties *this, unsigned __int64);
+	bool (__fastcall *ptee_unproven_GetBeaconLocationData)(ISteamParties *this, SteamPartyBeaconLocation_t, ESteamPartyBeaconLocationData, char *, int);
 };
 
 /* 6337 */
@@ -59771,6 +59807,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterMulti_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -59786,6 +59823,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterMulti_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -60524,45 +60563,45 @@ struct __cppobj ISteamNetworkingSockets
 /* 6470 */
 struct /*VFT*/ ISteamNetworkingSockets_vtbl
 {
-	unsigned int (__fastcall *CreateListenSocketIP)(ISteamNetworkingSockets *this, const SteamNetworkingIPAddr *, int, const SteamNetworkingConfigValue_t *);
-	unsigned int (__fastcall *ConnectByIPAddress)(ISteamNetworkingSockets *this, const SteamNetworkingIPAddr *, int, const SteamNetworkingConfigValue_t *);
-	unsigned int (__fastcall *CreateListenSocketP2P)(ISteamNetworkingSockets *this, int, int, const SteamNetworkingConfigValue_t *);
-	unsigned int (__fastcall *ConnectP2P)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, int, const SteamNetworkingConfigValue_t *);
-	EResult (__fastcall *AcceptConnection)(ISteamNetworkingSockets *this, unsigned int);
-	bool (__fastcall *CloseConnection)(ISteamNetworkingSockets *this, unsigned int, int, const char *, bool);
-	bool (__fastcall *CloseListenSocket)(ISteamNetworkingSockets *this, unsigned int);
-	bool (__fastcall *SetConnectionUserData)(ISteamNetworkingSockets *this, unsigned int, __int64);
-	__int64 (__fastcall *GetConnectionUserData)(ISteamNetworkingSockets *this, unsigned int);
-	void (__fastcall *SetConnectionName)(ISteamNetworkingSockets *this, unsigned int, const char *);
-	bool (__fastcall *GetConnectionName)(ISteamNetworkingSockets *this, unsigned int, char *, int);
-	EResult (__fastcall *SendMessageToConnection)(ISteamNetworkingSockets *this, unsigned int, const void *, unsigned int, int, __int64 *);
-	void (__fastcall *SendMessages)(ISteamNetworkingSockets *this, int, SteamNetworkingMessage_t *const *, __int64 *);
-	EResult (__fastcall *FlushMessagesOnConnection)(ISteamNetworkingSockets *this, unsigned int);
-	int (__fastcall *ReceiveMessagesOnConnection)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingMessage_t **, int);
-	bool (__fastcall *GetConnectionInfo)(ISteamNetworkingSockets *this, unsigned int, SteamNetConnectionInfo_t *);
-	bool (__fastcall *GetQuickConnectionStatus)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingQuickConnectionStatus *);
-	int (__fastcall *GetDetailedConnectionStatus)(ISteamNetworkingSockets *this, unsigned int, char *, int);
-	bool (__fastcall *GetListenSocketAddress)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingIPAddr *);
-	bool (__fastcall *CreateSocketPair)(ISteamNetworkingSockets *this, unsigned int *, unsigned int *, bool, const SteamNetworkingIdentity *, const SteamNetworkingIdentity *);
-	bool (__fastcall *GetIdentity)(ISteamNetworkingSockets *this, SteamNetworkingIdentity *);
-	ESteamNetworkingAvailability (__fastcall *InitAuthentication)(ISteamNetworkingSockets *this);
-	ESteamNetworkingAvailability (__fastcall *GetAuthenticationStatus)(ISteamNetworkingSockets *this, SteamNetAuthenticationStatus_t *);
-	unsigned int (__fastcall *CreatePollGroup)(ISteamNetworkingSockets *this);
-	bool (__fastcall *DestroyPollGroup)(ISteamNetworkingSockets *this, unsigned int);
-	bool (__fastcall *SetConnectionPollGroup)(ISteamNetworkingSockets *this, unsigned int, unsigned int);
-	int (__fastcall *ReceiveMessagesOnPollGroup)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingMessage_t **, int);
-	bool (__fastcall *ReceivedRelayAuthTicket)(ISteamNetworkingSockets *this, const void *, int, struct SteamDatagramRelayAuthTicket *);
-	int (__fastcall *FindRelayAuthTicketForServer)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, struct SteamDatagramRelayAuthTicket *);
-	unsigned int (__fastcall *ConnectToHostedDedicatedServer)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, int, const SteamNetworkingConfigValue_t *);
-	unsigned __int16 (__fastcall *GetHostedDedicatedServerPort)(ISteamNetworkingSockets *this);
-	unsigned int (__fastcall *GetHostedDedicatedServerPOPID)(ISteamNetworkingSockets *this);
-	EResult (__fastcall *GetHostedDedicatedServerAddress)(ISteamNetworkingSockets *this, struct SteamDatagramHostedAddress *);
-	unsigned int (__fastcall *CreateHostedDedicatedServerListenSocket)(ISteamNetworkingSockets *this, int, int, const SteamNetworkingConfigValue_t *);
-	EResult (__fastcall *GetGameCoordinatorServerLogin)(ISteamNetworkingSockets *this, struct SteamDatagramGameCoordinatorServerLogin *, int *, void *);
-	unsigned int (__fastcall *ConnectP2PCustomSignaling)(ISteamNetworkingSockets *this, ISteamNetworkingConnectionCustomSignaling *, const SteamNetworkingIdentity *, int, const SteamNetworkingConfigValue_t *);
-	bool (__fastcall *ReceivedP2PCustomSignal)(ISteamNetworkingSockets *this, const void *, int, ISteamNetworkingCustomSignalingRecvContext *);
-	bool (__fastcall *GetCertificateRequest)(ISteamNetworkingSockets *this, int *, void *, char (*)[1024]);
-	bool (__fastcall *SetCertificate)(ISteamNetworkingSockets *this, const void *, int, char (*)[1024]);
+	unsigned int (__fastcall *ptee_unproven_CreateListenSocketIP)(ISteamNetworkingSockets *this, const SteamNetworkingIPAddr *, int, const SteamNetworkingConfigValue_t *);
+	unsigned int (__fastcall *ptee_unproven_ConnectByIPAddress)(ISteamNetworkingSockets *this, const SteamNetworkingIPAddr *, int, const SteamNetworkingConfigValue_t *);
+	unsigned int (__fastcall *ptee_unproven_CreateListenSocketP2P)(ISteamNetworkingSockets *this, int, int, const SteamNetworkingConfigValue_t *);
+	unsigned int (__fastcall *ptee_unproven_ConnectP2P)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, int, const SteamNetworkingConfigValue_t *);
+	EResult (__fastcall *ptee_unproven_AcceptConnection)(ISteamNetworkingSockets *this, unsigned int);
+	bool (__fastcall *ptee_unproven_CloseConnection)(ISteamNetworkingSockets *this, unsigned int, int, const char *, bool);
+	bool (__fastcall *ptee_unproven_CloseListenSocket)(ISteamNetworkingSockets *this, unsigned int);
+	bool (__fastcall *ptee_unproven_SetConnectionUserData)(ISteamNetworkingSockets *this, unsigned int, __int64);
+	__int64 (__fastcall *ptee_unproven_GetConnectionUserData)(ISteamNetworkingSockets *this, unsigned int);
+	void (__fastcall *ptee_unproven_SetConnectionName)(ISteamNetworkingSockets *this, unsigned int, const char *);
+	bool (__fastcall *ptee_unproven_GetConnectionName)(ISteamNetworkingSockets *this, unsigned int, char *, int);
+	EResult (__fastcall *ptee_unproven_SendMessageToConnection)(ISteamNetworkingSockets *this, unsigned int, const void *, unsigned int, int, __int64 *);
+	void (__fastcall *ptee_unproven_SendMessages)(ISteamNetworkingSockets *this, int, SteamNetworkingMessage_t *const *, __int64 *);
+	EResult (__fastcall *ptee_unproven_FlushMessagesOnConnection)(ISteamNetworkingSockets *this, unsigned int);
+	int (__fastcall *ptee_unproven_ReceiveMessagesOnConnection)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingMessage_t **, int);
+	bool (__fastcall *ptee_unproven_GetConnectionInfo)(ISteamNetworkingSockets *this, unsigned int, SteamNetConnectionInfo_t *);
+	bool (__fastcall *ptee_unproven_GetQuickConnectionStatus)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingQuickConnectionStatus *);
+	int (__fastcall *ptee_unproven_GetDetailedConnectionStatus)(ISteamNetworkingSockets *this, unsigned int, char *, int);
+	bool (__fastcall *ptee_unproven_GetListenSocketAddress)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingIPAddr *);
+	bool (__fastcall *ptee_unproven_CreateSocketPair)(ISteamNetworkingSockets *this, unsigned int *, unsigned int *, bool, const SteamNetworkingIdentity *, const SteamNetworkingIdentity *);
+	bool (__fastcall *ptee_unproven_GetIdentity)(ISteamNetworkingSockets *this, SteamNetworkingIdentity *);
+	ESteamNetworkingAvailability (__fastcall *ptee_unproven_InitAuthentication)(ISteamNetworkingSockets *this);
+	ESteamNetworkingAvailability (__fastcall *ptee_unproven_GetAuthenticationStatus)(ISteamNetworkingSockets *this, SteamNetAuthenticationStatus_t *);
+	unsigned int (__fastcall *ptee_unproven_CreatePollGroup)(ISteamNetworkingSockets *this);
+	bool (__fastcall *ptee_unproven_DestroyPollGroup)(ISteamNetworkingSockets *this, unsigned int);
+	bool (__fastcall *ptee_unproven_SetConnectionPollGroup)(ISteamNetworkingSockets *this, unsigned int, unsigned int);
+	int (__fastcall *ptee_unproven_ReceiveMessagesOnPollGroup)(ISteamNetworkingSockets *this, unsigned int, SteamNetworkingMessage_t **, int);
+	bool (__fastcall *ptee_unproven_ReceivedRelayAuthTicket)(ISteamNetworkingSockets *this, const void *, int, struct SteamDatagramRelayAuthTicket *);
+	int (__fastcall *ptee_unproven_FindRelayAuthTicketForServer)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, struct SteamDatagramRelayAuthTicket *);
+	unsigned int (__fastcall *ptee_unproven_ConnectToHostedDedicatedServer)(ISteamNetworkingSockets *this, const SteamNetworkingIdentity *, int, int, const SteamNetworkingConfigValue_t *);
+	unsigned __int16 (__fastcall *ptee_unproven_GetHostedDedicatedServerPort)(ISteamNetworkingSockets *this);
+	unsigned int (__fastcall *ptee_unproven_GetHostedDedicatedServerPOPID)(ISteamNetworkingSockets *this);
+	EResult (__fastcall *ptee_unproven_GetHostedDedicatedServerAddress)(ISteamNetworkingSockets *this, struct SteamDatagramHostedAddress *);
+	unsigned int (__fastcall *ptee_unproven_CreateHostedDedicatedServerListenSocket)(ISteamNetworkingSockets *this, int, int, const SteamNetworkingConfigValue_t *);
+	EResult (__fastcall *ptee_unproven_GetGameCoordinatorServerLogin)(ISteamNetworkingSockets *this, struct SteamDatagramGameCoordinatorServerLogin *, int *, void *);
+	unsigned int (__fastcall *ptee_unproven_ConnectP2PCustomSignaling)(ISteamNetworkingSockets *this, ISteamNetworkingConnectionCustomSignaling *, const SteamNetworkingIdentity *, int, const SteamNetworkingConfigValue_t *);
+	bool (__fastcall *ptee_unproven_ReceivedP2PCustomSignal)(ISteamNetworkingSockets *this, const void *, int, ISteamNetworkingCustomSignalingRecvContext *);
+	bool (__fastcall *ptee_unproven_GetCertificateRequest)(ISteamNetworkingSockets *this, int *, void *, char (*)[1024]);
+	bool (__fastcall *ptee_unproven_SetCertificate)(ISteamNetworkingSockets *this, const void *, int, char (*)[1024]);
 };
 
 /* 6463 */
@@ -60623,15 +60662,15 @@ struct __cppobj ISteamNetworkingCustomSignalingRecvContext
 /* 6467 */
 struct /*VFT*/ ISteamNetworkingConnectionCustomSignaling_vtbl
 {
-	bool (__fastcall *SendSignal)(ISteamNetworkingConnectionCustomSignaling *this, unsigned int, const SteamNetConnectionInfo_t *, const void *, int);
-	void (__fastcall *Release)(ISteamNetworkingConnectionCustomSignaling *this);
+	bool (__fastcall *ptee_unproven_SendSignal)(ISteamNetworkingConnectionCustomSignaling *this, unsigned int, const SteamNetConnectionInfo_t *, const void *, int);
+	void (__fastcall *ptee_unproven_Release)(ISteamNetworkingConnectionCustomSignaling *this);
 };
 
 /* 6469 */
 struct /*VFT*/ ISteamNetworkingCustomSignalingRecvContext_vtbl
 {
-	ISteamNetworkingConnectionCustomSignaling *(__fastcall *OnConnectRequest)(ISteamNetworkingCustomSignalingRecvContext *this, unsigned int, const SteamNetworkingIdentity *);
-	void (__fastcall *SendRejectionSignal)(ISteamNetworkingCustomSignalingRecvContext *this, const SteamNetworkingIdentity *, const void *, int);
+	ISteamNetworkingConnectionCustomSignaling *(__fastcall *ptee_unproven_OnConnectRequest)(ISteamNetworkingCustomSignalingRecvContext *this, unsigned int, const SteamNetworkingIdentity *);
+	void (__fastcall *ptee_unproven_SendRejectionSignal)(ISteamNetworkingCustomSignalingRecvContext *this, const SteamNetworkingIdentity *, const void *, int);
 };
 
 /* 6471 */
@@ -60983,6 +61022,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterLarge_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -60998,6 +61038,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterLarge_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -61057,7 +61099,6 @@ struct /*VFT*/ CProjectileBAM_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -61074,6 +61115,7 @@ struct /*VFT*/ CProjectileBAM_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -61083,9 +61125,14 @@ struct /*VFT*/ CProjectileBAM_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -61200,6 +61247,7 @@ struct /*VFT*/ CGameAnimationTypeCharacter_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -61215,6 +61263,8 @@ struct /*VFT*/ CGameAnimationTypeCharacter_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -61417,6 +61467,7 @@ struct /*VFT*/ CGameAnimationTypeCharacterOld_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -61432,6 +61483,8 @@ struct /*VFT*/ CGameAnimationTypeCharacterOld_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -61776,7 +61829,6 @@ struct /*VFT*/ CLightning_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -62108,7 +62160,6 @@ struct /*VFT*/ CGameTrigger_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -62126,6 +62177,8 @@ struct /*VFT*/ CGameTrigger_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -62717,6 +62770,7 @@ struct /*VFT*/ CGameAnimationTypeAmbientStatic_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -62732,6 +62786,8 @@ struct /*VFT*/ CGameAnimationTypeAmbientStatic_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -63328,6 +63384,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterIcewind_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -63343,6 +63400,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterIcewind_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -63608,7 +63667,6 @@ struct /*VFT*/ CProjectileInstant_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -63625,6 +63683,7 @@ struct /*VFT*/ CProjectileInstant_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -63634,6 +63693,10 @@ struct /*VFT*/ CProjectileInstant_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -63884,7 +63947,6 @@ struct /*VFT*/ CProjectileSkyStrike_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -63901,6 +63963,7 @@ struct /*VFT*/ CProjectileSkyStrike_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -63910,6 +63973,10 @@ struct /*VFT*/ CProjectileSkyStrike_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -65017,6 +65084,7 @@ struct /*VFT*/ CGameAnimationTypeFlying_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -65032,6 +65100,8 @@ struct /*VFT*/ CGameAnimationTypeFlying_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -66097,7 +66167,6 @@ struct /*VFT*/ CGameDoor_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -66115,6 +66184,8 @@ struct /*VFT*/ CGameDoor_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -66350,6 +66421,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterQuadrant_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -66365,6 +66437,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterQuadrant_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -66488,7 +66562,6 @@ struct /*VFT*/ CProjectileFall_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -66505,6 +66578,7 @@ struct /*VFT*/ CProjectileFall_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -66514,9 +66588,14 @@ struct /*VFT*/ CProjectileFall_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -66692,7 +66771,6 @@ struct /*VFT*/ CProjectileChain_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -66709,6 +66787,7 @@ struct /*VFT*/ CProjectileChain_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -66718,9 +66797,14 @@ struct /*VFT*/ CProjectileChain_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -66932,7 +67016,6 @@ struct /*VFT*/ CProjectileArea_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -66949,6 +67032,7 @@ struct /*VFT*/ CProjectileArea_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -66958,9 +67042,14 @@ struct /*VFT*/ CProjectileArea_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -67075,7 +67164,6 @@ struct /*VFT*/ CGameChunk_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -67375,6 +67463,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterOld_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -67390,6 +67479,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterOld_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -67614,6 +67705,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterLarge16_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -67629,6 +67721,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterLarge16_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -68169,7 +68263,7 @@ struct __cppobj __declspec(align(8)) CMemINIFile
 /* 7095 */
 struct /*VFT*/ CMemINIFile_vtbl
 {
-	void (__fastcall *~CMemINIFile)(CMemINIFile *this);
+	void (__fastcall *ptee_unproven_dtor_CMemINIFile)(CMemINIFile *this);
 };
 
 /* 7096 */
@@ -68228,7 +68322,6 @@ struct /*VFT*/ CGameTiledObject_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -68246,6 +68339,8 @@ struct /*VFT*/ CGameTiledObject_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -68316,7 +68411,6 @@ struct /*VFT*/ CGameSpawning_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -68371,7 +68465,6 @@ struct /*VFT*/ CGameStatic_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -68651,7 +68744,6 @@ struct /*VFT*/ CSparkle_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -68974,6 +69066,7 @@ struct /*VFT*/ CGameAnimationTypeAmbient_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -68989,6 +69082,8 @@ struct /*VFT*/ CGameAnimationTypeAmbient_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -69637,6 +69732,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterAnkheg_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -69652,6 +69748,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterAnkheg_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -69777,7 +69875,6 @@ struct /*VFT*/ CBloodPool_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -70207,6 +70304,7 @@ struct /*VFT*/ CGameAnimationTypeMonster_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -70222,8 +70320,18 @@ struct /*VFT*/ CGameAnimationTypeMonster_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
+	void (__fastcall *ptee_slot_65)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_66)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_67)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_68)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_69)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_70)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_71)(CGameAnimationTypeMonster *this);
+	void (__fastcall *ptee_slot_72)(CGameAnimationTypeMonster *this);
 	void (__fastcall *SetCurrentShootSequence)(CGameAnimationTypeMonster *this, __int16);
 	void (__fastcall *SetCurrentShootSplit)(CGameAnimationTypeMonster *this, char);
 };
@@ -70294,6 +70402,7 @@ struct /*VFT*/ CGameAnimationTypeEffect_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -70309,6 +70418,8 @@ struct /*VFT*/ CGameAnimationTypeEffect_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -70512,6 +70623,7 @@ struct /*VFT*/ CGameAnimationTypeMonsterLayered_vtbl
 	void (__fastcall *SetColorEffectAll)(CGameAnimationType *this, unsigned __int8, unsigned int, unsigned __int8);
 	void (__fastcall *SetColorRange)(CGameAnimationType *this, unsigned __int8, unsigned __int8);
 	void (__fastcall *SetColorRangeAll)(CGameAnimationType *this, unsigned __int8);
+	void (__fastcall *ptee_slot_45)(CGameAnimationType *this);
 	__int16 (__fastcall *SetSequence)(CGameAnimationType *this, __int16);
 	int (__fastcall *GetHeightOffset)(CGameAnimationType *this);
 	void (__fastcall *CalculateFxRectMax)(CGameAnimationType *this, CRect *, CPoint *, int);
@@ -70527,6 +70639,8 @@ struct /*VFT*/ CGameAnimationTypeMonsterLayered_vtbl
 	unsigned __int8 (__fastcall *GetCurrentSequenceAndFrame)(CGameAnimationType *this, __int16 *, __int16 *);
 	unsigned __int8 (__fastcall *GetCurrentResRef)(CGameAnimationType *this, CString *, CString *, CString *, CString *);
 	void (__fastcall *OverrideAnimation)(CGameAnimationType *this, CResRef, int);
+	void (__fastcall *ptee_slot_61)(CGameAnimationType *this);
+	void (__fastcall *ptee_slot_62)(CGameAnimationType *this);
 	void (__fastcall *Marshal)(CGameAnimationType *this, unsigned __int8 **, unsigned int *);
 	bool (__fastcall *Unmarshal)(CGameAnimationType *this, CResRef);
 };
@@ -70592,7 +70706,6 @@ struct /*VFT*/ CProjectileCallLightning_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -70609,6 +70722,7 @@ struct /*VFT*/ CProjectileCallLightning_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -70618,6 +70732,10 @@ struct /*VFT*/ CProjectileCallLightning_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -71167,7 +71285,6 @@ struct /*VFT*/ CProjectileLightningBounce_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -71184,6 +71301,7 @@ struct /*VFT*/ CProjectileLightningBounce_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -71193,9 +71311,14 @@ struct /*VFT*/ CProjectileLightningBounce_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -71259,7 +71382,6 @@ struct /*VFT*/ CGameAIGame_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -71277,6 +71399,8 @@ struct /*VFT*/ CGameAIGame_vtbl
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
 	void (__fastcall *ClearActions)(CGameAIBase *this, int);
+	void (__fastcall *ptee_slot_26)(CGameAIBase *this);
+	void (__fastcall *ptee_slot_27)(CGameAIBase *this);
 	void (__fastcall *UpdateTarget)(CGameAIBase *this, CGameObject *);
 	void (__fastcall *AddAction)(CGameAIBase *this, const CAIAction *);
 	void (__fastcall *AddEffect)(CGameAIBase *this, CGameEffect *, unsigned __int8, int, int);
@@ -76022,7 +76146,6 @@ struct /*VFT*/ CProjectileSegment_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -76039,6 +76162,7 @@ struct /*VFT*/ CProjectileSegment_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -76048,10 +76172,19 @@ struct /*VFT*/ CProjectileSegment_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
+	void (__fastcall *ptee_slot_44)(CProjectileSegment *this);
+	void (__fastcall *ptee_slot_45)(CProjectileSegment *this);
+	void (__fastcall *ptee_slot_46)(CProjectileSegment *this);
+	void (__fastcall *ptee_slot_47)(CProjectileSegment *this);
 	void (__fastcall *Fire)(CProjectileSegment *this, CGameArea *, const CPoint *, int);
 };
 
@@ -76736,7 +76869,6 @@ struct /*VFT*/ CProjectileInvisibleTravelling_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -76753,6 +76885,7 @@ struct /*VFT*/ CProjectileInvisibleTravelling_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -76762,9 +76895,14 @@ struct /*VFT*/ CProjectileInvisibleTravelling_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -78257,7 +78395,6 @@ struct /*VFT*/ CProjectileFireHands_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -78274,6 +78411,7 @@ struct /*VFT*/ CProjectileFireHands_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -78283,9 +78421,14 @@ struct /*VFT*/ CProjectileFireHands_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -82700,7 +82843,6 @@ struct /*VFT*/ CProjectileTravelDoor_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -82717,6 +82859,7 @@ struct /*VFT*/ CProjectileTravelDoor_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -82726,6 +82869,10 @@ struct /*VFT*/ CProjectileTravelDoor_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -83439,7 +83586,6 @@ struct /*VFT*/ CProjectileNewScorcher_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -83456,6 +83602,7 @@ struct /*VFT*/ CProjectileNewScorcher_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -83465,10 +83612,19 @@ struct /*VFT*/ CProjectileNewScorcher_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
+	void (__fastcall *ptee_slot_44)(CProjectileNewScorcher *this);
+	void (__fastcall *ptee_slot_45)(CProjectileNewScorcher *this);
+	void (__fastcall *ptee_slot_46)(CProjectileNewScorcher *this);
+	void (__fastcall *ptee_slot_47)(CProjectileNewScorcher *this);
 	void (__fastcall *ApplyEffectsToArea)(CProjectileNewScorcher *this);
 	void (__fastcall *ApplyEffectsToTarget)(CProjectileNewScorcher *this, int *, bool);
 };
@@ -83887,7 +84043,6 @@ struct /*VFT*/ CProjectileLightningStorm_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -83904,6 +84059,7 @@ struct /*VFT*/ CProjectileLightningStorm_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -83913,9 +84069,14 @@ struct /*VFT*/ CProjectileLightningStorm_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -84140,7 +84301,6 @@ struct /*VFT*/ CProjectileMulti_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -84157,6 +84317,7 @@ struct /*VFT*/ CProjectileMulti_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -84166,9 +84327,14 @@ struct /*VFT*/ CProjectileMulti_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -84467,7 +84633,6 @@ struct /*VFT*/ CProjectileCastingGlow_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -84484,6 +84649,7 @@ struct /*VFT*/ CProjectileCastingGlow_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -84493,6 +84659,10 @@ struct /*VFT*/ CProjectileCastingGlow_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
@@ -84594,7 +84764,6 @@ struct /*VFT*/ CProjectileConeOfCold_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -84611,6 +84780,7 @@ struct /*VFT*/ CProjectileConeOfCold_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -84620,9 +84790,14 @@ struct /*VFT*/ CProjectileConeOfCold_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -85713,7 +85888,7 @@ struct __cppobj CTimer : CObject
 struct /*VFT*/ CTimer_vtbl
 {
 	void (__fastcall *~CObject)(CObject *this);
-	void (__fastcall *TimerElapsed)(CTimer *this);
+	void (__fastcall *ptee_unproven_TimerElapsed)(CTimer *this);
 };
 
 /* 8838 */
@@ -86375,7 +86550,6 @@ struct /*VFT*/ CProjectileLightningBoltGround_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -86392,6 +86566,7 @@ struct /*VFT*/ CProjectileLightningBoltGround_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -86401,9 +86576,14 @@ struct /*VFT*/ CProjectileLightningBoltGround_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -86669,7 +86849,6 @@ struct /*VFT*/ CProjectileMagicMissileMulti_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -86686,6 +86865,7 @@ struct /*VFT*/ CProjectileMagicMissileMulti_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -86695,9 +86875,14 @@ struct /*VFT*/ CProjectileMagicMissileMulti_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -86726,7 +86911,6 @@ struct /*VFT*/ CProjectileColorSpray_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -86743,6 +86927,7 @@ struct /*VFT*/ CProjectileColorSpray_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -86752,9 +86937,14 @@ struct /*VFT*/ CProjectileColorSpray_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -87453,7 +87643,6 @@ struct /*VFT*/ CProjectileSkyStrikeBAM_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -87470,6 +87659,7 @@ struct /*VFT*/ CProjectileSkyStrikeBAM_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -87479,9 +87669,14 @@ struct /*VFT*/ CProjectileSkyStrikeBAM_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -87657,7 +87852,6 @@ struct /*VFT*/ CProjectileLightningBolt_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -87674,6 +87868,7 @@ struct /*VFT*/ CProjectileLightningBolt_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -87683,9 +87878,14 @@ struct /*VFT*/ CProjectileLightningBolt_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -87995,7 +88195,6 @@ struct /*VFT*/ CProjectileMushroom_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88012,6 +88211,7 @@ struct /*VFT*/ CProjectileMushroom_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -88021,10 +88221,19 @@ struct /*VFT*/ CProjectileMushroom_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
+	void (__fastcall *ptee_slot_44)(CProjectileMushroom *this);
+	void (__fastcall *ptee_slot_45)(CProjectileMushroom *this);
+	void (__fastcall *ptee_slot_46)(CProjectileMushroom *this);
+	void (__fastcall *ptee_slot_47)(CProjectileMushroom *this);
 	void (__fastcall *Fire)(CProjectileMushroom *this, CGameArea *, CPoint);
 };
 
@@ -88188,7 +88397,6 @@ struct /*VFT*/ CProjectileScorcher_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88205,6 +88413,7 @@ struct /*VFT*/ CProjectileScorcher_vtbl
 	void (__fastcall *SetTarget)(CGameObject *this, CPoint, int);
 	void (__fastcall *SetVertListPos)(CGameObject *this, __POSITION *);
 	int (__fastcall *EvaluateStatusTrigger)(CGameObject *this, const CAITrigger *);
+	void (__fastcall *ptee_slot_25)(CProjectile *this);
 	void (__fastcall *Fire)(CProjectile *this, CGameArea *, int, int, CPoint, int, __int16);
 	void (__fastcall *OnArrival)(CProjectile *this);
 	void (__fastcall *RemoveSelf)(CProjectile *this);
@@ -88214,9 +88423,14 @@ struct /*VFT*/ CProjectileScorcher_vtbl
 	void (__fastcall *SetDefaultRenderFlags)(CProjectile *this, unsigned int);
 	int (__fastcall *SaveProjectile)(CProjectile *this);
 	void (__fastcall *Marshal)(CProjectile *this, SProjectileWrapper *);
+	void (__fastcall *ptee_slot_35)(CProjectile *this);
+	void (__fastcall *ptee_slot_36)(CProjectile *this);
+	void (__fastcall *ptee_slot_37)(CProjectile *this);
+	void (__fastcall *ptee_slot_38)(CProjectile *this);
 	CAIObjectType *(__fastcall *GetTargetType)(CProjectile *this, CAIObjectType *result);
 	void (__fastcall *SetTargetType)(CProjectile *this, const CAIObjectType *);
 	void (__fastcall *GetPreview)(CProjectile *this, CGameArea *);
+	void (__fastcall *ptee_slot_42)(CProjectileBAM *this);
 	void (__fastcall *Move)(CProjectileBAM *this, CPoint);
 };
 
@@ -88596,7 +88810,6 @@ struct /*VFT*/ CVisualEffect_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88659,7 +88872,6 @@ struct /*VFT*/ CVEFVidCell_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88704,7 +88916,6 @@ struct /*VFT*/ CGameText_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88839,7 +89050,6 @@ struct /*VFT*/ CGameSound_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -88938,7 +89148,6 @@ struct /*VFT*/ CGameFireball3d_vtbl
 	void (__fastcall *GetNextWaypoint)(CGameObject *this, CPoint *);
 	__POSITION *(__fastcall *GetVertListPos)(CGameObject *this);
 	unsigned __int8 (__fastcall *GetVertListType)(CGameObject *this);
-	void (__fastcall *SetVertListType)(CGameObject *this, unsigned __int8);
 	unsigned __int8 (__fastcall *CanSaveGame)(CGameObject *this, unsigned int *, int, int);
 	unsigned __int8 (__fastcall *CompressTime)(CGameObject *this, unsigned int);
 	void (__fastcall *DebugDump)(CGameObject *this, const CString *, unsigned __int8);
@@ -89356,14 +89565,14 @@ struct __cppobj IShellItem : IUnknown
 /* 9220 */
 struct /*VFT*/ IShellItem_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *BindToHandler)(IShellItem *this, IBindCtx *, const _GUID *, const _GUID *, void **);
-	HRESULT (__fastcall *GetParent)(IShellItem *this, IShellItem **);
-	HRESULT (__fastcall *GetDisplayName)(IShellItem *this, _SIGDN, wchar_t **);
-	HRESULT (__fastcall *GetAttributes)(IShellItem *this, unsigned int, unsigned int *);
-	HRESULT (__fastcall *Compare)(IShellItem *this, IShellItem *, unsigned int, int *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_BindToHandler)(IShellItem *this, IBindCtx *, const _GUID *, const _GUID *, void **);
+	HRESULT (__fastcall *ptee_unproven_GetParent)(IShellItem *this, IShellItem **);
+	HRESULT (__fastcall *ptee_unproven_GetDisplayName)(IShellItem *this, _SIGDN, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_GetAttributes)(IShellItem *this, unsigned int, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Compare)(IShellItem *this, IShellItem *, unsigned int, int *);
 };
 
 /* 9221 */
@@ -89374,26 +89583,26 @@ struct __cppobj IShellLibrary : IUnknown
 /* 9222 */
 struct /*VFT*/ IShellLibrary_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *LoadLibraryFromItem)(IShellLibrary *this, IShellItem *, unsigned int);
-	HRESULT (__fastcall *LoadLibraryFromKnownFolder)(IShellLibrary *this, const _GUID *, unsigned int);
-	HRESULT (__fastcall *AddFolder)(IShellLibrary *this, IShellItem *);
-	HRESULT (__fastcall *RemoveFolder)(IShellLibrary *this, IShellItem *);
-	HRESULT (__fastcall *GetFolders)(IShellLibrary *this, LIBRARYFOLDERFILTER, const _GUID *, void **);
-	HRESULT (__fastcall *ResolveFolder)(IShellLibrary *this, IShellItem *, unsigned int, const _GUID *, void **);
-	HRESULT (__fastcall *GetDefaultSaveFolder)(IShellLibrary *this, DEFAULTSAVEFOLDERTYPE, const _GUID *, void **);
-	HRESULT (__fastcall *SetDefaultSaveFolder)(IShellLibrary *this, DEFAULTSAVEFOLDERTYPE, IShellItem *);
-	HRESULT (__fastcall *GetOptions)(IShellLibrary *this, LIBRARYOPTIONFLAGS *);
-	HRESULT (__fastcall *SetOptions)(IShellLibrary *this, LIBRARYOPTIONFLAGS, LIBRARYOPTIONFLAGS);
-	HRESULT (__fastcall *GetFolderType)(IShellLibrary *this, _GUID *);
-	HRESULT (__fastcall *SetFolderType)(IShellLibrary *this, const _GUID *);
-	HRESULT (__fastcall *GetIcon)(IShellLibrary *this, wchar_t **);
-	HRESULT (__fastcall *SetIcon)(IShellLibrary *this, const wchar_t *);
-	HRESULT (__fastcall *Commit)(IShellLibrary *this);
-	HRESULT (__fastcall *Save)(IShellLibrary *this, IShellItem *, const wchar_t *, LIBRARYSAVEFLAGS, IShellItem **);
-	HRESULT (__fastcall *SaveInKnownFolder)(IShellLibrary *this, const _GUID *, const wchar_t *, LIBRARYSAVEFLAGS, IShellItem **);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_LoadLibraryFromItem)(IShellLibrary *this, IShellItem *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_LoadLibraryFromKnownFolder)(IShellLibrary *this, const _GUID *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_AddFolder)(IShellLibrary *this, IShellItem *);
+	HRESULT (__fastcall *ptee_unproven_RemoveFolder)(IShellLibrary *this, IShellItem *);
+	HRESULT (__fastcall *ptee_unproven_GetFolders)(IShellLibrary *this, LIBRARYFOLDERFILTER, const _GUID *, void **);
+	HRESULT (__fastcall *ptee_unproven_ResolveFolder)(IShellLibrary *this, IShellItem *, unsigned int, const _GUID *, void **);
+	HRESULT (__fastcall *ptee_unproven_GetDefaultSaveFolder)(IShellLibrary *this, DEFAULTSAVEFOLDERTYPE, const _GUID *, void **);
+	HRESULT (__fastcall *ptee_unproven_SetDefaultSaveFolder)(IShellLibrary *this, DEFAULTSAVEFOLDERTYPE, IShellItem *);
+	HRESULT (__fastcall *ptee_unproven_GetOptions)(IShellLibrary *this, LIBRARYOPTIONFLAGS *);
+	HRESULT (__fastcall *ptee_unproven_SetOptions)(IShellLibrary *this, LIBRARYOPTIONFLAGS, LIBRARYOPTIONFLAGS);
+	HRESULT (__fastcall *ptee_unproven_GetFolderType)(IShellLibrary *this, _GUID *);
+	HRESULT (__fastcall *ptee_unproven_SetFolderType)(IShellLibrary *this, const _GUID *);
+	HRESULT (__fastcall *ptee_unproven_GetIcon)(IShellLibrary *this, wchar_t **);
+	HRESULT (__fastcall *ptee_unproven_SetIcon)(IShellLibrary *this, const wchar_t *);
+	HRESULT (__fastcall *ptee_unproven_Commit)(IShellLibrary *this);
+	HRESULT (__fastcall *ptee_unproven_Save)(IShellLibrary *this, IShellItem *, const wchar_t *, LIBRARYSAVEFLAGS, IShellItem **);
+	HRESULT (__fastcall *ptee_unproven_SaveInKnownFolder)(IShellLibrary *this, const _GUID *, const wchar_t *, LIBRARYSAVEFLAGS, IShellItem **);
 };
 
 /* 9223 */
@@ -89404,10 +89613,10 @@ struct __cppobj IPersist : IUnknown
 /* 9224 */
 struct /*VFT*/ IPersist_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetClassID)(IPersist *this, _GUID *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetClassID)(IPersist *this, _GUID *);
 };
 
 /* 9225 */
@@ -89418,14 +89627,14 @@ struct __cppobj IPersistStream : IPersist
 /* 9226 */
 struct /*VFT*/ IPersistStream_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetClassID)(IPersist *this, _GUID *);
-	HRESULT (__fastcall *IsDirty)(IPersistStream *this);
-	HRESULT (__fastcall *Load)(IPersistStream *this, IStream *);
-	HRESULT (__fastcall *Save)(IPersistStream *this, IStream *, int);
-	HRESULT (__fastcall *GetSizeMax)(IPersistStream *this, _ULARGE_INTEGER *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetClassID)(IPersist *this, _GUID *);
+	HRESULT (__fastcall *ptee_unproven_IsDirty)(IPersistStream *this);
+	HRESULT (__fastcall *ptee_unproven_Load)(IPersistStream *this, IStream *);
+	HRESULT (__fastcall *ptee_unproven_Save)(IPersistStream *this, IStream *, int);
+	HRESULT (__fastcall *ptee_unproven_GetSizeMax)(IPersistStream *this, _ULARGE_INTEGER *);
 };
 
 /* 9227 */
@@ -92298,7 +92507,7 @@ struct __cppobj yfSectionSizeManager
 /* 9515 */
 struct /*VFT*/ yfSectionSizeManager_vtbl
 {
-	void (__fastcall *~yfSectionSizeManager)(yfSectionSizeManager *this);
+	void (__fastcall *ptee_unproven_dtor_yfSectionSizeManager)(yfSectionSizeManager *this);
 };
 
 /* 9516 */
@@ -94345,16 +94554,16 @@ struct __cppobj ID3DXInclude
 /* 9689 */
 struct /*VFT*/ ID3DXInclude_vtbl
 {
-	HRESULT (__fastcall *Open)(ID3DXInclude *this, _D3DXINCLUDE_TYPE, const char *, const void *, const void **, unsigned int *);
-	HRESULT (__fastcall *Close)(ID3DXInclude *this, const void *);
+	HRESULT (__fastcall *ptee_unproven_Open)(ID3DXInclude *this, _D3DXINCLUDE_TYPE, const char *, const void *, const void **, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_Close)(ID3DXInclude *this, const void *);
 };
 
 /* 9690 */
 struct /*VFT*/ ID3DXEffectPool_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
 };
 
 /* 9691 */
@@ -94433,63 +94642,63 @@ const struct __cppobj D3DXMATRIX : _D3DMATRIX
 /* 9700 */
 struct /*VFT*/ ID3DXBaseEffect_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetDesc)(ID3DXBaseEffect *this, _D3DXEFFECT_DESC *);
-	HRESULT (__fastcall *GetParameterDesc)(ID3DXBaseEffect *this, const char *, _D3DXPARAMETER_DESC *);
-	HRESULT (__fastcall *GetTechniqueDesc)(ID3DXBaseEffect *this, const char *, _D3DXTECHNIQUE_DESC *);
-	HRESULT (__fastcall *GetPassDesc)(ID3DXBaseEffect *this, const char *, _D3DXPASS_DESC *);
-	HRESULT (__fastcall *GetFunctionDesc)(ID3DXBaseEffect *this, const char *, _D3DXFUNCTION_DESC *);
-	const char *(__fastcall *GetParameter)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetParameterByName)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetParameterBySemantic)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetParameterElement)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetTechnique)(ID3DXBaseEffect *this, unsigned int);
-	const char *(__fastcall *GetTechniqueByName)(ID3DXBaseEffect *this, const char *);
-	const char *(__fastcall *GetPass)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetPassByName)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetFunction)(ID3DXBaseEffect *this, unsigned int);
-	const char *(__fastcall *GetFunctionByName)(ID3DXBaseEffect *this, const char *);
-	const char *(__fastcall *GetAnnotation)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetAnnotationByName)(ID3DXBaseEffect *this, const char *, const char *);
-	HRESULT (__fastcall *SetValue)(ID3DXBaseEffect *this, const char *, const void *, unsigned int);
-	HRESULT (__fastcall *GetValue)(ID3DXBaseEffect *this, const char *, void *, unsigned int);
-	HRESULT (__fastcall *SetBool)(ID3DXBaseEffect *this, const char *, int);
-	HRESULT (__fastcall *GetBool)(ID3DXBaseEffect *this, const char *, int *);
-	HRESULT (__fastcall *SetBoolArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
-	HRESULT (__fastcall *GetBoolArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
-	HRESULT (__fastcall *SetInt)(ID3DXBaseEffect *this, const char *, int);
-	HRESULT (__fastcall *GetInt)(ID3DXBaseEffect *this, const char *, int *);
-	HRESULT (__fastcall *SetIntArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
-	HRESULT (__fastcall *GetIntArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
-	HRESULT (__fastcall *SetFloat)(ID3DXBaseEffect *this, const char *, float);
-	HRESULT (__fastcall *GetFloat)(ID3DXBaseEffect *this, const char *, float *);
-	HRESULT (__fastcall *SetFloatArray)(ID3DXBaseEffect *this, const char *, const float *, unsigned int);
-	HRESULT (__fastcall *GetFloatArray)(ID3DXBaseEffect *this, const char *, float *, unsigned int);
-	HRESULT (__fastcall *SetVector)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *);
-	HRESULT (__fastcall *GetVector)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *);
-	HRESULT (__fastcall *SetVectorArray)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *, unsigned int);
-	HRESULT (__fastcall *GetVectorArray)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *, unsigned int);
-	HRESULT (__fastcall *SetMatrix)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
-	HRESULT (__fastcall *GetMatrix)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
-	HRESULT (__fastcall *SetMatrixArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *GetMatrixArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *SetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *GetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *SetMatrixTranspose)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
-	HRESULT (__fastcall *GetMatrixTranspose)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
-	HRESULT (__fastcall *SetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *GetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *SetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *GetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *SetString)(ID3DXBaseEffect *this, const char *, const char *);
-	HRESULT (__fastcall *GetString)(ID3DXBaseEffect *this, const char *, const char **);
-	HRESULT (__fastcall *SetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 *);
-	HRESULT (__fastcall *GetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 **);
-	HRESULT (__fastcall *GetPixelShader)(ID3DXBaseEffect *this, const char *, IDirect3DPixelShader9 **);
-	HRESULT (__fastcall *GetVertexShader)(ID3DXBaseEffect *this, const char *, IDirect3DVertexShader9 **);
-	HRESULT (__fastcall *SetArrayRange)(ID3DXBaseEffect *this, const char *, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetDesc)(ID3DXBaseEffect *this, _D3DXEFFECT_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetParameterDesc)(ID3DXBaseEffect *this, const char *, _D3DXPARAMETER_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetTechniqueDesc)(ID3DXBaseEffect *this, const char *, _D3DXTECHNIQUE_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetPassDesc)(ID3DXBaseEffect *this, const char *, _D3DXPASS_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetFunctionDesc)(ID3DXBaseEffect *this, const char *, _D3DXFUNCTION_DESC *);
+	const char *(__fastcall *ptee_unproven_GetParameter)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetParameterByName)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetParameterBySemantic)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetParameterElement)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetTechnique)(ID3DXBaseEffect *this, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetTechniqueByName)(ID3DXBaseEffect *this, const char *);
+	const char *(__fastcall *ptee_unproven_GetPass)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetPassByName)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetFunction)(ID3DXBaseEffect *this, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetFunctionByName)(ID3DXBaseEffect *this, const char *);
+	const char *(__fastcall *ptee_unproven_GetAnnotation)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetAnnotationByName)(ID3DXBaseEffect *this, const char *, const char *);
+	HRESULT (__fastcall *ptee_unproven_SetValue)(ID3DXBaseEffect *this, const char *, const void *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetValue)(ID3DXBaseEffect *this, const char *, void *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetBool)(ID3DXBaseEffect *this, const char *, int);
+	HRESULT (__fastcall *ptee_unproven_GetBool)(ID3DXBaseEffect *this, const char *, int *);
+	HRESULT (__fastcall *ptee_unproven_SetBoolArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetBoolArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetInt)(ID3DXBaseEffect *this, const char *, int);
+	HRESULT (__fastcall *ptee_unproven_GetInt)(ID3DXBaseEffect *this, const char *, int *);
+	HRESULT (__fastcall *ptee_unproven_SetIntArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetIntArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetFloat)(ID3DXBaseEffect *this, const char *, float);
+	HRESULT (__fastcall *ptee_unproven_GetFloat)(ID3DXBaseEffect *this, const char *, float *);
+	HRESULT (__fastcall *ptee_unproven_SetFloatArray)(ID3DXBaseEffect *this, const char *, const float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetFloatArray)(ID3DXBaseEffect *this, const char *, float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetVector)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *);
+	HRESULT (__fastcall *ptee_unproven_GetVector)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *);
+	HRESULT (__fastcall *ptee_unproven_SetVectorArray)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetVectorArray)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrix)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_GetMatrix)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTranspose)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTranspose)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetString)(ID3DXBaseEffect *this, const char *, const char *);
+	HRESULT (__fastcall *ptee_unproven_GetString)(ID3DXBaseEffect *this, const char *, const char **);
+	HRESULT (__fastcall *ptee_unproven_SetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 *);
+	HRESULT (__fastcall *ptee_unproven_GetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 **);
+	HRESULT (__fastcall *ptee_unproven_GetPixelShader)(ID3DXBaseEffect *this, const char *, IDirect3DPixelShader9 **);
+	HRESULT (__fastcall *ptee_unproven_GetVertexShader)(ID3DXBaseEffect *this, const char *, IDirect3DVertexShader9 **);
+	HRESULT (__fastcall *ptee_unproven_SetArrayRange)(ID3DXBaseEffect *this, const char *, unsigned int, unsigned int);
 };
 
 /* 9701 */
@@ -94505,111 +94714,111 @@ struct __cppobj ID3DXEffectStateManager : IUnknown
 /* 9703 */
 struct /*VFT*/ ID3DXEffectStateManager_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *SetTransform)(ID3DXEffectStateManager *this, _D3DTRANSFORMSTATETYPE, const _D3DMATRIX *);
-	HRESULT (__fastcall *SetMaterial)(ID3DXEffectStateManager *this, const _D3DMATERIAL9 *);
-	HRESULT (__fastcall *SetLight)(ID3DXEffectStateManager *this, unsigned int, const _D3DLIGHT9 *);
-	HRESULT (__fastcall *LightEnable)(ID3DXEffectStateManager *this, unsigned int, int);
-	HRESULT (__fastcall *SetRenderState)(ID3DXEffectStateManager *this, _D3DRENDERSTATETYPE, unsigned int);
-	HRESULT (__fastcall *SetTexture)(ID3DXEffectStateManager *this, unsigned int, IDirect3DBaseTexture9 *);
-	HRESULT (__fastcall *SetTextureStageState)(ID3DXEffectStateManager *this, unsigned int, _D3DTEXTURESTAGESTATETYPE, unsigned int);
-	HRESULT (__fastcall *SetSamplerState)(ID3DXEffectStateManager *this, unsigned int, _D3DSAMPLERSTATETYPE, unsigned int);
-	HRESULT (__fastcall *SetNPatchMode)(ID3DXEffectStateManager *this, float);
-	HRESULT (__fastcall *SetFVF)(ID3DXEffectStateManager *this, unsigned int);
-	HRESULT (__fastcall *SetVertexShader)(ID3DXEffectStateManager *this, IDirect3DVertexShader9 *);
-	HRESULT (__fastcall *SetVertexShaderConstantF)(ID3DXEffectStateManager *this, unsigned int, const float *, unsigned int);
-	HRESULT (__fastcall *SetVertexShaderConstantI)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
-	HRESULT (__fastcall *SetVertexShaderConstantB)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
-	HRESULT (__fastcall *SetPixelShader)(ID3DXEffectStateManager *this, IDirect3DPixelShader9 *);
-	HRESULT (__fastcall *SetPixelShaderConstantF)(ID3DXEffectStateManager *this, unsigned int, const float *, unsigned int);
-	HRESULT (__fastcall *SetPixelShaderConstantI)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
-	HRESULT (__fastcall *SetPixelShaderConstantB)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_SetTransform)(ID3DXEffectStateManager *this, _D3DTRANSFORMSTATETYPE, const _D3DMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetMaterial)(ID3DXEffectStateManager *this, const _D3DMATERIAL9 *);
+	HRESULT (__fastcall *ptee_unproven_SetLight)(ID3DXEffectStateManager *this, unsigned int, const _D3DLIGHT9 *);
+	HRESULT (__fastcall *ptee_unproven_LightEnable)(ID3DXEffectStateManager *this, unsigned int, int);
+	HRESULT (__fastcall *ptee_unproven_SetRenderState)(ID3DXEffectStateManager *this, _D3DRENDERSTATETYPE, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetTexture)(ID3DXEffectStateManager *this, unsigned int, IDirect3DBaseTexture9 *);
+	HRESULT (__fastcall *ptee_unproven_SetTextureStageState)(ID3DXEffectStateManager *this, unsigned int, _D3DTEXTURESTAGESTATETYPE, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetSamplerState)(ID3DXEffectStateManager *this, unsigned int, _D3DSAMPLERSTATETYPE, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetNPatchMode)(ID3DXEffectStateManager *this, float);
+	HRESULT (__fastcall *ptee_unproven_SetFVF)(ID3DXEffectStateManager *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetVertexShader)(ID3DXEffectStateManager *this, IDirect3DVertexShader9 *);
+	HRESULT (__fastcall *ptee_unproven_SetVertexShaderConstantF)(ID3DXEffectStateManager *this, unsigned int, const float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetVertexShaderConstantI)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetVertexShaderConstantB)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetPixelShader)(ID3DXEffectStateManager *this, IDirect3DPixelShader9 *);
+	HRESULT (__fastcall *ptee_unproven_SetPixelShaderConstantF)(ID3DXEffectStateManager *this, unsigned int, const float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetPixelShaderConstantI)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetPixelShaderConstantB)(ID3DXEffectStateManager *this, unsigned int, const int *, unsigned int);
 };
 
 /* 9704 */
 struct /*VFT*/ ID3DXEffect_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetDesc)(ID3DXBaseEffect *this, _D3DXEFFECT_DESC *);
-	HRESULT (__fastcall *GetParameterDesc)(ID3DXBaseEffect *this, const char *, _D3DXPARAMETER_DESC *);
-	HRESULT (__fastcall *GetTechniqueDesc)(ID3DXBaseEffect *this, const char *, _D3DXTECHNIQUE_DESC *);
-	HRESULT (__fastcall *GetPassDesc)(ID3DXBaseEffect *this, const char *, _D3DXPASS_DESC *);
-	HRESULT (__fastcall *GetFunctionDesc)(ID3DXBaseEffect *this, const char *, _D3DXFUNCTION_DESC *);
-	const char *(__fastcall *GetParameter)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetParameterByName)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetParameterBySemantic)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetParameterElement)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetTechnique)(ID3DXBaseEffect *this, unsigned int);
-	const char *(__fastcall *GetTechniqueByName)(ID3DXBaseEffect *this, const char *);
-	const char *(__fastcall *GetPass)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetPassByName)(ID3DXBaseEffect *this, const char *, const char *);
-	const char *(__fastcall *GetFunction)(ID3DXBaseEffect *this, unsigned int);
-	const char *(__fastcall *GetFunctionByName)(ID3DXBaseEffect *this, const char *);
-	const char *(__fastcall *GetAnnotation)(ID3DXBaseEffect *this, const char *, unsigned int);
-	const char *(__fastcall *GetAnnotationByName)(ID3DXBaseEffect *this, const char *, const char *);
-	HRESULT (__fastcall *SetValue)(ID3DXBaseEffect *this, const char *, const void *, unsigned int);
-	HRESULT (__fastcall *GetValue)(ID3DXBaseEffect *this, const char *, void *, unsigned int);
-	HRESULT (__fastcall *SetBool)(ID3DXBaseEffect *this, const char *, int);
-	HRESULT (__fastcall *GetBool)(ID3DXBaseEffect *this, const char *, int *);
-	HRESULT (__fastcall *SetBoolArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
-	HRESULT (__fastcall *GetBoolArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
-	HRESULT (__fastcall *SetInt)(ID3DXBaseEffect *this, const char *, int);
-	HRESULT (__fastcall *GetInt)(ID3DXBaseEffect *this, const char *, int *);
-	HRESULT (__fastcall *SetIntArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
-	HRESULT (__fastcall *GetIntArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
-	HRESULT (__fastcall *SetFloat)(ID3DXBaseEffect *this, const char *, float);
-	HRESULT (__fastcall *GetFloat)(ID3DXBaseEffect *this, const char *, float *);
-	HRESULT (__fastcall *SetFloatArray)(ID3DXBaseEffect *this, const char *, const float *, unsigned int);
-	HRESULT (__fastcall *GetFloatArray)(ID3DXBaseEffect *this, const char *, float *, unsigned int);
-	HRESULT (__fastcall *SetVector)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *);
-	HRESULT (__fastcall *GetVector)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *);
-	HRESULT (__fastcall *SetVectorArray)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *, unsigned int);
-	HRESULT (__fastcall *GetVectorArray)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *, unsigned int);
-	HRESULT (__fastcall *SetMatrix)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
-	HRESULT (__fastcall *GetMatrix)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
-	HRESULT (__fastcall *SetMatrixArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *GetMatrixArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *SetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *GetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *SetMatrixTranspose)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
-	HRESULT (__fastcall *GetMatrixTranspose)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
-	HRESULT (__fastcall *SetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *GetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
-	HRESULT (__fastcall *SetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *GetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
-	HRESULT (__fastcall *SetString)(ID3DXBaseEffect *this, const char *, const char *);
-	HRESULT (__fastcall *GetString)(ID3DXBaseEffect *this, const char *, const char **);
-	HRESULT (__fastcall *SetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 *);
-	HRESULT (__fastcall *GetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 **);
-	HRESULT (__fastcall *GetPixelShader)(ID3DXBaseEffect *this, const char *, IDirect3DPixelShader9 **);
-	HRESULT (__fastcall *GetVertexShader)(ID3DXBaseEffect *this, const char *, IDirect3DVertexShader9 **);
-	HRESULT (__fastcall *SetArrayRange)(ID3DXBaseEffect *this, const char *, unsigned int, unsigned int);
-	HRESULT (__fastcall *GetPool)(ID3DXEffect *this, ID3DXEffectPool **);
-	HRESULT (__fastcall *SetTechnique)(ID3DXEffect *this, const char *);
-	const char *(__fastcall *GetCurrentTechnique)(ID3DXEffect *this);
-	HRESULT (__fastcall *ValidateTechnique)(ID3DXEffect *this, const char *);
-	HRESULT (__fastcall *FindNextValidTechnique)(ID3DXEffect *this, const char *, const char **);
-	int (__fastcall *IsParameterUsed)(ID3DXEffect *this, const char *, const char *);
-	HRESULT (__fastcall *Begin)(ID3DXEffect *this, unsigned int *, unsigned int);
-	HRESULT (__fastcall *BeginPass)(ID3DXEffect *this, unsigned int);
-	HRESULT (__fastcall *CommitChanges)(ID3DXEffect *this);
-	HRESULT (__fastcall *EndPass)(ID3DXEffect *this);
-	HRESULT (__fastcall *End)(ID3DXEffect *this);
-	HRESULT (__fastcall *GetDevice)(ID3DXEffect *this, IDirect3DDevice9 **);
-	HRESULT (__fastcall *OnLostDevice)(ID3DXEffect *this);
-	HRESULT (__fastcall *OnResetDevice)(ID3DXEffect *this);
-	HRESULT (__fastcall *SetStateManager)(ID3DXEffect *this, ID3DXEffectStateManager *);
-	HRESULT (__fastcall *GetStateManager)(ID3DXEffect *this, ID3DXEffectStateManager **);
-	HRESULT (__fastcall *BeginParameterBlock)(ID3DXEffect *this);
-	const char *(__fastcall *EndParameterBlock)(ID3DXEffect *this);
-	HRESULT (__fastcall *ApplyParameterBlock)(ID3DXEffect *this, const char *);
-	HRESULT (__fastcall *DeleteParameterBlock)(ID3DXEffect *this, const char *);
-	HRESULT (__fastcall *CloneEffect)(ID3DXEffect *this, IDirect3DDevice9 *, ID3DXEffect **);
-	HRESULT (__fastcall *SetRawValue)(ID3DXEffect *this, const char *, const void *, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetDesc)(ID3DXBaseEffect *this, _D3DXEFFECT_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetParameterDesc)(ID3DXBaseEffect *this, const char *, _D3DXPARAMETER_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetTechniqueDesc)(ID3DXBaseEffect *this, const char *, _D3DXTECHNIQUE_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetPassDesc)(ID3DXBaseEffect *this, const char *, _D3DXPASS_DESC *);
+	HRESULT (__fastcall *ptee_unproven_GetFunctionDesc)(ID3DXBaseEffect *this, const char *, _D3DXFUNCTION_DESC *);
+	const char *(__fastcall *ptee_unproven_GetParameter)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetParameterByName)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetParameterBySemantic)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetParameterElement)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetTechnique)(ID3DXBaseEffect *this, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetTechniqueByName)(ID3DXBaseEffect *this, const char *);
+	const char *(__fastcall *ptee_unproven_GetPass)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetPassByName)(ID3DXBaseEffect *this, const char *, const char *);
+	const char *(__fastcall *ptee_unproven_GetFunction)(ID3DXBaseEffect *this, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetFunctionByName)(ID3DXBaseEffect *this, const char *);
+	const char *(__fastcall *ptee_unproven_GetAnnotation)(ID3DXBaseEffect *this, const char *, unsigned int);
+	const char *(__fastcall *ptee_unproven_GetAnnotationByName)(ID3DXBaseEffect *this, const char *, const char *);
+	HRESULT (__fastcall *ptee_unproven_SetValue)(ID3DXBaseEffect *this, const char *, const void *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetValue)(ID3DXBaseEffect *this, const char *, void *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetBool)(ID3DXBaseEffect *this, const char *, int);
+	HRESULT (__fastcall *ptee_unproven_GetBool)(ID3DXBaseEffect *this, const char *, int *);
+	HRESULT (__fastcall *ptee_unproven_SetBoolArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetBoolArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetInt)(ID3DXBaseEffect *this, const char *, int);
+	HRESULT (__fastcall *ptee_unproven_GetInt)(ID3DXBaseEffect *this, const char *, int *);
+	HRESULT (__fastcall *ptee_unproven_SetIntArray)(ID3DXBaseEffect *this, const char *, const int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetIntArray)(ID3DXBaseEffect *this, const char *, int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetFloat)(ID3DXBaseEffect *this, const char *, float);
+	HRESULT (__fastcall *ptee_unproven_GetFloat)(ID3DXBaseEffect *this, const char *, float *);
+	HRESULT (__fastcall *ptee_unproven_SetFloatArray)(ID3DXBaseEffect *this, const char *, const float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetFloatArray)(ID3DXBaseEffect *this, const char *, float *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetVector)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *);
+	HRESULT (__fastcall *ptee_unproven_GetVector)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *);
+	HRESULT (__fastcall *ptee_unproven_SetVectorArray)(ID3DXBaseEffect *this, const char *, const D3DXVECTOR4 *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetVectorArray)(ID3DXBaseEffect *this, const char *, D3DXVECTOR4 *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrix)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_GetMatrix)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixPointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTranspose)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTranspose)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTransposeArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, const D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetMatrixTransposePointerArray)(ID3DXBaseEffect *this, const char *, D3DXMATRIX **, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_SetString)(ID3DXBaseEffect *this, const char *, const char *);
+	HRESULT (__fastcall *ptee_unproven_GetString)(ID3DXBaseEffect *this, const char *, const char **);
+	HRESULT (__fastcall *ptee_unproven_SetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 *);
+	HRESULT (__fastcall *ptee_unproven_GetTexture)(ID3DXBaseEffect *this, const char *, IDirect3DBaseTexture9 **);
+	HRESULT (__fastcall *ptee_unproven_GetPixelShader)(ID3DXBaseEffect *this, const char *, IDirect3DPixelShader9 **);
+	HRESULT (__fastcall *ptee_unproven_GetVertexShader)(ID3DXBaseEffect *this, const char *, IDirect3DVertexShader9 **);
+	HRESULT (__fastcall *ptee_unproven_SetArrayRange)(ID3DXBaseEffect *this, const char *, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetPool)(ID3DXEffect *this, ID3DXEffectPool **);
+	HRESULT (__fastcall *ptee_unproven_SetTechnique)(ID3DXEffect *this, const char *);
+	const char *(__fastcall *ptee_unproven_GetCurrentTechnique)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_ValidateTechnique)(ID3DXEffect *this, const char *);
+	HRESULT (__fastcall *ptee_unproven_FindNextValidTechnique)(ID3DXEffect *this, const char *, const char **);
+	int (__fastcall *ptee_unproven_IsParameterUsed)(ID3DXEffect *this, const char *, const char *);
+	HRESULT (__fastcall *ptee_unproven_Begin)(ID3DXEffect *this, unsigned int *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_BeginPass)(ID3DXEffect *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_CommitChanges)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_EndPass)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_End)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_GetDevice)(ID3DXEffect *this, IDirect3DDevice9 **);
+	HRESULT (__fastcall *ptee_unproven_OnLostDevice)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_OnResetDevice)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_SetStateManager)(ID3DXEffect *this, ID3DXEffectStateManager *);
+	HRESULT (__fastcall *ptee_unproven_GetStateManager)(ID3DXEffect *this, ID3DXEffectStateManager **);
+	HRESULT (__fastcall *ptee_unproven_BeginParameterBlock)(ID3DXEffect *this);
+	const char *(__fastcall *ptee_unproven_EndParameterBlock)(ID3DXEffect *this);
+	HRESULT (__fastcall *ptee_unproven_ApplyParameterBlock)(ID3DXEffect *this, const char *);
+	HRESULT (__fastcall *ptee_unproven_DeleteParameterBlock)(ID3DXEffect *this, const char *);
+	HRESULT (__fastcall *ptee_unproven_CloneEffect)(ID3DXEffect *this, IDirect3DDevice9 *, ID3DXEffect **);
+	HRESULT (__fastcall *ptee_unproven_SetRawValue)(ID3DXEffect *this, const char *, const void *, unsigned int, unsigned int);
 };
 
 /* 9705 */
@@ -94620,11 +94829,11 @@ struct __cppobj ID3DXBuffer : IUnknown
 /* 9706 */
 struct /*VFT*/ ID3DXBuffer_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	void *(__fastcall *GetBufferPointer)(ID3DXBuffer *this);
-	unsigned int (__fastcall *GetBufferSize)(ID3DXBuffer *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	void *(__fastcall *ptee_unproven_GetBufferPointer)(ID3DXBuffer *this);
+	unsigned int (__fastcall *ptee_unproven_GetBufferSize)(ID3DXBuffer *this);
 };
 
 /* 9707 */
@@ -94897,20 +95106,20 @@ struct __cppobj ID3DXSprite : IUnknown
 /* 9734 */
 struct /*VFT*/ ID3DXSprite_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetDevice)(ID3DXSprite *this, IDirect3DDevice9 **);
-	HRESULT (__fastcall *GetTransform)(ID3DXSprite *this, D3DXMATRIX *);
-	HRESULT (__fastcall *SetTransform)(ID3DXSprite *this, const D3DXMATRIX *);
-	HRESULT (__fastcall *SetWorldViewRH)(ID3DXSprite *this, const D3DXMATRIX *, const D3DXMATRIX *);
-	HRESULT (__fastcall *SetWorldViewLH)(ID3DXSprite *this, const D3DXMATRIX *, const D3DXMATRIX *);
-	HRESULT (__fastcall *Begin)(ID3DXSprite *this, unsigned int);
-	HRESULT (__fastcall *Draw)(ID3DXSprite *this, IDirect3DTexture9 *, const tagRECT *, const D3DXVECTOR3 *, const D3DXVECTOR3 *, unsigned int);
-	HRESULT (__fastcall *Flush)(ID3DXSprite *this);
-	HRESULT (__fastcall *End)(ID3DXSprite *this);
-	HRESULT (__fastcall *OnLostDevice)(ID3DXSprite *this);
-	HRESULT (__fastcall *OnResetDevice)(ID3DXSprite *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetDevice)(ID3DXSprite *this, IDirect3DDevice9 **);
+	HRESULT (__fastcall *ptee_unproven_GetTransform)(ID3DXSprite *this, D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetTransform)(ID3DXSprite *this, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetWorldViewRH)(ID3DXSprite *this, const D3DXMATRIX *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_SetWorldViewLH)(ID3DXSprite *this, const D3DXMATRIX *, const D3DXMATRIX *);
+	HRESULT (__fastcall *ptee_unproven_Begin)(ID3DXSprite *this, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Draw)(ID3DXSprite *this, IDirect3DTexture9 *, const tagRECT *, const D3DXVECTOR3 *, const D3DXVECTOR3 *, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_Flush)(ID3DXSprite *this);
+	HRESULT (__fastcall *ptee_unproven_End)(ID3DXSprite *this);
+	HRESULT (__fastcall *ptee_unproven_OnLostDevice)(ID3DXSprite *this);
+	HRESULT (__fastcall *ptee_unproven_OnResetDevice)(ID3DXSprite *this);
 };
 
 /* 9735 */
@@ -94951,24 +95160,24 @@ struct __cppobj ID3DXFont : IUnknown
 /* 9738 */
 struct /*VFT*/ ID3DXFont_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetDevice)(ID3DXFont *this, IDirect3DDevice9 **);
-	HRESULT (__fastcall *GetDescA)(ID3DXFont *this, _D3DXFONT_DESCA *);
-	HRESULT (__fastcall *GetDescW)(ID3DXFont *this, _D3DXFONT_DESCW *);
-	int (__fastcall *GetTextMetricsA)(ID3DXFont *this, tagTEXTMETRICA *);
-	int (__fastcall *GetTextMetricsW)(ID3DXFont *this, tagTEXTMETRICW *);
-	HDC__ *(__fastcall *GetDC)(ID3DXFont *this);
-	HRESULT (__fastcall *GetGlyphData)(ID3DXFont *this, unsigned int, IDirect3DTexture9 **, tagRECT *, tagPOINT *);
-	HRESULT (__fastcall *PreloadCharacters)(ID3DXFont *this, unsigned int, unsigned int);
-	HRESULT (__fastcall *PreloadGlyphs)(ID3DXFont *this, unsigned int, unsigned int);
-	HRESULT (__fastcall *PreloadTextA)(ID3DXFont *this, const char *, int);
-	HRESULT (__fastcall *PreloadTextW)(ID3DXFont *this, const wchar_t *, int);
-	int (__fastcall *DrawTextA)(ID3DXFont *this, ID3DXSprite *, const char *, int, tagRECT *, unsigned int, unsigned int);
-	int (__fastcall *DrawTextW)(ID3DXFont *this, ID3DXSprite *, const wchar_t *, int, tagRECT *, unsigned int, unsigned int);
-	HRESULT (__fastcall *OnLostDevice)(ID3DXFont *this);
-	HRESULT (__fastcall *OnResetDevice)(ID3DXFont *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetDevice)(ID3DXFont *this, IDirect3DDevice9 **);
+	HRESULT (__fastcall *ptee_unproven_GetDescA)(ID3DXFont *this, _D3DXFONT_DESCA *);
+	HRESULT (__fastcall *ptee_unproven_GetDescW)(ID3DXFont *this, _D3DXFONT_DESCW *);
+	int (__fastcall *ptee_unproven_GetTextMetricsA)(ID3DXFont *this, tagTEXTMETRICA *);
+	int (__fastcall *ptee_unproven_GetTextMetricsW)(ID3DXFont *this, tagTEXTMETRICW *);
+	HDC__ *(__fastcall *ptee_unproven_GetDC)(ID3DXFont *this);
+	HRESULT (__fastcall *ptee_unproven_GetGlyphData)(ID3DXFont *this, unsigned int, IDirect3DTexture9 **, tagRECT *, tagPOINT *);
+	HRESULT (__fastcall *ptee_unproven_PreloadCharacters)(ID3DXFont *this, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_PreloadGlyphs)(ID3DXFont *this, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_PreloadTextA)(ID3DXFont *this, const char *, int);
+	HRESULT (__fastcall *ptee_unproven_PreloadTextW)(ID3DXFont *this, const wchar_t *, int);
+	int (__fastcall *ptee_unproven_DrawTextA)(ID3DXFont *this, ID3DXSprite *, const char *, int, tagRECT *, unsigned int, unsigned int);
+	int (__fastcall *ptee_unproven_DrawTextW)(ID3DXFont *this, ID3DXSprite *, const wchar_t *, int, tagRECT *, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_OnLostDevice)(ID3DXFont *this);
+	HRESULT (__fastcall *ptee_unproven_OnResetDevice)(ID3DXFont *this);
 };
 
 /* 9739 */
@@ -94979,17 +95188,17 @@ struct __cppobj IDirect3DResource9 : IUnknown
 /* 9740 */
 struct /*VFT*/ IDirect3DResource9_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *this, const _GUID *, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *this);
-	unsigned int (__fastcall *Release)(IUnknown *this);
-	HRESULT (__fastcall *GetDevice)(IDirect3DResource9 *this, IDirect3DDevice9 **);
-	HRESULT (__fastcall *SetPrivateData)(IDirect3DResource9 *this, const _GUID *, const void *, unsigned int, unsigned int);
-	HRESULT (__fastcall *GetPrivateData)(IDirect3DResource9 *this, const _GUID *, void *, unsigned int *);
-	HRESULT (__fastcall *FreePrivateData)(IDirect3DResource9 *this, const _GUID *);
-	unsigned int (__fastcall *SetPriority)(IDirect3DResource9 *this, unsigned int);
-	unsigned int (__fastcall *GetPriority)(IDirect3DResource9 *this);
-	void (__fastcall *PreLoad)(IDirect3DResource9 *this);
-	_D3DRESOURCETYPE (__fastcall *GetType)(IDirect3DResource9 *this);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *this, const _GUID *, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *this);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *this);
+	HRESULT (__fastcall *ptee_unproven_GetDevice)(IDirect3DResource9 *this, IDirect3DDevice9 **);
+	HRESULT (__fastcall *ptee_unproven_SetPrivateData)(IDirect3DResource9 *this, const _GUID *, const void *, unsigned int, unsigned int);
+	HRESULT (__fastcall *ptee_unproven_GetPrivateData)(IDirect3DResource9 *this, const _GUID *, void *, unsigned int *);
+	HRESULT (__fastcall *ptee_unproven_FreePrivateData)(IDirect3DResource9 *this, const _GUID *);
+	unsigned int (__fastcall *ptee_unproven_SetPriority)(IDirect3DResource9 *this, unsigned int);
+	unsigned int (__fastcall *ptee_unproven_GetPriority)(IDirect3DResource9 *this);
+	void (__fastcall *ptee_unproven_PreLoad)(IDirect3DResource9 *this);
+	_D3DRESOURCETYPE (__fastcall *ptee_unproven_GetType)(IDirect3DResource9 *this);
 };
 
 /* 9741 */
@@ -96809,10 +97018,10 @@ struct /*VFT*/ DPProviderJingle_vtbl
 /* 10002 */
 struct /*VFT*/ XmppHandler_vtbl
 {
-	void (__fastcall *signal_connect)(sigslot::has_slots_interface *this, sigslot::_signal_base_interface *);
-	void (__fastcall *signal_disconnect)(sigslot::has_slots_interface *this, sigslot::_signal_base_interface *);
-	void (__fastcall *~has_slots_interface)(sigslot::has_slots_interface *this);
-	void (__fastcall *disconnect_all)(sigslot::has_slots_interface *this);
+	void (__fastcall *ptee_unproven_signal_connect)(sigslot::has_slots_interface *this, sigslot::_signal_base_interface *);
+	void (__fastcall *ptee_unproven_signal_disconnect)(sigslot::has_slots_interface *this, sigslot::_signal_base_interface *);
+	void (__fastcall *ptee_unproven_dtor_has_slots_interface)(sigslot::has_slots_interface *this);
+	void (__fastcall *ptee_unproven_disconnect_all)(sigslot::has_slots_interface *this);
 };
 
 /* 10003 */
@@ -103776,12 +103985,12 @@ struct __cppobj IInspectable : IUnknown
 /* 10749 */
 struct /*VFT*/ IInspectable_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *, const _GUID *const, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *);
-	unsigned int (__fastcall *Release)(IUnknown *);
-	HRESULT (__fastcall *GetIids)(IInspectable *this, unsigned int *, _GUID **);
-	HRESULT (__fastcall *GetRuntimeClassName)(IInspectable *this, HSTRING__ **);
-	HRESULT (__fastcall *GetTrustLevel)(IInspectable *this, TrustLevel *);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *, const _GUID *const, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *);
+	HRESULT (__fastcall *ptee_unproven_GetIids)(IInspectable *this, unsigned int *, _GUID **);
+	HRESULT (__fastcall *ptee_unproven_GetRuntimeClassName)(IInspectable *this, HSTRING__ **);
+	HRESULT (__fastcall *ptee_unproven_GetTrustLevel)(IInspectable *this, TrustLevel *);
 };
 
 /* 10750 */
@@ -103805,13 +104014,13 @@ struct __cppobj IActivationFactory : IInspectable
 /* 10753 */
 struct /*VFT*/ IActivationFactory_vtbl
 {
-	HRESULT (__fastcall *QueryInterface)(IUnknown *, const _GUID *const, void **);
-	unsigned int (__fastcall *AddRef)(IUnknown *);
-	unsigned int (__fastcall *Release)(IUnknown *);
-	HRESULT (__fastcall *GetIids)(IInspectable *this, unsigned int *, _GUID **);
-	HRESULT (__fastcall *GetRuntimeClassName)(IInspectable *this, HSTRING__ **);
-	HRESULT (__fastcall *GetTrustLevel)(IInspectable *this, TrustLevel *);
-	HRESULT (__fastcall *ActivateInstance)(IActivationFactory *this, IInspectable **);
+	HRESULT (__fastcall *ptee_unproven_QueryInterface)(IUnknown *, const _GUID *const, void **);
+	unsigned int (__fastcall *ptee_unproven_AddRef)(IUnknown *);
+	unsigned int (__fastcall *ptee_unproven_Release)(IUnknown *);
+	HRESULT (__fastcall *ptee_unproven_GetIids)(IInspectable *this, unsigned int *, _GUID **);
+	HRESULT (__fastcall *ptee_unproven_GetRuntimeClassName)(IInspectable *this, HSTRING__ **);
+	HRESULT (__fastcall *ptee_unproven_GetTrustLevel)(IInspectable *this, TrustLevel *);
+	HRESULT (__fastcall *ptee_unproven_ActivateInstance)(IActivationFactory *this, IInspectable **);
 };
 
 /* 10754 */
@@ -104246,9 +104455,9 @@ const struct __cppobj DNameNode
 /* 10803 */
 struct /*VFT*/ DNameNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10804 */
@@ -104289,9 +104498,9 @@ struct __cppobj Replicator
 /* 10808 */
 struct /*VFT*/ pairNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10809 */
@@ -104322,9 +104531,9 @@ union TPI_t
 /* 10812 */
 struct /*VFT*/ charNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10813 */
@@ -104336,9 +104545,9 @@ struct __cppobj __declspec(align(8)) charNode : DNameNode
 /* 10814 */
 struct /*VFT*/ pDNameNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10815 */
@@ -104365,9 +104574,9 @@ struct $_TypeDescriptor$_extraBytes_16
 /* 10818 */
 struct /*VFT*/ DNameStatusNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10819 */
@@ -104388,9 +104597,9 @@ struct __unaligned __declspec(align(1)) $_TypeDescriptor$_extraBytes_15
 /* 10821 */
 struct /*VFT*/ pcharNode_vtbl
 {
-	int (__fastcall *length)(DNameNode *this);
-	char (__fastcall *getLastChar)(DNameNode *this);
-	char *(__fastcall *getString)(DNameNode *this, char *, char *);
+	int (__fastcall *ptee_unproven_length)(DNameNode *this);
+	char (__fastcall *ptee_unproven_getLastChar)(DNameNode *this);
+	char *(__fastcall *ptee_unproven_getString)(DNameNode *this, char *, char *);
 };
 
 /* 10822 */
