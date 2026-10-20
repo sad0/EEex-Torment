@@ -113,3 +113,26 @@ def map_by_callees(bgF, known):
             for ps, op in callers(PT, known[t]):
                 v[PT.fstart(ps)] += 1
     return v
+
+
+_FR = {}
+
+
+def fragments(pe_name, f):
+    """Primary fragment start f plus every chained fragment whose primary is f."""
+    pe = BG if pe_name == 'BG' else PT
+    if pe_name not in _FR:
+        d = collections.defaultdict(list)
+        for b, e, u in pe.rf:
+            p = pe.rfunc(b)
+            if p and p[0] != b:
+                d[p[0]].append(b)
+        _FR[pe_name] = d
+    return [f] + sorted(_FR[pe_name].get(f, []))
+
+
+def whole_ratio(bgf, ptf):
+    """Alignment ratio over the whole function (primary + cold fragments, concatenated)."""
+    a = [x[2] for g in fragments('BG', bgf) for x in func_insns('BG', g)]
+    b = [x[2] for g in fragments('PT', ptf) for x in func_insns('PT', g)]
+    return difflib.SequenceMatcher(None, a, b, autojunk=False).ratio(), len(a), len(b)

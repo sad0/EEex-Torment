@@ -53,8 +53,7 @@ Pattern=488BFA4883C108
 Operations=ADD -13
 
 [CAIAction::Destruct]
-Pattern=488D5348488D4DD8
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=488B114883C2F4
 
 [CAIAction::operator=]
 Pattern=0FB702488BDA
@@ -184,22 +183,20 @@ Operations=ADD -15
 Pattern=48895C240848896C2410488974241857415641574883EC20488D0569
 
 [CDerivedStats::GetAtOffset]
-Pattern=3DC9000000
-Operations=ADD -5
+Pattern=4883EC380FBF
 
 [CDerivedStats::GetAverageLevel]
 Pattern=83F8147776
 Operations=ADD -8
 
 [CDerivedStats::GetCriticalValue]
-Pattern=4C8B91580C0000
-Operations=ADD -6
+Pattern=44894424188954241056
 
 [CDerivedStats::GetPriestLevelCast]
 Pattern=48895C240855488BEC4883EC20
 
 [CDerivedStats::GetSpellState]
-Pattern=81FA000100007320
+Pattern=8BC2448BC248C1E8054183E01F8B
 
 [CDerivedStats::GetWizardLevelCast]
 Pattern=40534883EC200FB6C2488BD9FFC8
@@ -211,8 +208,7 @@ Pattern=405355415641574883EC28
 Pattern=48895C24185556574154415541564157488DAC2460FFFFFF4881ECA0010000488B0562
 
 [CGameAIBase::ForceSpellPoint]
-Pattern=5741564157488D6C24F0
-Operations=ADD -7
+Pattern=48895C241848897424205557415441554156488D6C24A0
 
 [CGameAIBase::GetTargetShare]
 Pattern=48895C2408574883EC20488BF944
@@ -250,7 +246,7 @@ Operations=ADD -18
 Pattern=6644894C24204C89442418
 
 [CGameArea::OnActionButtonClickGround]
-Pattern=48895C2410565741564883EC40
+Pattern=48895C24105556574883EC40488B0555
 
 [CGameArea::ShowMonstersInArea]
 Pattern=4881EC90000000488BDA
@@ -287,11 +283,10 @@ Operations=ADD -15
 Pattern=40555356574155488D6C24D1
 
 [CGameSprite::Copy]
-Pattern=57415541564157488DAC2400FFFFFF
-Operations=ADD -11
+Pattern=48895C2410488974241848897C2420554154415541564157488DAC2400
 
 [CGameSprite::Damage]
-Pattern=40555356574154415541564157488D6C24F94881ECE8
+Pattern=40555356574154415541564157488D6C24B8
 
 [CGameSprite::DisableOffhand]
 Pattern=48895C24104889742418574883EC20440FB681
@@ -309,7 +304,7 @@ Pattern=48895C2418555741564883EC30
 Pattern=4056415641574883EC50
 
 [CGameSprite::GetKitMask]
-Pattern=4883EC280FB781
+Pattern=4883EC28833D8D82
 
 [CGameSprite::GetKnownSpellInnate]
 Pattern=4883EC284863C24881C140
@@ -321,12 +316,10 @@ Pattern=4883EC284863C24881C148
 Pattern=4883EC284863C24881C1C0
 
 [CGameSprite::GetLauncher]
-Pattern=33DB498BF0
-Operations=ADD -20
+Pattern=48895C241055565741544155415641574883EC40488B050D
 
 [CGameSprite::GetLauncherSlot]
-Pattern=574883EC20480FBFC2
-Operations=ADD -10
+Pattern=48895C241048896C2418488974242057415641574883EC20488B81
 
 [CGameSprite::GetName]
 Pattern=48895C2418574883EC50488B05B7
@@ -335,7 +328,7 @@ Pattern=48895C2418574883EC50488B05B7
 Pattern=4883EC288B815805
 
 [CGameSprite::GetQuickButtons]
-Pattern=48895C242055565741544156488D6C24C9
+Pattern=48895C241848897424205557415441564157488D6C24C94881EC00
 
 [CGameSprite::MakeGlobal]
 Pattern=4C8BDC555657498D6BA14881ECB0
@@ -344,25 +337,23 @@ Pattern=4C8BDC555657498D6BA14881ECB0
 Pattern=40555357415441554156488D6C24D9
 
 [CGameSprite::ReadyOffInternalList]
-Pattern=48894570488BF9410FB6D8
-Operations=ADD -33
+Pattern=48895C2418555657488D6C24A04881EC60010000488B05BDE8
 
 [CGameSprite::ReadySpell]
 Pattern=48895C2418555657488D6C24A04881EC60010000488B05BDE5
 
 [CGameSprite::ShouldAvertCriticalHit]
-Pattern=4889742410574883EC2033DB
-Operations=ADD -5
+Pattern=48895C241048896C241856574154415641574883EC50488B055B
 
 [CGameSprite::SpellPoint]
-Pattern=5557415441554157488D6C24C0
+Pattern=48895C24205557415441554157488D6C
 
 [CGameSprite::UpdateTarget]
 Pattern=488BD94885D2740F
 Operations=ADD -13
 
 [CGameTrigger::SetDrawPoly]
-Pattern=48895C2408574883EC200FB7DA488BF9663B9164
+Pattern=48895C2408574883EC200FB7DA488BF9663B91AC
 
 [CImmunitiesAIType::OnList]
 Pattern=4889742410574883EC30488B5908
@@ -382,7 +373,7 @@ Operations=ADD -28
 Pattern=83FAFF742233C0660F1F8400000000004C0FBFC04239948100
 
 [CInfGame::GetFamiliar]
-Pattern=535556574883EC48488B05D8
+Pattern=40535556574883EC48488B05D8
 
 [CInfGame::GetScrollSpeed]
 Pattern=83BA3402000000
@@ -403,16 +394,14 @@ Pattern=40534883EC3033C0C7
 Pattern=40534883EC30488B05BB4D
 
 [CInfGame::SetState]
-Pattern=4489814C400000
-Operations=ADD -9
+Pattern=48895C24084889742410574883EC20833DC2
 
 [CInfGame::UnselectAll]
 Pattern=5541564883EC30488BD9
 Operations=ADD -2
 
 [CInfinity::FitViewPosition]
-Pattern=4D894B20534154
-Operations=ADD -3
+Pattern=488BC453574881
 
 [CInfinity::ScreenToViewport]
 Pattern=574883EC208B8180000000
@@ -423,8 +412,7 @@ Pattern=41564883EC208B8180000000
 Operations=ADD -7
 
 [CInfinity::SetScrollDest]
-Pattern=488BD948898100030000
-Operations=ADD -9
+Pattern=48895C2410574883EC20488B0517
 
 [CInfinity::SetViewPosition]
 Pattern=4889580844894018
@@ -505,13 +493,13 @@ Pattern=41B901000000488D55A8
 Operations=ADD 18, PUSH, READ DWORD, ADD, ADD 4
 
 [CRuleTables::IsProtectedFromSpell]
-Pattern=40535556574155415641574881
+Pattern=48895C24105556574154415541564157488BEC4881EC80000000488B05C7
 
 [CRuleTables::MapCharacterSpecializationToSchool]
-Pattern=81FA000800007736
+Pattern=0FB7CA81F900
 
 [CScreenWorld::TogglePauseGame]
-Pattern=48895C241855565741564157488D6C24D9
+Pattern=4055535657415441564157488D6C24E9
 
 [CSearchBitmap::GetCost]
 Pattern=48895C242056574154415541564883EC30
@@ -684,8 +672,8 @@ Pattern=15794C5F0088
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CChitin::ENGINE_MODE]
-Pattern=83F8017535
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D12AE68004C
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CChitin::TIMER_UPDATES_PER_SECOND]
 Pattern=05CABC2D0003
@@ -712,16 +700,16 @@ Pattern=0D5BA457000F
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CVidMode::NUM_FADE_FRAMES]
-Pattern=488BB89010000083BFC47C000000
-Operations=ADD 30, PUSH, READ DWORD, ADD, ADD 4
+Pattern=053017590048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CVidMode::SCREENHEIGHT]
-Pattern=0F5BD2660F6EC1
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0583135E0089
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CVidMode::SCREENWIDTH]
-Pattern=0F5BD2660F6EC1
-Operations=ADD -26, PUSH, READ DWORD, ADD, ADD 4
+Pattern=058F135E0048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CVidPalette::RANGE_COLORS]
 Pattern=488944246033ED
@@ -752,12 +740,12 @@ Pattern=057BC7360033
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [d3d]
-Pattern=4585C9747D
-Operations=ADD 15, PUSH, READ DWORD, ADD, ADD 4
+Pattern=1D01E3310085
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [fingerDown]
-Pattern=E967030000
-Operations=ADD 15, PUSH, READ DWORD, ADD, ADD 4
+Pattern=25F95A3600E9
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [g_backgroundMenu]
 Pattern=0D4D12360048
@@ -788,27 +776,27 @@ Pattern=48895C2430488B5E10
 Operations=ADD 30, PUSH, READ DWORD, ADD, ADD 4
 
 [gl]
-Pattern=4585C00F8485000000
-Operations=ADD 19, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05B319340348
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [glGetUniformLocation]
-Pattern=890385C075064883C420
-Operations=ADD 23, PUSH, READ DWORD, ADD, ADD 4
+Pattern=155A1134038B0F
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [glUniform1i]
-Pattern=8B4B1085C9
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=15961034038B
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [lang]
 ExeSwitch=1
 
 [menuLength]
-Pattern=3D020400000F8556010000
-Operations=ADD 14, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D04B5360048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [menuSrc]
-Pattern=3D020400000F8556010000
-Operations=ADD 33, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0DC1B3360048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [menuStack]
 Pattern=85C00F8E01010000
@@ -835,12 +823,12 @@ Pattern=488B1CFB4885DB745B
 Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4, ADD -8
 
 [slicedRects]
-Pattern=488945EF0F1002
-Operations=ADD 13, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D48482C0048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [tooltip]
-Pattern=0F84BA00000033C0
-Operations=ADD 14, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D2E07370044
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [transition]
 Pattern=3935D5603600
@@ -892,12 +880,10 @@ Pattern=E9D200000083
 Pattern=33DB4C8BF08BFB663B5E
 
 [Data-CGameAIBase::FireItemPoint()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9CA00000083CA08
-Operations=ADD 22
+Pattern=E9AC000000834B5C04488BD3488BCE
 
 [Data-CGameAIBase::FireItemPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=C348895C2470
-Operations=ADD 47
+Pattern=33DB4C8BF08BFB663B5D
 
 [Data-CGameAIBase::FireSpell()-CProjectile::AddEffect()-RetPtr]
 Pattern=E9A5020000488B
@@ -909,35 +895,28 @@ Pattern=488D4D40E81163
 Pattern=4C8BE84D85E4
 
 [Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr]
-Pattern=3943247514
-Operations=ADD 115
+Pattern=E9AE000000834B
 
 [Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr-2]
 Pattern=E9AE000000834B
 
 [Data-CGameAIBase::FireSpellPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=E9B8FEFFFF410FB74D26
-Operations=ADD 33
+Pattern=488945804C8BE0
 
 [Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr]
-Pattern=7404834F5C08488BD7
-Operations=ADD 17
+Pattern=488D4D60E83D
 
 [Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr-2]
-Pattern=E9EA000000834F5C08488BD7498BCE
-Operations=ADD 20
+Pattern=E9D3000000834E
 
 [Data-CGameAIBase::ForceSpell()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=41807D0C03BF01000000
-Operations=ADD 28
+Pattern=4C8BE8488BCB
 
 [Data-CGameAIBase::ForceSpellPoint()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9C0000000834F5C08
-Operations=ADD 20
+Pattern=E99D000000834E
 
 [Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=410FB74E26488BD3
-Operations=ADD 13
+Pattern=4C8BE0448BF7
 
 [Data-CGameEffect::DecodeEffectFromBase()-After-CGameEffect::CopyFromBase()]
 Pattern=488BC3488B4C24704833CC
@@ -968,101 +947,82 @@ Pattern=B928000000488BF0
 Pattern=4C8BE04885C00F84C0
 
 [Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9DC0000004183C808
-Operations=ADD 24
+Pattern=E9AC000000834B5C04488BD3488BCF
 
 [Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-2]
-Pattern=E9AC000000834B5C04488BD3488BCE
+Pattern=E99D000000834B
 
 [Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-3]
-Pattern=EB0F834B5C08
-Operations=ADD 17
+Pattern=4885F60F8549
 
 [Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr]
-Pattern=488BD7488B8BD84A0000
-Operations=ADD -18
+Pattern=488D4DE0E82866
 
 [Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr-2]
-Pattern=488BD7488B8BD84A0000
-Operations=ADD 15
+Pattern=E9BF000000834E
 
 [Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=664139450E
-Operations=ADD 23
+Pattern=488983F047000033
 
 [Data-CGameSprite::SpellPoint()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9C0000000834F
+Pattern=E9D6000000834E
 
 [Data-CGameSprite::SpellPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=488983D84A0000458BF7
+Pattern=488983F0470000458BEF41
 
 [Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr]
-Pattern=488B8BD84A0000488BD0
-Operations=ADD 15
+Pattern=418B47484D8B
 
 [Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr-2]
-Pattern=E9F40000004183C808
-Operations=ADD 23
+Pattern=E9BF000000834F
 
 [Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=488983F047000044
 
 [Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-2]
-Pattern=488BCF458B4F48
-Operations=ADD 64
+Pattern=488983F0470000E9
 
 [Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-3]
-Pattern=E954090000
-Operations=ADD 18
+Pattern=488983F047000048
 
 [Data-CGameSprite::UpdateAOE()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=488B742460488BD8
+Unsupported=1
 
 [Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9FA0000004183C808
-Operations=ADD -9
+Pattern=488D4D88E837CC
 
 [Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr-2]
-Pattern=E9FA0000004183C808
-Operations=ADD 28
+Pattern=E9C0000000834F
 
 [Data-CGameSprite::UseItem()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=0F8449F6FFFF
-Operations=ADD 36
+Pattern=488983F0470000418BF7
 
 [Data-CGameSprite::UseItemPoint()-CProjectile::AddEffect()-RetPtr]
-Pattern=E9D40000004183C808
-Operations=ADD 28
+Pattern=E99D000000834F
 
 [Data-CGameSprite::UseItemPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=410FB74E2A
-Operations=ADD 13
+Pattern=488983F0470000418BF5
 
 [Data-CInfButtonArray::SetState()-IndirectJumpTable]
-Pattern=41C786B01F0000640000004533FF
-Operations=ADD 332
+Pattern=000102030405060708090A0B0C0D0E0F101126
 
 [Data-CMessageFireProjectile::Run()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=488B542458488BC844
 
 [Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=418D47BD
-Operations=ADD 27
+Unsupported=1
 
 [Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-2]
-Pattern=488983C8030000488D8B78010000
-Operations=ADD -7
+Pattern=488D1534D042
 
 [Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-3]
 Pattern=488BD0488BCF488BD866
 
 [Data-CProjectileArea::CreateSecondary()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=48894424304C8BF1488BEA
-Operations=ADD 28
+Pattern=488D1516DA42
 
 [Data-CProjectileArea::Explode()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=C780B0010000010000008B536C
-Operations=ADD -10
+Pattern=4C8BF04885C00F84F8
 
 [Data-CProjectileChain::AIUpdate()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=66FF8BD8030000488B7C
@@ -1091,8 +1051,7 @@ Pattern=E8030A350044
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CBaldurEngine::OnLeftPanelButtonClick]
-Pattern=BB010000007576
-Operations=ADD -26
+Pattern=4883EC2883FA
 
 [CChitin::GetVersionString]
 Pattern=40534883EC30488B0563DE
@@ -1121,15 +1080,14 @@ Pattern=40534883EC20488B8128020000488BD948
 Pattern=405541564157488D6C24B94881ECC0
 
 [CGameDialogSprite::EndDialog]
-Pattern=C7415400000000C74158FFFFFFFF
+Pattern=4C8BDC56415641
 
 [CGameDialogSprite::ResetDialogStates]
 Pattern=574883EC20488BD9B918000000
 Operations=ADD -5
 
 [CGameEffect::CheckSave]
-Pattern=4889442470410FB600
-Operations=ADD -28
+Pattern=40555356574154415541564157488D6C24F94881ECA8000000488B0558
 
 [CGameEffect::Construct]
 Pattern=4889442428488BD9418BF1
@@ -1212,11 +1170,10 @@ Pattern=E887BE350048
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CVidFont::GetStringHeight]
-Pattern=48896C24184889742420574883EC30488BF1
+Pattern=48895C2418555641564883EC304C
 
 [CVidFont::GetStringLength]
-Pattern=4883EC30488B7910
-Operations=ADD -14
+Pattern=48895C241048896C2418488974242057415641574883EC30488B79
 
 [CVidFont::RenderTextWrap]
 Pattern=4C8BDC5355565741564881ECC0
@@ -1225,7 +1182,7 @@ Pattern=4C8BDC5355565741564881ECC0
 Pattern=40574883EC70488B05AB
 
 [CVidMode::ApplyBrightnessContrast]
-Pattern=4883EC480FB68180010000
+Pattern=8BC2C3CCCCCCCCCCCCCCCCCCCCCCCCCC0F
 
 [CVidMode::FillRect3d]
 Pattern=4883EC508B4208
@@ -1236,11 +1193,10 @@ Pattern=80B97001000000
 Operations=ADD -10
 
 [CVidPalette::GetAdd]
-Pattern=F744242800000400
+Pattern=33C94D8BD0F7
 
 [CVidPalette::GetLight]
-Pattern=4C8BD2488B8810020000
-Operations=ADD -7
+Pattern=410FBAE11573
 
 [CVidPalette::GetReservedEntries]
 Pattern=0FBAE216
@@ -1259,8 +1215,8 @@ Operations=ADD -10
 Pattern=4C8B014C8BD9
 
 [DrawAlpha]
-Pattern=83CF02448BCD
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=E88E20190083
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [DrawBegin]
 Pattern=833D29F53200
@@ -1278,8 +1234,8 @@ Pattern=4883EC28B9E20B0000
 Operations=ADD 23, PUSH, READ DWORD, ADD, ADD 4
 
 [DrawClear]
-Pattern=488D551F498BCE
-Operations=ADD -9, PUSH, READ DWORD, ADD, ADD 4
+Pattern=E8BDBFFFFFE8
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [DrawColor]
 Pattern=833DD9F33200
@@ -1341,8 +1297,7 @@ Pattern=E87631FDFF0F
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [DrawTransformToScreen]
-Pattern=81E1FF0F00004D896B20
-Operations=ADD 60, PUSH, READ DWORD, ADD, ADD 4
+Pattern=833DB9EE3200
 
 [DrawTransformToScreenH]
 Pattern=833D99EE3200
@@ -1417,11 +1372,10 @@ Pattern=41564883EC204963E8
 Operations=ADD -20
 
 [drawLetters]
-Pattern=4C8BDC555356574155
+Pattern=4C8BDC555741544155415641
 
 [drawMenu]
-Pattern=488945E048894DB8
-Operations=ADD -24
+Pattern=40555357488D6C24B94881ECB0000000488B0531
 
 [drawSlice]
 Pattern=488945F0448B4904
@@ -1432,8 +1386,7 @@ Pattern=488945E7660F6E02
 Operations=ADD -33
 
 [drawTop]
-Pattern=488DAC24B8FDFFFF
-Operations=ADD -4
+Pattern=4C8BDC49897320
 
 [eventMenu]
 Pattern=4889702055574154
@@ -1491,8 +1444,7 @@ Pattern=40555356574155488D6C24C94881ECB0
 Pattern=40534883EC308BD9488D1551
 
 [uiHandleTooltip]
-Pattern=33FF4885C00F8491000000
-Operations=ADD -38
+Pattern=48895C242041564881
 
 [uiPop]
 Pattern=48895C24104889742418574883EC20488BF14885
@@ -1524,8 +1476,8 @@ Pattern=4889442438488BBC24A0000000
 Operations=ADD 42, PUSH, READ DWORD, ADD, ADD 4
 
 [CGameText::VFTable]
-Pattern=48894424404C8BBC24C0000000
-Operations=ADD 33, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05507B410048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CMessageAddClairvoyance::VFTable]
 Pattern=74228B4E48
@@ -1536,8 +1488,8 @@ Pattern=488B49104885C97412
 Operations=ADD -12, PUSH, READ DWORD, ADD, ADD 4
 
 [CMessageDisplayText::VFTable]
-Pattern=895F0C488D4F10
-Operations=ADD 16, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D3288450048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CMessageDisplayTextRef::VFTable]
 Pattern=744D8B5E48
@@ -1548,8 +1500,8 @@ Pattern=0DF15F2D0048
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CMessageSetDirection::VFTable]
-Pattern=8B4B48498B06
-Operations=ADD 15, PUSH, READ DWORD, ADD, ADD 4
+Pattern=0D942D4A0048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CMessageSetTrigger::VFTable]
 Pattern=488BFA44894908
@@ -1568,8 +1520,8 @@ Pattern=488901488BF94885DB741B
 Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileAmbiant::VFTable]
-Pattern=C7831004000008000000488903
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05A0423B0044
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileArea::VFTable]
 Pattern=058F413D0048
@@ -1580,20 +1532,20 @@ Pattern=0510033D0048
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileChain::VFTable]
-Pattern=40887C2438488D8BD8030000
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05EF403B0088
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileColorSpray::VFTable]
-Pattern=C744247014000000
-Operations=ADD -16, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05442A3B0033
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileConeOfCold::VFTable]
-Pattern=05C2223D0033
+Pattern=05042E3D0033
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileFall::VFTable]
-Pattern=40887C2438488D8BC8030000
-Operations=ADD -4, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05BC153B0088
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileFireHands::VFTable]
 Pattern=05D3333B0033
@@ -1604,20 +1556,20 @@ Pattern=05AFDB3A0048
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileMulti::VFTable]
-Pattern=0F843D010000498BD7
-Operations=ADD 20, PUSH, READ DWORD, ADD, ADD 4
+Pattern=058E303D00BA
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileMushroom::VFTable]
 Pattern=05C2223D0033
 Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileNewScorcher::VFTable]
-Pattern=488BD84885C00F8480000000
-Operations=ADD 26, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05DCCB3A00C7
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileScorcher::VFTable]
-Pattern=B8050000004889BBF8010000
-Operations=ADD -14, PUSH, READ DWORD, ADD, ADD 4
+Pattern=05460A3B0033
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileSegment::VFTable]
 Pattern=4883EC20410FB7F1
@@ -1636,8 +1588,8 @@ Pattern=48894424284D8BF1
 Operations=ADD 25, PUSH, READ DWORD, ADD, ADD 4
 
 [CProjectileTravelDoor::VFTable]
-Pattern=488D8B18040000
-Operations=ADD -38, PUSH, READ DWORD, ADD, ADD 4
+Pattern=052B383B0048
+Operations=ADD 1, PUSH, READ DWORD, ADD, ADD 4
 
 [CScreenMap::VFTable]
 Pattern=05FE543000BB
@@ -2052,7 +2004,7 @@ Pattern=74034C8B30
 Operations=ADD 37
 
 [CGameSprite::SetCurrAction()-LastCall]
-Pattern=488B6C2450488B7424584883C420415F415E5FC3CCCCCCCCCCCC48
+Pattern=488B5C2448488B6C2450488B7424584883C420415F415E5FC3CCCCCCCCCCCC48
 
 [Hook-CAIGroup::IsPartyLeader()-Override]
 Pattern=4885C0740BB801000000
@@ -2062,34 +2014,29 @@ Operations=ADD -5
 Pattern=0F873F160000
 
 [Hook-CAIObjectType::Decode()-NormalBranch]
-Pattern=488B55D749FFC7
-Operations=ADD 4
+Pattern=49FFC44C8965
 
 [Hook-CAIObjectType::Decode()-ReturnBranch]
-Pattern=488BB424F00000004C8BBC24A0000000
+Pattern=4C8BB424A00000004C8BA424F0
 
 [Hook-CAIObjectType::Decode()-TargetNameOverride]
 Pattern=0F842101000083
 
 [Hook-CAIScript::Construct()-OnCopy1]
-Pattern=488D5708488BCE
-Operations=ADD 7
+Unsupported=1
 
 [Hook-CAIScript::Construct()-OnCopy2]
-Pattern=740E488D5608
-Operations=ADD 9
+Unsupported=1
 
 [Hook-CAIScript::Destruct()-OnDestruct]
 Pattern=75D1488B7C2430
 Operations=ADD 11
 
 [Hook-CAIScript::Read()-OnRead]
-Pattern=4C8D45F7488945D7
-Operations=ADD 27
+Pattern=E8F591350048
 
 [Hook-CChitin::ProcessEvents()-SDL_PollEvent()-1]
-Pattern=4889451F488BF9
-Operations=ADD 11
+Pattern=E8D2B7020085
 
 [Hook-CChitin::ProcessEvents()-SDL_PollEvent()-2]
 Pattern=E8E1AA020085
@@ -2122,10 +2069,10 @@ Pattern=3DC9000000
 Operations=ADD 5
 
 [Hook-CDerivedStats::GetSpellState()-FirstInstruction]
-Pattern=81FA000100007320
+Pattern=8BC2448BC248C1E8054183E01F8B
 
 [Hook-CDerivedStats::SetSpellState()-FirstInstruction]
-Pattern=4C8BC981FA00010000
+Pattern=4C8BC18BC248
 
 [Hook-CDerivedStats::operator_equ()-FirstCall]
 Pattern=E8CFEB0B0048
@@ -2144,12 +2091,10 @@ Pattern=0F87A36C0000
 Pattern=488D15C9044B
 
 [Hook-CGameAIBase::ExecuteAction()-DefaultJmp]
-Pattern=488BCBFF17
-Operations=ADD 31
+Pattern=0F877E580000
 
 [Hook-CGameAIBase::ExecuteAction()-NormalBranch]
-Pattern=6689B3BA040000
-Operations=ADD -5
+Pattern=48895C247066
 
 [Hook-CGameAIBase::SetTrigger()-FirstInstruction]
 Pattern=48895C2418574883EC20488BD9
@@ -2159,8 +2104,7 @@ Pattern=41564883EC30488BF2
 Operations=ADD -12
 
 [Hook-CGameArea::OnActivation()-LastCall]
-Pattern=488BD7488B89E0100000
-Operations=ADD 24
+Pattern=E811F3190048
 
 [Hook-CGameArea::OnDeactivation()-FirstInstruction]
 Pattern=40534883EC20488B8128020000488BD948
@@ -2176,29 +2120,25 @@ Pattern=48895C24104889742418574883EC4044
 Pattern=E876AF150066
 
 [Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrref]
-Pattern=448D7E01BBFFFFFFFF
-Operations=ADD 4
+Unsupported=1
 
 [Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefBody]
-Pattern=4C8B642458EB1B
-Operations=ADD 12
+Unsupported=1
 
 [Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefElse]
-Pattern=448D7E01BBFFFFFFFF
-Operations=ADD 40
+Unsupported=1
 
 [Hook-CGameEffect::CheckAdd()-FixSpellImmunityShouldSkipItemIndexing]
-Pattern=7558498B5500
+Unsupported=1
 
 [Hook-CGameEffect::CheckAdd()-LastProbabilityJmp]
 Pattern=0F82430100008B
 
 [Hook-CGameEffect::CheckAdd()-ProbabilityFailed]
-Pattern=33C0488B8D20010000
+Pattern=33C04C8D5C2450498B5B30
 
 [Hook-CGameEffect::CopyFromBase()-FirstCall]
-Pattern=488BF2488BF94C8BC2
-Operations=ADD 18
+Pattern=E87B9628008B
 
 [Hook-CGameEffect::DecodeEffect()-DefaultJmp]
 Pattern=0F87A04C0000
@@ -2221,8 +2161,7 @@ Pattern=4C8BCF8B5320
 Operations=ADD 9
 
 [Hook-CGameEffectCastSpell::ApplyEffect()-CMessageHandler::AddMessage()]
-Pattern=8B45D8498D8E90000000
-Operations=ADD 51
+Pattern=E8A857060048
 
 [Hook-CGameEffectCastSpellPoint::ApplyEffect()-CMessageHandler::AddMessage()]
 Pattern=E8EC54060048
@@ -2231,12 +2170,10 @@ Pattern=E8EC54060048
 Pattern=E85AC91F0048
 
 [Hook-CGameEffectDamage::ApplyEffect()-OnDone]
-Pattern=448964242041FF92E8000000
-Operations=ADD 23
+Pattern=C7831401000001000000E8
 
 [Hook-CGameEffectDamage::ApplyEffect()-StartingCalculations]
-Pattern=3881F81000007407
-Operations=ADD 56
+Pattern=FF90F800000085C00F8529
 
 [Hook-CGameEffectForceSurge::ApplyEffect()-FirstInstruction]
 Pattern=8B412089821C
@@ -2261,8 +2198,7 @@ Pattern=4889742420574883EC30488BF1488BFA
 Operations=ADD 40
 
 [Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne]
-Pattern=4189B618010000
-Operations=ADD 83
+Pattern=75028BD7488B
 
 [Hook-CGameEffectProtectionCircle::ApplyEffect()-AddTail]
 Pattern=E8BB352B0048
@@ -2275,8 +2211,7 @@ Operations=ADD -43
 Pattern=E8711C2B0048
 
 [Hook-CGameEffectSaveVsDeath::ApplyEffect()-ImmediateSaveWriteOffset]
-Pattern=0F852E0100000FB687AC050000
-Operations=ADD -8
+Unsupported=1
 
 [Hook-CGameEffectSecondaryCastList::ApplyEffect()]
 Pattern=48895C24185556574154415541564157488D6C24D94881EC00010000
@@ -2289,8 +2224,7 @@ Operations=ADD 2
 Pattern=FF50088B9350010000
 
 [Hook-CGameEffectUsability::CheckUsability()-FirstInstruction]
-Pattern=4889442448488B02488BF9
-Operations=ADD -20
+Pattern=48895C2418574883EC70488B0547
 
 [Hook-CGameObjectArray::Clean()-DestructJmp]
 Pattern=6666660F1F840000000000480FBFC2
@@ -2311,8 +2245,7 @@ Operations=ADD 4
 Pattern=E8543EC7FF48
 
 [Hook-CGameSprite::CheckCombatStats()-GetProfBonuses-SaveItem]
-Pattern=48894DEF48894DE7
-Operations=ADD 17
+Pattern=E89A1BE6FFA8
 
 [Hook-CGameSprite::CheckCombatStatsWeapon()-NonZeroWeapProfCall]
 Pattern=E8BF820C0048
@@ -2327,8 +2260,7 @@ Pattern=40555356574155488D6C24D1
 Pattern=48895C2418574883EC20488B05D7
 
 [Hook-CGameSprite::Construct1()-FirstCall]
-Pattern=4889442460488BF1
-Operations=ADD 8
+Pattern=E890FCDAFF48
 
 [Hook-CGameSprite::Construct2()-FirstCall]
 Pattern=E8791DDBFF48
@@ -2337,38 +2269,31 @@ Pattern=E8791DDBFF48
 Pattern=E89EAF0D0048
 
 [Hook-CGameSprite::EquipMostDamagingMelee()-GetProfBonuses-SaveItem]
-Pattern=24024885DB
-Operations=ADD -5
+Pattern=E8395AE1FF24
 
 [Hook-CGameSprite::ExecuteAction()-DefaultJmp]
-Pattern=81F9D7010000
-Operations=ADD 6
+Pattern=0F87BD280000
 
 [Hook-CGameSprite::GetActiveWeaponStyleAndLevel()-GetProfBonuses-SaveItem]
-Pattern=747C483BFD
-Operations=ADD -8
+Pattern=E8DFB4E0FF48
 
 [Hook-CGameSprite::GetMaxDamage()-GetProfBonuses-SaveItem]
-Pattern=03457F8B4DDB
-Operations=ADD -8
+Pattern=E87DCEEDFF44
 
 [Hook-CGameSprite::GetMinDamage()-GetProfBonuses-SaveItem]
 Pattern=E8ECC4EDFF8B
 
 [Hook-CGameSprite::GetRatingWithItem()-CGameSprite::Copy()]
-Pattern=410FB69D283A0000
-Operations=ADD 38
+Pattern=E83E6AFFFF49
 
 [Hook-CGameSprite::GetStatBreakdown()-GetProfBonuses-SaveItem]
 Pattern=E882FFE4FFA8
 
 [Hook-CGameSprite::Hit()-FirstCall]
-Pattern=418BF1488D4DD8
-Operations=ADD 10
+Pattern=E826FB060048
 
 [Hook-CGameSprite::Hit()-FormatRollCall]
-Pattern=488D4DD08D7801
-Operations=ADD 18
+Pattern=E83B0D070048
 
 [Hook-CGameSprite::Hit()-MeleeingWithRangedPenalty]
 Pattern=2BF90FAFC0
@@ -2379,14 +2304,13 @@ Pattern=3843387627
 Operations=ADD 3
 
 [Hook-CGameSprite::Marshal()-CGameEffectList::Marshal()]
-Pattern=41B001EB17
-Operations=ADD 51
+Pattern=E8EF25E3FF48
 
 [Hook-CGameSprite::OneSwing()-GetAttackFrameType()]
 Pattern=FF90980100000FB6D03C
 
 [Hook-CGameSprite::ProcessAI()-BeforeReturn]
-Pattern=4C8BBC24680100004C8BAC2460010000
+Pattern=4C8BBC24580100004C8BB4
 
 [Hook-CGameSprite::ProcessEffectList()-AfterListsResolved-1]
 Pattern=837D8C00
@@ -2424,28 +2348,23 @@ Operations=ADD 3
 Pattern=8B8158B50000440F45
 
 [Hook-CGameSprite::Rest()-OnResetQuickListCounts]
-Pattern=C745A0FFFFFFFF488D55B8
-Operations=ADD 20
+Pattern=E824CC050032
 
 [Hook-CGameSprite::SetCurrAction()-FirstCall]
-Pattern=0FB7978C4E0000
-Operations=ADD -5
+Pattern=E88591CFFF0F
 
 [Hook-CGameSprite::SetCursor()-SetCharacterToolTip()]
-Pattern=80BF38400000FF
-Operations=ADD 63
+Pattern=E879E9FDFF8B
 
 [Hook-CGameSprite::SetVisualRange()-FirstInstruction]
 Pattern=488974242041564883EC40
 Operations=ADD -5
 
 [Hook-CGameSprite::Spell()-ApplyCastingEffect()]
-Pattern=E9C40F0000
-Operations=ADD 34
+Pattern=E81BE5FCFF48
 
 [Hook-CGameSprite::Spell()-CheckDirectionJmp]
-Pattern=663BF8745B
-Operations=ADD 3
+Pattern=74604C3BFB74
 
 [Hook-CGameSprite::SpellPoint()-ApplyCastingEffect()]
 Pattern=E800B0FCFF48
@@ -2454,20 +2373,16 @@ Pattern=E800B0FCFF48
 Pattern=7455B918000000E8D7
 
 [Hook-CGameSprite::Swing()-CGameSprite::Damage()-1]
-Pattern=498D5730488B742470
-Operations=ADD 55
+Pattern=E8FC0FFDFF48
 
 [Hook-CGameSprite::Swing()-CGameSprite::Damage()-2]
-Pattern=498D57304C8B442470
-Operations=ADD 49
+Pattern=E88A0DFDFFB9
 
 [Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Melee]
-Pattern=0F85B5070000
-Operations=ADD -7
+Pattern=E8457EDEFF85
 
 [Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Ranged]
-Pattern=4D8D6F0CE95E010000
-Operations=ADD 36
+Pattern=E82982DEFF85
 
 [Hook-CGameSprite::Swing()-GetAttackFrameType()]
 Pattern=FF90980100000FB6D041
@@ -2476,15 +2391,13 @@ Pattern=FF90980100000FB6D041
 Pattern=4C8BC7498BD4488BCBE8
 
 [Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-1]
-Pattern=FFC63B770C
-Operations=ADD 62
+Pattern=E82532D7FF0F
 
 [Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-2]
 Pattern=E8362BD7FF48
 
 [Hook-CGameSprite::Unmarshal()-CGameEffectList::Unmarshal()]
-Pattern=0FB6838B050000
-Operations=ADD 65
+Pattern=E851B8E1FF44
 
 [Hook-CGameSprite::WildSpell()-CGameSprite::Feedback()]
 Pattern=E88724FDFF48
@@ -2509,7 +2422,7 @@ Pattern=418D4D37
 Operations=ADD 4
 
 [Hook-CGameText::Render()-FirstInstruction]
-Pattern=40574881ECB0000000
+Pattern=405553488D6C24B14881ECF8
 
 [Hook-CImmunitiesEffect::OnList()-Entry]
 Pattern=488B7108488BFA4885F6
@@ -2519,8 +2432,7 @@ Operations=ADD -15
 Pattern=488B88C81000007402
 
 [Hook-CInfButtonArray::SetState()-CInfButtonArray::UpdateButtons()]
-Pattern=41C786B01F0000640000004533FF
-Operations=ADD 154
+Pattern=E86C02000048
 
 [Hook-CInfButtonArray::SetState()-SaveArg]
 Pattern=E8BFD91B0041
@@ -2542,16 +2454,13 @@ Operations=ADD 14
 Pattern=48895C241855565741564157488BEC4883EC30
 
 [Hook-CInfinity::FitViewPosition()-FirstInstruction]
-Pattern=4D894B20534154
-Operations=ADD -3
+Pattern=488BC453574881
 
 [Hook-CInfinity::Render()-HandleScreenShakeJmp]
-Pattern=83BB6C040000000F84FE000000
-Operations=ADD 40
+Pattern=0F853201000044
 
 [Hook-CInfinity::Render()-HandleScreenShakePostJmp]
-Pattern=80B9A43F000000747B
-Operations=ADD 16
+Pattern=0F85800000008B83
 
 [Hook-CInfinity::Scroll()-FirstInstruction]
 Pattern=4889542410555356574154415541564157488BEC
@@ -2560,8 +2469,7 @@ Pattern=4889542410555356574154415541564157488BEC
 Pattern=8991240400004C
 
 [Hook-CInfinity::SetScrollDest()-FirstInstruction]
-Pattern=488BD948898100030000
-Operations=ADD -9
+Pattern=48895C2410574883EC20488B0517
 
 [Hook-CItem::GetUsabilityText()-IsOp319InvertedJmp]
 Pattern=4183BC2488000000000F84A4000000
@@ -2572,7 +2480,7 @@ Pattern=84C00F855E020000
 Operations=ADD -22
 
 [Hook-CProjectile::DecodeProjectile()-LastCall]
-Pattern=E8A611230048
+Pattern=E83618200048
 
 [Hook-CRuleTables::Construct()-CHECK_MODE-ConvertStrToInt]
 Pattern=E8D1432F0048
@@ -2582,8 +2490,7 @@ Pattern=48897C241055488BEC4883EC30
 Operations=ADD -5
 
 [Hook-CRuleTables::IsProtectedFromSpell()-CompareStatCall]
-Pattern=E94BFAFFFF83BFA44E000000
-Operations=ADD 48
+Pattern=E83CEAFEFFE9
 
 [Hook-CScreenMap::CenterViewPort()-FirstInstruction]
 Pattern=4889442458488B02
@@ -2603,8 +2510,7 @@ Pattern=405355564883EC30C7
 Pattern=E8BE05100033
 
 [Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp]
-Pattern=0F85BE00000083BECC00000000
-Operations=ADD 13
+Pattern=74AA4881C3D8
 
 [Hook-CScreenWorld::OnKeyDown()-ThievingHotkeyPressSpecialAbilitiesCall]
 Pattern=E89B89F6FFBA
@@ -2635,8 +2541,7 @@ Operations=ADD -12
 Pattern=488BC4535556574154
 
 [Hook-CVisibilityMap::Destruct()-FirstInstruction]
-Pattern=4883EC20488B4168
-Operations=ADD -11
+Pattern=40564883EC204883
 
 [Hook-CVisibilityMap::IsCharacterIdOnMap()-FirstInstruction]
 Pattern=33C04C0FBFC0
@@ -2670,16 +2575,14 @@ Operations=ADD -100
 ExeSwitch=1
 
 [Hook-RenderListCallback()-drawItem()]
-Pattern=448BCB4C896C2420
-Operations=ADD 27
+Pattern=E88A3B000048
 
 [Hook-SDL_main()-CBaldurChitin::Init()]
 Pattern=4885C0740D4C8BC3
 Operations=ADD 28
 
 [Hook-SDL_main()-CLUAConsole::LuaInit()]
-Pattern=C7804010000001000000
-Operations=ADD 10
+Pattern=E864130E0048
 
 [Hook-WinMain$filt$0-FirstInstruction]
 Pattern=488D6A20
@@ -2705,23 +2608,19 @@ Pattern=899160050000
 Operations=ADD 19
 
 [Hook-dimmInit()-uiLoadFunctions()]
-Pattern=488B18EB03
-Operations=ADD 67
+Pattern=E88DCBFCFF48
 
 [Hook-dimmInit()-uiLoadMenu()]
 ExeSwitch=1
 
 [Hook-dimmInit-uiDoFile()]
-Pattern=488B18EB03
-Operations=ADD 79
+Pattern=E8D1B1FCFF48
 
 [Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad]
-Pattern=48F7DB418BFC
-Operations=ADD 8
+Pattern=83E112442BC1
 
 [Hook-drawItem()-FixForcedScrollbarDivideByZero1]
-Pattern=8B4DC88B45C0
-Operations=ADD 66
+Pattern=418B85CC0100
 
 [Hook-drawTop()-HandleTransitionMenuFadeJmp]
 Pattern=0F8EEB000000B9
@@ -3110,8 +3009,7 @@ Pattern=488B4B1041B90C000000
 Operations=ADD -61
 
 [luaopen_coroutine]
-Pattern=0F849A000000488BD0
-Operations=ADD -165, PUSH, READ DWORD, ADD, ADD 4
+Unsupported=1
 
 [luaopen_debug]
 Pattern=488B4B1041B910000000

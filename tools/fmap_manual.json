@@ -1,0 +1,14 @@
+{
+"0x22bf00": [
+"0x27c4a0",
+"manual(DecodeProjectile: same call sites, PT adds 2 args)"
+],
+"0x3baf00": [
+"0x436690",
+"manual(UseItem, whole 0.74)"
+],
+"0x3bc000": [
+"0x437b90",
+"manual(UseItemPoint, whole 0.80)"
+]
+}

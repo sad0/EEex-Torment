@@ -12,5 +12,477 @@
  "lua_resume": {
   "unsupported": true,
   "note": "Lua coroutine library stripped from Torment.exe (string \"cannot resume non-suspended coroutine\" absent)"
+ },
+ "CProjectileAmbiant::VFTable": {
+  "data_target": "0x630c40",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileChain::VFTable": {
+  "data_target": "0x630d90",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileColorSpray::VFTable": {
+  "data_target": "0x62f940",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileFall::VFTable": {
+  "data_target": "0x62ff48",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileMulti::VFTable": {
+  "data_target": "0x630400",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileNewScorcher::VFTable": {
+  "data_target": "0x62f628",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileScorcher::VFTable": {
+  "data_target": "0x62f4a8",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "CProjectileSkyStrikeBAM::VFTable": {
+  "data_target": "0x630f10",
+  "method": "vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "conf": "medium",
+  "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x17ec80",
+  "method": "review: call DecodeProjectile + identical tail",
+  "conf": "high"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr": {
+  "addr": "0x17eeeb",
+  "method": "review: [rsi+0x1c]!=0 branch",
+  "conf": "medium",
+  "note": "PT tail-merges both AddEffect branches (BG RetPtr and RetPtr-2) into one virtual call: both labels share 0x17eeeb"
+ },
+ "Data-CGameAIBase::ForceSpell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x17fe68",
+  "method": "review: return of call DecodeProjectile",
+  "conf": "high"
+ },
+ "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-2": {
+  "addr": "0x3d2588",
+  "method": "review: inside mapped LoadProjectile (PT 0x3d2260), flag-switch AddEffect branch",
+  "conf": "medium",
+  "note": "AddEffect called virtually in PT"
+ },
+ "Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x42da51",
+  "method": "review: return of call DecodeProjectile",
+  "conf": "high"
+ },
+ "Data-CGameSprite::SpellPoint()-CProjectile::AddEffect()-RetPtr": {
+  "addr": "0x431231",
+  "method": "review: AddEffect branch inside mapped SpellPoint (PT 0x42f770)",
+  "conf": "medium",
+  "note": "AddEffect called virtually in PT"
+ },
+ "Data-CGameSprite::SpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x430f2a",
+  "method": "review: return of call DecodeProjectile",
+  "conf": "high"
+ },
+ "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-2": {
+  "addr": "0x434196",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "medium",
+  "note": "PT Swing has the 3 DecodeProjectile calls in a different order; matched by context (stores r14 first, then tests byte +0x48c0)"
+ },
+ "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-3": {
+  "addr": "0x433f48",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "medium",
+  "note": "matched by context (test rax / je after store)"
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x437644",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "high",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr": {
+  "addr": "0x437780",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "medium",
+  "note": "AddEffect called virtually in PT"
+ },
+ "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr-2": {
+  "addr": "0x4377a5",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "medium",
+  "note": "AddEffect called virtually in PT"
+ },
+ "Data-CGameSprite::UseItemPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x438432",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "high",
+  "note": ""
+ },
+ "Data-CGameSprite::UseItemPoint()-CProjectile::AddEffect()-RetPtr": {
+  "addr": "0x438528",
+  "method": "review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "conf": "medium",
+  "note": "AddEffect called virtually in PT"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-2": {
+  "addr": "0x27cd42",
+  "method": "review: recursive DecodeProjectile call, identical tail",
+  "conf": "high"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-3": {
+  "addr": "0x2829f3",
+  "method": "review: recursive DecodeProjectile + CObList::AddTail",
+  "conf": "high"
+ },
+ "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr": {
+  "unsupported": true,
+  "note": "BG decodes Multi Magic Missile sub-projectiles (type 0x25) recursively; PT DecodeProjectile has only 2 recursive calls (RetPtr-2/-3), no 0x25 sub-decode. EEex_Projectile.lua must guard this label"
+ },
+ "Data-CProjectileArea::CreateSecondary()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x27c360",
+  "method": "review: link order (fn 0x27c320 directly precedes DecodeProjectile, as BG 0x22bdc0) + identical tail",
+  "conf": "medium",
+  "note": "PT has a near-identical sibling at 0x27bfa0 (PST addition)"
+ },
+ "Data-CProjectileArea::Explode()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x283a49",
+  "method": "review: return of DecodeProjectile in mapped Explode fragment",
+  "conf": "medium"
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrref": {
+  "unsupported": true,
+  "note": "EEex v2.6.6.0 bug-fix hook; PT CheckAdd (0x1eba60) has no spell-immunity strref/item-indexing block (0xf00074/0xf00080 only appear in PT fn 0x1d3080, which checks source type before item indexing). Fix not applicable; EEex_Fix_Patch.lua must skip it"
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefBody": {
+  "unsupported": true,
+  "note": "EEex v2.6.6.0 bug-fix hook; PT CheckAdd (0x1eba60) has no spell-immunity strref/item-indexing block (0xf00074/0xf00080 only appear in PT fn 0x1d3080, which checks source type before item indexing). Fix not applicable; EEex_Fix_Patch.lua must skip it"
+ },
+ "Hook-CGameEffect::CheckAdd()-FixShouldTransformSpellImmunityStrrefElse": {
+  "unsupported": true,
+  "note": "EEex v2.6.6.0 bug-fix hook; PT CheckAdd (0x1eba60) has no spell-immunity strref/item-indexing block (0xf00074/0xf00080 only appear in PT fn 0x1d3080, which checks source type before item indexing). Fix not applicable; EEex_Fix_Patch.lua must skip it"
+ },
+ "Hook-CGameEffect::CheckAdd()-FixSpellImmunityShouldSkipItemIndexing": {
+  "unsupported": true,
+  "note": "EEex v2.6.6.0 bug-fix hook; PT CheckAdd (0x1eba60) has no spell-immunity strref/item-indexing block (0xf00074/0xf00080 only appear in PT fn 0x1d3080, which checks source type before item indexing). Fix not applicable; EEex_Fix_Patch.lua must skip it"
+ },
+ "Hook-CGameAIBase::ExecuteAction()-DefaultJmp": {
+  "addr": "0x16c99c",
+  "method": "review: ja default of 0x1d5-case switch",
+  "conf": "high",
+  "note": "action switch on [rdi+0x3f0] (BG [rbx+0x3f8]); register allocation differs, hook asm must be adapted in phase 5"
+ },
+ "Hook-CGameAIBase::ExecuteAction()-NormalBranch": {
+  "addr": "0x172234",
+  "method": "review: common exit after \"Error: Action number\" block",
+  "conf": "high",
+  "note": "PT: si/ebx instead of si/r13; check hook asm in phase 5"
+ },
+ "Hook-CAIObjectType::Decode()-NormalBranch": {
+  "addr": "0x12ae55",
+  "method": "review: loop increment inc r12 / cmp 5 (BG inc r15)",
+  "conf": "medium",
+  "note": "loop counter register r12 in PT (BG r15)"
+ },
+ "Hook-CAIScript::Construct()-OnCopy1": {
+  "unsupported": true,
+  "note": "PT CAIScript::Construct (0x176d80) has no script-cache lookup/copy path (BG 0x24be90/0x11faa0); it always parses via CAIScript::Read, so the OnCopy hooks have no equivalent (OnRead covers it)"
+ },
+ "Hook-CAIScript::Construct()-OnCopy2": {
+  "unsupported": true,
+  "note": "PT CAIScript::Construct (0x176d80) has no script-cache lookup/copy path (BG 0x24be90/0x11faa0); it always parses via CAIScript::Read, so the OnCopy hooks have no equivalent (OnRead covers it)"
+ },
+ "Hook-CGameEffectDamage::ApplyEffect()-OnDone": {
+  "addr": "0x1cc5fa",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "PT stores constant 1 to +0x114 (BG r12d) and the vcall slot is 0xf0 (BG 0xe8); hook asm/restore size to be checked in phase 5"
+ },
+ "Hook-CGameEffectForceSurge::ApplyEffect()-FirstInstruction": {
+  "addr": "0x1cf460",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "identical 5-insn function (+0x121c field)"
+ },
+ "Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne": {
+  "addr": "0x1d95b5",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": ""
+ },
+ "Hook-CGameSprite::Construct1()-FirstCall": {
+  "addr": "0x3b2aeb",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": ""
+ },
+ "Hook-CGameSprite::ExecuteAction()-DefaultJmp": {
+  "addr": "0x40bd90",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "0x1d7-case switch"
+ },
+ "Hook-CGameSprite::Hit()-FirstCall": {
+  "addr": "0x414805",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "first call = CString::Construct(char*)"
+ },
+ "Hook-CGameSprite::Rest()-OnResetQuickListCounts": {
+  "addr": "0x429997",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": ""
+ },
+ "Hook-CGameSprite::SetCurrAction()-FirstCall": {
+  "addr": "0x42b806",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "call CAIAction::operator="
+ },
+ "Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Melee": {
+  "addr": "0x434296",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": ""
+ },
+ "Hook-CGameSprite::EquipMostDamagingMelee()-GetProfBonuses-SaveItem": {
+  "addr": "0x408e72",
+  "method": "review: CItem::Demand + item-flags call in mapped fn (PT 0x408c30)",
+  "conf": "high",
+  "note": "item pointer is in rsi in PT (BG rdi): EEex_Sprite_Patch.lua hook body must use rsi"
+ },
+ "Hook-CGameEffectSaveVsDeath::ApplyEffect()-ImmediateSaveWriteOffset": {
+  "unsupported": true,
+  "note": "EEex fix for BG v2.5+ op33 bug (sub [rdi+1136h]); PT op33 is a different 6-case implementation without that write, bug absent"
+ },
+ "Hook-CGameArea::OnActivation()-LastCall": {
+  "addr": "0x19d3ca",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "BG ends with tail jmp to fn (PT 0x33c6e0); PT calls it with a normal call and continues: EEex_UncapFPS_Patch.lua uses HookRelativeJump here, must become a call hook in phase 5"
+ },
+ "Hook-CGameText::Render()-FirstInstruction": {
+  "addr": "0x215600",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "function start (fmap link-order 0.72)"
+ },
+ "Hook-CInfButtonArray::SetState()-CInfButtonArray::UpdateButtons()": {
+  "addr": "0x2ca37f",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "last call of SetState -> UpdateButtons"
+ },
+ "Hook-CInfinity::Render()-HandleScreenShakeJmp": {
+  "addr": "0x307908",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "PT compares preloaded eax (screen-shake counter at +0xcf78) instead of cmp [rcx+0x9690]"
+ },
+ "Hook-CInfinity::Render()-HandleScreenShakePostJmp": {
+  "addr": "0x307a88",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": "same flag pair (+0x7824 byte / +0xcf78) as BG (+0x3fa4/+0x9690)"
+ },
+ "Hook-CRuleTables::IsProtectedFromSpell()-CompareStatCall": {
+  "addr": "0x2ab3df",
+  "method": "review: BG/PT context side by side",
+  "conf": "high",
+  "note": ""
+ },
+ "Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad": {
+  "addr": "0x4504cf",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "PT pad is 0x12 (BG 0x10) and uses ecx/r8d instead of eax/[rbp-0x18]: hook asm must be adapted"
+ },
+ "Hook-drawItem()-FixForcedScrollbarDivideByZero1": {
+  "addr": "0x450fbe",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium",
+  "note": "same scrollbar math, item ptr in r13 (BG r15), offsets +0x1cc/+0x1c0 (BG +0x1a4/+0x198)"
+ },
+ "CDerivedStats::GetCriticalValue": {
+  "addr": "0x1601b0",
+  "method": "review: call sites / link order / context",
+  "conf": "medium",
+  "note": "same list walk (+0xc60 in PT, BG +0xc58) with PST additions"
+ },
+ "CGameSprite::ShouldAvertCriticalHit": {
+  "addr": "0x42be60",
+  "method": "review: call sites / link order / context",
+  "conf": "medium",
+  "note": "link order (between mapped neighbours) + only caller maps here; body heavily modified by PST"
+ },
+ "CRuleTables::MapCharacterSpecializationToSchool": {
+  "addr": "0x2ab690",
+  "method": "review: call sites / link order / context",
+  "conf": "medium",
+  "note": "same switch shape; PT compares 0x400 (BG 0x800): PST school bits differ"
+ },
+ "CSearchBitmap::GetStructureHeight": {
+  "addr": "0x2ae2f0",
+  "method": "review: call sites / link order / context",
+  "conf": "high",
+  "note": "identical code (xor eax,eax / test dx,dx / cmp 0xa / 0xd)"
+ },
+ "CGameDialogSprite::EndDialog": {
+  "addr": "0x1ad730",
+  "method": "review: call sites / link order / context",
+  "conf": "medium",
+  "note": "all 4 mapped call sites resolve here; PT inlines extra cleanup after the same +0x54/+0x58 stores"
+ },
+ "drawLetters": {
+  "addr": "0x4c8d00",
+  "method": "review: call sites / link order / context",
+  "conf": "high",
+  "note": "3/3 call sites (exact local alignment)"
+ },
+ "uiHandleTooltip": {
+  "addr": "0x457d40",
+  "method": "review: call sites / link order / context",
+  "conf": "medium",
+  "note": "link order between mapped neighbours (PT 0x457d20/0x458020); tooltip text global 0x7b8340, PST-extended body"
+ },
+ "CAIAction::Destruct": {
+  "target": "0x4843c0",
+  "method": "review: call sites",
+  "conf": "medium",
+  "note": "PT folds CAIAction::Destruct into CString::Destruct (ICF): both mapped call sites call 0x4843c0. Same address as CString::Destruct"
+ },
+ "luaopen_table": {
+  "target": "0xebad0",
+  "method": "review: luaL_requiref(L,\"table\",luaopen_table) in PT Lua init (0x144420)",
+  "conf": "high"
+ },
+ "luaopen_coroutine": {
+  "unsupported": true,
+  "note": "coroutine library stripped from Torment.exe (no \"coroutine\" string, not opened in Lua init 0x144420)"
+ },
+ "fingerDown": {
+  "data_target": "0x7b832b",
+  "method": "review: SDL_FINGERDOWN/UP (0x700/0x701) handler in eventMenu (PT 0x45282b)",
+  "conf": "high"
+ },
+ "tooltip": {
+  "data_target": "0x7b8330",
+  "method": "review: 0x400 branch of eventMenu stores the same tooltip globals (BG 0x717af0.. -> PT 0x7b8330..)",
+  "conf": "high",
+  "note": "consistent with uiHandleTooltip reading tooltip text at +0x10 (PT 0x7b8340)"
+ },
+ "glGetUniformLocation": {
+  "data_target": "0x37f5d90",
+  "method": "review: shader uniform setup (uTex/uTex2/...) calls through the same pointer",
+  "conf": "high",
+  "note": "offset to gl (0x37f5e20) is 0x90 as in BG"
+ },
+ "glUniform1i": {
+  "data_target": "0x37f5da8",
+  "method": "review: same shader init tail (xor edx,edx / mov edx,1 calls)",
+  "conf": "high"
+ },
+ "Data-CInfButtonArray::SetState()-IndirectJumpTable": {
+  "addr": "0x2ca438",
+  "method": "review: byte index table of the SetState switch (movzx eax, byte [rdx+rax+0x2ca438] at 0x2c8ae4)",
+  "conf": "high",
+  "note": "case values/count differ from BG (PST action bar): EEex_Actionbar_Patch.lua indexing must be revalidated in phase 5"
+ },
+ "Data-CGameSprite::UpdateAOE()-CProjectile::DecodeProjectile()-RetPtr": {
+  "unsupported": true,
+  "note": "BG CGameSprite::UpdateAOE (0x37d4b0) has no PT counterpart: the link-order gap between its mapped neighbours (PT 0x3f0540/0x3f05c0) holds no such function and no DecodeProjectile call. EEex_Projectile.lua must guard this label"
+ },
+ "Hardcoded_luaL_openlibs": {
+  "unsupported": true,
+  "note": "Unsupported upstream too (EE engines open Lua libs one by one; no luaL_openlibs)"
+ },
+ "CGameSprite::SpellPoint": {
+  "addr": "0x42f770",
+  "method": "review: function start (old pattern hit +5, inside prologue)",
+  "conf": "high"
+ },
+ "CDerivedStats::GetAtOffset": {
+  "addr": "0x15f1f0",
+  "method": "review: function start (PT adds sub rsp,0x38 before the same 0xc9-case switch; old pattern hit +4)",
+  "conf": "high"
+ },
+ "CGameSprite::SetCurrAction()-LastCall": {
+  "addr": "0x42bbd1",
+  "method": "review: end of SetCurrAction body",
+  "conf": "low",
+  "note": "BG last call is CString::Destruct of a local; PT has no CString local, so no call exists: label points at the epilogue start. EEex_Action_Patch.lua HookAfterCall must be replaced by a restore-style hook in phase 5"
+ },
+ "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr-2": {
+  "addr": "0x17eeeb",
+  "method": "review: AddEffect branch before ApplyEffectToParty branch",
+  "conf": "high",
+  "note": "shared with RetPtr (tail-merged in PT)"
+ },
+ "CGameSprite::GetKitMask": {
+  "addr": "0x413480",
+  "method": "review: caller vote",
+  "conf": "high",
+  "note": "32/32 mapped call sites call 0x413480 (PT adds an early-out on 0x7cb718==3); old pattern hit sibling 0x4133d0"
+ },
+ "CGameSprite::GetQuickButtons": {
+  "addr": "0x3c98d0",
+  "method": "review: caller vote",
+  "conf": "high",
+  "note": "3/3 call sites; same body (old pattern hit 0x1c0230, an unrelated function)"
+ },
+ "CRuleTables::IsProtectedFromSpell": {
+  "addr": "0x2aabf0",
+  "method": "review: caller vote",
+  "conf": "high",
+  "note": "7/7 call sites; contains the CompareStatCall hook site"
+ },
+ "CProjectile::DecodeProjectile": {
+  "addr": "0x27c4a0",
+  "method": "review: caller vote",
+  "conf": "high",
+  "note": "16/16 call sites; PT adds 2 args (r8d,r9d)"
+ },
+ "Hook-CProjectile::DecodeProjectile()-LastCall": {
+  "addr": "0x282b85",
+  "method": "review: last CString::Destruct before the epilogue of PT DecodeProjectile (0x27c4a0)",
+  "conf": "medium",
+  "note": "projectile return value is in rsi in PT (BG rbx): hook body must be adapted; old pattern pointed into unrelated fn 0x2508a0"
+ },
+ "CVidBitmap::Destruct": {
+  "addr": "0x497ed0",
+  "method": "review: BG/PT context side by side",
+  "conf": "medium"
+ },
+ "Hook-CGameEffect::CopyFromBase()-FirstCall": {
+  "addr": "0x1fce60",
+  "method": "review: BG/PT context side by side",
+  "conf": "high"
+ },
+ "Hook-CGameEffectCastSpellPoint::ApplyEffect()-CMessageHandler::AddMessage()": {
+  "addr": "0x1c2e9f",
+  "method": "review: BG/PT context side by side",
+  "conf": "high"
+ },
+ "CGameObject::InControl": {
+  "addr": "0x3d0e60",
+  "method": "review: BG/PT context side by side",
+  "conf": "high"
  }
 }

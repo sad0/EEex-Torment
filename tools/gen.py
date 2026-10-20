@@ -108,6 +108,58 @@ def bg_final(n):
         return None
 
 
+FMR = json.load(open('fmap_ratio.json')) if os.path.exists('fmap_ratio.json') else {}
+
+
+def fn_conflict(n, site):
+    """PT function expected from fmap for the BG function holding the key, if site is elsewhere."""
+    bk = BG_KEY.get(n)
+    if bk is None:
+        return None
+    bp = BGPE.rfunc(bk); bp = bp[0] if bp else BGPE.fstart(bk)
+    if bp not in FM or bp == bk or FMR.get(hex(bp), 1) < 0.5:
+        return None
+    pp = PT.rfunc(site); pp = pp[0] if pp else PT.fstart(site)
+    return hex(FM[bp]) if pp != FM[bp] else None
+
+
+def data_sites(n, t):
+    """PT .text sites whose RIP-relative disp32 targets t with the instruction tail upstream ops expect."""
+    import numpy as np
+    ops = upentry(n).get('Operations', '')
+    m = re.search(r'READ DWORD, ADD, ADD (\d+)((?:, ADD -?\d+)*)$', ops)
+    tail = int(m.group(1)) if m else 4
+    extra = sum(int(x) for x in re.findall(r', ADD (-?\d+)', m.group(2))) if m else 0
+    a = np.frombuffer(PT.text, dtype=np.uint8).astype(np.int64)
+    x = a[:-3] | (a[1:-2] << 8) | (a[2:-1] << 16) | (a[3:] << 24)
+    x = np.where(x >= 2**31, x - 2**32, x)
+    pos = np.arange(len(x)) + PT.tva
+    out = []
+    for p in pos[(pos + tail + x) == t - extra][:16]:
+        if field_at(PT, int(p)):
+            out.append(int(p))
+    return out
+
+
+def local_ok(l):
+    """Confidence for a local.py result, or None if not acceptable."""
+    if not l or 'addr' not in l:
+        return None
+    how = l['how']
+    fm = 'high' if how.startswith('fmap') and False else 'medium'
+    if 'call-anchor(unique)' in how or 'call-anchor(ordinal' in how:
+        return 'medium'
+    if how.startswith('anchor2'):
+        return 'medium'
+    if 'call-anchor(ctx' in how:
+        return 'low'
+    if l.get('ratio') is None:  # function start mapped through fmap / callers
+        return 'medium'
+    if isinstance(l.get('ratio'), float) and l['ratio'] >= 0.7 and l['ratio'] - l.get('second', 0) >= 0.15:
+        return 'low'
+    return None
+
+
 def final_of(e):
     """Final value an entry resolves to in Torment (first match + Operations), or None."""
     if not e or not e.get('Pattern') or e.get('Unsupported') == '1':
@@ -144,6 +196,8 @@ def write_db(changes):
 if __name__ == '__main__':
     X = json.load(open('final.json'))
     M = json.load(open('manual.json')) if os.path.exists('manual.json') else {}
+    L = json.load(open('local.json')) if os.path.exists('local.json') else {}
+    GX = json.load(open('gxref.json')) if os.path.exists('gxref.json') else {}
     DB = parse_db(PT_DB)
     changes, report = {}, {}
     for n, v in X.items():
@@ -153,42 +207,68 @@ if __name__ == '__main__':
             changes[ptname(n)] = {'Unsupported': '1'}
             rep.update(status='unsupported', method='manual', conf='-', note=src.get('note', ''))
             report[n] = rep; continue
-        if src:
-            key = int(src['addr'], 16); method = 'manual: ' + src.get('method', 'ghidra'); conf = src.get('conf', 'medium')
-            note = src.get('note', '')
-        elif v['result'] == 'ok':
-            key = int(v['addr'], 16); method = '+'.join(sorted(set(w.split('(')[0] for w in v['methods']))); conf = v['conf']; note = ''
-        else:
-            rep.update(status='unresolved', method='-', conf='-', note=v.get('why') or v.get('align_note') or '')
-            report[n] = rep; continue
-        delta = 0
+        cands = []
+        if src and src.get('data_target'):
+            for site in data_sites(n, int(src['data_target'], 16)):
+                cands.append((site, 'manual: ' + src.get('method', 'ghidra'), src.get('conf', 'medium'), src.get('note', ''), 'site'))
+        if src and src.get('addr'):
+            cands.append((int(src['addr'], 16), 'manual: ' + src.get('method', 'ghidra'), src.get('conf', 'medium'), src.get('note', ''), True))
+        if not src:
+            gx = GX.get(n)
+            if gx and gx.get('votes') and gx.get('sites'):
+                t, c = gx['votes'][0]; tot = sum(x[1] for x in gx['votes'])
+                if c >= 3 and c >= 0.8 * tot:  # strong global-reference vote outranks local evidence
+                    for site in gx['sites']:
+                        cands.append((int(site, 16), f'gxref({c}/{gx["refs"]})', 'high' if c >= 10 else 'medium', '', 'site'))
+            if v['result'] == 'ok':
+                cands.append((int(v['addr'], 16), '+'.join(sorted(set(w.split('(')[0] for w in v['methods']))), v['conf'], '', False))
+            if local_ok(L.get(n)):
+                l = L[n]; cands.append((int(l['addr'], 16), 'local: ' + l['how'], local_ok(l), '', False))
         kind = v.get('kind') or classify(upentry(n).get('Operations', ''))[0]
-        if kind in 'BC':
-            fs = field_site(n, key)
-            if fs is None:
-                rep.update(status='unresolved', method=method, conf=conf, note='no matching rel32/imm field near key', addr=hex(key)); report[n] = rep; continue
-            key, delta = fs
-        e = make(n, key, delta)
-        if not e:
-            rep.update(status='unresolved', method=method, conf=conf, note='no unique pattern'); report[n] = rep; continue
-        fin = final_of(e)
-        cur = resolve_cur(n)
-        # sanity: final value must live in the same kind of section as in BG, and agree with fmap
-        bgfin = bg_final(n)
-        why = None
-        if bgfin is not None and sec_of(BGPE, bgfin) != sec_of(PT, fin):
-            why = f'section mismatch BG {sec_of(BGPE, bgfin)} vs PT {sec_of(PT, fin)}'
-        elif bgfin is not None and bgfin != BG_KEY.get(n) and bgfin in FM and FM[bgfin] != fin and not src:
-            why = f'fmap says callee {hex(FM[bgfin])}'
-        if why:
-            rep.update(status='unresolved', method=method, conf=conf, note=why, addr=hex(fin)); report[n] = rep; continue
-        rep.update(status='ported', method=method, conf=conf, note=note, addr=hex(fin))
-        if cur == fin:
-            rep['method'] += ' (db pattern kept)'
-        else:
-            if cur is not None:
-                rep['replaced'] = hex(cur)
-            changes[ptname(n)] = e
+        last = v.get('why') or v.get('align_note') or ''
+        done = False
+        for key, method, conf, note, forced in cands:
+            delta = 0
+            if forced == 'site':
+                fa = field_at(PT, key)
+                if not fa:
+                    continue
+                delta = fa[0][0]
+            elif kind in 'BC':
+                fs = field_site(n, key)
+                if fs is None:
+                    last = f'{method}: no matching rel32/imm field near {hex(key)}'; continue
+                key, delta = fs
+            e = make(n, key, delta)
+            if not e:
+                last = f'{method}: no unique pattern'; continue
+            fin = final_of(e)
+            bgfin = bg_final(n)
+            why = None
+            if bgfin is not None and sec_of(BGPE, bgfin) != sec_of(PT, fin):
+                why = f'section mismatch BG {sec_of(BGPE, bgfin)} vs PT {sec_of(PT, fin)}'
+            elif forced == 'site' and int((src or {}).get('data_target') or GX[n]['votes'][0][0], 16) != fin:
+                why = f'gxref site resolves {hex(fin)}'
+            elif not forced and bgfin is not None and bgfin != BG_KEY.get(n) and bgfin in FM and FM[bgfin] != fin:
+                why = f'fmap says callee {hex(FM[bgfin])}'
+            elif forced is not True and forced != 'site' and fn_conflict(n, key):
+                why = f'site {hex(key)} outside mapped PT function {fn_conflict(n, key)}'
+            if why:
+                last = f'{method}: {why}'; continue
+            cur = resolve_cur(n)
+            rep.update(status='ported', method=method, conf=conf, note=note, addr=hex(fin), site=hex(key))
+            if cur == fin:
+                rep['method'] += ' (db pattern kept)'
+            else:
+                if cur is not None:
+                    rep['replaced'] = hex(cur)
+                changes[ptname(n)] = e
+            done = True
+            break
+        if not done:
+            rep.update(status='unresolved', method='-', conf='-', note=last)
+            if 'outside mapped PT function' in last:
+                rep['fnconflict'] = True
         report[n] = rep
     # post-pass: unresolved rel32 entries whose BG target is a mapped function -> direct pattern
     for n, rep in report.items():

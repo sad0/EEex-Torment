@@ -50,9 +50,13 @@ def main():
         if len(l) == 1 and len(ps.get(s, ())) == 1:
             known[l[0]] = ps[s][0]; meth[l[0]] = 'sig'
     print('seeds', len(known))
-    # propagation through call sites of mapped functions
+    propagate(known, meth, dict(known))
+    json.dump({hex(k): [hex(v), meth[k]] for k, v in known.items()}, open('fmap.json', 'w'), indent=0)
+
+
+def propagate(known, meth, todo, tag='prop'):
+    """Map callees through exactly-aligned call sites of mapped functions (in place)."""
     votes = collections.defaultdict(collections.Counter)
-    todo = dict(known)
     for it in range(12):
         new = {}
         for f, g in list(todo.items()):
@@ -76,12 +80,11 @@ def main():
             if n >= 1 and n > 2 * n2 and c not in used:
                 new[t] = c; used[c] += 1
         for t, c in new.items():
-            known[t] = c; meth[t] = f'prop{it}'
+            known[t] = c; meth[t] = f'{tag}{it}'
         todo = new
         print('iter', it, 'new', len(new), 'total', len(known))
         if not new:
             break
-    json.dump({hex(k): [hex(v), meth[k]] for k, v in known.items()}, open('fmap.json', 'w'), indent=0)
 
 
 if __name__ == '__main__':

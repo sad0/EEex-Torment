@@ -13,3 +13,4 @@ tools/*.log
 tools/*.json
 !tools/manual.json
 !tools/gen_report.json
+!tools/fmap_manual.json
