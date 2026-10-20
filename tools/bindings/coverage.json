@@ -995,10 +995,10 @@
 "m_errors": "proven",
 "source": "absent",
 "m_decompiledText": "proven",
-"m_file": "unproven",
-"m_actions": "unproven",
-"m_triggers": "unproven",
-"m_objects": "unproven"
+"m_actions": "span",
+"m_triggers": "span",
+"m_objects": "span",
+"m_file": "unproven"
 },
 "CStore": {
 "m_resRef": "proven",
@@ -1012,6 +1012,10 @@
 "m_nSpells": "proven",
 "m_pVersion": "absent",
 "m_bLocalCopy": "proven"
+},
+"CAIScript": {
+"cResRef": "proven",
+"m_caList": "unproven"
 },
 "Item_ability_st": {
 "type": "proven",
@@ -1781,10 +1785,10 @@
 "m_bContingency": "proven",
 "m_nMemorizedSpellIndex": "span",
 "m_bCtrlKeyDown": "span",
+"m_resEraseSpell": "span",
 "m_pVirtualKeys": "unproven",
 "m_pVirtualKeysFlags": "unproven",
-"m_refContingencyResRef": "unproven",
-"m_resEraseSpell": "unproven"
+"m_refContingencyResRef": "unproven"
 },
 "CGameDialogSprite": {
 "m_file": "proven",
@@ -2143,20 +2147,20 @@
 "CScreenDLC": {
 "m_bExitProgram": "proven",
 "m_lOptionsStack": "proven",
+"m_bSpriteMirror": "span",
+"m_bCtrlKeyDown": "span",
+"m_preLoadFontRealms": "span",
+"m_preLoadFontStnSml": "span",
+"m_nNumDLC": "span",
+"m_nCurrentDLC": "span",
+"m_nDlcState": "span",
 "m_pVirtualKeys": "unproven",
 "m_pVirtualKeysFlags": "unproven",
 "m_lPopupStack": "unproven",
 "m_dwErrorTextId": "unproven",
 "m_dwErrorState": "unproven",
 "m_nNumErrorButtons": "unproven",
-"m_strErrorButtonText": "unproven",
-"m_bSpriteMirror": "unproven",
-"m_bCtrlKeyDown": "unproven",
-"m_preLoadFontRealms": "unproven",
-"m_preLoadFontStnSml": "unproven",
-"m_nNumDLC": "unproven",
-"m_nCurrentDLC": "unproven",
-"m_nDlcState": "unproven"
+"m_strErrorButtonText": "unproven"
 },
 "file_t": {
 "fd": "unproven",
@@ -2261,9 +2265,9 @@
 "m_bCDFoundDrive": "span",
 "m_bCDFoundBaldurCD": "span",
 "m_bStartConfig": "span",
-"m_cCachingStatus": "unproven",
-"m_preLoadedFont": "unproven",
-"m_tiledBackground": "unproven"
+"m_preLoadedFont": "span",
+"m_tiledBackground": "span",
+"m_cCachingStatus": "unproven"
 },
 "CGameAIBase": {
 "m_lAttacker": "proven",
@@ -2837,6 +2841,22 @@
 "m_particleList": "span",
 "m_rBounding": "span"
 },
+"CSaveGameSlot": {
+"m_sFileName": "proven",
+"m_sSlotName": "proven",
+"m_cResScreenShot": "unproven",
+"m_cBmpResPortrait0": "unproven",
+"m_cBmpResPortrait1": "unproven",
+"m_cBmpResPortrait2": "unproven",
+"m_cBmpResPortrait3": "unproven",
+"m_cBmpResPortrait4": "unproven",
+"m_cBmpResPortrait5": "unproven",
+"m_cResPortrait": "unproven",
+"m_sCharacterName": "unproven",
+"m_nTime": "unproven",
+"m_nChapter": "unproven",
+"m_sChapter": "unproven"
+},
 "CProjectileBAM": {
 "m_currentVidCell": "proven",
 "m_shadowVidCell": "proven",
@@ -3018,10 +3038,10 @@
 "m_openSound": "span",
 "m_closeSound": "span",
 "m_keyType": "span",
+"m_usedDelay": "span",
+"m_probabilityRoll": "span",
 "m_ptClosedDest": "unproven",
-"m_sndDoor": "unproven",
-"m_usedDelay": "unproven",
-"m_probabilityRoll": "unproven"
+"m_sndDoor": "unproven"
 },
 "CProjectileFall": {
 "m_sideMove": "proven",
@@ -4450,7 +4470,7 @@
 "m_pOpenList": "span",
 "m_openListLevel": "span",
 "m_nOpenList": "span",
-"m_pathCurrent": "unproven"
+"m_pathCurrent": "span"
 },
 "CPathNode": {
 "m_pathNodePrev": "unproven",
@@ -4602,10 +4622,6 @@
 "pAbilities": "proven",
 "pEffects": "proven",
 "pHeader": "proven"
-},
-"CAIScript": {
-"cResRef": "proven",
-"m_caList": "unproven"
 },
 "CAIResponseSet": {
 "m_weightTotal": "proven",
@@ -5356,7 +5372,7 @@
 "m_active": "proven"
 },
 "CMessageAddVVCInternal": {
-"m_res": "unproven"
+"m_res": "span"
 },
 "CMessageEnterDialogMode": {},
 "CResWorldMap": {},
@@ -5499,7 +5515,7 @@
 "m_sound": "span"
 },
 "CMessageSetPortraitLarge": {
-"m_cResRefDialog": "unproven"
+"m_cResRefDialog": "span"
 },
 "CMessageInsertResponse": {
 "m_response": "proven",
@@ -5529,22 +5545,6 @@
 },
 "CMessageSetCampaign": {
 "m_campaign": "unproven"
-},
-"CSaveGameSlot": {
-"m_sFileName": "proven",
-"m_sSlotName": "proven",
-"m_cResScreenShot": "unproven",
-"m_cBmpResPortrait0": "unproven",
-"m_cBmpResPortrait1": "unproven",
-"m_cBmpResPortrait2": "unproven",
-"m_cBmpResPortrait3": "unproven",
-"m_cBmpResPortrait4": "unproven",
-"m_cBmpResPortrait5": "unproven",
-"m_cResPortrait": "unproven",
-"m_sCharacterName": "unproven",
-"m_nTime": "unproven",
-"m_nChapter": "unproven",
-"m_sChapter": "unproven"
 },
 "CResStore": {},
 "CMemINIValue": {
@@ -5715,7 +5715,7 @@
 "m_offset": "unproven"
 },
 "CMessageSetDialogResRef": {
-"m_cResRefDialog": "unproven"
+"m_cResRefDialog": "span"
 },
 "CMessageHeartbeat": {},
 "CMessageSetPath": {
@@ -5795,7 +5795,7 @@
 },
 "CProjectileInstant": {},
 "CMessageWeaponImmumityUpdate": {
-"m_weaponImmunities": "unproven"
+"m_weaponImmunities": "span"
 },
 "CMessageSetInDialog": {
 "m_bState": "proven",
@@ -5808,7 +5808,7 @@
 "m_bOpenDoor": "proven"
 },
 "CMessageSetPortraitSmall": {
-"m_cResRefDialog": "unproven"
+"m_cResRefDialog": "span"
 },
 "CMessageColorChange": {
 "m_colors": "proven",
@@ -5935,7 +5935,7 @@
 "m_dwFlags": "proven"
 },
 "CMessageStoreRelease": {
-"m_store": "unproven"
+"m_store": "span"
 },
 "CSavedGameStoredLocation": {
 "m_areaName": "proven",

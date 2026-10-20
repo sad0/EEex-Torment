@@ -101,6 +101,11 @@
 11
 ],
 [
+"CAIScript",
+2,
+2
+],
+[
 "Item_ability_st",
 24,
 25
@@ -321,6 +326,11 @@
 17
 ],
 [
+"CSaveGameSlot",
+14,
+14
+],
+[
 "CProjectileBAM",
 29,
 30
@@ -491,9 +501,7 @@
 4
 ]
 ],
-"opaque": [
-"CScreenWorld"
-],
+"opaque": [],
 "kept": [
 "CObject",
 "CObList",
@@ -657,7 +665,6 @@
 "CMemINISection",
 "CSpawnFile",
 "CResItem",
-"CAIScript",
 "CAIResponseSet",
 "CAICondition",
 "CAIResponse",
@@ -786,7 +793,6 @@
 "CMessagePartyGold",
 "CColorEffect",
 "CMessageSetCampaign",
-"CSaveGameSlot",
 "CResStore",
 "CMemINIValue",
 "CMessageDropPath",

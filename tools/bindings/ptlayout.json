@@ -15722,7 +15722,7 @@
 },
 "CAIScript": {
 "bg_size": 64,
-"pt_size": 64,
+"pt_size": 72,
 "items": {
 "cResRef": {
 "bg": 0,
@@ -23217,7 +23217,7 @@
 },
 "CScreenWorld": {
 "bg_size": 3080,
-"pt_size": null,
+"pt_size": 3240,
 "items": {
 "m_nStupidMovieWait": {
 "bg": 80,
@@ -25594,7 +25594,7 @@
 },
 "CSaveGameSlot": {
 "bg_size": 1056,
-"pt_size": 1056,
+"pt_size": 1088,
 "items": {
 "m_sFileName": {
 "bg": 0,
@@ -29343,7 +29343,7 @@
 },
 "CMessageSpriteUpdate": {
 "bg_size": 160,
-"pt_size": 128,
+"pt_size": 120,
 "items": {
 "m_pPath": {
 "bg": 16,
@@ -41089,7 +41089,7 @@
 },
 "CGameStatic": {
 "bg_size": 872,
-"pt_size": 632,
+"pt_size": 624,
 "items": {
 "m_header": {
 "bg": 96,
@@ -41811,7 +41811,7 @@
 },
 "CGameTrigger": {
 "bg_size": 1512,
-"pt_size": 1472,
+"pt_size": 1504,
 "items": {
 "m_triggerType": {
 "bg": 1344,
@@ -44677,7 +44677,7 @@
 },
 "CGameContainer": {
 "bg_size": 2488,
-"pt_size": 2480,
+"pt_size": 2488,
 "items": {
 "m_rBounding": {
 "bg": 1344,

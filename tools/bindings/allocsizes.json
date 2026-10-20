@@ -1,0 +1,876 @@
+{
+"CAIAction": {
+"bg": [
+136,
+152
+],
+"pt": [
+128,
+136,
+144,
+320
+]
+},
+"CAIConditionResponse": {
+"bg": [
+120
+],
+"pt": []
+},
+"CAIResponse": {
+"bg": [
+64,
+88
+],
+"pt": [
+64,
+88
+]
+},
+"CAIScript": {
+"bg": [
+64
+],
+"pt": [
+72
+]
+},
+"CAIScriptFile": {
+"bg": [
+424
+],
+"pt": [
+416
+]
+},
+"CAITrigger": {
+"bg": [
+64,
+80,
+480,
+21384
+],
+"pt": [
+32,
+64,
+80,
+488,
+21192
+]
+},
+"CAbilityData": {
+"bg": [
+64
+],
+"pt": [
+64
+]
+},
+"CBaldurChitin": {
+"bg": [
+6424
+],
+"pt": [
+6416
+]
+},
+"CBaldurProjector": {
+"bg": [
+312
+],
+"pt": [
+312
+]
+},
+"CButtonData": {
+"bg": [
+52
+],
+"pt": [
+52
+]
+},
+"CContingency": {
+"bg": [
+480
+],
+"pt": [
+488
+]
+},
+"CDerivedStats": {
+"bg": [
+3240
+],
+"pt": [
+3248
+]
+},
+"CDungeonMaster": {
+"bg": [
+80
+],
+"pt": [
+88
+]
+},
+"CGameAIArea": {
+"bg": [
+1344
+],
+"pt": [
+1336
+]
+},
+"CGameAIGame": {
+"bg": [
+1344
+],
+"pt": [
+1336
+]
+},
+"CGameArea": {
+"bg": [
+4384
+],
+"pt": [
+4480
+]
+},
+"CGameContainer": {
+"bg": [
+2488
+],
+"pt": [
+2488
+]
+},
+"CGameDoor": {
+"bg": [
+1704
+],
+"pt": [
+1696
+]
+},
+"CGameEffect": {
+"bg": [
+344
+],
+"pt": [
+352,
+360
+]
+},
+"CGameEffectDamage": {
+"bg": [
+344
+],
+"pt": []
+},
+"CGameSound": {
+"bg": [
+368
+],
+"pt": [
+368
+]
+},
+"CGameSpawning": {
+"bg": [
+336
+],
+"pt": [
+336
+]
+},
+"CGameSprite": {
+"bg": [
+21384
+],
+"pt": []
+},
+"CGameStatic": {
+"bg": [
+872
+],
+"pt": [
+624
+]
+},
+"CGameTiledObject": {
+"bg": [
+1464
+],
+"pt": [
+1456
+]
+},
+"CGameTrigger": {
+"bg": [
+1512
+],
+"pt": [
+1504
+]
+},
+"CInfCursor": {
+"bg": [
+1384
+],
+"pt": [
+1384
+]
+},
+"CInfGame": {
+"bg": [
+38904
+],
+"pt": []
+},
+"CInfTileSet": {
+"bg": [
+312
+],
+"pt": [
+312
+]
+},
+"CItem": {
+"bg": [
+168,
+184,
+192
+],
+"pt": [
+168,
+184,
+192
+]
+},
+"CMessageAddAction": {
+"bg": [
+152
+],
+"pt": []
+},
+"CMessageAddItem": {
+"bg": [
+184
+],
+"pt": [
+184
+]
+},
+"CMessageAddVVCInternal": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"CMessageColorUpdate": {
+"bg": [
+128,
+160
+],
+"pt": [
+128
+]
+},
+"CMessageContainerAddItem": {
+"bg": [
+192
+],
+"pt": [
+192
+]
+},
+"CMessageContainerItems": {
+"bg": [
+32,
+2488
+],
+"pt": [
+32,
+2488
+]
+},
+"CMessageInsertResponse": {
+"bg": [
+88
+],
+"pt": [
+88
+]
+},
+"CMessagePlaySoundRef": {
+"bg": [
+32
+],
+"pt": [
+32
+]
+},
+"CMessageRemoveVVCInternal": {
+"bg": [
+32
+],
+"pt": [
+32
+]
+},
+"CMessageSetDialogResRef": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"CMessageSetLastAttacker": {
+"bg": [
+40
+],
+"pt": [
+40
+]
+},
+"CMessageSetLastObject": {
+"bg": [
+48
+],
+"pt": [
+48
+]
+},
+"CMessageSetPortraitLarge": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"CMessageSetPortraitSmall": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"CMessageSetRestEncounterProbability": {
+"bg": [
+32
+],
+"pt": [
+32
+]
+},
+"CMessageSetTrigger": {
+"bg": [
+80
+],
+"pt": [
+24,
+80
+]
+},
+"CMessageSpriteEquipment": {
+"bg": [
+352
+],
+"pt": []
+},
+"CMessageSpriteUpdate": {
+"bg": [
+160
+],
+"pt": [
+120
+]
+},
+"CMessageStopActions": {
+"bg": [
+16
+],
+"pt": [
+16
+]
+},
+"CMessageStoreAddItem": {
+"bg": [
+48
+],
+"pt": [
+48
+]
+},
+"CMessageStoreDemand": {
+"bg": [
+24,
+168
+],
+"pt": [
+24,
+168
+]
+},
+"CMessageStoreRelease": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"CMessageStoreRemoveItem": {
+"bg": [
+40
+],
+"pt": [
+40
+]
+},
+"CMessageWeaponImmumityUpdate": {
+"bg": [
+72
+],
+"pt": [
+72
+]
+},
+"CMoveListEntry": {
+"bg": [
+36
+],
+"pt": [
+36
+]
+},
+"CObjectMarker": {
+"bg": [
+160
+],
+"pt": [
+160
+]
+},
+"CPathSearch": {
+"bg": [
+48
+],
+"pt": [
+48
+]
+},
+"CProjectile": {
+"bg": [
+440,
+1048
+],
+"pt": [
+504,
+528,
+576,
+680,
+728,
+1112,
+1288
+]
+},
+"CProjectileBAM": {
+"bg": [
+952,
+1008,
+1240
+],
+"pt": [
+984,
+1272
+]
+},
+"CProjectileConeOfCold": {
+"bg": [
+960
+],
+"pt": [
+992
+]
+},
+"CProjectileInvisibleTravelling": {
+"bg": [
+952
+],
+"pt": [
+984
+]
+},
+"CProjectileMushroom": {
+"bg": [
+952
+],
+"pt": [
+984
+]
+},
+"CProjectileSegment": {
+"bg": [
+960
+],
+"pt": [
+992
+]
+},
+"CProjectileSpellHit": {
+"bg": [
+1048
+],
+"pt": [
+1112
+]
+},
+"CResRef": {
+"bg": [
+16,
+24,
+32,
+48,
+56,
+64,
+168,
+192,
+1192
+],
+"pt": [
+16,
+24,
+32,
+48,
+56,
+72,
+168,
+192,
+1184
+]
+},
+"CSaveGameSlot": {
+"bg": [
+1056
+],
+"pt": [
+1088
+]
+},
+"CScreenAI": {
+"bg": [
+528
+],
+"pt": [
+536
+]
+},
+"CScreenChapter": {
+"bg": [
+384
+],
+"pt": [
+392
+]
+},
+"CScreenCharacter": {
+"bg": [
+2088
+],
+"pt": [
+2544
+]
+},
+"CScreenConnection": {
+"bg": [
+1752
+],
+"pt": [
+1856
+]
+},
+"CScreenCreateChar": {
+"bg": [
+2584
+],
+"pt": [
+2688
+]
+},
+"CScreenCreateParty": {
+"bg": [
+224
+],
+"pt": [
+232
+]
+},
+"CScreenDLC": {
+"bg": [
+1896
+],
+"pt": [
+4056
+]
+},
+"CScreenInventory": {
+"bg": [
+1904
+],
+"pt": [
+2008
+]
+},
+"CScreenJournal": {
+"bg": [
+1776
+],
+"pt": [
+1816
+]
+},
+"CScreenLoad": {
+"bg": [
+384
+],
+"pt": [
+392
+]
+},
+"CScreenStart": {
+"bg": [
+336
+],
+"pt": [
+344
+]
+},
+"CScreenStore": {
+"bg": [
+2312
+],
+"pt": [
+2416
+]
+},
+"CScreenStoreItem": {
+"bg": [
+48
+],
+"pt": []
+},
+"CScreenWizSpell": {
+"bg": [
+1712
+],
+"pt": [
+1880
+]
+},
+"CScreenWorld": {
+"bg": [
+3080
+],
+"pt": [
+3240
+]
+},
+"CScreenWorldMap": {
+"bg": [
+3976
+],
+"pt": []
+},
+"CSearchRequest": {
+"bg": [
+128
+],
+"pt": [
+128
+]
+},
+"CSound": {
+"bg": [
+32
+],
+"pt": [
+32
+]
+},
+"CSoundChannel": {
+"bg": [
+88
+],
+"pt": [
+88
+]
+},
+"CSparkleCluster": {
+"bg": [
+224
+],
+"pt": []
+},
+"CSpawnFile": {
+"bg": [
+80
+],
+"pt": [
+80
+]
+},
+"CSpawnList": {
+"bg": [
+96
+],
+"pt": [
+96
+]
+},
+"CSpawnVar": {
+"bg": [
+16
+],
+"pt": [
+16
+]
+},
+"CSpell": {
+"bg": [
+16
+],
+"pt": [
+16,
+7466
+]
+},
+"CStore": {
+"bg": [
+272
+],
+"pt": [
+272
+]
+},
+"CString": {
+"bg": [
+16,
+24,
+32,
+40,
+48,
+56,
+64,
+112,
+168,
+192,
+208,
+303,
+808,
+1064
+],
+"pt": [
+16,
+24,
+32,
+40,
+56,
+72,
+80,
+112,
+128,
+184,
+192,
+208,
+303,
+872,
+1128
+]
+},
+"CVEFVidCell": {
+"bg": [
+1024
+],
+"pt": [
+1024
+]
+},
+"CVariableHash": {
+"bg": [
+4008
+],
+"pt": [
+4008
+]
+},
+"CVidBitmap": {
+"bg": [],
+"pt": [
+288
+]
+},
+"CVidCell": {
+"bg": [
+312
+],
+"pt": [
+312
+]
+},
+"CVidMode": {
+"bg": [
+800
+],
+"pt": [
+800
+]
+},
+"CVidTile": {
+"bg": [
+312
+],
+"pt": [
+312
+]
+},
+"CVisualEffect": {
+"bg": [
+800
+],
+"pt": [
+800
+]
+},
+"DP_Packet": {
+"bg": [
+32
+],
+"pt": [
+32
+]
+},
+"SAreaFileWrapper": {
+"bg": [
+24
+],
+"pt": [
+24
+]
+},
+"SProjectileWrapper": {
+"bg": [
+16
+],
+"pt": [
+16
+]
+}
+}

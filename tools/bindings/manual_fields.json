@@ -1962,6 +1962,306 @@
   "CStoreFileItem": {
    "pt": "0x58",
    "why": "STOR V1.1 item entries are 0x58 (88 bytes stride in all 45 PT files); CStore::SetResRef PT 0x2b1f70 news/deletes 0x58 (BG 0x1c)"
+  },
+  "CAIScript": {
+   "pt": "0x48",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CAIScriptFile": {
+   "pt": "0x1a0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CAbilityData": {
+   "pt": "0x40",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CBaldurChitin": {
+   "pt": "0x1910",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CBaldurProjector": {
+   "pt": "0x138",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CButtonData": {
+   "pt": "0x34",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CContingency": {
+   "pt": "0x1e8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CDerivedStats": {
+   "pt": "0xcb0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CDungeonMaster": {
+   "pt": "0x58",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameAIArea": {
+   "pt": "0x538",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameAIGame": {
+   "pt": "0x538",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameArea": {
+   "pt": "0x1180",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameContainer": {
+   "pt": "0x9b8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameDoor": {
+   "pt": "0x6a0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameSound": {
+   "pt": "0x170",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameSpawning": {
+   "pt": "0x150",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameStatic": {
+   "pt": "0x270",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameTiledObject": {
+   "pt": "0x5b0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CGameTrigger": {
+   "pt": "0x5e0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CInfCursor": {
+   "pt": "0x568",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CInfTileSet": {
+   "pt": "0x138",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageAddItem": {
+   "pt": "0xb8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageAddVVCInternal": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageContainerAddItem": {
+   "pt": "0xc0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageInsertResponse": {
+   "pt": "0x58",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessagePlaySoundRef": {
+   "pt": "0x20",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageRemoveVVCInternal": {
+   "pt": "0x20",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetDialogResRef": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetLastAttacker": {
+   "pt": "0x28",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetLastObject": {
+   "pt": "0x30",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetPortraitLarge": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetPortraitSmall": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSetRestEncounterProbability": {
+   "pt": "0x20",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageSpriteUpdate": {
+   "pt": "0x78",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageStopActions": {
+   "pt": "0x10",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageStoreAddItem": {
+   "pt": "0x30",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageStoreRelease": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageStoreRemoveItem": {
+   "pt": "0x28",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMessageWeaponImmumityUpdate": {
+   "pt": "0x48",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CMoveListEntry": {
+   "pt": "0x24",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CObjectMarker": {
+   "pt": "0xa0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CPathSearch": {
+   "pt": "0x30",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CProjectileConeOfCold": {
+   "pt": "0x3e0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CProjectileInvisibleTravelling": {
+   "pt": "0x3d8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CProjectileMushroom": {
+   "pt": "0x3d8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CProjectileSegment": {
+   "pt": "0x3e0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CProjectileSpellHit": {
+   "pt": "0x458",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSaveGameSlot": {
+   "pt": "0x440",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenAI": {
+   "pt": "0x218",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenChapter": {
+   "pt": "0x188",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenCharacter": {
+   "pt": "0x9f0",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenConnection": {
+   "pt": "0x740",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenCreateChar": {
+   "pt": "0xa80",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenCreateParty": {
+   "pt": "0xe8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenDLC": {
+   "pt": "0xfd8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenInventory": {
+   "pt": "0x7d8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenJournal": {
+   "pt": "0x718",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenLoad": {
+   "pt": "0x188",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenStart": {
+   "pt": "0x158",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenStore": {
+   "pt": "0x970",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenWizSpell": {
+   "pt": "0x758",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CScreenWorld": {
+   "pt": "0xca8",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSearchRequest": {
+   "pt": "0x80",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSound": {
+   "pt": "0x20",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSoundChannel": {
+   "pt": "0x58",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSpawnFile": {
+   "pt": "0x50",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSpawnList": {
+   "pt": "0x60",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CSpawnVar": {
+   "pt": "0x10",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CStore": {
+   "pt": "0x110",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CVEFVidCell": {
+   "pt": "0x400",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CVidCell": {
+   "pt": "0x138",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "CVisualEffect": {
+   "pt": "0x320",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "DP_Packet": {
+   "pt": "0x20",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "SAreaFileWrapper": {
+   "pt": "0x18",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "SProjectileWrapper": {
+   "pt": "0x10",
+   "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
   }
  },
  "same_as_bg": {
