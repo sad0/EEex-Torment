@@ -14,11 +14,11 @@ for rnd in range(6):
     for S, C in Call.items():
         if not any(v in ('unproven', 'absent') for n, v in C.items() if Lall[S]['items'][n]['bg'] >= 0x100):
             continue
-        V, nf = A.validated_votes(D, S, Lall[S]['items'], C, 0x100)
+        V, nf, FN = A.validated_votes(D, S, Lall[S]['items'], C, 0x100)
         m = d['fields'].setdefault(S, {})
         for n, v in V.items():
-            if len(v) == 1 and n not in m:
-                m[n] = {'pt': hex(v.most_common(1)[0][0]), 'why': 'autoprove: unanimous votes from aligned functions whose accesses to proven fields of this struct all match (bindings/autoprove.py)'}
+            if A.acceptable(Lall[S]['items'], C, n, v, len(FN[n])) and n not in m:
+                m[n] = {'pt': hex(v.most_common(1)[0][0]), 'why': f'autoprove: {sum(v.values())} unanimous votes from {len(FN[n])} aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)'}
                 new += 1
                 print(rnd, S, n, hex(v.most_common(1)[0][0]), dict(v), flush=True)
     json.dump(d, open('bindings/manual_fields.json', 'w'), indent=1)

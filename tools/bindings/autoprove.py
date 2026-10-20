@@ -1,7 +1,8 @@
 # Prove PT offsets of unproven fields of a struct from aligned BG/PT functions that are validated
 # for that struct: every aligned access they make to already-proven fields of the struct (BG disp
 # >= min) lands on the proven PT offset (>= 2 confirmations, no contradiction). Their accesses to
-# the unproven fields then vote; a field is accepted when all votes agree.
+# the unproven fields then vote; a field is accepted when all votes agree, come from >= 2 functions,
+# and the offset fits between its nearest proven neighbours.
 # Usage (from tools/): python bindings/autoprove.py <struct> [min bg disp, default 0x400] [--write]
 import sys, os, json, collections, pickle
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
@@ -45,6 +46,7 @@ def validated_votes(D, S, L, C, minbig=0x400):
     proven = {i['bg']: i['pt'] for n, i in L.items() if C.get(n) in ('proven', 'span') and i['pt'] is not None and i['bg'] >= minbig}
     targets = {i['bg']: n for n, i in L.items() if C.get(n) in ('unproven', 'absent') and i['bg'] >= minbig}
     votes = collections.defaultdict(collections.Counter)
+    funcs = collections.defaultdict(set)   # field -> functions that voted
     nf = 0
     for f, s in D.items():
         pk = [d for d in s if d in proven]
@@ -79,7 +81,25 @@ def validated_votes(D, S, L, C, minbig=0x400):
                 if not bo or not po or bi.mnemonic != pi.mnemonic or bo.size != po.size:
                     continue
                 votes[targets[d]][po.mem.disp] += 1
-    return votes, nf
+                funcs[targets[d]].add(f)
+    return votes, nf, funcs
+
+
+def acceptable(L, C, n, v, nfuncs):
+    """Unanimous, >= 2 votes from >= 2 functions, and the offset fits between the nearest proven
+    neighbours (BG order kept, no overlap with any proven field)."""
+    if len(v) != 1 or sum(v.values()) < 2 or nfuncs < 2:
+        return False
+    p = v.most_common(1)[0][0]
+    it = L[n]
+    proven = sorted((i['bg'], i['pt'], i['size']) for m, i in L.items() if C.get(m) in ('proven', 'span') and i['pt'] is not None)
+    prev = [x for x in proven if x[0] < it['bg']]
+    nxt = [x for x in proven if x[0] > it['bg']]
+    if prev and p < prev[-1][1] + prev[-1][2]:
+        return False
+    if nxt and p + it['size'] > nxt[0][1]:
+        return False
+    return not any(q <= p < q + sz or p <= q < p + it['size'] for b, q, sz in proven)
 
 
 if __name__ == '__main__':
@@ -88,12 +108,12 @@ if __name__ == '__main__':
     L = json.load(open('bindings/ptlayout.json'))[S]['items']
     C = json.load(open('bindings/coverage.json'))[S]
     D = bg_disps()
-    V, nf = validated_votes(D, S, L, C, minbig)
+    V, nf, FN = validated_votes(D, S, L, C, minbig)
     print('validated functions', nf)
     res = {}
     for n in sorted(V, key=lambda n: L[n]['bg']):
         v = V[n]; top = v.most_common(1)[0]
-        ok = len(v) == 1
+        ok = acceptable(L, C, n, v, len(FN[n]))
         print(f'{n:36} bg {L[n]["bg"]:#7x} solved {L[n]["pt"] if L[n]["pt"] is None else hex(L[n]["pt"])} votes {[(hex(a), c) for a, c in v.most_common(3)]}' + ('  ACCEPT' if ok else ''))
         if ok:
             res[n] = top[0]
