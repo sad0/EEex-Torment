@@ -680,14 +680,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "glyphIndex": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -700,14 +700,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "glyphAdvances": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "int*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -822,21 +822,21 @@
 "pt": 0,
 "size": 4,
 "type": "drawState_t",
-"how": "assumed"
+"how": "manual"
 },
 "primStart": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "primCount": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -849,56 +849,56 @@
 "pt": 0,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "z": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "c": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "s": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "t": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "s1": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "t1": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -911,35 +911,35 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "extrap"
 },
 "dpIDTo": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "adjacent"
 },
 "pInfo": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "assumed"
+"how": "manual"
 },
 "dwSize": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "adjacent"
 },
 "dwFlags": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "adjacent"
 }
 }
 },
@@ -1014,14 +1014,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "maxDescent": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -1137,7 +1137,7 @@
 "pt": 0,
 "size": 16,
 "type": "_EAXPRESET",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -3358,28 +3358,28 @@
 "pt": 0,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "extrap"
 },
 "start": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "adjacent"
 },
 "count": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "line": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -5605,35 +5605,35 @@
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_sequenceHighLevel": {
 "bg": 12,
 "pt": 12,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "interp"
 },
 "m_detectedByInfravision": {
 "bg": 14,
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_bloodColor": {
 "bg": 15,
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "interp"
 },
 "m_personalSpace": {
 "bg": 16,
 "pt": 16,
 "size": 1,
 "type": "unsigned __int8",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -5994,21 +5994,21 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "T": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6021,35 +6021,35 @@
 "pt": 0,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "line_spacing": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "ascent": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "descent": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "scale": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6138,70 +6138,70 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uST": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uTcScale": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uTex": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uTex2": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uColorTone": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uZoomStrength": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uTcClamp": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uScreenHeight": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "uSpriteBlurAmount": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6214,28 +6214,28 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nWrapT": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nMinFilter": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "nMagFilter": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6268,21 +6268,21 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6334,21 +6334,21 @@
 "pt": 0,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "next": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "stbrp_node*",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6361,42 +6361,42 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 4,
 "pt": 4,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 6,
 "pt": 6,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "x": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 10,
 "pt": 10,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "was_packed": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6409,63 +6409,63 @@
 "pt": 0,
 "size": 16,
 "type": "stbrp_rect",
-"how": "assumed"
+"how": "manual"
 },
 "glyphIndex": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "xOffset": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "yOffset": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "leftSideBearing": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "float",
-"how": "assumed"
+"how": "manual"
 },
 "advanceWidth": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "sheetIndex": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "renderable": {
 "bg": 40,
 "pt": 40,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "fullyProcessed": {
 "bg": 41,
 "pt": 41,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6478,84 +6478,84 @@
 "pt": 0,
 "size": 8,
 "type": "void*",
-"how": "adjacent"
+"how": "manual"
 },
 "data": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "unsigned __int8*",
-"how": "evidence"
+"how": "manual"
 },
 "fontstart": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "numGlyphs": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "loca": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "head": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "glyf": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "hhea": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "hmtx": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "kern": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "index_map": {
 "bg": 48,
 "pt": 48,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "indexToLocFormat": {
 "bg": 52,
 "pt": 52,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -6573,77 +6573,77 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "initialized": {
 "bg": 12,
 "pt": 12,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "deleted": {
 "bg": 13,
 "pt": 13,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "minFilter": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "DrawFilter",
-"how": "assumed"
+"how": "manual"
 },
 "magFilter": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "DrawFilter",
-"how": "assumed"
+"how": "manual"
 },
 "wrapS": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "wrapT": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "internalFormat": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "altTexture": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6703,77 +6703,77 @@
 "pt": 0,
 "size": 8,
 "type": "IDirect3DTexture9*",
-"how": "assumed"
+"how": "manual"
 },
 "altTexture": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "IDirect3DTexture9*",
-"how": "assumed"
+"how": "manual"
 },
 "w": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "h": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "generated": {
 "bg": 24,
 "pt": 24,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "deleted": {
 "bg": 25,
 "pt": 25,
 "size": 1,
 "type": "bool",
-"how": "assumed"
+"how": "manual"
 },
 "minFilter": {
 "bg": 28,
 "pt": 28,
 "size": 4,
 "type": "DrawFilter",
-"how": "assumed"
+"how": "manual"
 },
 "magFilter": {
 "bg": 32,
 "pt": 32,
 "size": 4,
 "type": "DrawFilter",
-"how": "assumed"
+"how": "manual"
 },
 "wrapS": {
 "bg": 36,
 "pt": 36,
 "size": 4,
 "type": "uint",
-"how": "assumed"
+"how": "manual"
 },
 "wrapT": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "uint",
-"how": "assumed"
+"how": "manual"
 },
 "internalFormat": {
 "bg": 44,
 "pt": 44,
 "size": 4,
 "type": "_D3DFORMAT",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6786,28 +6786,28 @@
 "pt": 0,
 "size": 4,
 "type": "_872C6102D0359DAE2EF3C8EA2BA4F27D",
-"how": "assumed"
+"how": "manual"
 },
 "___u1": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "_DEC82102868918D992B707FF755C8272",
-"how": "assumed"
+"how": "manual"
 },
 "___u2": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "_DCA4A7CF5EA786B859D71FBD4D5071B1",
-"how": "assumed"
+"how": "manual"
 },
 "___u3": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "_982F841FE54CFF99ACD9FF52992C4925",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6820,56 +6820,56 @@
 "pt": 0,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "y": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "z": {
 "bg": 4,
 "pt": 4,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "s": {
 "bg": 6,
 "pt": 6,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "t": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "c": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "s1": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 },
 "t1": {
 "bg": 18,
 "pt": 18,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -6882,28 +6882,28 @@
 "pt": 0,
 "size": 8,
 "type": "void*",
-"how": "assumed"
+"how": "manual"
 },
 "viewBase": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "viewSize": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "size": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -7328,7 +7328,7 @@
 "pt": 0,
 "size": 24,
 "type": "Marker",
-"how": "extrap"
+"how": "adjacent"
 },
 "name": {
 "bg": 24,
@@ -7453,84 +7453,84 @@
 "pt": 0,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "t": {
 "bg": 16,
 "pt": 16,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "tr": {
 "bg": 32,
 "pt": 32,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "r": {
 "bg": 48,
 "pt": 48,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "br": {
 "bg": 64,
 "pt": 64,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "b": {
 "bg": 80,
 "pt": 80,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "bl": {
 "bg": 96,
 "pt": 96,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "l": {
 "bg": 112,
 "pt": 112,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "c": {
 "bg": 128,
 "pt": 128,
 "size": 16,
 "type": "SDL_Rect",
-"how": "assumed"
+"how": "manual"
 },
 "d": {
 "bg": 144,
 "pt": 144,
 "size": 8,
 "type": "SDL_Point",
-"how": "assumed"
+"how": "manual"
 },
 "name": {
 "bg": 152,
 "pt": 152,
 "size": 8,
 "type": "const char*",
-"how": "assumed"
+"how": "manual"
 },
 "flags": {
 "bg": 160,
 "pt": 160,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -7759,7 +7759,7 @@
 "pt": 0,
 "size": 8,
 "type": "char*",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -7772,21 +7772,21 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "extrap"
 },
 "m_line": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "CString",
-"how": "assumed"
+"how": "manual"
 },
 "m_start": {
 "bg": 16,
 "pt": 16,
 "size": 8,
 "type": "CString",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -7854,21 +7854,21 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "extrap"
 },
 "dwMaxPlayers": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "adjacent"
 },
 "sPlayerName": {
 "bg": 8,
 "pt": 8,
 "size": 8,
 "type": "CString",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -8229,7 +8229,7 @@
 "pt": 100,
 "size": 8,
 "type": "CSize",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -8617,14 +8617,14 @@
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "adjacent"
+"how": "interp"
 },
 "m_rOldWorldViewPort": {
 "bg": 12,
 "pt": 12,
 "size": 16,
 "type": "CRect",
-"how": "extrap"
+"how": "manual"
 }
 }
 },
@@ -8998,14 +8998,14 @@
 "pt": 156,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "outerColor": {
 "bg": 160,
 "pt": 160,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -9183,7 +9183,7 @@
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -9368,28 +9368,28 @@
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pFreeList": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "CMapStringToString::CAssoc*",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pBlocks": {
 "bg": 32,
 "pt": 32,
 "size": 8,
 "type": "CPlex*",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nBlockSize": {
 "bg": 40,
 "pt": 40,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -9598,7 +9598,7 @@
 "pt": 48,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -9641,7 +9641,7 @@
 "pt": 0,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAITrigger*>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -9843,10 +9843,10 @@
 },
 "lTimers": {
 "bg": 16,
-"pt": 16,
+"pt": null,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CTimer*>",
-"how": "adjacent"
+"how": "dropped"
 }
 }
 },
@@ -9931,10 +9931,10 @@
 "items": {
 "mSectionName": {
 "bg": 56,
-"pt": 56,
+"pt": null,
 "size": 8,
 "type": "CString",
-"how": "assumed"
+"how": "dropped"
 }
 }
 },
@@ -10206,14 +10206,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_aChapters": {
 "bg": 8,
-"pt": 8,
+"pt": null,
 "size": 32,
 "type": "CTypedPtrArray<CPtrArray,CTypedPtrList<CPtrList,CGameJournalEntry*>*>",
-"how": "assumed"
+"how": "dropped"
 }
 }
 },
@@ -11056,7 +11056,7 @@
 "pt": 16,
 "size": 8,
 "type": "CPoint",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -12397,7 +12397,7 @@
 "pt": 8,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": "adjacent"
+"how": "manual"
 }
 }
 },
@@ -12450,7 +12450,7 @@
 "pt": 40,
 "size": 24,
 "type": "Marker",
-"how": "extrap"
+"how": "adjacent"
 },
 "area": {
 "bg": 64,
@@ -12750,63 +12750,63 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "height": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "align": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "init_mode": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "heuristic": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "num_nodes": {
 "bg": 20,
 "pt": 20,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "active_head": {
 "bg": 24,
 "pt": 24,
 "size": 8,
 "type": "stbrp_node*",
-"how": "assumed"
+"how": "manual"
 },
 "free_head": {
 "bg": 32,
 "pt": 32,
 "size": 8,
 "type": "stbrp_node*",
-"how": "assumed"
+"how": "manual"
 },
 "extra": {
 "bg": 40,
 "pt": 40,
 "size": 32,
 "type": "Array<stbrp_node,2>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13340,14 +13340,14 @@
 "pt": 0,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "table": {
 "bg": 4,
 "pt": 4,
 "size": 261992,
 "type": "Array<glyphHashEntry_t,32749>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -13360,133 +13360,133 @@
 "pt": 0,
 "size": 64,
 "type": "Array<char,64>",
-"how": "extrap"
+"how": "manual"
 },
 "space": {
 "bg": 64,
 "pt": 64,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "fontInfo": {
 "bg": 72,
 "pt": 72,
 "size": 56,
 "type": "stbtt_fontinfo",
-"how": "evidence"
+"how": "manual"
 },
 "fontSheets": {
 "bg": 128,
 "pt": 128,
 "size": 8,
 "type": "sheet*",
-"how": "interp"
+"how": "manual"
 },
 "packingContext": {
 "bg": 136,
 "pt": 136,
 "size": 8,
 "type": "stbrp_context*",
-"how": "interp"
+"how": "manual"
 },
 "packingNodes": {
 "bg": 144,
 "pt": 144,
 "size": 8,
 "type": "stbrp_node*",
-"how": "interp"
+"how": "manual"
 },
 "numFontSizes": {
 "bg": 152,
 "pt": 152,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "currentSheetIndex": {
 "bg": 156,
 "pt": 156,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "numGlyphMaps": {
 "bg": 160,
 "pt": 160,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "maxNumGlyphMaps": {
 "bg": 164,
 "pt": 164,
 "size": 4,
 "type": "int",
-"how": "evidence"
+"how": "manual"
 },
 "newGlyphMapping": {
 "bg": 168,
 "pt": 168,
 "size": 8,
 "type": "glyphmap_t*",
-"how": "evidence"
+"how": "manual"
 },
 "pointSizeToGlyphIndexMapping": {
 "bg": 176,
 "pt": 176,
 "size": 8,
 "type": "int*",
-"how": "evidence"
+"how": "manual"
 },
 "newLineMetrics": {
 "bg": 184,
 "pt": 184,
 "size": 8,
 "type": "line_metric*",
-"how": "interp"
+"how": "manual"
 },
 "fileBuffer": {
 "bg": 192,
 "pt": 192,
 "size": 8,
 "type": "char*",
-"how": "interp"
+"how": "manual"
 },
 "metricTopMax": {
 "bg": 200,
 "pt": 200,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "metricBottomMax": {
 "bg": 204,
 "pt": 204,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "metricRight": {
 "bg": 208,
 "pt": 208,
 "size": 4,
 "type": "int",
-"how": "interp"
+"how": "manual"
 },
 "glyphHashTable": {
 "bg": 212,
 "pt": 212,
 "size": 261996,
 "type": "glyphHashTable_t",
-"how": "evidence"
+"how": "manual"
 },
 "glyphAdvance": {
 "bg": 262208,
 "pt": 262208,
 "size": 8,
 "type": "glyphAdvance_t*",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -14611,10 +14611,10 @@
 },
 "m_nWidth": {
 "bg": 12,
-"pt": null,
+"pt": 8,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nHeight": {
 "bg": 14,
@@ -14854,7 +14854,7 @@
 "pt": 0,
 "size": 48,
 "type": "CMapStringToString",
-"how": "extrap"
+"how": "evidence"
 },
 "m_currentGender": {
 "bg": 48,
@@ -15733,10 +15733,10 @@
 },
 "m_caList": {
 "bg": 8,
-"pt": 8,
+"pt": null,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CAIConditionResponse*>",
-"how": "adjacent"
+"how": "dropped"
 }
 }
 },
@@ -18599,10 +18599,10 @@
 },
 "m_lPopupStack": {
 "bg": 1656,
-"pt": 3960,
+"pt": null,
 "size": 56,
 "type": "CPtrList",
-"how": "adjacent"
+"how": "dropped"
 },
 "m_dwErrorTextId": {
 "bg": 1712,
@@ -20543,21 +20543,21 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "assumed"
+"how": "manual"
 },
 "m_error": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_item": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -24874,10 +24874,10 @@
 },
 "m_lPopupStack": {
 "bg": 1648,
-"pt": 1824,
+"pt": null,
 "size": 56,
 "type": "CPtrList",
-"how": "extrap"
+"how": "dropped"
 },
 "m_nDualClass": {
 "bg": 1704,
@@ -25063,10 +25063,10 @@
 },
 "m_lstMageSpells": {
 "bg": 1928,
-"pt": 2136,
+"pt": null,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CResRef*>",
-"how": "adjacent"
+"how": "dropped"
 },
 "m_bShiftKeyDown": {
 "bg": 1984,
@@ -27899,105 +27899,105 @@
 "pt": 0,
 "size": 4,
 "type": "unsigned int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nProgressBarCaption": {
 "bg": 4,
 "pt": 4,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "interp"
 },
 "m_nParchmentCaption": {
 "bg": 8,
 "pt": 8,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "interp"
 },
 "m_nActionProgress": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_nActionTarget": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_bTravelActive": {
 "bg": 20,
 "pt": 20,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "interp"
 },
 "m_bWaiting": {
 "bg": 21,
 "pt": 21,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_nWaitingReason": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 },
 "m_bDisableMinibars": {
 "bg": 28,
 "pt": 28,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "interp"
 },
 "m_bTimeoutVisible": {
 "bg": 29,
 "pt": 29,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_bProgressBarActivated": {
 "bg": 30,
 "pt": 30,
 "size": 1,
 "type": "unsigned __int8",
-"how": "assumed"
+"how": "manual"
 },
 "m_bRemoteWaiting": {
 "bg": 31,
 "pt": 31,
 "size": 6,
 "type": "Array<unsigned __int8,6>",
-"how": "assumed"
+"how": "adjacent"
 },
 "m_nRemoteActionProgress": {
 "bg": 40,
 "pt": 40,
 "size": 24,
 "type": "Array<int,6>",
-"how": "assumed"
+"how": "extrap"
 },
 "m_nRemoteActionTarget": {
 "bg": 64,
 "pt": 64,
 "size": 24,
 "type": "Array<int,6>",
-"how": "assumed"
+"how": "extrap"
 },
 "m_nRemoteWaitingReason": {
 "bg": 88,
 "pt": 88,
 "size": 24,
 "type": "Array<int,6>",
-"how": "assumed"
+"how": "extrap"
 }
 }
 },
@@ -28596,14 +28596,14 @@
 "pt": 3032,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "adjacent"
 },
 "m_lastMessageReceivedTime": {
 "bg": 3036,
 "pt": 3036,
 "size": 24,
 "type": "Array<unsigned int,6>",
-"how": "extrap"
+"how": "adjacent"
 }
 }
 },
@@ -30578,7 +30578,7 @@
 "pt": 0,
 "size": 80,
 "type": "Array<CSpellLevelDecrementing,10>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -30591,7 +30591,7 @@
 "pt": 0,
 "size": 40,
 "type": "Array<int,10>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -30660,7 +30660,7 @@
 "pt": 32,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_pSpellStats": {
 "bg": 40,
@@ -31026,77 +31026,77 @@
 "pt": 4,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nCurrentWorldLink": {
 "bg": 12,
 "pt": 12,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_nPartyGold": {
 "bg": 16,
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_curFormation": {
 "bg": 20,
 "pt": 20,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "manual"
 },
 "m_quickFormations": {
 "bg": 22,
 "pt": 22,
 "size": 10,
 "type": "Array<__int16,5>",
-"how": "adjacent"
+"how": "interp"
 },
 "m_groupInventory": {
 "bg": 32,
 "pt": 32,
 "size": 800,
 "type": "Array<CItem*,100>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bArenaMode": {
 "bg": 832,
 "pt": 832,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_groupInventoryNumber": {
 "bg": 836,
 "pt": 836,
 "size": 2,
 "type": "__int16",
-"how": "adjacent"
+"how": "interp"
 },
 "m_mode": {
 "bg": 840,
 "pt": 840,
 "size": 4,
 "type": "unsigned int",
-"how": "extrap"
+"how": "interp"
 },
 "m_cutScene": {
 "bg": 844,
 "pt": 844,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "manual"
 },
 "m_nCutSceneStatusOverride": {
 "bg": 848,
 "pt": 848,
 "size": 4,
 "type": "int",
-"how": "extrap"
+"how": "adjacent"
 }
 }
 },
@@ -31199,7 +31199,7 @@
 "pt": 0,
 "size": 8,
 "type": "Array<unsigned __int8,8>",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -31586,10 +31586,10 @@
 },
 "m_sSaveScreenArea": {
 "bg": 25552,
-"pt": 40888,
+"pt": null,
 "size": 8,
 "type": "CString",
-"how": "adjacent"
+"how": "dropped"
 },
 "m_rgbMasterBitmap": {
 "bg": 25560,
@@ -37715,7 +37715,7 @@
 "pt": 0,
 "size": 8,
 "type": "CString",
-"how": "evidence"
+"how": "manual"
 },
 "m_EnemyAlly": {
 "bg": 8,
@@ -37865,10 +37865,10 @@
 },
 "m_source": {
 "bg": 128,
-"pt": 128,
+"pt": null,
 "size": 8,
 "type": "CString",
-"how": "extrap"
+"how": "dropped"
 }
 }
 },
@@ -38283,14 +38283,14 @@
 "pt": 0,
 "size": 24,
 "type": "CAIObjectType",
-"how": "assumed"
+"how": "manual"
 },
 "m_bonus": {
 "bg": 24,
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "assumed"
+"how": "manual"
 }
 }
 },
@@ -41303,14 +41303,14 @@
 "pt": 48,
 "size": 8,
 "type": "CString",
-"how": "evidence"
+"how": "manual"
 },
 "m_string2": {
 "bg": 56,
 "pt": 56,
 "size": 8,
 "type": "CString",
-"how": "evidence"
+"how": "manual"
 }
 }
 },
@@ -42327,7 +42327,7 @@
 "pt": 14464,
 "size": 8,
 "type": "CResRef",
-"how": "interp"
+"how": "manual"
 },
 "m_nNumberOfTimesInteractedWith": {
 "bg": 15216,
@@ -42383,7 +42383,7 @@
 "pt": 14604,
 "size": 4,
 "type": "int",
-"how": "adjacent"
+"how": "manual"
 },
 "m_bSelected": {
 "bg": 15360,
@@ -43678,7 +43678,7 @@
 "pt": 18904,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,CPortraitIcon*>",
-"how": "adjacent"
+"how": "manual"
 },
 "m_portraitIconVidCell": {
 "bg": 19704,
@@ -44817,7 +44817,7 @@
 "pt": 2442,
 "size": 8,
 "type": "CResRef",
-"how": "interp"
+"how": "manual"
 },
 "m_breakDifficulty": {
 "bg": 2460,

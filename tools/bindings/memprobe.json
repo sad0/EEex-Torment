@@ -1,0 +1,6232 @@
+{
+"CGameSprite": {
+"m_resref": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pDialogData": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_sName": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_currentArea": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bGlobal": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bSeenPartyBefore": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_specificScriptName": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bSelected": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bPortraitUpdate": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bInfravisionOn": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pSpriteEffectArray": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pSpriteEffectArrayPosition": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bEscapingArea": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bBlur": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bInvisible": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bSanctuary": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "unproven"
+},
+"m_bVisibilityUpdated": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pVisMapExploredArea": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pPath": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bCheckMove": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_pPathTemp": {
+"kind": "list",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_currentSearchRequest": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bBloodFlashOn": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bVisibleMonster": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bBumpable": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bBumped": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bInClearBumpPath": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_lstBlood": {
+"kind": "list",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bStartedCasting": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bInCasting": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bWaitingForAreaLoadInLeaveAreaLUA": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_groupPosition": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_curProjectile": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_curSpell": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_curItem": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_dialog": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_dialogInteraction": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_speech": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bSecondPass": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_portraitIcons": {
+"kind": "list",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bHPCONBonusTotalUpdate": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bHiding": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bLevelUp": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bAllowDialogInterrupt": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bHappinessChanged": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_secondarySounds": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bMentalStateActing": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bPlayedEncumberedStopped": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bPlayedEncumberedSlowed": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bAllowEffectListCall": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bUsingCutSceneMovement": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bDeleteOnRemove": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_pLocalVariables": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bInUnmarshal": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_interalButtonList": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_dreamScript": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_hitBonusesLeft": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_hitBonusesRight": {
+"kind": "cstring",
+"checked": 21,
+"ok": 18,
+"class": "span"
+},
+"m_damageBonusesLeft": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_damageBonusesRight": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bHasDeathSequence": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_lstTargetPts": {
+"kind": "list",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bInStoreState": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bInDialogState": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bHighlightPortrait": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bCutSceneOverrideOfState": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bForceEffectProcessFromTimeStop": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bCopyForAdd": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_feedbackQueue": {
+"kind": "list",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bOnSearchMap": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bRemovedFromMap": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bSendSpriteUpdate": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bForceVisibilityCheck": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "unproven"
+},
+"m_bPlayAnimationBattleCry": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bPlayAnimationSelectionSound": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bDidAReequipAll": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bInEquip": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bCheckedIfVisiblePause": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bCheckedSpecialAbilities": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bDroppedTempItem": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bDelayUpdate": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bInCopy": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "unproven"
+},
+"m_bOutline": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "unproven"
+}
+},
+"CGameSpriteLastUpdate": {
+"m_pPath": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pPortraitIcons": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bMoraleFailure": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_sAreaString": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bLevelUp": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bFullUpdateRequired": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CString": {
+"m_pchData": {
+"kind": "ptr",
+"checked": 40,
+"ok": 39,
+"class": null
+}
+},
+"CVariableHash": {
+"m_hashEntries": {
+"kind": "ptr",
+"checked": 25,
+"ok": 25,
+"class": "proven"
+}
+},
+"CVidCell": {
+"m_bPaletteChanged": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_pFrame": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bShadowOn": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CVidPalette": {
+"m_pPalette": {
+"kind": "ptr",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+},
+"m_bPaletteOwner": {
+"kind": "bool",
+"checked": 40,
+"ok": 25,
+"class": "proven"
+},
+"m_bSubRangesCalculated": {
+"kind": "bool",
+"checked": 40,
+"ok": 24,
+"class": "proven"
+}
+},
+"STR_RES": {
+"szText": {
+"kind": "cstring",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+}
+},
+"CSound": {
+"pimpl": {
+"kind": "ptr",
+"checked": 40,
+"ok": 38,
+"class": "proven"
+}
+},
+"CSoundImp": {
+"m_pParent": {
+"kind": "ptr",
+"checked": 33,
+"ok": 32,
+"class": "proven"
+},
+"m_bPositionedSound": {
+"kind": "bool",
+"checked": 33,
+"ok": 33,
+"class": "proven"
+},
+"m_bSoundInitialized": {
+"kind": "bool",
+"checked": 33,
+"ok": 33,
+"class": "proven"
+},
+"m_bFireForget": {
+"kind": "bool",
+"checked": 33,
+"ok": 32,
+"class": "proven"
+},
+"m_bSoundIsntDucked": {
+"kind": "bool",
+"checked": 33,
+"ok": 33,
+"class": "proven"
+}
+},
+"CButtonData": {
+"m_icon": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_launcherIcon": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_bDisabled": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bDisplayCount": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CAbilityId": {
+"m_res": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+}
+},
+"CMarker": {
+"m_bTalking": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDoubleSize": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "unproven"
+}
+},
+"CAIObjectType": {
+"m_name": {
+"kind": "cstring",
+"checked": 40,
+"ok": 40,
+"class": null
+}
+},
+"CGameEffectList": {
+"m_posNext": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_posCurrent": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CVidBitmap": {
+"m_szResFileName": {
+"kind": "cstring",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+}
+},
+"CGameAnimation": {
+"m_animation": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CGameAnimationType": {
+"m_bUseSpriteShader": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pSndDeath": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bBrightest": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bBrightestDesired": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bLightSource": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_soundRef": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "span"
+},
+"m_walkRef": {
+"kind": "cstring",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bNewPalette": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CSequenceSoundList": {
+"m_currentSound": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CGameStatsSprite": {
+"m_bWithParty": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "span"
+}
+},
+"CSpellLevelDecrementing": {
+"m_bImmune": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "unproven"
+}
+},
+"CDerivedStatsTemplate": {
+"m_bHeld": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bPolymorphed": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bIdentifyMode": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bEntangle": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bSanctuary": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bMinorGlobe": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bShieldGlobe": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bGrease": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bWeb": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bCasterHold": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDoNotJump": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bAuraCleansing": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bSeeInvisible": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bIgnoreDialogPause": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bCheckForBerserk": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bBerserkStage1": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bBerserkStage2": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_cBardSong": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "span"
+},
+"m_cBackStab": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "span"
+},
+"m_bExplore": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bThrullCharm": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bSummonDisable": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bSummonDisableAction": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bForceSurge": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImprovedHaste": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDisableCircle": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bPreventSpellProtectionEffects": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImmunityToBackStab": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bPreventAISlowDown": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bAnimationOnlyHaste": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bNoPermanentDeath": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImmuneToTurnUndead": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bNPCBump": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bUseAnyItem": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bSexChanged": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImmuneToTracking": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDeadMagic": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImmuneToTimeStop": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bImmuneToSequester": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDoNotDraw": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bIgnoreDrainDeath": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CGameSpriteEquipment": {
+"m_pTempItem": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_pSprite": {
+"kind": "ptr",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CCreatureFileHeader": {
+"m_portraitSmall": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_portraitLarge": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_bNightmare": {
+"kind": "bool",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_scriptOverRide": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_scriptClass": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_scriptRace": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_scriptGeneral": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+},
+"m_scriptDefault": {
+"kind": "resref",
+"checked": 21,
+"ok": 21,
+"class": "proven"
+}
+},
+"CGameAIBase": {
+"m_overrideScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_areaScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_specificsScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_classScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_raceScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_generalScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_defaultScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_achievementScript": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_queuedActions": {
+"kind": "list",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_pendingTriggers": {
+"kind": "list",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_timers": {
+"kind": "list",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bInActionExecution": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "span"
+},
+"m_bNewTrigger": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bNoInterrupt": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bDisableAI": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "span"
+}
+},
+"CAIAction": {
+"m_string1": {
+"kind": "cstring",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_string2": {
+"kind": "cstring",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CAIScript": {
+"cResRef": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CGameObject": {
+"m_pArea": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_posVertList": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_bLocalControl": {
+"kind": "bool",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CGameArea": {
+"m_bHeaderExtendedNight": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_entryPoints": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAreaLoaded": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_resref": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_restMovieDay": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_restMovieNight": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pResWED": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pGame": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSelectionSquareEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bTravelSquare": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPicked": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pbmLumNight": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pObjectMarker": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pObjectMarkerHealthBar": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInPathSearch": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bRecentlySaved": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pDynamicHeight": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lVertSortRemove": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lVertSortBackRemove": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lVertSortFlightRemove": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lVertSortUnderRemove": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lTiledObjects": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPermitNewCharacters": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lClairvoyanceObjects": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAnySpritesInActions": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_bDisplayingHealth": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "unproven"
+},
+"mpSpawner": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CMemINI": {
+"mFileName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"mpLastSection": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CTiledObject": {
+"m_pResWed": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_posAreaList": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_resId": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+}
+},
+"CResWED": {
+"pWEDHeader": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pLayers": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pPolyHeader": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pScreenSectionList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"pPolyList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pPolyPoints": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"WED_LayerHeader_st": {
+"rrTileSet": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CRes": {
+"resref": {
+"kind": "ptr",
+"checked": 2,
+"ok": 2,
+"class": "proven"
+},
+"pData": {
+"kind": "ptr",
+"checked": 2,
+"ok": 2,
+"class": "proven"
+}
+},
+"view_t": {
+"viewOfFile": {
+"kind": "ptr",
+"checked": 3,
+"ok": 3,
+"class": "proven"
+}
+},
+"CVisibilityMap": {
+"m_pMap": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bOutDoor": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pSearchMap": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pVisMapTrees": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pVisMapEllipses": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CSearchBitmap": {
+"m_pDynamicCost": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_snapshotDynamicCost": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_snapshotTerrainTable": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pArea": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CInfinity": {
+"pResWED": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pVRPool": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"pVidMode": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bResizedViewPort": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMovieBroadcast": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartLightning": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStopLightning": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pArea": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bScreenShake": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bZoomEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bZooming": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVidMode": {
+"m_bFadeTo": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_pWindow": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_glContext": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"pPointerVidCell": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pTooltipVidCell": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPrintScreen": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lastCursor": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_hwCursor": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_hwCursorSurface": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"SDL_Surface": {
+"format": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pixels": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"userdata": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"lock_data": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"map": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+}
+},
+"SDL_PixelFormat": {
+"palette": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"next": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+}
+},
+"SDL_Window": {
+"magic": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"title": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"icon": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"gamma": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"saved_gamma": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"surface": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"shaper": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"hit_test_data": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"data": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"driverdata": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"prev": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"next": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"SDL_DisplayMode": {
+"driverdata": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVRamPool": {
+"pTileDef": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"st_tiledef": {
+"pTileSet": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CInfTileSet": {
+"pVRPool": {
+"kind": "ptr",
+"checked": 5,
+"ok": 5,
+"class": "proven"
+},
+"pResTiles": {
+"kind": "ptr",
+"checked": 5,
+"ok": 5,
+"class": "proven"
+}
+},
+"CVidTile": {
+"pRes": {
+"kind": "ptr",
+"checked": 5,
+"ok": 5,
+"class": "proven"
+}
+},
+"CResTile": {
+"tis": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pvr": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CResTileSet": {
+"h": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CGameAreaNotes": {
+"m_bInitialized": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_areaNoteList": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAddingNote": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_rArea": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_szBuffer": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNetworkDelete": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+}
+},
+"CObjectMarker": {
+"m_bHealthBarMarker": {
+"kind": "bool",
+"checked": 2,
+"ok": 2,
+"class": "proven"
+}
+},
+"CInfGame": {
+"m_bGameLoaded": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInLoadGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInLoadArea": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInIniSpawn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFromNewGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInDestroyGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAnotherPlayerJoinedGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInAreaTransition": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartedDeathSequence": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lstTargetPts": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_iconResRef": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAllowTargetDead": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSaveScreen": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPlayerScriptStyle": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pGameAreaMaster": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pathSearch": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_listGrid": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFamiliarBlock": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sSaveGame": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAllowCutSceneBreak": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bForceDither": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_searchRequests": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_searchRequestsBack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lDisposableItems": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPartyAI": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShowAreaNotes": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_resrefTravelScreenImage": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bTriggerOutline": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNoDreamTonight": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bContinueHealing": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lTransitionPiles": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_transitionPilesResref": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMissionPackInfo": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMissionPackInfo25": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMissionPackInfoTBP": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_globalScriptFile": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_appearanceWeapon": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_appearanceBody": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_appearanceShield": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_appearanceHelmet": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bOverrideRestEncounter": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAddOnActivated": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAddInActivated": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sCurrentCampaign": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCampaignEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_storedLocations": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_storedLocationsPocketPlane": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVVCHash": {
+"m_hashEntries": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVVCHashEntry": {
+"m_name": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CAIScriptFile": {
+"m_curScript": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_curResponseSet": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_curCondition": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_curResponse": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_errors": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_decompiledText": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CAIIdList": {
+"m_fileName": {
+"kind": "cstring",
+"checked": 11,
+"ok": 11,
+"class": "proven"
+},
+"m_idList": {
+"kind": "list",
+"checked": 11,
+"ok": 11,
+"class": "proven"
+},
+"m_pIdArray": {
+"kind": "ptr",
+"checked": 11,
+"ok": 11,
+"class": "proven"
+}
+},
+"CAIId": {
+"m_line": {
+"kind": "cstring",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_start": {
+"kind": "cstring",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CGameOptions": {
+"m_bAlwaysDither": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAutoPauseCenter": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNoExtraDamage": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAutoUseMagicAmmo": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNoExtraXP": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInfravision": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStupidQuickItemStuff": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bWeatherEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCheatsEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bEnvironmentalAudio": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRestHealParty": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bTerrainHugging": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHPOverHead": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDebugMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUIEditMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCloudSavesEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNeverShowNuisanceSOD": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDeveloperMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bForceDialogPause": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bUse3dAnimations": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCriticalHitScreenShake": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHotkeysOnToolTips": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bVeryLowPerformance": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisplayExtraCombatInfo": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDuplicateFloatingText": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bColorCircles": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bClassicCircles": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bOverConfirmEverything": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShowLearnableSpells": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShowTriggersOnTab": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bShowBlackSpace": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUseNearestNeighbourScaling": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEquipmentComparison": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bDisableCastingGlows": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bLowMemSounds1": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bLowMemSounds2": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bDisableVEFVidCells": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bDisableDisplayText": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bMidLevelBrighten": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bHighLevelBrighten": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "unproven"
+},
+"m_bPausingMap": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bExtraFeedback": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFilterGames": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAllLearnSpellInfo": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDisableStaticsDuringCombat": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisableFootstepsDuringCombat": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisablePlacedSoundsDuringCombat": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedSpeedAdjusting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedGraphicsTranslucentShadows": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedVeryLowPerformance": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedLowPerformance": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedDisableBrightest": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedLimitTransparency": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedDisableCastingGlows": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedDisableVEFVidCells": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedMidLevelBrighten": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedHighLevelBrighten": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedSoundFootStepsOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedAttackSounds": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedUse3dAnimations": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedDisableVVCSounds": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bAutomatedFasterBlur": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPCOnlyCombatMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bFullyDisableNonVisibleDuringCombat": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisableVVCSounds": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bFasterBlur": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bScaleUI": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bConfirmDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHardwareMouseCursor": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShowHealth": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMaxHP": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStoryMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNightmareMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNightmareBonusGold": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bNightmareBonusXP": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bClericRangerFix": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShowPauseDate": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisableCosmeticAttacks": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bJournalPopups": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRenderTravelRegions": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRenderSearchMap": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bRenderDynamicSearchMap": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bRenderFrameTimes": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bZoomLock": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDisableMultiplayerBanters": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRenderPath": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bFogEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bUseSpriteShader": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCharacterHighlightsEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bGreyscaleOnPauseEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShortDescription": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bRenderExploredMap": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEnableDirectX": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEnableMPChatMenu": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bExpireTraps": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAreaMapZoom": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CGameSave": {
+"m_cResCurrentWorldArea": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bArenaMode": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CPathSearch": {
+"m_pListGrid": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pOpenList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pathBegin": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CGameRemoteObjectArray": {
+"m_pArray": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pControlsChanged": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pControlsChangedTail": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pDeletions": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pDeletionsTail": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CInfButtonArray": {
+"m_bWayPointsOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bToggleButtonCleric": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CInfButtonSettings": {
+"m_bEnabled": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bShowIcon": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bOverrideRender": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bSelectable": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bSelected": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bHighlighted": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+},
+"m_bGreyOut": {
+"kind": "bool",
+"checked": 12,
+"ok": 12,
+"class": "unproven"
+}
+},
+"CMultiplayerSettings": {
+"m_bRefreshCharacters": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRestrictStoreOption": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bJoinRequests": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAllowReformParty": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bArbitrationLockStatus": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bArbitrationLockAllowInput": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sAreaName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sSaveName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHostPermittedDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHostPermittedStore": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFirstConnected": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sCampaignType": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CRuleTables": {
+"m_apSummoningList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPPHostile": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPPReport": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPPBreakInvis": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+}
+},
+"C2DArray": {
+"m_pNamesX": {
+"kind": "ptr",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+},
+"m_pNamesY": {
+"kind": "ptr",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+},
+"m_pArray": {
+"kind": "ptr",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+},
+"m_default": {
+"kind": "cstring",
+"checked": 40,
+"ok": 39,
+"class": "proven"
+}
+},
+"CAreaSoundsAndMusic": {
+"m_dayAmbient": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_dayAmbientExtended": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_nightAmbient": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_nightAmbientExtended": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CAreaFileHeader": {
+"m_areaName": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_areaEdgeNorth": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_areaEdgeEast": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_areaEdgeSouth": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_areaEdgeWest": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CGameContainer": {
+"m_pPolygon": {
+"kind": "ptr",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_lstItems": {
+"kind": "list",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_bDeleteMe": {
+"kind": "bool",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_scriptRes": {
+"kind": "resref",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_keyType": {
+"kind": "resref",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_bJustCreated": {
+"kind": "bool",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+},
+"m_bNeedUpdate": {
+"kind": "bool",
+"checked": 23,
+"ok": 23,
+"class": "proven"
+}
+},
+"CGameStatic": {
+"m_pMovie": {
+"kind": "ptr",
+"checked": 20,
+"ok": 20,
+"class": "proven"
+},
+"m_pImage": {
+"kind": "ptr",
+"checked": 20,
+"ok": 20,
+"class": "span"
+},
+"m_bRender": {
+"kind": "bool",
+"checked": 20,
+"ok": 20,
+"class": "proven"
+},
+"m_bNewPalette": {
+"kind": "bool",
+"checked": 20,
+"ok": 20,
+"class": "proven"
+}
+},
+"CAreaFileStaticObject": {
+"m_resref": {
+"kind": "resref",
+"checked": 20,
+"ok": 20,
+"class": "proven"
+},
+"m_paletteResref": {
+"kind": "resref",
+"checked": 20,
+"ok": 20,
+"class": "proven"
+}
+},
+"CGameSound": {
+"m_bLoopPlaying": {
+"kind": "bool",
+"checked": 6,
+"ok": 6,
+"class": "proven"
+}
+},
+"CGameTrigger": {
+"m_newArea": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_pPolygon": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_scriptRes": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+},
+"m_keyType": {
+"kind": "resref",
+"checked": 40,
+"ok": 40,
+"class": "span"
+}
+},
+"CAITrigger": {
+"m_string1": {
+"kind": "cstring",
+"checked": 14,
+"ok": 14,
+"class": null
+},
+"m_string2": {
+"kind": "cstring",
+"checked": 14,
+"ok": 14,
+"class": null
+}
+},
+"CGameDoor": {
+"m_resID": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_pOpenPolygon": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_pClosedPolygon": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_pOpenSearch": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_pClosedSearch": {
+"kind": "ptr",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_scriptRes": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "proven"
+},
+"m_openSound": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "span"
+},
+"m_closeSound": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "span"
+},
+"m_keyType": {
+"kind": "resref",
+"checked": 10,
+"ok": 10,
+"class": "span"
+}
+},
+"CBaldurChitin": {
+"m_pObjectCursor": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pObjectGame": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineDM": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pEngineProjector": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineAI": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pEngineCharacter": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineCreateChar": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineCreateParty": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineInventory": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineJournal": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pEngineLoad": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineMap": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineOptions": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEnginePriestSpell": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineSave": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pEngineStart": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineWizSpell": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineWorld": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineStore": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineMultiPlayer": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineConnection": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineWorldMap": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineChapter": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pEngineDLC": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFontRectOutline": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCDScanDone": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCDFoundDrive": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sCDDriveName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCDMediaInDrive": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCDFoundBaldurCD": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bIsAutoStarting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDropPanels": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDropCaps": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDisableMovies": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartConfig": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bSuperSpeedAI": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFirstRun": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUseNewGui": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVidFont": {
+"vidCellFont": {
+"kind": "ptr",
+"checked": 24,
+"ok": 24,
+"class": "proven"
+}
+},
+"CMessageHandler": {
+"m_messageList": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLastArbitrationLockStatus": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CBaldurMessage": {
+"m_bInOnObjectAdd": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInOnObjectDelete": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInOnRestAnnounce": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInOnJournalAnnounce": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInOnAreaMapNoteAnnounce": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInOnAnnounceBiography": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_bInHandleBlockingMessages": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_bPlayerShutdown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDeleteAreaPolling": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sDeleteAreaString": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRemovedPlayerID": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDialogRequestPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDialogReplyReturned": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDialogReplyValue": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeaveAreaLuaRequestPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeaveAreaLuaReplyReturned": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeaveAreaNameRequestPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeaveAreaNameReplyReturned": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiplayerSynchClientPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiplayerSynchClientFinished": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bMultiplayerSynchServerPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiplayerSynchServerFinished": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bVersionControlShutdown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sVersionControlShutdownClientString": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sVersionControlShutdownServerString": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiplayerSessionShutdown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInReputationChange": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bInMessageSetDrawPoly": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CChatBuffer": {
+"m_lLabels": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lMessages": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CTlkTable": {
+"m_engineStrings": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CMapStringToString": {
+"m_pHashTable": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pFreeList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pBlocks": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CPlex": {
+"pNext": {
+"kind": "ptr",
+"checked": 5,
+"ok": 5,
+"class": "proven"
+}
+},
+"CScreenDLC": {
+"m_bExitProgram": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lOptionsStack": {
+"kind": "list",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_bSpriteMirror": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+}
+},
+"CWarp": {
+"pLastEngine": {
+"kind": "ptr",
+"checked": 40,
+"ok": 40,
+"class": "proven"
+}
+},
+"CScreenChapter": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cResText": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pTextList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bmpList": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartSound": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cResPower": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bMPRemoveTextScreen": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_destinationEngine": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenWorldMap": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bSelectedReachable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bOverSelectedArea": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMapDragging": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pPath": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cResCurrentArea": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bInControl": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bClickedArea": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_rForceRandomEncounter": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sForcedEncounterEntry": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFontDropShadow": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenConnection": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartedCountDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFirstRender": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bEliminateInitialize": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEMSwapped": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEMValue": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bEMWaiting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAllowInput": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEnumeratingAsynchronous": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bJoinWaiting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bJoinComplete": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bJoinReturnValue": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenMultiPlayer": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bMultiplayerStartup": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLastLockAllowInput": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSentGameDemand": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+}
+},
+"CPtrList": {
+"m_pNodeHead": {
+"kind": "ptr",
+"checked": 6,
+"ok": 6,
+"class": "proven"
+},
+"m_pNodeTail": {
+"kind": "ptr",
+"checked": 6,
+"ok": 6,
+"class": "proven"
+},
+"m_pNodeFree": {
+"kind": "ptr",
+"checked": 6,
+"ok": 6,
+"class": "proven"
+},
+"m_pBlocks": {
+"kind": "ptr",
+"checked": 6,
+"ok": 6,
+"class": "proven"
+}
+},
+"CScreenStore": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lGroupItems": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lStoreItems": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lSpellItems": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lIdentifyItems": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResStore": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResBag": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pStore": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pBag": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pHistoryItem": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bHistoryUseEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResInfoSpell": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bStoreIndex": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStoreStarted": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenWorld": {
+"m_bProtagonistInStartArea": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bWaitToRender": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bIgnoreDisplayTextTop": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMenuKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPaused": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHardPaused": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHostOnlyPaused": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bVisualPaused": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFirstRender": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPausedBeforePickParty": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCheatKeys": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMButtonDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMButtonDragged": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSetStartViewCenter": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pCurrentDialog": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_dialogStartArea": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bForceViewSize": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_consoleText": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bForceDitherToggledOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bBlockStepDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_interactionString": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSetNightOnActivate": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSetDayOnActivate": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_movie": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bInControlOfDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInControlOfStore": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bGameOverPanel": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_movieDelay": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDialogPressedAButton": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEndMajorEventListenToJoin": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bEndMajorEventPauseStatus": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bChapterTransitionPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_szChapterTransitionResRef": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bTextScreenTransitionPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_szTextScreenTransitionResRef": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bMoviePending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_szMovieResRef": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPendingMapWorld": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRestPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRestRenting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bRestMovie": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_deathSoundList": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPlayEndCredits": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPendingReformParty": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeaveAreaLuaPanicPending": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sLeaveAreaLuaPanicAreaName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sLeaveAreaLuaPanicParchment": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLeftPanel": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRightPanel": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCheckRestrict": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInteractionBlock": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPausedBeforeStore": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHighlightEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bViewingContainer": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDead": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInCommand": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPickingParty": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAutoZooming": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+}
+},
+"CWeather": {
+"m_bOverCast": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bWindOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUpgrading": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bReInitialize": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CFog": {
+"densityLast": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"densityCurrent": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"densityNext": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"u": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"v": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"u_prev": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"v_prev": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"dens": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"dens_prev": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CRainStorm": {
+"m_pRainDrops": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CSnowStorm": {
+"m_pSnowFlakes": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CGameDialogSprite": {
+"m_file": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_playerName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPlayedStartSound": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bItemDialog": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bSuppressName": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenWizSpell": {
+"m_bMultiPlayerViewable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bMagePage": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pOldEngine": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_refContingencyResRef": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bControlled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bContingency": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_resEraseSpell": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+}
+},
+"CScreenStart": {
+"m_bStartMusic": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bExitProgram": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMovieOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPlayEndCredits": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bSplashScreens": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bNeedCDCheck": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenSave": {
+"m_bQuitGameSave": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "unproven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenPriestSpell": {
+"m_cResCurrentSpell": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bMultiPlayerViewable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bPriestPage": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bControlled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CScreenOptions": {
+"m_bExitProgram": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_lOptionsStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bSpriteMirror": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bFullScreenOptions": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bReQuietSound": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_cKeymapEditSection": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_cKeymapEditConflictSection": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_cKeymapEditConflictKey": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CScreenMap": {
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bSelectWorldOnUp": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bClairvoyanceCastInBlack": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisplayExploredMap": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pArea": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenLoad": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bHideSoA": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bHideToB": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenJournal": {
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_oldMosaic": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_oldFont": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenInventory": {
+"m_pTempItem": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiPlayerViewable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cCheckLearnSpellRes": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDroppedItemInHand": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPauseWarningDisplayed": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bLearnSpellFailed": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenCreateParty": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CScreenCreateChar": {
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_nCurrentPortrait": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pAppearancePortraits": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lPopupStack": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pPortraits": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pCharacters": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bImported": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pSounds": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pOldBaseStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pOldDerivedStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUpdatedHelp": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bGaveExtraXP": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sImportCharName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pTempBaseStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pTempDerivedStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAddInactiveAbilities": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_szCharInfoStorage": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFinishedAbilitySelection": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lstLevelUpAbilitiesList": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CImportGame": {
+"m_bDrizztDead": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pGame": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pGlobalVariables": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CScreenCharacter": {
+"m_pScripts": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_pCharacters": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiPlayerViewable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMultiPlayerModifyable": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_nCurrentPortrait": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_pAppearancePortraits": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_pPortraits": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_cResPortraitSmall": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResPortraitLarge": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sScript": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sNewScript": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResPortraitSmallTemp": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_cResPortraitMediumTemp": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pSounds": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cResSoundSet": {
+"kind": "resref",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pTempBaseStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pTempDerivedStats": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bShiftKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCapsLockKeyOn": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bAddInactiveAbilities": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bPauseState": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bIsLevelingUp": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bIsCharGenMenu": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CScreenAI": {
+"m_bInteractiveDemoQuit": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bCtrlKeyDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CBaldurProjector": {
+"m_pMovie": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"mve_file": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_movieResRef": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSelectEngine": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFirstRender": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_pCodec": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_cSubtitles": {
+"kind": "resref",
+"checked": 1,
+"ok": 0,
+"class": "proven"
+},
+"m_bDisplayTOBMovie": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CInfToolTip": {
+"m_sText": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bUseSourceRect": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CChitin": {
+"m_bMouseLButtonDown": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"lEngines": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pStartingEngine": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sCommandLine": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bReInitializing": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bScreenEdgeScroll": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartUpHost": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartUpConnect": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sStartUpAddress": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sStartUpPort": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sStartUpPlayer": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sStartUpPassword": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bStartUpNewGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartUpLoadGame": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sStartUpSession": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bStartUpDirectPlayLobby": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bStartUpGameSpyLocation": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sStartUpGameSpyLocation": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bStartUpThroneOfBhaal": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"cSoundMixer": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSoundInitialized": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInMouseWheelQueue": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bIsMouseInWindow": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bFrameOutline": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bUseMirrorFX": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_hEvent": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bUsePlanescapeSoundReductionCurve": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bIsTouchUI": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bUseBGRA": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bRenderTilesLinear": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_sFontName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_fFrameTimeLog": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"m_bLogFrames": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+},
+"pActiveEngine": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bInSyncUpdate": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bManualFrameControl": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bExitOnError": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bEnableCucumber": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"pCurRes": {
+"kind": "ptr",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_sFontNameNormal": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sFontNameRealms": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sFontNameStoneBig": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sFontNameStoneSml": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sFontNameToolFont": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sFontNameFloatTxt": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bDisplaySubtitles": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bReverseMouseWheelZoom": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CProgressBar": {
+"m_bTravelActive": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bWaiting": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bDisableMinibars": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bTimeoutVisible": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bProgressBarActivated": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CNetwork": {
+"m_bApplicationGuidDefined": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAutoConnectCheck": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_bServiceProviderEnumerated": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bServiceProviderSelected": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bConnectionInitialized": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSocketConnecting": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_bSocketConnected": {
+"kind": "bool",
+"checked": 1,
+"ok": 0,
+"class": "span"
+},
+"m_sIPAddress": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_lpDPAddress": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_version": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSessionSelected": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSessionNameToMake": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sSessionNameToMake": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sSessionDescriptionToMake": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSessionPasswordEnabled": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sSessionPassword": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAllowNewConnections": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bConnectionEstablished": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bIsHost": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMaxPlayersDefined": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bSessionOptionsDefined": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sJoinedGame": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sLeftGame": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sDroppedGame": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPlayerNameToMake": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bPlayerCreated": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_sLocalPlayerName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_sHostIPAddress": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bAnnounceNewPlayers": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CNetworkConnectionSettings": {
+"sPlayerName": {
+"kind": "cstring",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CNetworkWindow": {
+"m_bInitialized": {
+"kind": "bool",
+"checked": 7,
+"ok": 7,
+"class": "proven"
+},
+"m_bVSSent": {
+"kind": "bool",
+"checked": 7,
+"ok": 7,
+"class": "proven"
+},
+"m_bVSReceived": {
+"kind": "bool",
+"checked": 7,
+"ok": 7,
+"class": "span"
+},
+"m_lQueueIncomingMessages": {
+"kind": "list",
+"checked": 7,
+"ok": 7,
+"class": "span"
+},
+"m_lQueueOutgoingMessages": {
+"kind": "list",
+"checked": 7,
+"ok": 7,
+"class": "span"
+},
+"m_bNoNak": {
+"kind": "bool",
+"checked": 7,
+"ok": 7,
+"class": "proven"
+},
+"m_bAckTimerSet": {
+"kind": "bool",
+"checked": 7,
+"ok": 7,
+"class": "proven"
+},
+"m_bSomethingHappened": {
+"kind": "bool",
+"checked": 7,
+"ok": 5,
+"class": "proven"
+}
+},
+"cnetworkwindow_queueentry_st": {
+"pInfo": {
+"kind": "ptr",
+"checked": 14,
+"ok": 14,
+"class": "proven"
+}
+},
+"DPWrapper": {
+"m_provider": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_connection": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CVideo": {
+"pCurrentMode": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CSoundMixer": {
+"pimpl": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+},
+"CSoundMixerImp": {
+"alContext": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"alDevice": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"m_bMusicInitialized": {
+"kind": "bool",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+},
+"lVoices": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"lWaiting": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"lLooping": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "span"
+},
+"m_lMusicPositions": {
+"kind": "list",
+"checked": 1,
+"ok": 1,
+"class": "unproven"
+}
+},
+"CVoice": {
+"m_pSound": {
+"kind": "ptr",
+"checked": 4,
+"ok": 4,
+"class": "proven"
+},
+"m_bDuckedOthers": {
+"kind": "bool",
+"checked": 4,
+"ok": 4,
+"class": "proven"
+}
+},
+"CDWordArray": {
+"m_pData": {
+"kind": "ptr",
+"checked": 1,
+"ok": 1,
+"class": "proven"
+}
+}
+}

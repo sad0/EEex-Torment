@@ -98,8 +98,11 @@ VOTES = collections.defaultdict(dict)   # s -> item -> evidence vote count (tie-
 MANUAL = {'fields': {}, 'sizes': {}}
 if os.path.exists(os.path.join(HERE, 'manual_fields.json')):
     MANUAL = json.load(open(os.path.join(HERE, 'manual_fields.json')))
+DROP = collections.defaultdict(set)   # fields proven wrong / absent in PT: never placed
 for _s, _fs in MANUAL.get('fields', {}).items():
     for _f, _v in _fs.items():
+        if isinstance(_v, dict) and _v.get('pt') == 'none':
+            DROP[_s].add(_f); continue
         if not _f.startswith('_'):
             pt_off[_s][_f] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
             how[_s][_f] = 'manual'
@@ -413,6 +416,9 @@ for _ in range(60):
     if not d:
         break
 
+for _s, _fs in DROP.items():
+    for _f in _fs:
+        pt_off[_s].pop(_f, None); how[_s][_f] = 'dropped'
 out = {s: {'bg_size': T.structs[s].size, 'pt_size': pt_size.get(s),
            'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': MSIZE[s].get(f.name, f.size), 'type': f.type, 'how': how[s].get(f.name)} for f in own_items(s)}}
        for s in T.structs}

@@ -1,4 +1,110 @@
 {
+"_EAXPRESET": {
+"dwEnvironment": "unproven",
+"fVolume": "unproven",
+"fDecay": "unproven",
+"fDamping": "unproven"
+},
+"DPWrapper": {
+"m_players": "proven",
+"m_packetQueue": "proven",
+"m_currentSessionId": "proven",
+"m_provider": "proven",
+"m_connection": "proven",
+"m_peerState": "proven",
+"m_server": "proven",
+"m_playerCreateID": "proven",
+"m_nProvider": "proven",
+"m_nMyID": "proven",
+"m_ReplyFlags": "span",
+"PEER_STATE": "unproven"
+},
+"cnetworkwindow_queueentry_st": {
+"pInfo": "proven",
+"dpIDFrom": "span",
+"dpIDTo": "span",
+"dwSize": "unproven",
+"dwFlags": "unproven"
+},
+"CNetwork": {
+"m_nApplicationGuid": "proven",
+"m_bApplicationGuidDefined": "proven",
+"m_bServiceProviderEnumerated": "proven",
+"m_bServiceProviderSelected": "proven",
+"m_nServiceProvider": "proven",
+"m_nTotalServiceProviders": "proven",
+"m_ppszServiceProviderNames": "proven",
+"m_bConnectionInitialized": "proven",
+"m_sIPAddress": "proven",
+"m_version": "proven",
+"m_bSessionSelected": "proven",
+"m_nSession": "proven",
+"m_bSessionNameToMake": "proven",
+"m_sSessionNameToMake": "proven",
+"m_sSessionDescriptionToMake": "proven",
+"m_bSessionPasswordEnabled": "proven",
+"m_sSessionPassword": "proven",
+"m_bAllowNewConnections": "proven",
+"m_bConnectionEstablished": "proven",
+"m_bIsHost": "proven",
+"m_directPlay": "proven",
+"m_nMaxPlayers": "proven",
+"m_dwSessionFlags": "proven",
+"m_bMaxPlayersDefined": "proven",
+"m_sJoinedGame": "proven",
+"m_sLeftGame": "proven",
+"m_sDroppedGame": "proven",
+"m_bPlayerNameToMake": "proven",
+"m_idLocalPlayer": "proven",
+"m_sLocalPlayerName": "proven",
+"m_nTotalPlayers": "proven",
+"m_psPlayerName": "proven",
+"m_pPlayerID": "proven",
+"m_pbPlayerVisible": "proven",
+"m_pbPlayerEnumerateFlag": "proven",
+"m_nLocalPlayer": "proven",
+"m_sHostIPAddress": "proven",
+"m_bAnnounceNewPlayers": "proven",
+"m_pSlidingWindow": "proven",
+"m_SystemWindow": "proven",
+"m_dwCRC32": "proven",
+"m_connectionSettings": "proven",
+"m_bAutoConnectCheck": "span",
+"m_pnServiceProviderIDS": "span",
+"m_bSocketConnecting": "span",
+"m_bSocketConnected": "span",
+"padding2": "span",
+"m_lpDPAddress": "span",
+"m_dwDPAddressSize": "span",
+"padding3": "span",
+"padding4": "span",
+"m_bSessionOptionsDefined": "span",
+"m_bPlayerCreated": "span",
+"m_nHostPlayer": "span",
+"m_lastMessageSentTime": "unproven",
+"m_lastMessageReceivedTime": "unproven"
+},
+"CCallbackBase": {
+"m_nCallbackFlags": "unproven",
+"m_iCallback": "unproven"
+},
+"CProgressBar": {
+"m_nSecondsToTimeout": "proven",
+"m_nActionProgress": "proven",
+"m_nActionTarget": "proven",
+"m_bWaiting": "proven",
+"m_nWaitingReason": "proven",
+"m_bTimeoutVisible": "proven",
+"m_bProgressBarActivated": "proven",
+"m_nProgressBarCaption": "span",
+"m_nParchmentCaption": "span",
+"m_bTravelActive": "span",
+"m_bDisableMinibars": "span",
+"m_bRemoteWaiting": "unproven",
+"m_nRemoteActionProgress": "unproven",
+"m_nRemoteActionTarget": "unproven",
+"m_nRemoteWaitingReason": "unproven"
+},
 "CChitin": {
 "m_mouseLDblClickPoint": "proven",
 "m_mouseLDblClickCount": "proven",
@@ -105,9 +211,25 @@
 "m_fFrameTimeLog": "unproven",
 "m_bLogFrames": "unproven"
 },
+"CPlex": {
+"pNext": "proven",
+"dwReserved": "unproven"
+},
 "CWarp": {
 "pLastEngine": "proven",
-"lTimers": "unproven"
+"lTimers": "absent"
+},
+"CVIDIMG_PALETTEAFFECT": {
+"rgbTintColor": "proven",
+"rgbAddColor": "unproven",
+"rgbLightColor": "unproven",
+"pRangeTints": "unproven",
+"aRangeTintPeriods": "unproven",
+"pRangeAdds": "unproven",
+"aRangeAddPeriods": "unproven",
+"pRangeLights": "unproven",
+"aRangeLightPeriods": "unproven",
+"suppressTints": "unproven"
 },
 "CVidMode": {
 "m_nPrintFile": "proven",
@@ -163,6 +285,10 @@
 "peer": "unproven",
 "in_game": "unproven"
 },
+"IDPPeer": {
+"m_packetSentCount": "unproven",
+"m_packetReceivedCount": "unproven"
+},
 "SteamUGCQueryCompleted_t": {
 "m_handle": "proven",
 "m_eResult": "proven",
@@ -199,6 +325,81 @@
 "m_flScore": "proven",
 "m_unNumChildren": "proven"
 },
+"CSoundMixerImp": {
+"alContext": "proven",
+"alDevice": "proven",
+"bMixerInitialized": "proven",
+"bStreamPlaying": "proven",
+"m_bMusicInitialized": "proven",
+"bInPositionUpdate": "proven",
+"bInSoundUpdate": "proven",
+"bInQueueUpdate": "proven",
+"bInLoopingUpdate": "proven",
+"m_dwEAXProperties": "proven",
+"m_nCurrentSong": "proven",
+"m_nQuietMusicVolume": "proven",
+"m_nActiveArea": "proven",
+"nMaxVoices": "proven",
+"nMaxChannels": "proven",
+"nGlobalVolume": "proven",
+"nPanRange": "proven",
+"nXCoordinate": "proven",
+"nYCoordinate": "proven",
+"nZCoordinate": "proven",
+"pos": "span",
+"m_soundProperties": "span",
+"m_nNumSongs": "span",
+"m_nLastSong": "span",
+"m_nDuckingOn": "span",
+"m_aMusicSlots": "span",
+"m_tSqrtTable": "span",
+"lVoices": "span",
+"lWaiting": "span",
+"lLooping": "span",
+"aChannels": "span",
+"m_lMusicPositions": "unproven"
+},
+"CResCell": {
+"pUncompressedData": "proven",
+"nUncompressedSize": "unproven",
+"m_pBamHeader": "unproven",
+"m_pBamHeaderV2": "unproven",
+"m_pQuads": "unproven",
+"m_pFrames": "unproven",
+"m_pSequences": "unproven",
+"m_pFrameList": "unproven",
+"m_nFrameList": "unproven",
+"m_pPalette": "unproven",
+"m_bParsing": "unproven"
+},
+"DP_Event": {
+"type": "unproven",
+"peer": "unproven",
+"channelID": "unproven",
+"data": "unproven",
+"packet": "unproven"
+},
+"CVidPoly": {
+"m_pVertices": "proven",
+"m_nVertices": "proven",
+"m_pET": "unproven",
+"m_pAET": "unproven"
+},
+"CVIDPOLY_VERTEX": {
+"x": "unproven",
+"y": "unproven"
+},
+"_EdgeDescription": {
+"pNextEdge": "unproven",
+"x": "unproven",
+"nStartY": "unproven",
+"nXDirection": "unproven",
+"nXIncrement": "unproven",
+"nErrTerm": "unproven",
+"nErrTermAdjUp": "unproven",
+"nErrTermAdjDown": "unproven",
+"nCount": "unproven"
+},
 "SDL_TextEditingEvent": {
 "type": "proven",
 "timestamp": "proven",
@@ -212,6 +413,26 @@
 "timestamp": "proven",
 "windowID": "proven",
 "text": "absent"
+},
+"CKeyInfo": {
+"m_repeatCount": "unproven",
+"m_keyCode": "unproven",
+"m_repeatDelay": "unproven",
+"m_repeatRate": "unproven"
+},
+"CResFont": {
+"font": "unproven"
+},
+"CResWave": {
+"m_bCompressed": "proven",
+"m_bIsOgg": "unproven",
+"m_nWaveNormalSize": "unproven",
+"m_nWaveCompressedSize": "unproven",
+"m_pWaveData": "unproven",
+"m_pWaveFormatEx": "unproven"
+},
+"CResText": {
+"m_string": "unproven"
 },
 "CRuleTables": {
 "m_tReactionModCharisma": "proven",
@@ -458,7 +679,78 @@
 "m_speechOffsets": "unproven",
 "m_speechNums": "unproven"
 },
+"CMachineState": {
+"m_inputState": "unproven"
+},
+"CInfButtonSettings": {
+"m_bEnabled": "unproven",
+"m_bShowIcon": "unproven",
+"m_bOverrideRender": "unproven",
+"m_nButtonFrame": "unproven",
+"m_nButtonSelectedFrame": "unproven",
+"m_vcIcon": "unproven",
+"m_vcLauncherIcon": "unproven",
+"m_bSelectable": "unproven",
+"m_bSelected": "unproven",
+"m_bHighlighted": "unproven",
+"m_itemCount": "unproven",
+"m_itemCharge": "unproven",
+"m_bGreyOut": "unproven"
+},
+"CResTileSet": {
+"h": "unproven"
+},
+"CResTile": {
+"tis": "proven",
+"tileIndex": "proven",
+"pvr": "unproven"
+},
+"st_tiledef": {
+"nTile": "unproven",
+"nUsageCount": "unproven",
+"texture": "unproven",
+"pTileSet": "unproven"
+},
+"CResInfTile": {
+"nVRamTile": "unproven",
+"renderCode": "unproven",
+"pDualTileRes": "unproven",
+"flags": "unproven"
+},
 "CGameObjectArray": {},
+"CGameRemoteObjectListEntry": {
+"remotePlayerID": "unproven",
+"remoteObjectID": "unproven",
+"localObjectID": "unproven",
+"pNext": "unproven"
+},
+"CGameRemoteObjectControlChange": {
+"oldPlayerID": "unproven",
+"oldObjectID": "unproven",
+"newPlayerID": "unproven",
+"newObjectID": "unproven",
+"pNext": "unproven",
+"localControl": "unproven"
+},
+"CGameRemoteObjectDeletion": {
+"deletedPlayerID": "unproven",
+"deletedObjectID": "unproven",
+"pNext": "unproven"
+},
+"CGameRemoteObjectArray": {
+"m_pArray": "proven",
+"m_nArraySize": "proven",
+"m_nControlsChanged": "proven",
+"m_pControlsChanged": "proven",
+"m_nDeletions": "proven",
+"m_pDeletions": "proven",
+"m_pDeletionsTail": "proven",
+"m_nControlsAreaChanged": "proven",
+"m_pControlsChangedTail": "span",
+"m_psControlsAreaChangedName": "unproven",
+"m_pnControlsAreaChangedPlayerNum": "unproven",
+"m_pnControlsAreaChangedFirstObject": "unproven"
+},
 "CAreaFileRestEncounter": {
 "m_scriptName": "proven",
 "m_randomCreatureString": "proven",
@@ -475,6 +767,26 @@
 "m_wFlags": "proven",
 "m_weights": "proven",
 "m_notUsed": "proven"
+},
+"CPtrArray": {
+"m_pData": "proven",
+"m_nSize": "proven",
+"m_nMaxSize": "unproven",
+"m_nGrowBy": "unproven"
+},
+"CGameSave": {
+"m_inputMode": "proven",
+"m_cResCurrentWorldArea": "proven",
+"m_nCurrentWorldLink": "proven",
+"m_nPartyGold": "proven",
+"m_curFormation": "proven",
+"m_groupInventory": "proven",
+"m_bArenaMode": "proven",
+"m_cutScene": "proven",
+"m_quickFormations": "span",
+"m_groupInventoryNumber": "span",
+"m_mode": "span",
+"m_nCutSceneStatusOverride": "unproven"
 },
 "CGameOptions": {
 "m_gore": "proven",
@@ -631,6 +943,10 @@
 "m_bShortDescription": "unproven",
 "m_bAreaMapZoom": "unproven"
 },
+"CGameJournal": {
+"IWD_TimeCheat": "proven",
+"m_aChapters": "absent"
+},
 "CInfGame": {
 "m_ruleTables": "proven",
 "m_worldTime": "proven",
@@ -657,6 +973,7 @@
 "m_machineStates": "proven",
 "m_cButtonArray": "proven",
 "m_bSaveScreen": "proven",
+"m_sSaveScreenArea": "absent",
 "m_objectsArray": "proven",
 "m_remoteObjectsArray": "proven",
 "m_visibleArea": "proven",
@@ -756,7 +1073,6 @@
 "m_bAddInActivated": "span",
 "m_sCurrentCampaign": "span",
 "m_VVCPriorities": "span",
-"m_sSaveScreenArea": "unproven",
 "m_rgbMasterBitmap": "unproven",
 "m_pKeymap": "unproven",
 "m_nCharacterTerminationSequenceDelay": "unproven"
@@ -856,7 +1172,7 @@
 "CVisibilityMap": {
 "m_pMap": "proven",
 "m_nMapSize": "absent",
-"m_nWidth": "absent",
+"m_nWidth": "proven",
 "m_nHeight": "proven",
 "m_bOutDoor": "proven",
 "m_pSearchMap": "proven",
@@ -971,6 +1287,13 @@
 "mpSpawner": "unproven",
 "m_lightmapRatio": "unproven"
 },
+"CPathNode": {
+"m_pathNodePrev": "unproven",
+"m_gridPosition": "unproven",
+"m_costStart": "unproven",
+"m_costTotal": "unproven",
+"m_fIsOpen": "unproven"
+},
 "CWorldMapLinks": {
 "m_nArea": "proven",
 "m_entryPoint": "absent",
@@ -1013,9 +1336,48 @@
 "m_pVersion": "absent",
 "m_bLocalCopy": "proven"
 },
+"CVVCHashEntry": {
+"m_name": "unproven",
+"m_priority": "unproven",
+"m_renderType": "unproven",
+"m_renderMask": "unproven"
+},
+"CGameObject": {
+"m_objectType": "proven",
+"m_pos": "proven",
+"m_posZ": "proven",
+"m_pArea": "proven",
+"m_posVertList": "proven",
+"m_listType": "proven",
+"m_typeAI": "proven",
+"m_id": "proven",
+"m_canBeSeen": "proven",
+"m_remotePlayerID": "proven",
+"m_remoteObjectID": "proven",
+"m_AISpeed": "proven",
+"m_bLocalControl": "proven",
+"m_AIInhibitor": "unproven"
+},
+"CVisibilityMapTreeNode": {
+"m_relativePos": "unproven",
+"m_nRange": "unproven",
+"m_aChildren": "unproven",
+"m_parent": "unproven"
+},
+"CVisibilityMapEllipse": {
+"m_nXExploreRange": "unproven",
+"m_nYExploreRange": "unproven",
+"m_pXEllipsePts": "unproven",
+"m_pYEllipsePts": "unproven",
+"m_nXPtsSize": "unproven",
+"m_nYPtsSize": "unproven"
+},
+"CMemINISection": {
+"mSectionName": "absent"
+},
 "CAIScript": {
 "cResRef": "proven",
-"m_caList": "unproven"
+"m_caList": "absent"
 },
 "Item_ability_st": {
 "type": "proven",
@@ -1060,6 +1422,15 @@
 "savingThrow": "proven",
 "saveMod": "proven",
 "special": "proven"
+},
+"CException": {
+"m_bAutoDelete": "unproven",
+"m_bReadyForDelete": "unproven"
+},
+"CFileException": {
+"m_cause": "unproven",
+"m_lOsError": "unproven",
+"m_strFileName": "unproven"
 },
 "CBaldurEngine": {
 "m_nSelectedCharacter": "proven",
@@ -1381,6 +1752,13 @@
 "m_cBardSong": "span",
 "m_cBackStab": "span"
 },
+"CSpellLevelDecrementing": {
+"m_bImmune": "unproven",
+"m_nLevels": "unproven"
+},
+"CPersistantEffectListRegenerated": {
+"m_nCounter": "unproven"
+},
 "CDerivedStats": {
 "m_cImmunitiesProjectile": "proven",
 "m_cImmunitiesEffect": "proven",
@@ -1427,6 +1805,7 @@
 "m_cCriticalEntryList": "span"
 },
 "CScreenCharacter": {
+"m_lPopupStack": "absent",
 "m_pScripts": "proven",
 "m_nScriptIndex": "proven",
 "m_nErrorState": "proven",
@@ -1438,6 +1817,7 @@
 "m_nCustomSoundIndex": "proven",
 "m_pSounds": "proven",
 "m_pTempDerivedStats": "proven",
+"m_lstMageSpells": "absent",
 "m_sExportName": "absent",
 "m_bPauseState": "proven",
 "m_bIsLevelingUp": "proven",
@@ -1454,12 +1834,10 @@
 "m_pTempBaseStats": "span",
 "m_pVirtualKeys": "unproven",
 "m_pVirtualKeysFlags": "unproven",
-"m_lPopupStack": "unproven",
 "m_nDualClass": "unproven",
 "m_nCurrentPortrait": "unproven",
 "m_pAppearancePortraits": "unproven",
 "m_pPortraits": "unproven",
-"m_lstMageSpells": "unproven",
 "m_bShiftKeyDown": "unproven",
 "m_bCapsLockKeyOn": "unproven",
 "m_bCtrlKeyDown": "unproven",
@@ -1467,6 +1845,19 @@
 "m_OldMageSpells": "unproven",
 "m_OldPriestSpells": "unproven",
 "m_bIsCharGenMenu": "unproven"
+},
+"CImportGame": {
+"m_bDrizztDead": "proven",
+"m_nVersion": "proven",
+"m_aPartyCreatures": "proven",
+"m_aNonPartyCreatures": "proven",
+"m_aCreatureData": "proven",
+"m_aNPCData": "proven",
+"m_nGlobalVariables": "proven",
+"m_pGlobalVariables": "proven",
+"m_nPartyGold": "proven",
+"m_pGame": "span",
+"m_nReputation": "unproven"
 },
 "CScreenCreateChar": {
 "m_kitList": "proven",
@@ -1649,6 +2040,10 @@
 "m_pVirtualKeys": "unproven",
 "m_pVirtualKeysFlags": "unproven"
 },
+"MAP_CHAR_POSITIONS": {
+"ptPos": "unproven",
+"id": "unproven"
+},
 "CScreenMap": {
 "m_nClairvoyanceCaster": "proven",
 "m_nScrollState": "proven",
@@ -1808,6 +2203,17 @@
 "m_dialogFreezeMultiplayer": "span",
 "m_bItemDialog": "unproven",
 "m_UpdateTime": "unproven"
+},
+"CPARTICLE_POINT": {
+"x": "unproven",
+"y": "unproven",
+"z": "unproven"
+},
+"CSnowFlake": {
+"m_nDriftWidth": "unproven",
+"m_nDriftCounter": "unproven",
+"m_nMeltTime": "unproven",
+"m_nLastDriftVelocity": "unproven"
 },
 "CScreenWorld": {
 "m_bProtagonistInStartArea": "proven",
@@ -2146,6 +2552,7 @@
 },
 "CScreenDLC": {
 "m_bExitProgram": "proven",
+"m_lPopupStack": "absent",
 "m_lOptionsStack": "proven",
 "m_bSpriteMirror": "span",
 "m_bCtrlKeyDown": "span",
@@ -2156,7 +2563,6 @@
 "m_nDlcState": "span",
 "m_pVirtualKeys": "unproven",
 "m_pVirtualKeysFlags": "unproven",
-"m_lPopupStack": "unproven",
 "m_dwErrorTextId": "unproven",
 "m_dwErrorState": "unproven",
 "m_nNumErrorButtons": "unproven",
@@ -2168,6 +2574,16 @@
 "fs": "unproven",
 "zo": "unproven",
 "zs": "unproven"
+},
+"CFileView": {
+"f": "proven",
+"v": "proven",
+"fileSize": "unproven",
+"filePos": "unproven"
+},
+"CScriptCache": {
+"m_scriptMap": "unproven",
+"m_nTableEntries": "unproven"
 },
 "CBaldurMessage": {
 "m_bInOnObjectAdd": "proven",
@@ -2269,6 +2685,23 @@
 "m_tiledBackground": "span",
 "m_cCachingStatus": "unproven"
 },
+"CSpawnPointArray": {
+"mDefaultFacing": "unproven"
+},
+"CAIAction": {
+"m_actionID": "proven",
+"m_acteeID": "proven",
+"m_acteeID2": "proven",
+"m_specificID": "proven",
+"m_specificID2": "proven",
+"m_specificID3": "proven",
+"m_string1": "proven",
+"m_string2": "proven",
+"m_dest": "proven",
+"m_internalFlags": "proven",
+"m_source": "absent",
+"m_actorID": "span"
+},
 "CGameAIBase": {
 "m_lAttacker": "proven",
 "m_lAttackStyle": "proven",
@@ -2346,6 +2779,57 @@
 "m_pTempItem": "proven",
 "m_pSprite": "proven"
 },
+"CGameSaveCharacter": {
+"m_actionMode": "unproven",
+"m_quickWeapons": "unproven",
+"m_quickSpells": "unproven",
+"m_quickItems": "unproven"
+},
+"CGameStatsRes": {
+"m_cResRef": "unproven",
+"m_nTimesUsed": "unproven"
+},
+"CGameStatsSprite": {
+"m_strStrongestKillName": "proven",
+"m_nStrongestKillXPValue": "proven",
+"m_nJoinPartyTime": "proven",
+"m_nChapterKillsXPValue": "proven",
+"m_nGameKillsXPValue": "proven",
+"m_nGameKillsNumber": "proven",
+"m_nPreviousTimeWithParty": "span",
+"m_bWithParty": "span",
+"m_nChapterKillsNumber": "span",
+"m_pSpellStats": "unproven",
+"m_pWeaponStats": "unproven"
+},
+"CGameEffectList": {
+"m_posNext": "proven",
+"m_posCurrent": "proven",
+"m_newEffect": "unproven",
+"m_retry": "unproven"
+},
+"CVIDMODE_RETICLE_DESCRIPTION": {
+"ptCenter": "unproven",
+"xAxis": "unproven",
+"yAxis": "unproven",
+"piePiecePtXOffset": "unproven",
+"piePiecePtYOffset": "unproven",
+"piePieceXOffset": "unproven",
+"piePieceYOffset": "unproven",
+"xGap": "unproven",
+"yGap": "unproven",
+"cursor": "unproven"
+},
+"CMarker": {
+"m_type": "proven",
+"m_nReticleCounter": "proven",
+"m_rgbColor": "proven",
+"m_reticleDesc": "proven",
+"m_bTalking": "proven",
+"m_nReticleForceRender": "span",
+"m_nReticleForceRenderTarget": "span",
+"m_bDoubleSize": "unproven"
+},
 "CGameSpriteLastUpdate": {
 "m_pPath": "proven",
 "m_nPath": "proven",
@@ -2415,11 +2899,13 @@
 "m_currSndWalk": "proven",
 "m_sndVoice": "proven",
 "m_nNumberOfTimesTalkedTo": "proven",
+"m_specificScriptName": "proven",
 "m_nNumberOfTimesInteractedWith": "absent",
 "m_nHappiness": "proven",
 "m_triggerId": "proven",
 "m_active": "proven",
 "m_activeAI": "proven",
+"m_activeImprisonment": "proven",
 "m_bSelected": "proven",
 "m_bInfravisionOn": "proven",
 "m_terrainTable": "proven",
@@ -2543,6 +3029,7 @@
 "m_talkingRenderCount": "proven",
 "m_inControlLastTime": "proven",
 "m_bSecondPass": "proven",
+"m_portraitIcons": "proven",
 "m_portraitIconVidCell": "proven",
 "m_firstActionSound": "proven",
 "m_lastRested": "proven",
@@ -2600,6 +3087,7 @@
 "m_sndWalk": "span",
 "m_sndArmor": "span",
 "m_sndSpriteEffect": "span",
+"m_bSeenPartyBefore": "span",
 "m_nOldHappiness": "span",
 "m_interactingWith": "span",
 "m_bPortraitUpdate": "span",
@@ -2695,9 +3183,6 @@
 "m_sndReady": "unproven",
 "m_sndDeath": "unproven",
 "m_sndMagic": "unproven",
-"m_bSeenPartyBefore": "unproven",
-"m_specificScriptName": "unproven",
-"m_activeImprisonment": "unproven",
 "m_nTwitches": "unproven",
 "m_spriteEffectSequenceNumber": "unproven",
 "m_spriteEffectDuration": "unproven",
@@ -2712,7 +3197,6 @@
 "m_webHoldVidCell": "unproven",
 "m_forceAnimationReset": "unproven",
 "m_lastCheckedHitPoints": "unproven",
-"m_portraitIcons": "unproven",
 "m_nLastLevelUpHPRoll": "unproven",
 "m_cDialog": "unproven",
 "m_bForceVisibilityCheck": "unproven",
@@ -2721,6 +3205,15 @@
 "m_avgProcessAITime": "unproven",
 "m_nMaxHitPointsOnceOnlyBonus": "unproven",
 "m_bOutline": "unproven"
+},
+"NECK_POINTS": {
+"x": "unproven",
+"y": "unproven"
+},
+"CSequenceSoundList": {
+"m_currentSound": "proven",
+"m_soundPlaying": "proven",
+"m_channel": "unproven"
 },
 "CProjectile": {
 "m_projectileType": "proven",
@@ -2773,6 +3266,41 @@
 "m_failureSpell": "unproven",
 "m_successSpell": "unproven"
 },
+"CGameButtonList": {
+"m_nFirstMageSpellIndex": "unproven"
+},
+"CImmunitiesItemEquip": {
+"m_res": "unproven",
+"m_error": "unproven",
+"m_pEffect": "unproven"
+},
+"CMessageSetDialogPausing": {
+"m_bOpenDoor": "unproven"
+},
+"CScreenStoreItem": {
+"m_cResSpell": "unproven",
+"m_pItem": "unproven",
+"m_bSelected": "unproven",
+"m_bEnabled": "unproven",
+"m_nSlot": "unproven",
+"m_nValue": "unproven",
+"m_nSingleValue": "unproven",
+"m_nCount": "unproven",
+"m_nMaxCount": "unproven",
+"m_nStoreCount": "unproven"
+},
+"CBounceEntry": {
+"m_levelDecrement": "unproven",
+"m_effectId": "unproven",
+"m_pProjectile": "unproven",
+"m_decrementOnly": "unproven",
+"m_string": "unproven",
+"m_stringOnly": "unproven",
+"m_recoverSpellLevels": "unproven"
+},
+"CMessageStartTextScreen": {
+"m_screen": "unproven"
+},
 "CGameContainer": {
 "m_rBounding": "proven",
 "m_pPolygon": "proven",
@@ -2792,13 +3320,13 @@
 "m_posTrapOrigin": "proven",
 "m_triggerRange": "proven",
 "m_ownedBy": "absent",
+"m_keyType": "proven",
 "m_breakDifficulty": "proven",
 "m_drawPoly": "proven",
 "m_strNotPickable": "proven",
 "m_bJustCreated": "proven",
 "m_bNeedUpdate": "proven",
 "m_pileVidCell": "span",
-"m_keyType": "unproven",
 "m_probabilityRoll": "unproven"
 },
 "CContingency": {
@@ -2813,7 +3341,25 @@
 "m_cTarget": "span",
 "m_dwCondition": "span"
 },
+"CResBinary": {
+"m_resVersion": "unproven"
+},
 "CGameAIArea": {},
+"CPersistantEffect": {
+"m_done": "unproven",
+"m_deleted": "unproven",
+"m_numDamage": "unproven",
+"m_persistantType": "unproven",
+"m_sourceID": "unproven",
+"m_period": "unproven",
+"m_periodCounter": "unproven",
+"m_counter": "unproven"
+},
+"CImmunitiesItemTypeEquip": {
+"m_type": "unproven",
+"m_error": "unproven",
+"m_pEffect": "unproven"
+},
 "CProjectileSpellHit": {
 "m_dwRenderFlags": "proven",
 "m_bNewPalette": "proven",
@@ -2822,6 +3368,18 @@
 "m_newPalette": "unproven"
 },
 "CProjectileAmbiant": {},
+"CAOEEntry": {
+"m_type": "unproven",
+"m_center": "unproven",
+"m_radius": "unproven",
+"m_color": "unproven"
+},
+"CColorEffect": {
+"m_effectType": "unproven",
+"m_range": "unproven",
+"m_tintColor": "unproven",
+"m_periodLength": "unproven"
+},
 "CSparkleCluster": {
 "m_colorStart": "proven",
 "m_colorFade1": "proven",
@@ -2841,6 +3399,9 @@
 "m_particleList": "span",
 "m_rBounding": "span"
 },
+"CMessageSetCampaign": {
+"m_campaign": "unproven"
+},
 "CSaveGameSlot": {
 "m_sFileName": "proven",
 "m_sSlotName": "proven",
@@ -2856,6 +3417,41 @@
 "m_nTime": "unproven",
 "m_nChapter": "unproven",
 "m_sChapter": "unproven"
+},
+"CMemINIValue": {
+"mName": "unproven",
+"mValue": "unproven"
+},
+"CFeedbackEntry": {
+"feedBackId": "unproven",
+"int1": "unproven",
+"int2": "unproven",
+"int3": "unproven",
+"ref1": "unproven",
+"int4": "unproven",
+"stringIn": "unproven"
+},
+"CSchoolAndSecondaryDecrementing": {
+"m_nType": "unproven",
+"m_nLevels": "unproven"
+},
+"CMessageSetStateOverrideTime": {
+"m_time": "unproven"
+},
+"CMessageStoreDemand": {
+"m_store": "unproven"
+},
+"CAIConditionResponse": {
+"m_condition": "unproven",
+"m_responseSet": "unproven"
+},
+"CGameJournalEntry": {
+"m_strText": "unproven",
+"m_nTime": "unproven",
+"m_Flag": "unproven",
+"m_wType": "unproven",
+"m_bCharacter": "unproven",
+"m_nCharacterHasNotRead": "unproven"
 },
 "CProjectileBAM": {
 "m_currentVidCell": "proven",
@@ -2912,6 +3508,20 @@
 "m_keyType": "span",
 "m_iGameText": "span"
 },
+"CMessageFadeColor": {
+"m_bFadeTo": "unproven",
+"m_redFade": "unproven",
+"m_greenFade": "unproven",
+"m_blueFade": "unproven"
+},
+"CSequenceSound": {
+"m_sound": "unproven",
+"m_offset": "unproven"
+},
+"CMessageVerbalConstant": {
+"m_verbalConstant": "unproven",
+"m_overHead": "unproven"
+},
 "CStoreFileItem": {
 "m_itemId": "proven",
 "m_wear": "proven",
@@ -2920,11 +3530,34 @@
 "m_nInStock": "proven",
 "m_nStoreFlags": "proven"
 },
+"CAreaPoint": {
+"m_xPos": "unproven",
+"m_yPos": "unproven"
+},
+"CMessageStoreReplaceItem": {
+"m_store": "unproven",
+"m_oldItem": "unproven",
+"m_newItem": "unproven"
+},
+"CGameAreaClairvoyanceEntry": {
+"m_pVisibleTerrainTable": "proven",
+"m_visRange": "proven",
+"m_position": "span",
+"m_id": "span",
+"m_timeKill": "span",
+"m_charId": "span",
+"m_pVisMapExploredArea": "unproven"
+},
 "CProjectileSkyStrike": {
 "m_bGlow": "proven",
 "m_duration": "proven",
 "m_animation": "unproven",
 "m_palette": "unproven"
+},
+"CPortraitIcon": {
+"icon": "unproven",
+"frame": "unproven",
+"bam": "unproven"
 },
 "CAreaFileSoundObject": {
 "m_scriptName": "proven",
@@ -2944,8 +3577,41 @@
 "m_dwFlags": "proven",
 "m_notUsed": "proven"
 },
+"CMessageSetBanterBlockFlag": {
+"m_cutSceneMode": "unproven"
+},
+"CGameDialogReply": {
+"m_flags": "proven",
+"m_needToParseCondition": "proven",
+"m_replyText": "span",
+"m_journalEntry": "span",
+"m_condition": "span",
+"m_response": "span",
+"m_nextDialog": "span",
+"m_nextEntryIndex": "span",
+"m_displayPosition": "span",
+"m_removeIfPicked": "span",
+"m_displayListId": "span",
+"m_conditionString": "span",
+"m_responseString": "unproven",
+"m_needToParseResponse": "unproven",
+"m_bracketedActions": "unproven"
+},
+"CMusicPosition": {
+"m_nSong": "unproven",
+"m_nSection": "unproven",
+"m_nPosition": "unproven"
+},
+"CColorRange": {
+"m_range": "unproven",
+"m_color": "unproven"
+},
 "CMessageSpriteEquipment": {
 "m_equipment": "unproven"
+},
+"CMessageSetFamiliarSummoner": {
+"m_bDone": "unproven",
+"m_nSummoner": "unproven"
 },
 "CMessageSpriteUpdate": {
 "m_pPath": "proven",
@@ -2984,6 +3650,18 @@
 "m_bImmuneToBackstabs": "absent",
 "m_spellState": "absent",
 "m_nBitsRequired": "proven"
+},
+"CResPng": {
+"sz": "unproven",
+"texture": "unproven"
+},
+"CGameTimer": {
+"m_time": "unproven",
+"m_id": "unproven"
+},
+"CMessageCleanAir": {
+"m_resref": "unproven",
+"m_table": "unproven"
 },
 "CAreaFileStaticObject": {
 "m_scriptName": "proven",
@@ -3050,6 +3728,9 @@
 "m_nAreaRange": "unproven",
 "m_targetType": "unproven"
 },
+"CMessageCutSceneLite": {
+"m_cutSceneMode": "unproven"
+},
 "CProjectileChain": {
 "m_carrierArrived": "proven",
 "m_nDelayCount": "proven",
@@ -3062,6 +3743,9 @@
 "m_bOriginCaster": "unproven",
 "m_secondaryProjectileType": "unproven",
 "m_carrierProjectile": "unproven"
+},
+"CMessageDreamScriptResRef": {
+"m_cResRefDialog": "unproven"
 },
 "CProjectileArea": {
 "m_resref": "proven",
@@ -3110,10 +3794,32 @@
 "m_fireBallRing": "span",
 "m_initialVector": "unproven"
 },
+"CGameChunk": {
+"m_visibleTerrainTable": "proven",
+"m_animation": "proven",
+"m_animationRunning": "proven",
+"m_posDelta": "proven",
+"m_posZDelta": "proven",
+"m_doBounce": "proven",
+"m_duration": "proven",
+"m_durationFade": "proven",
+"m_sound": "unproven"
+},
+"CMessageUpdateImmunities": {
+"m_cImmunitiesAIType": "unproven"
+},
+"CMessageSetCurrentArea": {
+"m_cResRefDialog": "unproven"
+},
 "CMessageAddEffect": {
 "m_effect": "proven",
 "m_CommType": "absent",
 "m_noSave": "proven"
+},
+"CMessageChangeStoreMarkup": {
+"m_sStore": "proven",
+"m_buy": "proven",
+"m_sell": "unproven"
 },
 "CGameTiledObject": {
 "m_resID": "proven",
@@ -3136,10 +3842,40 @@
 "m_pImage": "span",
 "m_size": "unproven"
 },
+"CMessageSetBanterBlockTime": {
+"m_time": "unproven"
+},
+"CMessageColorUpdate": {
+"m_appliedColorRanges": "unproven",
+"m_appliedColorEffects": "unproven"
+},
+"CMessageTransformItem": {
+"m_item": "unproven",
+"m_cRes": "unproven"
+},
+"CSelectiveWeaponType": {
+"m_slot": "unproven",
+"m_type": "unproven",
+"m_weapon": "unproven"
+},
+"CMessageSetStateOverrideFlag": {
+"m_cutSceneMode": "unproven"
+},
+"CMessageStartSong": {
+"m_music": "unproven",
+"m_slot": "unproven"
+},
 "CProjectileLightningBounce": {
 "m_lifeSpan": "unproven"
 },
 "CGameAIGame": {},
+"CMessageSetWorldmap": {
+"m_worldmap": "unproven"
+},
+"keyword": {
+"name": "unproven",
+"tt": "unproven"
+},
 "uiMenu": {
 "name": "proven",
 "items": "proven",
@@ -3208,6 +3944,11 @@
 "glow": "unproven",
 "pulse": "unproven"
 },
+"uiColumn": {
+"width": "unproven",
+"items": "unproven",
+"next": "unproven"
+},
 "CProjectileSegment": {
 "m_counter": "proven"
 },
@@ -3238,8 +3979,30 @@
 "CProjectileMulti": {
 "m_projectiles": "unproven"
 },
+"CProjectileCastingGlow": {
+"m_animation": "unproven",
+"m_newPalette": "unproven",
+"m_dwRenderFlags": "unproven",
+"m_bNewPalette": "unproven",
+"m_transparency": "unproven",
+"m_duration": "unproven",
+"m_delay": "unproven"
+},
 "CProjectileConeOfCold": {
 "m_counter": "proven"
+},
+"CResPLT": {
+"m_pData": "proven",
+"m_pHeader": "unproven"
+},
+"CTimer": {
+"bEveryIteration": "unproven",
+"bOnceOnly": "unproven",
+"bTimerStarted": "unproven",
+"pEngine": "unproven",
+"pos": "unproven",
+"nTimerInterval": "unproven",
+"nElaspedTime": "unproven"
 },
 "CProjectileLightningBoltGround": {
 "m_maxBounces": "unproven"
@@ -3257,6 +4020,15 @@
 "m_deltaZ": "unproven",
 "m_bGlow": "unproven"
 },
+"CGameText": {
+"m_nWidth": "proven",
+"m_nDuration": "proven",
+"m_nBeginFade": "proven",
+"m_sText": "proven",
+"m_iTarget": "proven",
+"m_textFont": "span",
+"m_pTarget": "unproven"
+},
 "CObject": {},
 "CObList": {
 "m_pNodeHead": "proven",
@@ -3270,43 +4042,16 @@
 "x": "proven",
 "y": "proven"
 },
-"_EAXPRESET": {
-"dwEnvironment": "unproven",
-"fVolume": "unproven",
-"fDecay": "unproven",
-"fDamping": "unproven"
-},
 "CPtrList": {
 "m_pNodeHead": "proven",
 "m_pNodeTail": "proven",
 "m_nCount": "proven",
 "m_pNodeFree": "proven",
 "m_pBlocks": "proven",
-"m_nBlockSize": "unproven"
+"m_nBlockSize": "proven"
 },
 "CVideo": {
 "pCurrentMode": "proven"
-},
-"DPWrapper": {
-"m_players": "proven",
-"m_packetQueue": "proven",
-"m_currentSessionId": "proven",
-"m_provider": "proven",
-"m_connection": "proven",
-"m_peerState": "proven",
-"m_server": "proven",
-"m_playerCreateID": "proven",
-"m_nProvider": "proven",
-"m_nMyID": "proven",
-"m_ReplyFlags": "span",
-"PEER_STATE": "unproven"
-},
-"cnetworkwindow_queueentry_st": {
-"dpIDFrom": "unproven",
-"dpIDTo": "unproven",
-"pInfo": "unproven",
-"dwSize": "unproven",
-"dwFlags": "unproven"
 },
 "CNetworkWindow": {
 "m_bInitialized": "proven",
@@ -3337,74 +4082,12 @@
 "m_nNextEvent": "span"
 },
 "CNetworkConnectionSettings": {
-"dwFlags": "unproven",
-"dwMaxPlayers": "unproven",
-"sPlayerName": "unproven"
-},
-"CNetwork": {
-"m_nApplicationGuid": "proven",
-"m_bApplicationGuidDefined": "proven",
-"m_bServiceProviderEnumerated": "proven",
-"m_bServiceProviderSelected": "proven",
-"m_nServiceProvider": "proven",
-"m_nTotalServiceProviders": "proven",
-"m_ppszServiceProviderNames": "proven",
-"m_bConnectionInitialized": "proven",
-"m_sIPAddress": "proven",
-"m_version": "proven",
-"m_bSessionSelected": "proven",
-"m_nSession": "proven",
-"m_bSessionNameToMake": "proven",
-"m_sSessionNameToMake": "proven",
-"m_sSessionDescriptionToMake": "proven",
-"m_bSessionPasswordEnabled": "proven",
-"m_sSessionPassword": "proven",
-"m_bAllowNewConnections": "proven",
-"m_bConnectionEstablished": "proven",
-"m_bIsHost": "proven",
-"m_directPlay": "proven",
-"m_nMaxPlayers": "proven",
-"m_dwSessionFlags": "proven",
-"m_bMaxPlayersDefined": "proven",
-"m_sJoinedGame": "proven",
-"m_sLeftGame": "proven",
-"m_sDroppedGame": "proven",
-"m_bPlayerNameToMake": "proven",
-"m_idLocalPlayer": "proven",
-"m_sLocalPlayerName": "proven",
-"m_nTotalPlayers": "proven",
-"m_psPlayerName": "proven",
-"m_pPlayerID": "proven",
-"m_pbPlayerVisible": "proven",
-"m_pbPlayerEnumerateFlag": "proven",
-"m_nLocalPlayer": "proven",
-"m_sHostIPAddress": "proven",
-"m_bAnnounceNewPlayers": "proven",
-"m_pSlidingWindow": "proven",
-"m_SystemWindow": "proven",
-"m_dwCRC32": "proven",
-"m_connectionSettings": "proven",
-"m_bAutoConnectCheck": "span",
-"m_pnServiceProviderIDS": "span",
-"m_bSocketConnecting": "span",
-"m_bSocketConnected": "span",
-"padding2": "span",
-"m_lpDPAddress": "span",
-"m_dwDPAddressSize": "span",
-"padding3": "span",
-"padding4": "span",
-"m_bSessionOptionsDefined": "span",
-"m_bPlayerCreated": "span",
-"m_nHostPlayer": "span",
-"m_lastMessageSentTime": "unproven",
-"m_lastMessageReceivedTime": "unproven"
+"sPlayerName": "proven",
+"dwFlags": "span",
+"dwMaxPlayers": "span"
 },
 "CSteamID": {
 "m_steamid": "proven"
-},
-"CCallbackBase": {
-"m_nCallbackFlags": "unproven",
-"m_iCallback": "unproven"
 },
 "CSteam": {
 "m_isSteamConnected": "proven",
@@ -3424,27 +4107,6 @@
 "m_Subscribed": "span",
 "m_RemoteStorage": "span"
 },
-"CProgressBar": {
-"m_nSecondsToTimeout": "unproven",
-"m_nProgressBarCaption": "unproven",
-"m_nParchmentCaption": "unproven",
-"m_nActionProgress": "unproven",
-"m_nActionTarget": "unproven",
-"m_bTravelActive": "unproven",
-"m_bWaiting": "unproven",
-"m_nWaitingReason": "unproven",
-"m_bDisableMinibars": "unproven",
-"m_bTimeoutVisible": "unproven",
-"m_bProgressBarActivated": "unproven",
-"m_bRemoteWaiting": "unproven",
-"m_nRemoteActionProgress": "unproven",
-"m_nRemoteActionTarget": "unproven",
-"m_nRemoteWaitingReason": "unproven"
-},
-"CPlex": {
-"pNext": "proven",
-"dwReserved": "unproven"
-},
 "CSoundMixer": {
 "pimpl": "proven"
 },
@@ -3458,18 +4120,6 @@
 "m_bPaletteOwner": "proven",
 "m_bSubRangesCalculated": "proven",
 "m_rangeColors": "proven"
-},
-"CVIDIMG_PALETTEAFFECT": {
-"rgbTintColor": "proven",
-"rgbAddColor": "unproven",
-"rgbLightColor": "unproven",
-"pRangeTints": "unproven",
-"aRangeTintPeriods": "unproven",
-"pRangeAdds": "unproven",
-"aRangeAddPeriods": "unproven",
-"pRangeLights": "unproven",
-"aRangeLightPeriods": "unproven",
-"suppressTints": "unproven"
 },
 "CVidImage": {
 "m_cPalette": "proven",
@@ -3489,10 +4139,6 @@
 "offset": "proven"
 },
 "IDPProvider": {},
-"IDPPeer": {
-"m_packetSentCount": "unproven",
-"m_packetReceivedCount": "unproven"
-},
 "CreateItemResult_t": {
 "m_eResult": "proven",
 "m_nPublishedFileId": "proven",
@@ -3511,10 +4157,10 @@
 "ISteamUGC": {},
 "ISteamUserStats": {},
 "view_t": {
-"viewOfFile": "unproven",
-"viewBase": "unproven",
-"viewSize": "unproven",
-"size": "unproven"
+"viewOfFile": "proven",
+"viewBase": "proven",
+"viewSize": "proven",
+"size": "proven"
 },
 "CRes": {
 "resref": "proven",
@@ -3530,47 +4176,13 @@
 "nCount": "span"
 },
 "CSoundProperties": {
-"m_iEAXpreset": "unproven"
+"m_iEAXpreset": "proven"
 },
 "CDWordArray": {
 "m_pData": "proven",
 "m_nSize": "proven",
 "m_nGrowBy": "proven",
 "m_nMaxSize": "span"
-},
-"CSoundMixerImp": {
-"alContext": "proven",
-"alDevice": "proven",
-"bMixerInitialized": "proven",
-"bStreamPlaying": "proven",
-"m_bMusicInitialized": "proven",
-"bInPositionUpdate": "proven",
-"bInSoundUpdate": "proven",
-"bInQueueUpdate": "proven",
-"bInLoopingUpdate": "proven",
-"m_dwEAXProperties": "proven",
-"m_nCurrentSong": "proven",
-"m_nQuietMusicVolume": "proven",
-"m_nActiveArea": "proven",
-"nMaxVoices": "proven",
-"nMaxChannels": "proven",
-"nGlobalVolume": "proven",
-"nPanRange": "proven",
-"nXCoordinate": "proven",
-"nYCoordinate": "proven",
-"nZCoordinate": "proven",
-"pos": "span",
-"m_soundProperties": "span",
-"m_nNumSongs": "span",
-"m_nLastSong": "span",
-"m_nDuckingOn": "span",
-"m_aMusicSlots": "span",
-"m_tSqrtTable": "span",
-"lVoices": "span",
-"lWaiting": "span",
-"lLooping": "span",
-"aChannels": "span",
-"m_lMusicPositions": "unproven"
 },
 "SDL_Rect": {
 "x": "proven",
@@ -3675,19 +4287,6 @@
 "data": "proven",
 "next": "proven"
 },
-"CResCell": {
-"pUncompressedData": "proven",
-"nUncompressedSize": "unproven",
-"m_pBamHeader": "unproven",
-"m_pBamHeaderV2": "unproven",
-"m_pQuads": "unproven",
-"m_pFrames": "unproven",
-"m_pSequences": "unproven",
-"m_pFrameList": "unproven",
-"m_nFrameList": "unproven",
-"m_pPalette": "unproven",
-"m_bParsing": "unproven"
-},
 "frameTableEntry_st": {
 "nWidth": "proven",
 "nHeight": "proven",
@@ -3745,13 +4344,6 @@
 "dst_palette_version": "proven",
 "src_palette_version": "proven"
 },
-"DP_Event": {
-"type": "unproven",
-"peer": "unproven",
-"channelID": "unproven",
-"data": "unproven",
-"packet": "unproven"
-},
 "SteamParamStringArray_t": {
 "m_ppStrings": "proven",
 "m_nNumStrings": "proven"
@@ -3762,12 +4354,6 @@
 "m_nScore": "proven",
 "m_cDetails": "proven",
 "m_hUGC": "proven"
-},
-"CVidPoly": {
-"m_pVertices": "proven",
-"m_nVertices": "proven",
-"m_pET": "unproven",
-"m_pAET": "unproven"
 },
 "bamHeader_st": {
 "nFileType": "proven",
@@ -3807,21 +4393,6 @@
 "colors": "proven",
 "version": "proven",
 "refcount": "proven"
-},
-"CVIDPOLY_VERTEX": {
-"x": "unproven",
-"y": "unproven"
-},
-"_EdgeDescription": {
-"pNextEdge": "unproven",
-"x": "unproven",
-"nStartY": "unproven",
-"nXDirection": "unproven",
-"nXIncrement": "unproven",
-"nErrTerm": "unproven",
-"nErrTermAdjUp": "unproven",
-"nErrTermAdjDown": "unproven",
-"nCount": "unproven"
 },
 "SDL_CommonEvent": {
 "type": "proven",
@@ -4029,15 +4600,6 @@
 "timestamp": "proven",
 "file": "proven"
 },
-"CKeyInfo": {
-"m_repeatCount": "unproven",
-"m_keyCode": "unproven",
-"m_repeatDelay": "unproven",
-"m_repeatRate": "unproven"
-},
-"CResFont": {
-"font": "unproven"
-},
 "CVidCellFont": {},
 "CVidFont": {
 "vidCellFont": "proven",
@@ -4045,14 +4607,6 @@
 "tintcolor": "proven",
 "pointSize": "proven",
 "zoom": "proven"
-},
-"CResWave": {
-"m_bCompressed": "proven",
-"m_bIsOgg": "unproven",
-"m_nWaveNormalSize": "unproven",
-"m_nWaveCompressedSize": "unproven",
-"m_pWaveData": "unproven",
-"m_pWaveFormatEx": "unproven"
 },
 "CSound": {
 "pimpl": "proven"
@@ -4104,9 +4658,6 @@
 "vcCustom": "span",
 "nAnimationSpeed": "span"
 },
-"CResText": {
-"m_string": "unproven"
-},
 "C2DArray": {
 "m_pNamesX": "proven",
 "m_pNamesY": "proven",
@@ -4123,9 +4674,9 @@
 "m_nArray": "proven"
 },
 "CAIId": {
-"m_id": "unproven",
-"m_line": "unproven",
-"m_start": "unproven"
+"m_line": "proven",
+"m_start": "proven",
+"m_id": "span"
 },
 "CTimerWorld": {
 "m_gameTime": "proven",
@@ -4133,7 +4684,7 @@
 "m_nLastPercentage": "proven"
 },
 "CGamePermission": {
-"m_permission": "unproven"
+"m_permission": "proven"
 },
 "CMultiplayerSettings": {
 "m_pnPlayerReady": "proven",
@@ -4161,26 +4712,8 @@
 "m_cDefaultPermissions": "span",
 "m_pnLoadGameControlledByPlayer": "span"
 },
-"CMachineState": {
-"m_inputState": "unproven"
-},
 "CMachineStates": {
 "m_machineStates": "proven"
-},
-"CInfButtonSettings": {
-"m_bEnabled": "unproven",
-"m_bShowIcon": "unproven",
-"m_bOverrideRender": "unproven",
-"m_nButtonFrame": "unproven",
-"m_nButtonSelectedFrame": "unproven",
-"m_vcIcon": "unproven",
-"m_vcLauncherIcon": "unproven",
-"m_bSelectable": "unproven",
-"m_bSelected": "unproven",
-"m_bHighlighted": "unproven",
-"m_itemCount": "unproven",
-"m_itemCharge": "unproven",
-"m_bGreyOut": "unproven"
 },
 "CInfButtonArray": {
 "m_buttonArray": "proven",
@@ -4205,20 +4738,12 @@
 "nSize": "proven",
 "nTableOffset": "proven"
 },
-"CResTileSet": {
-"h": "unproven"
-},
 "CSize": {},
 "CResPVR": {
 "texture": "proven",
 "format": "proven",
 "filtering": "proven",
-"size": "unproven"
-},
-"CResTile": {
-"tis": "proven",
-"tileIndex": "proven",
-"pvr": "unproven"
+"size": "proven"
 },
 "CVidTile": {
 "pRes": "proven",
@@ -4227,12 +4752,6 @@
 "CVRamPool": {
 "nVTiles": "proven",
 "pTileDef": "proven"
-},
-"st_tiledef": {
-"nTile": "unproven",
-"nUsageCount": "unproven",
-"texture": "unproven",
-"pTileSet": "unproven"
 },
 "CInfTileSet": {
 "tis": "proven",
@@ -4249,45 +4768,6 @@
 "tileSE": "proven"
 },
 "VRAM_FLAGS": {},
-"CResInfTile": {
-"nVRamTile": "unproven",
-"renderCode": "unproven",
-"pDualTileRes": "unproven",
-"flags": "unproven"
-},
-"CGameRemoteObjectListEntry": {
-"remotePlayerID": "unproven",
-"remoteObjectID": "unproven",
-"localObjectID": "unproven",
-"pNext": "unproven"
-},
-"CGameRemoteObjectControlChange": {
-"oldPlayerID": "unproven",
-"oldObjectID": "unproven",
-"newPlayerID": "unproven",
-"newObjectID": "unproven",
-"pNext": "unproven",
-"localControl": "unproven"
-},
-"CGameRemoteObjectDeletion": {
-"deletedPlayerID": "unproven",
-"deletedObjectID": "unproven",
-"pNext": "unproven"
-},
-"CGameRemoteObjectArray": {
-"m_pArray": "proven",
-"m_nArraySize": "proven",
-"m_nControlsChanged": "proven",
-"m_pControlsChanged": "proven",
-"m_nDeletions": "proven",
-"m_pDeletions": "proven",
-"m_pDeletionsTail": "proven",
-"m_nControlsAreaChanged": "proven",
-"m_pControlsChangedTail": "span",
-"m_psControlsAreaChangedName": "unproven",
-"m_pnControlsAreaChangedPlayerNum": "unproven",
-"m_pnControlsAreaChangedFirstObject": "unproven"
-},
 "CAreaFileHeader": {
 "m_areaName": "proven",
 "m_lastSaved": "proven",
@@ -4374,34 +4854,10 @@
 "pPolyPoints": "proven",
 "pScreenSectionList": "span"
 },
-"CPtrArray": {
-"m_pData": "proven",
-"m_nSize": "proven",
-"m_nMaxSize": "unproven",
-"m_nGrowBy": "unproven"
-},
 "CAIGroup": {
 "m_groupChanged": "proven",
-"m_groupId": "span",
-"m_memberList": "unproven"
-},
-"CGameSave": {
-"m_inputMode": "proven",
-"m_cResCurrentWorldArea": "unproven",
-"m_nCurrentWorldLink": "unproven",
-"m_nPartyGold": "unproven",
-"m_curFormation": "unproven",
-"m_quickFormations": "unproven",
-"m_groupInventory": "unproven",
-"m_bArenaMode": "unproven",
-"m_groupInventoryNumber": "unproven",
-"m_mode": "unproven",
-"m_cutScene": "unproven",
-"m_nCutSceneStatusOverride": "unproven"
-},
-"CGameJournal": {
-"IWD_TimeCheat": "unproven",
-"m_aChapters": "unproven"
+"m_memberList": "proven",
+"m_groupId": "span"
 },
 "CWorldMapHeader": {
 "m_nMapCount": "proven",
@@ -4471,13 +4927,6 @@
 "m_openListLevel": "span",
 "m_nOpenList": "span",
 "m_pathCurrent": "span"
-},
-"CPathNode": {
-"m_pathNodePrev": "unproven",
-"m_gridPosition": "unproven",
-"m_costStart": "unproven",
-"m_costTotal": "unproven",
-"m_fIsOpen": "unproven"
 },
 "CGameEffectUsabilityList": {},
 "CItem": {
@@ -4570,48 +5019,9 @@
 "m_crapsWinAmount": "proven",
 "m_wheelWinAmount": "proven"
 },
-"CVVCHashEntry": {
-"m_name": "unproven",
-"m_priority": "unproven",
-"m_renderType": "unproven",
-"m_renderMask": "unproven"
-},
-"CGameObject": {
-"m_objectType": "proven",
-"m_pos": "proven",
-"m_posZ": "proven",
-"m_pArea": "proven",
-"m_posVertList": "proven",
-"m_listType": "proven",
-"m_typeAI": "proven",
-"m_id": "proven",
-"m_canBeSeen": "proven",
-"m_remotePlayerID": "proven",
-"m_remoteObjectID": "proven",
-"m_AISpeed": "proven",
-"m_bLocalControl": "proven",
-"m_AIInhibitor": "unproven"
-},
 "CObjectMarker": {
 "m_lstObjectIds": "proven",
 "m_bHealthBarMarker": "proven"
-},
-"CVisibilityMapTreeNode": {
-"m_relativePos": "unproven",
-"m_nRange": "unproven",
-"m_aChildren": "unproven",
-"m_parent": "unproven"
-},
-"CVisibilityMapEllipse": {
-"m_nXExploreRange": "unproven",
-"m_nYExploreRange": "unproven",
-"m_pXEllipsePts": "unproven",
-"m_pYEllipsePts": "unproven",
-"m_nXPtsSize": "unproven",
-"m_nYPtsSize": "unproven"
-},
-"CMemINISection": {
-"mSectionName": "unproven"
 },
 "CSpawnFile": {
 "mpExitList": "proven",
@@ -4628,7 +5038,7 @@
 "m_responseList": "span"
 },
 "CAICondition": {
-"m_triggerList": "unproven"
+"m_triggerList": "proven"
 },
 "CAIResponse": {
 "m_weight": "proven",
@@ -4661,15 +5071,6 @@
 "mScope": "proven",
 "mLabel": "proven"
 },
-"CException": {
-"m_bAutoDelete": "unproven",
-"m_bReadyForDelete": "unproven"
-},
-"CFileException": {
-"m_cause": "unproven",
-"m_lOsError": "unproven",
-"m_strFileName": "unproven"
-},
 "CResWebm": {
 "m_pCodec": "proven",
 "m_bComplete": "proven",
@@ -4699,26 +5100,19 @@
 "CImmunitiesEffect": {},
 "CImmunitiesAIType": {},
 "CImmunitiesSpellLevel": {
-"m_levels": "unproven"
+"m_levels": "proven"
 },
 "CImmunitiesWeapon": {},
 "CSelectiveBonusList": {},
 "CImmunitiesItemEquipList": {},
 "CImmunitiesItemTypeEquipList": {},
-"CSpellLevelDecrementing": {
-"m_bImmune": "unproven",
-"m_nLevels": "unproven"
-},
 "CImmunitiesSpellLevelDecrementing": {
-"m_levels": "unproven"
+"m_levels": "proven"
 },
 "CImmunitiesSchoolAndSecondary": {},
 "CImmunitiesSpellList": {},
 "CImmunitiesSchoolAndSecondaryDecrementing": {},
 "CContingencyList": {},
-"CPersistantEffectListRegenerated": {
-"m_nCounter": "unproven"
-},
 "CColorRanges": {},
 "CColorEffects": {},
 "CCreatureFileMemorizedSpellLevel": {
@@ -4734,19 +5128,6 @@
 "CCriticalEntryList": {},
 "CResGame": {},
 "CGameFile": {},
-"CImportGame": {
-"m_bDrizztDead": "proven",
-"m_nVersion": "proven",
-"m_aPartyCreatures": "proven",
-"m_aNonPartyCreatures": "proven",
-"m_aCreatureData": "proven",
-"m_aNPCData": "proven",
-"m_nGlobalVariables": "proven",
-"m_pGlobalVariables": "proven",
-"m_nPartyGold": "proven",
-"m_pGame": "span",
-"m_nReputation": "unproven"
-},
 "CGameAbilityList": {},
 "MOSAICHEADERV2": {
 "nFileType": "proven",
@@ -4780,15 +5161,6 @@
 "quads": "span"
 },
 "CVidMosaic": {},
-"MAP_CHAR_POSITIONS": {
-"ptPos": "unproven",
-"id": "unproven"
-},
-"CPARTICLE_POINT": {
-"x": "unproven",
-"y": "unproven",
-"z": "unproven"
-},
 "CParticle": {
 "m_nTimeStamp": "proven",
 "m_nTailLength": "proven",
@@ -4801,16 +5173,10 @@
 "m_nRenderTime": "span",
 "m_bTag": "span"
 },
-"CSnowFlake": {
-"m_nDriftWidth": "unproven",
-"m_nDriftCounter": "unproven",
-"m_nMeltTime": "unproven",
-"m_nLastDriftVelocity": "unproven"
-},
 "CSnowStorm": {
 "m_pSnowFlakes": "proven",
-"m_nCurrentDensity": "unproven",
-"m_rOldWorldViewPort": "unproven"
+"m_rOldWorldViewPort": "proven",
+"m_nCurrentDensity": "span"
 },
 "CRainDrop": {},
 "CRainStorm": {
@@ -4841,6 +5207,8 @@
 "fading": "proven",
 "initialized": "proven",
 "contrast": "proven",
+"innerColor": "proven",
+"outerColor": "proven",
 "diff": "span",
 "dvel": "span",
 "pointAmount": "span",
@@ -4848,9 +5216,7 @@
 "pointUForce": "span",
 "pointVForce": "span",
 "explosionPos": "span",
-"alpha": "span",
-"innerColor": "unproven",
-"outerColor": "unproven"
+"alpha": "span"
 },
 "CWeather": {
 "m_bOverCast": "proven",
@@ -4879,28 +5245,22 @@
 "CMapStringToString": {
 "m_pHashTable": "proven",
 "m_nHashTableSize": "proven",
-"m_nCount": "unproven",
-"m_pFreeList": "unproven",
-"m_pBlocks": "unproven",
-"m_nBlockSize": "unproven"
+"m_nCount": "proven",
+"m_pFreeList": "proven",
+"m_pBlocks": "proven",
+"m_nBlockSize": "proven"
 },
 "CTlkFileOverride": {
 "bLoaded": "proven",
 "m_UserAddedCount": "proven"
 },
-"CFileView": {
-"f": "proven",
-"v": "proven",
-"fileSize": "unproven",
-"filePos": "unproven"
-},
 "CTlkTable": {
+"m_mapTokens": "proven",
 "m_currentGender": "proven",
 "m_tlkFiles": "proven",
 "m_engineStrings": "proven",
 "m_nEngineStrings": "proven",
 "m_nEngineStringBase": "proven",
-"m_mapTokens": "span",
 "m_override": "span"
 },
 "CCacheStatus": {
@@ -4925,10 +5285,6 @@
 "m_nAnimationFrame": "span",
 "m_nAnimationDirection": "span"
 },
-"CScriptCache": {
-"m_scriptMap": "unproven",
-"m_nTableEntries": "unproven"
-},
 "CChatBuffer": {
 "m_lLabels": "proven",
 "m_lMessages": "proven",
@@ -4939,12 +5295,9 @@
 "m_messageList": "proven",
 "m_bLastArbitrationLockStatus": "proven"
 },
-"CSpawnPointArray": {
-"mDefaultFacing": "unproven"
-},
 "CSpawnPoint": {
 "mLocation": "proven",
-"mFacing": "unproven"
+"mFacing": "proven"
 },
 "CSpawn": {
 "SpawnFlags": "proven",
@@ -5059,20 +5412,6 @@
 "m_sound": "proven",
 "m_sourceTarget": "proven"
 },
-"CAIAction": {
-"m_actionID": "proven",
-"m_acteeID": "proven",
-"m_acteeID2": "proven",
-"m_specificID": "proven",
-"m_specificID2": "proven",
-"m_specificID3": "proven",
-"m_string1": "proven",
-"m_string2": "proven",
-"m_dest": "proven",
-"m_internalFlags": "proven",
-"m_actorID": "span",
-"m_source": "unproven"
-},
 "CAbilityId": {
 "m_itemType": "proven",
 "m_abilityNum": "proven",
@@ -5092,76 +5431,16 @@
 "m_icon": "span",
 "m_launcherIcon": "span"
 },
-"CGameSaveCharacter": {
-"m_actionMode": "unproven",
-"m_quickWeapons": "unproven",
-"m_quickSpells": "unproven",
-"m_quickItems": "unproven"
-},
-"CGameStatsRes": {
-"m_cResRef": "unproven",
-"m_nTimesUsed": "unproven"
-},
-"CGameStatsSprite": {
-"m_strStrongestKillName": "proven",
-"m_nStrongestKillXPValue": "proven",
-"m_nJoinPartyTime": "proven",
-"m_nChapterKillsXPValue": "proven",
-"m_nGameKillsXPValue": "proven",
-"m_nPreviousTimeWithParty": "span",
-"m_bWithParty": "span",
-"m_nChapterKillsNumber": "span",
-"m_nGameKillsNumber": "unproven",
-"m_pSpellStats": "unproven",
-"m_pWeaponStats": "unproven"
-},
 "CGameAnimation": {
 "m_animation": "proven",
-"m_overrides": "unproven",
-"m_sequenceHighLevel": "unproven",
-"m_detectedByInfravision": "unproven",
-"m_bloodColor": "unproven",
-"m_personalSpace": "unproven"
-},
-"CGameEffectList": {
-"m_posNext": "proven",
-"m_posCurrent": "proven",
-"m_newEffect": "unproven",
-"m_retry": "unproven"
+"m_overrides": "proven",
+"m_personalSpace": "proven",
+"m_sequenceHighLevel": "span",
+"m_detectedByInfravision": "span",
+"m_bloodColor": "span"
 },
 "CPersistantEffectList": {},
-"CVIDMODE_RETICLE_DESCRIPTION": {
-"ptCenter": "unproven",
-"xAxis": "unproven",
-"yAxis": "unproven",
-"piePiecePtXOffset": "unproven",
-"piePiecePtYOffset": "unproven",
-"piePieceXOffset": "unproven",
-"piePieceYOffset": "unproven",
-"xGap": "unproven",
-"yGap": "unproven",
-"cursor": "unproven"
-},
-"CMarker": {
-"m_type": "proven",
-"m_nReticleCounter": "proven",
-"m_rgbColor": "proven",
-"m_reticleDesc": "proven",
-"m_bTalking": "proven",
-"m_nReticleForceRender": "span",
-"m_nReticleForceRenderTarget": "span",
-"m_bDoubleSize": "unproven"
-},
 "CBounceList": {},
-"NECK_POINTS": {
-"x": "unproven",
-"y": "unproven"
-},
-"CSequenceSoundList": {
-"m_currentSound": "proven",
-"m_soundPlaying": "proven",
-"m_channel": "unproven"
-},
 "CGameAnimationType": {
 "m_animationID": "proven",
 "m_moveScale": "proven",
@@ -5216,9 +5495,6 @@
 "m_pPath": "proven"
 },
 "CSpell": {},
-"CGameButtonList": {
-"m_nFirstMageSpellIndex": "unproven"
-},
 "CResSpell": {
 "pAbilities": "proven",
 "pEffects": "proven",
@@ -5261,19 +5537,11 @@
 "pProjectileObject": "proven",
 "pEffectList": "proven"
 },
-"CImmunitiesItemEquip": {
-"m_res": "unproven",
-"m_error": "unproven",
-"m_pEffect": "unproven"
-},
 "CMessage": {
 "m_targetId": "proven",
 "m_sourceId": "proven"
 },
 "CMessageStopFollow": {},
-"CMessageSetDialogPausing": {
-"m_bOpenDoor": "unproven"
-},
 "CSavedGamePartyCreature": {
 "m_wFlags": "proven",
 "m_portraitId": "proven",
@@ -5383,18 +5651,6 @@
 "m_bPocketPlane": "proven",
 "m_storedLocations": "proven"
 },
-"CScreenStoreItem": {
-"m_cResSpell": "unproven",
-"m_pItem": "unproven",
-"m_bSelected": "unproven",
-"m_bEnabled": "unproven",
-"m_nSlot": "unproven",
-"m_nValue": "unproven",
-"m_nSingleValue": "unproven",
-"m_nCount": "unproven",
-"m_nMaxCount": "unproven",
-"m_nStoreCount": "unproven"
-},
 "CVIDPALETTE_COLOR": {
 "rgbRed": "proven",
 "rgbGreen": "proven",
@@ -5407,18 +5663,6 @@
 "m_wRenderState": "proven",
 "m_posAreaList": "proven",
 "m_resId": "proven"
-},
-"CBounceEntry": {
-"m_levelDecrement": "unproven",
-"m_effectId": "unproven",
-"m_pProjectile": "unproven",
-"m_decrementOnly": "unproven",
-"m_string": "unproven",
-"m_stringOnly": "unproven",
-"m_recoverSpellLevels": "unproven"
-},
-"CMessageStartTextScreen": {
-"m_screen": "unproven"
 },
 "CMessageSetTarget": {
 "m_dest": "proven",
@@ -5469,27 +5713,9 @@
 "m_item": "proven",
 "m_cRes": "proven"
 },
-"CResBinary": {
-"m_resVersion": "unproven"
-},
 "CResArea": {},
 "CMessageStaticSequence": {
 "m_bSequence": "proven"
-},
-"CPersistantEffect": {
-"m_done": "unproven",
-"m_deleted": "unproven",
-"m_numDamage": "unproven",
-"m_persistantType": "unproven",
-"m_sourceID": "unproven",
-"m_period": "unproven",
-"m_periodCounter": "unproven",
-"m_counter": "unproven"
-},
-"CImmunitiesItemTypeEquip": {
-"m_type": "unproven",
-"m_error": "unproven",
-"m_pEffect": "unproven"
 },
 "CMessageAddClairvoyance": {
 "m_ptPosition": "proven",
@@ -5522,12 +5748,6 @@
 "m_checkCurrentResponse": "proven",
 "m_clearActions": "proven"
 },
-"CAOEEntry": {
-"m_type": "unproven",
-"m_center": "unproven",
-"m_radius": "unproven",
-"m_color": "unproven"
-},
 "CMessageForceRandomEncounter": {
 "m_sEntryPoint": "proven",
 "m_cRes": "span"
@@ -5537,20 +5757,7 @@
 "m_bAdjustment": "proven",
 "m_bFeedback": "proven"
 },
-"CColorEffect": {
-"m_effectType": "unproven",
-"m_range": "unproven",
-"m_tintColor": "unproven",
-"m_periodLength": "unproven"
-},
-"CMessageSetCampaign": {
-"m_campaign": "unproven"
-},
 "CResStore": {},
-"CMemINIValue": {
-"mName": "unproven",
-"mValue": "unproven"
-},
 "CMessageDropPath": {},
 "CResBIO": {},
 "CAreaFileCharacterEntryPoint": {
@@ -5565,19 +5772,6 @@
 },
 "CMessageSpritePetrify": {
 "m_bPetrify": "proven"
-},
-"CFeedbackEntry": {
-"feedBackId": "unproven",
-"int1": "unproven",
-"int2": "unproven",
-"int3": "unproven",
-"ref1": "unproven",
-"int4": "unproven",
-"stringIn": "unproven"
-},
-"CSchoolAndSecondaryDecrementing": {
-"m_nType": "unproven",
-"m_nLevels": "unproven"
 },
 "CCriticalEntry": {
 "m_hitOrMiss": "proven",
@@ -5613,9 +5807,6 @@
 "CMessageReputationChange": {
 "m_deltaRep": "proven"
 },
-"CMessageSetStateOverrideTime": {
-"m_time": "unproven"
-},
 "CMessageSetVariableAll": {
 "m_sAreaName": "proven",
 "m_variable": "proven"
@@ -5629,9 +5820,6 @@
 },
 "CMessageSetDrawPoly": {
 "m_time": "proven"
-},
-"CMessageStoreDemand": {
-"m_store": "unproven"
 },
 "CMessageExitStoreMode": {},
 "CMessageSpawnPtSpawn": {
@@ -5650,21 +5838,9 @@
 "m_height": "proven",
 "m_res": "span"
 },
-"CAIConditionResponse": {
-"m_condition": "unproven",
-"m_responseSet": "unproven"
-},
 "CMessageResetMorale": {
 "m_bMoraleFailure": "proven",
 "m_iMoraleLevel": "proven"
-},
-"CGameJournalEntry": {
-"m_strText": "unproven",
-"m_nTime": "unproven",
-"m_Flag": "unproven",
-"m_wType": "unproven",
-"m_bCharacter": "unproven",
-"m_nCharacterHasNotRead": "unproven"
 },
 "CMessageNonControlledDialogStart": {
 "m_NPCId": "proven",
@@ -5696,7 +5872,7 @@
 "m_itemFlagMask": "span"
 },
 "CMessageSetDirection": {
-"m_face": "unproven"
+"m_face": "proven"
 },
 "CCreatureFileKnownSpell": {
 "m_knownSpellId": "proven",
@@ -5704,16 +5880,6 @@
 "m_magicType": "proven"
 },
 "CGameEffectDamage": {},
-"CMessageFadeColor": {
-"m_bFadeTo": "unproven",
-"m_redFade": "unproven",
-"m_greenFade": "unproven",
-"m_blueFade": "unproven"
-},
-"CSequenceSound": {
-"m_sound": "unproven",
-"m_offset": "unproven"
-},
 "CMessageSetDialogResRef": {
 "m_cResRefDialog": "span"
 },
@@ -5731,10 +5897,6 @@
 },
 "CMessageInsertAction": {
 "m_action": "proven"
-},
-"CMessageVerbalConstant": {
-"m_verbalConstant": "unproven",
-"m_overHead": "unproven"
 },
 "CMessageDisplayTextRefPoint": {
 "m_text": "proven",
@@ -5758,10 +5920,6 @@
 "CMessageAnimationChange": {
 "m_animationId": "proven"
 },
-"CAreaPoint": {
-"m_xPos": "unproven",
-"m_yPos": "unproven"
-},
 "SAreaFileWrapper": {
 "pContainer": "proven",
 "pStartingItem": "proven",
@@ -5778,21 +5936,7 @@
 "m_overrideDialogMode": "proven",
 "m_bPlaySound": "proven"
 },
-"CMessageStoreReplaceItem": {
-"m_store": "unproven",
-"m_oldItem": "unproven",
-"m_newItem": "unproven"
-},
 "CMessageMakeGlobal": {},
-"CGameAreaClairvoyanceEntry": {
-"m_pVisibleTerrainTable": "proven",
-"m_visRange": "proven",
-"m_position": "span",
-"m_id": "span",
-"m_timeKill": "span",
-"m_charId": "span",
-"m_pVisMapExploredArea": "unproven"
-},
 "CProjectileInstant": {},
 "CMessageWeaponImmumityUpdate": {
 "m_weaponImmunities": "span"
@@ -5814,11 +5958,6 @@
 "m_colors": "proven",
 "m_bApply": "proven"
 },
-"CPortraitIcon": {
-"icon": "unproven",
-"frame": "unproven",
-"bam": "unproven"
-},
 "CSoundChannel": {
 "m_nVolumeInit": "proven",
 "nVolume": "proven",
@@ -5830,9 +5969,6 @@
 "CMessageSetInStore": {
 "m_bState": "proven"
 },
-"CMessageSetBanterBlockFlag": {
-"m_cutSceneMode": "unproven"
-},
 "CMessageSetActiveImprisonment": {
 "m_active": "proven"
 },
@@ -5840,35 +5976,9 @@
 "m_slotNum": "proven"
 },
 "CResEffect": {},
-"CGameDialogReply": {
-"m_flags": "proven",
-"m_needToParseCondition": "proven",
-"m_replyText": "span",
-"m_journalEntry": "span",
-"m_condition": "span",
-"m_response": "span",
-"m_nextDialog": "span",
-"m_nextEntryIndex": "span",
-"m_displayPosition": "span",
-"m_removeIfPicked": "span",
-"m_displayListId": "span",
-"m_conditionString": "span",
-"m_responseString": "unproven",
-"m_needToParseResponse": "unproven",
-"m_bracketedActions": "unproven"
-},
-"CMusicPosition": {
-"m_nSong": "unproven",
-"m_nSection": "unproven",
-"m_nPosition": "unproven"
-},
 "CMessageSetDialogWait": {
 "m_wait": "proven",
 "m_waitTarget": "proven"
-},
-"CColorRange": {
-"m_range": "unproven",
-"m_color": "unproven"
 },
 "CMessageFamiliarRemoveResRef": {
 "m_nAlignment": "proven",
@@ -5883,9 +5993,9 @@
 },
 "CMessageClearDialogOnMachine": {},
 "CImmunitySpell": {
-"m_res": "unproven",
-"m_error": "unproven",
-"m_item": "unproven"
+"m_res": "proven",
+"m_error": "proven",
+"m_item": "proven"
 },
 "CMessageDisplayText": {
 "m_name": "proven",
@@ -5896,10 +6006,6 @@
 "m_moveToTop": "proven",
 "m_overHead": "proven",
 "m_overrideDialogMode": "proven"
-},
-"CMessageSetFamiliarSummoner": {
-"m_bDone": "unproven",
-"m_nSummoner": "unproven"
 },
 "CMessageStaticPalette": {
 "m_res": "proven"
@@ -5923,10 +6029,6 @@
 "m_bLeavePool": "proven",
 "m_rBounding": "span"
 },
-"CResPng": {
-"sz": "unproven",
-"texture": "unproven"
-},
 "CMessageSetAreaFlag": {
 "m_dFlag": "proven",
 "m_bSet": "proven"
@@ -5942,17 +6044,9 @@
 "m_xPos": "proven",
 "m_yPos": "proven"
 },
-"CGameTimer": {
-"m_time": "unproven",
-"m_id": "unproven"
-},
 "CMessageSetLastObject": {
 "m_lAttacker": "proven",
 "m_type": "proven"
-},
-"CMessageCleanAir": {
-"m_resref": "unproven",
-"m_table": "unproven"
 },
 "CProjectileAreaFileFormat": {
 "m_dwAreaFlags": "proven",
@@ -5993,38 +6087,15 @@
 "CMessageFamiliarAdd": {
 "m_bFamiliarAdd": "proven"
 },
-"CMessageCutSceneLite": {
-"m_cutSceneMode": "unproven"
-},
 "CMessageChangeDirection": {
 "m_face": "proven"
 },
 "CMessageCutSceneModeStatus": {
 "m_cutSceneMode": "proven"
 },
-"CMessageDreamScriptResRef": {
-"m_cResRefDialog": "unproven"
-},
-"CGameChunk": {
-"m_visibleTerrainTable": "proven",
-"m_animation": "proven",
-"m_animationRunning": "proven",
-"m_posDelta": "proven",
-"m_posZDelta": "proven",
-"m_doBounce": "proven",
-"m_duration": "proven",
-"m_durationFade": "proven",
-"m_sound": "unproven"
-},
-"CMessageUpdateImmunities": {
-"m_cImmunitiesAIType": "unproven"
-},
 "CMessageSetAreaScript": {
 "m_script": "proven",
 "m_nSlot": "proven"
-},
-"CMessageSetCurrentArea": {
-"m_cResRefDialog": "unproven"
 },
 "CMessageRemoveVVCInternal": {
 "m_level": "proven",
@@ -6041,8 +6112,8 @@
 "m_level": "proven"
 },
 "CSelectiveBonus": {
-"m_type": "unproven",
-"m_bonus": "unproven"
+"m_type": "proven",
+"m_bonus": "proven"
 },
 "CMessageFireSpell": {
 "m_dialogRes": "proven",
@@ -6071,11 +6142,6 @@
 "m_flags": "proven",
 "m_store": "span",
 "m_itemId": "span"
-},
-"CMessageChangeStoreMarkup": {
-"m_sStore": "proven",
-"m_buy": "proven",
-"m_sell": "unproven"
 },
 "CAreaFileRandomMonsterSpawningPoint": {
 "m_scriptName": "proven",
@@ -6115,9 +6181,6 @@
 "m_bItemDialog": "proven",
 "m_bSuppressName": "proven"
 },
-"CMessageSetBanterBlockTime": {
-"m_time": "unproven"
-},
 "CAbilityData": {
 "m_name": "proven",
 "m_effect": "proven",
@@ -6131,10 +6194,6 @@
 },
 "CMessageSpawnPtActivate": {
 "m_bActivate": "proven"
-},
-"CMessageColorUpdate": {
-"m_appliedColorRanges": "unproven",
-"m_appliedColorEffects": "unproven"
 },
 "CMessageNonControlledDialogReturn": {
 "m_return": "proven"
@@ -6177,10 +6236,6 @@
 "CMessageUpdateMachineState": {
 "m_dwFlags": "proven"
 },
-"CMessageTransformItem": {
-"m_item": "unproven",
-"m_cRes": "unproven"
-},
 "CMessageSetHappiness": {
 "m_happiness": "proven"
 },
@@ -6194,14 +6249,6 @@
 "m_time": "proven"
 },
 "CMessageStopEscapeArea": {},
-"CSelectiveWeaponType": {
-"m_slot": "unproven",
-"m_type": "unproven",
-"m_weapon": "unproven"
-},
-"CMessageSetStateOverrideFlag": {
-"m_cutSceneMode": "unproven"
-},
 "CProjectileCallLightning": {},
 "CMessageSetSound": {
 "m_strref": "proven",
@@ -6221,10 +6268,6 @@
 "m_nCharges": "proven",
 "m_nAbilityNum": "proven"
 },
-"CMessageStartSong": {
-"m_music": "unproven",
-"m_slot": "unproven"
-},
 "CMessageClearTriggers": {},
 "CUtil": {},
 "CMessageSetNumTimesTalkedTo": {
@@ -6235,9 +6278,6 @@
 "m_magnitudeX": "proven",
 "m_magnitudeY": "proven",
 "m_bOverride": "proven"
-},
-"CMessageSetWorldmap": {
-"m_worldmap": "unproven"
 },
 "CMessageStartCombatMusic": {},
 "CMessageColorReset": {},
@@ -6252,38 +6292,29 @@
 "CMessageTakeCreatureItems": {
 "m_itemType": "proven"
 },
-"keyword": {
-"name": "unproven",
-"tt": "unproven"
-},
 "Marker": {
-"src": "unproven",
-"start": "unproven",
-"count": "unproven",
-"line": "unproven"
+"count": "proven",
+"line": "proven",
+"src": "span",
+"start": "span"
 },
 "uiVariant": {
 "type": "proven",
 "value": "proven"
 },
-"uiColumn": {
-"width": "unproven",
-"items": "unproven",
-"next": "unproven"
-},
 "slicedRect": {
-"tl": "unproven",
-"t": "unproven",
-"tr": "unproven",
-"r": "unproven",
-"br": "unproven",
-"b": "unproven",
-"bl": "unproven",
-"l": "unproven",
-"c": "unproven",
-"d": "unproven",
-"name": "unproven",
-"flags": "unproven"
+"tl": "proven",
+"t": "proven",
+"tr": "proven",
+"r": "proven",
+"br": "proven",
+"b": "proven",
+"bl": "proven",
+"l": "proven",
+"c": "proven",
+"d": "proven",
+"name": "proven",
+"flags": "proven"
 },
 "CResDLG": {},
 "CResCRE": {},
@@ -6323,15 +6354,6 @@
 "pPanels": "proven",
 "pControlTable": "proven"
 },
-"CProjectileCastingGlow": {
-"m_animation": "unproven",
-"m_newPalette": "unproven",
-"m_dwRenderFlags": "unproven",
-"m_bNewPalette": "unproven",
-"m_transparency": "unproven",
-"m_duration": "unproven",
-"m_delay": "unproven"
-},
 "PLTHeader_st": {
 "nType": "proven",
 "nVersion": "proven",
@@ -6339,10 +6361,6 @@
 "nCompressed": "proven",
 "nWidth": "proven",
 "nHeight": "proven"
-},
-"CResPLT": {
-"m_pData": "proven",
-"m_pHeader": "unproven"
 },
 "SDL_MessageBoxButtonData": {
 "flags": "proven",
@@ -6365,15 +6383,6 @@
 "numbuttons": "proven",
 "buttons": "proven",
 "colorScheme": "proven"
-},
-"CTimer": {
-"bEveryIteration": "unproven",
-"bOnceOnly": "unproven",
-"bTimerStarted": "unproven",
-"pEngine": "unproven",
-"pos": "unproven",
-"nTimerInterval": "unproven",
-"nElaspedTime": "unproven"
 },
 "CVEFVidCellBase": {
 "m_cVidCellRef": "proven",
@@ -6463,15 +6472,6 @@
 "m_level": "span",
 "m_renderType": "span"
 },
-"CGameText": {
-"m_nWidth": "proven",
-"m_nDuration": "proven",
-"m_nBeginFade": "proven",
-"m_sText": "proven",
-"m_iTarget": "proven",
-"m_textFont": "span",
-"m_pTarget": "unproven"
-},
 "CGameSound": {
 "m_soundObject": "proven",
 "m_bLoopPlaying": "proven",
@@ -6527,169 +6527,169 @@
 "info": "proven"
 },
 "texture_t": {
-"texture": "unproven",
-"w": "unproven",
-"h": "unproven",
-"initialized": "unproven",
-"deleted": "unproven",
-"minFilter": "unproven",
-"magFilter": "unproven",
-"wrapS": "unproven",
-"wrapT": "unproven",
-"internalFormat": "unproven",
-"altTexture": "unproven"
+"texture": "proven",
+"w": "proven",
+"h": "proven",
+"initialized": "proven",
+"deleted": "proven",
+"minFilter": "proven",
+"magFilter": "proven",
+"wrapS": "proven",
+"wrapT": "proven",
+"internalFormat": "proven",
+"altTexture": "proven"
 },
 "program_t": {
-"p": "unproven",
-"uST": "unproven",
-"uTcScale": "unproven",
-"uTex": "unproven",
-"uTex2": "unproven",
-"uColorTone": "unproven",
-"uZoomStrength": "unproven",
-"uTcClamp": "unproven",
-"uScreenHeight": "unproven",
-"uSpriteBlurAmount": "unproven"
+"p": "proven",
+"uST": "proven",
+"uTcScale": "proven",
+"uTex": "proven",
+"uTex2": "proven",
+"uColorTone": "proven",
+"uZoomStrength": "proven",
+"uTcClamp": "proven",
+"uScreenHeight": "proven",
+"uSpriteBlurAmount": "proven"
 },
 "d3dvertex_t": {
-"x": "unproven",
-"y": "unproven",
-"z": "unproven",
-"c": "unproven",
-"s": "unproven",
-"t": "unproven",
-"s1": "unproven",
-"t1": "unproven"
+"x": "proven",
+"y": "proven",
+"z": "proven",
+"c": "proven",
+"s": "proven",
+"t": "proven",
+"s1": "proven",
+"t1": "proven"
 },
 "drawCmd_t": {
-"state": "unproven",
-"primStart": "unproven",
-"primCount": "unproven"
+"state": "proven",
+"primStart": "proven",
+"primCount": "proven"
 },
 "vec4_t": {
-"___u0": "unproven",
-"___u1": "unproven",
-"___u2": "unproven",
-"___u3": "unproven"
+"___u0": "proven",
+"___u1": "proven",
+"___u2": "proven",
+"___u3": "proven"
 },
 "samplerState_t": {
-"nWrapS": "unproven",
-"nWrapT": "unproven",
-"nMinFilter": "unproven",
-"nMagFilter": "unproven"
+"nWrapS": "proven",
+"nWrapT": "proven",
+"nMinFilter": "proven",
+"nMagFilter": "proven"
 },
 "vertex_t": {
-"x": "unproven",
-"y": "unproven",
-"z": "unproven",
-"s": "unproven",
-"t": "unproven",
-"c": "unproven",
-"s1": "unproven",
-"t1": "unproven"
+"x": "proven",
+"y": "proven",
+"z": "proven",
+"s": "proven",
+"t": "proven",
+"c": "proven",
+"s1": "proven",
+"t1": "proven"
 },
 "stbtt_fontinfo": {
+"userdata": "proven",
 "data": "proven",
+"fontstart": "proven",
+"numGlyphs": "proven",
+"loca": "proven",
+"head": "proven",
+"glyf": "proven",
+"hhea": "proven",
+"hmtx": "proven",
+"kern": "proven",
 "index_map": "proven",
-"userdata": "span",
-"fontstart": "span",
-"numGlyphs": "span",
-"loca": "span",
-"head": "span",
-"glyf": "span",
-"hhea": "span",
-"hmtx": "span",
-"kern": "span",
-"indexToLocFormat": "unproven"
+"indexToLocFormat": "proven"
 },
 "sheet": {
-"texture": "unproven",
-"w": "unproven",
-"h": "unproven"
+"texture": "proven",
+"w": "proven",
+"h": "proven"
 },
 "stbrp_node": {
-"x": "unproven",
-"y": "unproven",
-"next": "unproven"
+"x": "proven",
+"y": "proven",
+"next": "proven"
 },
 "stbrp_context": {
-"width": "unproven",
-"height": "unproven",
-"align": "unproven",
-"init_mode": "unproven",
-"heuristic": "unproven",
-"num_nodes": "unproven",
-"active_head": "unproven",
-"free_head": "unproven",
-"extra": "unproven"
+"width": "proven",
+"height": "proven",
+"align": "proven",
+"init_mode": "proven",
+"heuristic": "proven",
+"num_nodes": "proven",
+"active_head": "proven",
+"free_head": "proven",
+"extra": "proven"
 },
 "stbrp_rect": {
-"id": "unproven",
-"w": "unproven",
-"h": "unproven",
-"x": "unproven",
-"y": "unproven",
-"was_packed": "unproven"
+"id": "proven",
+"w": "proven",
+"h": "proven",
+"x": "proven",
+"y": "proven",
+"was_packed": "proven"
 },
 "glyphmap_t": {
-"packedRect": "unproven",
-"glyphIndex": "unproven",
-"xOffset": "unproven",
-"yOffset": "unproven",
-"leftSideBearing": "unproven",
-"advanceWidth": "unproven",
-"sheetIndex": "unproven",
-"renderable": "unproven",
-"fullyProcessed": "unproven"
+"packedRect": "proven",
+"glyphIndex": "proven",
+"xOffset": "proven",
+"yOffset": "proven",
+"leftSideBearing": "proven",
+"advanceWidth": "proven",
+"sheetIndex": "proven",
+"renderable": "proven",
+"fullyProcessed": "proven"
 },
 "line_metric": {
-"size": "unproven",
-"line_spacing": "unproven",
-"ascent": "unproven",
-"descent": "unproven",
-"scale": "unproven"
+"size": "proven",
+"line_spacing": "proven",
+"ascent": "proven",
+"descent": "proven",
+"scale": "proven"
 },
 "glyphHashEntry_t": {
-"key": "unproven",
-"glyphIndex": "unproven"
+"key": "proven",
+"glyphIndex": "proven"
 },
 "glyphHashTable_t": {
-"numElements": "unproven",
-"table": "unproven"
+"numElements": "proven",
+"table": "proven"
 },
 "glyphAdvance_t": {
-"numGlyphAdvanceItems": "unproven",
-"glyphAdvances": "unproven"
+"numGlyphAdvanceItems": "proven",
+"glyphAdvances": "proven"
 },
 "font_t": {
+"name": "proven",
+"space": "proven",
 "fontInfo": "proven",
+"fontSheets": "proven",
+"packingContext": "proven",
+"packingNodes": "proven",
+"numFontSizes": "proven",
+"currentSheetIndex": "proven",
 "numGlyphMaps": "proven",
 "maxNumGlyphMaps": "proven",
 "newGlyphMapping": "proven",
 "pointSizeToGlyphIndexMapping": "proven",
+"newLineMetrics": "proven",
+"fileBuffer": "proven",
+"metricTopMax": "proven",
+"metricBottomMax": "proven",
+"metricRight": "proven",
 "glyphHashTable": "proven",
-"glyphAdvance": "proven",
-"name": "span",
-"space": "span",
-"fontSheets": "span",
-"packingContext": "span",
-"packingNodes": "span",
-"numFontSizes": "span",
-"currentSheetIndex": "span",
-"newLineMetrics": "span",
-"fileBuffer": "span",
-"metricTopMax": "span",
-"metricBottomMax": "span",
-"metricRight": "span"
+"glyphAdvance": "proven"
 },
 "letter_t": {
-"gi": "unproven",
-"w": "unproven",
-"T": "unproven"
+"gi": "proven",
+"w": "proven",
+"T": "proven"
 },
 "adjustmentData_t": {
-"maxAscent": "unproven",
-"maxDescent": "unproven"
+"maxAscent": "proven",
+"maxDescent": "proven"
 },
 "SDL_ShapeDriver": {},
 "SDL_VideoDevice": {

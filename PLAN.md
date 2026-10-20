@@ -43,7 +43,12 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
        Still unproven: CGameAIBase trigger lists/scripts, some CGameSprite/CDerivedStats/CChitin fields,
        UI/font structs (slicedRect, font_t, uiItem: phase 5 menus), CGameAreaClairvoyanceEntry (stubbed).
    Phase 4 completion checklist (John: 100%, zero blind spots):
-   - [ ] 4a Fields: every bindings field proven (evidence / manual / span) or removed; coverage report
+   - [x] 4a Fields: the header now exposes only proven fields (tools/bindings/coverage.py: code evidence,
+         hand proofs, closed spans, runtime checks); 4886 proven, 593 unproven + 124 absent are opaque
+         `nobinding` padding (list in coverage.json). Proof sources: tracker on EEex BG symbol names,
+         autoprove/embedprove (validated aligned functions), emulated switch tables (swemu.py), INI keys,
+         2DA names, file formats on all PT data files, library versions, allocation sizes, live memory
+         checks (memprobe.py). EEex.dll and LuaBindings.dll build on it; in-game test passes.
    - [ ] 4b Semantic audit of every EEex.dll function vs the PT engine; in-game test of every export
    - [x] 4c 13 Unsupported patterns: each proven absent / not applicable in PT (PATTERNS.md); EEex.dll
          uses no coroutine API; phase 5 must guard the labels in EEex_Fix_Patch.lua (op33 + CheckAdd

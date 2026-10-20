@@ -129,6 +129,10 @@
    "m_cLimboList": {
     "pt": "0xcee8",
     "why": "autoprove: 3 unanimous votes from 3 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_sSaveScreenArea": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (cstring check, bindings/memprobe.py); left opaque"
    }
   },
   "CRuleTables": {
@@ -1057,12 +1061,28 @@
    "m_sndVoice": {
     "pt": "0x3838",
     "why": "autoprove: 4 unanimous votes from 4 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_specificScriptName": {
+    "pt": "0x3880",
+    "why": "runtime: resref valid on all 21 live instances (bindings/memprobe.py)"
+   },
+   "m_portraitIcons": {
+    "pt": "0x49d8",
+    "why": "runtime: list valid on all 21 live instances (bindings/memprobe.py)"
+   },
+   "m_activeImprisonment": {
+    "pt": "0x390c",
+    "why": "31 aligned accesses (CanSaveGame, GetTargetShareType, FollowObjectFormation, ...) map [sprite+0x3bfc] to [sprite+0x390c]; PT inserts a PT-only int at 0x3910 (extra check in CGameArea::GetNearest/GetAllInRange) before m_bSelected 0x3914"
    }
   },
   "CAIScript": {
    "cResRef": {
     "pt": "0x0",
     "why": "PT CAIScript::Construct (0x176d80) runs the CResRef ctor on this; next member (CObList) moves from +8 to +0x10"
+   },
+   "m_caList": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 40 live instances (list check, bindings/memprobe.py); left opaque"
    }
   },
   "CGameSpriteEquipment": {
@@ -1714,7 +1734,16 @@
     "why": "autoprove: 2 unanimous votes from 2 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
    }
   },
-  "CScreenCharacter": {},
+  "CScreenCharacter": {
+   "m_lPopupStack": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (list check, bindings/memprobe.py); left opaque"
+   },
+   "m_lstMageSpells": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (list check, bindings/memprobe.py); left opaque"
+   }
+  },
   "CScreenCreateChar": {},
   "CScreenInventory": {
    "m_bPauseState": {
@@ -1791,7 +1820,12 @@
   "CScreenConnection": {},
   "CScreenWorldMap": {},
   "CScreenMovies": {},
-  "CScreenDLC": {},
+  "CScreenDLC": {
+   "m_lPopupStack": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (list check, bindings/memprobe.py); left opaque"
+   }
+  },
   "CBaldurMessage": {},
   "CProjectile": {
    "m_ignoreDamage": {
@@ -1803,6 +1837,10 @@
    "m_rBounding": {
     "pt": "0x538",
     "why": "autoprove: 10 unanimous votes from 7 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_keyType": {
+    "pt": "0x98a",
+    "why": "runtime: resref valid on all 23 live instances (bindings/memprobe.py)"
    }
   },
   "CProjectileSpellHit": {},
@@ -1916,7 +1954,36 @@
    }
   },
   "CInfButtonSettings": {},
-  "CGameSave": {},
+  "CGameSave": {
+   "m_bArenaMode": {
+    "pt": "0x340",
+    "why": "embedprove: 15 unanimous votes from 11 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_cResCurrentWorldArea": {
+    "pt": "0x4",
+    "why": "embedprove: 3 unanimous votes from 3 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_curFormation": {
+    "pt": "0x14",
+    "why": "embedprove: 12 unanimous votes from 9 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_cutScene": {
+    "pt": "0x34c",
+    "why": "embedprove: 2 unanimous votes from 2 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_groupInventory": {
+    "pt": "0x20",
+    "why": "embedprove: 3 unanimous votes from 3 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_nCurrentWorldLink": {
+    "pt": "0xc",
+    "why": "embedprove: 4 unanimous votes from 4 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_nPartyGold": {
+    "pt": "0x10",
+    "why": "embedprove: 10 unanimous votes from 6 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
   "CSpawn": {
    "mSequentialStartValue": {
     "pt": "0x1d8",
@@ -1939,6 +2006,302 @@
    "m_priority": {
     "pt": "0x3f8",
     "why": "autoprove: 4 unanimous votes from 3 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   }
+  },
+  "CGameSpriteLastUpdate": {},
+  "CString": {
+   "m_pchData": {
+    "pt": "0x0",
+    "why": "runtime: ptr valid on all 40 live instances (bindings/memprobe.py)"
+   }
+  },
+  "CVariableHash": {},
+  "CVidCell": {},
+  "CVidPalette": {},
+  "STR_RES": {},
+  "CSound": {},
+  "CSoundImp": {},
+  "CButtonData": {},
+  "CAbilityId": {},
+  "CMarker": {},
+  "CAIObjectType": {
+   "m_name": {
+    "pt": "0x0",
+    "why": "runtime: cstring valid on all 40 live instances (bindings/memprobe.py)"
+   }
+  },
+  "CGameEffectList": {},
+  "CVidBitmap": {},
+  "CGameAnimation": {
+   "m_overrides": {
+    "pt": "0x8",
+    "why": "CGameSprite.m_animation (proven) +8: 118 aligned accesses in 53 functions, all +8 in PT"
+   },
+   "m_personalSpace": {
+    "pt": "0x10",
+    "why": "CGameSprite.m_animation (proven) +0x10: 111 aligned accesses in 47 functions, all +0x10 in PT"
+   }
+  },
+  "CSequenceSoundList": {},
+  "CGameStatsSprite": {
+   "m_nGameKillsNumber": {
+    "pt": "0x20",
+    "why": "embedprove: 7 unanimous votes from 3 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CCreatureFileHeader": {},
+  "CAIAction": {
+   "m_source": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 40 live instances (cstring check, bindings/memprobe.py); left opaque"
+   }
+  },
+  "CMemINI": {},
+  "CMemINISection": {
+   "mSectionName": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (cstring check, bindings/memprobe.py); left opaque"
+   }
+  },
+  "CTiledObject": {},
+  "CResWED": {},
+  "WED_LayerHeader_st": {},
+  "CRes": {},
+  "view_t": {
+   "viewOfFile": {
+    "pt": "0x0",
+    "why": "runtime: ptr valid on all 3 live instances (bindings/memprobe.py)"
+   }
+  },
+  "CVisibilityMap": {
+   "m_nWidth": {
+    "pt": "0x8",
+    "why": "embedprove: 14 unanimous votes from 12 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CSearchBitmap": {},
+  "SDL_Surface": {},
+  "SDL_Cursor": {},
+  "SDL_Window": {},
+  "SDL_DisplayMode": {},
+  "CVRamPool": {},
+  "st_tiledef": {},
+  "CInfTileSet": {},
+  "CVidTile": {},
+  "CResTile": {},
+  "CResTileSet": {},
+  "CGameAreaNotes": {},
+  "CObjectMarker": {},
+  "CVVCHash": {},
+  "CVVCHashEntry": {},
+  "CAIIdList": {},
+  "CAIId": {
+   "m_line": {
+    "pt": "0x8",
+    "why": "runtime: cstring valid on all 40 live instances (bindings/memprobe.py)"
+   },
+   "m_start": {
+    "pt": "0x10",
+    "why": "runtime: cstring valid on all 40 live instances (bindings/memprobe.py)"
+   }
+  },
+  "CGameJournal": {
+   "m_aChapters": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 1 live instances (list check, bindings/memprobe.py); left opaque"
+   },
+   "IWD_TimeCheat": {
+    "pt": "0x0",
+    "why": "embedprove: 4 unanimous votes from 2 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CPathSearch": {},
+  "CGameRemoteObjectArray": {},
+  "CInfButtonArray": {},
+  "CMultiplayerSettings": {},
+  "C2DArray": {},
+  "CAreaSoundsAndMusic": {},
+  "CAreaFileHeader": {},
+  "CAreaFileStaticObject": {},
+  "CGameSound": {},
+  "CAITrigger": {
+   "m_string1": {
+    "pt": "0x30",
+    "why": "runtime: cstring valid on all 14 live instances (bindings/memprobe.py)"
+   },
+   "m_string2": {
+    "pt": "0x38",
+    "why": "runtime: cstring valid on all 14 live instances (bindings/memprobe.py)"
+   }
+  },
+  "CVidFont": {},
+  "CMessageHandler": {},
+  "CChatBuffer": {},
+  "CTlkTable": {},
+  "CMapStringToString": {
+   "m_nCount": {
+    "pt": "0x14",
+    "why": "embedprove: 297 unanimous votes from 135 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_pFreeList": {
+    "pt": "0x18",
+    "why": "embedprove: 2005 unanimous votes from 413 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_nBlockSize": {
+    "pt": "0x28",
+    "why": "embedprove: 1025 unanimous votes from 336 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "m_pBlocks": {
+    "pt": "0x20",
+    "why": "embedprove: 1873 unanimous votes from 427 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CWarp": {
+   "lTimers": {
+    "pt": "none",
+    "why": "runtime: placement invalid on all 23 live instances (list check, bindings/memprobe.py); left opaque"
+   }
+  },
+  "CScreenChapter": {},
+  "CPtrList": {
+   "m_nBlockSize": {
+    "pt": "0x30",
+    "why": "embedprove: 36 unanimous votes from 18 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CWeather": {},
+  "CFog": {
+   "innerColor": {
+    "pt": "0x9c",
+    "why": "embedprove: 4 unanimous votes from 3 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "outerColor": {
+    "pt": "0xa0",
+    "why": "embedprove: 257 unanimous votes from 84 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CRainStorm": {},
+  "CSnowStorm": {
+   "m_rOldWorldViewPort": {
+    "pt": "0xc",
+    "why": "embedprove: 87 unanimous votes from 51 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CGameDialogSprite": {},
+  "CScreenLoad": {},
+  "CScreenCreateParty": {},
+  "CImportGame": {},
+  "CScreenAI": {},
+  "CProgressBar": {
+   "m_nSecondsToTimeout": {
+    "pt": "0x0",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_nActionProgress": {
+    "pt": "0xc",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_nActionTarget": {
+    "pt": "0x10",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_bWaiting": {
+    "pt": "0x15",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_nWaitingReason": {
+    "pt": "0x18",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_bTimeoutVisible": {
+    "pt": "0x1d",
+    "why": "CChitin+cProgressBar accesses in 5 progress-bar functions (aligned 1.00) all shift by the member delta +0x38 only"
+   },
+   "m_bProgressBarActivated": {
+    "pt": "0x1e",
+    "why": "CChitin::SynchronousUpdate identical (1.00): cmp byte [this+0xfda] (BG) <-> [this+0x1012] (PT) = cProgressBar 0xff4 + 0x1e"
+   }
+  },
+  "CNetworkConnectionSettings": {
+   "sPlayerName": {
+    "pt": "0x8",
+    "why": "embedprove: 2 unanimous votes from 2 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CNetworkWindow": {},
+  "cnetworkwindow_queueentry_st": {
+   "pInfo": {
+    "pt": "0x8",
+    "why": "runtime: ptr valid on all 14 live instances (bindings/memprobe.py)"
+   }
+  },
+  "DPWrapper": {},
+  "CVideo": {},
+  "CSoundMixer": {},
+  "CVoice": {},
+  "CDWordArray": {},
+  "CResPVR": {
+   "size": {
+    "pt": "0x64",
+    "why": "CResPVR::Demand identical (1.00), [pvr+0x64] delta 0"
+   }
+  },
+  "CAIGroup": {
+   "m_memberList": {
+    "pt": "0x8",
+    "why": "embedprove: 2 unanimous votes from 2 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CImmunitiesSpellLevel": {
+   "m_levels": {
+    "pt": "0x0",
+    "why": "embedprove: 13 unanimous votes from 9 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CImmunitiesSpellLevelDecrementing": {
+   "m_levels": {
+    "pt": "0x0",
+    "why": "embedprove: 15 unanimous votes from 3 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CSoundProperties": {
+   "m_iEAXpreset": {
+    "pt": "0x0",
+    "why": "embedprove: 132 unanimous votes from 101 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "Marker": {
+   "count": {
+    "pt": "0xc",
+    "why": "embedprove: 325 unanimous votes from 146 functions through containers at proven member offsets (bindings/embedprove.py)"
+   },
+   "line": {
+    "pt": "0x10",
+    "why": "embedprove: 1607 unanimous votes from 515 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CAICondition": {
+   "m_triggerList": {
+    "pt": "0x0",
+    "why": "embedprove: 3074 unanimous votes from 421 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CGamePermission": {
+   "m_permission": {
+    "pt": "0x0",
+    "why": "embedprove: 968 unanimous votes from 283 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CSpawnPoint": {
+   "mFacing": {
+    "pt": "0x10",
+    "why": "embedprove: 55 unanimous votes from 40 functions through containers at proven member offsets (bindings/embedprove.py)"
+   }
+  },
+  "CMessageSetDirection": {
+   "m_face": {
+    "pt": "0x10",
+    "why": "CMessageSetDirection::Run identical (1.00): lea rdx, [this+0x10] passes m_face in both exes"
    }
   }
  },
@@ -2383,6 +2746,31 @@
   "CStoreFileItem": "BG fields 0x00..0x1c: CStore methods aligned (1.00) access them with delta 0; PT-only tail 0x1c..0x58 (PST trigger strref + flags) stays opaque",
   "CVEFVidCellBase": "file format: VVC V1.0 body (0x1ec - 8 = 484 bytes) and PT data uses VVC V1.0",
   "CVisualEffectBase": "CVisualEffect ctor/AIUpdate/Load/Move/Remove/CheckAndAdd aligned 1.00 in PT: 22 accesses incl. the embedded base (0x60..0x220) with delta 0",
-  "CVEFEvent": "VEF V1.0 component record (0xe0); processed by CVisualEffect::AIUpdate, identical in PT (ratio 1.00)"
+  "CVEFEvent": "VEF V1.0 component record (0xe0); processed by CVisualEffect::AIUpdate, identical in PT (ratio 1.00)",
+  "letter_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "slicedRect": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "line_metric": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "glyphmap_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "adjustmentData_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "glyphAdvance_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "glyphHashEntry_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "glyphHashTable_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "font_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "sheet": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "stbrp_context": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "stbrp_node": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "stbrp_rect": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "stbtt_fontinfo": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "texture_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "texture_t_DX": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "program_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "vertex_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "d3dvertex_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "drawCmd_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "samplerState_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "view_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "vec4_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
+  "CSelectiveBonus": "CSelectiveBonusList::GetBonus/operator=/ClearAll identical (1.00) in PT, accesses to the bonus records with delta 0",
+  "CImmunitySpell": "CImmunitiesSpellList::operator= and CGameEffectImmunitySpell::ApplyEffect identical (1.00) in PT: record accesses at 0x0/0x8/0xc with delta 0"
  }
 }
