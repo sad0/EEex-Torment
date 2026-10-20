@@ -137,6 +137,40 @@ PATCHES = {
 
 	return handled;
 }'''),
+        # uiDoFile, Torment version (PT 0x456d60): the .lua resource is loaded from its text CString
+        # (CResText at +0x58 once demanded) with that string's length, and released with dimmDump.
+        ('''		const char *const pResBuffer = reinterpret_cast<char*>(pRes->Demand());
+
+		if (luaL_loadbufferx(L, pResBuffer, pRes->nSize, fullFileName->m_pchData, nullptr) == LUA_OK) {''',
+         '''		// EEex-PTEE: Torment reads the resource text CString (+0x58) and its length
+		pRes->Demand();
+		alignas(CString) byte resTextStorage[sizeof(CString)];
+		CString *const pResText = reinterpret_cast<CString*>(resTextStorage);
+		pResText->Construct(reinterpret_cast<const CString*>(reinterpret_cast<const byte*>(pRes) + 0x58));
+		const int nResTextLength = *reinterpret_cast<const int*>(pResText->m_pchData - 8);
+		const int nLoadResult = luaL_loadbufferx(L, pResText->m_pchData, nResTextLength, fullFileName->m_pchData, nullptr);
+		pResText->Destruct();
+
+		if (nLoadResult == LUA_OK) {'''),
+        ('''		pRes->virtual_Dump();
+	}
+
+	EngineVal<CString> langFile{};''', '''		p_dimmDump(pRes); // EEex-PTEE: Torment releases the resource with dimmDump
+	}
+
+	EngineVal<CString> langFile{};'''),
+        # CGameText::Render: Torment's floating-text renderer is a different routine (PT 0x215600: dialog
+        # bubbles in Torment mode, fade, cached size, zoom already handled); EEex's override carries BG
+        # renderer fixes only. Not to be installed on Torment (phase 5); never runs BG code if reached.
+        ('@body void CGameText::Override_Render(', '''{
+	// EEex-PTEE: BG renderer fixes do not apply to Torment's CGameText::Render (see eeexdll/patch_sources.py)
+	static bool reported = false;
+	if (!reported) {
+		reported = true;
+		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PTEE); ignored
+");
+	}
+}'''),
     ],
 }
 

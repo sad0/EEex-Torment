@@ -18,8 +18,8 @@
 | CAICondition::Hold | EEex.cpp | 1.00 | reimplementation valid |
 | CAICondition::TriggerHolds | EEex.cpp | 1.00 | valid |
 | CChitin::SynchronousUpdate | EEex.cpp | 1.00 | valid |
-| CGameAIBase::ApplyTriggers | EEex.cpp | 0.98 | check the 2% delta |
-| CGameAIBase::SetTrigger | EEex.cpp | 0.99 | check the 1% delta |
+| CGameAIBase::ApplyTriggers | EEex.cpp | 0.98 | valid: only jump-table data bytes differ, code identical |
+| CGameAIBase::SetTrigger | EEex.cpp | 0.99 | valid: only jump-table data bytes differ, code identical |
 | CGameEffectList::Unmarshal | EEex.cpp | 1.00 | valid |
 | CMessageSetLastObject::Run | EEex.cpp | 1.00 | valid |
 | Infinity_WriteINILine | EEex.cpp | 1.00 | valid |
@@ -27,9 +27,10 @@
 | CGameEffect::CheckSave | EEex.cpp (exported, not installed by EEex's Lua) | 0.41 | **forwards to PT's own CheckSave** (base vtable slot 7, verified = PT 0x1ec460) |
 | CGameEffectUsability::CheckUsability | EEex.cpp | 0.75 | **rewritten for PT**: param2=8 effective alignment (PT 0x3c4fe0, Law/Good globals), PT-only param2=12 (CRE byte +0x87); other modes identical |
 | CDerivedStats::GetSpellState / SetSpellState | EEex.cpp | 0.45 / 0.14 | valid: same bit logic on m_spellStates (PT only dropped the bit < 256 guard, which EEex handles) |
-| CGameSprite::Damage | EEex.cpp (wrapper) | 0.57 | wrapper only: calls the engine function |
-| CScreenMap::OnLButtonDblClk | EEex.cpp | 0.58 | PT differs |
-| uiDoFile | EEex.cpp | 0.77 | PT differs |
+| CGameSprite::Damage | EEex.cpp (wrapper) | 0.57 | valid: wrapper calling the engine's own Damage + Lua hook (left-hand flag patched: no off-hand in PT) |
+| CGameText::Render | EEex.cpp | 0.11 | PT renderer is a different routine; EEex's BG fixes do not apply: **not installed on PT** (body logs once) |
+| CScreenMap::OnLButtonDblClk | EEex.cpp (vtable slot 28) | n/a | valid: PT's slot function (0x33b770) is exactly `pActiveEngine->OnLeftPanelButtonClick(0)`, as the override (+ EEex Lua hook); OnLeftPanelButtonClick(0) = back to world in both |
+| uiDoFile | EEex.cpp | 0.77 | **rewritten for PT**: loads the CResText string (+0x58) with its length, releases with dimmDump |
 | uiEventMenuStack | EEex.cpp | 0.39 | **rewritten for PT**: keyboard/controller navigation first (PT 0x459ff0), overlay swallows, A-button skip, PT pass-through filter; EEex capture fix kept |
 | CGameSprite::Hit / Swing (fakeAttackRoll, getAttackChance) | EEex.cpp | 0.56 / 0.68 | attack math differs |
 | CVisibilityMap::*, CInfinity::*, CScreenWorld::*, CChitin::Update/WinMain, render | stubs | 0.32..1.00 | phase 4d |
