@@ -167,8 +167,7 @@ PATCHES = {
 	static bool reported = false;
 	if (!reported) {
 		reported = true;
-		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PTEE); ignored
-");
+		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PTEE); ignored\\n");
 	}
 }'''),
     ],
