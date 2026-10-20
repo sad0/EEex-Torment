@@ -1,0 +1,4208 @@
+{
+"C2DArray|0x30|2": {
+"0x30": 4
+},
+"C2DArray|0x10|8": {
+"0x10": 8
+},
+"C2DArray|0x18|8": {
+"0x18": 4
+},
+"C2DArray|0x20|8": {
+"0x20": 4
+},
+"C2DArray|0x30|4": {
+"0x30": 2
+},
+"C2DArray|0x0|8": {
+"0x0": 3
+},
+"C2DArray|0x32|2": {
+"0x32": 3
+},
+"CAICondition|0x8|8": {
+"0x8": 3
+},
+"CAIGroup|0x20|4": {
+"0x20": 10
+},
+"CAIGroup|0x10|8": {
+"0x10": 8
+},
+"CAIIdList|0x8|8": {
+"0x8": 1
+},
+"CAIIdList|0x0|8": {
+"0x0": 1
+},
+"CAIIdList|0x18|8": {
+"0x18": 1
+},
+"CAIIdList|0x20|8": {
+"0x20": 1
+},
+"CAIIdList|0x58|4": {
+"0x58": 1
+},
+"CVariable|0x28|4": {
+"0x28": 152
+},
+"CGameObject|0x0|8": {
+"0x0": 264
+},
+"CBaldurChitin|0x1090|8": {
+"0x10c8": 2855,
+"0x1148": 1,
+"0x260": 3
+},
+"CInfGame|0x6600|4": {
+"0xa1e8": 20
+},
+"CInfGame|0x6604|4": {
+"0xa1ec": 5
+},
+"CInfGame|0x6608|4": {
+"0xa1f0": 5
+},
+"CInfGame|0x660c|4": {
+"0xa1f4": 5
+},
+"CInfGame|0x6610|4": {
+"0xa1f8": 5
+},
+"CInfGame|0x6614|4": {
+"0xa1fc": 4
+},
+"CInfGame|0x6630|2": {
+"0xa218": 181
+},
+"CInfGame|0x6740|4": {
+"0xa320": 14
+},
+"CInfGame|0x6730|8": {
+"0xa310": 11
+},
+"CInfGame|0x7964|4": {
+"0xb544": 8
+},
+"CAIObjectType|0x8|1": {
+"0x8": 4
+},
+"CAIObjectType|0x9|1": {
+"0x9": 4
+},
+"CAIObjectType|0xa|1": {
+"0xa": 4
+},
+"CAIObjectType|0xb|1": {
+"0xb": 4
+},
+"CAIObjectType|0x15|1": {
+"0x15": 4
+},
+"CAIObjectType|0x17|1": {
+"0x17": 4
+},
+"CAIObjectType|0x16|1": {
+"0x16": 4
+},
+"CAIObjectType|0xc|4": {
+"0xc": 4
+},
+"CAIObjectType|0x10|4": {
+"0x10": 2
+},
+"CAIObjectType|0x14|1": {
+"0x14": 2
+},
+"CAIResponseSet|0x8|8": {
+"0x8": 1
+},
+"CAIScriptFile|0x28|8": {
+"0x28": 1
+},
+"CAIScriptFile|0x50|8": {
+"0x48": 1
+},
+"CAIScriptFile|0x0|2": {
+"0x0": 4
+},
+"CAIScriptFile|0x4|4": {
+"0x4": 7
+},
+"CAIScriptFile|0x8|8": {
+"0x8": 4
+},
+"CAIScriptFile|0x10|8": {
+"0x10": 5
+},
+"CAIScriptFile|0x18|8": {
+"0x18": 6
+},
+"CAIScriptFile|0x20|8": {
+"0x20": 7
+},
+"CString|0x0|8": {
+"0x0": 30
+},
+"CAITrigger|0x0|2": {
+"0x0": 3
+},
+"CAITrigger|0x4|4": {
+"0x4": 2
+},
+"CBaldurChitin|0x1110|8": {
+"0x1148": 325
+},
+"SDL_Rect|0x0|4": {
+"0x0": 5
+},
+"SDL_Rect|0x4|4": {
+"0x4": 5
+},
+"SDL_Rect|0x8|4": {
+"0x8": 3
+},
+"SDL_Rect|0xc|4": {
+"0xc": 3
+},
+"CBaldurChitin|0x208|8": {
+"0x260": 127
+},
+"CBaldurChitin|0x1088|8": {
+"0x10c0": 87
+},
+"CWarp|0x0|8": {
+"0x0": 115
+},
+"CBaldurChitin|0x2ca|1": {
+"0x322": 29
+},
+"CBaldurChitin|0x2c9|1": {
+"0x321": 19
+},
+"CInfGame|0x6680|1": {
+"0xa268": 2
+},
+"CInfGame|0x6678|8": {
+"0xa260": 4
+},
+"CBaldurChitin|0x10c8|8": {
+"0x1100": 22,
+"0x10c8": 1
+},
+"CBaldurChitin|0x1118|8": {
+"0x1150": 19
+},
+"CBaldurChitin|0x15fe|1": {
+"0x161e": 3
+},
+"CInfGame|0x7978|4": {
+"0xb558": 48
+},
+"CScreenWorld|0xbc|1": {
+"0xc4": 33
+},
+"CInfGame|0x4110|1": {
+"0x7990": 16
+},
+"CInfGame|0x410c|4": {
+"0x798c": 6
+},
+"CInfGame|0x4108|4": {
+"0x7988": 10
+},
+"CInfGame|0x7ec8|4": {
+"0xbab0": 9,
+"0xbb2c": 1
+},
+"CInfGame|0x7ec4|4": {
+"0xbaac": 6,
+"0xbb24": 1
+},
+"CInfGame|0x7ecc|4": {
+"0xbab4": 3
+},
+"CInfGame|0x7ed0|4": {
+"0xbab8": 3
+},
+"CInfGame|0x3fb9|1": {
+"0x7839": 6
+},
+"CBaldurChitin|0x1130|8": {
+"0x1168": 7
+},
+"CInfGame|0x7984|4": {
+"0xb564": 5
+},
+"CBaldurChitin|0x1100|8": {
+"0x1138": 23,
+"0x10c8": 3
+},
+"CBaldurChitin|0x1120|8": {
+"0x1158": 20
+},
+"CScreenMultiPlayer|0x6d0|1": {
+"0x738": 1
+},
+"CScreenWorld|0xad6|1": {
+"0xb86": 1
+},
+"CColorEffects|0x8|8": {
+"0x8": 1
+},
+"CColorRanges|0x8|8": {
+"0x8": 1
+},
+"CContingencyList|0x8|8": {
+"0x8": 1
+},
+"CGameSprite|0x5040|4": {
+"0x4de8": 1
+},
+"CDerivedStats|0xd6|2": {
+"0xe2": 2
+},
+"CVariable|0x20|8": {
+"0x20": 1
+},
+"CVariable|0x2c|8": {
+"0x2c": 3
+},
+"CInfGame|0x0|8": {
+"0x0": 3
+},
+"CInfGame|0x4eb8|8": {
+"0x4bd0": 2
+},
+"CGameObject|0x4ea4|4": {
+"0x4bbc": 14
+},
+"CGameSprite|0x0|8": {
+"0x0": 11
+},
+"CGameSprite|0x48|4": {
+"0x48": 20
+},
+"CGameSprite|0x4ea4|4": {
+"0x4bbc": 23
+},
+"CInfGame|0x7cc4|4": {
+"0xb8a4": 21
+},
+"CGameSprite|0xc|8": {
+"0xc": 2
+},
+"CGameSprite|0x3c48|1": {
+"0x3958": 2
+},
+"CGameSprite|0x3c50|1": {
+"0x3960": 2
+},
+"CGameSprite|0x3c40|8": {
+"0x3950": 3
+},
+"CGameAnimationType|0x0|8": {
+"0x0": 3
+},
+"CAbilityId|0x0|4": {
+"0x0": 1
+},
+"CAbilityId|0x4|2": {
+"0x4": 1
+},
+"CAbilityId|0x10|4": {
+"0x10": 1
+},
+"CButtonData|0x14|4": {
+"0x14": 1
+},
+"CButtonData|0x18|2": {
+"0x18": 1
+},
+"CButtonData|0x8|4": {
+"0x8": 1
+},
+"CButtonData|0x30|2": {
+"0x30": 1
+},
+"CVariable|0x20|2": {
+"0x20": 2
+},
+"CVariable|0x22|2": {
+"0x22": 2
+},
+"CVariable|0x24|4": {
+"0x24": 6
+},
+"CScreenWorld|0x0|8": {
+"0x0": 27
+},
+"CInfGame|0x6590|1": {
+"0xa178": 413
+},
+"CPoint|0x0|8": {
+"0x0": 43
+},
+"CInfGame|0x3fa0|4": {
+"0x7820": 137
+},
+"CInfGame|0x7cf0|4": {
+"0xb8d0": 1
+},
+"CBaldurChitin|0x1138|8": {
+"0x1170": 25
+},
+"CInfGame|0x798c|2": {
+"0xb56c": 8
+},
+"CPoint|0x0|4": {
+"0x0": 21
+},
+"CPoint|0x4|4": {
+"0x4": 22
+},
+"CInfGame|0x65f8|8": {
+"0xa1e0": 34
+},
+"CGameObject|0xc|8": {
+"0xc": 13
+},
+"CInfGame|0x953c|4": {
+"0xce14": 27
+},
+"CInfGame|0x7988|4": {
+"0xb568": 16
+},
+"CGameArea|0x360|8": {
+"0x368": 1
+},
+"CGameArea|0x8b0|1": {
+"0x880": 1
+},
+"CGameArea|0x8b2|1": {
+"0x882": 1
+},
+"CGameArea|0x10b8|4": {
+"0x1120": 4
+},
+"CGameArea|0x10b4|4": {
+"0x111c": 4
+},
+"CGameArea|0x380|8": {
+"0x388": 4
+},
+"CGameArea|0x8b4|1": {
+"0x884": 1
+},
+"CBaldurChitin|0x128|8": {
+"0x120": 60
+},
+"CGameAreaClairvoyanceEntry|0x1c|2": {
+"0x1c": 2
+},
+"CGameAreaClairvoyanceEntry|0x10|8": {
+"0x10": 2
+},
+"CBaldurChitin|0x15fc|1": {
+"0x161c": 1
+},
+"CGameAreaNotes|0x30|4": {
+"0x30": 1
+},
+"CGameAreaNotes|0x80|4": {
+"0x80": 1
+},
+"CGameAreaNotes|0x50|16": {
+"0x50": 1
+},
+"CGameAreaNotes|0x60|16": {
+"0x60": 1
+},
+"CGameAreaNotes|0x70|16": {
+"0x70": 1
+},
+"CInfGame|0x4030|2": {
+"0x78b0": 14
+},
+"CInfGame|0x7f08|4": {
+"0xbaf4": 4,
+"0xbaf0": 1
+},
+"CScreenWorld|0xb78|4": {
+"0xc28": 7
+},
+"CInfGame|0x66d0|1": {
+"0xa2b0": 15
+},
+"CInfGame|0x4038|1": {
+"0x78b8": 8
+},
+"CInfGame|0x7dcc|4": {
+"0xb9b4": 4
+},
+"CInfGame|0x7eb4|4": {
+"0xba9c": 2
+},
+"CScreenWorld|0x9b0|4": {
+"0xa64": 1
+},
+"CScreenWorld|0x9ac|2": {
+"0xa60": 1
+},
+"CGameDialogSprite|0x4c|4": {
+"0x4c": 3
+},
+"CGameDialogSprite|0x48|4": {
+"0x48": 5
+},
+"CInfGame|0x9690|4": {
+"0xcf78": 28
+},
+"CInfGame|0x9694|4": {
+"0xcf7c": 31
+},
+"CInfGame|0x7cb8|4": {
+"0xb898": 18
+},
+"CInfGame|0x110|4": {
+"0x110": 1
+},
+"CInfGame|0x6692|2": {
+"0xa27a": 31
+},
+"CBaldurChitin|0x1108|8": {
+"0x1140": 6
+},
+"CDerivedStats|0x54|2": {
+"0x54": 7
+},
+"CInfGame|0x7d34|1": {
+"0xb918": 29
+},
+"CGameEffectList|0x8|8": {
+"0x8": 2
+},
+"CInfGame|0x7e54|4": {
+"0xba38": 5
+},
+"CInfGame|0x7d98|4": {
+"0xb980": 5
+},
+"CInfGame|0x7dac|2": {
+"0xb994": 2
+},
+"CBaldurChitin|0x210|8": {
+"0x268": 66
+},
+"CBaldurChitin|0x15fb|1": {
+"0x161b": 3
+},
+"CScreenWorld|0xb09|1": {
+"0xbb9": 6
+},
+"CInfCursor|0x0|4": {
+"0x0": 32
+},
+"CGameSave|0x0|4": {
+"0x0": 5
+},
+"CBaldurChitin|0x10a0|8": {
+"0x10d8": 40
+},
+"CScreenWorld|0x818|1": {
+"0x8c8": 2
+},
+"CInfGame|0x3fa4|1": {
+"0x7824": 8
+},
+"CInfGame|0x7e2c|4": {
+"0xba10": 1
+},
+"CInfGame|0x7da4|4": {
+"0xb98c": 2
+},
+"CImmunitiesItemEquipList|0x8|8": {
+"0x8": 1
+},
+"CSelectiveWeaponTypeList|0x8|8": {
+"0x8": 2
+},
+"CSelectiveBonusList|0x8|8": {
+"0x8": 2
+},
+"CImmunitiesAIType|0x8|8": {
+"0x8": 1
+},
+"CImmunitiesWeapon|0x8|8": {
+"0x8": 1
+},
+"CWeaponIdentification|0x4|4": {
+"0x4": 1
+},
+"CWeaponIdentification|0x0|2": {
+"0x0": 1
+},
+"CWeaponIdentification|0xc|4": {
+"0xc": 1
+},
+"CItem|0x1c|2": {
+"0x1c": 1
+},
+"CItem|0x1e|2": {
+"0x1e": 1
+},
+"CItem|0x20|2": {
+"0x20": 2
+},
+"CItem|0x22|2": {
+"0x22": 1
+},
+"CItem|0x24|4": {
+"0x24": 1
+},
+"CItem|0x8|8": {
+"0x8": 24
+},
+"CItem|0x18|4": {
+"0x18": 6
+},
+"Item_ability_st|0x22|2": {
+"0x22": 3
+},
+"CObject|0x0|8": {
+"0x0": 7
+},
+"CMoveList|0x8|8": {
+"0x8": 1
+},
+"CInfGame|0x7cd0|4": {
+"0xb8b0": 11
+},
+"CInfGame|0x7cd4|4": {
+"0xb8b4": 10
+},
+"CScreenWorld|0x9f0|1": {
+"0xaa0": 6
+},
+"CScreenWorld|0x9f1|1": {
+"0xaa1": 2
+},
+"CScreenWorld|0xa7c|4": {
+"0xb2c": 2
+},
+"CScreenWorldMap|0xf0c|1": {
+"0xf5c": 3
+},
+"CInfGame|0xe68|2": {
+"0x1150": 59
+},
+"CInfGame|0xe6a|2": {
+"0x1152": 55
+},
+"CInfGame|0xe58|8": {
+"0x1140": 50
+},
+"CInfGame|0xe60|8": {
+"0x1148": 48
+},
+"CProjectile|0x80|8": {
+"0x80": 1
+},
+"CProjectile|0x158|1": {
+"0x158": 1
+},
+"CGameObject|0x3c40|8": {
+"0x3950": 5
+},
+"CInfGame|0x1760|2": {
+"0x1a80": 2
+},
+"CInfGame|0x1762|2": {
+"0x1a82": 2
+},
+"CInfGame|0x1750|8": {
+"0x1a70": 2
+},
+"CInfGame|0x2640|2": {
+"0x2960": 12
+},
+"CInfGame|0x2642|2": {
+"0x2962": 12
+},
+"CInfGame|0x2630|8": {
+"0x2950": 12
+},
+"CInfGame|0x2638|8": {
+"0x2958": 7
+},
+"CInfGame|0x3620|2": {
+"0x3940": 29
+},
+"CInfGame|0x3622|2": {
+"0x3942": 34
+},
+"CInfGame|0x3610|8": {
+"0x3930": 28
+},
+"CInfGame|0x3618|8": {
+"0x3938": 20
+},
+"CInfGame|0x3770|2": {
+"0x3a90": 4
+},
+"CInfGame|0x19ca|2": {
+"0x1cea": 17
+},
+"CInfGame|0x19c8|2": {
+"0x1ce8": 10
+},
+"CInfGame|0x19b8|8": {
+"0x1cd8": 10
+},
+"CInfGame|0x19c0|8": {
+"0x1ce0": 8
+},
+"CInfGame|0x35b2|2": {
+"0x38d2": 8
+},
+"CInfGame|0x35b0|2": {
+"0x38d0": 4
+},
+"CInfGame|0x35a0|8": {
+"0x38c0": 4
+},
+"CInfGame|0x35a8|8": {
+"0x38c8": 4
+},
+"CInfGame|0x9688|4": {
+"0xcf70": 20
+},
+"CObject|0x48|8": {
+"0x48": 1
+},
+"CObject|0x50|8": {
+"0x50": 1
+},
+"CObject|0x58|8": {
+"0x58": 1
+},
+"CObject|0x78|8": {
+"0x78": 1
+},
+"CInfGame|0x7d74|4": {
+"0xb958": 3
+},
+"CSearchBitmap|0x138|4": {
+"0x138": 4
+},
+"CSearchBitmap|0x120|8": {
+"0x120": 1
+},
+"CSearchBitmap|0x13c|4": {
+"0x13c": 2
+},
+"CInfGame|0x9410|4": {
+"0xcce8": 1
+},
+"CInfGame|0x9448|4": {
+"0xcd20": 1
+},
+"CSpell|0x0|8": {
+"0x0": 15
+},
+"CStore|0x14|4": {
+"0x14": 2
+},
+"CRes|0x38|4": {
+"0x38": 6
+},
+"CScreenWorld|0x9e0|4": {
+"0xa90": 3
+},
+"CVariableHash|0x8|4": {
+"0x8": 5
+},
+"CVariableHash|0x0|8": {
+"0x0": 7
+},
+"CInfGame|0x7d64|4": {
+"0xb948": 6
+},
+"CInfGame|0x7da0|4": {
+"0xb988": 1,
+"0xb97c": 1
+},
+"CInfCursor|0x558|4": {
+"0x558": 5
+},
+"CVidMode|0x8|4": {
+"0x8": 4
+},
+"CVidMode|0x4|4": {
+"0x4": 3
+},
+"CInfCursor|0x500|4": {
+"0x500": 1
+},
+"CInfGame|0x7d58|4": {
+"0xb93c": 2
+},
+"CInfGame|0x7d4c|4": {
+"0xb930": 4
+},
+"CInfGame|0x7d48|4": {
+"0xb92c": 7
+},
+"CInfGame|0x6618|4": {
+"0xa200": 9
+},
+"CScreenWorld|0xb04|4": {
+"0xbb4": 3
+},
+"CScreenWorld|0xbd|1": {
+"0xc5": 11
+},
+"CBaldurChitin|0x15fd|1": {
+"0x161d": 1
+},
+"CBaldurChitin|0x10b8|8": {
+"0x10f0": 41,
+"0x260": 4
+},
+"CScreenCreateChar|0x770|4": {
+"0x7d8": 4
+},
+"CInfGame|0x9768|4": {
+"0xd050": 10
+},
+"CInfGame|0x7dc8|4": {
+"0xb9b0": 1
+},
+"CInfGame|0x9544|4": {
+"0xce1c": 1
+},
+"CInfGame|0x9540|4": {
+"0xce18": 1
+},
+"CInfGame|0x9526|1": {
+"0xcdfe": 2
+},
+"CInfGame|0x40e7|1": {
+"0x7967": 8
+},
+"CBaldurChitin|0x10d8|8": {
+"0x1110": 15
+},
+"CInfGame|0x9534|4": {
+"0xce0c": 29
+},
+"CInfGame|0x9530|4": {
+"0xce08": 29
+},
+"CInfGame|0x3fb4|4": {
+"0x7834": 6
+},
+"CInfGame|0x6598|8": {
+"0xa180": 3
+},
+"CInfGame|0x3fb0|4": {
+"0x7830": 1
+},
+"CInfGame|0x3fad|1": {
+"0x782d": 3
+},
+"CInfGame|0x3fac|1": {
+"0x782c": 6
+},
+"CInfGame|0x3fae|1": {
+"0x782e": 4
+},
+"CInfGame|0x6640|8": {
+"0xa228": 3
+},
+"CInfGame|0x9520|4": {
+"0xcdf8": 4
+},
+"CInfinity|0x80|4": {
+"0x80": 2
+},
+"CInfinity|0x78|4": {
+"0x78": 5
+},
+"CInfinity|0x68|4": {
+"0x68": 4
+},
+"CInfinity|0x70|4": {
+"0x70": 2
+},
+"CInfinity|0x6c|4": {
+"0x6c": 4
+},
+"CInfinity|0x84|4": {
+"0x84": 2
+},
+"CInfinity|0x7c|4": {
+"0x7c": 5
+},
+"CInfinity|0x74|4": {
+"0x74": 2
+},
+"CInfinity|0x60|4": {
+"0x60": 3
+},
+"CInfinity|0x64|4": {
+"0x64": 3
+},
+"CInfinity|0x78|16": {
+"0x78": 1
+},
+"CInfinity|0x338|4": {
+"0x2f4": 1
+},
+"CInfinity|0x2f4|4": {
+"0x2b4": 1
+},
+"CInfinity|0x2f8|4": {
+"0x2b8": 1
+},
+"CScreenChapter|0x12c|4": {
+"0x134": 4
+},
+"CScreenChapter|0xa8|4": {
+"0xb0": 3
+},
+"CScreenWorld|0xa59|1": {
+"0xb09": 6
+},
+"CScreenWorld|0xa5a|1": {
+"0xb0a": 5
+},
+"CScreenChapter|0x0|8": {
+"0x0": 1
+},
+"CScreenChapter|0xb8|8": {
+"0xc0": 7
+},
+"CScreenChapter|0x100|4": {
+"0x108": 2
+},
+"CScreenChapter|0x104|4": {
+"0x10c": 1
+},
+"CBaldurChitin|0x230|4": {
+"0x288": 1
+},
+"CInfGame|0x9684|4": {
+"0xcf6c": 15
+},
+"CBaldurChitin|0x17ba|1": {
+"0x17b2": 11
+},
+"CVidMode|0x1a0|4": {
+"0x1a4": 8
+},
+"CBaldurChitin|0x218|16": {
+"0x270": 2
+},
+"CBaldurChitin|0x228|1": {
+"0x280": 2
+},
+"CInfGame|0x3a52|2": {
+"0x3e1a": 1
+},
+"CBaldurChitin|0x268|1": {
+"0x2c0": 2
+},
+"CBaldurChitin|0x2a0|1": {
+"0x2f8": 1
+},
+"CBaldurChitin|0x2b8|1": {
+"0x310": 2
+},
+"CBaldurChitin|0x22c|4": {
+"0x284": 2
+},
+"CBaldurChitin|0x370|1": {
+"0x3c8": 2
+},
+"CInfGame|0x4118|1": {
+"0x7998": 11
+},
+"CScreenMultiPlayer|0x6bc|4": {
+"0x724": 8
+},
+"CInfGame|0x8f0|2": {
+"0xbd8": 3
+},
+"CInfGame|0x8f2|2": {
+"0xbda": 3
+},
+"CInfGame|0x8e0|8": {
+"0xbc8": 3
+},
+"CInfGame|0x8e8|8": {
+"0xbd0": 2
+},
+"CScreenCreateChar|0x8e6|2": {
+"0x94e": 2
+},
+"CInfGame|0x9548|8": {
+"0xce20": 20
+},
+"CInfGame|0x9550|4": {
+"0xce28": 16
+},
+"CBaldurChitin|0x0|8": {
+"0x0": 13
+},
+"CBaldurChitin|0x10b0|8": {
+"0x10e8": 33,
+"0x260": 1
+},
+"CScreenCreateChar|0x804|4": {
+"0x86c": 1
+},
+"CScreenCreateChar|0x800|4": {
+"0x868": 2
+},
+"CScreenLoad|0xac|4": {
+"0xb4": 1
+},
+"CScreenLoad|0xa8|4": {
+"0xb0": 3
+},
+"CScreenLoad|0xa4|4": {
+"0xac": 2
+},
+"CInfGame|0x40e9|1": {
+"0x7969": 8
+},
+"CScreenWorld|0xbd8|16": {
+"0xc88": 2
+},
+"CScreenWorld|0xbe8|8": {
+"0xc98": 1
+},
+"CInfGame|0x1302|2": {
+"0x1622": 1
+},
+"CInfGame|0x12e8|8": {
+"0x1608": 1
+},
+"CInfGame|0x40ea|1": {
+"0x796a": 13
+},
+"CInfGame|0x40e8|1": {
+"0x7968": 1
+},
+"CInfGame|0x40e5|1": {
+"0x7965": 1
+},
+"CBaldurChitin|0x10f8|8": {
+"0x1130": 1
+},
+"CBaldurChitin|0x10f0|8": {
+"0x1128": 4
+},
+"CScreenPriestSpell|0x0|8": {
+"0x0": 3
+},
+"CBaldurChitin|0x10e8|8": {
+"0x1120": 4
+},
+"CInfGame|0x9680|4": {
+"0xcf68": 9
+},
+"CBaldurChitin|0x10a8|8": {
+"0x10e0": 1
+},
+"CInfGame|0x7d8c|4": {
+"0xb974": 1
+},
+"CInfGame|0x7d88|4": {
+"0xb96c": 4
+},
+"CScreenWizSpell|0x684|1": {
+"0x6ec": 1
+},
+"CScreenWizSpell|0x685|1": {
+"0x6ed": 1
+},
+"CScreenWizSpell|0x686|2": {
+"0x6ee": 1
+},
+"CScreenWizSpell|0x6a0|4": {
+"0x750": 1
+},
+"CScreenWizSpell|0x688|8": {
+"0x6f0": 1
+},
+"CInfGame|0x2fca|2": {
+"0x32ea": 1
+},
+"CScreenWorld|0x9d8|1": {
+"0xa88": 3
+},
+"CScreenWorld|0x9d9|1": {
+"0xa89": 3
+},
+"CScreenWorld|0x9f4|4": {
+"0xaa4": 2
+},
+"CInfGame|0x35ea|2": {
+"0x390a": 2
+},
+"CInfGame|0x4041|1": {
+"0x78c1": 9
+},
+"CScreenWorld|0xb08|1": {
+"0xbb8": 12
+},
+"CBaldurChitin|0x17bc|4": {
+"0x17b4": 7
+},
+"CScreenWorld|0xa40|4": {
+"0xaf0": 1
+},
+"CInfGame|0x6680|4": {
+"0xa268": 7
+},
+"CInfGame|0x4111|1": {
+"0x7991": 7
+},
+"CInfGame|0x4114|4": {
+"0x7994": 7
+},
+"CInfGame|0x40e6|1": {
+"0x7966": 11
+},
+"CInfGame|0x4044|4": {
+"0x78c4": 2
+},
+"CInfGame|0x3ac0|2": {
+"0x3e88": 1
+},
+"CInfGame|0x3ac2|2": {
+"0x3e8a": 1
+},
+"CInfGame|0x3ab0|8": {
+"0x3e78": 1
+},
+"CScreenWorld|0xb94|4": {
+"0xc40": 10
+},
+"CInfGame|0x3ef0|4": {
+"0x4348": 4
+},
+"CInfGame|0x3e10|4": {
+"0x4280": 3
+},
+"CInfGame|0x3f14|4": {
+"0x436c": 4
+},
+"CInfGame|0x3e34|4": {
+"0x42a4": 3
+},
+"Item_ability_st|0x14|2": {
+"0x14": 2
+},
+"CInfGame|0x1530|2": {
+"0x1850": 2
+},
+"CInfGame|0x1532|2": {
+"0x1852": 2
+},
+"CInfGame|0x1520|8": {
+"0x1840": 2
+},
+"CInfGame|0x1528|8": {
+"0x1848": 1
+},
+"CInfGame|0xf10|2": {
+"0x11f8": 6
+},
+"CInfGame|0xf12|2": {
+"0x11fa": 8
+},
+"CInfGame|0xf00|8": {
+"0x11e8": 8
+},
+"CInfGame|0xf08|8": {
+"0x11f0": 7
+},
+"CInfGame|0xc38|2": {
+"0xf20": 8
+},
+"CInfGame|0xc3a|2": {
+"0xf22": 12
+},
+"CInfGame|0xc28|8": {
+"0xf10": 12
+},
+"CInfGame|0xc30|8": {
+"0xf18": 14
+},
+"CInfGame|0xc70|2": {
+"0xf58": 11
+},
+"CInfGame|0xc72|2": {
+"0xf5a": 15
+},
+"CInfGame|0xc60|8": {
+"0xf48": 15
+},
+"CInfGame|0xc68|8": {
+"0xf50": 15
+},
+"CGameSprite|0x4f18|8": {
+"0x4c30": 1
+},
+"CGameButtonList|0x8|8": {
+"0x8": 1
+},
+"CInfGame|0x2448|2": {
+"0x2768": 7
+},
+"CInfGame|0x244a|2": {
+"0x276a": 6
+},
+"CInfGame|0x2438|8": {
+"0x2758": 4
+},
+"CInfGame|0x2440|8": {
+"0x2760": 2
+},
+"CInfGame|0x7dc0|4": {
+"0xb9a8": 2,
+"0xbb04": 1
+},
+"CBaldurChitin|0x10e0|8": {
+"0x1118": 18
+},
+"CObject|0x8|1": {
+"0x8": 3
+},
+"Item_ability_st|0x0|1": {
+"0x0": 14
+},
+"CInfGame|0x1142|2": {
+"0x142a": 3
+},
+"CInfGame|0x1130|8": {
+"0x1418": 3
+},
+"CInfGame|0x1138|8": {
+"0x1420": 3
+},
+"CInfGame|0x30|2": {
+"0x318": 2
+},
+"CInfGame|0x20|8": {
+"0x308": 2
+},
+"CInfGame|0x28|8": {
+"0x310": 2
+},
+"CInfGame|0x68|2": {
+"0x350": 2
+},
+"CInfGame|0x58|8": {
+"0x340": 2
+},
+"CInfGame|0x60|8": {
+"0x348": 2
+},
+"CGameSprite|0x18|8": {
+"0x18": 3
+},
+"CGameSprite|0x14|4": {
+"0x14": 1
+},
+"CGameSprite|0x10|4": {
+"0x10": 3
+},
+"CGameSprite|0xc|4": {
+"0xc": 3
+},
+"CInfGame|0x25d0|2": {
+"0x28f0": 1
+},
+"CInfGame|0x25d2|2": {
+"0x28f2": 1
+},
+"CInfGame|0x25c0|8": {
+"0x28e0": 1
+},
+"CInfGame|0x25c8|8": {
+"0x28e8": 1
+},
+"CScreenWorld|0x54|4": {
+"0x5c": 2
+},
+"CDerivedStats|0x22c|4": {
+"0x238": 1
+},
+"CInfGame|0x33f0|2": {
+"0x3710": 9
+},
+"CInfGame|0x33f2|2": {
+"0x3712": 9
+},
+"CInfGame|0x33e0|8": {
+"0x3700": 9
+},
+"uiMenu|0x4c|4": {
+"0x54": 4
+},
+"uiMenu|0x48|4": {
+"0x50": 4
+},
+"uiVariant|0x0|4": {
+"0x0": 1
+},
+"uiVariant|0x8|4": {
+"0x8": 1
+},
+"uiMenu|0x30|8": {
+"0x30": 2
+},
+"uiMenu|0x28|8": {
+"0x28": 2
+},
+"uiItem|0x350|8": {
+"0x3a8": 3
+},
+"CInfGame|0x7d84|4": {
+"0xb968": 4
+},
+"CRes|0x50|2": {
+"0x50": 1
+},
+"CRes|0x0|8": {
+"0x0": 5
+},
+"CRes|0x40|8": {
+"0x40": 12
+},
+"CRes|0x48|4": {
+"0x48": 9
+},
+"CRes|0x24|8": {
+"0x24": 1
+},
+"CRes|0x20|4": {
+"0x20": 1
+},
+"CRes|0x18|8": {
+"0x18": 5
+},
+"CResPVR|0x58|4": {
+"0x58": 2
+},
+"CResPVR|0x51|1": {
+"0x51": 4
+},
+"CResPVR|0x40|8": {
+"0x40": 4
+},
+"CResPVR|0x10|4": {
+"0x10": 1
+},
+"CResPVR|0x8|8": {
+"0x8": 1
+},
+"CResPVR|0x0|8": {
+"0x0": 1
+},
+"CResPVR|0x60|4": {
+"0x60": 1
+},
+"CResPVR|0x48|4": {
+"0x48": 1
+},
+"CResPVR|0x5c|4": {
+"0x5c": 1
+},
+"CResPVR|0x64|4": {
+"0x64": 1
+},
+"CResPVR|0x68|4": {
+"0x68": 1
+},
+"CRes|0x60|4": {
+"0x60": 3
+},
+"CResRef|0x0|8": {
+"0x0": 3
+},
+"CRes|0x50|1": {
+"0x50": 6
+},
+"CRes|0x20|8": {
+"0x20": 2
+},
+"CRes|0x51|1": {
+"0x51": 2
+},
+"CRes|0x34|4": {
+"0x34": 2
+},
+"CObList|0x0|8": {
+"0x0": 3
+},
+"CObList|0x18|4": {
+"0x18": 6
+},
+"CObList|0x20|8": {
+"0x20": 8
+},
+"CObList|0x10|8": {
+"0x10": 10
+},
+"CObList|0x8|8": {
+"0x8": 9
+},
+"CObList|0x28|8": {
+"0x28": 8
+},
+"CObject|0x8|8": {
+"0x8": 6
+},
+"CNetwork|0xb1|1": {
+"0xb1": 1
+},
+"CSound|0x0|8": {
+"0x0": 4
+},
+"CSound|0x8|8": {
+"0x8": 4
+},
+"CSound|0x18|8": {
+"0x18": 11
+},
+"CSoundImp|0x0|8": {
+"0x0": 1
+},
+"CObject|0x18|8": {
+"0x18": 1
+},
+"CSoundImp|0x78|8": {
+"0x78": 1
+},
+"CSoundImp|0x70|1": {
+"0x70": 1
+},
+"CSoundImp|0x54|4": {
+"0x54": 1
+},
+"CSoundImp|0x50|4": {
+"0x50": 1
+},
+"CSoundMixer|0x0|8": {
+"0x0": 9
+},
+"CSoundMixerImp|0x287c|4": {
+"0x287c": 1
+},
+"CSoundMixerImp|0x2880|4": {
+"0x2880": 1
+},
+"CSoundMixerImp|0x2884|4": {
+"0x2884": 1
+},
+"CSoundMixerImp|0x2874|4": {
+"0x2874": 1
+},
+"CSoundMixerImp|0x30|4": {
+"0x30": 1
+},
+"CSoundMixerImp|0x24|4": {
+"0x24": 1
+},
+"CVidBitmap|0x100|8": {
+"0x100": 12
+},
+"CSearchBitmap|0x100|8": {
+"0x100": 3
+},
+"CSearchBitmap|0x110|2": {
+"0x110": 1
+},
+"CVidFont|0x10|8": {
+"0x10": 4
+},
+"CVidFont|0x0|8": {
+"0x0": 9
+},
+"CChitin|0x1f4|4": {
+"0x21c": 1
+},
+"CChitin|0x0|8": {
+"0x0": 5
+},
+"CChitin|0xfac|4": {
+"0xfe4": 3
+},
+"CChitin|0x1ec|4": {
+"0x214": 1
+},
+"CChitin|0xfb0|4": {
+"0xfe8": 2
+},
+"CChitin|0xfa8|4": {
+"0xfe0": 1
+},
+"CChitin|0x1f0|4": {
+"0x218": 1
+},
+"CChitin|0x1e8|4": {
+"0x210": 2
+},
+"CChitin|0x1040|4": {
+"0x1078": 1
+},
+"CChitin|0x1030|4": {
+"0x1068": 1
+},
+"CVidMode|0x170|1": {
+"0x170": 8
+},
+"CVidMode|0x1a4|8": {
+"0x1a8": 1
+},
+"CVidMode|0x1ac|8": {
+"0x1b0": 1
+},
+"CVidPalette|0x10|8": {
+"0x10": 1
+},
+"CMapStringToString|0x8|8": {
+"0x8": 2
+},
+"CMapStringToString|0x10|4": {
+"0x10": 1
+},
+"font_t|0x6c|4": {
+"0x6c": 1
+},
+"font_t|0xd4|4": {
+"0xd4": 1
+},
+"font_t|0xa0|4": {
+"0xa0": 5
+},
+"font_t|0xb0|8": {
+"0xb0": 4
+},
+"font_t|0xa4|4": {
+"0xa4": 1
+},
+"font_t|0x5c|4": {
+"0x5c": 4
+},
+"font_t|0xa8|8": {
+"0xa8": 1
+},
+"font_t|0x40040|8": {
+"0x40040": 1
+},
+"font_t|0x74|4": {
+"0x74": 1
+},
+"font_t|0x50|8": {
+"0x50": 1
+},
+"stbtt_fontinfo|0x30|4": {
+"0x30": 1
+},
+"stbtt_fontinfo|0x8|8": {
+"0x8": 1
+},
+"SDL_VideoDisplay|0x48|8": {
+"0x48": 2
+},
+"SDL_Window|0x0|8": {
+"0x0": 1
+},
+"SDL_VideoDisplay|0x18|16": {
+"0x18": 1
+},
+"SDL_VideoDisplay|0x28|8": {
+"0x28": 1
+},
+"SDL_VideoDisplay|0x30|4": {
+"0x30": 1
+},
+"CObList|0x30|4": {
+"0x30": 1
+},
+"CAIScript|0x10|8": {
+"0x18": 1
+},
+"CAIResponse|0x10|8": {
+"0x10": 1
+},
+"CScreenCharacter|0x0|8": {
+"0x0": 4
+},
+"CScreenInventory|0x0|8": {
+"0x0": 3
+},
+"CBaldurChitin|0x10d0|8": {
+"0x1108": 2
+},
+"CScreenJournal|0x0|8": {
+"0x0": 2
+},
+"CScreenMap|0x0|8": {
+"0x0": 1
+},
+"CScreenOptions|0x0|8": {
+"0x0": 1
+},
+"CScreenWizSpell|0x0|8": {
+"0x0": 1
+},
+"CScreenStore|0x0|8": {
+"0x0": 2
+},
+"CInfGame|0x320|8": {
+"0x320": 2
+},
+"CScreenWorldMap|0xf78|8": {
+"0xfc8": 1
+},
+"CScreenWorld|0xb70|4": {
+"0xc20": 1
+},
+"CInfGame|0x3fbb|1": {
+"0x783b": 20
+},
+"CBaldurChitin|0x175c|4": {
+"0x1754": 12
+},
+"CScreenWorldMap|0x0|8": {
+"0x0": 2
+},
+"CScreenStart|0x10c|4": {
+"0x114": 1
+},
+"CScreenWorld|0xadc|8": {
+"0xb8c": 1
+},
+"CScreenWorld|0xae4|2": {
+"0xb94": 1
+},
+"CVidFont|0x20|4": {
+"0x20": 1
+},
+"CVidFont|0x1c|4": {
+"0x1c": 1
+},
+"CVidFont|0x24|4": {
+"0x24": 1
+},
+"CDerivedStats|0x4|2": {
+"0x4": 1
+},
+"CDerivedStats|0x6|2": {
+"0x6": 1
+},
+"CDerivedStats|0x8|2": {
+"0x8": 1
+},
+"CDerivedStats|0xa|2": {
+"0xa": 1
+},
+"CDerivedStats|0xc|2": {
+"0xc": 1
+},
+"CDerivedStats|0xe|2": {
+"0xe": 1
+},
+"CDerivedStats|0x10|2": {
+"0x10": 1
+},
+"CDerivedStats|0x12|2": {
+"0x12": 1
+},
+"CDerivedStats|0x14|2": {
+"0x14": 1
+},
+"CDerivedStats|0x16|2": {
+"0x16": 1
+},
+"CDerivedStats|0x18|2": {
+"0x18": 1
+},
+"CDerivedStats|0x1a|2": {
+"0x1a": 1
+},
+"CDerivedStats|0x1c|2": {
+"0x1c": 1
+},
+"CDerivedStats|0x1e|2": {
+"0x1e": 1
+},
+"CDerivedStats|0x20|2": {
+"0x20": 1
+},
+"CDerivedStats|0x22|2": {
+"0x22": 1
+},
+"CDerivedStats|0x24|2": {
+"0x24": 1
+},
+"CDerivedStats|0x26|2": {
+"0x26": 1
+},
+"CDerivedStats|0x28|2": {
+"0x28": 1
+},
+"CDerivedStats|0x2a|2": {
+"0x2a": 1
+},
+"CDerivedStats|0x2c|2": {
+"0x2c": 1
+},
+"CDerivedStats|0x2e|2": {
+"0x2e": 1
+},
+"CDerivedStats|0x30|2": {
+"0x30": 1
+},
+"CDerivedStats|0x32|2": {
+"0x32": 1
+},
+"CDerivedStats|0x34|2": {
+"0x34": 1
+},
+"CDerivedStats|0x36|2": {
+"0x36": 1
+},
+"CDerivedStats|0x38|2": {
+"0x38": 1
+},
+"CDerivedStats|0x3a|2": {
+"0x3a": 1
+},
+"CDerivedStats|0x3c|2": {
+"0x3c": 1
+},
+"CDerivedStats|0x3e|2": {
+"0x3e": 1
+},
+"CDerivedStats|0x40|2": {
+"0x40": 1
+},
+"CDerivedStats|0x42|2": {
+"0x42": 4
+},
+"CDerivedStats|0x44|2": {
+"0x44": 1
+},
+"CDerivedStats|0x46|2": {
+"0x46": 4
+},
+"CDerivedStats|0x48|2": {
+"0x48": 3
+},
+"CDerivedStats|0x4a|2": {
+"0x4a": 2
+},
+"CDerivedStats|0x4c|2": {
+"0x4c": 1
+},
+"CDerivedStats|0x4e|2": {
+"0x4e": 1
+},
+"CDerivedStats|0x50|2": {
+"0x50": 1
+},
+"CDerivedStats|0x52|2": {
+"0x52": 1
+},
+"CDerivedStats|0x56|2": {
+"0x56": 1
+},
+"CDerivedStats|0x58|2": {
+"0x58": 1
+},
+"CDerivedStats|0x5a|2": {
+"0x5a": 1
+},
+"CDerivedStats|0x5c|4": {
+"0x5c": 1
+},
+"CDerivedStats|0x60|4": {
+"0x60": 1
+},
+"CDerivedStats|0x64|4": {
+"0x70": 1
+},
+"CDerivedStats|0x68|4": {
+"0x74": 1
+},
+"CDerivedStats|0x6c|4": {
+"0x78": 1
+},
+"CDerivedStats|0x70|2": {
+"0x7c": 1
+},
+"CDerivedStats|0x72|2": {
+"0x7e": 1
+},
+"CDerivedStats|0x74|4": {
+"0x80": 1
+},
+"CDerivedStats|0x78|4": {
+"0x84": 1
+},
+"CDerivedStats|0x7c|4": {
+"0x88": 1
+},
+"CDerivedStats|0x80|2": {
+"0x8c": 1
+},
+"CDerivedStats|0x82|2": {
+"0x8e": 1
+},
+"CDerivedStats|0x84|2": {
+"0x90": 1
+},
+"CDerivedStats|0x86|2": {
+"0x92": 1
+},
+"CDerivedStats|0x88|2": {
+"0x94": 1
+},
+"CDerivedStats|0x8a|2": {
+"0x96": 1
+},
+"CDerivedStats|0x8c|2": {
+"0x98": 1
+},
+"CDerivedStats|0x8e|2": {
+"0x9a": 1
+},
+"CDerivedStats|0x90|4": {
+"0x9c": 1
+},
+"CDerivedStats|0x94|4": {
+"0xa0": 1
+},
+"CDerivedStats|0xb8|2": {
+"0xc4": 1
+},
+"CDerivedStats|0x98|4": {
+"0xa4": 1
+},
+"CDerivedStats|0x9c|4": {
+"0xa8": 1
+},
+"CDerivedStats|0xa0|4": {
+"0xac": 1
+},
+"CDerivedStats|0xa4|4": {
+"0xb0": 1
+},
+"CDerivedStats|0xa8|4": {
+"0xb4": 1
+},
+"CDerivedStats|0xac|4": {
+"0xb8": 1
+},
+"CDerivedStats|0xb0|4": {
+"0xbc": 1
+},
+"CDerivedStats|0xb4|4": {
+"0xc0": 1
+},
+"CDerivedStats|0xba|2": {
+"0xc6": 1
+},
+"CDerivedStats|0xbc|2": {
+"0xc8": 1
+},
+"CDerivedStats|0xbe|2": {
+"0xca": 1
+},
+"CDerivedStats|0xc0|2": {
+"0xcc": 1
+},
+"CDerivedStats|0xc4|4": {
+"0xd0": 1
+},
+"CDerivedStats|0xc8|4": {
+"0xd4": 1
+},
+"CDerivedStats|0xd0|2": {
+"0xdc": 1
+},
+"CDerivedStats|0xd2|2": {
+"0xde": 1
+},
+"CDerivedStats|0xd4|2": {
+"0xe0": 1
+},
+"CDerivedStats|0xd8|4": {
+"0xe4": 1
+},
+"CDerivedStats|0xdc|4": {
+"0xe8": 1
+},
+"CDerivedStats|0xe0|4": {
+"0xec": 1
+},
+"CDerivedStats|0xe4|4": {
+"0xf0": 1
+},
+"CDerivedStats|0xe8|4": {
+"0xf4": 1
+},
+"CDerivedStats|0xec|4": {
+"0xf8": 1
+},
+"CDerivedStats|0xf0|4": {
+"0xfc": 1
+},
+"CDerivedStats|0xf4|4": {
+"0x100": 1
+},
+"CDerivedStats|0xf8|4": {
+"0x104": 1
+},
+"CDerivedStats|0xfc|4": {
+"0x108": 1
+},
+"CDerivedStats|0x100|4": {
+"0x10c": 1
+},
+"CDerivedStats|0x104|4": {
+"0x110": 1
+},
+"CDerivedStats|0x108|4": {
+"0x114": 1
+},
+"CDerivedStats|0x10c|4": {
+"0x118": 1
+},
+"CDerivedStats|0x110|4": {
+"0x11c": 1
+},
+"CDerivedStats|0x114|4": {
+"0x120": 1
+},
+"CDerivedStats|0x118|4": {
+"0x124": 1
+},
+"CDerivedStats|0x11c|4": {
+"0x128": 1
+},
+"CDerivedStats|0x120|4": {
+"0x12c": 1
+},
+"CDerivedStats|0x124|4": {
+"0x130": 1
+},
+"CDerivedStats|0x128|4": {
+"0x134": 1
+},
+"CDerivedStats|0x12c|4": {
+"0x138": 1
+},
+"CDerivedStats|0x130|4": {
+"0x13c": 1
+},
+"CDerivedStats|0x134|4": {
+"0x140": 1
+},
+"CDerivedStats|0x138|4": {
+"0x144": 1
+},
+"CDerivedStats|0x13c|4": {
+"0x148": 1
+},
+"CDerivedStats|0x140|4": {
+"0x14c": 1
+},
+"CDerivedStats|0x144|4": {
+"0x150": 1
+},
+"CDerivedStats|0x148|4": {
+"0x154": 1
+},
+"CDerivedStats|0x14c|4": {
+"0x158": 1
+},
+"CDerivedStats|0x150|4": {
+"0x15c": 1
+},
+"CDerivedStats|0x154|4": {
+"0x160": 1
+},
+"CDerivedStats|0x158|4": {
+"0x164": 1
+},
+"CDerivedStats|0x15c|4": {
+"0x168": 1
+},
+"CDerivedStats|0x160|4": {
+"0x16c": 1
+},
+"CDerivedStats|0x164|4": {
+"0x170": 1
+},
+"CDerivedStats|0x168|4": {
+"0x174": 1
+},
+"CDerivedStats|0x16c|4": {
+"0x178": 1
+},
+"CDerivedStats|0x170|4": {
+"0x17c": 1
+},
+"CDerivedStats|0x174|4": {
+"0x180": 1
+},
+"CDerivedStats|0x178|4": {
+"0x184": 1
+},
+"CDerivedStats|0x17c|4": {
+"0x188": 1
+},
+"CDerivedStats|0x180|4": {
+"0x18c": 1
+},
+"CDerivedStats|0x184|4": {
+"0x190": 1
+},
+"CDerivedStats|0x188|4": {
+"0x194": 1
+},
+"CDerivedStats|0x18c|4": {
+"0x198": 1
+},
+"CDerivedStats|0x190|4": {
+"0x19c": 1
+},
+"CDerivedStats|0x194|4": {
+"0x1a0": 1
+},
+"CDerivedStats|0x198|4": {
+"0x1a4": 1
+},
+"CDerivedStats|0x19c|4": {
+"0x1a8": 1
+},
+"CDerivedStats|0x1a0|4": {
+"0x1ac": 1
+},
+"CDerivedStats|0x1a4|4": {
+"0x1b0": 1
+},
+"CDerivedStats|0x1a8|4": {
+"0x1b4": 1
+},
+"CDerivedStats|0x1ac|4": {
+"0x1b8": 1
+},
+"CDerivedStats|0x1b0|4": {
+"0x1bc": 1
+},
+"CDerivedStats|0x1b4|4": {
+"0x1c0": 1
+},
+"CDerivedStats|0x1b8|4": {
+"0x1c4": 1
+},
+"CDerivedStats|0x1bc|4": {
+"0x1c8": 1
+},
+"CDerivedStats|0x1c0|4": {
+"0x1cc": 1
+},
+"CDerivedStats|0x1c4|4": {
+"0x1d0": 1
+},
+"CDerivedStats|0x1c8|4": {
+"0x1d4": 1
+},
+"CDerivedStats|0x1cc|4": {
+"0x1d8": 3
+},
+"CMessage|0x0|8": {
+"0x0": 1
+},
+"CResRef|0x0|1": {
+"0x0": 1
+},
+"CGameSprite|0x560|4": {
+"0x558": 4
+},
+"CGameDoor|0x660|2": {
+"0x664": 2
+},
+"CBaldurChitin|0x1762|1": {
+"0x175a": 6
+},
+"CGameDoor|0x48|4": {
+"0x48": 1
+},
+"CGameArea|0xb98|4": {
+"0xb70": 1
+},
+"CGameArea|0xb9c|4": {
+"0xb74": 2
+},
+"CGameArea|0xbbc|2": {
+"0xb90": 3
+},
+"CGameArea|0xbb0|8": {
+"0xb88": 1
+},
+"CGameArea|0x50|4": {
+"0x50": 2
+},
+"CGameArea|0x54|4": {
+"0x54": 1
+},
+"CGameArea|0x58|4": {
+"0x58": 1
+},
+"CGameArea|0x5c|4": {
+"0x5c": 1
+},
+"CGameArea|0x60|4": {
+"0x60": 1
+},
+"CGameArea|0x64|4": {
+"0x64": 1
+},
+"CGameArea|0x68|4": {
+"0x68": 1
+},
+"CGameArea|0x6c|4": {
+"0x6c": 1
+},
+"CGameArea|0x70|4": {
+"0x70": 1
+},
+"CGameArea|0x74|4": {
+"0x74": 1
+},
+"CGameArea|0xc38|8": {
+"0xc18": 2
+},
+"CGameArea|0xc70|8": {
+"0xc50": 1
+},
+"CScreenMap|0x8f8|4": {
+"0x968": 3
+},
+"CVidCell|0x108|8": {
+"0x108": 2
+},
+"CSize|0x0|8": {
+"0x0": 1
+},
+"CRuleTables|0x3850|2": {
+"0x3b70": 3
+},
+"CRuleTables|0x3852|2": {
+"0x3b72": 3
+},
+"CRuleTables|0x3840|8": {
+"0x3b60": 3
+},
+"CInfGame|0x1920|2": {
+"0x1c40": 2
+},
+"CInfGame|0x1922|2": {
+"0x1c42": 2
+},
+"CInfGame|0x1910|8": {
+"0x1c30": 2
+},
+"CInfGame|0x1918|8": {
+"0x1c38": 1
+},
+"CInfGame|0x1958|2": {
+"0x1c78": 2
+},
+"CInfGame|0x195a|2": {
+"0x1c7a": 2
+},
+"CInfGame|0x1948|8": {
+"0x1c68": 2
+},
+"CInfGame|0x1950|8": {
+"0x1c70": 1
+},
+"CDerivedStats|0x2f0|8": {
+"0x2f8": 1
+},
+"CDerivedStats|0x328|8": {
+"0x330": 2
+},
+"CDerivedStats|0x360|8": {
+"0x368": 2
+},
+"CDerivedStats|0x3c0|8": {
+"0x3c8": 2
+},
+"CDerivedStats|0x3f8|8": {
+"0x400": 2
+},
+"CDerivedStats|0x430|8": {
+"0x438": 2
+},
+"CDerivedStats|0x468|8": {
+"0x470": 2
+},
+"CDerivedStats|0x4a0|8": {
+"0x4a8": 2
+},
+"CDerivedStats|0x4d8|8": {
+"0x4e0": 1
+},
+"CDerivedStats|0x510|8": {
+"0x518": 2
+},
+"CDerivedStats|0x570|8": {
+"0x578": 1
+},
+"CDerivedStats|0x578|8": {
+"0x580": 1
+},
+"CDerivedStats|0x580|8": {
+"0x588": 1
+},
+"CDerivedStats|0x588|8": {
+"0x590": 1
+},
+"CDerivedStats|0x590|8": {
+"0x598": 1
+},
+"CDerivedStats|0x598|8": {
+"0x5a0": 1
+},
+"CDerivedStats|0x5a0|8": {
+"0x5a8": 1
+},
+"CDerivedStats|0x5a8|8": {
+"0x5b0": 1
+},
+"CDerivedStats|0x5b0|8": {
+"0x5b8": 1
+},
+"CDerivedStats|0x5b8|8": {
+"0x5c0": 1
+},
+"CDerivedStats|0x5c0|8": {
+"0x5c8": 1
+},
+"CDerivedStats|0x5c8|8": {
+"0x5d0": 1
+},
+"CDerivedStats|0x5d0|8": {
+"0x5d8": 1
+},
+"CDerivedStats|0x5d8|8": {
+"0x5e0": 1
+},
+"CDerivedStats|0x5e0|8": {
+"0x5e8": 1
+},
+"CDerivedStats|0x5e8|8": {
+"0x5f0": 1
+},
+"CDerivedStats|0x5f0|8": {
+"0x5f8": 1
+},
+"CDerivedStats|0x5f8|8": {
+"0x600": 1
+},
+"CDerivedStats|0x600|8": {
+"0x608": 1
+},
+"CDerivedStats|0x608|8": {
+"0x610": 1
+},
+"CDerivedStats|0x610|8": {
+"0x618": 1
+},
+"CDerivedStats|0x648|8": {
+"0x650": 1
+},
+"CDerivedStats|0x680|8": {
+"0x688": 1
+},
+"CDerivedStats|0x6b8|8": {
+"0x6c0": 1
+},
+"CDerivedStats|0x6f0|8": {
+"0x6f8": 2
+},
+"CDerivedStats|0x728|8": {
+"0x730": 2
+},
+"CDerivedStats|0x760|8": {
+"0x768": 2
+},
+"CDerivedStats|0x798|8": {
+"0x7a0": 2
+},
+"CDerivedStats|0x7d0|8": {
+"0x7d8": 1
+},
+"CDerivedStats|0x808|8": {
+"0x810": 1
+},
+"CDerivedStats|0x840|8": {
+"0x848": 1
+},
+"CDerivedStats|0x878|8": {
+"0x880": 1
+},
+"CDerivedStats|0x8b0|8": {
+"0x8b8": 2
+},
+"CDerivedStats|0x920|4": {
+"0x928": 1
+},
+"CDerivedStats|0x8e8|8": {
+"0x8f0": 2
+},
+"CDerivedStats|0x928|8": {
+"0x930": 1
+},
+"CDerivedStats|0x930|8": {
+"0x938": 1
+},
+"CDerivedStats|0x938|8": {
+"0x940": 1
+},
+"CDerivedStats|0x940|8": {
+"0x948": 1
+},
+"CDerivedStats|0x948|8": {
+"0x950": 1
+},
+"CDerivedStats|0x950|8": {
+"0x958": 1
+},
+"CDerivedStats|0x958|8": {
+"0x960": 1
+},
+"CDerivedStats|0x960|8": {
+"0x968": 1
+},
+"CDerivedStats|0x968|8": {
+"0x970": 1
+},
+"CDerivedStats|0x970|8": {
+"0x978": 1
+},
+"CDerivedStats|0x978|8": {
+"0x980": 2
+},
+"CDerivedStats|0x9b0|8": {
+"0x9b8": 2
+},
+"CDerivedStats|0x9e8|8": {
+"0x9f0": 2
+},
+"CDerivedStats|0xb70|8": {
+"0xb78": 2
+},
+"CDerivedStats|0xba8|8": {
+"0xbb0": 2
+},
+"CDerivedStats|0xbe0|8": {
+"0xbe8": 2
+},
+"CDerivedStats|0xc18|8": {
+"0xc20": 2
+},
+"CDerivedStats|0xc50|8": {
+"0xc58": 2
+},
+"CVidBitmap|0x118|8": {
+"0x118": 1
+},
+"CVidBitmap|0x110|2": {
+"0x110": 1
+},
+"CScreenWorld|0x5c|4": {
+"0x64": 2
+},
+"CBaldurChitin|0xf94|4": {
+"0xfcc": 1
+},
+"CTimerWorld|0x4|1": {
+"0x4": 1
+},
+"CVidBitmap|0x108|8": {
+"0x108": 1
+},
+"CBaldurChitin|0xf98|8": {
+"0xfd0": 2,
+"0x10c0": 1
+},
+"CProjectile|0x20|8": {
+"0x20": 2
+},
+"CProjectile|0x18|8": {
+"0x18": 2
+},
+"CProjectile|0x48|4": {
+"0x48": 1
+},
+"CProjectile|0x28|1": {
+"0x28": 1
+},
+"CProjectile|0xc|8": {
+"0xc": 1
+},
+"CProjectile|0x14|4": {
+"0x14": 1
+},
+"CVidMode|0x160|8": {
+"0x160": 2
+},
+"Item_ability_st|0x17|1": {
+"0x17": 1
+},
+"Item_ability_st|0x19|1": {
+"0x19": 1
+},
+"Item_ability_st|0x26|4": {
+"0x26": 1
+},
+"CInfGame|0x7d30|4": {
+"0xb914": 4
+},
+"CInfGame|0x7cd8|4": {
+"0xb8b8": 3,
+"0xb9c0": 1
+},
+"CScreenChapter|0x128|4": {
+"0x130": 2
+},
+"CScreenChapter|0xd8|4": {
+"0xe0": 4
+},
+"CScreenChapter|0xf8|8": {
+"0x100": 2
+},
+"CScreenChapter|0x16c|4": {
+"0x174": 1
+},
+"CScreenWorld|0xaf8|4": {
+"0xba8": 3
+},
+"CScreenWorld|0xafc|4": {
+"0xbac": 3
+},
+"CScreenWorld|0xbf|1": {
+"0xc7": 1
+},
+"CInfGame|0x92b8|1": {
+"0xcb90": 1
+},
+"CInfGame|0x3fa8|4": {
+"0x7828": 8
+},
+"CInfGame|0x3fb8|1": {
+"0x7838": 1
+},
+"CInfGame|0x9538|4": {
+"0xce10": 1
+},
+"CScreenMultiPlayer|0x6d4|4": {
+"0x73c": 1
+},
+"CInfGame|0x3772|2": {
+"0x3a92": 4
+},
+"CInfGame|0x3760|8": {
+"0x3a80": 3
+},
+"CInfGame|0x3758|8": {
+"0x3a78": 1
+},
+"CGameSprite|0x79e|2": {
+"0x796": 4
+},
+"CGameSprite|0x79c|2": {
+"0x794": 4
+},
+"CInfGame|0x23a2|2": {
+"0x26c2": 2
+},
+"CScreenCreateChar|0x8f4|1": {
+"0x95c": 1
+},
+"CBaldurChitin|0x10c0|8": {
+"0x10f8": 8
+},
+"CBaldurChitin|0x1128|8": {
+"0x1160": 13
+},
+"CScreenStart|0xb0|4": {
+"0xb8": 9
+},
+"CScreenCharacter|0x48|2": {
+"0x50": 3
+},
+"CInfGame|0x6630|1": {
+"0xa218": 1
+},
+"CScreenCreateChar|0x8ec|4": {
+"0x954": 1
+},
+"CScreenCreateChar|0x8e6|4": {
+"0x94e": 1
+},
+"CScreenCreateChar|0x8ea|1": {
+"0x952": 1
+},
+"CScreenLoad|0x0|8": {
+"0x0": 3
+},
+"CBaldurChitin|0x17c4|4": {
+"0x17bc": 4
+},
+"CBaldurProjector|0xa8|4": {
+"0xb0": 1
+},
+"CSpell|0x8|8": {
+"0x8": 1
+},
+"CInfGame|0x95bc|4": {
+"0xce98": 3
+},
+"CInfGame|0x9754|4": {
+"0xd03c": 3
+},
+"CInfGame|0x7d70|4": {
+"0xb954": 8,
+"0xb94c": 1
+},
+"CInfGame|0x95c0|1": {
+"0xce9c": 2
+},
+"CInfGame|0x968c|4": {
+"0xcf74": 2
+},
+"CScreenStore|0x8fc|4": {
+"0x964": 3
+},
+"CScreenStore|0x7a8|8": {
+"0x810": 3
+},
+"CScreenStore|0x7a0|8": {
+"0x808": 2
+},
+"CStore|0x8|4": {
+"0x8": 2
+},
+"CStore|0x10|4": {
+"0x10": 1
+},
+"CScreenInventory|0x50|8": {
+"0x58": 16
+},
+"CItem|0x0|8": {
+"0x0": 3
+},
+"CItem|0x24|1": {
+"0x24": 2
+},
+"CInfGame|0x24f2|2": {
+"0x2812": 4
+},
+"CInfGame|0x24f0|2": {
+"0x2810": 2
+},
+"CInfGame|0x24e0|8": {
+"0x2800": 2
+},
+"CInfGame|0x24e8|8": {
+"0x2808": 2
+},
+"CGameSprite|0x3bf8|4": {
+"0x3908": 1
+},
+"CGameSprite|0x3bfc|4": {
+"0x390c": 1
+},
+"CGameSprite|0x50|4": {
+"0x50": 2
+},
+"CGameSprite|0x4e60|4": {
+"0x4b78": 1
+},
+"CGameSprite|0x38|1": {
+"0x38": 3
+},
+"CGameSprite|0x4c9c|4": {
+"0x49b8": 1
+},
+"CGameSprite|0x4e38|4": {
+"0x4b50": 1
+},
+"CGameSprite|0x586|1": {
+"0x57e": 1
+},
+"CInfGame|0x9758|4": {
+"0xd040": 7
+},
+"CVidMode|0x154|4": {
+"0x154": 6
+},
+"CVidMode|0x184|4": {
+"0x188": 3
+},
+"CVidMode|0x150|4": {
+"0x150": 6
+},
+"CVidMode|0x188|4": {
+"0x18c": 3
+},
+"CBaldurChitin|0x17e0|8": {
+"0x17d8": 3
+},
+"CInfGame|0x7d08|4": {
+"0xb8e8": 14
+},
+"CSoundImp|0x5c|4": {
+"0x5c": 1
+},
+"CSoundImp|0x60|4": {
+"0x60": 1
+},
+"CVidPalette|0x8|8": {
+"0x8": 1
+},
+"CVidPalette|0x0|8": {
+"0x0": 1
+},
+"CVIDIMG_PALETTEAFFECT|0x0|1": {
+"0x0": 1
+},
+"CVIDPALETTE_COLOR|0x0|4": {
+"0x0": 2
+},
+"CVIDIMG_PALETTEAFFECT|0x1|1": {
+"0x1": 2
+},
+"CVIDPALETTE_COLOR|0x4|4": {
+"0x4": 2
+},
+"CVIDIMG_PALETTEAFFECT|0x2|1": {
+"0x2": 2
+},
+"CVIDPALETTE_COLOR|0x8|4": {
+"0x8": 1
+},
+"CVIDIMG_PALETTEAFFECT|0x9|1": {
+"0x9": 1
+},
+"CVIDIMG_PALETTEAFFECT|0xa|1": {
+"0xa": 1
+},
+"CInfinity|0x490|4": {
+"0x448": 1
+},
+"CInfGame|0x7ef8|4": {
+"0xc58": 1,
+"0xbae4": 1,
+"0xbae0": 1
+},
+"CScreenWorld|0xba8|4": {
+"0xc58": 2
+},
+"CInfGame|0x6600|8": {
+"0xa1e8": 1
+},
+"CInfGame|0x6608|8": {
+"0xa1f0": 1
+},
+"CInfGame|0x6610|8": {
+"0xa1f8": 1
+},
+"CInfGame|0x9650|4": {
+"0xcf38": 2
+},
+"CObject|0x10|8": {
+"0x10": 2
+},
+"CInfGame|0x9678|8": {
+"0xcf60": 1
+},
+"CInfGame|0x6650|4": {
+"0xa238": 2
+},
+"CInfGame|0x67c0|4": {
+"0xa3a0": 2
+},
+"CInfGame|0x9788|4": {
+"0xd0d0": 3
+},
+"CInfGame|0x97c0|4": {
+"0xd108": 4
+},
+"CInfGame|0x4010|4": {
+"0x7890": 2
+},
+"CInfGame|0x4034|4": {
+"0x78b4": 11
+},
+"CInfGame|0x9468|4": {
+"0xcd40": 5
+},
+"CInfGame|0x94a8|4": {
+"0xcd80": 1
+},
+"CInfGame|0x7998|8": {
+"0xb578": 3
+},
+"CInfGame|0x66b4|4": {
+"0xa294": 3
+},
+"CInfGame|0x63c8|4": {
+"0x9c48": 1
+},
+"CInfGame|0x96a0|8": {
+"0xcf88": 2
+},
+"CInfGame|0x96a8|8": {
+"0xcf90": 2
+},
+"CScreenMultiPlayer|0x0|8": {
+"0x0": 3
+},
+"CScreenWorld|0x804|16": {
+"0x8b4": 1
+},
+"CGameArea|0x228|8": {
+"0x228": 1
+},
+"CGameArea|0x4bc|8": {
+"0x4c4": 1
+},
+"CGameArea|0x4c4|8": {
+"0x4cc": 1
+},
+"CGameArea|0x4d8|4": {
+"0x4e0": 1
+},
+"CGameArea|0x4b8|1": {
+"0x4c0": 4
+},
+"CInfGame|0x66f8|8": {
+"0xa2d8": 2
+},
+"CInfGame|0x6124|4": {
+"0x99a4": 11
+},
+"CStore|0xa8|8": {
+"0xa8": 2
+},
+"CVidMode|0x17c|4": {
+"0x17c": 2
+},
+"CInfGame|0x7cbc|2": {
+"0xb89c": 1
+},
+"CInfGame|0x79a0|8": {
+"0xb580": 1
+},
+"CInfGame|0x79a8|8": {
+"0xb588": 1
+},
+"CInfGame|0x79b0|8": {
+"0xb590": 1
+},
+"CInfGame|0x79b8|8": {
+"0xb598": 1
+},
+"CInfGame|0x79c0|8": {
+"0xb5a0": 1
+},
+"CInfGame|0x79c8|8": {
+"0xb5a8": 1
+},
+"CInfGame|0x79d0|8": {
+"0xb5b0": 1
+},
+"CInfGame|0x79d8|8": {
+"0xb5b8": 1
+},
+"CInfGame|0x79e0|8": {
+"0xb5c0": 1
+},
+"CInfGame|0x79e8|8": {
+"0xb5c8": 1
+},
+"CInfGame|0x79f0|8": {
+"0xb5d0": 1
+},
+"CInfGame|0x79f8|8": {
+"0xb5d8": 1
+},
+"CInfGame|0x7a00|8": {
+"0xb5e0": 1
+},
+"CInfGame|0x7a08|8": {
+"0xb5e8": 1
+},
+"CInfGame|0x7a10|8": {
+"0xb5f0": 1
+},
+"CInfGame|0x7a18|8": {
+"0xb5f8": 1
+},
+"CInfGame|0x7a20|8": {
+"0xb600": 1
+},
+"CInfGame|0x7a28|8": {
+"0xb608": 1
+},
+"CInfGame|0x7a30|8": {
+"0xb610": 1
+},
+"CInfGame|0x7a38|8": {
+"0xb618": 1
+},
+"CInfGame|0x7a40|8": {
+"0xb620": 1
+},
+"CInfGame|0x7a48|8": {
+"0xb628": 1
+},
+"CInfGame|0x7a50|8": {
+"0xb630": 1
+},
+"CInfGame|0x7a58|8": {
+"0xb638": 1
+},
+"CInfGame|0x7a60|8": {
+"0xb640": 1
+},
+"CInfGame|0x7a68|8": {
+"0xb648": 1
+},
+"CInfGame|0x7a70|8": {
+"0xb650": 1
+},
+"CInfGame|0x7a78|8": {
+"0xb658": 1
+},
+"CInfGame|0x7a80|8": {
+"0xb660": 1
+},
+"CInfGame|0x7a88|8": {
+"0xb668": 1
+},
+"CInfGame|0x7a90|8": {
+"0xb670": 1
+},
+"CInfGame|0x7a98|8": {
+"0xb678": 1
+},
+"CInfGame|0x7aa0|8": {
+"0xb680": 1
+},
+"CInfGame|0x7aa8|8": {
+"0xb688": 1
+},
+"CInfGame|0x7ab0|8": {
+"0xb690": 1
+},
+"CInfGame|0x7ab8|8": {
+"0xb698": 1
+},
+"CInfGame|0x7ac0|8": {
+"0xb6a0": 1
+},
+"CInfGame|0x7ac8|8": {
+"0xb6a8": 1
+},
+"CInfGame|0x7ad0|8": {
+"0xb6b0": 1
+},
+"CInfGame|0x7ad8|8": {
+"0xb6b8": 1
+},
+"CInfGame|0x7ae0|8": {
+"0xb6c0": 1
+},
+"CInfGame|0x7ae8|8": {
+"0xb6c8": 1
+},
+"CInfGame|0x7af0|8": {
+"0xb6d0": 1
+},
+"CInfGame|0x7af8|8": {
+"0xb6d8": 1
+},
+"CInfGame|0x7b00|8": {
+"0xb6e0": 1
+},
+"CInfGame|0x7b08|8": {
+"0xb6e8": 1
+},
+"CInfGame|0x7b10|8": {
+"0xb6f0": 1
+},
+"CInfGame|0x7b18|8": {
+"0xb6f8": 1
+},
+"CInfGame|0x7b20|8": {
+"0xb700": 1
+},
+"CInfGame|0x7b28|8": {
+"0xb708": 1
+},
+"CInfGame|0x7b30|8": {
+"0xb710": 1
+},
+"CInfGame|0x7b38|8": {
+"0xb718": 1
+},
+"CInfGame|0x7b40|8": {
+"0xb720": 1
+},
+"CInfGame|0x7b48|8": {
+"0xb728": 1
+},
+"CInfGame|0x7b50|8": {
+"0xb730": 1
+},
+"CInfGame|0x7b58|8": {
+"0xb738": 1
+},
+"CInfGame|0x7b60|8": {
+"0xb740": 1
+},
+"CInfGame|0x7b68|8": {
+"0xb748": 1
+},
+"CInfGame|0x7b70|8": {
+"0xb750": 1
+},
+"CInfGame|0x7b78|8": {
+"0xb758": 1
+},
+"CInfGame|0x7b80|8": {
+"0xb760": 1
+},
+"CInfGame|0x7b88|8": {
+"0xb768": 1
+},
+"CInfGame|0x7b90|8": {
+"0xb770": 1
+},
+"CInfGame|0x7b98|8": {
+"0xb778": 1
+},
+"CInfGame|0x7ba0|8": {
+"0xb780": 1
+},
+"CInfGame|0x7ba8|8": {
+"0xb788": 1
+},
+"CInfGame|0x7bb0|8": {
+"0xb790": 1
+},
+"CInfGame|0x7bb8|8": {
+"0xb798": 1
+},
+"CInfGame|0x7bc0|8": {
+"0xb7a0": 1
+},
+"CInfGame|0x7bc8|8": {
+"0xb7a8": 1
+},
+"CInfGame|0x7bd0|8": {
+"0xb7b0": 1
+},
+"CInfGame|0x7bd8|8": {
+"0xb7b8": 1
+},
+"CInfGame|0x7be0|8": {
+"0xb7c0": 1
+},
+"CInfGame|0x7be8|8": {
+"0xb7c8": 1
+},
+"CInfGame|0x7bf0|8": {
+"0xb7d0": 1
+},
+"CInfGame|0x7bf8|8": {
+"0xb7d8": 1
+},
+"CInfGame|0x7c00|8": {
+"0xb7e0": 1
+},
+"CInfGame|0x7c08|8": {
+"0xb7e8": 1
+},
+"CInfGame|0x7c10|8": {
+"0xb7f0": 1
+},
+"CInfGame|0x7c18|8": {
+"0xb7f8": 1
+},
+"CInfGame|0x7c20|8": {
+"0xb800": 1
+},
+"CInfGame|0x7c28|8": {
+"0xb808": 1
+},
+"CInfGame|0x7c30|8": {
+"0xb810": 1
+},
+"CInfGame|0x7c38|8": {
+"0xb818": 1
+},
+"CInfGame|0x7c40|8": {
+"0xb820": 1
+},
+"CInfGame|0x7c48|8": {
+"0xb828": 1
+},
+"CInfGame|0x7c50|8": {
+"0xb830": 1
+},
+"CInfGame|0x7c58|8": {
+"0xb838": 1
+},
+"CInfGame|0x7c60|8": {
+"0xb840": 1
+},
+"CInfGame|0x7c68|8": {
+"0xb848": 1
+},
+"CInfGame|0x7c70|8": {
+"0xb850": 1
+},
+"CInfGame|0x7c78|8": {
+"0xb858": 1
+},
+"CInfGame|0x7c80|8": {
+"0xb860": 1
+},
+"CInfGame|0x7c88|8": {
+"0xb868": 1
+},
+"CInfGame|0x7c90|8": {
+"0xb870": 1
+},
+"CInfGame|0x7c98|8": {
+"0xb878": 1
+},
+"CInfGame|0x7ca0|8": {
+"0xb880": 1
+},
+"CInfGame|0x7ca8|8": {
+"0xb888": 1
+},
+"CInfGame|0x7cb0|8": {
+"0xb890": 1
+},
+"CInfGame|0x7cc4|8": {
+"0xb8a4": 1
+},
+"CInfGame|0x9524|1": {
+"0xcdfc": 3
+},
+"CInfGame|0x9525|1": {
+"0xcdfd": 2
+},
+"CInfGame|0x9554|1": {
+"0xce2c": 5
+},
+"CInfGame|0x6760|8": {
+"0xa340": 1
+},
+"CInfGame|0x6768|8": {
+"0xa348": 1
+},
+"CInfGame|0x6770|8": {
+"0xa350": 1
+},
+"CInfGame|0x6778|8": {
+"0xa358": 1
+},
+"CInfGame|0x6780|8": {
+"0xa360": 1
+},
+"CInfGame|0x6788|8": {
+"0xa368": 1
+},
+"CInfGame|0x6790|8": {
+"0xa370": 1
+},
+"CInfGame|0x6798|8": {
+"0xa378": 1
+},
+"CInfGame|0x67a0|8": {
+"0xa380": 1
+},
+"CInfGame|0x7960|8": {
+"0xb540": 1
+},
+"CInfGame|0x9698|8": {
+"0xcf80": 1
+},
+"CScreenWorld|0xb64|4": {
+"0xc14": 1
+},
+"CScreenWorld|0xb60|4": {
+"0xc10": 1
+},
+"CInfGame|0x3fbc|4": {
+"0x783c": 1
+},
+"CInfGame|0x6591|1": {
+"0xa179": 1
+},
+"CInfGame|0x9758|8": {
+"0xd040": 1
+},
+"CInfGame|0x97f0|4": {
+"0xd138": 2
+},
+"CInfGame|0x7970|4": {
+"0xb550": 4
+},
+"CInfGame|0x180|2": {
+"0x468": 1
+},
+"CInfGame|0x160|8": {
+"0x448": 1
+},
+"CSoundMixerImp|0x54|4": {
+"0x54": 1
+},
+"CGameArea|0x203|1": {
+"0x203": 1
+},
+"CGameArea|0x5f8|8": {
+"0x608": 1
+},
+"CGameArea|0x21c|1": {
+"0x21c": 1
+},
+"CGameArea|0xfac|2": {
+"0xfcc": 2
+},
+"CGameArea|0xfae|2": {
+"0xfce": 1
+},
+"CGameArea|0xfb0|4": {
+"0xfd0": 1
+},
+"CGameArea|0x8c8|8": {
+"0x898": 1
+},
+"CBaldurChitin|0x1d4|4": {
+"0x1cc": 1
+},
+"CBaldurChitin|0x60|8": {
+"0x58": 1
+},
+"CSoundMixerImp|0x60|8": {
+"0x60": 1
+},
+"CGameSprite|0x3a28|1": {
+"0x3720": 3
+},
+"CInfGame|0x7de4|4": {
+"0xb9c8": 2
+},
+"CInfGame|0x7de8|4": {
+"0xb9cc": 2
+},
+"CInfGame|0x7db4|1": {
+"0xb99c": 1
+},
+"CInfGame|0x7db0|4": {
+"0xb998": 2
+},
+"CInfGame|0x7dfc|2": {
+"0xb9e0": 1
+},
+"CInfGame|0x7da8|4": {
+"0xb990": 1
+},
+"CInfGame|0x7d9c|4": {
+"0xb984": 1
+},
+"CInfGame|0x7de0|4": {
+"0xb9c4": 1
+},
+"CInfGame|0x7dec|4": {
+"0xb9d0": 3
+},
+"CInfGame|0x7df0|4": {
+"0xb9d4": 1
+},
+"CInfGame|0x7df4|4": {
+"0xb9d8": 1
+},
+"CInfGame|0x7df8|4": {
+"0xb9dc": 1
+},
+"CInfGame|0x7e00|4": {
+"0xb9e4": 2
+},
+"CInfGame|0x7e04|4": {
+"0xb9e8": 7
+},
+"CInfGame|0x7e08|4": {
+"0xb954": 1
+},
+"CInfGame|0x7e0c|4": {
+"0xb950": 1,
+"0xb9f0": 1
+},
+"CInfGame|0x7cfc|4": {
+"0xb8dc": 8
+},
+"CInfGame|0x7ce0|4": {
+"0xb8c0": 3
+},
+"CInfGame|0x7ce4|4": {
+"0xb8c4": 3
+},
+"CInfGame|0x7dd8|4": {
+"0xb904": 1
+},
+"CInfGame|0x7d20|4": {
+"0xb904": 1
+},
+"CInfGame|0x7d2c|4": {
+"0xb910": 2
+},
+"CInfGame|0x7cdc|4": {
+"0xb8bc": 2
+},
+"CInfGame|0x7d24|4": {
+"0xb908": 4
+},
+"CInfGame|0x7d28|4": {
+"0xb90c": 5
+},
+"CInfGame|0x7d34|4": {
+"0xb918": 14
+},
+"CInfGame|0x7d5c|4": {
+"0xb940": 2
+},
+"CInfGame|0x7d38|4": {
+"0xb91c": 2
+},
+"CInfGame|0x7d3c|4": {
+"0xb920": 2
+},
+"CInfGame|0x7d40|4": {
+"0xb924": 25
+},
+"CInfGame|0x7d44|4": {
+"0xb928": 2
+},
+"CInfGame|0x7f00|4": {
+"0xbaec": 1
+},
+"CInfGame|0x7d50|4": {
+"0xb934": 1
+},
+"CInfGame|0x7d60|4": {
+"0xb944": 1
+},
+"CInfGame|0x7d78|4": {
+"0xb95c": 1
+},
+"CInfGame|0x7e14|4": {
+"0xb988": 1
+},
+"CInfGame|0x7e18|4": {
+"0xb9fc": 7
+},
+"CInfGame|0x7e1c|4": {
+"0xba00": 1
+},
+"CInfGame|0x7e20|4": {
+"0xba04": 1
+},
+"CInfGame|0x7e30|8": {
+"0xba14": 1
+},
+"CInfGame|0x7e38|8": {
+"0xba1c": 1
+},
+"CInfGame|0x7e40|4": {
+"0xba24": 3
+},
+"CInfGame|0x7e5c|4": {
+"0xba40": 1
+},
+"CInfGame|0x7e6c|4": {
+"0xba08": 1
+},
+"CInfGame|0x7e70|4": {
+"0xba44": 1
+},
+"CInfGame|0x7e74|4": {
+"0xba48": 1
+},
+"CInfGame|0x7e78|4": {
+"0xba4c": 1
+},
+"CInfGame|0x7e7c|4": {
+"0xba50": 1
+},
+"CInfGame|0x7e80|4": {
+"0xba54": 1
+},
+"CInfGame|0x7e84|4": {
+"0xba58": 1
+},
+"CInfGame|0x7e88|4": {
+"0xba5c": 1
+},
+"CInfGame|0x7e8c|4": {
+"0xba60": 1
+},
+"CInfGame|0x7e90|4": {
+"0xba64": 1
+},
+"CInfGame|0x7e94|4": {
+"0xba68": 1
+},
+"CInfGame|0x7e9c|4": {
+"0xba80": 1
+},
+"CInfGame|0x7ea0|4": {
+"0xba84": 2
+},
+"CInfGame|0x7ea4|4": {
+"0xba88": 1
+},
+"CInfGame|0x7ea8|4": {
+"0xba8c": 2
+},
+"CInfGame|0x7db8|4": {
+"0xb9a0": 2
+},
+"CInfGame|0x7dbc|4": {
+"0xba90": 1,
+"0xb9a4": 2
+},
+"CInfGame|0x7eac|4": {
+"0xbaa0": 1,
+"0xba90": 1
+},
+"CInfGame|0x7eb8|4": {
+"0xba94": 1,
+"0xbaa0": 1
+},
+"CInfGame|0x7eb0|4": {
+"0xba98": 1
+},
+"CInfGame|0x7ec0|4": {
+"0xbaa8": 2
+},
+"CInfGame|0x7ebc|4": {
+"0xbaa4": 2
+},
+"CInfGame|0x7ec4|8": {
+"0xbaac": 1
+},
+"CInfGame|0x7ed4|4": {
+"0xbabc": 5
+},
+"CInfGame|0x7ed8|4": {
+"0xbac0": 14
+},
+"CInfGame|0x7edc|4": {
+"0xbac4": 1
+},
+"CInfGame|0x7ee0|4": {
+"0xbac8": 4
+},
+"CInfGame|0x7ee4|4": {
+"0xbacc": 2
+},
+"CInfGame|0x7ee8|4": {
+"0xbad0": 1
+},
+"CInfGame|0x7eec|4": {
+"0xbad4": 2
+},
+"CInfGame|0x7ef0|4": {
+"0xbad8": 2
+},
+"CInfGame|0x7ef4|4": {
+"0xbadc": 1
+},
+"CInfGame|0x7efc|4": {
+"0xbae8": 1
+},
+"CInfGame|0x7f0c|4": {
+"0xbaf4": 1,
+"0xbaf8": 1
+},
+"CInfGame|0x7f10|4": {
+"0xb9b8": 1,
+"0xbafc": 2
+},
+"CInfGame|0x7dd0|4": {
+"0xb9bc": 1,
+"0xb9b8": 1
+},
+"CInfGame|0x7f1c|4": {
+"0xbb0c": 2
+},
+"CInfGame|0x7f20|4": {
+"0xbb10": 2
+},
+"CInfGame|0x7f24|4": {
+"0xbb14": 3
+},
+"CInfGame|0x7f28|4": {
+"0xbb20": 1
+},
+"CInfGame|0x7ddc|4": {
+"0xb9c0": 1
+},
+"CInfGame|0x7d54|4": {
+"0xb938": 1
+},
+"CInfGame|0x7f2c|4": {
+"0xbb1c": 1,
+"0xbb30": 1,
+"0xbb24": 1
+},
+"CChitin|0xd8|4": {
+"0xd0": 2
+},
+"CChitin|0xd4|4": {
+"0xcc": 3
+},
+"CChitin|0x104|4": {
+"0xfc": 2
+},
+"CChitin|0x100|4": {
+"0xf8": 2
+},
+"CChitin|0x111|1": {
+"0x109": 1
+},
+"CChitin|0x130|4": {
+"0x128": 1
+},
+"CChitin|0x120|1": {
+"0x118": 1
+},
+"CInfGame|0x3c10|2": {
+"0x4080": 1
+},
+"CInfGame|0x3c00|8": {
+"0x4070": 1
+},
+"CInfGame|0x3c08|8": {
+"0x4078": 1
+},
+"CGameObject|0x18|8": {
+"0x18": 35
+},
+"CGameObject|0x3c48|1": {
+"0x3958": 4
+},
+"CGameObject|0x3c50|1": {
+"0x3960": 4
+},
+"CGameObject|0x3bf4|4": {
+"0x3904": 4
+},
+"CGameObject|0x3bf8|4": {
+"0x3908": 4
+},
+"CGameObject|0x3bfc|4": {
+"0x3910": 4,
+"0x3904": 3
+},
+"CGameObject|0x1dc8|1": {
+"0x1c98": 4
+},
+"CInfGame|0x4048|4": {
+"0x78c8": 4
+},
+"CGameObject|0x578|2": {
+"0x570": 18
+},
+"CGameObject|0x56c|4": {
+"0x564": 18
+},
+"CGameObject|0x79c|2": {
+"0x794": 9
+},
+"CGameObject|0x79e|2": {
+"0x796": 9
+},
+"CBaldurChitin|0x0|4": {
+"0x0": 14
+},
+"CBaldurChitin|0xfa8|4": {
+"0xfc8": 9
+},
+"CScreenWorld|0x9a8|4": {
+"0xa58": 2
+},
+"CScreenWorld|0xb88|4": {
+"0xc34": 3
+},
+"CGameAIBase|0x0|8": {
+"0x0": 5
+},
+"CGameArea|0x40|1": {
+"0x40": 1
+},
+"CScreenInventory|0x760|4": {
+"0x7c8": 2
+},
+"CInfGame|0x4039|8": {
+"0x78b9": 1
+},
+"CInfCursor|0x1088|8": {
+"0x10c0": 2
+},
+"CStore|0x0|8": {
+"0x0": 2
+},
+"CStore|0x18|4": {
+"0x18": 1
+},
+"CBaldurChitin|0xfa0|1": {
+"0xfd8": 1
+},
+"CBaldurChitin|0x1140|8": {
+"0x1178": 1
+},
+"CScreenCreateChar|0x0|8": {
+"0x0": 1
+},
+"CScreenCreateChar|0x768|4": {
+"0x7d0": 2
+},
+"CScreenMap|0x750|4": {
+"0x7c0": 2
+},
+"CScreenOptions|0x758|1": {
+"0x7c0": 2
+},
+"CBaldurChitin|0x15ff|1": {
+"0x161f": 4
+},
+"CScreenLoad|0x178|4": {
+"0x180": 1
+},
+"CScreenLoad|0x17c|4": {
+"0x184": 4
+},
+"CInfGame|0x7978|1": {
+"0xb558": 4
+},
+"CInfCursor|0x560|4": {
+"0x560": 3
+},
+"CBaldurChitin|0x1084|4": {
+"0x10bc": 1
+},
+"CInfGame|0x6690|2": {
+"0xa278": 3
+},
+"Item_ability_st|0x10|1": {
+"0x10": 1
+},
+"CBaldurChitin|0xfa0|4": {
+"0xfd8": 1
+},
+"CBaldurChitin|0x148|4": {
+"0x140": 4
+},
+"CInfGame|0x63a8|4": {
+"0x9c28": 4
+},
+"C2DArray|0x28|8": {
+"0x28": 1
+},
+"CBaldurChitin|0x1180|1": {
+"0x11b0": 2
+},
+"CScreenCreateChar|0x8f0|4": {
+"0x958": 1
+},
+"CWarp|0x7cb8|4": {
+"0xb898": 2
+},
+"CScreenStore|0x6c8|8": {
+"0x730": 1
+},
+"CScreenStore|0x7b0|4": {
+"0x818": 2
+},
+"CScreenWorld|0xbac|4": {
+"0xc5c": 1
+},
+"CScreenWorld|0xbb0|4": {
+"0xc60": 1
+},
+"CScreenWorld|0x7e8|8": {
+"0x898": 14
+},
+"CInfGame|0x9698|4": {
+"0xcf80": 2
+},
+"uiMenu|0x50|4": {
+"0x58": 3
+},
+"uiMenu|0x54|4": {
+"0x5c": 3
+},
+"CVidMode|0x18c|4": {
+"0x190": 1
+},
+"CInfGame|0x404c|2": {
+"0x78cc": 1
+},
+"CBaldurChitin|0x1761|1": {
+"0x1759": 2
+},
+"CAITrigger|0x20|1": {
+"0x20": 1
+},
+"CInfGame|0x650a|2": {
+"0xa0f2": 1
+},
+"CInfGame|0x6520|2": {
+"0xa108": 1
+},
+"CGameSprite|0x488|8": {
+"0x478": 1
+},
+"CGameSprite|0x490|8": {
+"0x480": 1
+},
+"CGameSprite|0x498|8": {
+"0x488": 1
+},
+"CGameSprite|0x4a0|8": {
+"0x490": 1
+},
+"CGameSprite|0x488|4": {
+"0x478": 1
+},
+"CGameSprite|0x578|4": {
+"0x570": 1
+},
+"CGameSprite|0x54|4": {
+"0x54": 1
+},
+"CScreenChapter|0x168|4": {
+"0x170": 1
+},
+"CBaldurChitin|0x1030|4": {
+"0x1068": 1
+},
+"CInfGame|0x7cf8|4": {
+"0xb8d8": 1,
+"0xb8d0": 1
+},
+"CObject|0x0|2": {
+"0x0": 2
+},
+"CGameObject|0x48|4": {
+"0x48": 19
+},
+"CInfGame|0x32|2": {
+"0x31a": 1
+},
+"CInfGame|0x6a|2": {
+"0x352": 1
+},
+"CGameAIBase|0x3f8|2": {
+"0x3f0": 2
+},
+"CGameAIBase|0x448|4": {
+"0x440": 2
+},
+"CGameAIBase|0x468|8": {
+"0x460": 1
+},
+"CGameAIBase|0x448|2": {
+"0x440": 1
+},
+"CBaldurChitin|0x1744|1": {
+"0x173c": 4
+},
+"CBaldurChitin|0x1742|1": {
+"0x173a": 3
+},
+"CBaldurChitin|0x1745|1": {
+"0x173d": 3
+},
+"CBaldurChitin|0x1743|1": {
+"0x173b": 4
+},
+"CInfGame|0x3152|2": {
+"0x3472": 2
+},
+"CInfGame|0x3150|2": {
+"0x3470": 1
+},
+"CInfGame|0x3140|8": {
+"0x3460": 1
+},
+"CScreenWorld|0xa00|4": {
+"0xab0": 3
+},
+"CScreenWorld|0xa04|8": {
+"0xab4": 3
+},
+"CScreenWorld|0xa0c|4": {
+"0xabc": 3
+},
+"CGameObject|0x568|8": {
+"0x560": 2
+},
+"CGameContainer|0x9a0|2": {
+"0x998": 2
+},
+"CGameContainer|0x48|4": {
+"0x48": 1
+},
+"CScreenWorld|0x98|4": {
+"0xa0": 2
+},
+"CGameDialogSprite|0x58|4": {
+"0x58": 1
+},
+"CScreenWorld|0x800|4": {
+"0x8b0": 2
+},
+"CMessageStartVEF|0xc|4": {
+"0xc": 1
+},
+"CMessageStartVEF|0x8|4": {
+"0x8": 1
+},
+"CMessageStartVEF|0x0|8": {
+"0x0": 1
+},
+"CMessageStartVEF|0x18|8": {
+"0x18": 1
+},
+"CMessageStartVEF|0x20|8": {
+"0x20": 1
+},
+"CMessageStartVEF|0x28|8": {
+"0x28": 1
+},
+"CMessageStartVEF|0x30|2": {
+"0x30": 1
+},
+"CInfGame|0x3fa0|2": {
+"0x7820": 1
+},
+"CInfGame|0x7cc8|4": {
+"0xb8a8": 3
+},
+"CScreenWorld|0xb68|4": {
+"0xc18": 3
+},
+"CScreenWorld|0xb6c|4": {
+"0xc1c": 3
+},
+"CInfGame|0x2f90|2": {
+"0x32b0": 1
+},
+"CInfGame|0x2f92|2": {
+"0x32b2": 1
+},
+"CInfGame|0x2f80|8": {
+"0x32a0": 1
+},
+"CInfGame|0x2f88|8": {
+"0x32a8": 1
+},
+"CCreatureFileKnownSpell|0x0|4": {
+"0x0": 1
+},
+"CProjectile|0x0|8": {
+"0x0": 2
+},
+"CInfGame|0x9548|4": {
+"0xce20": 1
+},
+"CInfGame|0x954c|4": {
+"0xce24": 1
+},
+"CInfGame|0x4158|8": {
+"0x79d8": 1
+},
+"CInfGame|0x7dc4|4": {
+"0xb9ac": 6
+},
+"CInfGame|0x7f30|4": {
+"0xbb34": 2
+},
+"CInfGame|0x7d1c|4": {
+"0xb900": 1
+},
+"CInfGame|0x7ce8|4": {
+"0xb8c8": 1
+},
+"CVidMode|0x20|8": {
+"0x20": 4
+},
+"CInfGame|0x7d0c|4": {
+"0xb8f0": 1
+},
+"CInfGame|0x7dd4|4": {
+"0xbae4": 1
+},
+"CRes|0x81|1": {
+"0x81": 1
+},
+"CScreenWorld|0xb98|1": {
+"0xc44": 1
+},
+"CGameTrigger|0x5d4|2": {
+"0x5ac": 2
+},
+"CGameTrigger|0x48|4": {
+"0x48": 1
+},
+"CScreenWorld|0xc8|4": {
+"0xd0": 1
+},
+"CInfGame|0x3fba|1": {
+"0x783a": 3
+},
+"CBaldurChitin|0x1760|1": {
+"0x1758": 2
+},
+"CGameArea|0x188|2": {
+"0x188": 1
+},
+"CGameArea|0x18a|2": {
+"0x18a": 1
+},
+"CInfGame|0x4128|4": {
+"0x79a8": 1
+},
+"CInfGame|0x1728|2": {
+"0x1a48": 3
+},
+"CInfGame|0x172a|2": {
+"0x1a4a": 3
+},
+"CInfGame|0x1718|8": {
+"0x1a38": 3
+},
+"CInfGame|0x1720|8": {
+"0x1a40": 1
+},
+"CInfGame|0x1140|2": {
+"0x1428": 2
+},
+"CInfGame|0x16b8|2": {
+"0x19d8": 1
+},
+"CInfGame|0x16ba|2": {
+"0x19da": 1
+},
+"CInfGame|0x16a8|8": {
+"0x19c8": 1
+},
+"CInfGame|0x16b0|8": {
+"0x19d0": 1
+},
+"CInfGame|0x3888|2": {
+"0x3ba8": 1
+},
+"CInfGame|0x388a|2": {
+"0x3baa": 1
+},
+"CInfGame|0x3878|8": {
+"0x3b98": 1
+},
+"CInfGame|0x3880|8": {
+"0x3ba0": 1
+},
+"CInfGame|0x38c2|2": {
+"0x3be2": 1
+},
+"CInfGame|0x38c8|8": {
+"0x3be8": 1
+},
+"CStore|0xe0|4": {
+"0xe0": 2
+},
+"CStore|0xd8|8": {
+"0xd8": 1
+},
+"CInfGame|0x7e58|4": {
+"0xba3c": 1
+},
+"CGameArea|0x42|2": {
+"0x42": 2
+},
+"CInfGame|0x66d0|4": {
+"0xa2b0": 5
+},
+"CInfGame|0xa0|2": {
+"0x388": 2
+},
+"CInfGame|0xa2|2": {
+"0x38a": 2
+},
+"CInfGame|0x90|8": {
+"0x378": 2
+},
+"CInfGame|0x98|8": {
+"0x380": 1
+},
+"CScreenCharacter|0x6c0|4": {
+"0x784": 2
+},
+"CScreenCharacter|0x6c8|8": {
+"0x788": 1
+},
+"CScreenCharacter|0x820|4": {
+"0x9e4": 1
+},
+"CBaldurChitin|0xd4|4": {
+"0xcc": 3
+},
+"CBaldurChitin|0xd8|4": {
+"0xd0": 3
+},
+"CBaldurChitin|0x110|1": {
+"0x108": 2
+},
+"CInfGame|0x7d7c|4": {
+"0xb960": 1
+},
+"CInfGame|0x8b8|2": {
+"0xba0": 2
+},
+"CInfGame|0x8ba|2": {
+"0xba2": 2
+},
+"CInfGame|0x8a8|8": {
+"0xb90": 2
+},
+"CInfGame|0x8b0|8": {
+"0xb98": 1
+},
+"CScreenCreateChar|0x48|4": {
+"0x50": 1
+},
+"CScreenCreateChar|0xa08|1": {
+"0xa70": 1
+},
+"CScreenWorld|0xb80|4": {
+"0xc2c": 1
+},
+"CScreenWorld|0xb98|4": {
+"0xc44": 1
+},
+"CScreenWorld|0xad0|4": {
+"0xb80": 1
+},
+"CScreenWorld|0xa58|1": {
+"0xb08": 1
+},
+"CBaldurChitin|0xc1|1": {
+"0xb9": 4
+},
+"CBaldurChitin|0x17cc|4": {
+"0x17c4": 1
+},
+"CGameDialogSprite|0x50|4": {
+"0x50": 1
+},
+"CGameDialogSprite|0x10|8": {
+"0x10": 1
+},
+"CInfGame|0xbd4|4": {
+"0xc84": 2
+},
+"CScreenWorldMap|0x6b8|4": {
+"0x720": 1
+},
+"CScreenWorldMap|0xec8|8": {
+"0xf38": 1
+},
+"CScreenWorldMap|0xf0d|1": {
+"0xf5d": 1
+},
+"CScreenWorldMap|0xeb4|4": {
+"0xf24": 1
+},
+"CScreenWorldMap|0xeb0|4": {
+"0xf20": 1
+},
+"CInfGame|0x7e4c|4": {
+"0xba30": 6
+},
+"CScreenMap|0x8f4|4": {
+"0x964": 10
+},
+"CBaldurChitin|0x15f8|1": {
+"0x1618": 2
+},
+"CGameDialogSprite|0x70|4": {
+"0x70": 1
+},
+"CInfGame|0x3c1c|4": {
+"0x408c": 1
+},
+"CGameSprite|0x4c52|8": {
+"0x4972": 1
+},
+"CObject|0x0|4": {
+"0x0": 1
+},
+"CInfGame|0x3e14|4": {
+"0x4284": 1
+},
+"Item_ability_st|0x0|2": {
+"0x0": 8
+},
+"Item_ability_st|0x24|2": {
+"0x24": 3
+},
+"Item_ability_st|0xe|2": {
+"0xe": 2
+},
+"CGameObject|0x4|4": {
+"0x4": 1
+},
+"Item_ability_st|0x1c|2": {
+"0x1c": 1
+},
+"CGameObject|0x51fc|4": {
+"0x4fa4": 2
+},
+"CGameObject|0x38|1": {
+"0x38": 2
+},
+"CGameObject|0x3b60|4": {
+"0x3878": 2
+},
+"CInfGame|0x7d94|4": {
+"0xb97c": 1
+},
+"CScreenWorld|0x58|4": {
+"0x60": 1
+},
+"Item_ability_st|0x0|4": {
+"0x0": 1
+},
+"CGameSprite|0x4710|2": {
+"0x4428": 1
+},
+"CGameSprite|0x468|8": {
+"0x460": 1
+},
+"CGameSprite|0x3ec|2": {
+"0x3ec": 2
+},
+"CGameSprite|0x4ad8|8": {
+"0x47f0": 2
+},
+"CGameSprite|0x4990|2": {
+"0x46a8": 2
+},
+"CGameSprite|0x4756|2": {
+"0x446e": 1
+},
+"CGameSprite|0x4c20|4": {
+"0x4940": 3
+},
+"CGameSprite|0x3c00|4": {
+"0x3914": 2
+},
+"CGameSprite|0x4ab8|2": {
+"0x47d0": 1
+},
+"CGameObject|0x4bcd|1": {
+"0x48ed": 1
+},
+"CBaldurProjector|0x50|8": {
+"0x58": 3
+},
+"CResWebm|0x0|8": {
+"0x0": 3
+},
+"uiMenu|0x60|4": {
+"0x68": 1
+},
+"uiMenu|0x64|4": {
+"0x6c": 1
+},
+"CScreenConnection|0x680|4": {
+"0x6e8": 1
+},
+"uiItem|0x150|8": {
+"0x150": 3
+},
+"uiItem|0x1e0|8": {
+"0x1e8": 1
+},
+"uiItem|0x164|4": {
+"0x168": 1
+},
+"uiItem|0x130|4": {
+"0x130": 1
+},
+"uiItem|0x40|16": {
+"0x40": 2
+},
+"uiItem|0x178|4": {
+"0x178": 1
+},
+"uiItem|0x148|4": {
+"0x148": 1
+},
+"uiItem|0x138|4": {
+"0x138": 1
+},
+"uiItem|0x198|4": {
+"0x1c0": 1
+},
+"uiItem|0x13c|4": {
+"0x13c": 1
+},
+"uiMenu|0x68|4": {
+"0x70": 1
+},
+"CWarp|0x18|4": {
+"0x18": 1
+},
+"CWarp|0x2f4|4": {
+"0x2fc": 1
+},
+"CWarp|0x2f0|4": {
+"0x2f8": 1
+},
+"uiMenu|0x18|8": {
+"0x18": 1
+},
+"SDL_Rect|0x0|16": {
+"0x0": 2
+},
+"CVidFont|0x8|8": {
+"0x8": 1
+},
+"SDL_VideoDisplay|0x58|8": {
+"0x58": 2
+},
+"CScreenStore|0x48|2": {
+"0x50": 1
+},
+"CGameObject|0x5c0|2": {
+"0x598": 3
+},
+"CGameObject|0x580|4": {
+"0x578": 3
+},
+"CGameObject|0x568|4": {
+"0x560": 9
+},
+"CBaldurChitin|0x3dc|1": {
+"0x434": 1
+},
+"CBaldurChitin|0x17a8|4": {
+"0x17a0": 4
+},
+"CChitin|0x208|8": {
+"0x260": 57
+},
+"CChitin|0x194|4": {
+"0x18c": 2
+},
+"CChitin|0x40|4": {
+"0x34": 7
+},
+"CChitin|0x1c|4": {
+"0x18": 4
+},
+"CChitin|0x2c|4": {
+"0x24": 4
+},
+"CChitin|0x3c|4": {
+"0x30": 4
+},
+"CChitin|0x128|8": {
+"0x120": 2
+},
+"CChitin|0x60|8": {
+"0x58": 1
+},
+"CChitin|0x210|8": {
+"0x268": 6
+},
+"CChitin|0xf98|8": {
+"0xfd0": 2
+},
+"CChitin|0x24|4": {
+"0x1c": 1
+},
+"CChitin|0x44|4": {
+"0x38": 3
+},
+"CChitin|0x28|4": {
+"0x20": 1
+},
+"CChitin|0x48|4": {
+"0x3c": 3
+},
+"CChitin|0x24|8": {
+"0x1c": 1
+},
+"CChitin|0x34|4": {
+"0x28": 1
+},
+"CChitin|0x38|4": {
+"0x2c": 1
+},
+"CChitin|0x34|8": {
+"0x28": 1
+},
+"CChitin|0x14|4": {
+"0x10": 1
+},
+"CChitin|0x18|4": {
+"0x14": 1
+},
+"CChitin|0x14|8": {
+"0x10": 1
+},
+"CChitin|0x190|4": {
+"0x188": 1
+},
+"CGameSprite|0x10fa|2": {
+"0xfc2": 1
+}
+}

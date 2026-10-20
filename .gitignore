@@ -14,3 +14,5 @@ tools/*.json
 !tools/manual.json
 !tools/gen_report.json
 !tools/fmap_manual.json
+bindings/generated/
+tools/bindings/__pycache__/
