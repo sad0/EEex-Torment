@@ -1,5 +1,6 @@
 -- EEex-PTEE phase 3 test: load LuaBindings.dll (Torment layouts) and read a few engine structs.
--- Output goes to EEex_PTEE.log through print().
+-- Output goes to EEex_PTEE.log through print(). EEex_Main.lua runs while the main object is
+-- being allocated, so engine reads are deferred to UI activity (Infinity_PushMenu wrapper).
 
 local function log(...)
 	local t = {}
@@ -7,20 +8,21 @@ local function log(...)
 	print("PTEE-TEST: " .. table.concat(t, " "))
 end
 
-local ok, err = pcall(function() EEex_OpenLuaBindings("LuaBindings") end)
+local ok, err = pcall(function()
+	EEex_DoFile("EEex_Assembly")
+	EEex_DoFile("EEex_Assembly_Patch")
+	-- Same as EEex_Main.lua: redirect the engine's tolua event functions to the bindings' versions
+	EEex_OpenLuaBindings("LuaBindings", function() EEex_DoFile("EEex_LuaBindings_Patch") end)
+end)
 log("EEex_OpenLuaBindings(LuaBindings)", ok, err)
 if not ok then return end
 
-local chitin, game
-local ok0, err0 = pcall(function()
-chitin = EngineGlobals.g_pBaldurChitin
-log("g_pBaldurChitin", chitin, "ptr", string.format("0x%X", EEex_UDToPtr(chitin)))
-game = chitin.m_pObjectGame
-log("m_pObjectGame", game, "ptr", string.format("0x%X", EEex_UDToPtr(game)))
-log("CBaldurChitin.m_pEngineWorld", chitin.m_pEngineWorld)
-end)
-log("startup reads", ok0, err0)
-if not ok0 then return end
+local fetchString -- set when the engine registers Infinity_FetchString
+
+local function hex(ud)
+	local p = ud and EEex_UDToPtr(ud)
+	return p and string.format("0x%X", p) or "nil"
+end
 
 local function getObject(id)
 	local object
@@ -32,7 +34,19 @@ local function getObject(id)
 	return object
 end
 
-local function dumpParty()
+local lastState
+local function dumpEngine()
+	local chitin = EngineGlobals.g_pBaldurChitin
+	local game = chitin and chitin.m_pObjectGame
+	local state = string.format("g_pBaldurChitin=%s m_pObjectGame=%s m_pEngineWorld=%s", hex(chitin), hex(game), hex(chitin and chitin.m_pEngineWorld))
+	if state ~= lastState then
+		lastState = state
+		log(state)
+	end
+	return game
+end
+
+local function dumpParty(game)
 	local n = game.m_nCharacters
 	log("party size m_nCharacters =", n)
 	for i = 0, n - 1 do
@@ -42,9 +56,9 @@ local function dumpParty()
 			local sprite = EEex_CastUD(obj, "CGameSprite")
 			local base = sprite.m_baseStats
 			local derived = sprite.m_derivedStats
-			local name = Infinity_FetchString(base.m_name)
 			log(string.format("party[%d] id=%d name=%q hp=%d/%d (derived max %d) xp=%d gold=%d",
-				i, id, name, base.m_hitPoints, base.m_maxHitPointsBase, derived.m_nMaxHitPoints, base.m_xp, base.m_gold))
+				i, id, fetchString(base.m_name), base.m_hitPoints, base.m_maxHitPointsBase,
+				derived.m_nMaxHitPoints, base.m_xp, base.m_gold))
 		else
 			log(string.format("party[%d] id=%d -> no object", i, id))
 		end
@@ -52,15 +66,36 @@ local function dumpParty()
 	log("party gold m_gameSave.m_nPartyGold =", game.m_gameSave.m_nPartyGold)
 end
 
--- Run the party dump once a game is loaded: the UI pushes world menus through Infinity_PushMenu.
-local done = false
-local pushMenu = Infinity_PushMenu
-Infinity_PushMenu = function(...)
-	if not done and game.m_nCharacters > 0 then
-		done = true
-		local ok2, err2 = pcall(dumpParty)
-		log("dumpParty", ok2, err2)
+local engineDone, partyDone, ticks = false, false, 0
+
+local function onUI()
+	if partyDone then return end
+	ticks = ticks + 1
+	if ticks % 200 ~= 1 then return end
+	local okE, game = pcall(dumpEngine)
+	if not engineDone then
+		engineDone = true
+		log("engine reads", okE, okE and "" or game)
 	end
-	return pushMenu(...)
+	if okE and game and game.m_nCharacters > 0 then
+		partyDone = true
+		local okP, errP = pcall(dumpParty, game)
+		log("dumpParty", okP, errP)
+	end
 end
-log("waiting for a loaded game (party dump on next menu push)")
+
+-- The engine registers Infinity_* after EEex_Main.lua: catch their creation and wrap them
+local wanted = {Infinity_FetchString = true, Infinity_PushMenu = true, Infinity_GetScreenSize = true, Infinity_PopMenu = true}
+local pending = 4
+setmetatable(_G, {__newindex = function(t, k, v)
+	if wanted[k] and type(v) == "function" then
+		if k == "Infinity_FetchString" then fetchString = v end
+		rawset(t, k, function(...) onUI(); return v(...) end)
+		pending = pending - 1
+		log("hooked", k)
+		if pending == 0 then setmetatable(_G, nil) end
+	else
+		rawset(t, k, v)
+	end
+end})
+log("waiting for UI activity / a loaded game")
