@@ -13856,7 +13856,7 @@
 },
 "CVariable": {
 "bg_size": 84,
-"pt_size": 88,
+"pt_size": 84,
 "items": {}
 },
 "CMessageSetVariableAll": {
@@ -14199,7 +14199,7 @@
 },
 "SDL_TextInputEvent": {
 "bg_size": 44,
-"pt_size": 48,
+"pt_size": 44,
 "items": {
 "type": {
 "bg": 0,
@@ -14233,7 +14233,7 @@
 },
 "SDL_TextEditingEvent": {
 "bg_size": 52,
-"pt_size": 56,
+"pt_size": 52,
 "items": {
 "type": {
 "bg": 0,
@@ -20350,7 +20350,7 @@
 },
 "CAreaFileStaticObject": {
 "bg_size": 76,
-"pt_size": 80,
+"pt_size": 76,
 "items": {
 "m_scriptName": {
 "bg": 0,
@@ -36356,7 +36356,7 @@
 },
 "CAreaFileSoundObject": {
 "bg_size": 212,
-"pt_size": 216,
+"pt_size": 212,
 "items": {
 "m_scriptName": {
 "bg": 0,
@@ -36474,7 +36474,7 @@
 },
 "CAreaFileRestEncounter": {
 "bg_size": 228,
-"pt_size": 232,
+"pt_size": 228,
 "items": {
 "m_scriptName": {
 "bg": 0,

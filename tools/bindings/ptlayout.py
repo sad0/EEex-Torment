@@ -240,6 +240,11 @@ def align_of_type(tstr, depth=0):
                 a = max(a, align_of_type(b, depth + 1))
             for f in own_items(name):
                 a = max(a, align_of_type(f.type, depth + 1) if f.type != '?' else 1)
+            # BG's sizeof is a multiple of the struct alignment: a smaller BG size means the struct is
+            # packed (e.g. CAreaVariable: double at +44, size 84)
+            bs = T.structs[name].size
+            while bs and a > 1 and bs % a:
+                a //= 2
             _al[name] = a
         return _al[name]
     prim = {'char': 1, 'bool': 1, '__int8': 1, 'unsigned __int8': 1, 'byte': 1, 'sbyte': 1, '__int16': 2, 'unsigned __int16': 2,

@@ -20,7 +20,9 @@ static constexpr void* getMemberPtr(T func) {
 }
 
 static void exportPatterns() {
-	// EEex-PTEE: CGameSprite::MakeLocal is a BG reimplementation (BG field layout); not exported for Torment.
+	// EEex-PTEE: inverse of CGameSprite::MakeGlobal, which Torment has unchanged (tools/fdiff.py: same code,
+	// field offsets only); all fields it uses are proven in the Torment header.
+	exportPattern(TEXT("CGameSprite::MakeLocal"), getMemberPtr(&CGameSprite::MakeLocal));
 }
 
 void __stdcall InitBindings(SharedState argSharedState) {

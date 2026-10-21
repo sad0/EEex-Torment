@@ -1358,12 +1358,6 @@
 "m_bLocalControl": "proven",
 "m_AIInhibitor": "unproven"
 },
-"CVisibilityMapTreeNode": {
-"m_relativePos": "proven",
-"m_nRange": "proven",
-"m_aChildren": "proven",
-"m_parent": "proven"
-},
 "CVisibilityMapEllipse": {
 "m_nXExploreRange": "unproven",
 "m_nYExploreRange": "unproven",
@@ -5022,6 +5016,12 @@
 "CObjectMarker": {
 "m_lstObjectIds": "proven",
 "m_bHealthBarMarker": "proven"
+},
+"CVisibilityMapTreeNode": {
+"m_relativePos": "proven",
+"m_nRange": "proven",
+"m_aChildren": "proven",
+"m_parent": "proven"
 },
 "CSpawnFile": {
 "mpExitList": "proven",

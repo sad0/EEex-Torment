@@ -130,6 +130,7 @@
     <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\source\common.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\ptee_overrides.cpp" />
+    <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\source\manual_reimplementations_export.cpp" />
     <ClCompile Include="$(ILROOT)LuaBindings-Core-Shared-Files\source\util.cpp" />
     <ClCompile Include="..\generated\Baldur_generated_internal_pointers.cpp" />
     <ClCompile Include="..\generated\EEexLua_generated.cpp" />

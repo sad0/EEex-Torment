@@ -46650,7 +46650,6 @@ struct SDL_TextEditingEvent
 	nobinding unsigned int _ptpad_c[8];
 	int start;
 	int length;
-	nobinding unsigned int _ptpad_34[1];
 };
 
 /* 5413 */
@@ -46659,7 +46658,7 @@ struct SDL_TextInputEvent
 	unsigned int type;
 	unsigned int timestamp;
 	unsigned int windowID;
-	nobinding unsigned int _ptpad_c[9];
+	nobinding unsigned int _ptpad_c[8];
 };
 
 /* 5414 */
@@ -47895,7 +47894,6 @@ struct __cppobj CAreaFileRestEncounter
 	unsigned __int16 m_wFlags;
 	unsigned __int8 m_weights[10];
 	unsigned int m_notUsed[11];
-	nobinding unsigned int _ptpad_e4[1];
 };
 
 /* 5616 */
@@ -48675,6 +48673,7 @@ struct __cppobj CGameArea
 	int m_bHeaderExtendedNight;
 	CAreaSoundsAndMusic m_headerSound;
 	CAreaFileRestEncounter m_headerRestEncounter;
+	nobinding unsigned int _ptpad_1c4[1];
 	CTypedPtrList<CPtrList,CAreaFileCharacterEntryPoint *> m_entryPoints;
 	unsigned __int8 m_id;
 	unsigned __int8 m_nCharacters;
@@ -48911,7 +48910,6 @@ struct __cppobj __unaligned __declspec(align(4)) CAreaVariable
 /* 5669 */
 struct __cppobj CVariable : CAreaVariable
 {
-	nobinding unsigned int _ptpad_54[1];
 };
 
 /* 5741 */
@@ -64172,7 +64170,6 @@ struct __cppobj CAreaFileSoundObject
 	unsigned int m_timeOfDayActive;
 	unsigned int m_dwFlags;
 	unsigned int m_notUsed[16];
-	nobinding unsigned int _ptpad_d4[1];
 };
 
 /* 6749 */
@@ -66013,7 +66010,6 @@ struct __cppobj CAreaFileStaticObject
 	unsigned __int8 m_paletteResref[8];
 	unsigned __int16 m_sizeX;
 	unsigned __int16 m_sizeY;
-	nobinding unsigned int _ptpad_4c[1];
 };
 
 /* 6923 */
@@ -68447,7 +68443,7 @@ struct /*VFT*/ CTypedPtrList<CPtrList,CVidCell *>_vtbl
 struct __cppobj CGameStatic : CGameObject
 {
 	CAreaFileStaticObject m_header;
-	nobinding unsigned __int64 _ptpad_b0[1];
+	nobinding unsigned int _ptpad_ac[3];
 	CResWebm *m_pMovie;
 	CResPVR *m_pImage;
 	int m_bRender;

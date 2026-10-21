@@ -196,11 +196,6 @@
 12
 ],
 [
-"CAreaFileRestEncounter",
-15,
-15
-],
-[
 "CPtrArray",
 2,
 4
@@ -249,11 +244,6 @@
 "CWorldMapLinks",
 10,
 11
-],
-[
-"CVariable",
-0,
-0
 ],
 [
 "CAIScriptFile",
@@ -766,11 +756,6 @@
 3
 ],
 [
-"CAreaFileSoundObject",
-16,
-16
-],
-[
 "CMessageSetBanterBlockFlag",
 0,
 1
@@ -819,11 +804,6 @@
 "CMessageCleanAir",
 0,
 2
-],
-[
-"CAreaFileStaticObject",
-15,
-15
 ],
 [
 "CGameDoor",
@@ -1150,6 +1130,7 @@
 "VRAM_FLAGS",
 "CAreaFileHeader",
 "CAreaSoundsAndMusic",
+"CAreaFileRestEncounter",
 "WED_WedHeader_st",
 "WED_LayerHeader_st",
 "WED_PolyHeader_st",
@@ -1172,6 +1153,7 @@
 "CItem",
 "CWorldMapData",
 "CWorldMapArea",
+"CVariable",
 "CFile",
 "CStoreFileHeader",
 "CObjectMarker",
@@ -1327,6 +1309,7 @@
 "CMessageSetPortraitSmall",
 "CMessageColorChange",
 "CSoundChannel",
+"CAreaFileSoundObject",
 "CMessageSetInStore",
 "CMessageSetActiveImprisonment",
 "CMessageClearGroupSlot",
@@ -1346,6 +1329,7 @@
 "CSavedGameStoredLocation",
 "CMessageSetLastObject",
 "CProjectileAreaFileFormat",
+"CAreaFileStaticObject",
 "CMessageMoveGlobal",
 "CMessageDoorOpen",
 "CMessageExitDialogMode",
