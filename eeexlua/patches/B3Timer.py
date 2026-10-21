@@ -41,4 +41,13 @@ PATCHES = [
      '''						EEex_Menu_SetTemplateArea(instanceEntry.menuName, templateName, instanceEntry.id, curX, portraitArea.y, rgWidth, portraitArea.h) -- EEex-PTEE'''),
     ('''					EEex_Menu_SetTemplateArea(B3Timer_Private_InjectingMenu, "B3Timer_Menu_TEMPLATE_Background", backgroundEntry.id, curX + 2, portraitArea.y, startX - curX + rgDif, portraitArea.h)''',
      '''					EEex_Menu_SetTemplateArea(backgroundEntry.menuName, "B3Timer_Menu_TEMPLATE_Background", backgroundEntry.id, curX + 2, portraitArea.y, startX - curX + rgDif, portraitArea.h) -- EEex-PTEE'''),
+    # the "Hug Portraits" option has no effect in Torment (bars always against the portrait): not listed in the menu
+    ('''		EEex_Options_DisplayEntry.new({
+			["optionID"]    = "B3Timer_HugPortraits",
+			["label"]       = "EEex_Options_TRANSLATION_Timer_HugPortraits",
+			["description"] = "EEex_Options_TRANSLATION_Timer_HugPortraits_Description",
+			["widget"]      = EEex_Options_ToggleWidget.new(),
+		}),
+''', '''		-- EEex-PTEE: "Hug Portraits" hidden (no effect in Torment, the bars always touch the portrait)
+'''),
 ]
