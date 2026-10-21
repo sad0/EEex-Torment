@@ -117,7 +117,10 @@ Torment differences carried into EEex's reimplementations (eeexdll/patch_sources
 ## Pattern labels and signatures (tools/labelcheck.py, tools/argcheck.py)
 - Two Torment labels pointed at the wrong function (the upstream pattern also matched elsewhere):
   CChitin::ProcessEvents (now 0x4a5100) and eventMenu (now 0x4525f0); 392 other labels agree with the
-  function map (173 cannot be checked that way, 1 false positive).
+  function map. The 167 others (leaf functions without .pdata, data) were checked by tools/datacheck.py:
+  identical code, or the BG callers' Torment counterparts call the label (functions Torment changed:
+  Draw*, GetAtOffset, GetSpellState, ...), or the aligned RIP references load the label (data), or an
+  independent derivation agrees (VFTables = vtmap.json); SetCurrAction()-LastCall is the known phase-5 case.
 - Argument registers read by every bound engine function, BG vs PT: Torment adds or drops a parameter in
   CInfinity::SetZoom (fixed), CAIObjectType::GetShare (+r9), CGameAIBase::GetTargetShare (+rdx),
   GetTargetShareType (+r8), CGameSprite::ReadyOffInternalList (+rdx), CProjectile::DecodeProjectile (+r8),
