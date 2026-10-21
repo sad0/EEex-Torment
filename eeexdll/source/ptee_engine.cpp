@@ -63,6 +63,9 @@ namespace PTEE {
 // Torment UI struct layouts (tools/bindings/manual_fields*.json, eeexlua/notes/uiItem_layout.md): a header
 // regression must not compile
 static_assert(sizeof(uiMenu) == 0x98, "Torment uiMenu");
+static_assert(sizeof(CGameEffect) == 0x160, "Torment CGameEffect (CResRef at +0x154)");
+static_assert(sizeof(CGameSprite) == 0x52c8, "Torment CGameSprite (operator new size)");
+static_assert(sizeof(CAIAction) == 0x80, "Torment CAIAction (no m_source)");
 static_assert(offsetof(uiMenu, items) == 0x28 && offsetof(uiMenu, onOpen) == 0x50 && offsetof(uiMenu, ignoreEsc) == 0x74, "Torment uiMenu");
 static_assert(sizeof(uiItem) == 0x3b0, "Torment uiItem");
 static_assert(offsetof(uiItem, text) == 0x98 && offsetof(uiItem, bam) == 0xe8 && offsetof(uiItem, list) == 0x130, "Torment uiItem");

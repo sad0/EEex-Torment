@@ -155,8 +155,10 @@ def rewrite(m):
         order.append((key, k, iname, ilines))
     for _, _, iname, ilines in sorted(order):
         it = items.get(iname)
-        if iname == '__vftable' and cur == 0:
-            lines += ilines; cur = 8; placed += 1; continue
+        if iname == '__vftable':
+            # vtable pointer: at 0, or (IDA) listed after a non-polymorphic base; it takes the 8 bytes after the
+            # base, which the bindings generator turns into the C++ vptr (an 8-byte pad here would shift every member)
+            lines += ilines; cur += 8; placed += 1; continue
         if not it or it['pt'] is None or not visible(lay, iname, it):
             continue
         mt = MANUALF.get(name, {}).get(iname, {})

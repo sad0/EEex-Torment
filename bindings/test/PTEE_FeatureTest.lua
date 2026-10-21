@@ -21,6 +21,18 @@ PTEE_FT_State = PTEE_FT_State or { stage = 0 }
 function PTEEFTA() PTEE_FT_State.luaAction = EEex_LuaAction_Object.m_id end
 function PTEEFTM() return true end
 
+-- op403 screen: block op12 (damage), record calls
+function PTEESCR(op403, effect, sprite)
+	PTEE_FT_State.op403calls = (PTEE_FT_State.op403calls or 0) + 1
+	return effect.m_effectId == 12
+end
+-- op408 projectile mutator table
+PTEEPM = { ["typeMutator"] = function(context) PTEE_FT_State.op408 = context.decodeSource end }
+-- op409 enabled action listener
+EEex_Action_AddEnabledSpriteStartedActionListener("PTEEFTL", function(sprite, action, op409)
+	PTEE_FT_State.op409 = action.m_actionID
+end)
+
 -- op402 target (InvokeLua: global function, name of 8 uppercase characters or less)
 function PTEEFT(effect, sprite)
 	PTEE_FT_State.op402 = sprite.m_id
@@ -81,6 +93,32 @@ local function stage1()
 		check("op402 InvokeLua", PTEE_FT_State.op402 == tno.m_id)
 	end)
 
+	-- op403 ScreenEffects: damage blocked
+	try("op403", function()
+		PTEE_FT_State.op403calls = 0
+		EEex_GameObject_ApplyEffect(tno, { ["effectID"] = 403, ["res"] = "PTEESCR", ["durationType"] = 0, ["duration"] = 60, ["sourceID"] = tno.m_id })
+		local hp = tno.m_baseStats.m_hitPoints
+		EEex_GameObject_ApplyEffect(tno, { ["effectID"] = 12, ["effectAmount"] = 1, ["sourceID"] = tno.m_id })
+		check("op403 ScreenEffects blocks damage", tno.m_baseStats.m_hitPoints == hp and PTEE_FT_State.op403calls > 0,
+			string.format("hp %d -> %d, calls %d", hp, tno.m_baseStats.m_hitPoints, PTEE_FT_State.op403calls))
+	end)
+	-- op400 SetTemporaryAIScript: override script (param2 0) = 0000DEF for 1 s (a running override script would
+	-- interrupt the deferred cast below)
+	PTEE_FT_SKIP_OP400 = false -- was skipped while bisecting the CGameEffect size bug
+	if not PTEE_FT_SKIP_OP400 then try("op400", function()
+		local before = tno.m_overrideScript and tno.m_overrideScript.cResRef:get() or "(none)"
+		EEex_GameObject_ApplyEffect(tno, { ["effectID"] = 400, ["dwFlags"] = 0, ["res"] = "0000DEF", ["durationType"] = 0, ["duration"] = 1, ["sourceID"] = tno.m_id })
+		local after = tno.m_overrideScript and tno.m_overrideScript.cResRef:get() or "(none)"
+		check("op400 SetTemporaryAIScript", after == "0000DEF", before .. " -> " .. after)
+	end) end
+	-- op408 ProjectileMutator and op409 EnableActionListener (deferred: the next cast / action)
+	try("op408/409 apply", function()
+		PTEE_FT_State.op408, PTEE_FT_State.op409 = nil, nil
+		EEex_GameObject_ApplyEffect(tno, { ["effectID"] = 408, ["res"] = "PTEEPM", ["durationType"] = 0, ["duration"] = 60, ["sourceID"] = tno.m_id })
+		EEex_GameObject_ApplyEffect(tno, { ["effectID"] = 409, ["effectAmount"] = 1, ["res"] = "PTEEFTL", ["durationType"] = 0, ["duration"] = 60, ["sourceID"] = tno.m_id })
+		EEex_Action_QueueResponseStringOnAIBase('ForceSpellRES("SPWI118",Player2)', tno) -- projectile spell
+	end)
+
 	-- Actions (472 EEex_LuaAction, deferred)
 	try("action EEex_LuaAction queue", function()
 		PTEE_FT_State.luaAction = nil
@@ -103,6 +141,12 @@ local function stage2()
 	end)
 	try("op401 result", function()
 		check("op401 SetExtendedStat 42", EEex.GetExtendedStatValue(tno, 1000) == 42, EEex.GetExtendedStatValue(tno, 1000))
+	end)
+	try("op408 result", function()
+		check("op408 ProjectileMutator typeMutator called", PTEE_FT_State.op408 ~= nil, PTEE_FT_State.op408)
+	end)
+	try("op409 result", function()
+		check("op409 EnableActionListener called", PTEE_FT_State.op409 ~= nil, PTEE_FT_State.op409)
 	end)
 	PTEE_FT_State.stage = 0
 	print(string.format("PTEE-FEATURE: stage 2 done, %d pass / %d fail", results.pass, results.fail))

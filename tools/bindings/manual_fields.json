@@ -2274,7 +2274,7 @@
   "CAIAction": {
    "m_source": {
     "pt": "none",
-    "why": "runtime: placement invalid on all 40 live instances (cstring check, bindings/memprobe.py); left opaque"
+    "why": "Torment allocates CAIAction with 128 bytes (sizes.CAIAction); BG m_source is at +0x80, past the end"
    }
   },
   "CMemINI": {},
@@ -2881,6 +2881,18 @@
   "uiItem": {
    "pt": "0x3b0",
    "why": "saveItem BG 0x3c2e00 / PT 0x43f3f0: p_malloc(0x358) / p_malloc(0x3b0), template copy 6x0x80+0x58 / 7x0x80+0x30, template memsets end at 0x358 / 0x3b0; uiCreateFromTemplate copies 0x3b0 bytes; UI.MENU dump: next at +0x3a8"
+  },
+  "CGameEffect": {
+   "pt": "0x160",
+   "why": "CGameEffect::DecodeEffect PT 0x1fe380 allocates 0x160 bytes 374 times (BG 0x1de3d0: 0x158 348 times); Torment-only CResRef at +0x154: CGameEffect::Construct PT 0x1b5487 lea rcx,[rbx+0x154]; call CResRef::CResRef, CGameEffect::CopyFromBase PT 0x1fcf9e copies m_sourceRes into it (opaque in the header)"
+  },
+  "CGameSprite": {
+   "pt": "0x52c8",
+   "why": "operator new size before the CGameSprite constructor PT 0x3b2ad0: mov ecx, 0x52c8 (2 callers); BG 0x1a3480: 0x5388 = BG layout size (method check); the tail past the last proven member is opaque"
+  },
+  "CAIAction": {
+   "pt": "0x80",
+   "why": "operator new size before CAIAction constructors: PT 128 (9 callers of Construct(short,CPoint*,int,...), 1 of Construct(CAIAction*)), BG 136 = BG layout size; BG m_source (+0x80) is absent in Torment"
   }
  },
  "same_as_bg": {

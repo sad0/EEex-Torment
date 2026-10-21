@@ -52155,8 +52155,7 @@ struct __cppobj CScreenWizSpell : CBaldurEngine
 	int m_bControlled;
 	int m_bPauseState;
 	int m_bContingency;
-	CResRef m_resEraseSpell;
-	nobinding unsigned int _ptpad_75c[1];
+	nobinding unsigned int _ptpad_754[1];
 };
 
 /* 5889 */
@@ -53356,7 +53355,7 @@ struct /*VFT*/ CScreenMovies_vtbl
 /* 5922 */
 struct __cppobj CScreenDLC : CBaldurEngine
 {
-	nobinding unsigned __int64 _ptpad_58[514];
+	nobinding unsigned __int64 _ptpad_58[496];
 };
 
 /* 5923 */
@@ -53895,7 +53894,7 @@ struct __cppobj CGameEffectBase
 };
 
 /* 5955 */
-struct __cppobj __declspec(align(8)) CGameEffect : CGameEffectBase
+struct __cppobj CGameEffect : CGameEffectBase
 {
 	CGameEffect_vtbl *__vftable /*VFT*/;
 	int m_sourceId;
@@ -53908,6 +53907,7 @@ struct __cppobj __declspec(align(8)) CGameEffect : CGameEffectBase
 	int m_compareIdAndResrefOnly;
 	CSound m_sound;
 	int m_sourceTarget;
+	nobinding unsigned int _ptpad_154[3];
 };
 
 /* 6016 */
@@ -53947,7 +53947,7 @@ struct __cppobj CAIAction
 	CString m_string2;
 	CPoint m_dest;
 	unsigned int m_internalFlags;
-	nobinding unsigned int _ptpad_7c[3];
+	nobinding unsigned int _ptpad_7c[1];
 };
 
 /* 5959 */
@@ -54003,6 +54003,7 @@ struct __cppobj CGameAIBase : CGameObject
 	__int16 m_actionCount;
 	nobinding unsigned __int16 _ptpad_3ee[1];
 	CAIAction m_curAction;
+	nobinding unsigned __int64 _ptpad_470[1];
 	char m_scriptName[32];
 	int m_inCutScene;
 	int m_firstCall;
@@ -54535,7 +54536,7 @@ struct __cppobj CGameSprite : CGameAIBase
 	int m_bCheckedIfVisiblePause;
 	nobinding unsigned int _ptpad_50b4[4];
 	int m_nHalfSwingCounter;
-	nobinding unsigned __int64 _ptpad_50c8[10];
+	nobinding unsigned __int64 _ptpad_50c8[64];
 };
 
 /* 5974 */
@@ -56894,7 +56895,7 @@ struct __cppobj CContingency
 	unsigned int m_dwFlags;
 	nobinding unsigned int _ptpad_74[1];
 	CGameEffect m_parentEffect;
-	nobinding unsigned __int64 _ptpad_1d0[3];
+	nobinding unsigned __int64 _ptpad_1d8[2];
 };
 
 /* 6170 */
@@ -60337,6 +60338,7 @@ struct __cppobj CCreatureFileMemorizedSpell
 /* 6451 */
 struct __cppobj CGameEffectUsability : CGameEffect
 {
+
 };
 
 /* 6452 */
@@ -61990,6 +61992,7 @@ struct __cppobj SAreaFileCreatureWrapper
 /* 6576 */
 struct __cppobj CGameEffectDamage : CGameEffect
 {
+
 };
 
 /* 6577 */
@@ -66018,7 +66021,7 @@ struct __cppobj CGameDoor : CGameAIBase
 	__int16 m_drawPoly;
 	nobinding unsigned __int16 _ptpad_666[1];
 	CPoint m_ptOpenDest;
-	nobinding unsigned __int64 _ptpad_670[7];
+	nobinding unsigned __int64 _ptpad_670[6];
 };
 
 /* 6934 */

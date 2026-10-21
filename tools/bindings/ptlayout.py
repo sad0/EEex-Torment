@@ -442,6 +442,9 @@ for _ in range(60):
 for _s, _fs in DROP.items():
     for _f in _fs:
         pt_off[_s].pop(_f, None); how[_s][_f] = 'dropped'
+# hand-proven sizes (operator new sizes, manual_fields.json "sizes") win over inferred / assumed ones
+for _s, _v in MANUAL.get('sizes', {}).items():
+    pt_size[_s] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
 out = {s: {'bg_size': T.structs[s].size, 'pt_size': pt_size.get(s),
            'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': MSIZE[s].get(f.name, f.size), 'type': f.type, 'how': how[s].get(f.name),
                               'nfun': FUNCS[s].get(f.name)} for f in own_items(s)}}
