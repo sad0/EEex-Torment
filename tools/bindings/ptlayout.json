@@ -7472,7 +7472,7 @@
 "pt": 0,
 "size": 8,
 "type": "uiVariant*",
-"how": "assumed",
+"how": "manual",
 "nfun": null
 },
 "items": {
@@ -7480,7 +7480,7 @@
 "pt": 8,
 "size": 8,
 "type": "uiItem*",
-"how": "assumed",
+"how": "manual",
 "nfun": null
 },
 "next": {
@@ -7488,7 +7488,7 @@
 "pt": 16,
 "size": 8,
 "type": "uiColumn*",
-"how": "assumed",
+"how": "manual",
 "nfun": null
 }
 }
@@ -8222,7 +8222,7 @@
 },
 "uiMenu": {
 "bg_size": 112,
-"pt_size": 120,
+"pt_size": 152,
 "items": {
 "menuSrc": {
 "bg": 0,
@@ -8277,7 +8277,7 @@
 "pt": 56,
 "size": 8,
 "type": "uiVariant*",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "greyscale": {
@@ -8285,7 +8285,7 @@
 "pt": 64,
 "size": 8,
 "type": "uiVariant*",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "onOpen": {
@@ -8357,7 +8357,7 @@
 "pt": 116,
 "size": 4,
 "type": "int",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 }
 }
@@ -13856,7 +13856,7 @@
 "pt": 0,
 "size": 4,
 "type": "uiItemType",
-"how": "extrap",
+"how": "manual",
 "nfun": null
 },
 "menu": {
@@ -13864,7 +13864,7 @@
 "pt": 8,
 "size": 8,
 "type": "uiMenu*",
-"how": "extrap",
+"how": "manual",
 "nfun": null
 },
 "name": {
@@ -13872,7 +13872,7 @@
 "pt": 16,
 "size": 8,
 "type": "const char*",
-"how": "extrap",
+"how": "manual",
 "nfun": null
 },
 "instanceId": {
@@ -13880,7 +13880,7 @@
 "pt": 24,
 "size": 4,
 "type": "int",
-"how": "extrap",
+"how": "manual",
 "nfun": null
 },
 "templateName": {
@@ -13888,7 +13888,7 @@
 "pt": 32,
 "size": 8,
 "type": "const char*",
-"how": "extrap",
+"how": "manual",
 "nfun": null
 },
 "areaSrc": {
@@ -13896,7 +13896,7 @@
 "pt": 40,
 "size": 24,
 "type": "Marker",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "area": {
@@ -13904,15 +13904,15 @@
 "pt": 64,
 "size": 16,
 "type": "SDL_Rect",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "pad": {
 "bg": 80,
 "pt": 80,
 "size": 16,
 "type": "SDL_Rect",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "enabled": {
@@ -13920,7 +13920,7 @@
 "pt": 96,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "ignoreEvents": {
@@ -13928,87 +13928,87 @@
 "pt": 100,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "ha": {
 "bg": 104,
-"pt": 104,
+"pt": 108,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "va": {
 "bg": 108,
-"pt": 108,
+"pt": 112,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "alpha": {
 "bg": 112,
-"pt": 112,
+"pt": 120,
 "size": 8,
 "type": "uiVariant*",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "fill": {
 "bg": 120,
-"pt": 120,
+"pt": 128,
 "size": 8,
 "type": "uiVariant*",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "useOverlayTint": {
 "bg": 128,
-"pt": 128,
+"pt": 136,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "overlayTint": {
 "bg": 132,
-"pt": 132,
+"pt": 140,
 "size": 12,
 "type": "Array<int,3>",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "text": {
 "bg": 144,
-"pt": 144,
+"pt": 152,
 "size": 64,
 "type": "uiItem::text_t",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "uiTemplate": {
 "bg": 208,
-"pt": 208,
+"pt": 224,
 "size": 8,
 "type": "uiItem::uiTemplate_t",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "bam": {
 "bg": 216,
-"pt": 216,
+"pt": 232,
 "size": 56,
 "type": "uiItem::bam_t",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "bmp": {
 "bg": 272,
-"pt": 272,
+"pt": null,
 "size": 32,
 "type": "uiItem::bmp_t",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "list": {
@@ -14016,12 +14016,12 @@
 "pt": 304,
 "size": 80,
 "type": "uiItem::list_t",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "scrollbar": {
 "bg": 384,
-"pt": 384,
+"pt": 408,
 "size": 56,
 "type": "uiItem::scrollbar_t",
 "how": "manual",
@@ -14029,7 +14029,7 @@
 },
 "slider": {
 "bg": 440,
-"pt": 440,
+"pt": 464,
 "size": 40,
 "type": "uiItem::slider_t",
 "how": "manual",
@@ -14037,7 +14037,7 @@
 },
 "edit": {
 "bg": 480,
-"pt": 488,
+"pt": null,
 "size": 40,
 "type": "uiItem::edit_t",
 "how": "manual",
@@ -14045,15 +14045,15 @@
 },
 "mosaic": {
 "bg": 520,
-"pt": null,
+"pt": 528,
 "size": 16,
 "type": "uiItem::mosaic_t",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "movie": {
 "bg": 536,
-"pt": 536,
+"pt": 544,
 "size": 48,
 "type": "uiItem::movie_t",
 "how": "manual",
@@ -14061,7 +14061,7 @@
 },
 "button": {
 "bg": 584,
-"pt": 584,
+"pt": null,
 "size": 80,
 "type": "uiItem::button_t",
 "how": "manual",
@@ -14069,31 +14069,31 @@
 },
 "map": {
 "bg": 664,
-"pt": 664,
+"pt": 672,
 "size": 4,
 "type": "uiItem::map_t",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "progressBar": {
 "bg": 672,
-"pt": null,
+"pt": 680,
 "size": 24,
 "type": "uiItem::progressBar_t",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "slot": {
 "bg": 696,
-"pt": null,
+"pt": 704,
 "size": 40,
 "type": "uiItem::slot_t",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "rectangle": {
 "bg": 736,
-"pt": 672,
+"pt": 744,
 "size": 16,
 "type": "uiItem::rectangle_t",
 "how": "manual",
@@ -14101,7 +14101,7 @@
 },
 "action": {
 "bg": 752,
-"pt": 752,
+"pt": 760,
 "size": 4,
 "type": "int",
 "how": "manual",
@@ -14109,79 +14109,79 @@
 },
 "actionDbl": {
 "bg": 756,
-"pt": 756,
+"pt": 764,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionAlt": {
 "bg": 760,
-"pt": 760,
+"pt": 768,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionDrag": {
 "bg": 764,
-"pt": 764,
+"pt": 772,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionEnter": {
 "bg": 768,
-"pt": 768,
+"pt": 776,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionExit": {
 "bg": 772,
-"pt": 772,
+"pt": 780,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionUpdate": {
 "bg": 776,
-"pt": 776,
+"pt": 784,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionSimpleDrag": {
 "bg": 780,
-"pt": 780,
+"pt": 788,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionSimpleDrop": {
 "bg": 784,
-"pt": 784,
+"pt": 792,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionHold": {
 "bg": 788,
-"pt": 788,
+"pt": 796,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "actionScroll": {
 "bg": 792,
-"pt": 792,
+"pt": 800,
 "size": 4,
 "type": "int",
 "how": "manual",
@@ -14189,15 +14189,15 @@
 },
 "framesHeld": {
 "bg": 796,
-"pt": 796,
+"pt": 804,
 "size": 4,
 "type": "int",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "tooltip": {
 "bg": 800,
-"pt": 800,
+"pt": 808,
 "size": 32,
 "type": "uiItem::tooltip_t",
 "how": "manual",
@@ -14205,18 +14205,18 @@
 },
 "glow": {
 "bg": 832,
-"pt": 832,
+"pt": 896,
 "size": 8,
 "type": "uiVariant*",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "pulse": {
 "bg": 840,
-"pt": 840,
+"pt": 904,
 "size": 8,
 "type": "uiVariant*",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "next": {
@@ -14224,8 +14224,8 @@
 "pt": 936,
 "size": 8,
 "type": "uiItem*",
-"how": "evidence",
-"nfun": 3
+"how": "manual",
+"nfun": null
 }
 }
 },
@@ -17634,15 +17634,15 @@
 "pt": 0,
 "size": 2,
 "type": "__int16",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "m_itemNum": {
 "bg": 2,
 "pt": 2,
 "size": 2,
 "type": "__int16",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_abilityNum": {
@@ -17650,15 +17650,15 @@
 "pt": 4,
 "size": 2,
 "type": "__int16",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "m_res": {
 "bg": 6,
 "pt": 6,
 "size": 8,
 "type": "CResRef",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_targetType": {
@@ -17666,7 +17666,7 @@
 "pt": 14,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_targetCount": {
@@ -17674,7 +17674,7 @@
 "pt": 15,
 "size": 1,
 "type": "unsigned __int8",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_toolTip": {
@@ -17682,8 +17682,8 @@
 "pt": 16,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 }
 }
 },
@@ -17696,7 +17696,7 @@
 "pt": 0,
 "size": 8,
 "type": "CResRef",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "m_name": {
@@ -17704,15 +17704,15 @@
 "pt": 8,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence",
-"nfun": 2
+"how": "manual",
+"nfun": null
 },
 "m_launcherIcon": {
 "bg": 12,
 "pt": 12,
 "size": 8,
 "type": "CResRef",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_launcherName": {
@@ -17720,40 +17720,40 @@
 "pt": 20,
 "size": 4,
 "type": "unsigned int",
-"how": "evidence",
-"nfun": 2
+"how": "manual",
+"nfun": null
 },
 "m_count": {
 "bg": 24,
 "pt": 24,
 "size": 2,
 "type": "__int16",
-"how": "evidence",
-"nfun": 2
+"how": "manual",
+"nfun": null
 },
 "m_abilityId": {
 "bg": 28,
 "pt": 28,
 "size": 20,
 "type": "CAbilityId",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "m_bDisabled": {
 "bg": 48,
 "pt": 48,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence",
-"nfun": 2
+"how": "manual",
+"nfun": null
 },
 "m_bDisplayCount": {
 "bg": 49,
 "pt": 49,
 "size": 1,
 "type": "unsigned __int8",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 }
 }
 },
@@ -20822,7 +20822,7 @@
 },
 "CScreenDLC": {
 "bg_size": 1896,
-"pt_size": 4200,
+"pt_size": 4056,
 "items": {
 "m_pVirtualKeys": {
 "bg": 80,
@@ -27304,7 +27304,7 @@
 },
 "CScreenWizSpell": {
 "bg_size": 1712,
-"pt_size": 1888,
+"pt_size": 1880,
 "items": {
 "m_pVirtualKeys": {
 "bg": 80,
@@ -32872,19 +32872,19 @@
 },
 "bPointerUpdated": {
 "bg": 3988,
-"pt": null,
+"pt": 4044,
 "size": 4,
 "type": "int",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "cMousePosition": {
 "bg": 3992,
-"pt": null,
+"pt": 4048,
 "size": 8,
 "type": "CPoint",
-"how": "evidence",
-"nfun": 3
+"how": "manual",
+"nfun": null
 },
 "nAUCounter": {
 "bg": 4000,
@@ -34445,7 +34445,7 @@
 "pt": 8808,
 "size": 4,
 "type": "CButtonType",
-"how": "interp",
+"how": "manual",
 "nfun": null
 },
 "m_nFirstMageSpellIndex": {
@@ -35598,7 +35598,7 @@
 "size": 8824,
 "type": "CInfButtonArray",
 "how": "evidence",
-"nfun": 13
+"nfun": 17
 },
 "m_cVRamPool": {
 "bg": 25528,
@@ -35867,17 +35867,17 @@
 "m_pKeymap": {
 "bg": 32648,
 "pt": 48000,
-"size": 2400,
+"size": 2000,
 "type": "Array<int,600>",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "m_pKeymapFlags": {
 "bg": 35048,
-"pt": null,
-"size": 2400,
+"pt": 50000,
+"size": 2000,
 "type": "Array<int,600>",
-"how": "adjacent",
+"how": "manual",
 "nfun": null
 },
 "m_variables": {
@@ -36730,7 +36730,7 @@
 },
 "CGameEffect": {
 "bg_size": 344,
-"pt_size": 344,
+"pt_size": 352,
 "items": {
 "m_sourceId": {
 "bg": 272,
@@ -36816,12 +36816,12 @@
 },
 "CGameEffectDamage": {
 "bg_size": 344,
-"pt_size": 344,
+"pt_size": 352,
 "items": {}
 },
 "CGameEffectUsability": {
 "bg_size": 344,
-"pt_size": 344,
+"pt_size": 352,
 "items": {}
 },
 "CGameAnimationType": {
@@ -42680,7 +42680,7 @@
 },
 "CAIAction": {
 "bg_size": 136,
-"pt_size": 136,
+"pt_size": 128,
 "items": {
 "m_actionID": {
 "bg": 0,
@@ -47483,7 +47483,7 @@
 },
 "CGameSprite": {
 "bg_size": 21384,
-"pt_size": 20760,
+"pt_size": 21192,
 "items": {
 "m_resref": {
 "bg": 1344,
@@ -49122,8 +49122,8 @@
 "pt": 18768,
 "size": 52,
 "type": "CButtonData",
-"how": "interp",
-"nfun": null
+"how": "evidence",
+"nfun": 3
 },
 "m_dialog": {
 "bg": 19556,
@@ -50193,7 +50193,7 @@
 },
 "CGameDoor": {
 "bg_size": 1704,
-"pt_size": 1704,
+"pt_size": 1696,
 "items": {
 "m_resID": {
 "bg": 1344,

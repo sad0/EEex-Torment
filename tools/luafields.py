@@ -43,7 +43,7 @@ if __name__ == '__main__':
                 if n in missing:
                     uses[n].append(f'{os.path.basename(path)}:{k}')
     out = {n: {'bg_types': sorted(missing[n]), 'in_other_pt_types': n in pt_all, 'uses': v} for n, v in sorted(uses.items())}
-    json.dump(out, open('luafields.json', 'w'), indent=1)
+    json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'luafields.json'), 'w'), indent=1)
     print('BG types', len(BGR), 'PT types', len(PTR), 'names missing somewhere', len(missing), 'used by EEex Lua', len(out))
     for n, e in out.items():
         print(f"{n:40} {'(also elsewhere)' if e['in_other_pt_types'] else '':16} {','.join(e['bg_types'])[:60]:60} {len(e['uses'])} {e['uses'][:3]}")
