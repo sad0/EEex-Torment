@@ -184,7 +184,27 @@ Results, opcode extensions (all in game now, beyond the code review):
   ranged attacker (none in the party).
 - Marshal handlers: Lua data saved with TNO comes back after the reload (importer run on load).
 Vanilla Torment behaviour found on the way (same without EEex, reproduced in the vanilla game from the same save):
-- `RestParty()` forced where resting is not allowed (the Mortuary) never returns: CGameSprite::PartyHeal (PT 0x3d66e0)
-  loops forever. Resting from the UI is fine. Possible engine fix for later (not EEex).
+- `RestParty()` forced where resting is not allowed (the Mortuary) never returns. Root cause (static analysis, matches
+  the RIP samples): the endless loop is the "heal party on rest" loop of CInfGame::RestPartyPrivate (PT 0x2edd50..
+  0x2eddf8, BG 0x288370, identical code); PartyHeal (PT 0x3d66e0) only shows up in the samples because it is called
+  6x6 times per pass (PT 0x2de370 -> 0x3d66e0) and itself always returns.
+  - The loop runs while `[game+0xb954]` (most likely CGameOptions::m_bRestHealParty) and `game.m_bPartyHurt`
+    (`[game+0xce9c]`, set by PT 0x2de370 when a member still misses more HP than the threshold) are set; when the
+    hour cap flag (RestParty r9b, `[rsp+0x30]`) is 0 there is no other exit.
+  - Each pass adds the per-rest heal amount (RestParty r8d, `[rsp+0x48]`) to the threshold (r14d) handed to
+    PartyHeal: missing HP is compared to the accumulated rest healing, so the loop ends once that sum covers the worst
+    wound. PartyHeal also casts memorized op17 healing spells (consumed, memorized again only on pass 0).
+  - Script action RestParty (CGameAIBase::ExecuteAction, PT 0x16eeea): heal amount = `action+0x444`, plus 1 only
+    when ENGINE_MODE != 3 (PT 0x16eeff `cmp ENGINE_MODE, 3` / `je` over `inc r8d`). BG2EE always adds 1 (BG
+    0x15f6d7). In Torment `RestParty()` passes 0, hour cap flag 0 (`action+0x440` == 0).
+  - Result: with any party member hurt beyond what the memorized healing spells cover, the threshold stays 0,
+    m_bPartyHurt stays 1, the loop never ends. The UI passes 10 in Torment (PT 0x36228b), so it ends. The area
+    (no-rest Mortuary) is not the cause: the script action never checks CanRestParty; expected to hang anywhere
+    with "heal party on rest" on and a hurt party (not re-tested).
+  - Fix proposal (not shipped, needs John's OK + a live test): an EEex_Fix_Patch-style hook after the heal call in
+    RestPartyPrivate (PT 0x2edd60): leave the loop (jmp PT 0x2ede14) when the call returned 0 and the per-rest heal
+    amount `[rsp+0x48]` is 0 (no progress possible). Keeps Torment's "RestParty() heals nothing" behaviour. The
+    alternative, NOP the 2-byte `je` at PT 0x16ef13 (BG2EE behaviour, +1 HP per pass), changes how much a scripted
+    RestParty() heals.
 - The scripted `Rest()` heals nobody; plot / cutscene SPL (BBRIDGE, BDBUMP...) applied by script start cutscenes;
   AR0500 triggers Morte's kidnapping (area event).
