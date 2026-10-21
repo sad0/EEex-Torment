@@ -166,3 +166,25 @@ overwritten bytes, relocatable restore bytes, call targets). Main Torment differ
   actions, extended stats, op400..403, 408, 409, script loading with the Torment constructor: 18/18 in game.
 - Known limitation: casting off the op214 internal list from a keybind (B3Hotkey / EEex_Keybinds) is disabled:
   Torment's ReadyOffInternalList takes an index into a different array than GetInternalButtonList's list.
+
+## Game-session battery (bindings/test/PTEE_Battery.lua, tools/battery.py)
+A scripted session on the dev game, run end to end by `python tools/battery.py` (69 pass / 0 fail on 2026-10-21; keys sent with PostMessage:
+no focus change). Steps: API sweep (1095 calls on the 6 party members, 0 Lua error), companions join (party of 6,
+timer instances per portrait), XP, opcode extensions, op326, combat (rats + skeletons), 26 real casts (decode hook),
+126 player spells applied (SPWI/SPPR/SPIN), travel through 5 areas and back, rest, quick save, reload, companions leave.
+Results, opcode extensions (all in game now, beyond the code review):
+- op101 + saving throw bit 23 bypasses the immunity; op146 special 2 -> SpellNoDec (191); op148 special 1 ->
+  SpellPointNoDec (192); op214 param2 3 calls the Lua hook and the resource function; op248 special 1: the .EFF
+  reaches a creature immune to weapons (op120); op333 copy hook called; op326 flip (special 2): SPLPROT
+  ENOUGHINT / NOTENOINT checked on the source instead of the target, 5/5 cases incl. controls.
+- op326: upstream's doc says `special & 1`, EEex.dll (upstream and ours) tests `special & 2`: the code is the
+  reference. SPLPROT's EA rows go through an EA-category helper (Torment 0x12b770), not the raw EA: unusable to tell
+  source from target (EA == 2 is false even on a PC).
+- op219 / op280 / op342 / op319 / op249: applied without error (EEex.dll only, no Lua-visible result); op249 needs a
+  ranged attacker (none in the party).
+- Marshal handlers: Lua data saved with TNO comes back after the reload (importer run on load).
+Vanilla Torment behaviour found on the way (same without EEex, reproduced in the vanilla game from the same save):
+- `RestParty()` forced where resting is not allowed (the Mortuary) never returns: CGameSprite::PartyHeal (PT 0x3d66e0)
+  loops forever. Resting from the UI is fine. Possible engine fix for later (not EEex).
+- The scripted `Rest()` heals nobody; plot / cutscene SPL (BBRIDGE, BDBUMP...) applied by script start cutscenes;
+  AR0500 triggers Morte's kidnapping (area event).

@@ -1,0 +1,10 @@
+menu
+{
+	name "PTEE_Battery_Menu"
+	ignoreesc
+	label
+	{
+		area 0 0 1 1
+		enabled "PTEE_Battery_Tick()"
+	}
+}

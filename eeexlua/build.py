@@ -11,7 +11,7 @@ UP = os.path.join(HERE, r'..\ref\EEex\EEex\copy')
 OUT = os.path.join(HERE, 'generated')
 GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
 # dev-only scripts (bindings/test/) loaded after EEex's startup in the dev game
-DEV_FILES = ['PTEE_SkipIntro', 'PTEE_SpellTest', 'PTEE_FeatureTest']
+DEV_FILES = ['PTEE_SkipIntro', 'PTEE_SpellTest', 'PTEE_FeatureTest', 'PTEE_BatterySpells', 'PTEE_Battery']
 
 
 def load_patches():

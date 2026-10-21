@@ -85,3 +85,5 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
          821 + 27 patterns resolved; full uninstall leaves no file behind.
    - [ ] 6d Real playthrough on the release install (John). 2026-10-21: Mortuary (tutorial area) played with
          Walkthrough + SadoQoL installed on top, no problem.
+   - [x] 6e Game-session battery on the dev game (tools/battery.py, AUDIT.md): every opcode extension, combat,
+         casts, every player spell, areas, rest, save / reload, companions; vanilla RestParty hang documented.
