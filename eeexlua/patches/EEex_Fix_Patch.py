@@ -92,4 +92,21 @@ PATCHES = [
     ('''	EEex_JITAt(EEex_Label("Hook-CGameText::Render()-FirstInstruction"), {"jmp #L(CGameText::Override_Render)"})''',
      '''	-- EEex-PTEE: not installed: Torment's CGameText::Render is a different routine (EEex.dll override is a no-op)
 	-- EEex_JITAt(EEex_Label("Hook-CGameText::Render()-FirstInstruction"), {"jmp #L(CGameText::Override_Render)"})'''),
+    # Torment-only fix (vanilla engine bug, AUDIT.md 'Game-session battery'): the script action RestParty() passes a
+    # per-rest heal amount of 0 in Torment (PT 0x16ef13 skips BG2EE's +1 when ENGINE_MODE == 3). CInfGame::
+    # RestPartyPrivate's heal-on-rest loop (PT 0x2edd50) only ends when that accumulated amount covers every wound,
+    # so with a party hurt beyond its memorized healing spells it never returns. After the heal pass (PT 0x2de370,
+    # rdi = CInfGame, eax = something healed), a pass that healed nothing with a heal amount of 0 clears
+    # m_bPartyHurt ([rdi+0xce9c], reset by every pass) so the loop's own check exits. Healing is unchanged.
+    ('''	EEex_JITAt(EEex_Label("Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne"), {"#REPEAT(2,nop #ENDL)"})''',
+     '''	EEex_JITAt(EEex_Label("Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne"), {"#REPEAT(2,nop #ENDL)"})
+
+	-- EEex-PTEE: fix the vanilla RestParty() hang (heal-on-rest loop with a heal amount of 0 never ends)
+	EEex_HookAfterCall(EEex_Label("Hook-PTEE-CInfGame::RestPartyPrivate()-HealPartyCall"), {[[
+		test eax, eax
+		jnz #L(return)
+		cmp dword ptr ss:[rsp+#LAST_FRAME_TOP(48h)], 0 ; per-rest heal amount
+		jnz #L(return)
+		mov byte ptr ds:[rdi+0xCE9C], 0                ; m_bPartyHurt: no progress possible, leave the loop
+	]]})'''),
 ]

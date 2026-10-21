@@ -56,6 +56,9 @@ LABELS = {
     'Data-PTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr': 0x183143,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
+    # CInfGame::RestPartyPrivate heal-on-rest loop: call of the party heal pass (PT 0x2de370), EEex_Fix_Patch.lua
+    # leaves the loop when a pass heals nothing and the per-rest heal amount is 0 (AUDIT.md, RestParty() hang)
+    'Hook-PTEE-CInfGame::RestPartyPrivate()-HealPartyCall': 0x2edd60,
 }
 # Torment-only engine globals: name -> (rva of a RIP-relative instruction, offset of its disp32, length)
 DATA = {

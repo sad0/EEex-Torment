@@ -201,7 +201,10 @@ Vanilla Torment behaviour found on the way (same without EEex, reproduced in the
     m_bPartyHurt stays 1, the loop never ends. The UI passes 10 in Torment (PT 0x36228b), so it ends. The area
     (no-rest Mortuary) is not the cause: the script action never checks CanRestParty; expected to hang anywhere
     with "heal party on rest" on and a hurt party (not re-tested).
-  - Fix proposal (not shipped, needs John's OK + a live test): an EEex_Fix_Patch-style hook after the heal call in
+  - Fixed (John's choice, shipped in EEex_Fix_Patch.lua, label Hook-PTEE-CInfGame::RestPartyPrivate()-HealPartyCall;
+    live test 2026-10-21: party of 6 hurt in the Mortuary, scripted RestParty() twice, no hang, the memorized healing
+    spells still heal). Design notes kept below.
+  - Fix design: an EEex_Fix_Patch-style hook after the heal call in
     RestPartyPrivate (PT 0x2edd60): leave the loop (jmp PT 0x2ede14) when the call returned 0 and the per-rest heal
     amount `[rsp+0x48]` is 0 (no progress possible). Keeps Torment's "RestParty() heals nothing" behaviour. The
     alternative, NOP the 2-byte `je` at PT 0x16ef13 (BG2EE behaviour, +1 HP per pass), changes how much a scripted

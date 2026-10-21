@@ -677,6 +677,16 @@ end
 
 EEex_Menu_AddMainFileLoadedListener(function() EEex_Menu_LoadFile("PTEEBAT") end)
 
+-- F5: scripted RestParty() (vanilla Torment hang, fixed in EEex_Fix_Patch.lua): logs HP before, then after 20 s
+EEex_Key_AddPressedListener(function(key)
+	if key ~= EEex_Key_GetFromName("F5") or B.running then return end
+	local hps = {}
+	for _, s in ipairs(party()) do table.insert(hps, EEex_Sprite_GetName(s) .. " " .. hp(s)) end
+	log("RESTPARTY", "before: " .. table.concat(hps, ", "))
+	unpause()
+	q(tno(), "RestParty()")
+end)
+
 -- F6: load the save named in EEex_scripts/PTEE_BatteryLoad.lua (written by tools/battery.py)
 EEex_Key_AddPressedListener(function(key)
 	if key ~= EEex_Key_GetFromName("F6") or B.running then return end
