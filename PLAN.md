@@ -83,4 +83,5 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
    - [x] 6b tools/package.py -> build/EEex-PTEE-v1.3.1-ptee1.zip; no dev-only files (checked).
    - [x] 6c Clean install on a fresh Steam copy (PTEE (EEex release test)): all 9 components install, game boots,
          821 + 27 patterns resolved; full uninstall leaves no file behind.
-   - [ ] 6d Real playthrough on the release install (John).
+   - [ ] 6d Real playthrough on the release install (John). 2026-10-21: Mortuary (tutorial area) played with
+         Walkthrough + SadoQoL installed on top, no problem.
