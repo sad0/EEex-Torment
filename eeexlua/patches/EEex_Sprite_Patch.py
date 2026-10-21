@@ -13,6 +13,26 @@ PATCHES = [
      '''	EEex_HookBeforeCallWithLabels(EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()"), {
 		{"ptee_no_tooltip", EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()") + 9},
 		{"hook_integrity_watchdog_ignore_registers", {'''),
+    # Torment's SetCharacterToolTip takes the output CString* in rdx: the Lua call clobbers rdx, keep it (crash
+    # in CString::CString with rdx = garbage on the first creature hover otherwise)
+    ('''				#MAKE_SHADOW_SPACE(40)
+				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], rcx
+			]]},
+			EEex_GenLuaCall("EEex_Sprite_Hook_CheckSuppressTooltip", {''',
+     '''				#MAKE_SHADOW_SPACE(48)
+				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], rcx
+				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)], rdx ; EEex-PTEE: CString* out argument
+			]]},
+			EEex_GenLuaCall("EEex_Sprite_Hook_CheckSuppressTooltip", {'''),
+    ('''				mov rcx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
+				#DESTROY_SHADOW_SPACE
+				test rax, rax
+				jnz #L(return_skip)''',
+     '''				mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)] ; EEex-PTEE
+				mov rcx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
+				#DESTROY_SHADOW_SPACE
+				test rax, rax
+				jnz #L(return_skip)'''),
     ('''				#DESTROY_SHADOW_SPACE
 				test rax, rax
 				jnz #L(return_skip)''',
