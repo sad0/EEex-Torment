@@ -147,7 +147,8 @@ overwritten bytes, relocatable restore bytes, call targets). Main Torment differ
 - Frames: CDerivedStats::GetAtOffset has a 0x38 frame in Torment (BG none): the extended-stat early return must pop it.
 - Triggers: EEex's 0x410D..0x4110 are real Torment triggers (ExtraProficiency*, LastPersonTalkedTo): EEex's moved
   to 0x4112..0x4115 (eeexlua/src/patch/TRIGGER.IDS). Actions 472+ / objects 115+ are free.
-- op146: Torment already uses `special` (ForceSpellRESNoFeedback): EEex's op146 extension is disabled (owner decision pending).
+- op146: Torment already uses `special` != 0 (ForceSpellRESNoFeedback; vanilla data: special 0 x97, 1 x1 IGARM): EEex's
+  SpellNoDec switch moved to special bit 1 (value 2) in Torment (owner decision), tested in game (action 191 started).
 - CProjectile::AddEffect is virtual in Torment (Area / BAM overrides): all three bodies hooked.
 - Struct sizes matter for arrays: uiMenu is 0x98 in Torment (menus memset 0x9800, parser imul 0x98), BG 0x70; the
   interpolated 0x78 broke EngineGlobals.menus. Array element types used by EEex are now size-proven.

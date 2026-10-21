@@ -32,17 +32,12 @@ PATCHES = [
 
     # op146: Torment already uses m_special in the param2 == 0 path: m_special != 0 queues action 0x1d2 = 466
     # ForceSpellRESNoFeedback instead of ForceSpell (PT 0x1c2ae1 cmp dword ptr [rsi+0x48], edi; 0x1c2ae6 mov eax,
-    # 0x1d2). EEex's (special & 1) -> SpellNoDec would overwrite Torment's vanilla no-feedback casts: disabled.
-    ('''	EEex_HookBeforeCallWithLabels(EEex_Label("Hook-CGameEffectCastSpell::ApplyEffect()-CMessageHandler::AddMessage()"), {''',
-     '''	if false then -- EEex-PTEE: Torment's op146 special != 0 means ForceSpellRESNoFeedback (action 466)
-	EEex_HookBeforeCallWithLabels(EEex_Label("Hook-CGameEffectCastSpell::ApplyEffect()-CMessageHandler::AddMessage()"), {'''),
-    ('''			mov word ptr ds:[rdx+#OFFSET_OF(CMessageInsertAction.m_action.m_actionID)], 191 ;     yes -> swap to SpellNoDec()
-		]]}
-	)''',
-     '''			mov word ptr ds:[rdx+#OFFSET_OF(CMessageInsertAction.m_action.m_actionID)], 191 ;     yes -> swap to SpellNoDec()
-		]]}
-	)
-	end -- EEex-PTEE'''),
+    # 0x1d2); vanilla data uses special 0 (97 op146 effects) and 1 (IGARM only). EEex's switch moves to special bit 1
+    # (value 2) in Torment (owner decision): special & 2 -> SpellNoDec, special 1 keeps Torment's no-feedback cast.
+    ('''	|   (special & 1) != 0 and param2 == 0 -> Queue SpellNoDec() instead of ForceSpell() |''',
+     '''	|   (special & 2) != 0 and param2 == 0 -> Queue SpellNoDec() instead of ForceSpell() | EEex-PTEE: bit 1 in Torment'''),
+    ('''			test dword ptr ds:[rsi+#OFFSET_OF(CGameEffect.m_special)], 1                    ; (this->m_special & 1) != 0 ?''',
+     '''			test dword ptr ds:[rsi+#OFFSET_OF(CGameEffect.m_special)], 2                    ; (this->m_special & 2) != 0 ? EEex-PTEE: bit 1 (bit 0 is Torment's no-feedback)'''),
 
     # CGameEffect::CheckAdd (PT 0x1eba60): the sprite is in rsi (PT 0x1eba8d mov rsi, rdx; 0x1ebace
     # cmp dword ptr [rsi+0x4bbc], 0), BG r14. rdi = effect, rdx still the sprite (PT 0x1ebaa7 mov eax, [rdx+0x48]);
