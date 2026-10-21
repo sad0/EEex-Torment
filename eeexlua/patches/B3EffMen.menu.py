@@ -2,6 +2,18 @@
 # `scaleToClip` (no bam.scaletoclip: the BAM is drawn at its own size) and `scrollbar clunkyScroll` (no
 # scrollbar.clunkyScroll: the list scrolls at Torment's default speed).
 PATCHES = [
+    # wider (+100 px): French spell names were cut ("Duplication d'Enoll Ev...", owner test)
+    ('\t\tarea 0 0 220 160\n', '\t\tarea 0 0 320 160 -- EEex-PTEE: +100\n'),
+    ('\t\t\t\tarea 0 0 147 30\n', '\t\t\t\tarea 0 0 230 30 -- EEex-PTEE: +100 (column 70%)\n'),
+    ('\t\tarea 10 10 210 140\n', '\t\tarea 10 10 310 140 -- EEex-PTEE: +100\n'),
+    # Torment's default text colour is dark (parchment screens): the effect names were unreadable on the dark
+    # background; same style / white colour as B3AtkInf.menu, which reads fine in Torment (owner test)
+    ('''				text lua "B3EffectMenu_Private_Menu_List_Table[rowNumber].text"
+				text align left center''',
+     '''				text lua "B3EffectMenu_Private_Menu_List_Table[rowNumber].text"
+				text style "normal" -- EEex-PTEE
+				text color 255 255 255 255 -- EEex-PTEE
+				text align left center'''),
     ('@all:1 ' + '\t\t\t\tscaleToClip\n', ''),
     ('''		scrollbar clunkyScroll 35
 ''', ''),
