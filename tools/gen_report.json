@@ -5278,11 +5278,12 @@
  "Hook-CGameEffectDamage::ApplyEffect()-OnDone": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side (db pattern kept)",
-  "conf": "medium",
-  "note": "PT stores constant 1 to +0x114 (BG r12d) and the vcall slot is 0xf0 (BG 0xe8); hook asm/restore size to be checked in phase 5",
-  "addr": "0x1cc5fa",
-  "site": "0x1cc5fa"
+  "method": "manual: labelcheck.py (hook labels)",
+  "conf": "high",
+  "note": "common exit of CGameEffectDamage::ApplyEffect (PT 0x1c7e50): mov [r15+0x114], r12d (m_done), same 7 bytes as BG mov [r14+0x114], r12d; the old value 0x1cc5fa was in CGameEffectDisintegrate::ApplyEffect",
+  "addr": "0x1c9c41",
+  "site": "0x1c9c41",
+  "replaced": "0x1cc5fa"
  },
  "Hook-CGameEffectDamage::ApplyEffect()-StartingCalculations": {
   "kind": "A",

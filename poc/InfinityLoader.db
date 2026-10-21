@@ -2168,7 +2168,7 @@ Pattern=E8EC54060048
 Pattern=E85AC91F0048
 
 [Hook-CGameEffectDamage::ApplyEffect()-OnDone]
-Pattern=C7831401000001000000E8
+Pattern=4589A714010000488B4D
 
 [Hook-CGameEffectDamage::ApplyEffect()-StartingCalculations]
 Pattern=FF90F800000085C00F8529

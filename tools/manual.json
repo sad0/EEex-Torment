@@ -209,10 +209,10 @@
   "note": "PT CAIScript::Construct (0x176d80) has no script-cache lookup/copy path (BG 0x24be90/0x11faa0); it always parses via CAIScript::Read, so the OnCopy hooks have no equivalent (OnRead covers it)"
  },
  "Hook-CGameEffectDamage::ApplyEffect()-OnDone": {
-  "addr": "0x1cc5fa",
-  "method": "review: BG/PT context side by side",
-  "conf": "medium",
-  "note": "PT stores constant 1 to +0x114 (BG r12d) and the vcall slot is 0xf0 (BG 0xe8); hook asm/restore size to be checked in phase 5"
+  "addr": "0x1c9c41",
+  "method": "labelcheck.py (hook labels)",
+  "conf": "high",
+  "note": "common exit of CGameEffectDamage::ApplyEffect (PT 0x1c7e50): mov [r15+0x114], r12d (m_done), same 7 bytes as BG mov [r14+0x114], r12d; the old value 0x1cc5fa was in CGameEffectDisintegrate::ApplyEffect"
  },
  "Hook-CGameEffectForceSurge::ApplyEffect()-FirstInstruction": {
   "addr": "0x1cf460",

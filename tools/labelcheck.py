@@ -41,7 +41,7 @@ def func(pe, a):
 if __name__ == '__main__':
     bad, ok, unk = [], 0, 0
     for k, g in G.items():
-        if g.get('status') != 'ported' or k.startswith(('Hook-', 'Data-')) or k not in R:
+        if g.get('status') != 'ported' or k.startswith('Data-') or k not in R:
             continue
         site = R[k].get('bg_key'); p = g.get('addr')
         if not site or not p:
