@@ -71654,19 +71654,21 @@ struct uiMenu
 struct uiItem
 {
 	uiItemType type;
-	nobinding unsigned int _ptpad_4[1];
+	nobinding unsigned __int8 _ptpad_4[4];
 	uiMenu *menu;
 	const char *name;
 	int instanceId;
-	nobinding unsigned int _ptpad_1c[1];
+	nobinding unsigned __int8 _ptpad_1c[4];
 	const char *templateName;
 	Marker areaSrc;
 	SDL_Rect area;
 	SDL_Rect pad;
 	int enabled;
 	int ignoreEvents;
+	nobinding unsigned __int8 _ptpad_68[4];
 	int ha;
 	int va;
+	nobinding unsigned __int8 _ptpad_74[4];
 	uiVariant *alpha;
 	uiVariant *fill;
 	int useOverlayTint;
@@ -71684,66 +71686,66 @@ struct uiItem
 		uiVariant *shadow;
 		uiVariant *showhighlight;
 	} text;
+	nobinding unsigned __int8 _ptpad_d8[8];
 	struct
 	{
 		uiItem *item;
 	} uiTemplate;
-	struct __declspec(align(8))
+	struct
 	{
 		uiVariant *resref;
 		uiVariant *sequence;
-		uiVariant *sequenceonce;
 		uiVariant *frame;
 		uiVariant *greyscale;
 		uiVariant *usealpha;
-		int scaletoclip;
 	} bam;
 	struct
 	{
 		int resname;
+		nobinding unsigned __int8 _ptpad_4[4];
 		uiVariant *resref;
 		SDL_Rect area;
 	} bmp;
-	struct __declspec(align(8))
+	struct
 	{
 		int table;
-		int printrow;
+		nobinding unsigned __int8 _ptpad_4[4];
 		int rowheight;
 		int rowwidth;
 		uiVariant *rowbackground;
 		int dynamicHeight;
+		nobinding unsigned __int8 _ptpad_1c[4];
 		uiColumn *columns;
-		int category;
+		nobinding unsigned __int8 _ptpad_28[4];
 		int showHighlight;
 		int seperator;
+		nobinding unsigned __int8 _ptpad_34[4];
 		int selected;
-		int height;
+		nobinding unsigned __int8 _ptpad_3c[4];
 		uiVariant *color;
 		int currentRow;
+		nobinding unsigned __int8 _ptpad_4c[4];
 	} list;
-	struct __declspec(align(8))
+	nobinding unsigned __int8 _ptpad_180[24];
+	struct
 	{
 		const char *bam;
 		const char *function;
 		uiVariant *hide;
+		nobinding unsigned __int8 _ptpad_18[16];
 		int top;
 		int held;
 		int dragging;
 		int contentHeight;
-		int respectConstraints;
-		int clunkyScroll;
-		int skipReset;
 	} scrollbar;
-	struct __declspec(align(8))
+	struct
 	{
 		const char *position;
 		uiVariant *settings;
 		int palette;
-		const char *background;
-		int right;
+		nobinding unsigned __int8 _ptpad_14[4];
 	} slider;
-	nobinding unsigned __int64 _ptpad_1e0[1];
-	struct __declspec(align(8))
+	struct
 	{
 		const char *var;
 		int maxlines;
@@ -71752,8 +71754,13 @@ struct uiItem
 		int cursor;
 		int selectStart;
 		int selectEnd;
+		nobinding unsigned __int8 _ptpad_24[4];
 	} edit;
-	nobinding unsigned __int64 _ptpad_210[1];
+	struct
+	{
+		uiVariant *resref;
+		nobinding unsigned __int8 _ptpad_8[8];
+	} mosaic;
 	struct
 	{
 		void *res;
@@ -71761,15 +71768,17 @@ struct uiItem
 		int transparent;
 		unsigned int background;
 		int loop;
-		uiVariant *queuedMovie;
+		nobinding unsigned __int8 _ptpad_24[4];
 	} movie;
 	struct
 	{
 		uiVariant *portrait;
+		nobinding unsigned __int8 _ptpad_8[8];
 		uiVariant *paperdoll;
 		int encumbrance;
 		int colorDisplay;
 		int frameTimes;
+		nobinding unsigned __int8 _ptpad_24[4];
 		const char *toggle;
 		const char *on;
 		const char *highlightGroup;
@@ -71777,13 +71786,31 @@ struct uiItem
 		uiVariant *actionBar;
 		const char *sound;
 	} button;
-	nobinding unsigned __int64 _ptpad_298[1];
+	struct
+	{
+		int type;
+	} map;
+	nobinding unsigned __int8 _ptpad_2a4[4];
+	struct
+	{
+		uiVariant *percent;
+		uiVariant *color;
+		uiVariant *fullColor;
+	} progressBar;
+	struct
+	{
+		uiVariant *icon;
+		uiVariant *count;
+		uiVariant *usages;
+		uiVariant *highlight;
+		uiVariant *tint;
+	} slot;
 	struct
 	{
 		int number;
+		nobinding unsigned __int8 _ptpad_4[4];
 		uiVariant *opacity;
 	} rectangle;
-	nobinding unsigned __int64 _ptpad_2b0[8];
 	int action;
 	int actionDbl;
 	int actionAlt;
@@ -71801,11 +71828,17 @@ struct uiItem
 		const char *originalText;
 		uiVariant *text;
 		uiVariant *force;
+		nobinding unsigned __int8 _ptpad_18[16];
 		int position;
 		int forceTop;
 	} tooltip;
-	nobinding unsigned __int64 _ptpad_340[13];
+	nobinding unsigned __int8 _ptpad_358[40];
+	uiVariant *glow;
+	uiVariant *pulse;
+	nobinding unsigned __int8 _ptpad_390[24];
 	uiItem *next;
+
+	uiItem() = delete;
 };
 
 /* 7383 */
@@ -71946,71 +71979,70 @@ struct uiItem::<unnamed_type_uiTemplate>
 };
 
 /* 7397 */
-struct __declspec(align(8)) uiItem::<unnamed_type_bam>
+struct uiItem::<unnamed_type_bam>
 {
 	uiVariant *resref;
 	uiVariant *sequence;
-	uiVariant *sequenceonce;
 	uiVariant *frame;
 	uiVariant *greyscale;
 	uiVariant *usealpha;
-	int scaletoclip;
 };
 
 /* 7398 */
 struct uiItem::<unnamed_type_bmp>
 {
 	int resname;
+	nobinding unsigned __int8 _ptpad_4[4];
 	uiVariant *resref;
 	SDL_Rect area;
 };
 
 /* 7399 */
-struct __declspec(align(8)) uiItem::<unnamed_type_list>
+struct uiItem::<unnamed_type_list>
 {
 	int table;
-	int printrow;
+	nobinding unsigned __int8 _ptpad_4[4];
 	int rowheight;
 	int rowwidth;
 	uiVariant *rowbackground;
 	int dynamicHeight;
+	nobinding unsigned __int8 _ptpad_1c[4];
 	uiColumn *columns;
-	int category;
+	nobinding unsigned __int8 _ptpad_28[4];
 	int showHighlight;
 	int seperator;
+	nobinding unsigned __int8 _ptpad_34[4];
 	int selected;
-	int height;
+	nobinding unsigned __int8 _ptpad_3c[4];
 	uiVariant *color;
 	int currentRow;
+	nobinding unsigned __int8 _ptpad_4c[4];
 };
 
 /* 7400 */
-struct __declspec(align(8)) uiItem::<unnamed_type_scrollbar>
+struct uiItem::<unnamed_type_scrollbar>
 {
 	const char *bam;
 	const char *function;
 	uiVariant *hide;
+	nobinding unsigned __int8 _ptpad_18[16];
 	int top;
 	int held;
 	int dragging;
 	int contentHeight;
-	int respectConstraints;
-	int clunkyScroll;
-	int skipReset;
 };
 
 /* 7401 */
-struct __declspec(align(8)) uiItem::<unnamed_type_slider>
+struct uiItem::<unnamed_type_slider>
 {
 	const char *position;
 	uiVariant *settings;
 	int palette;
-	const char *background;
-	int right;
+	nobinding unsigned __int8 _ptpad_14[4];
 };
 
 /* 7402 */
-struct __declspec(align(8)) uiItem::<unnamed_type_edit>
+struct uiItem::<unnamed_type_edit>
 {
 	const char *var;
 	int maxlines;
@@ -72019,13 +72051,14 @@ struct __declspec(align(8)) uiItem::<unnamed_type_edit>
 	int cursor;
 	int selectStart;
 	int selectEnd;
+	nobinding unsigned __int8 _ptpad_24[4];
 };
 
 /* 7403 */
-struct __declspec(align(8)) uiItem::<unnamed_type_mosaic>
+struct uiItem::<unnamed_type_mosaic>
 {
 	uiVariant *resref;
-	int respectClipping;
+	nobinding unsigned __int8 _ptpad_8[8];
 };
 
 /* 7404 */
@@ -72036,17 +72069,19 @@ struct uiItem::<unnamed_type_movie>
 	int transparent;
 	unsigned int background;
 	int loop;
-	uiVariant *queuedMovie;
+	nobinding unsigned __int8 _ptpad_24[4];
 };
 
 /* 7405 */
 struct uiItem::<unnamed_type_button>
 {
 	uiVariant *portrait;
+	nobinding unsigned __int8 _ptpad_8[8];
 	uiVariant *paperdoll;
 	int encumbrance;
 	int colorDisplay;
 	int frameTimes;
+	nobinding unsigned __int8 _ptpad_24[4];
 	const char *toggle;
 	const char *on;
 	const char *highlightGroup;
@@ -72083,6 +72118,7 @@ struct uiItem::<unnamed_type_slot>
 struct uiItem::<unnamed_type_rectangle>
 {
 	int number;
+	nobinding unsigned __int8 _ptpad_4[4];
 	uiVariant *opacity;
 };
 
@@ -72092,6 +72128,7 @@ struct uiItem::<unnamed_type_tooltip>
 	const char *originalText;
 	uiVariant *text;
 	uiVariant *force;
+	nobinding unsigned __int8 _ptpad_18[16];
 	int position;
 	int forceTop;
 };

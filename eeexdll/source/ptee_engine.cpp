@@ -59,3 +59,13 @@ namespace PTEE {
 		}
 	}
 }
+
+// Torment UI struct layouts (tools/bindings/manual_fields*.json, eeexlua/notes/uiItem_layout.md): a header
+// regression must not compile
+static_assert(sizeof(uiMenu) == 0x98, "Torment uiMenu");
+static_assert(offsetof(uiMenu, items) == 0x28 && offsetof(uiMenu, onOpen) == 0x50 && offsetof(uiMenu, ignoreEsc) == 0x74, "Torment uiMenu");
+static_assert(sizeof(uiItem) == 0x3b0, "Torment uiItem");
+static_assert(offsetof(uiItem, text) == 0x98 && offsetof(uiItem, bam) == 0xe8 && offsetof(uiItem, list) == 0x130, "Torment uiItem");
+static_assert(offsetof(uiItem, scrollbar) == 0x198 && offsetof(uiItem, edit) == 0x1e8 && offsetof(uiItem, button) == 0x248, "Torment uiItem");
+static_assert(offsetof(uiItem, rectangle) == 0x2e8 && offsetof(uiItem, action) == 0x2f8 && offsetof(uiItem, tooltip) == 0x328, "Torment uiItem");
+static_assert(offsetof(uiItem, glow) == 0x380 && offsetof(uiItem, next) == 0x3a8, "Torment uiItem");

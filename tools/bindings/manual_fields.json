@@ -1957,40 +1957,192 @@
   "CProjectileLightningBounce": {},
   "uiItem": {
    "scrollbar": {
-    "pt": "0x180",
-    "why": "autoprove: 15 unanimous votes from 11 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x198",
+    "why": "yy_reduce rule BG 90 (case 0x3c52a7) = PT 103 (case 0x441aa6) writes the item template (BG 0x7176b0 / PT 0x7b7e70); scrollbar_t starts with bam (PT +0x198); UI.MENU dump (1016 items): non-null exactly for the 56 'scrollbar' items"
    },
    "slider": {
-    "pt": "0x1b8",
-    "why": "autoprove: 4 unanimous votes from 4 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x1d0",
+    "why": "yy_reduce rule BG 106 (case 0x3c5450) = PT 118 (case 0x441c4e) writes the item template (BG 0x7176b0 / PT 0x7b7e70); slider_t starts with position (PT +0x1d0); UI.MENU dump (1016 items): non-null exactly for the 17 'slider' items"
    },
    "movie": {
-    "pt": "0x218",
-    "why": "autoprove: 2 unanimous votes from 2 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x220",
+    "why": "movie_t starts with res: BG 0x3cb170 / PT 0x4479e0 (fdiff 1.00) [item+0x218] / [item+0x220]; drawItem BG 0x3d139f / PT 0x44ebfe"
    },
    "button": {
     "pt": "0x248",
-    "why": "autoprove: 8 unanimous votes from 8 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "why": "yy_reduce rule BG 120 (case 0x3c62ce) = PT 131 (case 0x442b45) writes the item template (BG 0x7176b0 / PT 0x7b7e70); button_t starts with portrait (PT +0x248); UI.MENU dump (1016 items): non-null exactly for the 12 'portrait' items"
    },
    "rectangle": {
-    "pt": "0x2a0",
-    "why": "autoprove: 17 unanimous votes from 9 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x2e8",
+    "why": "yy_reduce rule BG 37 (case 0x3c4799) = PT 42 (case 0x440e30) writes the item template (BG 0x7176b0 / PT 0x7b7e70); rectangle_t starts with number (PT +0x2e8); UI.MENU dump (1016 items): =6 for the 9 'rectangle' items"
    },
    "action": {
-    "pt": "0x2f0",
-    "why": "autoprove: 27 unanimous votes from 3 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x2f8",
+    "why": "yy_reduce rule BG 69 (case 0x3c4ad2) = PT 81 (case 0x44125f) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: startDraggableCapture BG 0x3d6c40 [3d6c83 mov ecx, dword ptr [rbx + 0x2f0]] / PT 0x4558a0 [455931 mov ecx, dword ptr [rdi + 0x2f8]]; UI.MENU dump (1016 items): Lua ref non-zero for all 484 'action' items"
    },
    "actionScroll": {
-    "pt": "0x318",
-    "why": "autoprove: 18 unanimous votes from 5 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x320",
+    "why": "yy_reduce rule BG 79 (case 0x3c5036) = PT 91 (case 0x4417e6) writes the item template (BG 0x7176b0 / PT 0x7b7e70); eventMenu BG 0x3d52ee [rbx+0x318] / PT 0x452e5f [rbx+0x320] (Lua ref read on wheel events)"
    },
    "tooltip": {
-    "pt": "0x320",
-    "why": "autoprove: 205 unanimous votes from 16 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+    "pt": "0x328",
+    "why": "yy_reduce rule BG 63 (case 0x3c4a42) = PT 72 (case 0x441161) writes the item template (BG 0x7176b0 / PT 0x7b7e70); tooltip_t starts with originalText (PT +0x328); UI.MENU dump (1016 items): non-null exactly for the 79 plain 'tooltip' items"
    },
    "edit": {
     "pt": "0x1e8",
-    "why": "editTextInput ([item+0x1e8/0x1ec/0x1f8] BG -> 0x1f0/0x1f4/0x200 PT: maxlines, maxchars, cursor), startEditCapture and stopEditCapture (cursor 0x1f8 -> 0x200), uiFocusTextEdit (var 0x1e0 -> 0x1e8)"
+    "why": "yy_reduce rule BG 95 (case 0x3c532d) = PT 108 (case 0x441b09) writes the item template (BG 0x7176b0 / PT 0x7b7e70); edit_t starts with var (PT +0x1e8); UI.MENU dump (1016 items): non-null for the 37 'var' items"
+   },
+   "type": {
+    "pt": "0x0",
+    "why": "yy_reduce item-creation rules BG 23..32 = PT 28..37; item-type rules store the type right after saveItem (BG 0x3c2e00 / PT 0x43f3f0): mov dword [rax], 1..0xb; item walk BG 0x3cef60 cmp dword [rbx], 9 (0x3cf0d1) / PT 0x44bf80 cmp dword [rdi], 9 (0x44c170); drawItem BG cmp dword [r15], 9 (0x3d1f67) / PT cmp dword [r13], 9 (0x44f748); aligned item accesses: yy_reduce BG 0x3c40c0 [3c454a mov dword ptr [rax], 1] / PT 0x4406a0 [440c28 mov dword ptr [rax], 1]; drawItem BG 0x3d1210 [3d1a5c cmp dword ptr [r15], 2] / PT 0x44ea70 [44f2e5 cmp dword ptr [r13], 2]; UI.MENU dump (1016 items): type 0 label, 2 button, 0xb template..."
+   },
+   "menu": {
+    "pt": "0x8",
+    "why": "uiCreateFromTemplate BG 0x3d7e5a [r9+8] / PT 0x456d08 [r9+8] (copied from the template item); aligned item accesses: initNameMap BG 0x3c2a20 [3c2a90 mov qword ptr [rbx + 8], rdi] / PT 0x43f010 [43f080 mov qword ptr [rbx + 8], rdi]; sub_3c7b10 BG 0x3c7b10 [3c7be4 mov rcx, qword ptr [rbx + 8]] / PT 0x4445b0 [444684 mov rcx, qword ptr [rbx + 8]]; sub_3c9f10 BG 0x3c9f10 [3ca1f9 mov qword ptr [rdx + 8], rax] / PT 0x446600 [4468d1 mov qword ptr [rdx + 8], rax]; UI.MENU dump (1016 items): same uiMenu* for every item of a menu"
+   },
+   "name": {
+    "pt": "0x10",
+    "why": "yy_reduce rule BG 56 (case 0x3c49b6) = PT 62 (case 0x441049) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: initNameMap BG 0x3c2a20 [3c2a94 cmp qword ptr [rbx + 0x10], rbp] / PT 0x43f010 [43f084 cmp qword ptr [rbx + 0x10], rbp]; sub_3c92c0 BG 0x3c92c0 [3c9322 mov rcx, qword ptr [rbx + 0x10]] / PT 0x445ad0 [445b32 mov rcx, qword ptr [rbx + 0x10]]; UI.MENU dump (1016 items): non-null exactly for the 93 items with 'name' (+ template instances)"
+   },
+   "instanceId": {
+    "pt": "0x18",
+    "why": "uiCreateFromTemplate BG 0x3d7e36 / PT 0x456c29 mov dword [item+0x18], r15d (instance id argument); aligned item accesses: sub_3c7b10 BG 0x3c7b10 [3c7bcc cmp dword ptr [rbx + 0x18], ebp] / PT 0x4445b0 [44466c cmp dword ptr [rbx + 0x18], ebp]; sub_3c9f10 BG 0x3c9f10 [3ca1d1 mov dword ptr [rdx + 0x18], r13d] / PT 0x446600 [4468a9 mov dword ptr [rax + 0x18], r13d]; drawItem BG 0x3d1210 [3d1295 movd xmm1, dword ptr [r15 + 0x18]] / PT 0x44ea70 [44eaf1 movd xmm1, dword ptr [r13 + 0x18]]; UI.MENU dump (1016 items): 0 for parsed items"
+   },
+   "templateName": {
+    "pt": "0x20",
+    "why": "uiCreateFromTemplate BG 0x3d7e52 / PT 0x456d00 [item+0x20] = template name; aligned item accesses: saveMenus BG 0x3c30d0 [3c3147 cmp qword ptr [rbx + 0x20], 0] / PT 0x43f6a0 [43f727 cmp qword ptr [rbx + 0x20], 0]; sub_3c7b10 BG 0x3c7b10 [3c7bb0 mov rdx, qword ptr [rbx + 0x20]] / PT 0x4445b0 [444650 mov rdx, qword ptr [rbx + 0x20]]; sub_3c9f10 BG 0x3c9f10 [3ca1f1 mov qword ptr [rdx + 0x20], rax] / PT 0x446600 [4468c9 mov qword ptr [rdx + 0x20], rax]"
+   },
+   "areaSrc": {
+    "pt": "0x28",
+    "why": "yy_reduce rule BG 35 (case 0x3c46d5) = PT 40 (case 0x440d62) writes the item template (BG 0x7176b0 / PT 0x7b7e70); area rule also stores the source marker (qword +0x28, dwords +0x30/+0x34/+0x38) in both; aligned item accesses: saveMenus BG 0x3c30d0 [3c3140 mov eax, dword ptr [rbx + 0x30]] / PT 0x43f6a0 [43f720 mov eax, dword ptr [rbx + 0x30]]; sub_3c9f10 BG 0x3c9f10 [3ca238 mov qword ptr [rax + 0x28], rdx] / PT 0x446600 [446908 mov qword ptr [rax + 0x28], rdx]; drawItem BG 0x3d1210 [3d389a mov r8d, dword ptr [r15 + 0x38]] / PT 0x44ea70 [4515f4 mov r8d, dword ptr [r13 + 0x38]]; UI.MENU dump (1016 items): marker present for all parsed items"
+   },
+   "area": {
+    "pt": "0x40",
+    "why": "yy_reduce rule BG 35 (case 0x3c46d5) = PT 40 (case 0x440d62) writes the item template (BG 0x7176b0 / PT 0x7b7e70); uiCreateFromTemplate [r9+0x40..0x4c] in both; aligned item accesses: initBounding BG 0x3c2920 [3c2997 lea rdx, [rbp + 0x40]] / PT 0x43ef10 [43ef87 lea rdx, [rbp + 0x40]]; saveMenus BG 0x3c30d0 [3c316f mov r9d, dword ptr [rbx + 0x44]] / PT 0x43f6a0 [43f74f mov r9d, dword ptr [rbx + 0x44]]; sub_3c8f30 BG 0x3c8f30 [3c90c5 mov edx, dword ptr [rbx + 0x48]] / PT 0x445700 [4458b5 mov edx, dword ptr [rbx + 0x48]]; UI.MENU dump (1016 items): x/y/w/h equal the 'area' values of all 1016 items"
+   },
+   "pad": {
+    "pt": "0x50",
+    "why": "yy_reduce rule BG 36 (case 0x3c475c) = PT 41 (case 0x440dee) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: sub_3ce050 BG 0x3ce050 [3ce352 mov eax, dword ptr [rbx + 0x58]] / PT 0x44a590 [44a8af mov eax, dword ptr [rbx + 0x58]]; drawItem BG 0x3d1210 [3d1d1d mov edi, dword ptr [r15 + 0x50]] / PT 0x44ea70 [44f492 mov ecx, dword ptr [r13 + 0x50]]; UI.MENU dump (1016 items): 'pad 16 16 16 16' items read 0x10 at +0x50..+0x5c"
+   },
+   "enabled": {
+    "pt": "0x60",
+    "why": "yy_reduce rule BG 80 (case 0x3c50c7) = PT 92 (case 0x441877) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: sub_3ce050 BG 0x3ce050 [3ce325 mov ecx, dword ptr [rbx + 0x60]] / PT 0x44a590 [44a886 mov ecx, dword ptr [rbx + 0x60]]; sub_3d0a10 BG 0x3d0a10 [3d0b4a mov ecx, dword ptr [rbx + 0x60]] / PT 0x44dde0 [44df88 mov ecx, dword ptr [rdi + 0x60]]; drawItem BG 0x3d1210 [3d128e cmp dword ptr [r15 + 0x60], 0] / PT 0x44ea70 [44eaea cmp dword ptr [r13 + 0x60], 0]; UI.MENU dump (1016 items): Lua ref non-zero exactly for the 271 'enabled' items (+ spellinfo/slotinfo buttons)"
+   },
+   "ignoreEvents": {
+    "pt": "0x64",
+    "why": "yy_reduce rule BG 81 (case 0x3c5158) = PT 93 (case 0x441908) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: lastItemUnderPoint BG 0x3d5f50 [3d5fec cmp dword ptr [rbx + 0x64], 0] / PT 0x454d20 [454d7c cmp dword ptr [rbx + 0x64], 0]; UI.MENU dump (1016 items): =1 exactly for the 3 'ignoreEvents' items"
+   },
+   "ha": {
+    "pt": "0x6c",
+    "why": "yy_reduce rule BG 44 (case 0x3c487a) = PT 49 (case 0x440f13) writes the item template (BG 0x7176b0 / PT 0x7b7e70); align rule writes ha then va (BG +0x68/+0x6c, PT +0x6c/+0x70); text style rule BG 116 = PT 127 same; aligned item accesses: drawItem BG 0x3d1210 [3d1edd cmp dword ptr [r15 + 0x68], 2] / PT 0x44ea70 [44f6bd cmp dword ptr [r13 + 0x6c], 2]; UI.MENU dump (1016 items): 'align left|right|center' -> +0x6c = 0|1|2, 'top|center' -> +0x70 = 0|2"
+   },
+   "va": {
+    "pt": "0x70",
+    "why": "yy_reduce rule BG 44 (case 0x3c487a) = PT 49 (case 0x440f13) writes the item template (BG 0x7176b0 / PT 0x7b7e70); see ha; aligned item accesses: drawItem BG 0x3d1210 [3d1eb6 cmp dword ptr [r15 + 0x6c], 2] / PT 0x44ea70 [44f696 cmp dword ptr [r13 + 0x70], 2]; UI.MENU dump (1016 items): see ha"
+   },
+   "alpha": {
+    "pt": "0x78",
+    "why": "yy_reduce rule BG 46 (case 0x3c48b9) = PT 51 (case 0x440f5c) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: drawItem BG 0x3d1210 [3d12d6 mov rcx, qword ptr [r15 + 0x70]] / PT 0x44ea70 [44eb32 mov rcx, qword ptr [r13 + 0x78]]"
+   },
+   "fill": {
+    "pt": "0x80",
+    "why": "yy_reduce rule BG 138 (case 0x3c6548) = PT 150 (case 0x442df0) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: drawItem BG 0x3d1210 [3d1320 mov rcx, qword ptr [r15 + 0x78]] / PT 0x44ea70 [44eb7c mov rcx, qword ptr [r13 + 0x80]]; UI.MENU dump (1016 items): non-null exactly for the 5 'fill' items"
+   },
+   "useOverlayTint": {
+    "pt": "0x88",
+    "why": "yy_reduce rule BG 141 (case 0x3c6682) = PT 154 (case 0x442f79) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: drawItem BG 0x3d1210 [3d1b8d mov ecx, dword ptr [r15 + 0x80]] / PT 0x44ea70 [44f413 mov ecx, dword ptr [r13 + 0x88]]"
+   },
+   "overlayTint": {
+    "pt": "0x8c",
+    "why": "yy_reduce rule BG 142 (case 0x3c6722) = PT 155 (case 0x443019) writes the item template (BG 0x7176b0 / PT 0x7b7e70); rule writes 3 dwords +0x84/88/8c (BG) / +0x8c/90/94 (PT); aligned item accesses: drawItem BG 0x3d1210 [3d1bc4 movzx edx, byte ptr [r15 + 0x88]] / PT 0x44ea70 [44f43c movzx edx, byte ptr [r13 + 0x90]]"
+   },
+   "text": {
+    "pt": "0x98",
+    "why": "yy_reduce rule BG 38 (case 0x3c47b1) = PT 43 (case 0x440e4d) writes the item template (BG 0x7176b0 / PT 0x7b7e70); text_t members all +8 vs BG (see uiItem::text_t); UI.MENU dump (1016 items): text string/variant at +0x98/+0xa0 for 'text' items, font +0xa8, point +0xb0"
+   },
+   "uiTemplate": {
+    "pt": "0xe0",
+    "why": "yy_reduce rule BG 136 (case 0x3c6524) = PT 148 (case 0x442dc7) writes the item template (BG 0x7176b0 / PT 0x7b7e70); uiCreateFromTemplate BG 0x3d7d8d [rax+0xd0] / PT 0x456ba5 [rax+0xe0] (template item to copy); UI.MENU dump (1016 items): non-null only for the 2 'template' items (type 0xb)"
+   },
+   "bam": {
+    "pt": "0xe8",
+    "why": "yy_reduce rule BG 55 (case 0x3c49a2) = PT 61 (case 0x441030) writes the item template (BG 0x7176b0 / PT 0x7b7e70); bam_t starts with resref; UI.MENU dump (1016 items): resref non-null for every 'bam' item"
+   },
+   "bmp": {
+    "pt": "0x110",
+    "why": "yy_reduce rule BG 127 (case 0x3c6375) = PT 139 (case 0x442bf2) writes the item template (BG 0x7176b0 / PT 0x7b7e70); bmp_t starts with resname; UI.MENU dump (1016 items): resname set for the 'bitmap' item"
+   },
+   "list": {
+    "pt": "0x130",
+    "why": "yy_reduce list-item rule BG 25 (case 0x3c4582) = PT 30 (case 0x440c7c) fills the new item directly; list item rule: lea rdx,[rbx+0x130] (table) and [rbx+0x150] = columns in both; UI.MENU dump (1016 items): table ref non-zero exactly for the 31 'list' items"
+   },
+   "mosaic": {
+    "pt": "0x210",
+    "why": "yy_reduce rule BG 83 (case 0x3c51a4) = PT 95 (case 0x441962) writes the item template (BG 0x7176b0 / PT 0x7b7e70); mosaic_t starts with resref (PT +0x210); UI.MENU dump (1016 items): non-null exactly for the 146 'mosaic' items"
+   },
+   "map": {
+    "pt": "0x2a0",
+    "why": "yy_reduce rule BG 130 (case 0x3c64ae) = PT 142 (case 0x442d39) writes the item template (BG 0x7176b0 / PT 0x7b7e70); map rules write 1/2 (BG +0x298, PT +0x2a0); UI.MENU dump (1016 items): =2 for the 'worldmap' item"
+   },
+   "progressBar": {
+    "pt": "0x2a8",
+    "why": "yy_reduce rule BG 122 (case 0x3c62f6) = PT 134 (case 0x442b90) writes the item template (BG 0x7176b0 / PT 0x7b7e70); progressBar_t starts with percent (PT +0x2a8)"
+   },
+   "slot": {
+    "pt": "0x2c0",
+    "why": "yy_reduce rule BG 111 (case 0x3c54be) = PT 122 (case 0x441cbb) writes the item template (BG 0x7176b0 / PT 0x7b7e70); slot_t starts with icon (PT +0x2c0); UI.MENU dump (1016 items): icon set for 'icon' / slotinfo items"
+   },
+   "actionDbl": {
+    "pt": "0x2fc",
+    "why": "yy_reduce rule BG 70 (case 0x3c4b63) = PT 82 (case 0x4412f0) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero for all 19 'actionDbl' items"
+   },
+   "actionAlt": {
+    "pt": "0x300",
+    "why": "yy_reduce rule BG 71 (case 0x3c4bd1) = PT 83 (case 0x44135e) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero for all 68 'actionAlt' items"
+   },
+   "actionDrag": {
+    "pt": "0x304",
+    "why": "yy_reduce rule BG 72 (case 0x3c4c3f) = PT 84 (case 0x4413ef) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: sub_3cef60 BG 0x3cef60 [3cf1f1 mov ecx, dword ptr [rbx + 0x2fc]] / PT 0x44bf80 [44c2d3 mov ecx, dword ptr [rdi + 0x304]]; UI.MENU dump (1016 items): non-zero for all 13 'actiondrag' items"
+   },
+   "actionEnter": {
+    "pt": "0x308",
+    "why": "yy_reduce rule BG 73 (case 0x3c4cd0) = PT 85 (case 0x441480) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero for the 68 'actionEnter' items; Lua ref order (CHARGEN 8-10: actionenter < action < actionExit refs) puts actionEnter at +0x308, actionExit at +0x30c"
+   },
+   "actionExit": {
+    "pt": "0x30c",
+    "why": "yy_reduce rule BG 74 (case 0x3c4d61) = PT 86 (case 0x441511) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero for all 73 'actionExit' items (ref order, see actionEnter)"
+   },
+   "actionUpdate": {
+    "pt": "0x310",
+    "why": "yy_reduce rule BG 75 (case 0x3c4df2) = PT 87 (case 0x4415a2) writes the item template (BG 0x7176b0 / PT 0x7b7e70); list/scrollbar capture handler BG 0x3d0420 [rbx+0x308] / PT 0x44d360 [rdi+0x310] passed to uiExecLua (BG 0x3c34d0 / PT 0x43fab0), same function also tests scrollbar.dragging (BG +0x1a0 / PT +0x1c8)"
+   },
+   "actionSimpleDrag": {
+    "pt": "0x314",
+    "why": "yy_reduce rule BG 76 (case 0x3c4e83) = PT 88 (case 0x441633) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero exactly for the 12 'actionSimpleDrag' items"
+   },
+   "actionSimpleDrop": {
+    "pt": "0x318",
+    "why": "yy_reduce rule BG 77 (case 0x3c4f14) = PT 89 (case 0x4416c4) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: sub_3d0a10 BG 0x3d0a10 [3d0b23 cmp dword ptr [rbx + 0x310], 0] / PT 0x44dde0 [44df13 cmp dword ptr [rdi + 0x318], 0]; UI.MENU dump (1016 items): non-zero exactly for the 12 'actionSimpleDrop' items"
+   },
+   "actionHold": {
+    "pt": "0x31c",
+    "why": "yy_reduce rule BG 78 (case 0x3c4fa5) = PT 90 (case 0x441755) writes the item template (BG 0x7176b0 / PT 0x7b7e70); UI.MENU dump (1016 items): non-zero exactly for the 22 'actionHold' items"
+   },
+   "framesHeld": {
+    "pt": "0x324",
+    "why": "BG 0x3ceb50 / PT 0x44bad0 read-increment-write [item+0x31c]/[item+0x324]; startItemCapture BG 0x3d6f83 / PT 0x455c2d reset it"
+   },
+   "glow": {
+    "pt": "0x380",
+    "why": "yy_reduce rule BG 67 (case 0x3c4aaa) = PT 79 (case 0x44122d) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: drawItem BG 0x3d1210 [3d31b7 mov rcx, qword ptr [r15 + 0x340]] / PT 0x44ea70 [450c4e mov rcx, qword ptr [r13 + 0x380]]; UI.MENU dump (1016 items): non-null exactly for the 25 'glow' items"
+   },
+   "pulse": {
+    "pt": "0x388",
+    "why": "yy_reduce rule BG 68 (case 0x3c4abe) = PT 80 (case 0x441246) writes the item template (BG 0x7176b0 / PT 0x7b7e70); aligned item accesses: drawItem BG 0x3d1210 [3d31c7 mov rcx, qword ptr [r15 + 0x348]] / PT 0x44ea70 [450c5e mov rcx, qword ptr [r13 + 0x388]]; UI.MENU dump (1016 items): non-null for the 8 'pulse' items"
+   },
+   "next": {
+    "pt": "0x3a8",
+    "why": "every menu item walk (initBounding, initNameMap, retranslateMenus, saveMenus, uiCreateFromTemplate append...): BG [item+0x350] / PT [item+0x3a8]; aligned item accesses: initBounding BG 0x3c2920 [3c29af mov rbp, qword ptr [rbp + 0x350]] / PT 0x43ef10 [43ef9f mov rbp, qword ptr [rbp + 0x3a8]]; initNameMap BG 0x3c2a20 [3c2afd mov rbx, qword ptr [rbx + 0x350]] / PT 0x43f010 [43f0ed mov rbx, qword ptr [rbx + 0x3a8]]; retranslateMenus BG 0x3c2d70 [3c2dd0 mov rbx, qword ptr [rbx + 0x350]] / PT 0x43f360 [43f3c0 mov rbx, qword ptr [rbx + 0x3a8]]; UI.MENU dump (1016 items): next pointer = address of the following dumped item"
    }
   },
   "CProjectileTravelDoor": {},
@@ -2725,6 +2877,10 @@
   "uiMenu": {
    "pt": "0x98",
    "why": "menu parser yy_reduce BG 0x3c40c0 / PT 0x4406a0 fills the uiMenu template (BG 0x717640 / PT 0x7b7dd0, memset 0x70 / 0x98) then copies it to menus[n] (imul 0x70 / 0x98; menus memset 0x7000 / 0x9800 = 256 menus): aligned template writes give 0..0x40 unchanged, BG 0x48..0x6c -> PT 0x50..0x74 (+8), PT-only writes at 0x48, 0x78, 0x80, 0x88, 0x90"
+  },
+  "uiItem": {
+   "pt": "0x3b0",
+   "why": "saveItem BG 0x3c2e00 / PT 0x43f3f0: p_malloc(0x358) / p_malloc(0x3b0), template copy 6x0x80+0x58 / 7x0x80+0x30, template memsets end at 0x358 / 0x3b0; uiCreateFromTemplate copies 0x3b0 bytes; UI.MENU dump: next at +0x3a8"
   }
  },
  "same_as_bg": {

@@ -184,6 +184,9 @@ new = hdr_rx.sub(rewrite, txt)
 # Torment virtual slot order (vtsolve.py -> vtmap.json)
 import vtheader
 new, vrep = vtheader.rewrite(new)
+# Torment uiItem with its nested member structs (uiitem_header.py, manual_fields_uiitem.json)
+import uiitem_header
+new = uiitem_header.rewrite(new, txt)
 print('vtables proven', len(vrep['proven']), 'unproven', len(vrep['unproven']), 'moved', len(vrep['moved']))
 open(os.path.join(OUTD, 'Torment-v3.2.2.0.h'), 'w', encoding='utf-8', newline='\n').write(new)
 pk = open(PACK).read()  # natural alignment: explicit pads already sit on aligned PT offsets
