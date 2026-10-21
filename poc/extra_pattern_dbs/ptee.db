@@ -51,6 +51,9 @@ Pattern=7F14498B8DB0
 [Hook-drawItem()-FixForcedScrollbarDivideByZero2]
 Pattern=C745281200000041
 
+[Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()]
+Pattern=E8DDCFFEFF41
+
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F
 

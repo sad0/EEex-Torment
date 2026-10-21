@@ -42,6 +42,8 @@ LABELS = {
     'Hook-drawItem()-AfterEnabledCheck': 0x44eb2b,                  # after the item "enabled" Lua check
     'Hook-drawItem()-CheckScrollbarContentHeight': 0x450db3,        # Torment: jg (short), BG: jle (near): inverted
     'Hook-drawItem()-FixForcedScrollbarDivideByZero2': 0x451199,    # 11 bytes: mov [rbp+0x28], 0x12; sub eax, [r13+0x4c]
+    # Torment-only CDerivedStats::Reload call (sprite in r15) in the ExecuteAction helper PT 0x173c00 (EEex_Stats_Patch.lua)
+    'Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()': 0x17421e,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }
