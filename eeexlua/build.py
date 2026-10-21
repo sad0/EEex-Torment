@@ -42,11 +42,12 @@ def apply(name, s, reps):
 
 def build():
     patches = load_patches()
-    if os.path.isdir(OUT):
-        shutil.rmtree(OUT)
+    # empty the output folders (not removed: a shell may have one as its current directory)
+    for f in glob.glob(os.path.join(OUT, '*', '*')):
+        os.remove(f)
     done = set()
     for sub in ('EEex_scripts', 'override'):
-        os.makedirs(os.path.join(OUT, sub))
+        os.makedirs(os.path.join(OUT, sub), exist_ok=True)
         for src in glob.glob(os.path.join(UP, sub, '*')):
             name = os.path.basename(src)
             dst = os.path.join(OUT, sub, name)
