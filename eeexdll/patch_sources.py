@@ -267,6 +267,278 @@ PATCHES = {
 	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement
 }'''),
     ],
+    'uncap_fps.cpp': [
+        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "ptee_engine.hpp"\n'),
+        # --- CChitin::WinMain / InitInstance (PT 0x4a65c0): SDL hint, frame rate 40 in [10,90], no frame-time log
+        ('''	p_SDL_Log("%s %s\\n", CChitin::p_m_sGameName->m_pchData, sVersion->m_pchData);
+''', '''	p_SDL_Log("%s %s\\n", CChitin::p_m_sGameName->m_pchData, sVersion->m_pchData);
+
+	// EEex-PTEE: Torment disables Alt+F4 window closing by SDL (handled by the engine)
+	if (PTEE::p_SDL_SetHint != nullptr)
+	{
+		PTEE::p_SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1");
+	}
+'''),
+        ('''	*CChitin::p_TIMER_UPDATES_PER_SECOND = p_BGGetPrivateProfileInt("Program Options", "Maximum Frame Rate", 30);
+
+	if (*CChitin::p_TIMER_UPDATES_PER_SECOND > 90)
+	{
+		*CChitin::p_TIMER_UPDATES_PER_SECOND = 30;
+	}
+''', '''	// EEex-PTEE: Torment's default is 40 and any value outside [10, 90] falls back to it
+	const int nMaxFrameRate = p_BGGetPrivateProfileInt("Program Options", "Maximum Frame Rate", 40);
+	*CChitin::p_TIMER_UPDATES_PER_SECOND = static_cast<uint>(nMaxFrameRate - 10) > 80 ? 40 : nMaxFrameRate;
+'''),
+        ('@cut	const int nLogFrameTimes = p_BGGetPrivateProfileInt("Graphics", "Log Frame Times", 0);', '	if (nLogFrameTimes == 2)'),
+        ('''	if (nLogFrameTimes == 2)
+	{
+		pThis->m_bLogFrames = 1;
+	}
+
+''', '''	// EEex-PTEE: Torment has no frame-time log ("Log Frame Times")
+
+'''),
+        # --- CChitin::Update (PT 0x4a6350): the Lua stack is emptied after the leak dump; no frame-time log
+        ('''	const TimeType nStartTime = getTime();
+
+	// Patch: Run "full ticks" at 30tps like normal''', '''	// EEex-PTEE: Torment empties the leaked values after printing them
+	if (const int nTop = lua_gettop(L); nTop > 0)
+	{
+		lua_settop(L, -1 - nTop);
+	}
+
+	const TimeType nStartTime = getTime();
+
+	// Patch: Run "full ticks" at 30tps like normal'''),
+        ('@cut		/////////////////////\n		// Log frame times //', '	}\n\n	// NOT ELSE IF'),
+        # --- CInfinity::AdjustViewPosition (PT 0x302090)
+        ('''	const int nSpeedBase = static_cast<int>(
+		static_cast<float>(*CVidMode::p_SCREENHEIGHT)         // Internal resolution height
+		/ pChitin->cVideo.pCurrentMode->nHeight               // Window height
+		/ (*CInfinity::p_MAXZOOM_OUT + 1.0f - fEffectiveZoom) // Zoom factor
+		* pGame->GetScrollSpeed());                           // Scroll speed
+''', '''	// EEex-PTEE: Torment's speed has no resolution factor; m_nScrollDelay (keyboard scroll ramp-up)
+	// scales the option speed by (15 - delay) / 15
+	uint nScrollSpeed = pGame->GetScrollSpeed();
+	if (pInfinity->m_nScrollDelay != 0)
+	{
+		nScrollSpeed = nScrollSpeed * (15 - pInfinity->m_nScrollDelay) / 15;
+	}
+	float fSpeedBase = *CInfinity::p_MAXZOOM_OUT / (*CInfinity::p_MAXZOOM_OUT + 1.0f - fEffectiveZoom);
+	fSpeedBase /= *CInfinity::p_MAXZOOM_OUT;
+	const int nSpeedBase = static_cast<int>(fSpeedBase * static_cast<int>(nScrollSpeed));
+'''),
+        ('''	// Patch: Allow theoretical movement
+	// |
+	if (pExOverrides == nullptr)
+	{
+		// Stop auto scrolling
+		pInfinity->m_ptScrollDest.x = -1;
+		pInfinity->m_ptScrollDest.y = -1;
+	}
+
+	CBaldurChitin *const pChitin = *p_g_pBaldurChitin;''', '''	CBaldurChitin *const pChitin = *p_g_pBaldurChitin;
+
+	// EEex-PTEE: in Torment mode the view does not move while it is locked on a creature
+	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST && pChitin->m_pEngineWorld->m_scrollLockId != -1)
+	{
+		return;
+	}
+
+	// Patch: Allow theoretical movement
+	// |
+	if (pExOverrides == nullptr)
+	{
+		// Stop auto scrolling
+		pInfinity->m_ptScrollDest.x = -1;
+		pInfinity->m_ptScrollDest.y = -1;
+	}
+'''),
+        # --- CVidTile::RenderTexture (PT 0x4aed20): no grey tone flag
+        ('''	DrawTone drawTone = (dwFlags & 0x80000) != 0 ? DrawTone::DRAW_TONE_GREY : DrawTone::DRAW_TONE_NORMAL;''',
+         '''	// EEex-PTEE: Torment's tile renderer ignores the grey flag (dwFlags 0x80000)
+	DrawTone drawTone = DrawTone::DRAW_TONE_NORMAL;'''),
+        # --- ZoomToMap / ResetZoom: Torment's "Disable Area Map Zoom" option (inverted, other field)
+        ('@all:2 pGame->m_options.m_bAreaMapZoom == 0', 'PTEE::IsAreaMapZoomDisabled(pGame->m_options)'),
+        # --- CInfinity::FitViewPosition (PT 0x304c20): Torment margins, scroll lock, centered-axis scroll state
+        ('@body static void fitViewPosition(CInfinity* pInfinity, int* pX, int* pY, CRect* pViewPort,',
+         open(os.path.join(HERE, 'source', 'ptee_fitviewposition.inc'), encoding='utf-8').read()),
+        ('''	bool bWorldQuicklootOpen = false;
+''', '''	bool bWorldQuicklootOpen = false;
+	bool bWorldActionbarLeftOpen = false; // EEex-PTEE: Torment-mode actionbar (WORLD_ACTIONBAR_LEFT[_TABLET])
+'''),
+        ('''	beforeWorldScreenDeactivatedMenuStates.bWorldQuicklootOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{ "WORLD_QUICKLOOT" });
+''', '''	beforeWorldScreenDeactivatedMenuStates.bWorldQuicklootOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{ "WORLD_QUICKLOOT" });
+	beforeWorldScreenDeactivatedMenuStates.bWorldActionbarLeftOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{
+		PTEE::UseTouchActionbar((*p_g_pBaldurChitin)->m_pObjectGame->m_options) ? "WORLD_ACTIONBAR_LEFT_TABLET" : "WORLD_ACTIONBAR_LEFT" });
+'''),
+        # --- zoomOutToLocalMap (CScreenWorld::ZoomToMap, PT 0x3686e0): in Torment mode the map is fitted into
+        #     the AREA_MAP_TARGET screen rect (Infinity_GetAreaScreen) instead of above AREA_MAP_BACKGROUND
+        ('''	const float fViewPortWidthPercentOfArea = static_cast<short>(pInfinity->nAreaX) / static_cast<float>(nViewPortWidth);
+	const float fViewPortHeightPercentOfArea = static_cast<short>(pInfinity->nAreaY) / (nViewPortHeight - nAreaMapBackgroundHeight * pInfinity->m_fZoom);
+''', '''	// EEex-PTEE: Torment mode fits the area into AREA_MAP_TARGET's screen rect (x, y, w, h)
+	const bool bTormentMapTarget = static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST;
+	int nMapTargetX = 0;
+	int nMapTargetY = 0;
+	float fMapTargetW = 0.0f;
+	float fMapTargetH = 0.0f;
+
+	if (bTormentMapTarget)
+	{
+		lua_getglobal(L, "Infinity_GetAreaScreen");
+		lua_pushstring(L, "AREA_MAP_TARGET");
+		lua_callk(L, 1, 4, 0, nullptr);
+		fMapTargetH = static_cast<float>(lua_tonumberx(L, -1, nullptr));
+		fMapTargetW = static_cast<float>(lua_tonumberx(L, -2, nullptr));
+		nMapTargetY = static_cast<int>(lua_tonumberx(L, -3, nullptr));
+		nMapTargetX = static_cast<int>(lua_tonumberx(L, -4, nullptr));
+		lua_settop(L, -5);
+	}
+
+	const float fViewPortWidthPercentOfArea = bTormentMapTarget
+		? static_cast<short>(pInfinity->nAreaX) / (fMapTargetW * pInfinity->m_fZoom)
+		: static_cast<short>(pInfinity->nAreaX) / static_cast<float>(nViewPortWidth);
+	const float fViewPortHeightPercentOfArea = bTormentMapTarget
+		? static_cast<short>(pInfinity->nAreaY) / (fMapTargetH * pInfinity->m_fZoom)
+		: static_cast<short>(pInfinity->nAreaY) / (nViewPortHeight - nAreaMapBackgroundHeight * pInfinity->m_fZoom);
+'''),
+        ('''	const CPoint ptTarget {
+		static_cast<short>(pInfinity->nAreaX) / 2,
+		static_cast<short>(pInfinity->nAreaY) / 2 - static_cast<int>(nAreaMapBackgroundHeight * 0.5f * fViewPortPercentOfArea * pInfinity->m_fZoom)
+	};
+''', '''	// EEex-PTEE: Torment mode centres the area on AREA_MAP_TARGET (PT 0x3689da..0x368a5a)
+	const CPoint ptTarget = bTormentMapTarget
+		? CPoint {
+			static_cast<int>((static_cast<short>(pInfinity->nAreaX) / 2) - fMapTargetW * 0.5f * fViewPortPercentOfArea)
+				+ static_cast<int>((*CVidMode::p_SCREENWIDTH / 2 - nMapTargetX) * fViewPortPercentOfArea),
+			static_cast<int>((static_cast<short>(pInfinity->nAreaY) / 2) - fMapTargetH * 0.5f * fViewPortPercentOfArea)
+				+ static_cast<int>((*CVidMode::p_SCREENHEIGHT / 2 - nMapTargetY) * fViewPortPercentOfArea) }
+		: CPoint {
+			static_cast<short>(pInfinity->nAreaX) / 2,
+			static_cast<short>(pInfinity->nAreaY) / 2 - static_cast<int>(nAreaMapBackgroundHeight * 0.5f * fViewPortPercentOfArea * pInfinity->m_fZoom) };
+'''),
+        # --- CScreenWorld::EndDialog (PT 0x357830): zoom lock re-applied; UI reset outside the store screen only
+        ('''	////////////////
+	// End dialog //
+	////////////////
+''', '''	// EEex-PTEE: with "Zoom Lock" Torment disables zooming again once the dialog view is restored (PT 0x357c07)
+	if (pGame->m_options.m_bZoomLock && PTEE::p_CInfinity_SetZoomEnabled != nullptr)
+	{
+		PTEE::p_CInfinity_SetZoomEnabled(&pGame->m_gameAreas[pGame->m_visibleArea]->m_cInfinity, 0);
+	}
+
+	////////////////
+	// End dialog //
+	////////////////
+'''),
+        ('''	if
+	(
+		p_uiIsMenuOnStack(EngineVal<CString, false>{ "WORLD_DIALOG" })
+		&&
+		(
+			pChitin->pActiveEngine != pChitin->m_pEngineCreateChar
+			||
+			pChitin->m_pEngineCreateChar->virtual_GetEngineState() != 6
+		)
+	)
+	{
+		p_uiPop("WORLD_DIALOG");
+		p_uiPush("WORLD_ACTIONBAR");
+
+		if (p_uiIsMenuOnStack(EngineVal<CString, false>{ "JOURNAL" }))
+		{
+			p_uiPop("JOURNAL");
+			p_uiPush("JOURNAL");
+		}
+	}
+''', '''	// EEex-PTEE: Torment swaps the dialog panel for the actionbar unless the store screen is active
+	// (no WORLD_DIALOG / JOURNAL checks, PT 0x357c96)
+	if (pChitin->pActiveEngine != pChitin->m_pEngineStore)
+	{
+		p_uiPop("WORLD_DIALOG");
+		p_uiPush("WORLD_ACTIONBAR");
+	}
+'''),
+        # --- uiDrawMenuStack (PT 0x456f60): tooltip switched off below the delay; menus drawn in Torment's UI rect
+        ('''	if
+	(
+		(!pChitin->m_bIsTouchUI || *p_fingerDown)
+		&&
+		nTooltipDelay != 99 && nCurTime >= nTooltipEnableTime
+	)
+	{
+		p_tooltip->on = true;
+	}
+''', '''	// EEex-PTEE: Torment also switches the tooltip off while the delay has not elapsed (or tooltips are off)
+	if (nTooltipDelay == 99 || nCurTime < nTooltipEnableTime)
+	{
+		p_tooltip->on = false;
+	}
+	else if (!pChitin->m_bIsTouchUI || *p_fingerDown)
+	{
+		p_tooltip->on = true;
+	}
+'''),
+        ('''	const SDL_Rect rWindow { 0, 0, *CVidMode::p_SCREENWIDTH, *CVidMode::p_SCREENHEIGHT };
+''', '''	// EEex-PTEE: Torment draws the menus inside its UI rect (screen inset by CChitin's UI edge fraction)
+	SDL_Rect rWindow { 0, 0, *CVidMode::p_SCREENWIDTH, *CVidMode::p_SCREENHEIGHT };
+	if (PTEE::p_CChitin_GetUIRect != nullptr && PTEE::p_g_pChitin != nullptr)
+	{
+		PTEE::p_CChitin_GetUIRect(*PTEE::p_g_pChitin, &rWindow);
+	}
+'''),
+        # --- middle-mouse drag (CScreenWorld::OnEvent PT 0x35ba23): Torment converts the motion deltas from
+        #     window to internal screen pixels first
+        ('''	if (EEex::UncapFPS_RemoveMiddleMouseScrollMultiplier)
+	{
+		CPoint exactWorldCoordinateSpacePoint;
+		cursorToExactWorldCoordinateSpace(pInfinity, pEvent->motion.xrel, pEvent->motion.yrel, &exactWorldCoordinateSpacePoint);
+''', '''	// EEex-PTEE: motion deltas in internal screen pixels, as Torment computes them
+	CPoint motion { pEvent->motion.xrel, pEvent->motion.yrel };
+	if (PTEE::p_CVidMode_WindowToScreen != nullptr)
+	{
+		CVidMode *const pVidMode = pChitin->cVideo.pCurrentMode;
+		PTEE::p_CVidMode_WindowToScreen(pVidMode, &motion, pVidMode->m_nScreenScrollX + pEvent->motion.xrel, pVidMode->m_nScreenScrollY + pEvent->motion.yrel);
+	}
+
+	if (EEex::UncapFPS_RemoveMiddleMouseScrollMultiplier)
+	{
+		CPoint exactWorldCoordinateSpacePoint;
+		cursorToExactWorldCoordinateSpace(pInfinity, motion.x, motion.y, &exactWorldCoordinateSpacePoint);
+'''),
+        ('''		pInfinity->m_ptCurrentPosExact.x -= static_cast<int>(pEvent->motion.xrel * 10000 * pInfinity->m_fZoom);
+		pInfinity->m_ptCurrentPosExact.y -= static_cast<int>(pEvent->motion.yrel * 10000 * pInfinity->m_fZoom);
+''', '''		pInfinity->m_ptCurrentPosExact.x -= static_cast<int>(motion.x * 10000 * pInfinity->m_fZoom);
+		pInfinity->m_ptCurrentPosExact.y -= static_cast<int>(motion.y * 10000 * pInfinity->m_fZoom);
+'''),
+        # --- Torment's CInfinity::SetZoom(float, bool bForce): EEex's calls are the vanilla non-forced ones
+        ('@all:1 pInfinity->SetZoom(pScreenWorld->m_fTargetZoom);', 'pInfinity->SetZoom(pScreenWorld->m_fTargetZoom, false);'),
+        ('@all:1 pInfinity->SetZoom(pScreenWorld->m_fOriginalZoom);', 'pInfinity->SetZoom(pScreenWorld->m_fOriginalZoom, false);'),
+        ('@all:1 pInfinity->SetZoom(fNewZoom);', 'pInfinity->SetZoom(fNewZoom, false);'),
+        # --- CInfinity::SetScrollDest (PT 0x309450): no clamping while a spell cinematic drives the camera
+        ('''	int nFitX = this->m_ptScrollDest.x;
+	int nFitY = this->m_ptScrollDest.y;
+	fitViewPosition(this, &nFitX, &nFitY, &pInfinity->rViewPort, nullptr, true);''', '''	// EEex-PTEE: Torment's spell cinematics move the camera freely (CInfinity+0x45c)
+	if (PTEE::IsCinematicCamera(*this))
+	{
+		return;
+	}
+
+	int nFitX = this->m_ptScrollDest.x;
+	int nFitY = this->m_ptScrollDest.y;
+	fitViewPosition(this, &nFitX, &nFitY, &pInfinity->rViewPort, nullptr, true);'''),
+        # --- CInfinity::Scroll (PT 0x3084d0): no m_nScrollAttempts failsafe (field absent)
+        ('''	// Vanilla bug: This failsafe can't be triggered due to `m_nScrollAttempts` being immediately reset
+	if (nOldX == this->nNewX && nOldY == this->nNewY && this->m_nScrollAttempts++ == 10)
+	{
+		this->m_ptScrollDest.x = -1;
+		this->m_ptScrollDest.y = -1;
+	}
+
+	this->m_nScrollAttempts = 0;
+''', '''	// EEex-PTEE: Torment has no scroll-attempts failsafe (CInfinity::m_nScrollAttempts does not exist)
+'''),
+    ],
     'visibility_map.cpp': [
         ('#include "EEex.h"\n', '#include "EEex.h"\n#include "ptee_engine.hpp"\n'),
         # Torment's sprite update spreading mask is 7 (BG 1): vanilla CheckIfVisible keeps a sprite seen for
@@ -279,6 +551,14 @@ os.makedirs(OUT, exist_ok=True)
 for name, reps in PATCHES.items():
     s = open(os.path.join(SRC, name), encoding='utf-8-sig').read()
     for old, new in reps:
+        if old.startswith('@cut'):
+            # remove the text from this start marker (inclusive) to the end marker `new` (exclusive)
+            start = old[len('@cut'):]
+            if s.count(start) != 1 or s.count(new) < 1:
+                raise SystemExit(f'{name}: cut markers not found: {start!r} .. {new!r}')
+            i = s.index(start); j = s.index(new, i)
+            s = s[:i] + s[j:]
+            continue
         if old.startswith('@all:'):
             # replace every occurrence; the expected count guards against upstream changes
             cnt, old = old[len('@all:'):].split(' ', 1)

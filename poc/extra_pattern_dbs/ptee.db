@@ -26,6 +26,18 @@ Pattern=405556574881ECA0000000488B0546
 [PTEE-CGameSprite::HasFistOfIron]
 Pattern=40534883EC20488BD9BA7E
 
+[PTEE-SDL_SetHint]
+Pattern=41B801000000E905
+
+[PTEE-CInfinity::SetZoomEnabled]
+Pattern=48895C2408574883EC208BFA488BD9399144
+
+[PTEE-CChitin::GetUIRect]
+Pattern=0FB70585E027
+
+[PTEE-CVidMode::WindowToScreen]
+Pattern=442B818C0100
+
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F
 
@@ -34,4 +46,8 @@ Pattern=84DB0F841704
 
 [PTEE-g_nSpriteUpdateMask]
 Pattern=0FB605FCE426
+Operations=ADD 3, PUSH, READ DWORD, ADD, ADD 4
+
+[PTEE-g_pChitin]
+Pattern=488B0DC1522D
 Operations=ADD 3, PUSH, READ DWORD, ADD, ADD 4

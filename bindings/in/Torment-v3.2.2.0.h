@@ -48691,7 +48691,10 @@ struct __cppobj CGameArea
 	int m_bTravelSquare;
 	int m_iPickedOnDown;
 	int m_iPicked;
-	nobinding unsigned __int64 _ptpad_248[2];
+	nobinding unsigned int _ptpad_248[1];
+	int m_iPickedTarget;
+	int m_bPicked;
+	nobinding unsigned int _ptpad_254[1];
 	int m_nToolTip;
 	CPoint m_mousePos;
 	nobinding unsigned int _ptpad_264[1];
@@ -48738,7 +48741,9 @@ struct __cppobj CGameArea
 	CTypedPtrList<CPtrList,__POSITION *> m_lVertSortFlightRemove;
 	CTypedPtrList<CPtrList,__POSITION *> m_lVertSortUnderRemove;
 	CTypedPtrList<CPtrList,CTiledObject *> m_lTiledObjects;
-	nobinding unsigned __int64 _ptpad_ee8[15];
+	nobinding unsigned __int64 _ptpad_ee8[7];
+	CTypedPtrList<CPtrList,long *> m_lGameTextObjects;
+	nobinding unsigned __int64 _ptpad_f58[1];
 	CTypedPtrList<CPtrList,long *> m_lVertSortTransition;
 	CPoint m_ptOldViewPos;
 	CVariableHash m_variables;

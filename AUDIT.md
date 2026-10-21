@@ -88,9 +88,38 @@ engine's own PT functions run.
   m_disabledSpellTypes = 0xb68 and **no m_disableSpells in Torment** (op145 has no "all spells" case):
   EEex's spell-disable change detection compares the three type flags only.
 
-## Uncap FPS: Torment differences found so far (not ported yet)
+## Uncap FPS (uncap_fps.cpp, ported; in-game test: smooth, edge/drag scroll, zoom, local map, dialog OK)
+Torment differences carried into EEex's reimplementations (eeexdll/patch_sources.py, ptee_engine.hpp):
 - WinMain: SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1"); Maximum Frame Rate default 40, valid
-  10..90; no frame-time log. Update: Lua stack cleared after the leak dump.
-- CVidTile::RenderTexture: no grey tone from dwFlags 0x80000. CInfinity::Scroll: no m_nScrollAttempts.
-- FitViewPosition / AdjustViewPosition / ZoomToMap: Torment UI paths (WORLD_ACTIONBAR_LEFT(_TABLET),
-  AREA_MAP_TARGET, CScreenWorld+0xa58 / +0xc58 states) need a rewrite from Torment's code.
+  10..90 (else 40); no frame-time log. Update: Lua stack emptied after the leak dump.
+- AdjustViewPosition: speed = scroll speed x (15 - m_nScrollDelay) / 15 / (MAXZOOM_OUT + 1 - zoom), no
+  resolution factor; no movement in Torment mode while CScreenWorld::m_scrollLockId != -1.
+- FitViewPosition: rewritten from PT 0x304c20 (black space also while auto-zooming and then no
+  sidebar/actionbar margins; Torment-mode bottom margin = WORLD_ACTIONBAR_LEFT[_TABLET] ("Use Touch
+  Actionbar", CGameOptions+0x280); scroll-lock keeps the cursor; centered axes drop their scroll direction).
+- ZoomToMap: Torment mode fits into AREA_MAP_TARGET (Infinity_GetAreaScreen); "Disable Area Map Zoom"
+  (CGameOptions+0x274, inverted) replaces m_bAreaMapZoom. CInfinity::SetZoom has a third argument
+  (bForce, "Zoom Lock"): header signature changed, EEex passes false like vanilla.
+- EndDialog: "Zoom Lock" re-disables zooming; UI reset (pop WORLD_DIALOG, push WORLD_ACTIONBAR) unless the
+  store screen is active, without the WORLD_DIALOG / JOURNAL checks.
+- uiDrawMenuStack: menus drawn in Torment's UI rect (PT 0x4a3180, CChitin+0x1f4 inset); tooltip switched
+  off below the delay. Middle-mouse drag: deltas converted window -> screen first (CVidMode 0x4a7fe0).
+- SetScrollDest: no clamping while a spell cinematic drives the camera (CInfinity+0x45c).
+- RenderTexture: no grey tone flag. Scroll: no m_nScrollAttempts (absent).
+- Identical: SynchronousUpdate, RenderZoomed, StartScroll, SetScreenShake, TransitionMenu, DrawReadPixels,
+  CenterViewPort, ResetZoom (but the option), screen shake blocks (moved by Torment into PT 0x3078c0 /
+  0x307a50 helpers, same code), transition fade, edge-scroll and deactivate hook sites.
+- Lua patch (phase 5): three hook sites have another instruction layout in Torment
+  (bindings/test/make_uncap_test.py): middle-mouse `je` is short (restore 7), screen-shake post `jne` is
+  near (restore 0), OnActivation ends with a call (HookAfterCall, pArea in rdi). EEex's AI-speed option
+  default must be Torment's 40, not 30.
+
+## Pattern labels and signatures (tools/labelcheck.py, tools/argcheck.py)
+- Two Torment labels pointed at the wrong function (the upstream pattern also matched elsewhere):
+  CChitin::ProcessEvents (now 0x4a5100) and eventMenu (now 0x4525f0); 392 other labels agree with the
+  function map (173 cannot be checked that way, 1 false positive).
+- Argument registers read by every bound engine function, BG vs PT: Torment adds or drops a parameter in
+  CInfinity::SetZoom (fixed), CAIObjectType::GetShare (+r9), CGameAIBase::GetTargetShare (+rdx),
+  GetTargetShareType (+r8), CGameSprite::ReadyOffInternalList (+rdx), CProjectile::DecodeProjectile (+r8),
+  CVidFont::GetStringHeight / GetStringLength (+r9b), CAIScript::Construct(CResRef,int) (no int). None is
+  called by EEex.dll; their Lua callers are phase 5 (signatures to adopt there).

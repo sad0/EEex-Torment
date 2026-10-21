@@ -24,6 +24,15 @@ LABELS = {
     'PTEE-CGameAIBase::PartyHasItem': 0x174e00,
     'PTEE-CVariableHash::GetValue': 0x2b4b80,
     'PTEE-CGameSprite::HasFistOfIron': 0x3d0ae0,
+    # SDL 2.0.4's SDL_SetHint (called by Torment's CChitin::WinMain, not bound by EEex)
+    'PTEE-SDL_SetHint': 0x4dafe0,
+    # CInfinity::SetZoomEnabled (BG has it too but EEex does not bind it); used by Torment's EndDialog
+    'PTEE-CInfinity::SetZoomEnabled': 0x3097f0,
+    # Torment-only: UI rect = screen inset by CChitin's UI edge fraction (+0x1f4), used by uiDrawMenuStack
+    'PTEE-CChitin::GetUIRect': 0x4a3180,
+    # CVidMode window -> internal screen coordinates (BG 0x41e8d0, not bound by EEex); Torment's middle-mouse
+    # drag (CScreenWorld::OnEvent PT 0x35ba53) converts the motion deltas with it
+    'PTEE-CVidMode::WindowToScreen': 0x4a7fe0,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }
@@ -33,6 +42,8 @@ DATA = {
     # (m_id & mask) == (worldTime & mask); CheckIfVisible sets m_canBeSeen = (mask + 1) * 4.
     # Read by CGameSprite::CheckIfVisible PT 0x3be3a8 `movzx eax, byte ptr [rip + X]`.
     'PTEE-g_nSpriteUpdateMask': (0x3be3a8, 3, 7),
+    # g_pChitin (CChitin*), passed to CChitin::GetUIRect by uiDrawMenuStack PT 0x456fa8 `mov rcx, [rip + X]`
+    'PTEE-g_pChitin': (0x456fa8, 3, 7),
 }
 lines = ['; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db',
          '; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,',

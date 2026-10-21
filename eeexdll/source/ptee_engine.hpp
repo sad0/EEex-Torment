@@ -28,6 +28,22 @@ namespace PTEE {
 	extern int (__fastcall* p_CVariableHash_GetValue)(CVariableHash* pThis, CString* pName, int nDefault);
 	extern int (__fastcall* p_CGameSprite_HasFistOfIron)(CGameSprite* pThis);
 
+	// SDL_SetHint (SDL 2.0.4 inside Torment.exe): Torment's WinMain sets SDL_WINDOWS_NO_CLOSE_ON_ALT_F4.
+	extern int (__cdecl* p_SDL_SetHint)(const char* name, const char* value);
+
+	// CInfinity::SetZoomEnabled (PT 0x3097f0): Torment's CScreenWorld::EndDialog disables zooming again when
+	// the "Zoom Lock" option is on.
+	extern void (__fastcall* p_CInfinity_SetZoomEnabled)(CInfinity* pThis, int bEnabled);
+
+	// Torment's UI rect (PT 0x4a3180): {W*f, H*f, W*(1-f), H*(1-f)} with W/H = CVidMode::SCREENWIDTH/HEIGHT and
+	// f = a float of CChitin (+0x1f4); uiDrawMenuStack draws every menu inside it. g_pChitin is its argument.
+	extern SDL_Rect* (__fastcall* p_CChitin_GetUIRect)(CChitin* pThis, SDL_Rect* pRect);
+	extern CChitin** p_g_pChitin;
+
+	// CVidMode window -> internal screen coordinates (PT 0x4a7fe0): x' = SCREENWIDTH * (x - scrollX) / nWidth,
+	// y' = SCREENHEIGHT * (2 * [+0x190] - scrollY + y) / nHeight.
+	extern CPoint* (__fastcall* p_CVidMode_WindowToScreen)(CVidMode* pThis, CPoint* pOut, int x, int y);
+
 	// Torment-only activity flag of CGameSprite at +0x3910, right after m_activeImprisonment (+0x390c;
 	// m_bSelected follows at +0x3914). Set to 1 by the constructor like m_activeAI/m_activeImprisonment,
 	// cleared and restored by Torment's spell-cinematic projectiles (AIUpdate of the Abyssal Fury S077* and
@@ -43,6 +59,27 @@ namespace PTEE {
 	extern byte* p_g_nSpriteUpdateMask;
 	inline short CanBeSeenTicks() {
 		return static_cast<short>((*p_g_nSpriteUpdateMask + 1) << 2);
+	}
+
+	// Torment replaced CGameOptions::m_bAreaMapZoom by "Disable Area Map Zoom" ([Graphics], read by
+	// CBaldurChitin::LoadOptions PT 0x2e77b5 into CGameOptions+0x274): non-zero = zoom to the area map
+	// instantly (CScreenWorld::ZoomToMap / ResetZoom PT 0x3686e0 / 0x363080). m_bExpireTraps (+0x268)
+	// is the last proven field before it.
+	inline bool IsAreaMapZoomDisabled(const CGameOptions& options) {
+		return *reinterpret_cast<const int*>(reinterpret_cast<const char*>(&options.m_bExpireTraps) + 0xc) != 0;
+	}
+
+	// "Use Touch Actionbar" ([Program Options], CBaldurChitin::LoadOptions PT 0x2e7800 -> CGameOptions+0x280):
+	// Torment-mode actionbar menu WORLD_ACTIONBAR_LEFT_TABLET instead of WORLD_ACTIONBAR_LEFT (PT 0x304f6a).
+	inline bool UseTouchActionbar(const CGameOptions& options) {
+		return *reinterpret_cast<const int*>(reinterpret_cast<const char*>(&options.m_bExpireTraps) + 0x18) != 0;
+	}
+
+	// Torment-only CInfinity flag (+0x45c, after m_bZooming +0x448): set by spell-cinematic projectiles
+	// (e.g. Celestial Host, PT 0x2891d9 / 0x26c599) while they drive the camera; CInfinity::SetScrollDest
+	// (PT 0x309450) then keeps the destination unclamped.
+	inline bool IsCinematicCamera(const CInfinity& infinity) {
+		return *reinterpret_cast<const int*>(reinterpret_cast<const char*>(&infinity.m_bZooming) + 0x14) != 0;
 	}
 
 	// Torment's CChitin::ENGINE_MODE value (absent from the BG2EE EngineMode enum)

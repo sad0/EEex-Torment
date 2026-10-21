@@ -77,6 +77,14 @@
    "m_bRecentlySaved": {
     "pt": "0x524",
     "why": "autoprove: 2 unanimous votes from 2 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_bPicked": {
+    "pt": "0x250",
+    "why": "CGameArea::IsPointOverObject, ::OnActionButtonDown, ::~CGameArea and CScreenWorld::AsynchronousUpdate / ::DeleteArea / ::EndDialog / ::LeaveAreaLuaPanic: aligned [area+0x24c] / [area+0x250]"
+   },
+   "m_lGameTextObjects": {
+    "pt": "0xf20",
+    "why": "CGameArea::RenderZoomed (identical code): list [area+0xf08] -> [area+0xf20] and its head [+0xf10] -> [+0xf28]; the PT ctor builds a CObList at 0xf20"
    }
   },
   "CInfinity": {

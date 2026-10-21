@@ -19,6 +19,8 @@ local ok, err = pcall(function()
 	EEex.OnTargetExecutableInitialized()
 	-- Phase 4d: EEex's visibility map (FoW-clearing cap) reimplementation, installed like EEex_Fix_Patch.lua
 	EEex_DoFile("PTEE_VisMapTest")
+	-- Phase 4d: EEex's Uncap FPS (render loop, scrolling, zoom), installed like EEex_UncapFPS_Patch.lua
+	EEex_DoFile("PTEE_UncapTest")
 end)
 log("EEex_OpenLuaBindings(LuaBindings + EEex)", ok, err)
 if ok then

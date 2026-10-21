@@ -1088,7 +1088,7 @@ struct CInfinity
 	CPoint* ScreenToWorld(CPoint* pResult, CPoint* pScreen);
 	void SetScrollDest(CPoint* ptDest);
 	int SetViewPosition(int x, int y, byte bSetExactScale);
-	void SetZoom(float fZoom);
+	void SetZoom(float fZoom, bool bForce);
 
 	$nobinding void GetViewPosition(int* pXOut, int* pYOut);
 };

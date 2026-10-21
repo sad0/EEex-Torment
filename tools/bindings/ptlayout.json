@@ -41497,8 +41497,8 @@
 "pt": 592,
 "size": 4,
 "type": "int",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "m_nToolTip": {
 "bg": 592,
@@ -41857,8 +41857,8 @@
 "pt": 3872,
 "size": 56,
 "type": "CTypedPtrList<CPtrList,long>",
-"how": "evidence",
-"nfun": 1
+"how": "manual",
+"nfun": null
 },
 "m_lVertSortTransition": {
 "bg": 3904,

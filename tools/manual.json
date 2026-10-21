@@ -484,5 +484,17 @@
   "addr": "0x3d0e60",
   "method": "review: BG/PT context side by side",
   "conf": "high"
+ },
+ "CChitin::ProcessEvents": {
+  "addr": "0x4a5100",
+  "method": "labelcheck.py",
+  "conf": "high",
+  "note": "upstream pattern also matched PT 0x44e540 (unrelated, similarity 0.09); the real ProcessEvents is called by Torment CChitin::WinMain (PT 0x4a6733) and aligns 0.93 with BG 0x41b870"
+ },
+ "eventMenu": {
+  "addr": "0x4525f0",
+  "method": "labelcheck.py",
+  "conf": "high",
+  "note": "upstream pattern also matched PT 0x44a590 (no direct caller, similarity 0.15); Torment uiEventMenuStack (PT 0x457b40) calls 0x4525f0 exactly where BG calls eventMenu (0x3d4af0)"
  }
 }

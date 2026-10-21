@@ -397,12 +397,11 @@
  "CDerivedStats::GetAtOffset": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: function start (PT adds sub rsp,0x38 before the same 0xc9-case switch; old pattern hit +4)",
+  "method": "manual: review: function start (PT adds sub rsp,0x38 before the same 0xc9-case switch; old pattern hit +4) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x15f1f0",
-  "site": "0x15f1f0",
-  "replaced": "0x15f1f4"
+  "site": "0x15f1f0"
  },
  "CDerivedStats::GetAverageLevel": {
   "kind": "A",
@@ -416,7 +415,7 @@
  "CDerivedStats::GetCriticalValue": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "medium",
   "note": "same list walk (+0xc60 in PT, BG +0xc58) with PST additions",
   "addr": "0x1601b0",
@@ -434,7 +433,7 @@
  "CDerivedStats::GetSpellState": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x160c30",
@@ -470,12 +469,11 @@
  "CGameAIBase::ForceSpellPoint": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1819b0",
-  "site": "0x1819b0",
-  "replaced": "0x4ae2dc"
+  "site": "0x1819b0"
  },
  "CGameAIBase::GetTargetShare": {
   "kind": "A",
@@ -579,12 +577,11 @@
  "CGameArea::OnActionButtonClickGround": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x19bc10",
-  "site": "0x19bc10",
-  "replaced": "0x44bad0"
+  "site": "0x19bc10"
  },
  "CGameArea::ShowMonstersInArea": {
   "kind": "A",
@@ -679,7 +676,7 @@
  "CGameSprite::Copy": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap+vote:probable",
+  "method": "fmap+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3c1b70",
@@ -688,12 +685,11 @@
  "CGameSprite::Damage": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x405080",
-  "site": "0x405080",
-  "replaced": "0x1948b0"
+  "site": "0x405080"
  },
  "CGameSprite::DisableOffhand": {
   "kind": "A",
@@ -743,12 +739,11 @@
  "CGameSprite::GetKitMask": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: caller vote",
+  "method": "manual: review: caller vote (db pattern kept)",
   "conf": "high",
   "note": "32/32 mapped call sites call 0x413480 (PT adds an early-out on 0x7cb718==3); old pattern hit sibling 0x4133d0",
   "addr": "0x413480",
-  "site": "0x413480",
-  "replaced": "0x4133d0"
+  "site": "0x413480"
  },
  "CGameSprite::GetKnownSpellInnate": {
   "kind": "A",
@@ -780,7 +775,7 @@
  "CGameSprite::GetLauncher": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(6/6)",
+  "method": "local: callers(6/6) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3c78b0",
@@ -789,7 +784,7 @@
  "CGameSprite::GetLauncherSlot": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3c7b50",
@@ -816,12 +811,11 @@
  "CGameSprite::GetQuickButtons": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: caller vote",
+  "method": "manual: review: caller vote (db pattern kept)",
   "conf": "high",
   "note": "3/3 call sites; same body (old pattern hit 0x1c0230, an unrelated function)",
   "addr": "0x3c98d0",
-  "site": "0x3c98d0",
-  "replaced": "0x1c0230"
+  "site": "0x3c98d0"
  },
  "CGameSprite::MakeGlobal": {
   "kind": "A",
@@ -844,7 +838,7 @@
  "CGameSprite::ReadyOffInternalList": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3da700",
@@ -862,22 +856,20 @@
  "CGameSprite::ShouldAvertCriticalHit": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "medium",
   "note": "link order (between mapped neighbours) + only caller maps here; body heavily modified by PST",
   "addr": "0x42be60",
-  "site": "0x42be60",
-  "replaced": "0x4906f0"
+  "site": "0x42be60"
  },
  "CGameSprite::SpellPoint": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: function start (old pattern hit +5, inside prologue)",
+  "method": "manual: review: function start (old pattern hit +5, inside prologue) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x42f770",
-  "site": "0x42f770",
-  "replaced": "0x42f775"
+  "site": "0x42f770"
  },
  "CGameSprite::UpdateTarget": {
   "kind": "A",
@@ -891,12 +883,11 @@
  "CGameTrigger::SetDrawPoly": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x21a980",
-  "site": "0x21a980",
-  "replaced": "0x1b43f0"
+  "site": "0x21a980"
  },
  "CImmunitiesAIType::OnList": {
   "kind": "A",
@@ -946,12 +937,11 @@
  "CInfGame::GetFamiliar": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x2db6f0",
-  "site": "0x2db6f0",
-  "replaced": "0x2db6f1"
+  "site": "0x2db6f0"
  },
  "CInfGame::GetScrollSpeed": {
   "kind": "A",
@@ -1001,7 +991,7 @@
  "CInfGame::SetState": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x2f3240",
@@ -1019,7 +1009,7 @@
  "CInfinity::FitViewPosition": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x304c20",
@@ -1046,7 +1036,7 @@
  "CInfinity::SetScrollDest": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(1/1)",
+  "method": "local: callers(1/1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x309450",
@@ -1242,17 +1232,16 @@
  "CRuleTables::IsProtectedFromSpell": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: caller vote",
+  "method": "manual: review: caller vote (db pattern kept)",
   "conf": "high",
   "note": "7/7 call sites; contains the CompareStatCall hook site",
   "addr": "0x2aabf0",
-  "site": "0x2aabf0",
-  "replaced": "0x4c3a90"
+  "site": "0x2aabf0"
  },
  "CRuleTables::MapCharacterSpecializationToSchool": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "medium",
   "note": "same switch shape; PT compares 0x400 (BG 0x800): PST school bits differ",
   "addr": "0x2ab690",
@@ -1261,7 +1250,7 @@
  "CScreenWorld::TogglePauseGame": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3678a0",
@@ -1664,7 +1653,7 @@
  "CChitin::ENGINE_MODE": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(50/122)",
+  "method": "gxref(50/122) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x7cb718",
@@ -1727,7 +1716,7 @@
  "CVidMode::NUM_FADE_FRAMES": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(5/19)",
+  "method": "gxref(5/19) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x72120e",
@@ -1736,7 +1725,7 @@
  "CVidMode::SCREENHEIGHT": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(55/72)",
+  "method": "gxref(55/72) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x721210",
@@ -1745,7 +1734,7 @@
  "CVidMode::SCREENWIDTH": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(49/66)",
+  "method": "gxref(49/66) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x72120c",
@@ -1817,7 +1806,7 @@
  "d3d": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(4/9)",
+  "method": "gxref(4/9) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x7cf750",
@@ -1826,7 +1815,7 @@
  "fingerDown": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: review: SDL_FINGERDOWN/UP (0x700/0x701) handler in eventMenu (PT 0x45282b)",
+  "method": "manual: review: SDL_FINGERDOWN/UP (0x700/0x701) handler in eventMenu (PT 0x45282b) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x7b832b",
@@ -1898,7 +1887,7 @@
  "gl": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(6/10)",
+  "method": "gxref(6/10) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x37f5e20",
@@ -1907,7 +1896,7 @@
  "glGetUniformLocation": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: review: shader uniform setup (uTex/uTex2/...) calls through the same pointer",
+  "method": "manual: review: shader uniform setup (uTex/uTex2/...) calls through the same pointer (db pattern kept)",
   "conf": "high",
   "note": "offset to gl (0x37f5e20) is 0x90 as in BG",
   "addr": "0x37f5d90",
@@ -1916,7 +1905,7 @@
  "glUniform1i": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: review: same shader init tail (xor edx,edx / mov edx,1 calls)",
+  "method": "manual: review: same shader init tail (xor edx,edx / mov edx,1 calls) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x37f5da8",
@@ -1934,7 +1923,7 @@
  "menuLength": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(5/6)",
+  "method": "gxref(5/6) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x7b83b8",
@@ -1943,7 +1932,7 @@
  "menuSrc": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(10/10)",
+  "method": "gxref(10/10) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x7b8288",
@@ -2006,17 +1995,16 @@
  "slicedRects": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(3/6)",
+  "method": "gxref(3/6) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x71f9b0",
-  "site": "0x45b164",
-  "replaced": "0x414daad1"
+  "site": "0x45b164"
  },
  "tooltip": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: review: 0x400 branch of eventMenu stores the same tooltip globals (BG 0x717af0.. -> PT 0x7b8330..)",
+  "method": "manual: review: 0x400 branch of eventMenu stores the same tooltip globals (BG 0x717af0.. -> PT 0x7b8330..) (db pattern kept)",
   "conf": "high",
   "note": "consistent with uiHandleTooltip reading tooltip text at +0x10 (PT 0x7b8340)",
   "addr": "0x7b8330",
@@ -2142,7 +2130,7 @@
  "Data-CGameAIBase::FireItemPoint()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x17d8c2",
@@ -2151,12 +2139,11 @@
  "Data-CGameAIBase::FireItemPoint()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x17d7e7",
-  "site": "0x17d7e7",
-  "replaced": "0x17d7de"
+  "site": "0x17d7e7"
  },
  "Data-CGameAIBase::FireSpell()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
@@ -2188,12 +2175,11 @@
  "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: [rsi+0x1c]!=0 branch",
+  "method": "manual: review: [rsi+0x1c]!=0 branch (db pattern kept)",
   "conf": "medium",
   "note": "PT tail-merges both AddEffect branches (BG RetPtr and RetPtr-2) into one virtual call: both labels share 0x17eeeb",
   "addr": "0x17eeeb",
-  "site": "0x17eeeb",
-  "replaced": "0x17edb0"
+  "site": "0x17eeeb"
  },
  "Data-CGameAIBase::FireSpellPoint()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
@@ -2207,7 +2193,7 @@
  "Data-CGameAIBase::FireSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call DecodeProjectile + identical tail",
+  "method": "manual: review: call DecodeProjectile + identical tail (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x17ec80",
@@ -2216,7 +2202,7 @@
  "Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "local: anchor2(0.53/0.00,1)",
+  "method": "local: anchor2(0.53/0.00,1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x18077a",
@@ -2225,7 +2211,7 @@
  "Data-CGameAIBase::ForceSpell()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x18079c",
@@ -2234,7 +2220,7 @@
  "Data-CGameAIBase::ForceSpell()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: return of call DecodeProjectile",
+  "method": "manual: review: return of call DecodeProjectile (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x17fe68",
@@ -2243,7 +2229,7 @@
  "Data-CGameAIBase::ForceSpellPoint()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "local: anchor2(0.52/0.36,2)",
+  "method": "local: anchor2(0.52/0.36,2) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x182648",
@@ -2252,7 +2238,7 @@
  "Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1823f1",
@@ -2342,7 +2328,7 @@
  "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3d23d5",
@@ -2351,17 +2337,16 @@
  "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: inside mapped LoadProjectile (PT 0x3d2260), flag-switch AddEffect branch",
+  "method": "manual: review: inside mapped LoadProjectile (PT 0x3d2260), flag-switch AddEffect branch (db pattern kept)",
   "conf": "medium",
   "note": "AddEffect called virtually in PT",
   "addr": "0x3d2588",
-  "site": "0x3d2588",
-  "replaced": "0x17d8c2"
+  "site": "0x3d2588"
  },
  "Data-CGameSprite::LoadProjectile()-CProjectile::AddEffect()-RetPtr-3": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3d271e",
@@ -2370,7 +2355,7 @@
  "Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x42dd8f",
@@ -2379,7 +2364,7 @@
  "Data-CGameSprite::Spell()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "local: anchor2(0.52/0.36,2)",
+  "method": "local: anchor2(0.52/0.36,2) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x42ddb4",
@@ -2388,27 +2373,25 @@
  "Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: return of call DecodeProjectile",
+  "method": "manual: review: return of call DecodeProjectile (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x42da51",
-  "site": "0x42da51",
-  "replaced": "0x42da46"
+  "site": "0x42da51"
  },
  "Data-CGameSprite::SpellPoint()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: AddEffect branch inside mapped SpellPoint (PT 0x42f770)",
+  "method": "manual: review: AddEffect branch inside mapped SpellPoint (PT 0x42f770) (db pattern kept)",
   "conf": "medium",
   "note": "AddEffect called virtually in PT",
   "addr": "0x431231",
-  "site": "0x431231",
-  "replaced": "0x4377a5"
+  "site": "0x431231"
  },
  "Data-CGameSprite::SpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: return of call DecodeProjectile",
+  "method": "manual: review: return of call DecodeProjectile (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x430f2a",
@@ -2417,7 +2400,7 @@
  "Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x434098",
@@ -2426,7 +2409,7 @@
  "Data-CGameSprite::Swing()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4348bd",
@@ -2444,17 +2427,16 @@
  "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "medium",
   "note": "PT Swing has the 3 DecodeProjectile calls in a different order; matched by context (stores r14 first, then tests byte +0x48c0)",
   "addr": "0x434196",
-  "site": "0x434196",
-  "replaced": "0x434191"
+  "site": "0x434196"
  },
  "Data-CGameSprite::Swing()-CProjectile::DecodeProjectile()-RetPtr-3": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "medium",
   "note": "matched by context (test rax / je after store)",
   "addr": "0x433f48",
@@ -2470,7 +2452,7 @@
  "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "medium",
   "note": "AddEffect called virtually in PT",
   "addr": "0x437780",
@@ -2479,7 +2461,7 @@
  "Data-CGameSprite::UseItem()-CProjectile::AddEffect()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "medium",
   "note": "AddEffect called virtually in PT",
   "addr": "0x4377a5",
@@ -2488,7 +2470,7 @@
  "Data-CGameSprite::UseItem()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x437644",
@@ -2497,7 +2479,7 @@
  "Data-CGameSprite::UseItemPoint()-CProjectile::AddEffect()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "medium",
   "note": "AddEffect called virtually in PT",
   "addr": "0x438528",
@@ -2506,17 +2488,16 @@
  "Data-CGameSprite::UseItemPoint()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0)",
+  "method": "manual: review: context inside PT UseItem(0x436690)/UseItemPoint(0x437b90)/Swing(0x4334e0) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x438432",
-  "site": "0x438432",
-  "replaced": "0x438429"
+  "site": "0x438432"
  },
  "Data-CInfButtonArray::SetState()-IndirectJumpTable": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: byte index table of the SetState switch (movzx eax, byte [rdx+rax+0x2ca438] at 0x2c8ae4)",
+  "method": "manual: review: byte index table of the SetState switch (movzx eax, byte [rdx+rax+0x2ca438] at 0x2c8ae4) (db pattern kept)",
   "conf": "high",
   "note": "case values/count differ from BG (PST action bar): EEex_Actionbar_Patch.lua indexing must be revalidated in phase 5",
   "addr": "0x2ca438",
@@ -2541,7 +2522,7 @@
  "Data-CProjectile::DecodeProjectile()-CProjectile::DecodeProjectile()-RetPtr-2": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: recursive DecodeProjectile call, identical tail",
+  "method": "manual: review: recursive DecodeProjectile call, identical tail (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x27cd42",
@@ -2559,7 +2540,7 @@
  "Data-CProjectileArea::CreateSecondary()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: link order (fn 0x27c320 directly precedes DecodeProjectile, as BG 0x22bdc0) + identical tail",
+  "method": "manual: review: link order (fn 0x27c320 directly precedes DecodeProjectile, as BG 0x22bdc0) + identical tail (db pattern kept)",
   "conf": "medium",
   "note": "PT has a near-identical sibling at 0x27bfa0 (PST addition)",
   "addr": "0x27c360",
@@ -2568,7 +2549,7 @@
  "Data-CProjectileArea::Explode()-CProjectile::DecodeProjectile()-RetPtr": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: return of DecodeProjectile in mapped Explode fragment",
+  "method": "manual: review: return of DecodeProjectile in mapped Explode fragment (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x283a49",
@@ -2631,7 +2612,7 @@
  "CBaldurEngine::OnLeftPanelButtonClick": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x141e40",
@@ -2658,11 +2639,11 @@
  "CChitin::ProcessEvents": {
   "kind": "A",
   "status": "ported",
-  "method": "curdb+vote:confirmed (db pattern kept)",
-  "conf": "medium",
-  "note": "",
-  "addr": "0x44e540",
-  "site": "0x44e540"
+  "method": "manual: labelcheck.py (db pattern kept)",
+  "conf": "high",
+  "note": "upstream pattern also matched PT 0x44e540 (unrelated, similarity 0.09); the real ProcessEvents is called by Torment CChitin::WinMain (PT 0x4a6733) and aligns 0.93 with BG 0x41b870",
+  "addr": "0x4a5100",
+  "site": "0x4a5100"
  },
  "CChitin::Update": {
   "kind": "A",
@@ -2712,7 +2693,7 @@
  "CGameDialogSprite::EndDialog": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "medium",
   "note": "all 4 mapped call sites resolve here; PT inlines extra cleanup after the same +0x54/+0x58 stores",
   "addr": "0x1ad730",
@@ -2730,7 +2711,7 @@
  "CGameEffect::CheckSave": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1ec460",
@@ -2937,7 +2918,7 @@
  "CVidFont::GetStringHeight": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x49b8d0",
@@ -2946,12 +2927,11 @@
  "CVidFont::GetStringLength": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap+vote:probable",
+  "method": "fmap+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x49b980",
-  "site": "0x49b980",
-  "replaced": "0x49b986"
+  "site": "0x49b980"
  },
  "CVidFont::RenderTextWrap": {
   "kind": "A",
@@ -2974,7 +2954,7 @@
  "CVidMode::ApplyBrightnessContrast": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(7/7)",
+  "method": "local: callers(7/7) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4a68c0",
@@ -3001,17 +2981,16 @@
  "CVidPalette::GetAdd": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(1/1)",
+  "method": "local: callers(1/1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4aa9b0",
-  "site": "0x4aa9b0",
-  "replaced": "0x4aa9b5"
+  "site": "0x4aa9b0"
  },
  "CVidPalette::GetLight": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4aaa10",
@@ -3065,7 +3044,7 @@
  "DrawAlpha": {
   "kind": "B",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x49c150",
@@ -3109,7 +3088,7 @@
  "DrawClear": {
   "kind": "B",
   "status": "ported",
-  "method": "local: anchor2(1.00/0.00,1)",
+  "method": "local: anchor2(1.00/0.00,1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x49c2a0",
@@ -3433,7 +3412,7 @@
  "drawLetters": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "high",
   "note": "3/3 call sites (exact local alignment)",
   "addr": "0x4c8d00",
@@ -3442,7 +3421,7 @@
  "drawMenu": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x451690",
@@ -3469,7 +3448,7 @@
  "drawTop": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x452000",
@@ -3478,11 +3457,11 @@
  "eventMenu": {
   "kind": "A",
   "status": "ported",
-  "method": "curdb+vote:confirmed (db pattern kept)",
-  "conf": "medium",
-  "note": "",
-  "addr": "0x44a590",
-  "site": "0x44a590"
+  "method": "manual: labelcheck.py (db pattern kept)",
+  "conf": "high",
+  "note": "upstream pattern also matched PT 0x44a590 (no direct caller, similarity 0.15); Torment uiEventMenuStack (PT 0x457b40) calls 0x4525f0 exactly where BG calls eventMenu (0x3d4af0)",
+  "addr": "0x4525f0",
+  "site": "0x4525f0"
  },
  "fadeSounds": {
   "kind": "A",
@@ -3613,7 +3592,7 @@
  "uiHandleTooltip": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: call sites / link order / context",
+  "method": "manual: review: call sites / link order / context (db pattern kept)",
   "conf": "medium",
   "note": "link order between mapped neighbours (PT 0x457d20/0x458020); tooltip text global 0x7b8340, PST-extended body",
   "addr": "0x457d40",
@@ -3685,7 +3664,7 @@
  "CGameText::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x62ccd0",
@@ -3712,7 +3691,7 @@
  "CMessageDisplayText::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(25/26)",
+  "method": "gxref(25/26) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x62bba0",
@@ -3739,7 +3718,7 @@
  "CMessageSetDirection::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "gxref(12/13)",
+  "method": "gxref(12/13) (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x622a10",
@@ -3784,7 +3763,7 @@
  "CProjectileAmbiant::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x630c40",
@@ -3811,7 +3790,7 @@
  "CProjectileChain::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x630d90",
@@ -3820,7 +3799,7 @@
  "CProjectileColorSpray::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x62f940",
@@ -3829,17 +3808,16 @@
  "CProjectileConeOfCold::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x62fc40",
-  "site": "0x25ce38",
-  "replaced": "0x62f7b8"
+  "site": "0x25ce38"
  },
  "CProjectileFall::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x62ff48",
@@ -3866,7 +3844,7 @@
  "CProjectileMulti::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x630400",
@@ -3884,7 +3862,7 @@
  "CProjectileNewScorcher::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x62f628",
@@ -3893,7 +3871,7 @@
  "CProjectileScorcher::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment",
+  "method": "manual: vtable order in CProjectile::DecodeProjectile (BG 0x22bf00 / PT 0x27c4a0) + slot alignment (db pattern kept)",
   "conf": "medium",
   "note": "PT DecodeProjectile takes 2 extra args and creates more projectile types; vtable lea sequence aligned by string anchors, cross-checked with mapped vtable slots",
   "addr": "0x62f4a8",
@@ -3938,7 +3916,7 @@
  "CProjectileTravelDoor::VFTable": {
   "kind": "B",
   "status": "ported",
-  "method": "local: callers(4/4)",
+  "method": "local: callers(4/4) (db pattern kept)",
   "conf": "low",
   "note": "",
   "addr": "0x630850",
@@ -4844,12 +4822,11 @@
  "CGameSprite::SetCurrAction()-LastCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: end of SetCurrAction body",
+  "method": "manual: review: end of SetCurrAction body (db pattern kept)",
   "conf": "low",
   "note": "BG last call is CString::Destruct of a local; PT has no CString local, so no call exists: label points at the epilogue start. EEex_Action_Patch.lua HookAfterCall must be replaced by a restore-style hook in phase 5",
   "addr": "0x42bbd1",
-  "site": "0x42bbd1",
-  "replaced": "0x42bbd6"
+  "site": "0x42bbd1"
  },
  "Hook-CAIGroup::IsPartyLeader()-Override": {
   "kind": "A",
@@ -4872,7 +4849,7 @@
  "Hook-CAIObjectType::Decode()-NormalBranch": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: loop increment inc r12 / cmp 5 (BG inc r15)",
+  "method": "manual: review: loop increment inc r12 / cmp 5 (BG inc r15) (db pattern kept)",
   "conf": "medium",
   "note": "loop counter register r12 in PT (BG r15)",
   "addr": "0x12ae55",
@@ -4881,7 +4858,7 @@
  "Hook-CAIObjectType::Decode()-ReturnBranch": {
   "kind": "A",
   "status": "ported",
-  "method": "local: frag(0.80) / call-anchor(ordinal 6/6)",
+  "method": "local: frag(0.80) / call-anchor(ordinal 6/6) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x129ad3",
@@ -4922,7 +4899,7 @@
  "Hook-CAIScript::Read()-OnRead": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x12d2e6",
@@ -4931,12 +4908,11 @@
  "Hook-CChitin::ProcessEvents()-SDL_PollEvent()-1": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4a5139",
-  "site": "0x4a5139",
-  "replaced": "0x4260e8"
+  "site": "0x4a5139"
  },
  "Hook-CChitin::ProcessEvents()-SDL_PollEvent()-2": {
   "kind": "A",
@@ -5022,7 +4998,7 @@
  "Hook-CDerivedStats::GetSpellState()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x160c30",
@@ -5031,7 +5007,7 @@
  "Hook-CDerivedStats::SetSpellState()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(6/6)",
+  "method": "local: callers(6/6) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x161aa0",
@@ -5085,7 +5061,7 @@
  "Hook-CGameAIBase::ExecuteAction()-DefaultJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: ja default of 0x1d5-case switch",
+  "method": "manual: review: ja default of 0x1d5-case switch (db pattern kept)",
   "conf": "high",
   "note": "action switch on [rdi+0x3f0] (BG [rbx+0x3f8]); register allocation differs, hook asm must be adapted in phase 5",
   "addr": "0x16c99c",
@@ -5094,7 +5070,7 @@
  "Hook-CGameAIBase::ExecuteAction()-NormalBranch": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: common exit after \"Error: Action number\" block",
+  "method": "manual: review: common exit after \"Error: Action number\" block (db pattern kept)",
   "conf": "high",
   "note": "PT: si/ebx instead of si/r13; check hook asm in phase 5",
   "addr": "0x172234",
@@ -5121,7 +5097,7 @@
  "Hook-CGameArea::OnActivation()-LastCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "BG ends with tail jmp to fn (PT 0x33c6e0); PT calls it with a normal call and continues: EEex_UncapFPS_Patch.lua uses HookRelativeJump here, must become a call hook in phase 5",
   "addr": "0x19d3ca",
@@ -5203,7 +5179,7 @@
  "Hook-CGameEffect::CheckAdd()-ProbabilityFailed": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1ebbea",
@@ -5212,7 +5188,7 @@
  "Hook-CGameEffect::CopyFromBase()-FirstCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x1fce60",
@@ -5275,7 +5251,7 @@
  "Hook-CGameEffectCastSpell::ApplyEffect()-CMessageHandler::AddMessage()": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1c2be3",
@@ -5302,7 +5278,7 @@
  "Hook-CGameEffectDamage::ApplyEffect()-OnDone": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "PT stores constant 1 to +0x114 (BG r12d) and the vcall slot is 0xf0 (BG 0xe8); hook asm/restore size to be checked in phase 5",
   "addr": "0x1cc5fa",
@@ -5311,7 +5287,7 @@
  "Hook-CGameEffectDamage::ApplyEffect()-StartingCalculations": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1c7ef7",
@@ -5374,7 +5350,7 @@
  "Hook-CGameEffectPolymorph::ApplyEffect()-FormToFormUnequipAllBugJne": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x1d95b5",
@@ -5444,7 +5420,7 @@
  "Hook-CGameEffectUsability::CheckUsability()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "fmap",
+  "method": "fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x1ed180",
@@ -5498,7 +5474,7 @@
  "Hook-CGameSprite::CheckCombatStats()-GetProfBonuses-SaveItem": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(ordinal 2/2)",
+  "method": "local: fmap / call-anchor(ordinal 2/2) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3bcd11",
@@ -5543,12 +5519,11 @@
  "Hook-CGameSprite::Construct1()-FirstCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x3b2aeb",
-  "site": "0x3b2aeb",
-  "replaced": "0x18a811"
+  "site": "0x3b2aeb"
  },
  "Hook-CGameSprite::Construct2()-FirstCall": {
   "kind": "A",
@@ -5571,7 +5546,7 @@
  "Hook-CGameSprite::EquipMostDamagingMelee()-GetProfBonuses-SaveItem": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: CItem::Demand + item-flags call in mapped fn (PT 0x408c30)",
+  "method": "manual: review: CItem::Demand + item-flags call in mapped fn (PT 0x408c30) (db pattern kept)",
   "conf": "high",
   "note": "item pointer is in rsi in PT (BG rdi): EEex_Sprite_Patch.lua hook body must use rsi",
   "addr": "0x408e72",
@@ -5580,7 +5555,7 @@
  "Hook-CGameSprite::ExecuteAction()-DefaultJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "0x1d7-case switch",
   "addr": "0x40bd90",
@@ -5589,7 +5564,7 @@
  "Hook-CGameSprite::GetActiveWeaponStyleAndLevel()-GetProfBonuses-SaveItem": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x412fdc",
@@ -5598,7 +5573,7 @@
  "Hook-CGameSprite::GetMaxDamage()-GetProfBonuses-SaveItem": {
   "kind": "A",
   "status": "ported",
-  "method": "local: anchor2(0.63/0.00,1)",
+  "method": "local: anchor2(0.63/0.00,1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3c84ce",
@@ -5616,7 +5591,7 @@
  "Hook-CGameSprite::GetRatingWithItem()-CGameSprite::Copy()": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3cb12d",
@@ -5634,7 +5609,7 @@
  "Hook-CGameSprite::Hit()-FirstCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "first call = CString::Construct(char*)",
   "addr": "0x414805",
@@ -5643,7 +5618,7 @@
  "Hook-CGameSprite::Hit()-FormatRollCall": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4148e0",
@@ -5670,7 +5645,7 @@
  "Hook-CGameSprite::Marshal()-CGameEffectList::Marshal()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3d39bc",
@@ -5688,7 +5663,7 @@
  "Hook-CGameSprite::ProcessAI()-BeforeReturn": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x42319f",
@@ -5787,7 +5762,7 @@
  "Hook-CGameSprite::Rest()-OnResetQuickListCounts": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x429997",
@@ -5796,7 +5771,7 @@
  "Hook-CGameSprite::SetCurrAction()-FirstCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "call CAIAction::operator=",
   "addr": "0x42b806",
@@ -5805,7 +5780,7 @@
  "Hook-CGameSprite::SetCursor()-SetCharacterToolTip()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(ordinal 2/2)",
+  "method": "local: fmap / call-anchor(ordinal 2/2) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3e69b2",
@@ -5823,7 +5798,7 @@
  "Hook-CGameSprite::Spell()-ApplyCastingEffect()": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x42d140",
@@ -5832,7 +5807,7 @@
  "Hook-CGameSprite::Spell()-CheckDirectionJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x42c462",
@@ -5859,7 +5834,7 @@
  "Hook-CGameSprite::Swing()-CGameSprite::Damage()-1": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x43407f",
@@ -5868,7 +5843,7 @@
  "Hook-CGameSprite::Swing()-CGameSprite::Damage()-2": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:manual",
+  "method": "align+vote:manual (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x4342f1",
@@ -5877,7 +5852,7 @@
  "Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Melee": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x434296",
@@ -5886,7 +5861,7 @@
  "Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Ranged": {
   "kind": "A",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x433eb2",
@@ -5913,12 +5888,11 @@
  "Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-1": {
   "kind": "A",
   "status": "ported",
-  "method": "align+vote:probable",
+  "method": "align+vote:probable (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3edfd6",
-  "site": "0x3edfd6",
-  "replaced": "0x2bae64"
+  "site": "0x3edfd6"
  },
  "Hook-CGameSprite::Unmarshal()-CDerivedStats::Reload()-2": {
   "kind": "A",
@@ -5932,7 +5906,7 @@
  "Hook-CGameSprite::Unmarshal()-CGameEffectList::Unmarshal()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x3ee01a",
@@ -5995,7 +5969,7 @@
  "Hook-CGameText::Render()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "function start (fmap link-order 0.72)",
   "addr": "0x215600",
@@ -6022,7 +5996,7 @@
  "Hook-CInfButtonArray::SetState()-CInfButtonArray::UpdateButtons()": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "last call of SetState -> UpdateButtons",
   "addr": "0x2ca37f",
@@ -6085,7 +6059,7 @@
  "Hook-CInfinity::FitViewPosition()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x304c20",
@@ -6094,7 +6068,7 @@
  "Hook-CInfinity::Render()-HandleScreenShakeJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "PT compares preloaded eax (screen-shake counter at +0xcf78) instead of cmp [rcx+0x9690]",
   "addr": "0x307908",
@@ -6103,7 +6077,7 @@
  "Hook-CInfinity::Render()-HandleScreenShakePostJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "same flag pair (+0x7824 byte / +0xcf78) as BG (+0x3fa4/+0x9690)",
   "addr": "0x307a88",
@@ -6130,7 +6104,7 @@
  "Hook-CInfinity::SetScrollDest()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "local: callers(1/1)",
+  "method": "local: callers(1/1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x309450",
@@ -6157,12 +6131,11 @@
  "Hook-CProjectile::DecodeProjectile()-LastCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: last CString::Destruct before the epilogue of PT DecodeProjectile (0x27c4a0)",
+  "method": "manual: review: last CString::Destruct before the epilogue of PT DecodeProjectile (0x27c4a0) (db pattern kept)",
   "conf": "medium",
   "note": "projectile return value is in rsi in PT (BG rbx): hook body must be adapted; old pattern pointed into unrelated fn 0x2508a0",
   "addr": "0x282b85",
-  "site": "0x282b85",
-  "replaced": "0x253215"
+  "site": "0x282b85"
  },
  "Hook-CRuleTables::Construct()-CHECK_MODE-ConvertStrToInt": {
   "kind": "A",
@@ -6185,7 +6158,7 @@
  "Hook-CRuleTables::IsProtectedFromSpell()-CompareStatCall": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "high",
   "note": "",
   "addr": "0x2ab3df",
@@ -6239,7 +6212,7 @@
  "Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp": {
   "kind": "A",
   "status": "ported",
-  "method": "align",
+  "method": "align (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x35ba0a",
@@ -6320,7 +6293,7 @@
  "Hook-CVisibilityMap::Destruct()-FirstInstruction": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap",
+  "method": "local: fmap (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x2b79d0",
@@ -6410,7 +6383,7 @@
  "Hook-RenderListCallback()-drawItem()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: frag(0.55) / call-anchor(unique)",
+  "method": "local: frag(0.55) / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x44aee1",
@@ -6428,7 +6401,7 @@
  "Hook-SDL_main()-CLUAConsole::LuaInit()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x144eb7",
@@ -6491,7 +6464,7 @@
  "Hook-dimmInit()-uiLoadFunctions()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: anchor2(1.00/0.00,1)",
+  "method": "local: anchor2(1.00/0.00,1) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x48bb7e",
@@ -6509,7 +6482,7 @@
  "Hook-dimmInit-uiDoFile()": {
   "kind": "A",
   "status": "ported",
-  "method": "local: fmap / call-anchor(unique)",
+  "method": "local: fmap / call-anchor(unique) (db pattern kept)",
   "conf": "medium",
   "note": "",
   "addr": "0x48bb8a",
@@ -6518,7 +6491,7 @@
  "Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "PT pad is 0x12 (BG 0x10) and uses ecx/r8d instead of eax/[rbp-0x18]: hook asm must be adapted",
   "addr": "0x4504cf",
@@ -6527,7 +6500,7 @@
  "Hook-drawItem()-FixForcedScrollbarDivideByZero1": {
   "kind": "A",
   "status": "ported",
-  "method": "manual: review: BG/PT context side by side",
+  "method": "manual: review: BG/PT context side by side (db pattern kept)",
   "conf": "medium",
   "note": "same scrollbar math, item ptr in r13 (BG r15), offsets +0x1cc/+0x1c0 (BG +0x1a4/+0x198)",
   "addr": "0x450fbe",

@@ -38,9 +38,39 @@ def body(pe, entry):
                         a = t; continue
                     todo.append(t)
                 else:
-                    break  # indirect jmp (jump table): targets come from the table scan below
+                    todo.extend(t for t in jump_table(pe, out, i) if same_func(pe, entry, t))  # indirect jmp: switch table targets
+                    break
             a = i.address + i.size
     return [out[k] for k in sorted(out)]
+
+
+def same_func(pe, entry, t):
+    a, b = pe.rfunc(entry), pe.rfunc(t)
+    return bool(a and b and a[0] == b[0])
+
+
+def jump_table(pe, out, jmp):
+    """Targets of an MSVC x64 switch: `cmp r, N; ja ...; lea rB, [rip - base]; mov ecx, [rB + r*4 + T];
+    add rcx, rB; jmp rcx` (T = table rva, entries = rva). Looks back over the preceding instructions."""
+    prev = [out[k] for k in sorted(out) if k < jmp.address][-12:]
+    table = count = None
+    for i in reversed(prev):
+        for o in i.operands:
+            if table is None and o.type == X.X86_OP_MEM and o.mem.scale == 4 and o.mem.index and o.mem.disp > 0x1000:
+                table = o.mem.disp
+        if count is None and i.mnemonic == 'cmp' and len(i.operands) == 2 and i.operands[1].type == X.X86_OP_IMM:
+            count = i.operands[1].imm + 1
+    if table is None or count is None or count > 512:
+        return []
+    out_t = []
+    for k in range(count):
+        v = pe.read(table + 4 * k, 4)
+        if not v:
+            break
+        t = struct.unpack('<I', v)[0]
+        if pe.tva <= t < pe.tva + pe.tsize:
+            out_t.append(t)
+    return out_t
 
 
 def resolve(n):
