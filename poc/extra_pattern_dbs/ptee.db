@@ -1,6 +1,4 @@
 ; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db
-; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,
-;   Hook-drawItem()-CheckScrollbarContentHeight, Hook-drawItem()-FixForcedScrollbarDivideByZero2
 
 [CChitin::OnResizeWindow]
 Pattern=48896C2418565741564883EC50488BA9
@@ -37,6 +35,18 @@ Pattern=0FB70585E027
 
 [PTEE-CVidMode::WindowToScreen]
 Pattern=442B818C0100
+
+[Hook-CChitin::OnResizeWindow()-B3Scale]
+Pattern=E81C0B03008B
+
+[Hook-drawItem()-AfterEnabledCheck]
+Pattern=410F1045408B
+
+[Hook-drawItem()-CheckScrollbarContentHeight]
+Pattern=7F14498B8DB0
+
+[Hook-drawItem()-FixForcedScrollbarDivideByZero2]
+Pattern=C745281200000041
 
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F

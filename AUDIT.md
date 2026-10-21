@@ -123,3 +123,10 @@ Torment differences carried into EEex's reimplementations (eeexdll/patch_sources
   GetTargetShareType (+r8), CGameSprite::ReadyOffInternalList (+rdx), CProjectile::DecodeProjectile (+r8),
   CVidFont::GetStringHeight / GetStringLength (+r9b), CAIScript::Construct(CResRef,int) (no int). None is
   called by EEex.dll; their Lua callers are phase 5 (signatures to adopt there).
+
+## Menu hooks of the version extra DB (EEex_Menu_Patch.lua, phase 5 notes)
+Located by context in Torment (tools/port_extra.py): OnResizeWindow()-B3Scale (call SDL_GL_GetDrawableSize
+after SCREENWIDTH/HEIGHT, PT 0x4a41af), drawItem()-AfterEnabledCheck (PT 0x44eb2b), -CheckScrollbarContentHeight
+(PT 0x450db3), -FixForcedScrollbarDivideByZero2 (PT 0x451199, same 11 restored bytes). Torment's drawItem keeps
+the uiItem in r13 (BG r15): every drawItem hook's assembly must use r13, and CheckScrollbarContentHeight is a
+short `jg` (content taller than the item) where BG has a near `jle`: success/fail paths swap.

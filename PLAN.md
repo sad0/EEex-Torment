@@ -49,18 +49,19 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
          autoprove/embedprove (validated aligned functions), emulated switch tables (swemu.py), INI keys,
          2DA names, file formats on all PT data files, library versions, allocation sizes, live memory
          checks (memprobe.py). EEex.dll and LuaBindings.dll build on it; in-game test passes.
-   - [ ] 4b Semantic audit of every EEex.dll function vs the PT engine; in-game test of every export
+   - [x] 4b Semantic audit of every EEex.dll function vs the PT engine; in-game test of every export
          Done: reimplementation verdicts + rewrites (AUDIT.md), virtual slot order solved for Torment
          (vtsolve.py/vtheader.py, header in PT order), 19 exports + virtual calls + MatchObject OK in game.
          Left for phase 5: B3AttackInfo cursor ids, Lua guards for unsupported labels.
    - [x] 4c 13 Unsupported patterns: each proven absent / not applicable in PT (PATTERNS.md); EEex.dll
          uses no coroutine API; phase 5 must guard the labels in EEex_Fix_Patch.lua (op33 + CheckAdd
          spell-immunity fixes), EEex_Projectile.lua (UpdateAOE, Multi MM decode), EEex_Script_Patch.lua (OnCopy)
-   - [ ] 4d Port stubbed code. Done: visibility map (AUDIT.md), MakeLocal, LuaBindings overrides,
+   - [x] 4d Port stubbed code. Done: visibility map (AUDIT.md), MakeLocal, LuaBindings overrides,
          function_names.db (tools/funcnames.py, 10.5k Torment names), engine_reimplementations/debug.cpp
          documented as never installed by EEex. Proof hardening on the way: packed-struct sizes, 61 BG
          names fixed (bgnames_merge.py), field evidence needs >= 2 aligned functions or a consistent
          neighbour (coverage.py, field_evidence_funcs.json). Uncap FPS ported and tested
-         in game (AUDIT.md). Left: extra-DB menu hooks (drawItem / OnResizeWindow)
+         in game (AUDIT.md). Extra-DB menu hooks located in Torment (ptee.db; drawItem keeps the uiItem in
+         r13, CheckScrollbarContentHeight's jump is inverted: phase-5 Lua notes in AUDIT.md)
 5. [ ] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.
 6. [ ] WeiDU installer (setup-EEex-PTEE), test on a real playthrough.

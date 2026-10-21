@@ -2,7 +2,7 @@
 # EEex as EEex_scripts/extra_pattern_dbs/) to Torment.exe. Its patterns come from a slightly different
 # BG2EE build and match neither our Baldur_bg2ee.exe nor Torment.exe, so function entries are located
 # by name (bgnames.py -> ptnames.json) and checked by hand (show.py: identical code on both sides).
-# The 4 drawItem/OnResizeWindow hooks are only used by EEex_Menu_Patch.lua (phase 5) and are left out.
+# The 4 drawItem/OnResizeWindow hooks (EEex_Menu_Patch.lua) are located by context in LABELS.
 # Writes poc/extra_pattern_dbs/ptee.db
 import os
 from ilib import *
@@ -33,6 +33,12 @@ LABELS = {
     # CVidMode window -> internal screen coordinates (BG 0x41e8d0, not bound by EEex); Torment's middle-mouse
     # drag (CScreenWorld::OnEvent PT 0x35ba53) converts the motion deltas with it
     'PTEE-CVidMode::WindowToScreen': 0x4a7fe0,
+    # EEex_Menu_Patch.lua hooks of the version extra DB, located by context (identical code, the uiItem is in
+    # r13 in Torment's drawItem instead of r15: the phase-5 Lua must use r13)
+    'Hook-CChitin::OnResizeWindow()-B3Scale': 0x4a41af,             # call SDL_GL_GetDrawableSize after SCREENWIDTH/HEIGHT
+    'Hook-drawItem()-AfterEnabledCheck': 0x44eb2b,                  # after the item "enabled" Lua check
+    'Hook-drawItem()-CheckScrollbarContentHeight': 0x450db3,        # Torment: jg (short), BG: jle (near): inverted
+    'Hook-drawItem()-FixForcedScrollbarDivideByZero2': 0x451199,    # 11 bytes: mov [rbp+0x28], 0x12; sub eax, [r13+0x4c]
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }
@@ -45,9 +51,7 @@ DATA = {
     # g_pChitin (CChitin*), passed to CChitin::GetUIRect by uiDrawMenuStack PT 0x456fa8 `mov rcx, [rip + X]`
     'PTEE-g_pChitin': (0x456fa8, 3, 7),
 }
-lines = ['; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db',
-         '; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,',
-         ';   Hook-drawItem()-CheckScrollbarContentHeight, Hook-drawItem()-FixForcedScrollbarDivideByZero2', '']
+lines = ['; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db', '']
 for name, (bg, pt) in FUNCS.items():
     p, start = unique_at(pt)
     ops = f'ADD {pt - start}' if pt != start else ''
