@@ -1,6 +1,8 @@
 # X-Option.menu: Torment's menu parser has no `scaleToClip` keyword (eeexlua/notes/uiItem_layout.md: bam.scaletoclip is
 # absent from Torment's uiItem; the token is rejected as invalid): drop it, the BAM is drawn at its own size.
 PATCHES = [
+    # scrollbars: Torment's own list scrollbar (CGSCRL1, UI.MENU) instead of BG's GUISCRC (owner request)
+    ('@all:2 scrollbar "GUISCRC"', 'scrollbar "CGSCRL1" -- EEex-PTEE: Torment scrollbar'),
     # toggles: a button
     # draws hover / pressed frames (owner: only ON / OFF) and a label takes no click in Torment: a text item does both
     ('''		button

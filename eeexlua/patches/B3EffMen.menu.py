@@ -2,6 +2,8 @@
 # `scaleToClip` (no bam.scaletoclip: the BAM is drawn at its own size) and `scrollbar clunkyScroll` (no
 # scrollbar.clunkyScroll: the list scrolls at Torment's default speed).
 PATCHES = [
+    # scrollbar: Torment's own list scrollbar (CGSCRL1, every options / journal list in UI.MENU) instead of BG's GUISCRC
+    ('''		scrollbar "GUISCRC"''', '''		scrollbar "CGSCRL1" -- EEex-PTEE: Torment's scrollbar'''),
     # wider (+100 px): French spell names were cut ("Duplication d'Enoll Ev...", owner test)
     ('\t\tarea 0 0 220 160\n', '\t\tarea 0 0 320 160 -- EEex-PTEE: +100\n'),
     ('\t\t\t\tarea 0 0 147 30\n', '\t\t\t\tarea 0 0 230 30 -- EEex-PTEE: +100 (column 70%)\n'),
