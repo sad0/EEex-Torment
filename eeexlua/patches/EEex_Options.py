@@ -65,3 +65,58 @@ PATCHES.append(('''	local modifyExisting = function()
 	local modifyExisting = function()
 		if modifyTorment()       then return true end -- EEex-PTEE
 		if modifyInfinityUI()    then return true end'''))
+# EEex-PTEE: "Reset All" button in the header, left of the title (Torment SHRTBUTT, 145x39 like UI.MENU's own short
+# buttons); it asks first (EEex_Options_PTEE_ResetConfirm, X-Option.menu.py), then resets every registered option
+PATCHES += [
+    ('''					{
+						["align"]  = EEex_Options_Private_LayoutAlign.TOP_RIGHT,
+						["layout"] = EEex_Options_Private_LayoutExitButton.new({ ["menuName"] = "EEex_Options" }):inset({ ["insetRight"] = 5 }),
+					},''',
+     '''					{
+						["align"]  = EEex_Options_Private_LayoutAlign.TOP_RIGHT,
+						["layout"] = EEex_Options_Private_LayoutExitButton.new({ ["menuName"] = "EEex_Options" }):inset({ ["insetRight"] = 5 }),
+					},
+					{ -- EEex-PTEE
+						["align"]  = EEex_Options_Private_LayoutAlign.TOP_LEFT,
+						["layout"] = EEex_Options_Private_LayoutTemplate.new({
+							["menuName"]     = "EEex_Options",
+							["templateName"] = "EEex_Options_TEMPLATE_PTEE_ResetAllButton",
+							["width"]        = 145,
+							["height"]       = 39,
+						}):inset({ ["insetLeft"] = 5 }),
+					},'''),
+    ('''function EEex_Options_Private_CheckKillFocus()''',
+     '''-- EEex-PTEE: every registered option back to its default (saved), then the menu is laid out again so every
+-- widget (toggles, edits, keybinds) shows the new values
+function EEex_Options_Private_PTEE_ResetAll()
+	EEex_Options_Private_CheckKillFocus()
+	for _, option in pairs(EEex_Options_Private_IdToOption) do
+		option:_setWorkingValue(option:_getDefault(), true)
+		option:_set(option:_getWorkingValue(), false, true)
+	end
+	if Infinity_IsMenuOnStack("EEex_Options") then
+		-- reopen the same tab (by label: module tabs come and go with their module's option)
+		local tabArea = EEex_Options_Private_MainVerticalTabArea
+		local openTab = tabArea.tabs[tabArea._openTabIndex or 0]
+		local openLabel = openTab and openTab.label
+		EEex_Options_Private_MainInset:hide()
+		EEex_Options_Private_MainInset:showBeforeLayout()
+		EEex_Options_Private_Layout()
+		EEex_Options_Private_MainInset:showAfterLayout()
+		for index, tab in ipairs(tabArea.tabs) do
+			if tab.label == openLabel then
+				_G[tabArea.tabsSelectionVarName] = index
+				tabArea:_onTabSelected(index)
+				break
+			end
+		end
+	end
+end
+
+function EEex_Options_Private_TEMPLATE_PTEE_ResetAllButton_Action()
+	EEex_Options_Private_CheckKillFocus()
+	Infinity_PushMenu("EEex_Options_PTEE_ResetConfirm")
+end
+
+function EEex_Options_Private_CheckKillFocus()'''),
+]

@@ -1,7 +1,8 @@
 # Torment port of EEex's Lua (upstream ref/EEex/EEex/copy). The upstream files stay untouched; patched
 # copies are written to eeexlua/generated/ (EEex_scripts/ and override/):
 #  - eeexlua/patches/<file>.py: PATCHES = [(old, new), ...] for upstream <file> (exact, once; '@all:N old'
-#    replaces exactly N occurrences; '@file' as old replaces the whole file with new);
+#    replaces exactly N occurrences; '@file' as old replaces the whole file with new,
+#    '@file-end' appends new);
 #  - eeexlua/src/EEex_scripts/*, eeexlua/src/override/*: Torment-only files, copied as they are.
 #   python build.py [--deploy]   (--deploy: copy to the dev game, tools/deploy.py's GAME)
 import os, sys, glob, shutil, importlib.util
@@ -26,6 +27,9 @@ def apply(name, s, reps):
     for old, new in reps:
         if old == '@file':
             s = new
+            continue
+        if old == '@file-end':
+            s = s.rstrip('\n') + '\n' + new
             continue
         if old.startswith('@all:'):
             cnt, old = old[len('@all:'):].split(' ', 1)
