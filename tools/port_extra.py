@@ -46,6 +46,14 @@ LABELS = {
     'Hook-drawItem()-FixForcedScrollbarDivideByZero2': 0x451199,    # 11 bytes: mov [rbp+0x28], 0x12; sub eax, [r13+0x4c]
     # Torment-only CDerivedStats::Reload call (sprite in r15) in the ExecuteAction helper PT 0x173c00 (EEex_Stats_Patch.lua)
     'Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()': 0x17421e,
+    # Torment's own spell action handlers (called from the ExecuteAction switches) decode their projectile themselves:
+    # return addresses for EEex_Projectile.lua's decode sources (Spell 31 / SpellNoDec 191 -> PT 0x42e3f0, SpellPoint
+    # 95 / 192 -> 0x431790 in CGameSprite::ExecuteAction; ForceSpell 113 / 181 / 240 / 466 -> 0x180e20, ForceSpellPoint
+    # 114 / 337 -> 0x182b60 in CGameAIBase::ExecuteAction)
+    'Data-PTEE-SpellAction()-CProjectile::DecodeProjectile()-RetPtr': 0x42f2a6,
+    'Data-PTEE-SpellPointAction()-CProjectile::DecodeProjectile()-RetPtr': 0x43229b,
+    'Data-PTEE-ForceSpellAction()-CProjectile::DecodeProjectile()-RetPtr': 0x181345,
+    'Data-PTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr': 0x183143,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }

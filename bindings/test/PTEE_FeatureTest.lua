@@ -27,7 +27,7 @@ function PTEESCR(op403, effect, sprite)
 	return effect.m_effectId == 12
 end
 -- op408 projectile mutator table
-PTEEPM = { ["typeMutator"] = function(context) PTEE_FT_State.op408 = context.decodeSource end }
+PTEEPM = { ["typeMutator"] = function(context) PTEE_FT_State.op408 = tostring(context.decodeSource) end }
 -- op409 enabled action listener
 EEex_Action_AddEnabledSpriteStartedActionListener("PTEEFTL", function(sprite, action, op409)
 	PTEE_FT_State.op409 = action.m_actionID
@@ -119,6 +119,14 @@ local function stage1()
 		EEex_Action_QueueResponseStringOnAIBase('ForceSpellRES("SPWI118",Player2)', tno) -- projectile spell
 	end)
 
+	-- DecodeProjectile direct call: must reach EEex's decode hooks (global mutator PTEEGM logs it)
+	try("DecodeProjectile direct", function()
+		PTEE_FT_State.gmDecode = nil
+		local projectile = CProjectile.DecodeProjectile(2, tno, 1)
+		check("DecodeProjectile direct reaches the decode hook", PTEE_FT_State.gmDecode ~= nil and projectile ~= nil,
+			tostring(PTEE_FT_State.gmDecode) .. " " .. tostring(projectile))
+	end)
+
 	-- Actions (472 EEex_LuaAction, deferred)
 	try("action EEex_LuaAction queue", function()
 		PTEE_FT_State.luaAction = nil
@@ -157,3 +165,16 @@ EEex_Key_AddPressedListener(function(key)
 	results.pass, results.fail = 0, 0
 	if PTEE_FT_State.stage == 0 then stage1() else stage2() end
 end)
+
+-- op408 diagnosis: a global mutator logs every projectile decode (source, type) and every AddEffect
+PTEEGM = {
+	["typeMutator"] = function(context)
+		PTEE_FT_State.gmDecode = context.projectileType
+		print(string.format("PTEE-FEATURE: decode source %s type %s sprite %s", tostring(context.decodeSource),
+			tostring(context.projectileType), context.originatingSprite and context.originatingSprite:getName() or "nil"))
+	end,
+	["projectileMutator"] = function(context)
+		print("PTEE-FEATURE: decoded projectile " .. tostring(context.projectile))
+	end,
+}
+EEex_Projectile_RegisterGlobalMutator("PTEEGM")

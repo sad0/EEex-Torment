@@ -49,4 +49,13 @@ end'''),
     # (PT 0x433f37), CProjectile multi / chain sub-decodes 1 (PT 0x2829e2, 0x27cd32)
     ('''	local projectile = CProjectile.DecodeProjectile(projectileID, sourceObject)''',
      '''	local projectile = CProjectile.DecodeProjectile(projectileID, sourceObject, 1) -- EEex-PTEE: Torment's nLevel argument'''),
+    # Torment's own spell action handlers decode their projectile themselves (tools/port_extra.py, ptee.db labels):
+    # same decode sources as the BG functions they replace. Torment's PST-only projectile classes (PT 0x25d..0x290)
+    # and op handler 0x1e5ba0 also decode sub-projectiles: no BG source, decodeSource stays nil there.
+    ('''	[ EEex_Label("Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr")                        ] = EEex_Projectile_DecodeSource.CGameSprite_Spell,''',
+     '''	[ EEex_Label("Data-CGameSprite::Spell()-CProjectile::DecodeProjectile()-RetPtr")                        ] = EEex_Projectile_DecodeSource.CGameSprite_Spell,
+	[ EEex_Label("Data-PTEE-SpellAction()-CProjectile::DecodeProjectile()-RetPtr")                          ] = EEex_Projectile_DecodeSource.CGameSprite_Spell,           -- EEex-PTEE: Spell / SpellNoDec
+	[ EEex_Label("Data-PTEE-SpellPointAction()-CProjectile::DecodeProjectile()-RetPtr")                     ] = EEex_Projectile_DecodeSource.CGameSprite_SpellPoint,      -- EEex-PTEE: SpellPoint / SpellPointNoDec
+	[ EEex_Label("Data-PTEE-ForceSpellAction()-CProjectile::DecodeProjectile()-RetPtr")                     ] = EEex_Projectile_DecodeSource.CGameAIBase_ForceSpell,      -- EEex-PTEE: ForceSpell / ReallyForceSpell / NoFeedback
+	[ EEex_Label("Data-PTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr")                ] = EEex_Projectile_DecodeSource.CGameAIBase_ForceSpellPoint, -- EEex-PTEE: ForceSpellPoint'''),
 ]

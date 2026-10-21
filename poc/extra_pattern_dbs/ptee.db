@@ -57,6 +57,18 @@ Pattern=C745281200000041
 [Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()]
 Pattern=E8DDCFFEFF41
 
+[Data-PTEE-SpellAction()-CProjectile::DecodeProjectile()-RetPtr]
+Pattern=488983F0470000458BEF0F
+
+[Data-PTEE-SpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
+Pattern=488986F04700
+
+[Data-PTEE-ForceSpellAction()-CProjectile::DecodeProjectile()-RetPtr]
+Pattern=410FB70C2448
+
+[Data-PTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
+Pattern=410FB70E33FF
+
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
 Pattern=488D1579AF2F
 

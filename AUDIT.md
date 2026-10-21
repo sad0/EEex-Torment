@@ -156,3 +156,13 @@ overwritten bytes, relocatable restore bytes, call targets). Main Torment differ
   flags at 0xc350), CChitin cMousePosition 0xfd0 / bPointerUpdated 0xfcc (Torment moved bInTimer/m_AIStale before
   them: ptlayout keeps hand-proven members out of BG order), CInfButtonArray m_nSelectedButton, uiMenu tail fields.
 - Options: AI speed option default 40, range 10..90 (Torment's WinMain).
+- Projectile decode sources: Torment's spell actions (Spell/SpellNoDec, SpellPoint/SpellPointNoDec, ForceSpell family,
+  ForceSpellPoint family) run Torment-only handlers that decode their projectile themselves: their 4 return
+  addresses are ptee.db labels mapped to the BG sources. 25 more decode calls live in PST-only projectile classes
+  (PT 0x25d..0x290) and op handler 0x1e5ba0: no BG counterpart, decodeSource is nil there.
+- Runtime-parsed script strings (ParseConditionalString / ParseResponseString, e.g. EEex_LuaTrigger in a string)
+  lose spaces and most punctuation in both games (identical parser); compiled BCS keep them.
+- Modder feature battery (bindings/test/PTEE_FeatureTest.lua, F10 in the dev game): EEex triggers / objects /
+  actions, extended stats, op400..403, 408, 409, script loading with the Torment constructor: 18/18 in game.
+- Known limitation: casting off the op214 internal list from a keybind (B3Hotkey / EEex_Keybinds) is disabled:
+  Torment's ReadyOffInternalList takes an index into a different array than GetInternalButtonList's list.
