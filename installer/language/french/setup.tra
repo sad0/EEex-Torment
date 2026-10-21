@@ -1,0 +1,27 @@
+//////////////
+// EEex.tp2 //
+//////////////
+
+// Noms des composants
+@0 = ~Base du menu rapide~
+@1 = ~EEex~
+@2 = ~Activer le module Menu des effets : Maj gauche au survol pour voir les sorts qui affectent une créature~
+@3 = ~Activer le module Conteneurs vides : conteneurs vides en gris au lieu de cyan~
+@4 = ~Activer le module Raccourcis : modifie override/B3Hotkey.lua pour créer des raccourcis de sorts avancés~
+@5 = ~Activer le module Échelle : facteur d'échelle de l'interface personnalisable~
+@6 = ~Activer le module Avance du temps : avance d'un tick de jeu sur une touche~
+@7 = ~Activer le module Minuteurs : indicateurs visuels des actions modales, contingences et temps de recharge~
+@9 = ~Activer le module Infos d'attaque : chances de toucher au survol d'une cible avec le curseur d'attaque~
+
+// Messages d'erreur
+@1000 = ~Jeu non pris en charge : ce portage d'EEex est réservé à Planescape: Torment Enhanced Edition.~
+@1001 = ~Ce composant nécessite l'installation du composant de base.~
+@1002 = ~Ce composant nécessite l'installation du composant principal.~
+@1004 = ~Torment.exe non pris en charge : ce portage ne prend en charge que Planescape: Torment EE v3.2.2.0 (version Steam, Torment.exe de 8028040 octets).~
+
+// Groupes
+@2000 = ~Optionnel~
+
+// Choix du menu rapide
+@3000 = ~Minimal | Correctifs du moteur et fonctions de base requises par d'autres mods.~
+@3001 = ~Complet | « Minimal » + tous les modules optionnels activés. Les modules se désactivent en jeu.~

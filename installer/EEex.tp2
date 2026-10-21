@@ -1,0 +1,186 @@
+// EEex for Planescape: Torment EE v3.2.2.0 (port of Bubb's EEex v1.3.1).
+// Same tp2 name, component numbers and labels as upstream EEex, so mods that check
+// MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) work unchanged.
+// Built by tools/package.py (installer/ + build outputs -> build/release/).
+BACKUP ~weidu_external/EEex/backup~
+AUTHOR ~Bubb (EEex), sad0 (Torment port)~
+VERSION ~v1.3.1-ptee1~
+README ~EEex/readme-EEex-PTEE.txt~
+
+QUICK_MENU
+	ALWAYS_ASK
+	END
+	@3000 BEGIN
+		1 // B3-EEex-Main
+	END
+	@3001 BEGIN
+		1 // B3-EEex-Main
+		9 // B3-EEex-Module-Attack-Info
+		2 // B3-EEex-Module-Effect-Menu
+		3 // B3-EEex-Module-Empty-Containers
+		4 // B3-EEex-Module-Hotkey
+		5 // B3-EEex-Module-Scale
+		6 // B3-EEex-Module-Time-Step
+		7 // B3-EEex-Module-Timer-Main
+	END
+END
+
+ALWAYS
+	ACTION_IF !VARIABLE_IS_SET EEex_always THEN BEGIN
+		INCLUDE ~EEex/lib/always.tph~
+		OUTER_SET EEex_always = 1
+	END
+END
+
+AUTO_TRA ~EEex/language/%s~
+LANGUAGE ~English~ ~english~ ~EEex/language/english/setup.tra~
+LANGUAGE ~Francais~ ~french~ ~EEex/language/english/setup.tra~ ~EEex/language/french/setup.tra~
+
+/////////////////////
+// Quick Menu Core //
+/////////////////////
+
+BEGIN @0
+
+//////////
+// EEex //
+//////////
+
+BEGIN @1 LABEL ~B3-EEex-Main~ DESIGNATED 1
+REQUIRE_PREDICATE GAME_IS ~pstee~ @1000 // Game not supported.
+// The loader's patterns, the struct layouts and every hook are for this exact executable (Steam v3.2.2.0).
+REQUIRE_PREDICATE (FILE_EXISTS ~Torment.exe~ AND (FILE_SIZE ~Torment.exe~ 8028040)) @1004
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ 0 @1001 // This component requires the core component to be installed.
+
+	// EEex's ACTION / OBJECT / TRIGGER ids, Torment numbering (trigger ids 0x4112..0x4115)
+	ACTION_FOR_EACH file IN ACTION OBJECT TRIGGER BEGIN
+		COPY ~EEex/patch/%file%.IDS~ ~EEex/patch~
+			COUNT_2DA_ROWS 2 rows
+			FOR (i = 0; i <= rows; ++i) BEGIN
+				READ_2DA_ENTRY i 0 2 "col1"
+				READ_2DA_ENTRY i 1 2 "col2"
+				DEFINE_ASSOCIATIVE_ARRAY EEex_append_array BEGIN ~%file%~ , ~%col1%~ , ~%col2%~ => ~~ END
+			END
+		BUT_ONLY
+	END
+
+	DEFINE_ACTION_FUNCTION B3_ESCAPE_STRING
+		STR_VAR
+			str = ~~
+		RET
+			escaped_str
+	BEGIN
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY to_escape BEGIN ~$~ => 1 ~^~ => 1 ~.~ => 1 ~*~ => 1 ~+~ => 1 ~?~ => 1 ~[~ => 1 ~]~ => 1 ~\~ => 1 END
+		OUTER_PATCH_SAVE escaped_str ~%str%~ BEGIN
+			limit = BUFFER_LENGTH
+			FOR (i = 0; i < limit; ++i) BEGIN
+				READ_ASCII i character (1)
+				PATCH_IF VARIABLE_IS_SET EVAL ~to_escape_%character%~ BEGIN
+					INSERT_BYTES i 1
+					WRITE_ASCII i ~\~
+					++i
+					++limit
+				END
+			END
+		END
+	END
+
+	ACTION_PHP_EACH EEex_append_array AS data => ~~ BEGIN
+		LAF B3_ESCAPE_STRING STR_VAR str = EVAL ~%data_1%~ RET data_1_escaped = escaped_str END
+		LAF B3_ESCAPE_STRING STR_VAR str = EVAL ~%data_2%~ RET data_2_escaped = escaped_str END
+		APPEND ~%data%.IDS~ ~%data_1% %data_2%~ UNLESS ~^[ %TAB%]*%data_1_escaped%[ %TAB%]+%data_2_escaped%[ %TAB%]*%MNL%*$~
+	END
+
+	// InfinityLoader (upstream binaries, Torment InfinityLoader.ini / .db), EEex.dll and LuaBindings.dll for Torment
+	COPY ~EEex/loader~ ~.~
+	COPY ~EEex/copy/EEex_scripts~ ~EEex_scripts~
+	COPY ~EEex/copy/override~ ~override~
+	COPY ~EEex/loader/pattern_dbs~ ~EEex_scripts/extra_pattern_dbs~
+	COPY ~EEex/loader/profiler~ ~EEex_scripts/profiler~
+
+////////////////////////////////////////////////////////////////////////////////////////////
+// Enable attack info module: Show to-hit chances when hovering attack cursor over target //
+////////////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @9 LABEL ~B3-EEex-Module-Attack-Info~ DESIGNATED 9
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Attack Info Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+//////////////////////////////////////////////////////////////////////////////////
+// Enable effect menu module: LShift-on-hover to view spells affecting creature //
+//////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @2 LABEL ~B3-EEex-Module-Effect-Menu~ DESIGNATED 2
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Effect Menu Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Enable empty container module: Highlight empty containers in gray instead of cyan //
+///////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @3 LABEL ~B3-EEex-Module-Empty-Containers~ DESIGNATED 3
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Empty Container Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Enable hotkey module: Edit override/B3Hotkey.lua to create advanced spell hotkeys //
+///////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @4 LABEL ~B3-EEex-Module-Hotkey~ DESIGNATED 4
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex_scripts/EEex_Modules.lua~ ~EEex_scripts~
+		REPLACE_TEXTUALLY ~^\([ %TAB%]+\["B3Hotkey"\][ %TAB%]+=[ %TAB%]+\)false~ ~\1true~
+	BUT_ONLY
+
+/////////////////////////////////////////////////////////
+// Enable scale module: Customizable UI scaling factor //
+/////////////////////////////////////////////////////////
+
+BEGIN @5 LABEL ~B3-EEex-Module-Scale~ DESIGNATED 5
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Scale Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+//////////////////////////////////////////////////////////////
+// Enable time step module: Advance 1 game tick on keypress //
+//////////////////////////////////////////////////////////////
+
+BEGIN @6 LABEL ~B3-EEex-Module-Time-Step~ DESIGNATED 6
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Time Step Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// Enable timer module: Visual indicators for modal actions, contingencies, and spell/item cooldowns //
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+BEGIN @7 LABEL ~B3-EEex-Module-Timer-Main~ DESIGNATED 7
+GROUP @2000 // Optional
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~EEex.tp2~ (ID_OF_LABEL ~EEex.tp2~ ~B3-EEex-Main~) @1002 // This component requires the main component to be installed.
+
+	COPY ~EEex.ini~ ~.~
+		LPF SetINIString STR_VAR section=~Timer Module~ key=~Enable~ value=~1~ END
+	BUT_ONLY
+
+// Upstream component 8 (LuaJIT) is not offered: it replaces the engine's Lua 5.2 with LuaJIT 5.1, which was
+// never tested on Torment.

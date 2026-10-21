@@ -76,5 +76,11 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
    - [x] 5d Real EEex boot in the dev game; every module tested in game; modder feature battery 18/18 (F10).
    Not tested in game (code-verified only): extensions of existing opcodes (101/148/214/248/249/280/326/333/342).
    Known limitations (AUDIT.md): keybind cast off the op214 internal list, nil decode source for PST-only projectiles.
-   - [ ] 5e Localization: French translation of EEex's strings (X-fr_FR.lua).
-6. [ ] WeiDU installer (setup-EEex-PTEE), test on a real playthrough.
+   - [x] 5e Localization: French translation of EEex's strings (X-fr_FR.lua); EEex Options "Reset All" button.
+6. [ ] WeiDU installer, test on a real playthrough.
+   - [x] 6a installer/EEex.tp2 (upstream tp2 name, labels and component numbers kept for mods that check EEex;
+         Torment.exe v3.2.2.0 Steam size check; LuaJIT component dropped), English + French tra, readme.
+   - [x] 6b tools/package.py -> build/EEex-PTEE-v1.3.1-ptee1.zip; no dev-only files (checked).
+   - [x] 6c Clean install on a fresh Steam copy (PTEE (EEex release test)): all 9 components install, game boots,
+         821 + 27 patterns resolved; full uninstall leaves no file behind.
+   - [ ] 6d Real playthrough on the release install (John).
