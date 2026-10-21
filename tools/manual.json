@@ -496,5 +496,11 @@
   "method": "labelcheck.py",
   "conf": "high",
   "note": "upstream pattern also matched PT 0x44a590 (no direct caller, similarity 0.15); Torment uiEventMenuStack (PT 0x457b40) calls 0x4525f0 exactly where BG calls eventMenu (0x3d4af0)"
+ },
+ "Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr": {
+  "addr": "0x1823ef",
+  "method": "return address check",
+  "conf": "high",
+  "note": "return address of the DecodeProjectile call at PT 0x1823ea (5-byte call); the old value 0x1823f1 was 2 bytes past it"
  }
 }

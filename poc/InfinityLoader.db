@@ -916,7 +916,7 @@ Pattern=4C8BE8488BCB
 Pattern=E99D000000834E
 
 [Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr]
-Pattern=4C8BE0448BF7
+Pattern=33FF4C8BE044
 
 [Data-CGameEffect::DecodeEffectFromBase()-After-CGameEffect::CopyFromBase()]
 Pattern=488BC3488B4C24704833CC

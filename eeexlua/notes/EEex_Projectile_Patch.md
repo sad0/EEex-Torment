@@ -1,0 +1,19 @@
+# EEex_Projectile_Patch.lua (Torment)
+
+| Hook / label | Verdict | Evidence |
+|---|---|---|
+| `CProjectile::DecodeProjectile` entry (BeforeRestore 0,5,5) | **patched** | PT 0x27c4a0. First instruction `mov [rsp+0x20], rbx` (5 bytes, relocatable). Torment has a 3rd argument nLevel in r8w (PT 0x27c515 `movzx edi, r8w`); upstream used r8 as scratch -> r8 now saved / restored on both exits (override and normal), removed from the watchdog ignore lists. The hook also stores rdx (pDecoder) into its home slot `[entry rsp+0x10]` for the LastCall hook (Torment's body references only `[rsp+0x358]` = rbx home among the home slots). r9 is not read by the function (first use PT 0x27c707 is a write). |
+| `Hook-CProjectile::DecodeProjectile()-LastCall` (AfterCall) | **patched** | PT 0x282b85 = last CString destructor before the cookie check (same as BG 0x22edab). Projectile in rsi (PT 0x282b8a `mov rax, rsi`; BG rbx). Frame `sub rsp, 0x300` + 7 pushes -> return address `[rsp+0x338]` (BG `[rsp+0x198]`). Decoder: BG rsi; Torment keeps it in r14 (PT 0x27c4f1) but the multi-projectile loop reuses r14 (PT 0x2829c8 `movzx r14d, [rbp-0x60]`) and keeps no other copy -> read from the home slot written by the entry hook (`[rsp+0x348]`). |
+| `CProjectile::AddEffect` (BeforeRestore 0,8,8) | **patched (extended)** | PT 0x279a80, same body as BG 0x22a270. Torment calls AddEffect virtually (`call [rax+0xC8]` at every site, no direct caller) and two classes override it: CProjectileArea (PT 0x279aa0) and CProjectileBAM (PT 0x279b20, inherited by all BAM-derived classes; Torment-only opcode 0x16c timing-2 special case, otherwise the base body inlined). All 80 projectile vtables of Torment hold one of these three. The hook is installed on all three (addresses read from `CProjectileArea::VFTable` / `CProjectileBAM::VFTable` + 0xC8, first byte checked); the overrides start with `cmp dword ptr [rdx+0x10], 0x16c` (7 bytes, relocatable) and write r8 / r9 / rax before reading them. |
+| getAddEffectAIBase (Data-...-AddEffect()-RetPtr) | unchanged | Every label is the return address of `call [rax+0xC8]` in the mapped function, aiBase in the same register as BG: rbx (ForceSpell PT 0x17f999, ForceSpellPoint 0x1819f9, Spell 0x42c099, SpellPoint 0x42f7aa, Swing 0x433522, UseItem 0x4366c5, UseItemPoint 0x437bcc), r14 (FireSpell 0x17daba, FireSpellPoint 0x17e8e1), rbp (FireItem 0x17d3f8), rsi (FireItemPoint 0x17d780), r15 (CBounceList::Add 0x159d1c, identical code). Other writes of these registers in the functions are epilogue reloads or error-return paths. CGameEffect::FireSpell: same prologue (PT 0x204cc0, 4 pushes, `lea rbp, [rsp-0x2f]`) and same source-id read `[rbp+0x7f]` (PT 0x204ce0); CGameObjectArray::GetShare PT 0x2db2d0 same signature (PT 0x204d30). FireSpellPoint RetPtr and RetPtr-2 are the same PT 0x17eeeb (Torment tail-merges both calls into one). LoadProjectile labels are not in the table (upstream too: aiBase 0). |
+
+## Label fixes needed
+- none for this file (see EEex_Projectile.md for `Data-CGameAIBase::ForceSpellPoint()-CProjectile::DecodeProjectile()-RetPtr`).
+
+## BG-only / Torment-only
+- Torment-only AddEffect overrides: covered (three hooks).
+- AddEffect sites that exist only in Torment (other `call [rax+0xC8]` on projectiles) get aiBase = 0, as upstream does for unknown return addresses.
+
+## Open questions
+- The entry hook writes the caller-reserved home slot of rdx; harmless for the engine (callee-owned by the x64 ABI, unused by Torment's DecodeProjectile). Not checked: whether EEex's debug hook-integrity watchdog (off by default) compares that stack slot.
+- Lua / EEex.dll calls through the binding `CProjectile:AddEffect` (EEex_Opcode.lua 124/127) call the base function directly (non-virtual binding), so for BAM / Area projectiles they skip Torment's override (opcode 0x16c case). That belongs to the bindings (CProjectile::AddEffect should be a virtual call in Torment): reported, not changed here.
