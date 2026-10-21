@@ -63,15 +63,18 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
          neighbour (coverage.py, field_evidence_funcs.json). Uncap FPS ported and tested
          in game (AUDIT.md). Extra-DB menu hooks located in Torment (ptee.db; drawItem keeps the uiItem in
          r13, CheckScrollbarContentHeight's jump is inverted: phase-5 Lua notes in AUDIT.md)
-5. [ ] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.
+5. [x] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.
    Pipeline: eeexlua/build.py (upstream copy + eeexlua/patches/*.py), notes per file in eeexlua/notes/,
    tools/luahooks.py + hookreview.py (188 hook sites, BG vs Torment), tools/rebuild_all.sh (header -> DLLs -> Lua).
-   - [~] 5a Hook files: Sprite, Fix, Opcode, Stats, Object, Trigger, UncapFPS, ReplaceLua + infra files done;
-         Menu/Key/Actionbar/B3 and Projectile/Action/AIBase/Script/GameObject/GameState/Mix/Debug in review.
-         Found: Damage OnDone label in the wrong function, vismap Destruct 6-byte prologue, GetAtOffset frame,
-         trigger IDs 0x410D-0x4110 taken by Torment (moved to 0x4112-0x4115), op146 conflicts with Torment's.
-   - [x] 5b Fields the Lua needs, proven: CAbilityId, CButtonData, uiColumn, CInfGame keymap (500 entries),
-         CChitin cMousePosition/bPointerUpdated (Torment reordered members), CInfButtonArray m_nSelectedButton.
-   - [ ] 5c Non-hook Lua semantics (actionbar button types, options/menus UI, keybinds, AI speed default 40...).
-   - [ ] 5d Real EEex_Main boot in the dev game, then every module tested in game.
+   - [x] 5a Hook files: every hook site reviewed and adapted (registers, frames, restore sizes, labels).
+   - [x] 5b Fields and struct sizes the Lua / EEex.dll need, proven (CAbilityId, CButtonData, uiColumn, uiMenu 0x98,
+         uiItem 0x3b0 + 17 nested structs, keymap, cMousePosition, CGameEffect 0x160, CGameSprite 0x52c8,
+         CAIAction 0x80); sizes asserted at compile time.
+   - [x] 5c Non-hook Lua semantics: options button (OPTIONS_GAMEPLAY), Torment toggles/scrollbars, actionbar button
+         types, trigger ids 0x4112..0x4115, op146 switch on special bit 1, AI speed 40, B3 modules (timer on both
+         portrait menus, effect menu, attack info, scale in %), Torment signatures in Lua callers.
+   - [x] 5d Real EEex boot in the dev game; every module tested in game; modder feature battery 18/18 (F10).
+   Not tested in game (code-verified only): extensions of existing opcodes (101/148/214/248/249/280/326/333/342).
+   Known limitations (AUDIT.md): keybind cast off the op214 internal list, nil decode source for PST-only projectiles.
+   - [ ] 5e Localization: French translation of EEex's strings (X-fr_FR.lua).
 6. [ ] WeiDU installer (setup-EEex-PTEE), test on a real playthrough.
