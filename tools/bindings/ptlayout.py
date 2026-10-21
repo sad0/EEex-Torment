@@ -380,7 +380,11 @@ def consistency():
                 del pt_off[s][f.name]; dropped += 1; continue
             if ok:
                 g = ok[-1]
-                if pt_off[s][g.name] + isize(s, g) > p:
+                # Torment moved some members (CChitin bInTimer/m_AIStale before cMousePosition): an order violation
+                # between two hand-proven members (manual_fields.json) is kept when no bytes overlap
+                moved = how[s].get(f.name) == how[s].get(g.name) == 'manual' and not any(
+                    pt_off[s][h.name] < p + sz and p < pt_off[s][h.name] + isize(s, h) for h in ok)
+                if pt_off[s][g.name] + isize(s, g) > p and not moved:
                     # overlap / order violation: keep the better-ranked one
                     rf, rg = RANK.get(how[s].get(f.name), 5), RANK.get(how[s].get(g.name), 5)
                     if rf == rg == 0:

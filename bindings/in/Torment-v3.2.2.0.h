@@ -45537,7 +45537,9 @@ struct __cppobj CChitin
 	nobinding unsigned int _ptpad_e68[87];
 	int bInTimer;
 	int m_AIStale;
-	nobinding unsigned int _ptpad_fcc[6];
+	int bPointerUpdated;
+	CPoint cMousePosition;
+	nobinding unsigned int _ptpad_fd8[3];
 	int m_displayStale;
 	int m_bInSyncUpdate;
 	nobinding unsigned int _ptpad_fec[2];
@@ -47676,9 +47678,12 @@ struct __cppobj CInfButtonArray
 	int m_nState;
 	int m_nLastState;
 	int m_bWayPointsOn;
-	nobinding unsigned __int64 _ptpad_1ff0[39];
+	CVidCell m_vcButtons;
 	CVidCell m_vcActions;
-	nobinding unsigned __int64 _ptpad_2260[2];
+	int m_quickButtonToConfigure;
+	int m_nListStartIndex;
+	int m_nSelectedButton;
+	nobinding unsigned int _ptpad_226c[1];
 	int m_bToggleButtonCleric;
 	nobinding unsigned int _ptpad_2274[1];
 };
@@ -48332,7 +48337,9 @@ struct __cppobj CInfGame
 	CGameSave m_gameSave;
 	CGameOptions m_options;
 	CGameJournal m_cGameJournal;
-	nobinding unsigned __int64 _ptpad_bb60[504];
+	nobinding unsigned __int64 _ptpad_bb60[4];
+	Array<int,500> m_pKeymap;
+	Array<int,500> m_pKeymapFlags;
 	CVariableHash m_variables;
 	CVariableHash m_namedCreatures;
 	STR_RES m_soundNeedParty;
@@ -54042,9 +54049,11 @@ struct __cppobj CGameSpriteEquipment
 struct __cppobj CAbilityId
 {
 	__int16 m_itemType;
-	nobinding unsigned __int16 _ptpad_2[1];
+	__int16 m_itemNum;
 	__int16 m_abilityNum;
-	nobinding unsigned __int16 _ptpad_6[5];
+	CResRef m_res;
+	unsigned __int8 m_targetType;
+	unsigned __int8 m_targetCount;
 	unsigned int m_toolTip;
 };
 
@@ -71812,7 +71821,9 @@ struct uiVariant
 /* 7385 */
 struct uiColumn
 {
-	nobinding unsigned __int64 _ptpad_0[3];
+	uiVariant *width;
+	uiItem *items;
+	uiColumn *next;
 };
 
 /* 7386 */

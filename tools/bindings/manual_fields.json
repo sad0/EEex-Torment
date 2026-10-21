@@ -31,6 +31,14 @@
    "bEngineActive": {
     "pt": "0x40",
     "why": "CChitin::SelectEngine and CChitin::SynchronousUpdate: aligned [this+0x4c] (BG) / [this+0x40] (PT)"
+   },
+   "cMousePosition": {
+    "pt": "0xfd0",
+    "why": "aligned qword [chitin+0xf98] (BG) / [chitin+0xfd0] (PT) in CChitin::ProcessEvents (write, BG 0x41be45 / PT 0x4a56f7), CScreenWorld::OnMouseWheel (2), CVidMode::RenderPointer, positionOfEvent, CInfinity::GetWorldCoordinates"
+   },
+   "bPointerUpdated": {
+    "pt": "0xfcc",
+    "why": "aligned [chitin+0xf94] (BG) / [chitin+0xfcc] (PT) in CVidMode::RenderPointer (2), CInfCursor::CursorUpdate (2), CInfCursor::SetCursor (2), CVidMode::Flip"
    }
   },
   "CGameArea": {
@@ -161,6 +169,18 @@
    "m_sSaveScreenArea": {
     "pt": "none",
     "why": "runtime: placement invalid on all 1 live instances (cstring check, bindings/memprobe.py); left opaque"
+   },
+   "m_pKeymap": {
+    "pt": "0xbb80",
+    "type": "Array<int,500>",
+    "size": "0x7d0",
+    "why": "CInfToolTip::FormatTooltipPrefix BG 0x26aa7b mov edi,[rcx+rsi*4+0x7f88] / PT 0x2cdefb [rcx+rsi*4+0xbb80], key-down handlers test byte [reg+0x7f88] / [reg+0xbb80] (13 aligned functions); Torment has 500 entries: the flags array follows at 0xc350 (0xc350-0xbb80 = 500*4)"
+   },
+   "m_pKeymapFlags": {
+    "pt": "0xc350",
+    "type": "Array<int,500>",
+    "size": "0x7d0",
+    "why": "CInfToolTip::FormatTooltipPrefix BG 0x26aaae cmp [rax+rsi*4+0x88e8],0 / PT 0x2cdf2e [rax+rsi*4+0xc350],0; key-down handlers test byte [reg+0xc350] after [reg+0xbb80]"
    }
   },
   "CRuleTables": {
@@ -2166,7 +2186,12 @@
   },
   "CPathSearch": {},
   "CGameRemoteObjectArray": {},
-  "CInfButtonArray": {},
+  "CInfButtonArray": {
+   "m_nSelectedButton": {
+    "pt": "0x2268",
+    "why": "CInfButtonArray::OnLButtonPressed BG 0x2635e0 / PT 0x2c5a30: 25 aligned [rsi+0x2268] reads/writes (same button type constants 2/0xb/0xd), bindings/dispfind.py"
+   }
+  },
   "CMultiplayerSettings": {},
   "C2DArray": {},
   "CAreaSoundsAndMusic": {},
@@ -2834,6 +2859,9 @@
   "CVisibilityMapTreeNode": "CVisibilityMap::BuildTree identical (BG 0x255da0 / PT 0x2b7c90, ratio 1.000) and TraverseTree / ClimbWall identical except CVisibilityMap::m_nWidth: every node access (+0/+8/+0xa/+0x10, stride 20) has the same displacement",
   "CAIIdList": "every CAIIdList method (both ctors, dtor, scalar dtor, both Find, both LoadList) identical in BG and PT including all memory displacements (tools/fdiff.py disp_diffs = 0)",
   "CGameAreaClairvoyanceEntry": "built inline by CGameArea::AddClairvoyanceObject (BG 0x179a90 / PT 0x18fc60): identical stores m_position +0, m_id +8, m_timeKill +0xc, m_pVisibleTerrainTable +0x10, m_charId +0x18, m_visRange +0x1c; size 40 in both",
-  "CWeaponIdentification": "CImmunitiesWeapon::OnList (reads +0/+4/+8/+0xc flag tests) and CImmunitiesWeapon::operator= identical in BG and PT including all displacements"
+  "CWeaponIdentification": "CImmunitiesWeapon::OnList (reads +0/+4/+8/+0xc flag tests) and CImmunitiesWeapon::operator= identical in BG and PT including all displacements",
+  "CButtonData": "CButtonData::operator= BG 0x1650a0 / PT 0x177350 identical member-by-member copy (0,8,0xc,0x14,0x18,0x1c,0x1e,0x20,0x22 CResRef,0x2a,0x2b,0x2c,0x30,0x31); size 0x34 (ReadyOffInternalList imul 0x34)",
+  "CAbilityId": "embedded in CButtonData at 0x1c: CButtonData::operator= BG 0x1650a0 / PT 0x177350 copies itemType +0, itemNum +2, abilityNum +4, m_res +6 (CResRef::operator=), targetType +0xe, targetCount +0xf, toolTip +0x10 identically; GetQuickButtons / GetInternalButtonList aligned +0x22 accesses",
+  "uiColumn": "column loops over uiItem.list.columns ([item+0x150]) in two list functions, BG 0x3cbb20 / PT 0x448340 and BG 0x3cc120 / PT 0x448990: width = [col] (passed to the uiVariant evaluator BG 0x3c3f20 / PT 0x440500), items = [col+8], next = [col+0x10] (mov rsi,[rsi+0x10]), identical in both"
  }
 }

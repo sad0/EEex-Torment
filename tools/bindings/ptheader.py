@@ -147,7 +147,13 @@ def rewrite(m):
     lines = []
     placed = 0
     sal = natural_align(name)
-    for iname, ilines in items_of(body):
+    # members in Torment offset order (Torment moved some, e.g. CChitin bInTimer/m_AIStale before cMousePosition)
+    order = []
+    for k, (iname, ilines) in enumerate(items_of(body)):
+        it = items.get(iname)
+        key = -1 if iname == '__vftable' else (it['pt'] if it and it['pt'] is not None else 1 << 40)
+        order.append((key, k, iname, ilines))
+    for _, _, iname, ilines in sorted(order):
         it = items.get(iname)
         if iname == '__vftable' and cur == 0:
             lines += ilines; cur = 8; placed += 1; continue
