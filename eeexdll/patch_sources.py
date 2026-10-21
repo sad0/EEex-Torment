@@ -256,6 +256,12 @@ PATCHES = {
         ('''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment
 ''', '''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment || !PTEE::IsActiveCinematic(sprite)
 '''),
+        # Torment has no CDerivedStats::m_disableSpells (op145 only knows the three spell-type flags)
+        ('''		stats.m_disableSpells != exData.oldDisableSpells
+		||
+		!std::equal(''', '''		!std::equal('''),
+        ('''		exData.oldDisableSpells = stats.m_disableSpells;
+''', ''),
         # WSPECIAL.2DA has no SPEED column in Torment (HIT, DAMAGE only): EEex's BG fix does not apply.
         ('@body void EEex::Fix_Hook_ImplementWSPECIALSpeedColumn(', '''{
 	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement

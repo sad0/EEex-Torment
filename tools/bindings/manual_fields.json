@@ -5,6 +5,10 @@
    "m_cMessageHandler": {
     "pt": "0x1760",
     "why": "every AddMessage call site: mov rcx,[g_pBaldurChitin]; add rcx,0x1760 (BG 0x1768)"
+   },
+   "m_cTlkTable": {
+    "pt": "0x1180",
+    "why": "CBaldurChitin::CBaldurChitin and CBaldurChitin::LoadOptions: aligned [this+0x1150] (BG) / [this+0x1180] (PT)"
    }
   },
   "CChitin": {
@@ -19,6 +23,14 @@
    "bInTimer": {
     "pt": "0xfc4",
     "why": "autoprove: 4 unanimous votes from 4 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_bRenderTilesLinear": {
+    "pt": "0x1d4",
+    "why": "CVidTile::RenderTexture (BG 0x42586c [chitin+0x1dc] / PT 0x4aedbb [chitin+0x1d4]) and CGameOptions::SetOption (BG 0x1ef288 / PT 0x210724) aligned"
+   },
+   "bEngineActive": {
+    "pt": "0x40",
+    "why": "CChitin::SelectEngine and CChitin::SynchronousUpdate: aligned [this+0x4c] (BG) / [this+0x40] (PT)"
    }
   },
   "CGameArea": {
@@ -83,6 +95,14 @@
    "m_glowVidCell": {
     "pt": "0x148",
     "why": "autoprove: 64 unanimous votes from 48 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_nOldScrollState": {
+    "pt": "0x2c8",
+    "why": "CInfinity::CInfinity (BG 0x29b1af [+0x30c]=0 / PT 0x3017a8 [+0x2c8]=0, same store sequence) and CInfinity::Render (BG 0x2a099d / PT 0x30669c cmp [+0x30c]/[+0x2c8], 0)"
+   },
+   "m_nScrollAttempts": {
+    "pt": "none",
+    "why": "Torment has no scroll-attempts failsafe: the CInfinity ctor store sequence (BG 0x29b2b7..0x29b2cb: +0x300, +0x2fc, +0x308, +0x310) has no counterpart for +0x308 in PT (0x3018ba..0x3018c8: +0x2c0, +0x2bc, +0x2cc), and CInfinity::Scroll PT 0x3084d0 has no attempts logic (BG 0x2a2f69..0x2a2f90)"
    }
   },
   "CInfGame": {
@@ -1732,6 +1752,14 @@
    "m_memorizedSpellsLevelPriest": {
     "pt": "0xab8",
     "why": "autoprove: 2 unanimous votes from 2 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "m_disabledSpellTypes": {
+    "pt": "0xb68",
+    "why": "CGameEffectDisableSpellType::ApplyEffect (op145) writes [sprite+param2*4+0x1c80] (BG, m_derivedStats 0x1120+0xb60) / [sprite+param2*4+0x1b50] (PT, 0xfe8+0xb68) for param2 < 3; PT CGameEffectPolymorph::ApplyEffect and CGameSprite::HaveSpell / ::Spell access 0x1b50..0x1b58; ends 4 bytes before m_cExtraMeleeEffects 0xb78 (CDerivedStats::operator= dword-copy alignment is ambiguous there)"
+   },
+   "m_disableSpells": {
+    "pt": "none",
+    "why": "Torment has no \"disable all spells\" state: op145 has no param2 = 3 case in PT (BG writes [sprite+0x1c8c]), and no PT code accesses sprite+0x1b5c (derived+0xb74); HaveSpell only tests the three type flags"
    }
   },
   "CScreenCharacter": {
@@ -1870,7 +1898,16 @@
     "why": "autoprove: 10 unanimous votes from 7 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
    }
   },
-  "CProjectileFall": {},
+  "CProjectileFall": {
+   "m_sideMove": {
+    "pt": "0x3d8",
+    "why": "CProjectileFall::AIUpdate (2 sites) and ::Fire: aligned [this+0x3b8] / [this+0x3d8]"
+   },
+   "m_nSideSpeed": {
+    "pt": "0x3dc",
+    "why": "CProjectileFall::AIUpdate (2 sites) and ::Fire: aligned [this+0x3bc] / [this+0x3dc]"
+   }
+  },
   "CProjectileChain": {},
   "CProjectileArea": {
    "m_resref": {
@@ -1922,6 +1959,10 @@
    "tooltip": {
     "pt": "0x320",
     "why": "autoprove: 205 unanimous votes from 16 aligned functions validated on proven fields of this struct; fits between proven neighbours (bindings/autoprove.py)"
+   },
+   "edit": {
+    "pt": "0x1e8",
+    "why": "editTextInput ([item+0x1e8/0x1ec/0x1f8] BG -> 0x1f0/0x1f4/0x200 PT: maxlines, maxchars, cursor), startEditCapture and stopEditCapture (cursor 0x1f8 -> 0x200), uiFocusTextEdit (var 0x1e0 -> 0x1e8)"
    }
   },
   "CProjectileTravelDoor": {},
@@ -2302,6 +2343,16 @@
    "m_face": {
     "pt": "0x10",
     "why": "CMessageSetDirection::Run identical (1.00): lea rdx, [this+0x10] passes m_face in both exes"
+   }
+  },
+  "uiMenu": {
+   "ha": {
+    "pt": "0x60",
+    "why": "onOpen/onClose/offset proven at +8 (2-3 functions each), width/height/enabled at +8, struct size 112 -> 120: ha/va keep their BG place between offset and width"
+   },
+   "va": {
+    "pt": "0x64",
+    "why": "see ha"
    }
   }
  },
@@ -2772,6 +2823,9 @@
   "vec4_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
   "CSelectiveBonus": "CSelectiveBonusList::GetBonus/operator=/ClearAll identical (1.00) in PT, accesses to the bonus records with delta 0",
   "CImmunitySpell": "CImmunitiesSpellList::operator= and CGameEffectImmunitySpell::ApplyEffect identical (1.00) in PT: record accesses at 0x0/0x8/0xc with delta 0",
-  "CVisibilityMapTreeNode": "CVisibilityMap::BuildTree identical (BG 0x255da0 / PT 0x2b7c90, ratio 1.000) and TraverseTree / ClimbWall identical except CVisibilityMap::m_nWidth: every node access (+0/+8/+0xa/+0x10, stride 20) has the same displacement"
+  "CVisibilityMapTreeNode": "CVisibilityMap::BuildTree identical (BG 0x255da0 / PT 0x2b7c90, ratio 1.000) and TraverseTree / ClimbWall identical except CVisibilityMap::m_nWidth: every node access (+0/+8/+0xa/+0x10, stride 20) has the same displacement",
+  "CAIIdList": "every CAIIdList method (both ctors, dtor, scalar dtor, both Find, both LoadList) identical in BG and PT including all memory displacements (tools/fdiff.py disp_diffs = 0)",
+  "CGameAreaClairvoyanceEntry": "built inline by CGameArea::AddClairvoyanceObject (BG 0x179a90 / PT 0x18fc60): identical stores m_position +0, m_id +8, m_timeKill +0xc, m_pVisibleTerrainTable +0x10, m_charId +0x18, m_visRange +0x1c; size 40 in both",
+  "CWeaponIdentification": "CImmunitiesWeapon::OnList (reads +0/+4/+8/+0xc flag tests) and CImmunitiesWeapon::operator= identical in BG and PT including all displacements"
  }
 }

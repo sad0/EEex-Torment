@@ -56,7 +56,12 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
    - [x] 4c 13 Unsupported patterns: each proven absent / not applicable in PT (PATTERNS.md); EEex.dll
          uses no coroutine API; phase 5 must guard the labels in EEex_Fix_Patch.lua (op33 + CheckAdd
          spell-immunity fixes), EEex_Projectile.lua (UpdateAOE, Multi MM decode), EEex_Script_Patch.lua (OnCopy)
-   - [ ] 4d Port stubbed code: Uncap FPS, visibility map, engine reimplementations, debug.cpp,
-         CGameSprite::MakeLocal, function_names.db, extra-DB menu hooks
+   - [ ] 4d Port stubbed code. Done: visibility map (AUDIT.md), MakeLocal, LuaBindings overrides,
+         function_names.db (tools/funcnames.py, 10.5k Torment names), engine_reimplementations/debug.cpp
+         documented as never installed by EEex. Proof hardening on the way: packed-struct sizes, 61 BG
+         names fixed (bgnames_merge.py), field evidence needs >= 2 aligned functions or a consistent
+         neighbour (coverage.py, field_evidence_funcs.json). Left: Uncap FPS (uncap_fps.cpp: WinMain,
+         Update, Scroll, FitViewPosition, AdjustViewPosition, ZoomToMap/ResetZoom, EndDialog, uiDrawMenuStack,
+         TransitionMenu, mid hooks; differences listed in AUDIT.md), extra-DB menu hooks
 5. [ ] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.
 6. [ ] WeiDU installer (setup-EEex-PTEE), test on a real playthrough.

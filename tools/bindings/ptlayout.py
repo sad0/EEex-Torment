@@ -17,6 +17,13 @@ for k, v in EV.items():
     s, o, z = k.split('|')
     for a, c in v.items():
         ev[s][int(o, 16)][int(a, 16)] += c
+# aligned BG functions behind each piece of evidence (field_evidence_funcs.json, fieldmap.py)
+evf = collections.defaultdict(lambda: collections.defaultdict(lambda: collections.defaultdict(set)))
+if os.path.exists(os.path.join(HERE, 'field_evidence_funcs.json')):
+    for k, v in json.load(open(os.path.join(HERE, 'field_evidence_funcs.json'))).items():
+        s, o, z = k.split('|')
+        for a, fs in v.items():
+            evf[s][int(o, 16)][int(a, 16)] |= set(fs)
 
 
 def best(counter, minfrac=0.8):
@@ -61,6 +68,7 @@ for s in list(T.structs):
             if o < bs:
                 for a, n in c.items():
                     ev[b][o][a] += n
+                    evf[b][o][a] |= evf[s][o][a]
         b = primary_base(b)
 
 # base-typed accesses beyond the base size belong to a derived class: attribute when only one
@@ -79,6 +87,7 @@ for b in list(ev):
         if len(cands) == 1:
             for a, n in c.items():
                 ev[cands[0]][o][a] += n
+                evf[cands[0]][o][a] |= evf[b][o][a]
 
 pt_off = collections.defaultdict(dict)   # s -> item name -> pt offset
 class _SizeDict(dict):
@@ -93,6 +102,7 @@ class _SizeDict(dict):
 pt_size = _SizeDict()
 how = collections.defaultdict(dict)
 VOTES = collections.defaultdict(dict)   # s -> item -> evidence vote count (tie-break between evidence items)
+FUNCS = collections.defaultdict(dict)   # s -> item -> number of distinct aligned functions behind the winning offset
 
 # hand-verified fields/sizes (manual_fields.json): {"fields": {S: {f: off}}, "sizes": {S: size}}
 MANUAL = {'fields': {}, 'sizes': {}}
@@ -158,6 +168,7 @@ def solve_struct(s):
         if f.name in pt_off[s]:
             continue
         cand = collections.Counter()
+        candf = collections.defaultdict(set)
         u, n = item_struct(f)
         for o, c in ev.get(s, {}).items():
             if not (f.off <= o < f.off + max(f.size, 1)):
@@ -166,6 +177,7 @@ def solve_struct(s):
                 if o == f.off or (T.parse_type(f.type)[0] == 'arr'):
                     for a, k in c.items():
                         cand[a - (o - f.off)] += k
+                        candf[a - (o - f.off)] |= evf[s][o][a]
             else:
                 us = bg_size(u)
                 kk, rr = divmod(o - f.off, us) if us else (0, o - f.off)
@@ -173,11 +185,13 @@ def solve_struct(s):
                 if inner is not None and (kk == 0 or u in pt_size):
                     for a, k in c.items():
                         cand[a - inner - kk * pt_size.get(u, us)] += k
+                        candf[a - inner - kk * pt_size.get(u, us)] |= evf[s][o][a]
         if cand:
             b = best(cand)
             if b is not None:
                 pt_off[s][f.name] = b; how[s][f.name] = 'evidence'; changed = True
                 VOTES[s][f.name] = cand[b]
+                FUNCS[s][f.name] = len(candf[b])
     return changed
 
 
@@ -425,7 +439,8 @@ for _s, _fs in DROP.items():
     for _f in _fs:
         pt_off[_s].pop(_f, None); how[_s][_f] = 'dropped'
 out = {s: {'bg_size': T.structs[s].size, 'pt_size': pt_size.get(s),
-           'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': MSIZE[s].get(f.name, f.size), 'type': f.type, 'how': how[s].get(f.name)} for f in own_items(s)}}
+           'items': {f.name: {'bg': f.off, 'pt': pt_off[s].get(f.name), 'size': MSIZE[s].get(f.name, f.size), 'type': f.type, 'how': how[s].get(f.name),
+                              'nfun': FUNCS[s].get(f.name)} for f in own_items(s)}}
        for s in T.structs}
 json.dump(out, open(os.path.join(HERE, 'ptlayout.json'), 'w'), indent=0)
 if __name__ == '__main__':

@@ -156,6 +156,7 @@ print('roots: typed functions', len(entry_types), 'returns', len(ret_types), 'gl
 
 # ---- evidence ----------------------------------------------------------------------------------
 EV = collections.defaultdict(collections.Counter)   # (struct, bg_abs, size) -> Counter(pt_abs)
+EVF = collections.defaultdict(lambda: collections.defaultdict(set))   # same key -> pt_abs -> aligned BG functions
 CALLARGS = collections.defaultdict(collections.Counter)  # (callee, argreg) -> Counter(struct)
 SITES = collections.defaultdict(list)  # (struct, bg_abs) -> [(bg fn, pt fn, bg insn, bg base off, pt base off)]
 VCALLS = collections.defaultdict(collections.Counter)  # (struct, bg vtable displacement) -> Counter(pt displacement)
@@ -214,6 +215,7 @@ def run(bgf, ptf, roots):
                 sl.append((bgf, ptf, i.address, ob, op_))
             if pmop is not None and op_ is not None and pmop.mem.base == mop.mem.base and i.mnemonic != 'lea':
                 EV[(s, bg_abs, mop.size)][op_ + pmop.mem.disp] += 1
+                EVF[(s, bg_abs, mop.size)][op_ + pmop.mem.disp].add(bgf)
                 n += 1
         # transfer function
         regs_w = set()
@@ -311,6 +313,8 @@ if __name__ == '__main__':
             break
     print('functions with evidence', nf, 'observations', tot, 'keys', len(EV), file=sys.stderr)
     json.dump({f'{s}|{hex(o)}|{z}': {hex(a): c for a, c in v.items()} for (s, o, z), v in EV.items()}, open('bindings/field_evidence.json', 'w'), indent=0)
+    json.dump({f'{s}|{hex(o)}|{z}': {hex(a): sorted(hex(f) for f in fs) for a, fs in v.items()} for (s, o, z), v in EVF.items()},
+              open('bindings/field_evidence_funcs.json', 'w'), indent=0)
     json.dump({f'{s}|{hex(o)}': [[hex(a) if a is not None else None for a in t] for t in v] for (s, o), v in SITES.items()},
               open('bindings/field_sites.json', 'w'), indent=0)
     json.dump({f'{s}|{hex(d)}': {hex(a): c for a, c in v.items()} for (s, d), v in sorted(VCALLS.items())},

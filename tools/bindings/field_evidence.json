@@ -1,15 +1,63 @@
 {
-"CResWED|0x51|1": {
+"CResItem|0x51|1": {
+"0x51": 4
+},
+"CResItem|0x68|8": {
+"0x68": 4
+},
+"Item_Header_st|0x68|2": {
+"0x68": 3
+},
+"CResItem|0x58|8": {
+"0x58": 4
+},
+"CResSpell|0x51|1": {
 "0x51": 6
 },
+"CResSpell|0x68|8": {
+"0x68": 6
+},
+"Spell_Header_st|0x68|2": {
+"0x68": 3
+},
+"CResSpell|0x58|8": {
+"0x58": 4
+},
+"CResItem|0x60|8": {
+"0x60": 2
+},
+"CResSpell|0x60|8": {
+"0x60": 3
+},
+"Spell_Header_st|0x70|2": {
+"0x70": 2
+},
+"CResWED|0x51|1": {
+"0x51": 10
+},
 "CResWED|0x58|8": {
-"0x58": 12
+"0x58": 16
 },
 "WED_WedHeader_st|0x8|4": {
 "0x8": 4
 },
 "CResWED|0x60|8": {
 "0x60": 5
+},
+"CResWED|0x68|8": {
+"0x68": 2
+},
+"WED_PolyHeader_st|0x10|4": {
+"0x10": 1
+},
+"WED_WedHeader_st|0xc|4": {
+"0xc": 2
+},
+"WED_WedHeader_st|0x18|4": {
+"0x18": 2
+},
+"WED_WedHeader_st|0x1c|4": {
+"0x1c": 1
 },
 "C2DArray|0x30|2": {
 "0x30": 15
@@ -51,7 +99,7 @@
 "0x8": 3
 },
 "CAIAction|0x0|2": {
-"0x0": 8
+"0x0": 9
 },
 "CAIAction|0x20|8": {
 "0x20": 1
@@ -87,10 +135,10 @@
 "0x0": 2
 },
 "CAIGroup|0x10|8": {
-"0x10": 14
+"0x10": 15
 },
 "CAIGroup|0x20|4": {
-"0x20": 17
+"0x20": 18
 },
 "CAIGroup|0x4|4": {
 "0x4": 8
@@ -120,37 +168,37 @@
 "0x28": 2
 },
 "CAIObjectType|0x0|8": {
-"0x0": 1
+"0x0": 2
 },
 "CAIObjectType|0xb|1": {
-"0xb": 13
+"0xb": 15
 },
 "CAIObjectType|0x15|1": {
-"0x15": 7
+"0x15": 9
 },
 "CAIObjectType|0x16|1": {
-"0x16": 7
+"0x16": 9
 },
 "CAIObjectType|0x17|1": {
-"0x17": 7
+"0x17": 9
 },
 "CAIObjectType|0xc|4": {
-"0xc": 9
+"0xc": 11
 },
 "CAIObjectType|0x8|1": {
-"0x8": 8
+"0x8": 14
 },
 "CAIObjectType|0x9|1": {
-"0x9": 7
+"0x9": 9
 },
 "CAIObjectType|0xa|1": {
-"0xa": 7
+"0xa": 9
 },
 "CAIObjectType|0x10|4": {
-"0x10": 5
+"0x10": 6
 },
 "CAIObjectType|0x14|1": {
-"0x14": 6
+"0x14": 8
 },
 "CVariable|0x28|4": {
 "0x28": 152
@@ -182,7 +230,7 @@
 "0xa1fc": 4
 },
 "CInfGame|0x6630|2": {
-"0xa218": 189
+"0xa218": 190
 },
 "CInfGame|0x6740|4": {
 "0xa320": 14
@@ -194,16 +242,16 @@
 "0xb544": 9
 },
 "CAIObjectType|0x10|1": {
-"0x10": 1
+"0x10": 2
 },
 "CAIObjectType|0x11|1": {
-"0x11": 1
+"0x11": 2
 },
 "CAIObjectType|0x12|1": {
-"0x12": 1
+"0x12": 2
 },
 "CAIObjectType|0x13|1": {
-"0x13": 1
+"0x13": 2
 },
 "CAIResponse|0x8|8": {
 "0x8": 1
@@ -251,7 +299,7 @@
 "0x20": 7
 },
 "CString|0x0|8": {
-"0x0": 82
+"0x0": 103
 },
 "CAITrigger|0x30|8": {
 "0x30": 2
@@ -277,7 +325,7 @@
 "0x1140": 1
 },
 "CScreenWorld|0x0|8": {
-"0x0": 32
+"0x0": 33
 },
 "CBaldurChitin|0x1118|8": {
 "0x1150": 21,
@@ -291,7 +339,7 @@
 "0x1160": 1
 },
 "CScreenWorldMap|0x0|8": {
-"0x0": 8
+"0x0": 9
 },
 "CBaldurChitin|0x1128|8": {
 "0x1160": 15,
@@ -471,7 +519,7 @@
 "0x115": 4
 },
 "CBaldurMessage|0x13f|1": {
-"0x117": 5
+"0x117": 6
 },
 "CBaldurMessage|0x140|8": {
 "0x118": 1
@@ -501,10 +549,10 @@
 "0x81": 1
 },
 "CBaldurMessage|0x80|1": {
-"0x80": 5
+"0x80": 6
 },
 "CBaldurMessage|0x13c|1": {
-"0x114": 2
+"0x114": 3
 },
 "CBaldurMessage|0x124|8": {
 "0xfc": 1
@@ -591,6 +639,9 @@
 "CInfGame|0x7984|4": {
 "0xb564": 6
 },
+"CBaldurMessage|0x82|1": {
+"0x82": 11
+},
 "CScreenMultiPlayer|0x6d0|1": {
 "0x738": 1
 },
@@ -601,13 +652,13 @@
 "0x11c": 7
 },
 "CBaldurMessage|0x144|2": {
-"0x11c": 1
+"0x11c": 2
 },
 "CBaldurMessage|0x145|1": {
-"0x11d": 3
+"0x11d": 4
 },
 "CBaldurMessage|0x146|1": {
-"0x11e": 3
+"0x11e": 5
 },
 "CBaldurMessage|0x147|1": {
 "0x11f": 4
@@ -703,7 +754,7 @@
 "0x78": 1
 },
 "CGameSprite|0x5040|4": {
-"0x4de8": 1
+"0x4de8": 3
 },
 "CDerivedStats|0x0|4": {
 "0x0": 2
@@ -822,13 +873,13 @@
 "0x44": 3
 },
 "CDerivedStats|0x46|2": {
-"0x46": 6
+"0x46": 9
 },
 "CDerivedStats|0x48|2": {
-"0x48": 5
+"0x48": 8
 },
 "CDerivedStats|0x4a|2": {
-"0x4a": 4
+"0x4a": 5
 },
 "CDerivedStats|0x4c|2": {
 "0x4c": 3
@@ -2156,7 +2207,7 @@
 "0x31": 1
 },
 "CGameAIBase|0x18|8": {
-"0x18": 23
+"0x18": 24
 },
 "CGameArea|0x244|4": {
 "0x244": 11
@@ -2165,16 +2216,16 @@
 "0x258": 2
 },
 "CGameAIBase|0x448|2": {
-"0x440": 11
+"0x440": 14
 },
 "CGameAIBase|0x468|8": {
-"0x460": 9
+"0x460": 11
 },
 "CGameAIBase|0x3f8|2": {
 "0x3f0": 18
 },
 "CInfGame|0x6590|1": {
-"0xa178": 417
+"0xa178": 418
 },
 "CPoint|0x0|8": {
 "0x0": 43
@@ -2207,16 +2258,16 @@
 "0xa1e0": 35
 },
 "CGameArea|0x640|4": {
-"0x650": 13
+"0x650": 14
 },
 "CGameArea|0x644|4": {
-"0x654": 13
+"0x654": 14
 },
 "CGameArea|0x648|4": {
-"0x658": 9
+"0x658": 10
 },
 "CGameArea|0x64c|4": {
-"0x65c": 9
+"0x65c": 10
 },
 "CGameObject|0xc|8": {
 "0xc": 16
@@ -2297,10 +2348,10 @@
 "0x490": 1
 },
 "CGameArea|0xb98|4": {
-"0xb70": 4
+"0xb70": 5
 },
 "CGameArea|0xc20|8": {
-"0xc00": 2
+"0xc00": 3
 },
 "CGameArea|0xc38|8": {
 "0xc18": 7
@@ -2396,16 +2447,16 @@
 "0x98": 1
 },
 "CGameAreaNotes|0x0|4": {
-"0x0": 4
+"0x0": 5
 },
 "CGameAreaNotes|0x30|4": {
-"0x30": 7
+"0x30": 8
 },
 "CBaldurChitin|0x15fc|1": {
 "0x161c": 1
 },
 "CGameAreaNotes|0x20|8": {
-"0x20": 3
+"0x20": 5
 },
 "CGameAreaNotes|0x58|4": {
 "0x58": 2
@@ -2480,7 +2531,7 @@
 "0x570": 2
 },
 "CGameContainer|0x568|8": {
-"0x560": 8
+"0x560": 10
 },
 "CGameContainer|0x48|4": {
 "0x48": 13
@@ -2521,25 +2572,25 @@
 "0xc28": 8
 },
 "CGameArea|0xbbc|2": {
-"0xb90": 15
+"0xb90": 16
 },
 "CGameArea|0xbb0|8": {
-"0xb88": 13
+"0xb88": 14
 },
 "CInfGame|0x66d0|1": {
 "0xa2b0": 16
 },
 "CGameContainer|0x95c|4": {
-"0x954": 5
+"0x954": 6
 },
 "CInfGame|0x4038|1": {
 "0x78b8": 8
 },
 "CGameContainer|0x964|2": {
-"0x95c": 5
+"0x95c": 6
 },
 "CGameContainer|0x966|2": {
-"0x95e": 5
+"0x95e": 6
 },
 "CGameContainer|0x9a0|2": {
 "0x998": 4
@@ -2738,34 +2789,34 @@
 "0x10": 2
 },
 "CGameEffect|0x10|4": {
-"0x10": 3
+"0x10": 4
 },
 "CGameEffect|0x14|4": {
-"0x14": 2
+"0x14": 3
 },
 "CGameEffect|0x18|4": {
-"0x18": 2
+"0x18": 3
 },
 "CGameEffect|0x1c|4": {
-"0x1c": 4
+"0x1c": 5
 },
 "CGameEffect|0x20|4": {
-"0x20": 3
+"0x20": 4
 },
 "CGameEffect|0x5c|4": {
 "0x5c": 5
 },
 "CGameEffect|0x24|4": {
-"0x24": 2
+"0x24": 3
 },
 "CGameEffect|0x28|4": {
-"0x28": 5
+"0x28": 6
 },
 "CGameEffect|0x2c|2": {
-"0x2c": 3
+"0x2c": 4
 },
 "CGameEffect|0x2e|2": {
-"0x2e": 3
+"0x2e": 4
 },
 "CGameEffect|0x54|4": {
 "0x54": 2
@@ -2810,7 +2861,7 @@
 "0x88": 2
 },
 "CGameEffect|0x110|4": {
-"0x110": 9
+"0x110": 10
 },
 "CGameEffect|0x114|4": {
 "0x114": 1
@@ -2843,7 +2894,7 @@
 "0xa27a": 32
 },
 "CGameEffectList|0x8|8": {
-"0x8": 16
+"0x8": 17
 },
 "CGameEffect|0x8|2": {
 "0x8": 1
@@ -2916,7 +2967,7 @@
 "0x270": 1
 },
 "CGameFireball3d|0x260|4": {
-"0x260": 6
+"0x260": 7
 },
 "CGameFireball3d|0x8|1": {
 "0x8": 1
@@ -2994,10 +3045,10 @@
 "0x260": 7
 },
 "CGameFireball3d|0x25c|4": {
-"0x25c": 1
+"0x25c": 2
 },
 "CGameFireball3d|0x26c|4": {
-"0x26c": 1
+"0x26c": 2
 },
 "CGameFireball3d|0x210|8": {
 "0x210": 2
@@ -3027,7 +3078,7 @@
 "0x82": 1
 },
 "CGameFireball3d|0x274|4": {
-"0x274": 1
+"0x274": 2
 },
 "CGameFireball3d|0x3b0|8": {
 "0x3b0": 1
@@ -3045,7 +3096,7 @@
 "0x80": 1
 },
 "CGameFireball3d|0x270|4": {
-"0x270": 1
+"0x270": 2
 },
 "CGameFireball3d|0x3b8|8": {
 "0x3b8": 1
@@ -3192,7 +3243,7 @@
 "0xf4": 2
 },
 "CGameSpawning|0xda|2": {
-"0xda": 3
+"0xda": 4
 },
 "CGameSpawning|0x58|1": {
 "0x58": 1
@@ -3308,6 +3359,60 @@
 "CImmunitiesItemTypeEquipList|0x8|8": {
 "0x8": 2
 },
+"CImmunitiesSpellLevel|0x0|4": {
+"0x0": 1
+},
+"CImmunitiesSpellLevel|0x4|4": {
+"0x4": 1
+},
+"CImmunitiesSpellLevel|0x8|4": {
+"0x8": 1
+},
+"CImmunitiesSpellLevel|0xc|4": {
+"0xc": 1
+},
+"CImmunitiesSpellLevel|0x10|4": {
+"0x10": 1
+},
+"CImmunitiesSpellLevel|0x14|4": {
+"0x14": 1
+},
+"CImmunitiesSpellLevel|0x18|4": {
+"0x18": 1
+},
+"CImmunitiesSpellLevel|0x1c|4": {
+"0x1c": 1
+},
+"CImmunitiesSpellLevel|0x20|4": {
+"0x20": 1
+},
+"CImmunitiesSpellLevelDecrementing|0x0|8": {
+"0x0": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x8|8": {
+"0x8": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x10|8": {
+"0x10": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x18|8": {
+"0x18": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x20|8": {
+"0x20": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x28|8": {
+"0x28": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x30|8": {
+"0x30": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x38|8": {
+"0x38": 2
+},
+"CImmunitiesSpellLevelDecrementing|0x40|8": {
+"0x40": 2
+},
 "CSelectiveBonusList|0x8|8": {
 "0x8": 4
 },
@@ -3322,6 +3427,24 @@
 },
 "CImmunitiesSchoolAndSecondaryDecrementing|0x8|8": {
 "0x8": 3
+},
+"CImmunitiesSpellLevel|0x0|8": {
+"0x0": 1
+},
+"CImmunitiesSpellLevel|0x8|8": {
+"0x8": 1
+},
+"CImmunitiesSpellLevel|0x10|8": {
+"0x10": 1
+},
+"CImmunitiesSpellLevel|0x18|8": {
+"0x18": 1
+},
+"CImmunitiesSpellLevel|0x20|8": {
+"0x20": 1
+},
+"CImmunitiesSpellLevelDecrementing|0x48|8": {
+"0x48": 1
 },
 "CSelectiveWeaponTypeList|0x8|8": {
 "0x8": 2
@@ -3440,6 +3563,15 @@
 "CRes|0x8|8": {
 "0x8": 17
 },
+"CMachineStates|0x0|8": {
+"0x0": 2
+},
+"CMachineStates|0x8|8": {
+"0x8": 2
+},
+"CMachineStates|0x10|8": {
+"0x10": 2
+},
 "CMessageColorUpdate|0xc|4": {
 "0xc": 1
 },
@@ -3472,6 +3604,27 @@
 },
 "CMessageContainerItems|0x18|8": {
 "0x18": 8
+},
+"CMessageFireProjectile|0xc|4": {
+"0xc": 1
+},
+"CMessageFireProjectile|0x8|4": {
+"0x8": 4
+},
+"CMessageFireProjectile|0x0|8": {
+"0x0": 2
+},
+"CMessageFireProjectile|0x10|2": {
+"0x10": 4
+},
+"CMessageFireProjectile|0x14|4": {
+"0x14": 5
+},
+"CMessageFireProjectile|0x18|8": {
+"0x18": 4
+},
+"CMessageFireProjectile|0x20|4": {
+"0x20": 4
 },
 "CMessageSetPath|0xc|4": {
 "0xc": 1
@@ -3765,19 +3918,19 @@
 "0x14": 3
 },
 "CMessageDoorStatus|0x8|4": {
-"0x8": 3
+"0x8": 4
 },
 "CMessageDoorStatus|0x14|2": {
-"0x14": 3
+"0x14": 4
 },
 "CMessageDoorStatus|0x16|2": {
-"0x16": 3
+"0x16": 4
 },
 "CMessageDoorStatus|0x10|4": {
-"0x10": 3
+"0x10": 4
 },
 "CMessageDoorStatus|0x18|1": {
-"0x18": 3
+"0x18": 5
 },
 "CMessageFakeExpireCheck|0x8|4": {
 "0x8": 3
@@ -3923,21 +4076,6 @@
 "CMessageAddAction|0x80|8": {
 "0x80": 1
 },
-"CMessageFireProjectile|0x8|4": {
-"0x8": 3
-},
-"CMessageFireProjectile|0x10|2": {
-"0x10": 3
-},
-"CMessageFireProjectile|0x14|4": {
-"0x14": 4
-},
-"CMessageFireProjectile|0x18|8": {
-"0x18": 3
-},
-"CMessageFireProjectile|0x20|4": {
-"0x20": 3
-},
 "CMessageForcePosition|0x10|8": {
 "0x10": 2
 },
@@ -3977,14 +4115,14 @@
 "CMoveList|0x8|8": {
 "0x8": 1
 },
+"CMultiplayerSettings|0x38|4": {
+"0x38": 5
+},
 "CMultiplayerSettings|0x91|1": {
 "0x91": 4
 },
 "CMultiplayerSettings|0x92|1": {
-"0x92": 2
-},
-"CMultiplayerSettings|0x38|4": {
-"0x38": 4
+"0x92": 3
 },
 "CMultiplayerSettings|0x8c|1": {
 "0x8c": 6
@@ -4026,22 +4164,22 @@
 "0x73": 1
 },
 "CMultiplayerSettings|0x50|4": {
-"0x50": 4
+"0x50": 7
 },
 "CMultiplayerSettings|0x54|4": {
-"0x54": 1
+"0x54": 2
 },
 "CMultiplayerSettings|0x58|4": {
-"0x58": 1
+"0x58": 2
 },
 "CMultiplayerSettings|0x5c|4": {
-"0x5c": 1
+"0x5c": 2
 },
 "CMultiplayerSettings|0x60|4": {
-"0x60": 1
+"0x60": 2
 },
 "CMultiplayerSettings|0x64|4": {
-"0x64": 1
+"0x64": 2
 },
 "CMultiplayerSettings|0x8d|1": {
 "0x8d": 2
@@ -4095,10 +4233,28 @@
 "0xaa1": 3
 },
 "CScreenWorld|0xa7c|4": {
-"0xb2c": 3
+"0xb2c": 4
 },
 "CScreenWorldMap|0xf0c|1": {
-"0xf5c": 6
+"0xf5c": 7
+},
+"CMultiplayerSettings|0x74|4": {
+"0x74": 2
+},
+"CMultiplayerSettings|0x78|4": {
+"0x78": 1
+},
+"CMultiplayerSettings|0x7c|4": {
+"0x7c": 1
+},
+"CMultiplayerSettings|0x80|4": {
+"0x80": 1
+},
+"CMultiplayerSettings|0x84|4": {
+"0x84": 1
+},
+"CMultiplayerSettings|0x88|4": {
+"0x88": 1
 },
 "CMultiplayerSettings|0xc0|1": {
 "0xc0": 3
@@ -4227,19 +4383,19 @@
 "0x7c": 1
 },
 "CPathSearch|0x20|8": {
-"0x20": 13
+"0x20": 16
 },
 "CPathSearch|0x28|4": {
-"0x28": 1
+"0x28": 2
 },
 "CPathSearch|0x28|2": {
-"0x28": 12
+"0x28": 14
 },
 "CPathSearch|0x0|4": {
 "0x0": 4
 },
 "CPersistantEffectListRegenerated|0x8|8": {
-"0x8": 4
+"0x8": 5
 },
 "CProjectileBAM|0x0|8": {
 "0x0": 3
@@ -4761,7 +4917,7 @@
 "0x128": 2
 },
 "CSearchBitmap|0x120|8": {
-"0x120": 8
+"0x120": 10
 },
 "CSearchBitmap|0x148|1": {
 "0x148": 2
@@ -4856,11 +5012,11 @@
 "CSearchRequest|0x70|8": {
 "0x70": 1
 },
+"CSearchBitmap|0x138|4": {
+"0x138": 12
+},
 "CInfGame|0x7d74|4": {
 "0xb958": 4
-},
-"CSearchBitmap|0x138|4": {
-"0x138": 10
 },
 "CSearchBitmap|0x13c|4": {
 "0x13c": 8
@@ -4961,11 +5117,14 @@
 "CTiledObject|0x18|8": {
 "0x18": 1
 },
-"CScreenWorld|0x9e0|4": {
-"0xa90": 3
+"CTimerWorld|0x4|2": {
+"0x4": 1
 },
 "CTimerWorld|0x0|4": {
-"0x0": 4
+"0x0": 5
+},
+"CScreenWorld|0x9e0|4": {
+"0xa90": 3
 },
 "CTimerWorld|0x5|1": {
 "0x5": 2
@@ -4977,7 +5136,7 @@
 "0x8": 7
 },
 "CVVCHash|0x0|8": {
-"0x0": 1
+"0x0": 2
 },
 "CVariableHash|0x0|8": {
 "0x0": 7
@@ -5079,10 +5238,10 @@
 "0x60": 5
 },
 "CVisibilityMap|0xe|2": {
-"0xa": 12
+"0xa": 13
 },
 "CVisibilityMap|0x0|8": {
-"0x0": 7
+"0x0": 8
 },
 "CVisibilityMap|0x18|8": {
 "0x18": 4
@@ -5217,7 +5376,7 @@
 "0x0": 5
 },
 "CWeather|0x158|1": {
-"0x158": 12
+"0x158": 13
 },
 "CFog|0x18|4": {
 "0x18": 2
@@ -5248,6 +5407,12 @@
 },
 "CSnowStorm|0x18|4": {
 "0x18": 1
+},
+"CWeather|0x18|2": {
+"0x18": 3
+},
+"CWeather|0x20|4": {
+"0x20": 2
 },
 "CFog|0x24|4": {
 "0x24": 1
@@ -5307,13 +5472,19 @@
 "0x78": 2
 },
 "CWeather|0x4|2": {
-"0x4": 5
+"0x4": 8
+},
+"CWeather|0x159|1": {
+"0x159": 3
+},
+"CWeather|0x6|2": {
+"0x6": 7
+},
+"CWeather|0x2|2": {
+"0x2": 3
 },
 "CWeather|0x164|4": {
 "0x164": 2
-},
-"CWeather|0x6|2": {
-"0x6": 5
 },
 "CWeather|0x160|4": {
 "0x160": 5
@@ -5325,8 +5496,11 @@
 "0xb948": 6,
 "0xb9a8": 1
 },
-"CWeather|0x18|2": {
-"0x18": 2
+"CWeather|0x15c|4": {
+"0x15c": 2
+},
+"CWeather|0x168|1": {
+"0x168": 3
 },
 "CWeather|0x14|4": {
 "0x14": 3
@@ -5335,13 +5509,13 @@
 "0x8": 2
 },
 "CWorldMap|0x10|8": {
-"0x10": 19
+"0x10": 21
 },
 "CWorldMap|0x18|8": {
-"0x18": 16
+"0x18": 17
 },
 "CWorldMap|0x20|8": {
-"0x20": 8
+"0x20": 9
 },
 "CWorldMap|0x8|4": {
 "0x8": 3
@@ -5465,10 +5639,10 @@
 "0x161d": 1
 },
 "CGameRemoteObjectArray|0x8|2": {
-"0x8": 3
+"0x8": 4
 },
 "CGameRemoteObjectArray|0x0|8": {
-"0x0": 1
+"0x0": 2
 },
 "CGameRemoteObjectArray|0x10|8": {
 "0x10": 1
@@ -5613,31 +5787,31 @@
 "0x134": 3
 },
 "CInfinity|0x318|4": {
-"0x2d4": 1
+"0x2d4": 2
 },
 "CInfinity|0x130|4": {
-"0x130": 7
+"0x130": 9
 },
 "CInfinity|0x13c|4": {
-"0x13c": 3
+"0x13c": 4
 },
 "CInfinity|0x138|4": {
-"0x138": 1
+"0x138": 2
 },
 "CInfinity|0x108|4": {
-"0x108": 1
+"0x108": 4
 },
 "CInfinity|0x314|4": {
-"0x2d0": 2
+"0x2d0": 3
 },
 "CInfinity|0x2f0|4": {
 "0x2b0": 4
 },
 "CInfinity|0x60|4": {
-"0x60": 11
+"0x60": 12
 },
 "CInfinity|0x64|4": {
-"0x64": 11
+"0x64": 12
 },
 "CInfinity|0x300|8": {
 "0x2c0": 2
@@ -5651,6 +5825,24 @@
 "CInfinity|0x78|16": {
 "0x78": 8
 },
+"CInfinity|0x30|8": {
+"0x30": 1
+},
+"CInfinity|0x0|8": {
+"0x0": 4
+},
+"CInfinity|0x8|8": {
+"0x8": 1
+},
+"CInfinity|0x10|8": {
+"0x10": 1
+},
+"CInfinity|0x18|8": {
+"0x18": 1
+},
+"CInfinity|0x20|8": {
+"0x20": 1
+},
 "CInfinity|0x28|8": {
 "0x28": 3
 },
@@ -5661,7 +5853,7 @@
 "0x4c": 3
 },
 "CVRamPool|0x0|4": {
-"0x0": 13
+"0x0": 16
 },
 "CInfinity|0x88|4": {
 "0x88": 1
@@ -5673,13 +5865,13 @@
 "0x94": 1
 },
 "CInfinity|0x78|4": {
-"0x78": 19
+"0x78": 21
 },
 "CInfinity|0xc0|4": {
 "0xc0": 8
 },
 "CInfinity|0x7c|4": {
-"0x7c": 18
+"0x7c": 19
 },
 "CInfinity|0xc4|4": {
 "0xc4": 8
@@ -5688,10 +5880,10 @@
 "0x38": 16
 },
 "CInfinity|0x80|4": {
-"0x80": 7
+"0x80": 8
 },
 "CInfinity|0x84|4": {
-"0x84": 6,
+"0x84": 7,
 "0x7c": 1
 },
 "CInfinity|0x50|4": {
@@ -5739,6 +5931,9 @@
 "CInfinity|0x2f4|8": {
 "0x2b4": 1
 },
+"CVRamPool|0x8|8": {
+"0x8": 26
+},
 "CInfinity|0xb4|4": {
 "0xb4": 1
 },
@@ -5759,9 +5954,6 @@
 },
 "CInfTileSet|0x134|4": {
 "0x134": 2
-},
-"CInfinity|0x0|8": {
-"0x0": 3
 },
 "CScreenAI|0x1b4|1": {
 "0x1bc": 3
@@ -5977,10 +6169,10 @@
 "0x879": 2
 },
 "CScreenCreateChar|0x813|1": {
-"0x87b": 4
+"0x87b": 5
 },
 "CScreenCreateChar|0x814|4": {
-"0x87c": 4
+"0x87c": 5
 },
 "CScreenCreateChar|0x828|4": {
 "0x890": 4
@@ -6025,7 +6217,7 @@
 "0x94e": 8
 },
 "CStringList|0x0|8": {
-"0x0": 11
+"0x0": 12
 },
 "CInfGame|0x9548|8": {
 "0xce20": 21
@@ -6034,7 +6226,7 @@
 "0xce28": 17
 },
 "CScreenCreateChar|0x768|4": {
-"0x7d0": 40
+"0x7d0": 42
 },
 "CScreenCreateChar|0x800|4": {
 "0x868": 13
@@ -6068,7 +6260,7 @@
 "0xc88": 3
 },
 "CScreenWorld|0xbe8|8": {
-"0xc98": 2
+"0xc98": 3
 },
 "CInfGame|0x1302|2": {
 "0x1622": 1
@@ -6114,7 +6306,7 @@
 "0x50": 15
 },
 "CScreenStore|0x748|8": {
-"0x7b0": 4
+"0x7b0": 5
 },
 "CScreenStore|0x7bc|4": {
 "0x824": 4
@@ -6126,7 +6318,7 @@
 "0x770": 6
 },
 "CScreenStore|0x7a0|8": {
-"0x808": 28
+"0x808": 33
 },
 "CScreenWizSpell|0x684|1": {
 "0x6ec": 1
@@ -6174,7 +6366,7 @@
 "0x17b4": 8
 },
 "CScreenWorld|0xa40|4": {
-"0xaf0": 5
+"0xaf0": 7
 },
 "CInfGame|0x6680|4": {
 "0xa268": 7
@@ -6201,7 +6393,7 @@
 "0x3e78": 1
 },
 "CScreenWorld|0xb94|4": {
-"0xc40": 11
+"0xc40": 12
 },
 "CScreenWorld|0x78|4": {
 "0x78": 1
@@ -6551,6 +6743,12 @@
 "CGameSprite|0xf90|8": {
 "0xf88": 6
 },
+"CGameSprite|0x0|4": {
+"0x0": 1
+},
+"CGameSprite|0x4|4": {
+"0x4": 1
+},
 "CGameSprite|0x4f18|8": {
 "0x4c30": 2
 },
@@ -6558,10 +6756,10 @@
 "0x8": 1
 },
 "CGameSprite|0x79c|2": {
-"0x794": 22
+"0x794": 23
 },
 "CGameSprite|0x79e|2": {
-"0x796": 23
+"0x796": 24
 },
 "CGameSprite|0x3a|1": {
 "0x3a": 1
@@ -6570,7 +6768,7 @@
 "0x3721": 3
 },
 "CGameSprite|0x4ea4|4": {
-"0x4bbc": 81,
+"0x4bbc": 83,
 "0x4bc4": 1
 },
 "CGameSprite|0x5c1|1": {
@@ -6616,7 +6814,7 @@
 "0x54a": 1
 },
 "CGameSprite|0x55c|4": {
-"0x554": 4
+"0x554": 5
 },
 "CGameSprite|0x300|8": {
 "0x300": 1
@@ -6778,13 +6976,13 @@
 "0x393d": 2
 },
 "CGameSprite|0x3bf4|4": {
-"0x3904": 12
+"0x3904": 13
 },
 "CGameSprite|0xc00|8": {
 "0xbf8": 12
 },
 "CGameSprite|0x4cac|4": {
-"0x49c8": 1
+"0x49c8": 3
 },
 "CGameSprite|0x4cb0|4": {
 "0x49cc": 1
@@ -6856,7 +7054,7 @@
 "0x507c": 9
 },
 "CGameSprite|0x51f8|4": {
-"0x4fa0": 2
+"0x4fa0": 3
 },
 "CGameChunk|0x99|1": {
 "0x99": 2
@@ -6966,7 +7164,7 @@
 "0x49f0": 1
 },
 "CGameSprite|0x4cc8|8": {
-"0x49e0": 4
+"0x49e0": 5
 },
 "CGameSprite|0x394c|4": {
 "0x3644": 3
@@ -7038,19 +7236,19 @@
 "0x10": 1
 },
 "CGameSprite|0x370|8": {
-"0x370": 1
+"0x370": 2
 },
 "CGameSprite|0x3bf8|4": {
 "0x3908": 11
 },
 "CGameSprite|0x3bfc|4": {
-"0x390c": 12
+"0x390c": 13
 },
 "CGameSprite|0x4c|2": {
 "0x4c": 5
 },
 "CGameSprite|0x4bc0|4": {
-"0x48d8": 2
+"0x48d8": 3
 },
 "CGameSprite|0x4e38|4": {
 "0x4b50": 4
@@ -7295,20 +7493,68 @@
 "CInfToolTip|0x0|8": {
 "0x0": 1
 },
+"CString|0x8|4": {
+"0x8": 1
+},
 "CString|0x0|4": {
-"0x0": 2
+"0x0": 4
 },
 "CResRef|0x0|8": {
-"0x0": 12
+"0x0": 19
 },
 "CResRef|0x0|1": {
-"0x0": 5
+"0x0": 16
+},
+"CProgressBar|0x14|2": {
+"0x14": 1
+},
+"CProgressBar|0x18|4": {
+"0x18": 1
+},
+"CProgressBar|0xc|8": {
+"0xc": 1
+},
+"CProgressBar|0x1d|8": {
+"0x1d": 1
+},
+"CProgressBar|0x1c|1": {
+"0x1c": 1
+},
+"CProgressBar|0x0|4": {
+"0x0": 1
+},
+"CProgressBar|0x28|8": {
+"0x28": 1
+},
+"CProgressBar|0x40|8": {
+"0x40": 1
+},
+"CProgressBar|0x58|8": {
+"0x58": 1
+},
+"CProgressBar|0x30|8": {
+"0x30": 1
+},
+"CProgressBar|0x48|8": {
+"0x48": 1
+},
+"CProgressBar|0x60|8": {
+"0x60": 1
+},
+"CProgressBar|0x38|8": {
+"0x38": 1
+},
+"CProgressBar|0x50|8": {
+"0x50": 1
+},
+"CProgressBar|0x68|8": {
+"0x68": 1
 },
 "CFileView|0x18|8": {
-"0x18": 2
+"0x18": 3
 },
 "CFileView|0x20|8": {
-"0x20": 1
+"0x20": 2
 },
 "CFileView|0xc|4": {
 "0xc": 1
@@ -7334,6 +7580,12 @@
 "CRes|0x34|4": {
 "0x34": 2
 },
+"CFileView|0x28|4": {
+"0x28": 1
+},
+"CFileView|0x34|4": {
+"0x34": 3
+},
 "CObList|0x0|8": {
 "0x0": 5
 },
@@ -7352,17 +7604,17 @@
 "CObList|0x28|8": {
 "0x28": 10
 },
+"CPtrList|0x18|4": {
+"0x18": 3
+},
+"CPtrList|0x8|8": {
+"0x8": 6
+},
 "CPtrList|0x10|8": {
 "0x10": 6
 },
-"CPtrList|0x8|8": {
-"0x8": 5
-},
 "CPtrList|0x20|8": {
 "0x20": 3
-},
-"CPtrList|0x18|4": {
-"0x18": 2
 },
 "CPtrList|0x28|8": {
 "0x28": 2
@@ -7371,34 +7623,34 @@
 "0x0": 2
 },
 "CFile|0x0|8": {
-"0x0": 5
-},
-"CFile|0x8|4": {
-"0x8": 15
-},
-"CFile|0xc|4": {
-"0xc": 4
+"0x0": 6
 },
 "CFile|0x10|8": {
-"0x10": 1
+"0x10": 2
+},
+"CFile|0x8|4": {
+"0x8": 16
+},
+"CFile|0xc|4": {
+"0xc": 5
 },
 "CStringList|0x28|8": {
-"0x28": 8
+"0x28": 9
 },
 "CStringList|0x20|8": {
-"0x20": 11
+"0x20": 12
 },
 "CStringList|0x10|8": {
-"0x10": 13
+"0x10": 14
 },
 "CNetwork|0x1a0|4": {
-"0x1a0": 4
+"0x1a0": 5
 },
 "CNetwork|0x100|8": {
 "0x100": 1
 },
 "IDPProvider|0x0|8": {
-"0x0": 10
+"0x0": 12
 },
 "CNetwork|0xb1|1": {
 "0xb1": 8
@@ -7413,7 +7665,7 @@
 "0x14": 4
 },
 "CNetwork|0x18|4": {
-"0x18": 3
+"0x18": 4
 },
 "CNetwork|0x6f0|1": {
 "0x6f0": 4
@@ -7431,10 +7683,10 @@
 "0x1c4": 1
 },
 "CNetwork|0x170|8": {
-"0x170": 6
+"0x170": 7
 },
 "CNetwork|0x84|4": {
-"0x84": 7
+"0x84": 8
 },
 "CNetwork|0x50|1": {
 "0x50": 3
@@ -7500,7 +7752,7 @@
 "0x78": 2
 },
 "CNetwork|0x80|1": {
-"0x80": 4
+"0x80": 5
 },
 "CNetwork|0x150|8": {
 "0x150": 2
@@ -7538,14 +7790,17 @@
 "CNetwork|0x15c|4": {
 "0x15c": 2
 },
+"CNetwork|0x134|4": {
+"0x134": 4
+},
+"CNetwork|0x139|1": {
+"0x139": 1
+},
 "CNetwork|0xb2|1": {
 "0xb2": 2
 },
-"CNetwork|0x134|4": {
-"0x134": 1
-},
 "CNetwork|0xb0|1": {
-"0xb0": 1
+"0xb0": 3
 },
 "CNetworkWindow|0x6|2": {
 "0x6": 2
@@ -7560,28 +7815,28 @@
 "0x0": 8
 },
 "CSound|0x8|8": {
-"0x8": 8
+"0x8": 9
 },
 "CSound|0x18|8": {
-"0x18": 25
+"0x18": 37
 },
 "CSoundChannel|0x0|8": {
 "0x0": 3
 },
 "CSoundChannel|0x44|4": {
-"0x44": 1
+"0x44": 3
 },
 "CSoundChannel|0x40|4": {
-"0x40": 1
+"0x40": 3
 },
 "CSoundChannel|0x48|4": {
-"0x48": 1
+"0x48": 2
 },
 "CSoundChannel|0x4c|1": {
-"0x4c": 1
+"0x4c": 2
 },
 "CSoundChannel|0x50|4": {
-"0x50": 1
+"0x50": 5
 },
 "CSoundImp|0x0|8": {
 "0x0": 4
@@ -7596,31 +7851,31 @@
 "0x18": 10
 },
 "CSoundImp|0x6c|4": {
-"0x6c": 7
+"0x6c": 8
 },
 "CSoundImp|0x68|4": {
-"0x68": 18
+"0x68": 19
 },
 "CSoundImp|0x68|8": {
 "0x68": 2
 },
 "CSoundImp|0x8|8": {
-"0x8": 11
+"0x8": 12
 },
 "CSoundImp|0x4c|1": {
 "0x4c": 3
 },
 "CSoundImp|0x50|4": {
-"0x50": 13
+"0x50": 14
 },
 "CSoundImp|0x80|1": {
 "0x80": 1
 },
 "CSoundImp|0x84|1": {
-"0x84": 9
+"0x84": 10
 },
 "CSoundImp|0x48|4": {
-"0x48": 10
+"0x48": 11
 },
 "CSoundImp|0x64|1": {
 "0x64": 4
@@ -7644,7 +7899,7 @@
 "0x60": 5
 },
 "CSoundImp|0x54|4": {
-"0x54": 3
+"0x54": 4
 },
 "CSoundImp|0x2c|4": {
 "0x2c": 2
@@ -7653,7 +7908,7 @@
 "0x28": 3
 },
 "CSoundImp|0x34|4": {
-"0x34": 7
+"0x34": 8
 },
 "CSoundImp|0x5c|4": {
 "0x5c": 4
@@ -7662,34 +7917,49 @@
 "0x58": 7
 },
 "CSoundImp|0x78|8": {
-"0x78": 6
+"0x78": 7
 },
 "CSoundImp|0x10|8": {
 "0x10": 2
 },
 "CSoundImp|0x30|4": {
-"0x30": 4
+"0x30": 5
 },
 "CSoundImp|0x80|4": {
 "0x80": 2
 },
+"CSoundChannel|0x18|8": {
+"0x18": 1
+},
 "CSoundMixer|0x0|8": {
-"0x0": 23
+"0x0": 40
 },
 "CSoundMixerImp|0x2890|8": {
 "0x2890": 2
 },
 "CSoundMixerImp|0x1c|4": {
-"0x1c": 4
+"0x1c": 6
+},
+"CSoundMixerImp|0x2820|8": {
+"0x2820": 1
+},
+"CSoundMixerImp|0x2818|8": {
+"0x2818": 1
 },
 "CSoundMixerImp|0x2860|4": {
 "0x2860": 2
 },
 "CSoundMixerImp|0x2870|4": {
-"0x2870": 6
+"0x2870": 14
 },
 "CSoundMixerImp|0x27b0|8": {
 "0x27b0": 4
+},
+"CSoundMixerImp|0x68|4": {
+"0x68": 2
+},
+"CSoundMixerImp|0x2858|8": {
+"0x2858": 7
 },
 "CSoundMixerImp|0x287c|4": {
 "0x287c": 2
@@ -7704,7 +7974,7 @@
 "0x27a4": 2
 },
 "CSoundMixerImp|0x2878|4": {
-"0x2878": 1
+"0x2878": 2
 },
 "CSoundMixerImp|0x28|8": {
 "0x28": 1
@@ -7716,7 +7986,7 @@
 "0x20": 1
 },
 "CSoundMixerImp|0x60|8": {
-"0x60": 2
+"0x60": 3
 },
 "CSoundMixerImp|0x8|8": {
 "0x8": 3
@@ -7729,9 +7999,6 @@
 },
 "CSoundMixerImp|0x38|4": {
 "0x38": 1
-},
-"CSoundMixerImp|0x2858|8": {
-"0x2858": 1
 },
 "CSoundMixerImp|0x58|4": {
 "0x58": 11
@@ -7752,7 +8019,7 @@
 "0x28": 2
 },
 "CVidBitmap|0x100|8": {
-"0x100": 31
+"0x100": 32
 },
 "CVidBitmap|0x118|8": {
 "0x118": 3
@@ -7812,7 +8079,7 @@
 "0x100": 1
 },
 "CVidCell|0x118|2": {
-"0x118": 1
+"0x118": 2
 },
 "CVidCell|0x120|4": {
 "0x120": 3
@@ -7823,6 +8090,9 @@
 "frameTableEntry_st|0x6|2": {
 "0x6": 4
 },
+"CVidCell|0x107|1": {
+"0x107": 4
+},
 "CVidFont|0x10|8": {
 "0x10": 5
 },
@@ -7830,13 +8100,13 @@
 "0x0": 9
 },
 "CVidMode|0x190|4": {
-"0x194": 1
+"0x194": 2
 },
 "CVidMode|0x194|4": {
-"0x198": 1
+"0x198": 2
 },
 "CVidMode|0x198|4": {
-"0x19c": 1
+"0x19c": 2
 },
 "CVidMode|0xc|4": {
 "0xc": 2
@@ -7872,10 +8142,10 @@
 "0x0": 2
 },
 "CVidMode|0x154|4": {
-"0x154": 11
+"0x154": 13
 },
 "CVidMode|0x150|4": {
-"0x150": 10
+"0x150": 11
 },
 "CTlkTable|0x30|1": {
 "0x30": 2
@@ -7902,7 +8172,7 @@
 "0x58": 1
 },
 "CSteam|0x0|1": {
-"0x0": 2
+"0x0": 3
 },
 "CSteam|0x5|4": {
 "0x5": 2
@@ -8007,13 +8277,22 @@
 "0x154": 1
 },
 "CSteam|0x178|8": {
-"0x178": 1
+"0x178": 2
 },
 "CSteam|0x158|4": {
 "0x158": 1
 },
 "CChitin|0x1f4|4": {
-"0x21c": 1
+"0x21c": 2
+},
+"CChitin|0x1f0|4": {
+"0x218": 2
+},
+"CChitin|0x1ec|4": {
+"0x214": 2
+},
+"CChitin|0x1e8|4": {
+"0x210": 3
 },
 "CChitin|0x0|8": {
 "0x0": 10
@@ -8021,20 +8300,11 @@
 "CChitin|0xfac|4": {
 "0xfe4": 3
 },
-"CChitin|0x1ec|4": {
-"0x214": 1
-},
 "CChitin|0xfb0|4": {
 "0xfe8": 2
 },
 "CChitin|0xfa8|4": {
 "0xfe0": 1
-},
-"CChitin|0x1f0|4": {
-"0x218": 1
-},
-"CChitin|0x1e8|4": {
-"0x210": 2
 },
 "CChitin|0x1040|4": {
 "0x1078": 1
@@ -8064,7 +8334,7 @@
 "0x1bc": 2
 },
 "CVidMode|0x1b4|16": {
-"0x1b8": 1
+"0x1b8": 2
 },
 "CVidMode|0x170|1": {
 "0x170": 9
@@ -8097,19 +8367,19 @@
 "0x0": 1
 },
 "CVidPalette|0x20|2": {
-"0x20": 2
+"0x20": 7
 },
 "CVidPalette|0x10|8": {
-"0x10": 35
+"0x10": 42
 },
 "CVidPalette|0x24|4": {
 "0x24": 4
 },
 "CVidPalette|0x22|1": {
-"0x22": 2
+"0x22": 4
 },
 "CVidPalette|0x18|4": {
-"0x18": 10
+"0x18": 13
 },
 "CVidPalette|0x1c|4": {
 "0x1c": 1
@@ -8121,37 +8391,64 @@
 "0x0": 9
 },
 "CVidPalette|0x28|4": {
-"0x28": 1
+"0x28": 2
 },
 "CVidPalette|0x2c|2": {
-"0x2c": 1
+"0x2c": 2
 },
 "CVidPalette|0x2e|1": {
-"0x2e": 1
+"0x2e": 2
+},
+"CMapStringToString|0x10|8": {
+"0x10": 1
 },
 "CMapStringToString|0x0|8": {
-"0x0": 4
+"0x0": 5
 },
 "CMapStringToString|0x8|8": {
-"0x8": 5
+"0x8": 6
+},
+"CMapStringToString|0x18|8": {
+"0x18": 1
+},
+"CMapStringToString|0x20|8": {
+"0x20": 1
+},
+"CMapStringToString|0x28|4": {
+"0x28": 1
 },
 "CMapStringToString|0x10|4": {
 "0x10": 4
 },
 "CVidPoly|0x8|4": {
-"0x8": 1
+"0x8": 4
+},
+"CVidPoly|0x18|8": {
+"0x18": 1
+},
+"CVidPoly|0x10|8": {
+"0x10": 1
+},
+"CVidPoly|0x20|8": {
+"0x20": 1
 },
 "CVidPoly|0x0|4": {
-"0x0": 1
+"0x0": 3
 },
 "CVidPoly|0x4|4": {
-"0x4": 2
+"0x4": 6
 },
 "CDWordArray|0x0|8": {
-"0x0": 4
+"0x0": 5
 },
 "CDWordArray|0x8|8": {
-"0x8": 4
+"0x8": 5
+},
+"CDWordArray|0x14|8": {
+"0x14": 1
+},
+"CDWordArray|0x10|4": {
+"0x10": 1
 },
 "CPtrArray|0x10|4": {
 "0x10": 4
@@ -8159,35 +8456,59 @@
 "CPtrArray|0x8|8": {
 "0x8": 4
 },
+"CParticle|0x18|8": {
+"0x18": 2
+},
+"CParticle|0x20|4": {
+"0x20": 6
+},
+"CParticle|0x24|8": {
+"0x24": 2
+},
+"CParticle|0x2c|4": {
+"0x2c": 6
+},
+"CParticle|0x8|4": {
+"0x8": 6
+},
+"CParticle|0x0|2": {
+"0x0": 4
+},
+"CParticle|0x2|2": {
+"0x2": 4
+},
+"CParticle|0x4|2": {
+"0x4": 3
+},
+"CParticle|0x14|1": {
+"0x14": 3
+},
+"CParticle|0x30|4": {
+"0x30": 4
+},
+"CParticle|0xc|2": {
+"0xc": 3
+},
 "CParticle|0x10|4": {
-"0x10": 2
+"0x10": 5
+},
+"CParticle|0x24|4": {
+"0x24": 5
+},
+"CParticle|0x28|4": {
+"0x28": 5
+},
+"CParticle|0x18|4": {
+"0x18": 3
+},
+"CParticle|0x1c|4": {
+"0x1c": 3
+},
+"CParticle|0x0|4": {
+"0x0": 1
 },
 "CParticle|0xc|1": {
 "0xc": 1
-},
-"CParticle|0x20|4": {
-"0x20": 3
-},
-"CParticle|0x30|4": {
-"0x30": 1
-},
-"CParticle|0x2c|4": {
-"0x2c": 3
-},
-"CParticle|0x24|4": {
-"0x24": 4
-},
-"CParticle|0x18|4": {
-"0x18": 2
-},
-"CParticle|0x28|4": {
-"0x28": 4
-},
-"CParticle|0x1c|4": {
-"0x1c": 2
-},
-"CParticle|0x0|2": {
-"0x0": 2
 },
 "CResTile|0x0|8": {
 "0x0": 8
@@ -8205,7 +8526,7 @@
 "0x0": 2
 },
 "CVoice|0x8|8": {
-"0x8": 3
+"0x8": 7
 },
 "CVoice|0x10|4": {
 "0x10": 1
@@ -8217,7 +8538,16 @@
 "0x10": 1
 },
 "CVoice|0x20|1": {
-"0x20": 2
+"0x20": 3
+},
+"CSound|0x18|4": {
+"0x18": 1
+},
+"CSound|0x14|4": {
+"0x14": 2
+},
+"CSound|0x10|4": {
+"0x10": 1
 },
 "CVoice|0x18|4": {
 "0x18": 1
@@ -8244,7 +8574,7 @@
 "0x40": 15
 },
 "DPWrapper|0x48|8": {
-"0x48": 13
+"0x48": 15
 },
 "DPWrapper|0x50|8": {
 "0x50": 12
@@ -8265,13 +8595,13 @@
 "0x0": 1
 },
 "DP_Packet|0x10|8": {
-"0x10": 3
+"0x10": 4
 },
 "DP_Packet|0x18|8": {
-"0x18": 4
+"0x18": 5
 },
 "DP_Packet|0x8|8": {
-"0x8": 2
+"0x8": 3
 },
 "DPWrapper|0x0|8": {
 "0x0": 12
@@ -8345,6 +8675,9 @@
 "CObList|0x30|4": {
 "0x30": 3
 },
+"CTlkFileOverride|0x0|8": {
+"0x0": 1
+},
 "CInfGame|0x3fa8|4": {
 "0x7828": 9
 },
@@ -8387,44 +8720,23 @@
 "CResWED|0x0|8": {
 "0x0": 1
 },
-"CResWED|0x68|8": {
-"0x68": 1
-},
 "CResWED|0x78|8": {
 "0x78": 1
 },
 "CResWED|0x80|8": {
 "0x80": 1
 },
-"CResItem|0x51|1": {
-"0x51": 1
-},
 "CResItem|0x0|8": {
 "0x0": 1
-},
-"CResItem|0x58|8": {
-"0x58": 1
-},
-"CResItem|0x60|8": {
-"0x60": 1
-},
-"CResItem|0x68|8": {
-"0x68": 1
-},
-"CResSpell|0x51|1": {
-"0x51": 1
 },
 "CResSpell|0x0|8": {
 "0x0": 1
 },
-"CResSpell|0x58|8": {
-"0x58": 1
+"CStringList|0x30|4": {
+"0x30": 3
 },
-"CResSpell|0x60|8": {
-"0x60": 1
-},
-"CResSpell|0x68|8": {
-"0x68": 1
+"CScreenWorldMap|0xf08|4": {
+"0xf58": 1
 },
 "CBaldurChitin|0x1e0|8": {
 "0x208": 2
@@ -8453,6 +8765,9 @@
 },
 "CInfGame|0x7cec|4": {
 "0xb8cc": 1
+},
+"CFileView|0x30|4": {
+"0x30": 1
 },
 "CGameSprite|0x4756|2": {
 "0x446e": 15
@@ -8529,20 +8844,62 @@
 "CBaldurEngine|0x4c|4": {
 "0x54": 1
 },
+"CKeyInfo|0x4|4": {
+"0x4": 1
+},
+"CKeyInfo|0x8|1": {
+"0x8": 2
+},
+"CKeyInfo|0x9|1": {
+"0x9": 2
+},
+"CKeyInfo|0x0|4": {
+"0x0": 2
+},
 "CVidFont|0x20|4": {
 "0x20": 1
 },
 "CVidFont|0x1c|4": {
-"0x1c": 1
+"0x1c": 2
 },
 "CVidFont|0x24|4": {
-"0x24": 1
+"0x24": 2
 },
 "CImmunitiesSpellList|0x8|8": {
 "0x8": 2
 },
 "CMessage|0x0|8": {
 "0x0": 1
+},
+"CGameEffect|0x0|2": {
+"0x0": 1
+},
+"CGameEffect|0x4|8": {
+"0x4": 1
+},
+"CGameEffect|0xc|2": {
+"0xc": 1
+},
+"CGameEffect|0xe|4": {
+"0xe": 1
+},
+"CGameEffect|0x1c|8": {
+"0x1c": 1
+},
+"CGameEffect|0x24|8": {
+"0x24": 1
+},
+"CGameEffect|0x2c|4": {
+"0x2c": 2
+},
+"CGameEffect|0x2|2": {
+"0x2": 1
+},
+"CGameEffect|0x12|2": {
+"0x12": 1
+},
+"CGameEffect|0x14|8": {
+"0x14": 1
 },
 "CGameDoor|0x660|2": {
 "0x664": 3
@@ -8553,8 +8910,17 @@
 "CGameDoor|0x48|4": {
 "0x48": 13
 },
+"CMessageDoorStatus|0xc|4": {
+"0xc": 1
+},
+"CMessageDoorStatus|0x0|8": {
+"0x0": 1
+},
 "CGameDoor|0x56c|1": {
 "0x564": 2
+},
+"CMessageDoorStatus|0x10|8": {
+"0x10": 1
 },
 "CGameContainer|0x50|4": {
 "0x50": 2
@@ -8605,52 +8971,61 @@
 "0xb74": 2
 },
 "CGameArea|0x50|4": {
-"0x50": 4
+"0x50": 5
 },
 "CGameArea|0x54|4": {
-"0x54": 3
+"0x54": 4
 },
 "CGameArea|0x58|4": {
-"0x58": 2
+"0x58": 3
 },
 "CGameArea|0x5c|4": {
-"0x5c": 2
+"0x5c": 3
 },
 "CGameArea|0x60|4": {
-"0x60": 2
+"0x60": 3
 },
 "CGameArea|0x64|4": {
-"0x64": 2
+"0x64": 3
 },
 "CGameArea|0x68|4": {
-"0x68": 2
+"0x68": 3
 },
 "CGameArea|0x6c|4": {
-"0x6c": 2
+"0x6c": 3
 },
 "CGameArea|0x70|4": {
-"0x70": 2
+"0x70": 3
 },
 "CGameArea|0x74|4": {
-"0x74": 2
+"0x74": 3
 },
 "CInfinity|0x311|1": {
-"0x2cd": 4
+"0x2cd": 6
 },
 "CInfinity|0x330|4": {
-"0x2ec": 4
+"0x2ec": 6
 },
 "CInfinity|0x334|4": {
-"0x2f0": 2
+"0x2f0": 4
 },
 "CInfinity|0x2ec|1": {
-"0x2ac": 2
+"0x2ac": 4
+},
+"CInfinity|0x2ed|1": {
+"0x2ad": 4
+},
+"CInfinity|0x2ea|1": {
+"0x2aa": 4
 },
 "CScreenMap|0x8f8|4": {
 "0x968": 3
 },
 "CSize|0x0|8": {
 "0x0": 1
+},
+"CVidImage|0x30|4": {
+"0x30": 1
 },
 "CGameDialogSprite|0x68|8": {
 "0x68": 1
@@ -8666,9 +9041,6 @@
 },
 "CScreenWorld|0xb40|4": {
 "0xbf0": 1
-},
-"CGameEffect|0x2c|4": {
-"0x2c": 1
 },
 "CGameEffect|0x10|8": {
 "0x10": 1
@@ -8871,6 +9243,15 @@
 "CRuleTables|0x1950|8": {
 "0x1c70": 1
 },
+"CPersistantEffect|0x18|2": {
+"0x18": 1
+},
+"CPersistantEffect|0x1a|2": {
+"0x1a": 2
+},
+"CGameAnimationType|0xb|1": {
+"0xb": 1
+},
 "CDerivedStats|0x2f0|8": {
 "0x2f8": 1
 },
@@ -9060,6 +9441,12 @@
 "CDerivedStats|0xc50|8": {
 "0xc58": 2
 },
+"CGameSprite|0x51f4|4": {
+"0x4f9c": 6
+},
+"CGameSprite|0x4e8c|2": {
+"0x4ba4": 2
+},
 "CGameTemporal|0x0|8": {
 "0x0": 3
 },
@@ -9124,7 +9511,7 @@
 "0x444": 3
 },
 "CInfinity|0x484|4": {
-"0x43c": 5
+"0x43c": 6
 },
 "CInfinity|0x480|4": {
 "0x438": 2
@@ -9137,6 +9524,12 @@
 },
 "CVidBitmap|0x108|8": {
 "0x108": 1
+},
+"CGameEffect|0x80|4": {
+"0x80": 1
+},
+"CGameEffect|0x84|4": {
+"0x84": 1
 },
 "CBaldurChitin|0xf98|8": {
 "0xfd0": 2,
@@ -9168,9 +9561,6 @@
 },
 "CGameAIBase|0x3e0|2": {
 "0x3e0": 1
-},
-"CGameSprite|0x51f4|4": {
-"0x4f9c": 5
 },
 "CGameArea|0xfa4|4": {
 "0xfc4": 4
@@ -9298,9 +9688,6 @@
 },
 "CProjectile|0x14|4": {
 "0x14": 1
-},
-"WED_WedHeader_st|0xc|4": {
-"0xc": 1
 },
 "CVisualEffect|0x2d4|4": {
 "0x2d4": 1
@@ -9473,6 +9860,12 @@
 "CGameArea|0x4dc|16": {
 "0x4e4": 1
 },
+"CCacheStatus|0x4|4": {
+"0x4": 1
+},
+"CGameArea|0x10a8|8": {
+"0x1110": 2
+},
 "CStore|0xb8|4": {
 "0xb8": 3
 },
@@ -9538,9 +9931,6 @@
 "0xb8b8": 4,
 "0xb9c0": 1
 },
-"CVRamPool|0x8|8": {
-"0x8": 24
-},
 "CScreenChapter|0x128|4": {
 "0x130": 6
 },
@@ -9564,6 +9954,9 @@
 },
 "CInfGame|0x92b8|1": {
 "0xcb90": 1
+},
+"CNetwork|0x130|4": {
+"0x130": 1
 },
 "CMultiplayerSettings|0x8d|4": {
 "0x8d": 2
@@ -10242,7 +10635,7 @@
 "0x964": 5
 },
 "CScreenStore|0x7a8|8": {
-"0x810": 17
+"0x810": 18
 },
 "CStore|0x10|4": {
 "0x10": 3
@@ -10340,6 +10733,9 @@
 "CRuleTables|0x1750|8": {
 "0x1a70": 1
 },
+"CVidMode|0x17c|4": {
+"0x17c": 4
+},
 "CGameSprite|0x1100|8": {
 "0xfc8": 3
 },
@@ -10436,6 +10832,12 @@
 "CGameSprite|0x4b7f|1": {
 "0x4894": 1
 },
+"CMarker|0x0|1": {
+"0x0": 6
+},
+"CMarker|0x2|2": {
+"0x2": 2
+},
 "CGameSprite|0x1108|8": {
 "0xfd0": 1
 },
@@ -10450,6 +10852,18 @@
 },
 "CGameSprite|0x1118|4": {
 "0xfe0": 1
+},
+"CGameStatsSprite|0x8|4": {
+"0x8": 1
+},
+"CGameStatsSprite|0x10|4": {
+"0x10": 5
+},
+"CGameStatsSprite|0xc|4": {
+"0xc": 3
+},
+"CGameStatsSprite|0x0|4": {
+"0x0": 3
 },
 "CRuleTables|0x24f2|2": {
 "0x2812": 6
@@ -10508,9 +10922,6 @@
 "CBaldurChitin|0x17e0|8": {
 "0x17d8": 3
 },
-"CStringList|0x30|4": {
-"0x30": 2
-},
 "CResBitmap|0x50|2": {
 "0x50": 1
 },
@@ -10546,9 +10957,6 @@
 },
 "CVidMode|0x168|8": {
 "0x168": 1
-},
-"CVidMode|0x17c|4": {
-"0x17c": 3
 },
 "CVidMode|0x0|8": {
 "0x0": 1
@@ -10607,7 +11015,7 @@
 "0xbae0": 2
 },
 "CScreenWorld|0xba8|4": {
-"0xc58": 3
+"0xc58": 5
 },
 "CInfGame|0x6600|8": {
 "0xa1e8": 1
@@ -10652,7 +11060,7 @@
 "0x2968": 1
 },
 "CRuleTables|0x38c8|8": {
-"0x3be8": 1
+"0x3be8": 2
 },
 "C2DArray|-0x8|8": {
 "-0x8": 1
@@ -10661,49 +11069,49 @@
 "0x618": 1
 },
 "CDerivedStats|0x0|16": {
-"0x0": 1
+"0x0": 2
 },
 "CDerivedStats|0x10|16": {
-"0x10": 1
+"0x10": 2
 },
 "CDerivedStats|0x20|16": {
-"0x20": 1
+"0x20": 2
 },
 "CDerivedStats|0x30|16": {
-"0x30": 1
+"0x30": 2
 },
 "CDerivedStats|0x40|16": {
-"0x40": 1
+"0x40": 2
 },
 "CDerivedStats|0x50|16": {
-"0x50": 1
+"0x50": 2
 },
 "CDerivedStats|0x60|16": {
-"0x60": 1
+"0x60": 2
 },
 "CDerivedStats|0x70|16": {
-"0x70": 1
+"0x70": 2
 },
 "CDerivedStats|0x80|16": {
-"0x80": 1
+"0x80": 2
 },
 "CDerivedStats|0x90|16": {
-"0x90": 1
+"0x90": 2
 },
 "CDerivedStats|0xa0|16": {
-"0xa0": 1
+"0xa0": 2
 },
 "CDerivedStats|0xb0|16": {
-"0xb0": 1
+"0xb0": 2
 },
 "CDerivedStats|0xc0|16": {
-"0xc0": 1
+"0xc0": 2
 },
 "CDerivedStats|0xd0|16": {
-"0xd0": 1
+"0xd0": 2
 },
 "CDerivedStats|0xe0|16": {
-"0xe0": 1
+"0xe0": 2
 },
 "CGameSprite|0x472c|8": {
 "0x4444": 6
@@ -10730,16 +11138,13 @@
 "0xa2d8": 2
 },
 "CScreenMap|0x890|8": {
-"0x900": 2
+"0x900": 3
+},
+"CInfCursor|0x55c|4": {
+"0x55c": 1
 },
 "CGameDoor|0x610|1": {
 "0x608": 1
-},
-"CParticle|0x2|2": {
-"0x2": 2
-},
-"CParticle|0x8|4": {
-"0x8": 3
 },
 "CRect|0x4|4": {
 "0x4": 4
@@ -10755,6 +11160,9 @@
 },
 "CSpawnFile|0x48|4": {
 "0x48": 3
+},
+"CVidPoly|0x0|8": {
+"0x0": 2
 },
 "CInfGame|0x7cbc|2": {
 "0xb89c": 1
@@ -11119,6 +11527,9 @@
 "CRuleTables|0x160|8": {
 "0x448": 1
 },
+"CScreenConnection|0x6a1|1": {
+"0x709": 6
+},
 "CGameArea|0x5f8|8": {
 "0x608": 1
 },
@@ -11126,13 +11537,13 @@
 "0x21c": 1
 },
 "CGameArea|0xfac|2": {
-"0xfcc": 2
+"0xfcc": 3
 },
 "CGameArea|0xfae|2": {
-"0xfce": 1
+"0xfce": 2
 },
 "CGameArea|0xfb0|4": {
-"0xfd0": 1
+"0xfd0": 2
 },
 "CGameArea|0x8c8|8": {
 "0x898": 1
@@ -11832,6 +12243,24 @@
 "CGameTiledObject|0x568|2": {
 "0x560": 2
 },
+"CGameTrigger|0x580|4": {
+"0x578": 5
+},
+"CGameTrigger|0x544|4": {
+"0x53c": 2
+},
+"CGameTrigger|0x54c|4": {
+"0x544": 2
+},
+"CGameTrigger|0x548|4": {
+"0x540": 2
+},
+"CGameTrigger|0x550|4": {
+"0x548": 2
+},
+"CGameTrigger|0x588|8": {
+"0x580": 5
+},
 "CMessageChangeStoreMarkup|0x1c|4": {
 "0x18": 1,
 "0x1c": 2
@@ -11890,18 +12319,6 @@
 "CBaldurChitin|0xfa0|1": {
 "0xfd8": 1
 },
-"CWeather|0x15c|4": {
-"0x15c": 1
-},
-"CWeather|0x168|1": {
-"0x168": 2
-},
-"CWeather|0x2|2": {
-"0x2": 1
-},
-"CWeather|0x159|1": {
-"0x159": 1
-},
 "CWeather|0x9690|4": {
 "0xcf78": 1
 },
@@ -11940,9 +12357,6 @@
 "CScreenCharacter|0x820|4": {
 "0x9e4": 3
 },
-"CScreenConnection|0x6a1|1": {
-"0x709": 5
-},
 "CScreenConnection|0x6c5|2": {
 "0x72d": 2
 },
@@ -11954,16 +12368,16 @@
 "0x748": 2
 },
 "CScreenInventory|0x684|4": {
-"0x6ec": 2
+"0x6ec": 3
 },
 "CScreenInventory|0x6a0|8": {
-"0x708": 1
+"0x708": 2
 },
 "CScreenInventory|0x6a8|8": {
-"0x710": 1
+"0x710": 2
 },
 "CScreenInventory|0x6b0|8": {
-"0x718": 1
+"0x718": 2
 },
 "CScreenMap|0x75c|4": {
 "0x7cc": 1
@@ -12019,6 +12433,9 @@
 "CScreenStore|0x8f8|8": {
 "0x960": 1
 },
+"CScreenStore|0x688|8": {
+"0x6f0": 5
+},
 "CScreenWizSpell|0x680|4": {
 "0x6e8": 1
 },
@@ -12026,7 +12443,16 @@
 "0x50": 1
 },
 "CScreenWizSpell|0x670|4": {
-"0x6d8": 1
+"0x6d8": 2
+},
+"CScreenWorld|0xba0|4": {
+"0xc50": 7
+},
+"CScreenWorld|0xba4|4": {
+"0xc54": 4
+},
+"CScreenWorld|0xb9c|4": {
+"0xc4c": 3
 },
 "CScreenLoad|0x178|4": {
 "0x180": 1
@@ -12041,10 +12467,7 @@
 "0x560": 3
 },
 "CScreenWorld|0xa80|2": {
-"0xb30": 1
-},
-"CScreenWorld|0xb9c|4": {
-"0xc4c": 2
+"0xb30": 2
 },
 "CScreenWorld|0xc4|1": {
 "0xcc": 1
@@ -12052,14 +12475,11 @@
 "CScreenWorld|0xc4|4": {
 "0xcc": 2
 },
-"CScreenWorld|0xba4|4": {
-"0xc54": 3
-},
 "CScreenWorldMap|0x6b0|8": {
 "0x718": 2
 },
 "CScreenWorldMap|0xf0d|1": {
-"0xf5d": 5
+"0xf5d": 6
 },
 "CGameSprite|0x4ba4|4": {
 "0x48bc": 7
@@ -12084,9 +12504,6 @@
 },
 "CGameSprite|0x3f8|2": {
 "0x3f0": 14
-},
-"CGameSprite|0x4e8c|2": {
-"0x4ba4": 1
 },
 "CGameSprite|0x4ea8|1": {
 "0x4bc0": 4
@@ -12123,9 +12540,6 @@
 },
 "CBaldurChitin|0xfa0|4": {
 "0xfd8": 1
-},
-"CMarker|0x0|1": {
-"0x0": 3
 },
 "CMarker|0x1c|2": {
 "0x1c": 2
@@ -12189,24 +12603,6 @@
 },
 "CChitin|0x148|4": {
 "0x140": 4
-},
-"CSound|0x14|4": {
-"0x14": 1
-},
-"CGameTrigger|0x544|4": {
-"0x53c": 1
-},
-"CGameTrigger|0x54c|4": {
-"0x544": 1
-},
-"CGameTrigger|0x548|4": {
-"0x540": 1
-},
-"CGameTrigger|0x550|4": {
-"0x548": 1
-},
-"CGameTrigger|0x588|8": {
-"0x580": 4
 },
 "CGameTrigger|0x590|2": {
 "0x588": 5
@@ -12488,16 +12884,22 @@
 "0x818": 6
 },
 "CScreenWorld|0xbac|4": {
-"0xc5c": 1
+"0xc5c": 2
 },
 "CScreenWorld|0xbb0|4": {
-"0xc60": 1
+"0xc60": 3
 },
 "CScreenWorld|0xd0|4": {
 "0xd8": 1
 },
 "CScreenWorld|0xcc|8": {
 "0xd4": 1
+},
+"CScreenWorld|0xa68|1": {
+"0xb18": 2
+},
+"CScreenWorld|0xa69|8": {
+"0xb19": 1
 },
 "CGameSprite|0x4960|8": {
 "0x4678": 1
@@ -12620,14 +13022,14 @@
 "CMarker|0x8|4": {
 "0x8": 1
 },
-"CMarker|0x2|2": {
-"0x2": 1
-},
 "uiMenu|0x50|4": {
 "0x58": 3
 },
 "uiMenu|0x54|4": {
 "0x5c": 3
+},
+"CSoundMixerImp|0x3c|16": {
+"0x3c": 1
 },
 "CGameChunk|0x48|4": {
 "0x48": 2
@@ -12786,7 +13188,7 @@
 "0x0": 1
 },
 "CBaldurMessage|0x140|4": {
-"0x118": 5
+"0x118": 6
 },
 "CBaldurMessage|0x14c|2": {
 "0x124": 2
@@ -12796,6 +13198,18 @@
 },
 "CInfGame|0x6520|2": {
 "0xa108": 1
+},
+"CBaldurMessage|0x13e|1": {
+"0x116": 5
+},
+"CBaldurMessage|0x149|1": {
+"0x121": 2
+},
+"CBaldurMessage|0x148|1": {
+"0x120": 1
+},
+"CBaldurMessage|0x14b|1": {
+"0x123": 1
 },
 "CBaldurMessage|0x14a|1": {
 "0x122": 1
@@ -12827,14 +13241,8 @@
 "CScreenChapter|0x168|4": {
 "0x170": 2
 },
-"CBaldurMessage|0x13e|1": {
-"0x116": 4
-},
 "CBaldurMessage|0x81|1": {
 "0x81": 1
-},
-"CBaldurMessage|0x82|1": {
-"0x82": 6
 },
 "CBaldurProjector|0x128|4": {
 "0x128": 1
@@ -12847,6 +13255,9 @@
 },
 "CPersistantEffectListRegenerated|0x0|8": {
 "0x0": 1
+},
+"CDerivedStats|0x9b8|8": {
+"0x9c0": 1
 },
 "CMessageAddVVCInternal|0x0|8": {
 "0x0": 2
@@ -12970,9 +13381,6 @@
 },
 "CGameAreaNotes|0x8|4": {
 "0x8": 1
-},
-"CMessageFireProjectile|0x0|8": {
-"0x0": 1
 },
 "CScreenWorld|0xa00|4": {
 "0xab0": 3
@@ -13164,9 +13572,6 @@
 "CGameStatsSprite|0x98|2": {
 "0x98": 1
 },
-"CGameStatsSprite|0x0|4": {
-"0x0": 1
-},
 "CGameStatsSprite|0x4|8": {
 "0x4": 1
 },
@@ -13174,10 +13579,25 @@
 "0xc": 1
 },
 "CGameStatsSprite|0x14|8": {
-"0x14": 1
+"0x14": 2
 },
 "CGameStatsSprite|0x1c|8": {
 "0x1c": 1
+},
+"CGameStatsSprite|0x18|4": {
+"0x18": 1
+},
+"CGameStatsSprite|0x20|4": {
+"0x20": 1
+},
+"CGameStatsSprite|0x14|4": {
+"0x14": 1
+},
+"CGameStatsSprite|0x1c|4": {
+"0x1c": 1
+},
+"CGameStatsSprite|0x4|4": {
+"0x4": 2
 },
 "CGameText|0x0|8": {
 "0x0": 2
@@ -13223,9 +13643,6 @@
 },
 "CGameTrigger|0x5c0|2": {
 "0x598": 3
-},
-"CGameTrigger|0x580|4": {
-"0x578": 4
 },
 "CGameTrigger|0x5d4|2": {
 "0x5ac": 4
@@ -14007,23 +14424,32 @@
 "CRuleTables|0x16b0|8": {
 "0x19d0": 1
 },
-"CInfGame|0x3888|2": {
+"CRuleTables|0x3508|2": {
+"0x3828": 1
+},
+"CRuleTables|0x350a|2": {
+"0x382a": 1
+},
+"CRuleTables|0x34f8|8": {
+"0x3818": 1
+},
+"CRuleTables|0x3500|8": {
+"0x3820": 1
+},
+"CRuleTables|0x3888|2": {
 "0x3ba8": 1
 },
-"CInfGame|0x388a|2": {
+"CRuleTables|0x388a|2": {
 "0x3baa": 1
 },
-"CInfGame|0x3878|8": {
+"CRuleTables|0x3878|8": {
 "0x3b98": 1
 },
-"CInfGame|0x3880|8": {
+"CRuleTables|0x3880|8": {
 "0x3ba0": 1
 },
-"CInfGame|0x38c2|2": {
+"CRuleTables|0x38c2|2": {
 "0x3be2": 1
-},
-"CInfGame|0x38c8|8": {
-"0x3be8": 1
 },
 "CTiledObject|0x20|8": {
 "0x20": 1
@@ -14072,9 +14498,6 @@
 },
 "CWeather|0x15c|8": {
 "0x15c": 1
-},
-"CWeather|0x20|4": {
-"0x20": 1
 },
 "CWeather|0x1c|4": {
 "0x1c": 1
@@ -14145,8 +14568,47 @@
 "CGameAnimation|0x0|8": {
 "0x0": 2
 },
+"CInfinity|0x140|4": {
+"0x140": 1
+},
+"CInfinity|0x144|4": {
+"0x144": 1
+},
 "CInfinity|0x324|4": {
 "0x2e0": 1
+},
+"CInfinity|0x328|4": {
+"0x2e4": 1
+},
+"CInfinity|0x124|4": {
+"0x124": 1
+},
+"CInfinity|0x11c|4": {
+"0x11c": 1
+},
+"CInfinity|0x10c|4": {
+"0x10c": 1
+},
+"CInfinity|0x118|4": {
+"0x118": 3
+},
+"CInfinity|0x46c|4": {
+"0x424": 1
+},
+"CInfinity|0x470|4": {
+"0x428": 1
+},
+"CInfinity|0x474|4": {
+"0x42c": 2
+},
+"CInfinity|0x478|4": {
+"0x430": 1
+},
+"CInfinity|0x47c|4": {
+"0x434": 2
+},
+"CInfinity|0x488|4": {
+"0x440": 1
 },
 "CScreenAI|0x170|8": {
 "0x178": 1
@@ -14260,22 +14722,22 @@
 "0x894": 12
 },
 "CScreenCreateChar|0x80d|1": {
-"0x875": 1
+"0x875": 2
 },
 "CScreenCreateChar|0x80f|1": {
-"0x877": 2
+"0x877": 3
 },
 "CScreenCreateChar|0x810|1": {
-"0x878": 2
+"0x878": 3
 },
 "CScreenCreateChar|0x811|1": {
-"0x879": 2
+"0x879": 3
 },
 "CScreenCreateChar|0x812|1": {
-"0x87a": 2
+"0x87a": 3
 },
 "CScreenCreateChar|0x80e|1": {
-"0x876": 2
+"0x876": 3
 },
 "CScreenCreateChar|0x778|4": {
 "0x7e0": 1
@@ -14385,11 +14847,26 @@
 "CScreenStart|0x11c|4": {
 "0x124": 1
 },
-"CScreenStore|0x688|8": {
-"0x6f0": 3
-},
 "CScreenWorld|0xb80|4": {
 "0xc2c": 1
+},
+"CScreenStore|0x78c|4": {
+"0x7f4": 2
+},
+"CScreenStore|0x7c0|4": {
+"0x828": 5
+},
+"CStore|0x6c|4": {
+"0x6c": 2
+},
+"CStore|0x68|4": {
+"0x68": 2
+},
+"CStore|0x64|4": {
+"0x64": 2
+},
+"CStore|0x60|4": {
+"0x60": 2
 },
 "CScreenStore|0x7ec|4": {
 "0x854": 2
@@ -14397,29 +14874,17 @@
 "CScreenStore|0x7d4|4": {
 "0x83c": 1
 },
+"CStore|0x5c|4": {
+"0x5c": 1
+},
 "CScreenStore|0x48|4": {
 "0x50": 1
-},
-"CScreenStore|0x7c0|4": {
-"0x828": 3
-},
-"CStore|0x6c|4": {
-"0x6c": 1
-},
-"CStore|0x68|4": {
-"0x68": 1
-},
-"CStore|0x64|4": {
-"0x64": 1
-},
-"CStore|0x60|4": {
-"0x60": 1
 },
 "CScreenStore|0x698|4": {
 "0x700": 2
 },
 "CScreenStore|0x7b4|4": {
-"0x81c": 5
+"0x81c": 8
 },
 "CScreenStore|0x718|4": {
 "0x780": 2
@@ -14503,13 +14968,13 @@
 "0xe0": 1
 },
 "CScreenWorld|0xbc4|8": {
-"0xc74": 1
+"0xc74": 2
 },
 "CScreenWorld|0xb0c|16": {
 "0xbbc": 1
 },
 "CScreenWorld|0xbcc|8": {
-"0xc7c": 1
+"0xc7c": 3
 },
 "CScreenWorld|0x9d8|2": {
 "0xa88": 1
@@ -14518,28 +14983,25 @@
 "0xb09": 1
 },
 "CScreenWorld|0xa5b|1": {
-"0xb0b": 1
+"0xb0b": 3
 },
 "CScreenWorld|0xa5c|4": {
-"0xb0c": 1
-},
-"CScreenWorld|0xa68|1": {
-"0xb18": 1
+"0xb0c": 3
 },
 "CScreenWorld|0xa71|1": {
-"0xb21": 1
+"0xb21": 2
 },
 "CScreenWorld|0xa82|2": {
 "0xb32": 1
 },
 "CScreenWorld|0xa84|1": {
-"0xb34": 1
+"0xb34": 2
 },
 "CScreenWorld|0xa88|8": {
 "0xb38": 1
 },
 "CScreenWorld|0xa7a|1": {
-"0xb2a": 1
+"0xb2a": 2
 },
 "CScreenWorld|0xad5|2": {
 "0xb85": 1
@@ -14622,9 +15084,6 @@
 "CScreenWorld|0xb98|4": {
 "0xc44": 2
 },
-"CScreenWorld|0xba0|4": {
-"0xc50": 6
-},
 "CScreenWorld|0x819|1": {
 "0x8c9": 3
 },
@@ -14646,14 +15105,44 @@
 "CScreenWorld|0x9c8|4": {
 "0xa78": 1
 },
+"CScreenWorld|0xa14|4": {
+"0xac4": 3
+},
 "CBaldurChitin|0x17cc|4": {
 "0x17c4": 1
 },
 "CGameDialogSprite|0x50|4": {
 "0x50": 1
 },
+"CScreenWorld|0xbf0|4": {
+"0xca0": 1
+},
+"CScreenWorld|0xbd4|4": {
+"0xc84": 2
+},
 "CInfGame|0xbd4|4": {
 "0xc84": 2
+},
+"CScreenWorld|0xa60|8": {
+"0xb10": 2
+},
+"CScreenWorld|0xa72|8": {
+"0xb22": 1
+},
+"CScreenWorld|0xad5|1": {
+"0xb85": 1
+},
+"CScreenWorld|0xa8c|4": {
+"0xb3c": 1
+},
+"CScreenWorld|0xa82|1": {
+"0xb32": 1
+},
+"CScreenWorld|0xa88|4": {
+"0xb38": 1
+},
+"CScreenWorld|0xa83|1": {
+"0xb33": 1
 },
 "CScreenWorldMap|0xf80|4": {
 "0xfd0": 1
@@ -14665,10 +15154,10 @@
 "0xedc": 1
 },
 "CScreenWorldMap|0x6b8|4": {
-"0x720": 3
+"0x720": 4
 },
 "CScreenWorldMap|0xe78|4": {
-"0xee0": 1
+"0xee0": 2
 },
 "CScreenWorldMap|0xe84|8": {
 "0xeec": 1
@@ -14693,6 +15182,15 @@
 },
 "CScreenWorldMap|0xeb0|4": {
 "0xf20": 1
+},
+"CScreenWorldMap|0x38|8": {
+"0x38": 3
+},
+"CScreenWorldMap|0x40|8": {
+"0x40": 3
+},
+"CScreenWorldMap|0x48|4": {
+"0x48": 1
 },
 "CSpawnFile|0x8|8": {
 "0x8": 2
@@ -15088,6 +15586,9 @@
 "CGameSprite|0x4af2|2": {
 "0x480a": 1
 },
+"CGameSprite|0x46|1": {
+"0x46": 1
+},
 "CGameSprite|0x52e8|4": {
 "0x5070": 2
 },
@@ -15301,6 +15802,9 @@
 "SDL_VideoDisplay|0x58|8": {
 "0x58": 2
 },
+"CBaldurMessage|0x147|2": {
+"0x11f": 1
+},
 "CGameSprite|0x59e|2": {
 "0x596": 2
 },
@@ -15421,6 +15925,12 @@
 "CMessageSetDialogResRef|0x0|8": {
 "0x0": 1
 },
+"CSteam|0x170|8": {
+"0x170": 1
+},
+"ISteamUserStats|0x0|8": {
+"0x0": 1
+},
 "CGameSprite|0x5250|8": {
 "0x4ff8": 1
 },
@@ -15441,6 +15951,9 @@
 },
 "CMessageSetPortraitSmall|0x8|4": {
 "0x8": 1
+},
+"CDerivedStats|0x46|1": {
+"0x46": 1
 },
 "CGameObject|0x5c0|2": {
 "0x598": 3

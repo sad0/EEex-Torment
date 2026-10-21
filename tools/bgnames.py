@@ -48,7 +48,7 @@ for a, n in syms:
         if a + d in starts:
             out[a + d] = n; break
 print('mapped', len(out), 'of', len(syms))
-json.dump({hex(k): v for k, v in out.items()}, open('bgnames.json', 'w'), indent=0)
+json.dump({hex(k): v for k, v in out.items()}, open('bgnames_raw.json', 'w'), indent=0)
 F = {int(k, 16): int(v[0], 16) for k, v in json.load(open('fmap.json')).items()}
 pt = {hex(F[a]): n for a, n in out.items() if a in F}
 json.dump(pt, open('ptnames.json', 'w'), indent=0)

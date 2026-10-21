@@ -115,3 +115,18 @@ def data_diffs(a, p):
             if va != vb:
                 out.append((x, y, va.hex() if va else None, vb.hex() if vb else None))
     return out
+
+
+def disp_diffs(a, p):
+    """Matched instructions whose non-RIP memory displacements differ (field offsets that moved)."""
+    A, B = body(BG, a), body(PT, p)
+    sm = difflib.SequenceMatcher(None, [norm(i) for i in A], [norm(i) for i in B], autojunk=False)
+    out = []
+    for i1, j1, k in sm.get_matching_blocks():
+        for t in range(k):
+            x, y = A[i1 + t], B[j1 + t]
+            dx = [o.mem.disp for o in x.operands if o.type == X.X86_OP_MEM and o.mem.base != X.X86_REG_RIP]
+            dy = [o.mem.disp for o in y.operands if o.type == X.X86_OP_MEM and o.mem.base != X.X86_REG_RIP]
+            if dx != dy:
+                out.append((x, y))
+    return out

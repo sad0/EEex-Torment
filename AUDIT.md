@@ -73,3 +73,24 @@ The other exports need the phase-5 Lua layer (menus/templates, sliced rects, pro
 
 Overrides are only reached when EEex's Lua patches redirect the engine (phase 5); until then the
 engine's own PT functions run.
+
+## Proof hardening (phase 4d)
+- Packed structs: BG sizeof bounds the alignment (CAreaVariable/CVariable 84, SDL text events 44/52,
+  ARE static/sound/rest entries): the header had them 4 bytes too large.
+- BG function names: bgnames.py snapped 61 symbols onto the wrong function; bgnames_merge.py keeps
+  EEex's names only where three consecutive anchors agree. Re-run of the field tracker: no proven field
+  moved, +45 proven.
+- Single-function evidence is a candidate only (coverage.py): CGameArea.INIFile had been placed at
+  0x1088 from one mispaired access; Torment has two CMemINI there (0x1080 = INIFile, 0x10c8 Torment-only).
+  Fields EEex uses that fell below the bar were re-proven by hand (manual_fields.json): CChitin
+  bEngineActive, CBaldurChitin m_cTlkTable, CProjectileFall side move, uiItem.edit, uiMenu ha/va,
+  CAIIdList / CGameAreaClairvoyanceEntry / CWeaponIdentification (identical code), CDerivedStats
+  m_disabledSpellTypes = 0xb68 and **no m_disableSpells in Torment** (op145 has no "all spells" case):
+  EEex's spell-disable change detection compares the three type flags only.
+
+## Uncap FPS: Torment differences found so far (not ported yet)
+- WinMain: SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1"); Maximum Frame Rate default 40, valid
+  10..90; no frame-time log. Update: Lua stack cleared after the leak dump.
+- CVidTile::RenderTexture: no grey tone from dwFlags 0x80000. CInfinity::Scroll: no m_nScrollAttempts.
+- FitViewPosition / AdjustViewPosition / ZoomToMap: Torment UI paths (WORLD_ACTIONBAR_LEFT(_TABLET),
+  AREA_MAP_TARGET, CScreenWorld+0xa58 / +0xc58 states) need a rewrite from Torment's code.
