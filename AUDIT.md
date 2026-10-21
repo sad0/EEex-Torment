@@ -135,3 +135,23 @@ after SCREENWIDTH/HEIGHT, PT 0x4a41af), drawItem()-AfterEnabledCheck (PT 0x44eb2
 (PT 0x450db3), -FixForcedScrollbarDivideByZero2 (PT 0x451199, same 11 restored bytes). Torment's drawItem keeps
 the uiItem in r13 (BG r15): every drawItem hook's assembly must use r13, and CheckScrollbarContentHeight is a
 short `jg` (content taller than the item) where BG has a near `jle`: success/fail paths swap.
+
+## Phase 5: EEex Lua (eeexlua/)
+Upstream Lua is copied and patched by eeexlua/build.py (eeexlua/patches/<file>.py, one review note per file in
+eeexlua/notes/). Every hook site of the 188 (tools/luahooks.py) was compared BG/Torment (registers, frame slots,
+overwritten bytes, relocatable restore bytes, call targets). Main Torment differences found:
+- Wrong labels fixed: CGameEffectDamage::ApplyEffect()-OnDone (was in CGameEffectDisintegrate), ForceSpellPoint
+  DecodeProjectile RetPtr (+2). tools/labelcheck.py now also checks Hook- labels; all 54 RetPtr labels follow a call.
+- Restore sizes: CVisibilityMap::Destruct prologue is 6 bytes (push rsi; sub rsp,0x20), the phase-4d vismap test
+  restored 5; ExecuteAction default case restores a RIP-relative lea (not copyable); B3Invis Render restored a jump target.
+- Frames: CDerivedStats::GetAtOffset has a 0x38 frame in Torment (BG none): the extended-stat early return must pop it.
+- Triggers: EEex's 0x410D..0x4110 are real Torment triggers (ExtraProficiency*, LastPersonTalkedTo): EEex's moved
+  to 0x4112..0x4115 (eeexlua/src/patch/TRIGGER.IDS). Actions 472+ / objects 115+ are free.
+- op146: Torment already uses `special` (ForceSpellRESNoFeedback): EEex's op146 extension is disabled (owner decision pending).
+- CProjectile::AddEffect is virtual in Torment (Area / BAM overrides): all three bodies hooked.
+- Struct sizes matter for arrays: uiMenu is 0x98 in Torment (menus memset 0x9800, parser imul 0x98), BG 0x70; the
+  interpolated 0x78 broke EngineGlobals.menus. Array element types used by EEex are now size-proven.
+- Fields proven for the Lua: CAbilityId / CButtonData (operator= identical), uiColumn, CInfGame keymap (500 entries,
+  flags at 0xc350), CChitin cMousePosition 0xfd0 / bPointerUpdated 0xfcc (Torment moved bInTimer/m_AIStale before
+  them: ptlayout keeps hand-proven members out of BG order), CInfButtonArray m_nSelectedButton, uiMenu tail fields.
+- Options: AI speed option default 40, range 10..90 (Torment's WinMain).

@@ -2386,6 +2386,18 @@
    "va": {
     "pt": "0x64",
     "why": "see ha"
+   },
+   "opacity": {
+    "pt": "0x38",
+    "why": "menu parser yy_reduce BG 0x3c40c0 / PT 0x4406a0 fills the uiMenu template (BG 0x717640 / PT 0x7b7dd0, memset 0x70 / 0x98) then copies it to menus[n] (imul 0x70 / 0x98; menus memset 0x7000 / 0x9800 = 256 menus): aligned template writes give 0..0x40 unchanged, BG 0x48..0x6c -> PT 0x50..0x74 (+8), PT-only writes at 0x48, 0x78, 0x80, 0x88, 0x90"
+   },
+   "greyscale": {
+    "pt": "0x40",
+    "why": "menu parser yy_reduce BG 0x3c40c0 / PT 0x4406a0 fills the uiMenu template (BG 0x717640 / PT 0x7b7dd0, memset 0x70 / 0x98) then copies it to menus[n] (imul 0x70 / 0x98; menus memset 0x7000 / 0x9800 = 256 menus): aligned template writes give 0..0x40 unchanged, BG 0x48..0x6c -> PT 0x50..0x74 (+8), PT-only writes at 0x48, 0x78, 0x80, 0x88, 0x90"
+   },
+   "ignoreEsc": {
+    "pt": "0x74",
+    "why": "menu parser yy_reduce BG 0x3c40c0 / PT 0x4406a0 fills the uiMenu template (BG 0x717640 / PT 0x7b7dd0, memset 0x70 / 0x98) then copies it to menus[n] (imul 0x70 / 0x98; menus memset 0x7000 / 0x9800 = 256 menus): aligned template writes give 0..0x40 unchanged, BG 0x48..0x6c -> PT 0x50..0x74 (+8), PT-only writes at 0x48, 0x78, 0x80, 0x88, 0x90"
    }
   }
  },
@@ -2709,6 +2721,10 @@
   "SProjectileWrapper": {
    "pt": "0x10",
    "why": "allocation size: mov ecx, N; call operator new; call S::S (BG N == BG sizeof) in BG and PT (bindings/allocsizes.py)"
+  },
+  "uiMenu": {
+   "pt": "0x98",
+   "why": "menu parser yy_reduce BG 0x3c40c0 / PT 0x4406a0 fills the uiMenu template (BG 0x717640 / PT 0x7b7dd0, memset 0x70 / 0x98) then copies it to menus[n] (imul 0x70 / 0x98; menus memset 0x7000 / 0x9800 = 256 menus): aligned template writes give 0..0x40 unchanged, BG 0x48..0x6c -> PT 0x50..0x74 (+8), PT-only writes at 0x48, 0x78, 0x80, 0x88, 0x90"
   }
  },
  "same_as_bg": {

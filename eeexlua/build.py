@@ -9,6 +9,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 UP = os.path.join(HERE, r'..\ref\EEex\EEex\copy')
 OUT = os.path.join(HERE, 'generated')
 GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
+# dev-only scripts (bindings/test/) loaded after EEex's startup in the dev game
+DEV_FILES = ['PTEE_SkipIntro', 'PTEE_UIProbe']
 
 
 def load_patches():
@@ -74,6 +76,31 @@ def deploy():
     os.makedirs(os.path.join(GAME, 'override'), exist_ok=True)
     for f in glob.glob(os.path.join(OUT, 'override', '*')):
         shutil.copy(f, os.path.join(GAME, 'override'))
+    # IDS additions (installer's job in the release): Torment's own IDS + EEex's Torment ids (src/patch/*.IDS)
+    import subprocess
+    for f in glob.glob(os.path.join(HERE, 'src', 'patch', '*.IDS')):
+        name = os.path.basename(f)[:-4]
+        base = subprocess.run([sys.executable, os.path.join(HERE, r'..\tools\bifextract.py'), GAME, name, 'ids'],
+                              capture_output=True, text=True, encoding='latin-1').stdout
+        ov = os.path.join(GAME, 'override', name + '.IDS')
+        if os.path.exists(ov):
+            os.remove(ov)
+            base = subprocess.run([sys.executable, os.path.join(HERE, r'..\tools\bifextract.py'), GAME, name, 'ids'],
+                                  capture_output=True, text=True, encoding='latin-1').stdout
+        lines = base.rstrip('\r\n').split('\n')
+        have = {l.strip() for l in lines}
+        add = [l.strip() for l in open(f, encoding='latin-1') if l.strip() and l.strip() not in have]
+        open(ov, 'w', encoding='latin-1', newline='\r\n').write('\n'.join(lines + add) + '\n')
+        print(f'override/{name}.IDS: +{len(add)}')
+    ini = os.path.join(GAME, 'EEex.ini')
+    if not os.path.exists(ini):
+        shutil.copy(os.path.join(HERE, r'..\ref\EEex\EEex\loader\EEex.ini'), ini)
+    # dev only: skip the intro movies (bindings/test/PTEE_SkipIntro.lua), loaded after EEex's startup
+    with open(os.path.join(scripts, 'EEex_Main.lua'), 'a', encoding='utf-8', newline='\n') as m:
+        m.write('\n-- EEex-PTEE dev deploy only\n')
+        for dev in DEV_FILES:
+            shutil.copy(os.path.join(HERE, r'..\bindings\test', dev + '.lua'), scripts)
+            m.write(f'EEex_DoFile("{dev}")\n')
     print('deployed to', GAME)
 
 

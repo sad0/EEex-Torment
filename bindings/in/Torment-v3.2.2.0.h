@@ -71635,7 +71635,9 @@ struct uiMenu
 	int state;
 	uiItem *items;
 	uiVariant *modal;
-	nobinding unsigned __int64 _ptpad_38[3];
+	uiVariant *opacity;
+	uiVariant *greyscale;
+	nobinding unsigned __int64 _ptpad_48[1];
 	int onOpen;
 	int onClose;
 	SDL_Point offset;
@@ -71644,7 +71646,8 @@ struct uiMenu
 	int width;
 	int height;
 	int enabled;
-	nobinding unsigned int _ptpad_74[1];
+	int ignoreEsc;
+	nobinding unsigned __int64 _ptpad_78[4];
 };
 
 /* 7384 */

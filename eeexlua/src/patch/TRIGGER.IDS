@@ -1,0 +1,5 @@
+0x4112 EEex_HasDispellableEffect(O:Object*)
+0x4113 EEex_LuaTrigger(S:Chunk*)
+0x4114 EEex_IsImmuneToOpcode(O:Object*,I:Opcode*)
+0x4115 EEex_MatchObject(S:Chunk*)
+0x4115 EEex_MatchObjectEx(S:Chunk*,I:Nth*,I:Range*,I:Flags*X-MATOBJ)
