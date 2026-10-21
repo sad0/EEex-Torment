@@ -2771,6 +2771,7 @@
   "view_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
   "vec4_t": "UI/font/draw library: 118 named font/draw/slice functions compared, 89 identical (>=0.99); dispdelta over font*/drawSlice/Draw*: 127/130 displacements with delta 0 (outliers: one stray vote, CChitin window pointer)",
   "CSelectiveBonus": "CSelectiveBonusList::GetBonus/operator=/ClearAll identical (1.00) in PT, accesses to the bonus records with delta 0",
-  "CImmunitySpell": "CImmunitiesSpellList::operator= and CGameEffectImmunitySpell::ApplyEffect identical (1.00) in PT: record accesses at 0x0/0x8/0xc with delta 0"
+  "CImmunitySpell": "CImmunitiesSpellList::operator= and CGameEffectImmunitySpell::ApplyEffect identical (1.00) in PT: record accesses at 0x0/0x8/0xc with delta 0",
+  "CVisibilityMapTreeNode": "CVisibilityMap::BuildTree identical (BG 0x255da0 / PT 0x2b7c90, ratio 1.000) and TraverseTree / ClimbWall identical except CVisibilityMap::m_nWidth: every node access (+0/+8/+0xa/+0x10, stride 20) has the same displacement"
  }
 }

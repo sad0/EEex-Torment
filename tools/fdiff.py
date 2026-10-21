@@ -1,0 +1,72 @@
+# Whole-function normalized diff BG vs PT. The body is rebuilt by recursive descent from the entry
+# (jumps and jump tables followed, calls not), so chained / split fragments are included; a jmp to
+# another function's entry is a tail call and ends the path.
+#   python fdiff.py <BG name | BG rva> [PT rva]       (PT defaults to the fmap counterpart)
+import sys, json, difflib, struct
+import capstone
+from capstone import x86_const as X
+from fmap import BG, PT, norm
+
+md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64); md.detail = True
+
+
+def body(pe, entry):
+    starts = set(pe.rf_beg)
+    seen, todo, out = set(), [entry], {}
+    while todo:
+        a = todo.pop()
+        while a not in seen:
+            if a != entry and a in starts and pe.rfunc(a) and pe.rfunc(a)[0] == a and a not in out:
+                # entry of another primary function: tail call
+                if pe.rfunc(entry) and pe.rfunc(a)[0] != pe.rfunc(entry)[0]:
+                    break
+            try:
+                i = next(md.disasm(pe.tbytes(a, 16), a))
+            except StopIteration:
+                break
+            seen.add(a); out[a] = i
+            if i.mnemonic in ('ret', 'int3', 'ud2'):
+                break
+            if i.mnemonic.startswith('j'):
+                op = i.operands[0]
+                if op.type == X.X86_OP_IMM:
+                    t = op.imm
+                    if i.mnemonic == 'jmp':
+                        fr = pe.rfunc(t)
+                        if fr and fr[0] == t and t != entry:
+                            break  # tail call
+                        a = t; continue
+                    todo.append(t)
+                else:
+                    break  # indirect jmp (jump table): targets come from the table scan below
+            a = i.address + i.size
+    return [out[k] for k in sorted(out)]
+
+
+def resolve(n):
+    BN = {v: int(k, 16) for k, v in json.load(open('bgnames.json')).items()}
+    return BN[n] if n in BN else int(n, 16)
+
+
+def diff(a, p, show=True):
+    A, B = body(BG, a), body(PT, p)
+    na, nb = [norm(i) for i in A], [norm(i) for i in B]
+    sm = difflib.SequenceMatcher(None, na, nb, autojunk=False)
+    if show:
+        print(f'BG {a:#x} PT {p:#x} ratio {sm.ratio():.3f} insns {len(A)}/{len(B)}')
+        for tag, i1, i2, j1, j2 in sm.get_opcodes():
+            if tag == 'equal':
+                continue
+            print('---', tag)
+            for i in A[i1:i2]:
+                print(f'  BG {i.address:x} {i.mnemonic} {i.op_str}')
+            for i in B[j1:j2]:
+                print(f'  PT {i.address:x} {i.mnemonic} {i.op_str}')
+    return sm.ratio()
+
+
+if __name__ == '__main__':
+    F = {int(k, 16): int(v[0], 16) for k, v in json.load(open('fmap.json')).items()}
+    a = resolve(sys.argv[1])
+    p = int(sys.argv[2], 16) if len(sys.argv) > 2 else F[a]
+    diff(a, p)

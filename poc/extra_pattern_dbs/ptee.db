@@ -31,3 +31,7 @@ Pattern=488D1579AF2F
 
 [Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies]
 Pattern=84DB0F841704
+
+[PTEE-g_nSpriteUpdateMask]
+Pattern=0FB605FCE426
+Operations=ADD 3, PUSH, READ DWORD, ADD, ADD 4

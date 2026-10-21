@@ -1359,10 +1359,10 @@
 "m_AIInhibitor": "unproven"
 },
 "CVisibilityMapTreeNode": {
-"m_relativePos": "unproven",
-"m_nRange": "unproven",
-"m_aChildren": "unproven",
-"m_parent": "unproven"
+"m_relativePos": "proven",
+"m_nRange": "proven",
+"m_aChildren": "proven",
+"m_parent": "proven"
 },
 "CVisibilityMapEllipse": {
 "m_nXExploreRange": "unproven",

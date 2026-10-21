@@ -14566,28 +14566,28 @@
 "pt": 0,
 "size": 8,
 "type": "CPoint",
-"how": "assumed"
+"how": "manual"
 },
 "m_nRange": {
 "bg": 8,
 "pt": 8,
 "size": 2,
 "type": "unsigned __int16",
-"how": "assumed"
+"how": "manual"
 },
 "m_aChildren": {
 "bg": 10,
 "pt": 10,
 "size": 6,
 "type": "Array<__int16,3>",
-"how": "assumed"
+"how": "manual"
 },
 "m_parent": {
 "bg": 16,
 "pt": 16,
 "size": 2,
 "type": "__int16",
-"how": "assumed"
+"how": "manual"
 }
 }
 },

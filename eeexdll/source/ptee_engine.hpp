@@ -28,6 +28,23 @@ namespace PTEE {
 	extern int (__fastcall* p_CVariableHash_GetValue)(CVariableHash* pThis, CString* pName, int nDefault);
 	extern int (__fastcall* p_CGameSprite_HasFistOfIron)(CGameSprite* pThis);
 
+	// Torment-only activity flag of CGameSprite at +0x3910, right after m_activeImprisonment (+0x390c;
+	// m_bSelected follows at +0x3914). Set to 1 by the constructor like m_activeAI/m_activeImprisonment,
+	// cleared and restored by Torment's spell-cinematic projectiles (AIUpdate of the Abyssal Fury S077* and
+	// Celestial Host S091* classes, ...). Every Torment target search that tests m_active / m_activeAI /
+	// m_activeImprisonment also tests it (CGameArea::GetNearest both overloads, GetAllInRange, ... 40 sites).
+	inline bool IsActiveCinematic(const CGameSprite& sprite) {
+		return reinterpret_cast<const int*>(&sprite.m_activeImprisonment)[1] != 0;
+	}
+
+	// Sprite update spreading mask, a constant byte of the engine (BG2EE 1, Torment 7): staggered sprite
+	// work runs when (m_id & mask) == (worldTime & mask), and CGameSprite::CheckIfVisible keeps a sprite
+	// seen for m_canBeSeen = (mask + 1) * 4 ticks. EEex's CheckIfVisible hard-codes BG's 8.
+	extern byte* p_g_nSpriteUpdateMask;
+	inline short CanBeSeenTicks() {
+		return static_cast<short>((*p_g_nSpriteUpdateMask + 1) << 2);
+	}
+
 	// Torment's CChitin::ENGINE_MODE value (absent from the BG2EE EngineMode enum)
 	constexpr int ENGINE_MODE_PST = 3;
 

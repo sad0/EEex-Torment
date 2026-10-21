@@ -276,11 +276,6 @@
 14
 ],
 [
-"CVisibilityMapTreeNode",
-0,
-4
-],
-[
 "CVisibilityMapEllipse",
 0,
 6
@@ -1180,6 +1175,7 @@
 "CFile",
 "CStoreFileHeader",
 "CObjectMarker",
+"CVisibilityMapTreeNode",
 "CSpawnFile",
 "CResItem",
 "CAIResponseSet",

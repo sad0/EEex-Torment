@@ -76,25 +76,11 @@ void CScreenWorld::Override_EndDialog(byte bForceExecution, byte fullEnd) { NOT_
 void CScreenWorld::Override_ResetZoom() { NOT_PORTED(); }
 void CScreenWorld::Override_StartScroll(CPoint dest, short speed) { NOT_PORTED(); }
 void CScreenWorld::Override_ZoomToMap(bool bZoomOut) { NOT_PORTED(); }
-void CGameArea::Override_AddClairvoyanceObject(CGameSprite* pSprite, CPoint position, int duration) { NOT_PORTED(); }
 void CGameArea::Override_RenderZoomed() { NOT_PORTED(); }
 void CVidTile::Override_RenderTexture(int a, CRect* b, int c, int d, uint e) { NOT_PORTED(); }
-
-//----------------------//
-//  visibility_map.cpp  //
-//----------------------//
-
-void EEex::VisibilityMap_Hook_OnConstruct(CVisibilityMap* pThis) {}
-void EEex::VisibilityMap_Hook_OnDestruct(CVisibilityMap* pThis) {}
-byte CVisibilityMap::Override_AddCharacter(CPoint* a, int b, byte* c, byte d, int* e) { NOT_PORTED(); return 0; }
-int CVisibilityMap::Override_IsCharacterIdOnMap(int id) { NOT_PORTED(); return 0; }
-void CVisibilityMap::Override_RemoveCharacter(CPoint* a, int b, byte* c, byte d, int* e, byte f) { NOT_PORTED(); }
-void CVisibilityMap::Override_UpDate(CPoint* a, CPoint* b, int c, byte* d, byte e, int* f, byte g) { NOT_PORTED(); }
 
 //------------------------------------//
 //  engine_reimplementations / debug  //
 //------------------------------------//
 
-short CGameSprite::Override_SetVisualRange(short nRange) { NOT_PORTED(); return nRange; }
-void CGameSprite::Override_CheckIfVisible() { NOT_PORTED(); }
 void CVidPalette::Override_RealizeResource3d(uint* a, uint b, CVIDIMG_PALETTEAFFECT* c, uint d) { NOT_PORTED(); }

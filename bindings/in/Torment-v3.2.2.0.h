@@ -49097,9 +49097,12 @@ struct __cppobj std::vector<WED_PolyPoint_st,std::allocator<WED_PolyPoint_st> > 
 };
 
 /* 5661 */
-struct __cppobj CVisibilityMapTreeNode
+struct __cppobj __declspec(align(4)) CVisibilityMapTreeNode
 {
-	nobinding unsigned int _ptpad_0[5];
+	CPoint m_relativePos;
+	unsigned __int16 m_nRange;
+	__int16 m_aChildren[3];
+	__int16 m_parent;
 };
 
 /* 5662 */

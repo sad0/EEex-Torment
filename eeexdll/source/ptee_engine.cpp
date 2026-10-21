@@ -11,6 +11,7 @@ namespace PTEE {
 	int (__fastcall* p_CGameAIBase_PartyHasItem)(CGameAIBase* pThis, CResRef* pItem) = nullptr;
 	int (__fastcall* p_CVariableHash_GetValue)(CVariableHash* pThis, CString* pName, int nDefault) = nullptr;
 	int (__fastcall* p_CGameSprite_HasFistOfIron)(CGameSprite* pThis) = nullptr;
+	byte* p_g_nSpriteUpdateMask = nullptr;
 
 	template<typename OutType>
 	static void bind(const String& patternName, OutType& pointerOut) {
@@ -29,6 +30,7 @@ namespace PTEE {
 		bind(TEXT("PTEE-CGameAIBase::PartyHasItem"), p_CGameAIBase_PartyHasItem);
 		bind(TEXT("PTEE-CVariableHash::GetValue"), p_CVariableHash_GetValue);
 		bind(TEXT("PTEE-CGameSprite::HasFistOfIron"), p_CGameSprite_HasFistOfIron);
+		bind(TEXT("PTEE-g_nSpriteUpdateMask"), p_g_nSpriteUpdateMask);
 
 		void** pBaseEffectVtbl = nullptr;
 		bind(TEXT("Data-CGameEffect::vftable"), pBaseEffectVtbl);

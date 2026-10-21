@@ -251,10 +251,21 @@ PATCHES = {
          '''		sFormatString->Format(" +Right:%d (%s)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusRight), pThis->m_hitBonusesRight.m_pchData);'''),
         ('''		sFormatString->Format(" +Left:%d (%d)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusLeft), pThis->m_hitBonusesLeft);''',
          '''		sFormatString->Format(" +Left:%d (%s)", static_cast<short>(pThis->GetActiveStats()->m_THAC0BonusLeft), pThis->m_hitBonusesLeft.m_pchData);'''),
+        # Torment's target searches (CGameArea::GetNearest, ...) also skip sprites whose PT-only activity flag
+        # (+0x3910, cleared during spell cinematics) is 0: MatchObject follows the engine
+        ('''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment
+''', '''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment || !PTEE::IsActiveCinematic(sprite)
+'''),
         # WSPECIAL.2DA has no SPEED column in Torment (HIT, DAMAGE only): EEex's BG fix does not apply.
         ('@body void EEex::Fix_Hook_ImplementWSPECIALSpeedColumn(', '''{
 	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement
 }'''),
+    ],
+    'visibility_map.cpp': [
+        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "ptee_engine.hpp"\n'),
+        # Torment's sprite update spreading mask is 7 (BG 1): vanilla CheckIfVisible keeps a sprite seen for
+        # (mask + 1) * 4 = 32 ticks; BG's 8 makes every creature blink between two checks
+        ('@all:4 this->m_canBeSeen = 8;', 'this->m_canBeSeen = PTEE::CanBeSeenTicks();'),
     ],
 }
 
@@ -262,6 +273,13 @@ os.makedirs(OUT, exist_ok=True)
 for name, reps in PATCHES.items():
     s = open(os.path.join(SRC, name), encoding='utf-8-sig').read()
     for old, new in reps:
+        if old.startswith('@all:'):
+            # replace every occurrence; the expected count guards against upstream changes
+            cnt, old = old[len('@all:'):].split(' ', 1)
+            if s.count(old) != int(cnt):
+                raise SystemExit(f'{name}: expected {cnt} matches, found {s.count(old)}: {old}')
+            s = s.replace(old, new)
+            continue
         if old.startswith('@body '):
             # replace the whole body of the function whose definition starts with this signature
             sig = old[len('@body '):]

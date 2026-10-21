@@ -26,6 +26,7 @@
     <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\script_folder.cpp" />
     <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\time_util.cpp" />
     <ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\util.cpp" />
+    <ClCompile Include="generated\src\visibility_map.cpp" />
     <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui.cpp" />
     <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_demo.cpp" />
     <ClCompile Include="$(ILROOT)lib_source\ImGui\imgui_draw.cpp" />

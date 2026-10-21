@@ -17,6 +17,8 @@ local ok, err = pcall(function()
 	-- Phase 4: EEex.dll (C++ core) for Torment
 	EEex_OpenLuaBindings("EEex")
 	EEex.OnTargetExecutableInitialized()
+	-- Phase 4d: EEex's visibility map (FoW-clearing cap) reimplementation, installed like EEex_Fix_Patch.lua
+	EEex_DoFile("PTEE_VisMapTest")
 end)
 log("EEex_OpenLuaBindings(LuaBindings + EEex)", ok, err)
 if ok then
@@ -121,6 +123,21 @@ local function dumpParty(game)
 	t("virtual_GetAIType", function() return EEex_UDToPtr(sprite:virtual_GetAIType()) - EEex_UDToPtr(sprite) end)
 	t("virtual_GetVertListType", function() return sprite:virtual_GetVertListType() end)
 	t("m_activeImprisonment", function() return sprite.m_activeImprisonment end)
+	-- Phase 4d visibility map: party members are FoW-clearing characters, tiles around them are visible
+	t("vismap visible/explored tiles", function()
+		local vis = sprite.m_pArea.m_visibility
+		local w, h = vis.m_nWidth, vis.m_nHeight
+		local base = EEex_UDToPtr(vis.m_pMap)
+		local seen, explored = 0, 0
+		for i = 0, w * h - 1 do
+			local v = EEex_ReadU16(base + 2 * i)
+			if bit32.band(v, 0x7FFF) ~= 0 then seen = seen + 1 end
+			if bit32.band(v, 0x8000) ~= 0 then explored = explored + 1 end
+		end
+		local cx, cy = math.floor(sprite.m_pos.x / 32), math.floor(sprite.m_pos.y / 32)
+		return w, h, seen, explored, EEex_ReadU16(base + 2 * (cy * w + cx))
+	end)
+	t("party canBeSeen", function() return sprite.m_canBeSeen, target.m_canBeSeen end)
 	-- MatchObject diagnosis: every condition EEex_CheckMatch tests on the target (party[1])
 	t("target flags", function() return target.m_active, target.m_activeAI, target.m_activeImprisonment end)
 	t("target pos/caller pos", function() return target.m_pos.x, target.m_pos.y, sprite.m_pos.x, sprite.m_pos.y end)
@@ -134,8 +151,33 @@ end
 
 local engineDone, partyDone, ticks = false, false, 0
 
+local samples = 0
+local function sampleVisibility()
+	-- m_canBeSeen of every sprite in the area over time (visibility map test)
+	samples = samples + 1
+	if samples > 40 then return end
+	local game = EngineGlobals.g_pBaldurChitin.m_pObjectGame
+	local o = getObject(game.m_characters:get(0))
+	local area = o.m_pArea
+	local out = {}
+	local node = area.m_lVertSort.m_pNodeHead
+	while node do
+		local obj = getObject(node.data)
+		if obj and obj.m_objectType == 0x31 then
+			local s = EEex_CastUD(obj, "CGameSprite")
+			out[#out + 1] = string.format("%d:%d", s.m_id % 1000, s.m_canBeSeen)
+		end
+		node = node.pNext
+	end
+	log("canBeSeen", samples, table.concat(out, " "))
+end
+
 local function onUI()
-	if partyDone then return end
+	if partyDone then
+		ticks = ticks + 1
+		if ticks % 7 == 0 then pcall(sampleVisibility) end
+		return
+	end
 	ticks = ticks + 1
 	if ticks % 200 ~= 1 then return end
 	local okE, game = pcall(dumpEngine)

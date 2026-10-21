@@ -27,6 +27,13 @@ LABELS = {
     'Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies': 0x346a54,
     'Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies': 0x346aab,
 }
+# Torment-only engine globals: name -> (rva of a RIP-relative instruction, offset of its disp32, length)
+DATA = {
+    # Sprite update spreading mask (BG2EE 1, Torment 7): staggered sprite work runs when
+    # (m_id & mask) == (worldTime & mask); CheckIfVisible sets m_canBeSeen = (mask + 1) * 4.
+    # Read by CGameSprite::CheckIfVisible PT 0x3be3a8 `movzx eax, byte ptr [rip + X]`.
+    'PTEE-g_nSpriteUpdateMask': (0x3be3a8, 3, 7),
+}
 lines = ['; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db',
          '; TODO(phase 5): Hook-CChitin::OnResizeWindow()-B3Scale, Hook-drawItem()-AfterEnabledCheck,',
          ';   Hook-drawItem()-CheckScrollbarContentHeight, Hook-drawItem()-FixForcedScrollbarDivideByZero2', '']
@@ -40,5 +47,9 @@ for name, pt in LABELS.items():
     ops = f'ADD {pt - start}' if pt != start else ''
     lines += [f'[{name}]', f'Pattern={p}'] + ([f'Operations={ops}'] if ops else []) + ['']
     print(name, hex(pt), p, ops)
+for name, (pt, doff, ilen) in DATA.items():
+    p, start = unique_at(pt)
+    lines += [f'[{name}]', f'Pattern={p}', f'Operations=ADD {pt + doff - start}, PUSH, READ DWORD, ADD, ADD {ilen - doff}', '']
+    print(name, hex(pt), p)
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 open(OUT, 'w', newline='\n').write('\n'.join(lines))

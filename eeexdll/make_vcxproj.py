@@ -16,14 +16,15 @@ s = re.sub(r'<OutDir>[^<]*</OutDir>', r'<OutDir>$(MSBuildProjectDirectory)\\..\\
 s = re.sub(r'<IntDir>[^<]*</IntDir>', r'<IntDir>$(MSBuildProjectDirectory)\\..\\build\\EEex-PTEE\\obj\\</IntDir>', s)
 s = re.sub(r'<PostBuildEvent>.*?</PostBuildEvent>', '', s, flags=re.S)
 s = re.sub(r'\s*<ClInclude Include="headers[^"]*" />', '', s)
-# BG engine reimplementations (Uncap FPS, visibility map, engine_reimplementations) are not ported yet:
-# they are replaced by source/ptee_stubs.cpp, which logs when one of them is reached.
-s = re.sub(r'\s*<ClCompile Include="[^"]*\\(uncap_fps|visibility_map|engine_reimplementations|debug)\.cpp" />', '', s)
+# Replaced by source/ptee_stubs.cpp: Uncap FPS (not ported yet) and engine_reimplementations / debug (never
+# installed by EEex: no Lua patch jumps to them, all $nobinding). visibility_map.cpp is compiled as-is:
+# Torment's vismap algorithm is BG's (AUDIT.md); patched copy (patch_sources.py).
+s = re.sub(r'\s*<ClCompile Include="[^"]*\\(uncap_fps|engine_reimplementations|debug)\.cpp" />', '', s)
 s = s.replace('<ClCompile Include="generated\\Baldur_generated_internal_pointers.cpp" />',
               '<ClCompile Include="generated\\Baldur_generated_internal_pointers.cpp" />\n    <ClCompile Include="source\\ptee_stubs.cpp" />'
               '\n    <ClCompile Include="source\\ptee_engine.cpp" />')
 # Torment semantic patches (patch_sources.py): compile the patched copies instead of upstream
-for _f in ('EEex.cpp',):
+for _f in ('EEex.cpp', 'visibility_map.cpp'):
     s = s.replace(rf'<ClCompile Include="$(ILROOT)EEex-Core-Shared-Files\source\{_f}" />', rf'<ClCompile Include="generated\src\{_f}" />')
 s = s.replace('<AdditionalIncludeDirectories>$(ProjectDir)generated;', r'<AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;')
 open(os.path.join(HERE, 'EEex-PTEE.vcxproj'), 'w', encoding='utf-8').write(s)
