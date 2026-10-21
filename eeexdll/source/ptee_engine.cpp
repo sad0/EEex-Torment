@@ -17,6 +17,15 @@ namespace PTEE {
 	SDL_Rect* (__fastcall* p_CChitin_GetUIRect)(CChitin* pThis, SDL_Rect* pRect) = nullptr;
 	CChitin** p_g_pChitin = nullptr;
 	CPoint* (__fastcall* p_CVidMode_WindowToScreen)(CVidMode* pThis, CPoint* pOut, int x, int y) = nullptr;
+	void (__fastcall* p_CAIScript_Read)(CAIScript* pThis, CResRef res, int bPlayerScript) = nullptr;
+
+	CAIScript* NewScript(CResRef res, bool bPlayerScript) {
+		CAIScript *const pScript = newEngineObj<CAIScript>(res);
+		if (bPlayerScript && p_CAIScript_Read != nullptr) {
+			p_CAIScript_Read(pScript, res, 1);
+		}
+		return pScript;
+	}
 
 	template<typename OutType>
 	static void bind(const String& patternName, OutType& pointerOut) {
@@ -41,6 +50,7 @@ namespace PTEE {
 		bind(TEXT("PTEE-CChitin::GetUIRect"), p_CChitin_GetUIRect);
 		bind(TEXT("PTEE-g_pChitin"), p_g_pChitin);
 		bind(TEXT("PTEE-CVidMode::WindowToScreen"), p_CVidMode_WindowToScreen);
+		bind(TEXT("PTEE-CAIScript::Read"), p_CAIScript_Read);
 
 		void** pBaseEffectVtbl = nullptr;
 		bind(TEXT("Data-CGameEffect::vftable"), pBaseEffectVtbl);

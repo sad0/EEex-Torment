@@ -36,6 +36,9 @@ Pattern=0FB70585E027
 [PTEE-CVidMode::WindowToScreen]
 Pattern=442B818C0100
 
+[PTEE-CAIScript::Read]
+Pattern=48895424105553565741544156
+
 [Hook-CChitin::OnResizeWindow()-B3Scale]
 Pattern=E81C0B03008B
 

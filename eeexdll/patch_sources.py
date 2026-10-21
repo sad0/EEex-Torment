@@ -262,6 +262,9 @@ PATCHES = {
 		!std::equal(''', '''		!std::equal('''),
         ('''		exData.oldDisableSpells = stats.m_disableSpells;
 ''', ''),
+        # Torment's CAIScript constructor has no player-script argument (PTEE::NewScript re-reads with the flag)
+        ('? newEngineObj<CAIScript>(pEffect->m_res, 0)', '? newEngineObj<CAIScript>(pEffect->m_res)'),
+        ('? newEngineObj<CAIScript>(pEffect->m_res2, pEffect->m_effectAmount2)', '? PTEE::NewScript(pEffect->m_res2, pEffect->m_effectAmount2 != 0)'),
         # WSPECIAL.2DA has no SPEED column in Torment (HIT, DAMAGE only): EEex's BG fix does not apply.
         ('@body void EEex::Fix_Hook_ImplementWSPECIALSpeedColumn(', '''{
 	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement

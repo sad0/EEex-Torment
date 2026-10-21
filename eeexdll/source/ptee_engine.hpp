@@ -44,6 +44,13 @@ namespace PTEE {
 	// y' = SCREENHEIGHT * (2 * [+0x190] - scrollY + y) / nHeight.
 	extern CPoint* (__fastcall* p_CVidMode_WindowToScreen)(CVidMode* pThis, CPoint* pOut, int x, int y);
 
+	// CAIScript::Read(resref, bPlayerScript) (PT 0x12d240). It first frees the script's current content.
+	extern void (__fastcall* p_CAIScript_Read)(CAIScript* pThis, CResRef res, int bPlayerScript);
+
+	// New AI script; Torment's constructor always reads a non-player script, so a player script is read
+	// again with the flag, like CGameSprite::JoinParty (PT 0x416435).
+	CAIScript* NewScript(CResRef res, bool bPlayerScript);
+
 	// Torment-only activity flag of CGameSprite at +0x3910, right after m_activeImprisonment (+0x390c;
 	// m_bSelected follows at +0x3914). Set to 1 by the constructor like m_activeAI/m_activeImprisonment,
 	// cleared and restored by Torment's spell-cinematic projectiles (AIUpdate of the Abyssal Fury S077* and

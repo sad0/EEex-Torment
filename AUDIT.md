@@ -124,8 +124,10 @@ Torment differences carried into EEex's reimplementations (eeexdll/patch_sources
 - Argument registers read by every bound engine function, BG vs PT: Torment adds or drops a parameter in
   CInfinity::SetZoom (fixed), CAIObjectType::GetShare (+r9), CGameAIBase::GetTargetShare (+rdx),
   GetTargetShareType (+r8), CGameSprite::ReadyOffInternalList (+rdx), CProjectile::DecodeProjectile (+r8),
-  CVidFont::GetStringHeight / GetStringLength (+r9b), CAIScript::Construct(CResRef,int) (no int). None is
-  called by EEex.dll; their Lua callers are phase 5 (signatures to adopt there).
+  CVidFont::GetStringHeight / GetStringLength (+r9b), CAIScript::Construct(CResRef,int) (no int). The
+  Torment signatures are in bindings/in/make_manual_types_pt.py (manual_types_pt.txt). EEex.dll only builds
+  CAIScripts (op 82 / screen effects): patched to PTEE::NewScript(res, bPlayerScript), which re-reads the
+  script with CAIScript::Read(res, 1) (PT 0x12d240) for player scripts. Lua callers are phase 5.
 
 ## Menu hooks of the version extra DB (EEex_Menu_Patch.lua, phase 5 notes)
 Located by context in Torment (tools/port_extra.py): OnResizeWindow()-B3Scale (call SDL_GL_GetDrawableSize

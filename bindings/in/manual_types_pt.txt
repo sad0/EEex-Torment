@@ -926,7 +926,7 @@ struct CAIObjectType
 	static CAIObjectType ANYONE;
 	$binding_name(Construct_Overload_Manual) $pattern_name(Construct(byte,byte,byte,byte,byte,byte,byte,int)) $constructor_fake Construct(byte EnemyAlly, byte General, byte Race, byte Class, byte Specifics, byte Gender, byte Alignment, int Instance);
 	void Decode(CGameAIBase* caller);
-	CGameObject* GetShare(CGameAIBase* caller, int checkBackList);
+	CGameObject* GetShare(CGameAIBase* caller, int checkBackList, int bIgnoreRangeAndLOS);
 	CGameObject* GetShareType(CGameAIBase* caller, CGameObjectType type, int checkBackList);
 	byte OfType(const CAIObjectType* type, int checkForNonSprites, int noNonSprites, int deathMatchAllowance) const;
 	void Set(const CAIObjectType* that);
@@ -993,9 +993,9 @@ struct CGameAIBase : CGameObject
 	void ApplyEffectToParty(CGameEffect* effect);
 	short ForceSpell(CGameSprite* target);
 	short ForceSpellPoint();
-	CGameObject* GetTargetShare();
+	CGameObject* GetTargetShare(int bIgnoreRangeAndLOS);
 	$binding_name(GetTargetShareType_Overload_AIType_ObjectType) $pattern_name(GetTargetShareType(CAIObjectType*,byte)) CGameObject* GetTargetShareType(CAIObjectType* AItype, byte type);
-	$binding_name(GetTargetShareType_Overload_ObjectType) $pattern_name(GetTargetShareType(byte)) CGameObject* GetTargetShareType(byte type);
+	$binding_name(GetTargetShareType_Overload_ObjectType) $pattern_name(GetTargetShareType(byte)) CGameObject* GetTargetShareType(byte type, int bIgnoreRangeAndLOS);
 };
 
 struct CGameSprite : CGameAIBase
@@ -1024,7 +1024,7 @@ struct CGameSprite : CGameAIBase
 	uint GetNameRef();
 	CGameButtonList* GetQuickButtons(unsigned __int16 buttonType, unsigned __int8 existanceCheck);
 	void PlaySound(byte soundID, int showText, int showCircle, int overrideOption);
-	void ReadyOffInternalList(CButtonData* button, bool firstCall);
+	void ReadyOffInternalList(short buttonIndex, bool firstCall);
 	void ReadySpell(CButtonData* button, bool firstCall);
 	int ShouldAvertCriticalHit();
 	short SpellPoint();
@@ -1033,7 +1033,7 @@ struct CGameSprite : CGameAIBase
 
 struct CProjectile : CGameObject
 {
-	static CProjectile* DecodeProjectile(ushort wProjectileType, CGameAIBase* pSprite);
+	static CProjectile* DecodeProjectile(ushort wProjectileType, CGameAIBase* pSprite, ushort nLevel);
 	static void GetStart(int id, CPoint* start, byte bCastOffset);
 	void AddEffect(CGameEffect* effect);
 	void ClearEffects();
@@ -1403,7 +1403,7 @@ struct CDerivedStats : CDerivedStatsTemplate
 
 struct CAIScript
 {
-	$binding_name(Construct_Overload_Manual) $pattern_name(Construct(CResRef,int)) $constructor_fake Construct(CResRef cNewResRef, int playerscript);
+	$binding_name(Construct_Overload_Manual) $pattern_name(Construct(CResRef,int)) $constructor_fake Construct(CResRef cNewResRef);
 	void Destruct();
 };
 
@@ -1718,8 +1718,8 @@ struct CVidFont : CResHelper<CResFont,1034>
 {
 	$nobinding $constructor_fake Construct();
 	$nobinding void Destruct();
-	$nobinding int GetStringHeight(const CString* text, int w);
-	$nobinding int GetStringLength(const CString* str, int w);
+	$nobinding int GetStringHeight(const CString* text, int w, bool bFlag);
+	$nobinding int GetStringLength(const CString* str, int w, bool bFlag);
 	$nobinding int RenderTextWrap(primitive const char* text, int x, int y, int w, int h, CRect* rClip, int halign, int valign, bool shadow, bool backgroundRect);
 	$nobinding void SetResRef(const CResRef* cNewResRef, int bSetAutoRequest);
 };
