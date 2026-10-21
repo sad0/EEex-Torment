@@ -10,7 +10,7 @@ UP = os.path.join(HERE, r'..\ref\EEex\EEex\copy')
 OUT = os.path.join(HERE, 'generated')
 GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
 # dev-only scripts (bindings/test/) loaded after EEex's startup in the dev game
-DEV_FILES = ['PTEE_SkipIntro', 'PTEE_SpellTest']
+DEV_FILES = ['PTEE_SkipIntro', 'PTEE_SpellTest', 'PTEE_FeatureTest']
 
 
 def load_patches():
@@ -79,7 +79,10 @@ def deploy():
         shutil.copy(f, os.path.join(GAME, 'override'))
     # IDS additions (installer's job in the release): Torment's own IDS + EEex's Torment ids (src/patch/*.IDS)
     import subprocess
-    for f in glob.glob(os.path.join(HERE, 'src', 'patch', '*.IDS')):
+    # dev only: test resources (bindings/test/dev_override/*, copied) and IDS lines (bindings/test/dev_patch/*.IDS)
+    for f in glob.glob(os.path.join(HERE, r'..\bindings\test\dev_override', '*')):
+        shutil.copy(f, os.path.join(GAME, 'override'))
+    for f in glob.glob(os.path.join(HERE, 'src', 'patch', '*.IDS')) + glob.glob(os.path.join(HERE, r'..\bindings\test\dev_patch', '*.IDS')):
         name = os.path.basename(f)[:-4]
         base = subprocess.run([sys.executable, os.path.join(HERE, r'..\tools\bifextract.py'), GAME, name, 'ids'],
                               capture_output=True, text=True, encoding='latin-1').stdout

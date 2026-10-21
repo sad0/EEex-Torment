@@ -1404,6 +1404,7 @@ struct CDerivedStats : CDerivedStatsTemplate
 struct CAIScript
 {
 	$binding_name(Construct_Overload_Manual) $pattern_name(Construct(CResRef,int)) $constructor_fake Construct(CResRef cNewResRef);
+	$pattern_name(Read(CResRef,int)) void Read(CResRef res, int bPlayerScript);
 	void Destruct();
 };
 

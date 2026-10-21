@@ -36,6 +36,8 @@ LABELS = {
     # CAIScript::Read(resref, bPlayerScript) (BG 0x11fe10): Torment's CAIScript constructor has no player
     # flag (it calls Read(resref, 0)); CGameSprite::JoinParty reads player scripts with Read(resref, 1)
     'PTEE-CAIScript::Read': 0x12d240,
+    # same function under the name the Lua bindings resolve (manual_types_pt.txt: CAIScript $pattern_name(Read(CResRef,int)))
+    'CAIScript::Read(CResRef,int)': 0x12d240,
     # EEex_Menu_Patch.lua hooks of the version extra DB, located by context (identical code, the uiItem is in
     # r13 in Torment's drawItem instead of r15: the phase-5 Lua must use r13)
     'Hook-CChitin::OnResizeWindow()-B3Scale': 0x4a41af,             # call SDL_GL_GetDrawableSize after SCREENWIDTH/HEIGHT

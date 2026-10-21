@@ -34,7 +34,9 @@ SIG = [
     ('\t$nobinding int GetStringLength(const CString* str, int w);\n', '\t$nobinding int GetStringLength(const CString* str, int w, bool bFlag);\n'),
     # CAIScript::CAIScript(CResRef): Torment's constructor has no playerscript argument; it calls
     # CAIScript::Read(resref, 0) itself (PT 0x176d80 -> 0x12d240)
-    ('$constructor_fake Construct(CResRef cNewResRef, int playerscript);\n', '$constructor_fake Construct(CResRef cNewResRef);\n'),
+    ('$constructor_fake Construct(CResRef cNewResRef, int playerscript);\n', '$constructor_fake Construct(CResRef cNewResRef);\n'
+     # player scripts are re-read with Read(resref, 1), as CGameSprite::JoinParty does (EEex.dll PTEE::NewScript)
+     '\t$pattern_name(Read(CResRef,int)) void Read(CResRef res, int bPlayerScript);\n'),
 ]
 for old, new in SIG:
     assert s.count(old) == 1, old
