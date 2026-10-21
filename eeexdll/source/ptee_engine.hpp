@@ -25,6 +25,7 @@ namespace PTEE {
 	// CGameAIBase::PartyHasItem (PT 0x174e00), the value of a global variable (PT 0x2b4b80: variable
 	// hash, name, default) and the Fist of Iron test (PT 0x3d0ae0: opcode 382 effect + animation 0x?32).
 	extern int (__fastcall* p_CGameAIBase_PartyHasItem)(CGameAIBase* pThis, CResRef* pItem);
+	// CString passed by value (x64: address of a caller copy that the callee destroys)
 	extern int (__fastcall* p_CVariableHash_GetValue)(CVariableHash* pThis, CString* pName, int nDefault);
 	extern int (__fastcall* p_CGameSprite_HasFistOfIron)(CGameSprite* pThis);
 

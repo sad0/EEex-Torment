@@ -196,8 +196,12 @@ PATCHES = {
 		// Undead (non-PC) attacking a PC during the Mortuary truce: +4 needed (global Dead_Truce == 1)
 		if (pThis->m_typeAI.m_General == 4 && pThis->m_typeAI.m_EnemyAlly != 2 && target->m_typeAI.m_EnemyAlly == 2)
 		{
-			EngineVal<CString> sTruce { "Dead_Truce" };
-			if (PTEE::p_CVariableHash_GetValue(&pGame->m_variables, &*sTruce, 0) == 1)
+			// The name is passed by value: the callee destroys it (PT 0x2b4c53 ~CString on the argument), so it is
+			// built in raw storage and not destroyed here (a double free corrupted the CString allocator)
+			alignas(CString) byte truceNameStorage[sizeof(CString)];
+			CString *const pTruceName = reinterpret_cast<CString*>(truceNameStorage);
+			CString::p_Construct_Overload_String(pTruceName, "Dead_Truce");
+			if (PTEE::p_CVariableHash_GetValue(&pGame->m_variables, pTruceName, 0) == 1)
 			{
 				*nTHAC0VsACDiffOut += 4;
 			}
