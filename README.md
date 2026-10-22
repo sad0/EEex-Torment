@@ -7,7 +7,7 @@ Everything EEex does on BG2EE runs on Torment: the loader, the full pattern data
 structs, EEex.dll, the whole Lua layer (hooks, opcodes 400-409, actions / triggers / objects, extended stats,
 options menu, B3 modules) and a WeiDU installer. Torment's own behaviour is kept where it differs from BG.
 
-**Download:** see the Releases page (`EEex-PSTEE-v1.3.1-ptee1.zip`: extract into the game folder, run
+**Download:** see the Releases page (`EEex-PSTEE-v1.3.1-pstee2.zip`: extract into the game folder, run
 `setup-EEex.exe`, start the game with `InfinityLoader.exe`). Player readme: [installer/readme-EEex-PSTEE.txt](installer/readme-EEex-PSTEE.txt).
 
 ## Status
