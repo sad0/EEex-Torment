@@ -10,7 +10,7 @@ PATCHES = [
     ('''function B3Hotkey_CastOffInternal(resref)
 ''',
      '''function B3Hotkey_CastOffInternal(resref)
-	-- EEex-PTEE: Torment's ReadyOffInternalList takes a quick-spell slot index (PT 0x3da700), not a CButtonData
+	-- EEex-PSTEE: Torment's ReadyOffInternalList takes a quick-spell slot index (PT 0x3da700), not a CButtonData
 	do return false end
 '''),
 ]

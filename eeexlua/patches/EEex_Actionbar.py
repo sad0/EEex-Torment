@@ -34,7 +34,7 @@ PATCHES = [
 -- | 121   | Torment: Tablet misc menu                         |
 -- +-------+---------------------------------------------------+
 --
--- EEex-PTEE: states 115-121 are Torment's (const.ACTIONBAR_STATE_*). Torment's engine never selects the class
+-- EEex-PSTEE: states 115-121 are Torment's (const.ACTIONBAR_STATE_*). Torment's engine never selects the class
 -- states 1-21 itself (the PST UI uses its own bar + the context bar states), but they can still be set.
 ''',
      ),
@@ -51,21 +51,21 @@ PATCHES = [
 	["QUICK_WEAPON_4"] = 30,
 	["NONE"] = 100,
 }''',
-     '''	-- EEex-PTEE: Torment has 5 quick items, 3 quick spells and 5 quick weapons (PT 0x2c73c8: 21..25 / 26..28 / 29..33)
+     '''	-- EEex-PSTEE: Torment has 5 quick items, 3 quick spells and 5 quick weapons (PT 0x2c73c8: 21..25 / 26..28 / 29..33)
 	["QUICK_ITEM_1"] = 21,
 	["QUICK_ITEM_2"] = 22,
 	["QUICK_ITEM_3"] = 23,
-	["QUICK_ITEM_4"] = 24,     -- EEex-PTEE: Torment-only
-	["QUICK_ITEM_5"] = 25,     -- EEex-PTEE: Torment-only
-	["QUICK_SPELL_1"] = 26,    -- EEex-PTEE: BG 24
-	["QUICK_SPELL_2"] = 27,    -- EEex-PTEE: BG 25
-	["QUICK_SPELL_3"] = 28,    -- EEex-PTEE: BG 26
-	["QUICK_WEAPON_1"] = 29,   -- EEex-PTEE: BG 27
-	["QUICK_WEAPON_2"] = 30,   -- EEex-PTEE: BG 28
-	["QUICK_WEAPON_3"] = 31,   -- EEex-PTEE: BG 29
-	["QUICK_WEAPON_4"] = 32,   -- EEex-PTEE: BG 30
-	["QUICK_WEAPON_5"] = 33,   -- EEex-PTEE: Torment-only
-	-- EEex-PTEE: Torment-only, an entry of the special abilities context bar (state 118). Its icon / action come
+	["QUICK_ITEM_4"] = 24,     -- EEex-PSTEE: Torment-only
+	["QUICK_ITEM_5"] = 25,     -- EEex-PSTEE: Torment-only
+	["QUICK_SPELL_1"] = 26,    -- EEex-PSTEE: BG 24
+	["QUICK_SPELL_2"] = 27,    -- EEex-PSTEE: BG 25
+	["QUICK_SPELL_3"] = 28,    -- EEex-PSTEE: BG 26
+	["QUICK_WEAPON_1"] = 29,   -- EEex-PSTEE: BG 27
+	["QUICK_WEAPON_2"] = 30,   -- EEex-PSTEE: BG 28
+	["QUICK_WEAPON_3"] = 31,   -- EEex-PSTEE: BG 29
+	["QUICK_WEAPON_4"] = 32,   -- EEex-PSTEE: BG 30
+	["QUICK_WEAPON_5"] = 33,   -- EEex-PSTEE: Torment-only
+	-- EEex-PSTEE: Torment-only, an entry of the special abilities context bar (state 118). Its icon / action come
 	-- from a per-button list that only state 118 fills (PT 0x25a810), so it is not useful on other states.
 	["CHARACTER_ABILITY"] = 70,
 	["NONE"] = 100,
@@ -118,7 +118,7 @@ PATCHES = [
 -- |        | in 1-121        |
 -- +--------+-----------------+
 --
--- EEex-PTEE: Torment configs 31-37 are its context bar states. Config 38 (BG 31) is the default case; unlike
+-- EEex-PSTEE: Torment configs 31-37 are its context bar states. Config 38 (BG 31) is the default case; unlike
 -- BG it leaves the buttons and m_nState unchanged. States outside 1-121 give config -1.
 ''',
      ),
@@ -130,7 +130,7 @@ PATCHES = [
      '''    [30]      |  = 113, -- Cleric / Mage Spells (Cast)
               |    114, -- Cleric / Mage Spells (Select Quick Spell)
               |
-    EEex-PTEE: Torment-only configs (PT 0x2ca438):
+    EEex-PSTEE: Torment-only configs (PT 0x2ca438):
     [31]      |  = 115, -- Weapons context bar (quick weapons, Guard)
     [32]      |  = 116, -- Spells context bar (spell list)
     [33]      |  = 117, -- Items context bar (Quick Items 1-5)

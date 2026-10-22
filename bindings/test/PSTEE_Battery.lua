@@ -1,14 +1,14 @@
--- EEex-PTEE dev test battery (not shipped): a full game session run by script on the dedicated save.
--- F9: start (or resume after a game load). Each step logs "PTEE-BATTERY: PASS|FAIL|INFO <step>: <check> (detail)";
+-- EEex-PSTEE dev test battery (not shipped): a full game session run by script on the dedicated save.
+-- F9: start (or resume after a game load). Each step logs "PSTEE-BATTERY: PASS|FAIL|INFO <step>: <check> (detail)";
 -- the run ends with a summary line. Steps run one after the other, driven by a per-frame tick (PTEEBAT.menu).
 -- Needs the dev resources of bindings/test/make_battery_res.py (dev_override, deployed by eeexlua/build.py).
 -- Script strings parsed at runtime lose spaces and most punctuation inside quotes: the chunks below avoid them.
 
-PTEE_BAT = PTEE_BAT or { results = {}, pass = 0, fail = 0, flags = {} }
-local B = PTEE_BAT
+PSTEE_BAT = PSTEE_BAT or { results = {}, pass = 0, fail = 0, flags = {} }
+local B = PSTEE_BAT
 
 local function log(kind, msg)
-	print("PTEE-BATTERY: " .. kind .. " " .. msg)
+	print("PSTEE-BATTERY: " .. kind .. " " .. msg)
 end
 
 local function check(step, name, ok, detail)
@@ -43,12 +43,21 @@ local function hp(sprite) return sprite.m_baseStats.m_hitPoints end
 
 local function areaRes(sprite) return sprite.m_pArea and sprite.m_pArea.m_resref:get() or "" end
 
+-- the area the test works in, and a point in it: TNO's, else the first party member in an area, else the visible one
+local function workArea()
+	for _, s in ipairs(party()) do
+		if s.m_pArea then return s.m_pArea, s.m_pos.x, s.m_pos.y end
+	end
+	local area = EEex_Area_GetVisible()
+	return area, 0, 0
+end
+
 -- every creature of the visible area whose CRE resref is `resref` (spawn order kept)
 local function findAll(resref)
 	local out = {}
-	local t = tno()
-	if not t then return out end
-	for _, obj in ipairs(EEex_Area_GetAllOfTypeStringInRange(t.m_pArea, t.m_pos.x, t.m_pos.y, "[ANYONE]", 0x7FFF, false, false)) do
+	local area, x, y = workArea()
+	if not area then return out end
+	for _, obj in ipairs(EEex_Area_GetAllOfTypeStringInRange(area, x, y, "[ANYONE]", 0x7FFF, false, false)) do
 		if EEex_GameObject_IsSprite(obj, true) and obj.m_resref:get() == resref then
 			table.insert(out, obj)
 		end
@@ -87,23 +96,23 @@ if not B.hooksInstalled then
 		end
 	end)
 	EEex_Sprite_AddLoadedListener(function(sprite) count("spriteLoaded") end)
-	EEex_Projectile_RegisterGlobalMutator("PTEEBATGM")
+	EEex_Projectile_RegisterGlobalMutator("PSTEEBATGM")
 	-- Lua data saved with the sprite (EEex marshal handlers): written before the save, read back on load
-	EEex_Sprite_AddMarshalHandlers("PTEE_Battery",
+	EEex_Sprite_AddMarshalHandlers("PSTEE_Battery",
 		function(sprite)
-			local v = EEex_GetUDAux(sprite)["PTEE_Battery_Marshal"]
+			local v = EEex_GetUDAux(sprite)["PSTEE_Battery_Marshal"]
 			return v and { ["v"] = v } or {}
 		end,
 		function(sprite, read)
 			if read["v"] then
-				EEex_GetUDAux(sprite)["PTEE_Battery_Marshal"] = read["v"]
+				EEex_GetUDAux(sprite)["PSTEE_Battery_Marshal"] = read["v"]
 				B.flags.marshalImported = read["v"]
 			end
 		end
 	)
 end
 
-PTEEBATGM = {
+PSTEEBATGM = {
 	["typeMutator"] = function(context) B.count.decode = (B.count.decode or 0) + 1 end,
 	["projectileMutator"] = function(context) B.count.decoded = (B.count.decoded or 0) + 1 end,
 }
@@ -121,7 +130,7 @@ end
 -- op403 spy: logs every op326 effect as it is added to a creature (fields as the engine sees them)
 function PTEEBSPY(op403, effect, sprite)
 	if effect.m_effectId == 326 then
-		print(string.format("PTEE-BATTERY: INFO op326: added to %d: special %d param1 %d param2 %d source %d", sprite.m_id,
+		print(string.format("PSTEE-BATTERY: INFO op326: added to %d: special %d param1 %d param2 %d source %d", sprite.m_id,
 			effect.m_special, effect.m_effectAmount, effect.m_dWFlags, effect.m_sourceId))
 	end
 	return false
@@ -137,10 +146,13 @@ end
 -------------------------------------------------------------------------------
 
 local COMPANIONS = { "ANNAH", "DAKKON", "NORDOM", "IGNUS" }
--- areas and an entrance point of each (ARE entrance list), then back to the start and on to the Hive to rest.
--- (AR0500 starts Morte's kidnapping, an area event that takes him out of the party: not used)
+-- areas and an entrance point of each (ARE entrance list), then back to the start and on to the first one to rest.
+-- The Mortuary's floors: the base save (eeex-battery) is before the escape, and reaching the Hive starts that plot
+-- (cutscene + dialog that cancel the travel orders); AR0500 also starts Morte's kidnapping. AR0201's Dustman guard
+-- (0201GD1, DDUSTGU) talks to the party on arrival: with a member still in transit (no area yet), vanilla
+-- CScreenWorld::StartDialog writes through its null m_pArea (PT 0x3658a1) and the game crashes. Not used.
 local AREAS = {
-	{ "AR0200", 154, 1984 }, { "AR0300", 942, 179 }, { "AR0400", 1415, 485 }, { "AR0600", 536, 1421 },
+	{ "AR0203", 676, 1606 }, { "AR0202", 1316, 2247 }, { "AR0203", 2938, 1511 }, { "AR0202", 1184, 2296 },
 }
 -- projectile spells cast for real (decode path), Torment mage / priest / innate
 local CAST_SPELLS = {
@@ -267,6 +279,7 @@ end, wait = function(S)
 	return EEex_Sprite_GetNumCharacters() >= 6
 end, done = function(S)
 	check("companions", "party of 6", EEex_Sprite_GetNumCharacters() == 6, S.before .. " -> " .. EEex_Sprite_GetNumCharacters())
+	B.flags.partyBefore, B.flags.joined = S.before, S.toJoin
 	for i = 0, 5 do
 		local s = EEex_Sprite_GetInPortrait(i)
 		info("companions", "portrait " .. i .. ": " .. (s and EEex_Sprite_GetName(s) or "none"))
@@ -363,6 +376,7 @@ end, done = function(S)
 	-- op248 special 1 on TNO: its .EFF reaches the first rat although the rat is immune to weapons (op120)
 	EEex_GameObject_ApplyEffect(t, { ["effectID"] = 248, ["res"] = "PTEEB248", ["special"] = 1, ["durationType"] = 0, ["duration"] = 120, ["sourceID"] = t.m_id })
 	EEex_GameObject_ApplyEffect(rats[1], { ["effectID"] = 120, ["dwFlags"] = 0, ["durationType"] = 0, ["duration"] = 120, ["sourceID"] = rats[1].m_id })
+	EEex_GameObject_ApplyEffect(rats[1], { ["effectID"] = 18, ["effectAmount"] = 2000, ["dwFlags"] = 0, ["durationType"] = 0, ["duration"] = 120, ["sourceID"] = rats[1].m_id })
 	B.flags.op248Rat = rats[1].m_id
 	-- op342 param2 5 on the skeletons: combat round 1 drawn from RNDBASE2
 	for _, s in ipairs(skels) do
@@ -521,7 +535,7 @@ end })
 
 step({ name = "spells-apply", timeout = 300000, run = function(S)
 	S.list = {}
-	for _, n in ipairs(PTEE_BAT_ALL_SPELLS or {}) do table.insert(S.list, n) end
+	for _, n in ipairs(PSTEE_BAT_ALL_SPELLS or {}) do table.insert(S.list, n) end
 	S.i, S.next, S.errs = 0, now(), 0
 end, wait = function(S)
 	if now() < S.next then return false end
@@ -546,18 +560,41 @@ end, done = function(S)
 	for _, s in ipairs(party()) do if isDead(s) then q(s, "Resurrect()") end end
 end })
 
+-- 7a. The companions the battery added leave (before travelling: in the Mortuary, before the escape, their own
+-- scripts keep them from travelling or leaving once apart)
+step({ name = "companions-leave", timeout = 20000, run = function(S)
+	S.target = B.flags.partyBefore or 2
+	local added = {}
+	for _, c in ipairs(B.flags.joined or {}) do added[c] = true end
+	for _, s in ipairs(party()) do
+		if added[s.m_resref:get()] then q(s, "LeaveParty()") end
+	end
+	unpause()
+end, wait = function(S) return EEex_Sprite_GetNumCharacters() <= S.target end, done = function(S)
+	check("companions-leave", "party back to its size before the run", EEex_Sprite_GetNumCharacters() == S.target,
+		EEex_Sprite_GetNumCharacters() .. " / " .. S.target)
+end })
+
 -- 7. Areas: the party travels through Sigil and back, EEex APIs on every new area
-step({ name = "areas", timeout = 240000, run = function(S)
+step({ name = "areas", timeout = 600000, run = function(S)
 	S.start = areaRes(tno())
 	S.i, S.waiting = 0, false
 	S.marshal = "bat" .. now()
-	EEex_GetUDAux(tno())["PTEE_Battery_Marshal"] = S.marshal
+	EEex_GetUDAux(tno())["PSTEE_Battery_Marshal"] = S.marshal
 	B.flags.marshalValue = S.marshal
 	unpause()
 end, wait = function(S)
 	local t = tno()
 	if S.waiting then
 		local target = S.i <= #AREAS and AREAS[S.i][1] or (S.i == #AREAS + 1 and S.start) or AREAS[1][1]
+		if areaRes(t) ~= target and now() > S.settle + 20000 then
+			-- not there yet: an area event or cutscene (e.g. leaving the Mortuary the first time) cancels the orders
+			for _, s in ipairs(party()) do
+				q(s, 'LeaveAreaLUA("' .. target .. '","",[' .. S.dest[2] .. '.' .. S.dest[3] .. '],0)')
+			end
+			S.settle = now()
+			return false
+		end
 		if areaRes(t) ~= target or now() < S.settle then return false end
 		local count = EEex_Area_CountAllOfTypeStringInRange(t.m_pArea, t.m_pos.x, t.m_pos.y, "[ANYONE]", 0x7FFF, false)
 		check("areas", "arrived in " .. target, true, count .. " objects")
@@ -575,10 +612,11 @@ end, wait = function(S)
 	for _, s in ipairs(party()) do
 		q(s, 'LeaveAreaLUA("' .. dest[1] .. '","",[' .. dest[2] .. '.' .. dest[3] .. '],0)')
 	end
+	S.dest = dest
 	S.waiting, S.settle = true, now() + 4000
 	return false
 end, done = function(S)
-	check("areas", "Lua data kept on TNO across areas", EEex_GetUDAux(tno())["PTEE_Battery_Marshal"] == S.marshal)
+	check("areas", "Lua data kept on TNO across areas", EEex_GetUDAux(tno())["PSTEE_Battery_Marshal"] == S.marshal)
 end })
 
 -- 8. Rest, then save (the marshal value must come back after the reload: F9 after loading the save)
@@ -606,6 +644,7 @@ end, wait = function(S) return now() - S.t0 > 15000 end, done = function(S)
 		info("rest", "hp " .. EEex_Sprite_GetName(s) .. " " .. hp(s))
 	end
 	B.awaitingLoad = true
+	B.flags.partyAtSave = EEex_Sprite_GetNumCharacters()
 	-- quick save (the reload step checks what came back); tools/battery.py then loads it (F6) and resumes (F9)
 	worldScreen:OnQuickSaveButtonClick(false)
 	info("rest", "rest by hand (party hurt), save, load the save, then press F9 (marshal value " .. tostring(B.flags.marshalValue) .. ")")
@@ -615,20 +654,10 @@ end, stopAfter = true })
 step({ name = "reload", run = function(S)
 	check("reload", "sprites loaded listener after load", (B.count.spriteLoaded or 0) > 0, B.count.spriteLoaded)
 	check("reload", "marshal importer ran on load", B.flags.marshalImported == B.flags.marshalValue, tostring(B.flags.marshalImported))
-	check("reload", "marshal handler: Lua data saved with TNO came back", EEex_GetUDAux(tno())["PTEE_Battery_Marshal"] == B.flags.marshalValue,
-		tostring(EEex_GetUDAux(tno())["PTEE_Battery_Marshal"]) .. " / " .. tostring(B.flags.marshalValue))
-	check("reload", "party of 6 after load", EEex_Sprite_GetNumCharacters() == 6, EEex_Sprite_GetNumCharacters())
-end })
-
--- 10. Companions leave (party of 2), then the run ends
-step({ name = "companions-leave", timeout = 20000, run = function(S)
-	for i = 2, 5 do
-		local s = EEex_Sprite_GetInPortrait(i)
-		if s then q(s, "LeaveParty()") end
-	end
-	unpause()
-end, wait = function(S) return EEex_Sprite_GetNumCharacters() <= 2 end, done = function(S)
-	check("companions-leave", "party back to 2", EEex_Sprite_GetNumCharacters() == 2, EEex_Sprite_GetNumCharacters())
+	check("reload", "marshal handler: Lua data saved with TNO came back", EEex_GetUDAux(tno())["PSTEE_Battery_Marshal"] == B.flags.marshalValue,
+		tostring(EEex_GetUDAux(tno())["PSTEE_Battery_Marshal"]) .. " / " .. tostring(B.flags.marshalValue))
+	check("reload", "same party size after load", EEex_Sprite_GetNumCharacters() == B.flags.partyAtSave,
+		EEex_Sprite_GetNumCharacters() .. " / " .. tostring(B.flags.partyAtSave))
 end })
 
 -------------------------------------------------------------------------------
@@ -644,7 +673,7 @@ local function startStep()
 		for _, r in ipairs(B.results) do if not r.ok then table.insert(failed, r.step .. ": " .. r.name) end end
 		log("DONE", string.format("%d pass / %d fail", B.pass, B.fail) .. (#failed > 0 and (" -- failed: " .. table.concat(failed, "; ")) or ""))
 		B.running = false
-		Infinity_PopMenu("PTEE_Battery_Menu")
+		Infinity_PopMenu("PSTEE_Battery_Menu")
 		return
 	end
 	info(st.name, "start")
@@ -663,14 +692,14 @@ local function finishStep()
 	B.stepIndex = B.stepIndex + 1
 	if st.stopAfter then
 		B.running = false
-		Infinity_PopMenu("PTEE_Battery_Menu")
+		Infinity_PopMenu("PSTEE_Battery_Menu")
 		log("PAUSE", string.format("%d pass / %d fail so far; next step: %s", B.pass, B.fail, STEPS[B.stepIndex] and STEPS[B.stepIndex].name or "none"))
 		return
 	end
 	startStep()
 end
 
-function PTEE_Battery_Tick()
+function PSTEE_Battery_Tick()
 	if not B.running then return false end
 	local st = STEPS[B.stepIndex]
 	if st == nil then return false end
@@ -692,9 +721,11 @@ end
 EEex_Menu_AddMainFileLoadedListener(function() EEex_Menu_LoadFile("PTEEBAT") end)
 
 -- the engine refuses to save with enemies around: the test removes the hostile creatures (EA >= 200) of the area
-function PTEE_BAT_ClearHostiles()
-	local t, n = tno(), 0
-	for _, obj in ipairs(EEex_Area_GetAllOfTypeStringInRange(t.m_pArea, t.m_pos.x, t.m_pos.y, "[ANYONE]", 0x7FFF, false, false)) do
+function PSTEE_BAT_ClearHostiles()
+	local area, x, y = workArea()
+	local n = 0
+	if not area then return 0 end
+	for _, obj in ipairs(EEex_Area_GetAllOfTypeStringInRange(area, x, y, "[ANYONE]", 0x7FFF, false, false)) do
 		if EEex_GameObject_IsSprite(obj, false) and obj.m_typeAI.m_EnemyAlly >= 200 and EEex_Sprite_GetPortraitIndex(obj) == -1 then
 			q(obj, "DestroySelf()")
 			n = n + 1
@@ -703,11 +734,28 @@ function PTEE_BAT_ClearHostiles()
 	return n
 end
 
+-- F3: prepare a base save: the companions the battery adds (COMPANIONS) leave the party and the area, hostiles go
+EEex_Key_AddPressedListener(function(key)
+	if key ~= EEex_Key_GetFromName("F3") or B.running then return end
+	unpause()
+	local names = {}
+	for _, c in ipairs(COMPANIONS) do names[c] = true end
+	local n = 0
+	for _, c in ipairs(COMPANIONS) do
+		for _, s in ipairs(findAll(c)) do
+			if EEex_Sprite_GetPortraitIndex(s) ~= -1 then q(s, "LeaveParty()") end
+			q(s, "DestroySelf()")
+			n = n + 1
+		end
+	end
+	log("BASE", n .. " companions removed, " .. PSTEE_BAT_ClearHostiles() .. " hostiles removed")
+end)
+
 -- F4: quick save again (the engine refuses it while enemies are around; tools/battery.py retries until one is written)
 EEex_Key_AddPressedListener(function(key)
 	if key ~= EEex_Key_GetFromName("F4") or B.running then return end
 	unpause()
-	log("SAVE", "quick save (" .. PTEE_BAT_ClearHostiles() .. " hostiles removed)")
+	log("SAVE", "quick save (" .. PSTEE_BAT_ClearHostiles() .. " hostiles removed)")
 	worldScreen:OnQuickSaveButtonClick(false)
 end)
 
@@ -721,14 +769,16 @@ EEex_Key_AddPressedListener(function(key)
 	q(tno(), "RestParty()")
 end)
 
--- F6: load the save named in EEex_scripts/PTEE_BatteryLoad.lua (written by tools/battery.py)
+-- F6: load the save named in EEex_scripts/PSTEE_BatteryLoad.lua (written by tools/battery.py)
 EEex_Key_AddPressedListener(function(key)
 	if key ~= EEex_Key_GetFromName("F6") or B.running then return end
-	PTEE_BAT_LOAD = nil
-	EEex_DoFile("PTEE_BatteryLoad")
-	if PTEE_BAT_LOAD then
-		log("LOAD", PTEE_BAT_LOAD)
-		loadScreen:LoadGame(PTEE_BAT_LOAD)
+	PSTEE_BAT_LOAD = nil
+	EEex_DoFile("PSTEE_BatteryLoad")
+	if PSTEE_BAT_LOAD then
+		log("LOAD", PSTEE_BAT_LOAD)
+		-- from the main menu, the load screen has to be the active engine first
+		if e:GetActiveEngine() == startEngine then startEngine:OnLoadGameButtonClick() end
+		loadScreen:LoadGame(PSTEE_BAT_LOAD)
 	end
 end)
 
@@ -748,6 +798,6 @@ EEex_Key_AddPressedListener(function(key)
 		log("RESUME", "step " .. B.stepIndex .. " " .. STEPS[B.stepIndex].name)
 	end
 	B.running = true
-	Infinity_PushMenu("PTEE_Battery_Menu")
+	Infinity_PushMenu("PSTEE_Battery_Menu")
 	startStep()
 end)

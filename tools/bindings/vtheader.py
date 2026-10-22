@@ -2,9 +2,9 @@
 # A header vtbl struct lists the slots flat; each entry's `this` type is the class that introduced the
 # virtual (the generator splits the list per class on it). For each introducing class T the PT index of
 # its own slots is the consensus of every solved class that contains T (all must agree). Then:
-#   - own slots are emitted in PT order, PT-only slots become `ptee_slot_<n>` placeholders,
+#   - own slots are emitted in PT order, PT-only slots become `pstee_slot_<n>` placeholders,
 #     slots removed in Torment are dropped;
-#   - a class whose own slots are not all proven keeps them in BG order renamed `ptee_unproven_<name>`
+#   - a class whose own slots are not all proven keeps them in BG order renamed `pstee_unproven_<name>`
 #     (callable by nobody), and so does every descendant past that point.
 # rewrite(text) -> text with the vtbl structs replaced; report in vtheader_report.json.
 import os, re, json, collections
@@ -110,7 +110,7 @@ def rewrite(text):
             if lay is None:
                 broken = True
                 report['unproven'].setdefault(S, T)
-                new += [re.sub(r'\*([~\w]+)\)', lambda m: '*ptee_unproven_' + m.group(1).replace('~', 'dtor_') + ')', l, count=1) for l in ls]
+                new += [re.sub(r'\*([~\w]+)\)', lambda m: '*pstee_unproven_' + m.group(1).replace('~', 'dtor_') + ')', l, count=1) for l in ls]
             else:
                 start, end, kept = lay
                 start = prev_end if start is None else start
@@ -119,7 +119,7 @@ def rewrite(text):
                     if p in byp:
                         new.append(byp[p])
                     else:
-                        new.append(f'\tvoid (__fastcall *ptee_slot_{p})({T} *this);')
+                        new.append(f'\tvoid (__fastcall *pstee_slot_{p})({T} *this);')
                         moved = True
                 if [l for _, l in kept] != [l for l in ls]:
                     moved = True

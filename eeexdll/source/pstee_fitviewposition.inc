@@ -1,5 +1,5 @@
 {
-	// EEex-PTEE: Torment's CInfinity::FitViewPosition (PT 0x304c20) decides the allowed out-of-bounds margins
+	// EEex-PSTEE: Torment's CInfinity::FitViewPosition (PT 0x304c20) decides the allowed out-of-bounds margins
 	// differently from BG2EE; EEex's structure (exact coordinates, theoretical fits, scroll destination,
 	// edge-scroll-only cursor reset) is kept, the margins and the end-of-fit cursor handling follow Torment:
 	//  - black space is shown when the option is on OR while the world screen auto-zooms;
@@ -147,9 +147,9 @@
 
 		if (bActionbarOpen)
 		{
-			if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST)
+			if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PSTEE::ENGINE_MODE_PST)
 			{
-				const char *const sActionbar = PTEE::UseTouchActionbar(pGame->m_options) ? "WORLD_ACTIONBAR_LEFT_TABLET" : "WORLD_ACTIONBAR_LEFT";
+				const char *const sActionbar = PSTEE::UseTouchActionbar(pGame->m_options) ? "WORLD_ACTIONBAR_LEFT_TABLET" : "WORLD_ACTIONBAR_LEFT";
 				const bool bLeftActionbarOpen = pMenuStateOverrides != nullptr
 					? pMenuStateOverrides->bWorldActionbarLeftOpen
 					: p_uiIsMenuOnStack(EngineVal<CString, false>{ sActionbar });
@@ -256,7 +256,7 @@
 
 	// Patch: Only reset the cursor if it is edge scrolling
 	// |
-	// EEex-PTEE: Torment keeps the edge-scroll cursor while the view is locked on a creature
+	// EEex-PSTEE: Torment keeps the edge-scroll cursor while the view is locked on a creature
 	// |
 	if (bSetNoScrollCursor && pWorld->m_scrollLockId == -1 && pArea->m_nScrollState >= 1 && pArea->m_nScrollState <= 8)
 	{
@@ -264,7 +264,7 @@
 		pCursor->SetCursor(6, 0, -1);
 	}
 
-	// EEex-PTEE: Torment drops the scroll direction of a centered axis (cursor ids as in PT 0x305296..0x305437)
+	// EEex-PSTEE: Torment drops the scroll direction of a centered axis (cursor ids as in PT 0x305296..0x305437)
 	if (bCenteredX)
 	{
 		switch (pArea->m_nScrollState)

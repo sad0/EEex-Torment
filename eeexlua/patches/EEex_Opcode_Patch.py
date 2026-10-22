@@ -20,14 +20,14 @@ PATCHES = [
     # other Torment caller is a Copy() (lea rdx, [rsi+8] / cmove).
     ('''			mov rdx, rdi                                             ; pDstEffect
 			lea rcx, qword ptr ds:[rsi-#$(1)] ]], {EEex_PtrSize}, [[ ; pSrcEffect''',
-     '''			mov rdx, rsi                                             ; pDstEffect ; EEex-PTEE: rsi
-			lea rcx, qword ptr ds:[rdi-#$(1)] ]], {EEex_PtrSize}, [[ ; pSrcEffect ; EEex-PTEE: rdi'''),
+     '''			mov rdx, rsi                                             ; pDstEffect ; EEex-PSTEE: rsi
+			lea rcx, qword ptr ds:[rdi-#$(1)] ]], {EEex_PtrSize}, [[ ; pSrcEffect ; EEex-PSTEE: rdi'''),
 
     # CGameSprite::ProcessAI BeforeReturn (PT 0x42319f, same 8-byte mov r15, [rsp+0x158]): the sprite is in rbx
     # (PT 0x421858 mov rbx, rcx; reloaded at 0x421f22 from [rsp+0x60]; every jump to the site comes after it).
     ('''			mov rcx, rsi                                               ; pSprite
 			call #L(EEex::Opcode_Hook_FlushDeferredAfterListsResolved)''',
-     '''			mov rcx, rbx                                               ; pSprite ; EEex-PTEE: rbx
+     '''			mov rcx, rbx                                               ; pSprite ; EEex-PSTEE: rbx
 			call #L(EEex::Opcode_Hook_FlushDeferredAfterListsResolved)'''),
 
     # op146: Torment already uses m_special in the param2 == 0 path: m_special != 0 queues action 0x1d2 = 466
@@ -35,39 +35,39 @@ PATCHES = [
     # 0x1d2); vanilla data uses special 0 (97 op146 effects) and 1 (IGARM only). EEex's switch moves to special bit 1
     # (value 2) in Torment (owner decision): special & 2 -> SpellNoDec, special 1 keeps Torment's no-feedback cast.
     ('''	|   (special & 1) != 0 and param2 == 0 -> Queue SpellNoDec() instead of ForceSpell() |''',
-     '''	|   (special & 2) != 0 and param2 == 0 -> Queue SpellNoDec() instead of ForceSpell() | EEex-PTEE: bit 1 in Torment'''),
+     '''	|   (special & 2) != 0 and param2 == 0 -> Queue SpellNoDec() instead of ForceSpell() | EEex-PSTEE: bit 1 in Torment'''),
     ('''			test dword ptr ds:[rsi+#OFFSET_OF(CGameEffect.m_special)], 1                    ; (this->m_special & 1) != 0 ?''',
-     '''			test dword ptr ds:[rsi+#OFFSET_OF(CGameEffect.m_special)], 2                    ; (this->m_special & 2) != 0 ? EEex-PTEE: bit 1 (bit 0 is Torment's no-feedback)'''),
+     '''			test dword ptr ds:[rsi+#OFFSET_OF(CGameEffect.m_special)], 2                    ; (this->m_special & 2) != 0 ? EEex-PSTEE: bit 1 (bit 0 is Torment's no-feedback)'''),
 
     # CGameEffect::CheckAdd (PT 0x1eba60): the sprite is in rsi (PT 0x1eba8d mov rsi, rdx; 0x1ebace
     # cmp dword ptr [rsi+0x4bbc], 0), BG r14. rdi = effect, rdx still the sprite (PT 0x1ebaa7 mov eax, [rdx+0x48]);
     # LastProbabilityJmp is a near jb (PT 0x1ebaa1) to ProbabilityFailed (PT 0x1ebbea xor eax, eax; epilogue).
     ('''				mov rdx, r14                          ; pSprite''',
-     '''				mov rdx, rsi                          ; pSprite ; EEex-PTEE: rsi'''),
+     '''				mov rdx, rsi                          ; pSprite ; EEex-PSTEE: rsi'''),
 
     # New opcodes, Copy(): Torment's CGameEffect is 0x160 bytes (every Torment Copy, e.g. PT 0x1ed3ac mov ecx,
     # 0x160); the rest of the Copy body is identical (PT 0x1ed390: +0x88 / +0x80 / +0x110, Construct args, delete
     # of the 0x30-byte item effect, CopyFromBase(rbx, rsi+8)). CGameEffect::Construct takes the same arguments
     # (fdiff 0.989: Torment only constructs one more member at +0x154).
     ('''				mov ecx, 158h''',
-     '''				mov ecx, #$(1) ]], {CGameEffect.sizeof}, [[ ; EEex-PTEE: Torment's CGameEffect is 160h'''),
+     '''				mov ecx, #$(1) ]], {CGameEffect.sizeof}, [[ ; EEex-PSTEE: Torment's CGameEffect is 160h'''),
 
     # New opcodes, DecodeEffect: Torment's cases end with `mov rbx, rax; jmp 0x2030a6` and their null check jumps to
     # the same 0x2030a6 (mov eax, [rsp+0x80], then mov r15, [rsp+0x60] = the "Fail" label PT 0x2030ad, 7 bytes later).
     # There is no shared `mov rbx, rax` like BG's "Success" (0x1e272d): the Torment "Success" label (PT 0x2030a3) is
     # `mov dword ptr [rbx+0x1c], eax` of the default case and "Fail" skips the eax load. Join at Fail - 7 instead.
     ('''				jz #L(Hook-CGameEffect::DecodeEffect()-Fail)''',
-     '''				jz #L(ptee_decode_join) ; EEex-PTEE: Torment's join (Fail - 7, PT 0x2030a6)'''),
+     '''				jz #L(pstee_decode_join) ; EEex-PSTEE: Torment's join (Fail - 7, PT 0x2030a6)'''),
     ('''				call #$(1) ]], {constructor}, [[ #ENDL
 				jmp #L(Hook-CGameEffect::DecodeEffect()-Success)''',
      '''				call #$(1) ]], {constructor}, [[ #ENDL
-				mov rbx, rax ; EEex-PTEE: done by each Torment case
-				jmp #L(ptee_decode_join)'''),
+				mov rbx, rax ; EEex-PSTEE: done by each Torment case
+				jmp #L(pstee_decode_join)'''),
     # DefaultJmp (PT 0x1fe3b6, near ja): rdi = Item_effect_st, r14 = source, ebp = sourceID, rsi = target, eax = opcode,
     # rbx = 0, as BG. Torment already stores r15 at [rsp+0x60] before the ja (PT 0x1fe3ac): EEex's store is redundant.
     ('''	EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CGameEffect::DecodeEffect()-DefaultJmp"), 0, {
 		{"hook_integrity_watchdog_ignore_registers", {''',
      '''	EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CGameEffect::DecodeEffect()-DefaultJmp"), 0, {
-		{"ptee_decode_join", EEex_Label("Hook-CGameEffect::DecodeEffect()-Fail") - 7}, -- EEex-PTEE: PT 0x2030a6
+		{"pstee_decode_join", EEex_Label("Hook-CGameEffect::DecodeEffect()-Fail") - 7}, -- EEex-PSTEE: PT 0x2030a6
 		{"hook_integrity_watchdog_ignore_registers", {'''),
 ]

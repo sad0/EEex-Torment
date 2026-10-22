@@ -12,8 +12,8 @@ os.makedirs(OUTD, exist_ok=True)
 L = json.load(open(os.path.join(HERE, 'ptlayout.json')))
 # Default: only proven fields are exposed (coverage.json classes 'proven' / 'span': code evidence,
 # hand-verified, closed span or runtime check); every other byte is opaque `nobinding` padding.
-# PTEE_LOOSE=1 restores the solved-but-unproven fields (debugging only) into bindings/in_loose.
-LOOSE = os.environ.get('PTEE_LOOSE') == '1'
+# PSTEE_LOOSE=1 restores the solved-but-unproven fields (debugging only) into bindings/in_loose.
+LOOSE = os.environ.get('PSTEE_LOOSE') == '1'
 if LOOSE:
     OUTD = os.path.join(REPO, r'bindings\in_loose'); os.makedirs(OUTD, exist_ok=True)
 MANUALF = json.load(open(os.path.join(HERE, 'manual_fields.json'))).get('fields', {}) if os.path.exists(os.path.join(HERE, 'manual_fields.json')) else {}
@@ -163,7 +163,7 @@ def rewrite(m):
             continue
         mt = MANUALF.get(name, {}).get(iname, {})
         if isinstance(mt, dict) and mt.get('type'):
-            # hand-verified type change (e.g. inline array in BG, pointer in PTEE)
+            # hand-verified type change (e.g. inline array in BG, pointer in PSTEE)
             it = dict(it, size=int(mt['size'], 16), type=mt['type'])
             ilines = [f'	{mt["type"]} {iname};']
         sz = psize(it, lay)

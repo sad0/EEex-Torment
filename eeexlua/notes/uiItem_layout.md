@@ -364,7 +364,7 @@ PT 0x43c000-0x45c000 finds no access. printrow and category qualify as closed sp
 ## Optional runtime probe
 
 This probe would only add dump confirmation; the proofs above do not need it.
-Extend PTEE_UIProbe.lua to also dump these items, in the same 118-qword format with the tag `PTEE-UIPROBE-SUB`:
+Extend PSTEE_UIProbe.lua to also dump these items, in the same 118-qword format with the tag `PSTEE-UIPROBE-SUB`:
 1. **List column items.** For each list item, follow `list.columns` (uiItem+0x150, a uiColumn* array whose
    layout was proven in phase 5b) and dump each column's uiItem chain. Expected:
    - `respectClipping` cells (store menus, UI.MENU lines 6429, 6509, 6597...) -> dword +0x218 = 1

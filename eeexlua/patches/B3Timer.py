@@ -6,17 +6,17 @@
 # injected into both, each remembers its menu, and the menu on the stack is the one the enabled/frame callbacks use.
 PATCHES = [
     ('B3Timer_Private_InjectingMenu = "RIGHT_SIDEBAR"',
-     'B3Timer_Private_InjectingMenu = "WORLD_ACTIONBAR_LEFT" -- EEex-PTEE: Torment portraits'),
+     'B3Timer_Private_InjectingMenu = "WORLD_ACTIONBAR_LEFT" -- EEex-PSTEE: Torment portraits'),
     ('''						local startX = (B3Timer_Private_HugPortraits:get() == 1 and portraitArea.x or 0) - 3''',
-     '''						local startX = portraitArea.x - 3 -- EEex-PTEE: always against the portrait (horizontal row)'''),
+     '''						local startX = portraitArea.x - 3 -- EEex-PSTEE: always against the portrait (horizontal row)'''),
     ('''	local instanceEntry = B3Timer_Private_CreateInstance(menuName, templateName, x, y, w, h)
 	instanceEntry.portraitItem = portraitItem''',
      '''	local instanceEntry = B3Timer_Private_CreateInstance(menuName, templateName, x, y, w, h)
-	instanceEntry.menuName = menuName -- EEex-PTEE: two portrait menus
+	instanceEntry.menuName = menuName -- EEex-PSTEE: two portrait menus
 	instanceEntry.portraitItem = portraitItem'''),
     ('''	local item = EEex_Menu_Find(B3Timer_Private_InjectingMenu).items
 	while item do''',
-     '''	for _, injectingMenu in ipairs({"WORLD_ACTIONBAR_LEFT", "WORLD_ACTIONBAR_LEFT_TABLET"}) do -- EEex-PTEE
+     '''	for _, injectingMenu in ipairs({"WORLD_ACTIONBAR_LEFT", "WORLD_ACTIONBAR_LEFT_TABLET"}) do -- EEex-PSTEE
 	B3Timer_Private_InjectingMenu = injectingMenu
 	local item = EEex_Menu_Find(B3Timer_Private_InjectingMenu).items
 	while item do'''),
@@ -28,19 +28,19 @@ PATCHES = [
 		end
 		item = item.next
 	end
-	end -- EEex-PTEE
+	end -- EEex-PSTEE
 	B3Timer_Private_InjectingMenu = "WORLD_ACTIONBAR_LEFT"'''),
     ('''	B3Timer_Private_NextUpdateTick = curTick + 33
 ''',
      '''	B3Timer_Private_NextUpdateTick = curTick + 33
 
-	-- EEex-PTEE: the portrait menu currently shown (touch actionbar option)
+	-- EEex-PSTEE: the portrait menu currently shown (touch actionbar option)
 	B3Timer_Private_InjectingMenu = Infinity_IsMenuOnStack("WORLD_ACTIONBAR_LEFT_TABLET") and "WORLD_ACTIONBAR_LEFT_TABLET" or "WORLD_ACTIONBAR_LEFT"
 '''),
     ('''						EEex_Menu_SetTemplateArea(B3Timer_Private_InjectingMenu, templateName, instanceEntry.id, curX, portraitArea.y, rgWidth, portraitArea.h)''',
-     '''						EEex_Menu_SetTemplateArea(instanceEntry.menuName, templateName, instanceEntry.id, curX, portraitArea.y, rgWidth, portraitArea.h) -- EEex-PTEE'''),
+     '''						EEex_Menu_SetTemplateArea(instanceEntry.menuName, templateName, instanceEntry.id, curX, portraitArea.y, rgWidth, portraitArea.h) -- EEex-PSTEE'''),
     ('''					EEex_Menu_SetTemplateArea(B3Timer_Private_InjectingMenu, "B3Timer_Menu_TEMPLATE_Background", backgroundEntry.id, curX + 2, portraitArea.y, startX - curX + rgDif, portraitArea.h)''',
-     '''					EEex_Menu_SetTemplateArea(backgroundEntry.menuName, "B3Timer_Menu_TEMPLATE_Background", backgroundEntry.id, curX + 2, portraitArea.y, startX - curX + rgDif, portraitArea.h) -- EEex-PTEE'''),
+     '''					EEex_Menu_SetTemplateArea(backgroundEntry.menuName, "B3Timer_Menu_TEMPLATE_Background", backgroundEntry.id, curX + 2, portraitArea.y, startX - curX + rgDif, portraitArea.h) -- EEex-PSTEE'''),
     # the "Hug Portraits" option has no effect in Torment (bars always against the portrait): not listed in the menu
     ('''		EEex_Options_DisplayEntry.new({
 			["optionID"]    = "B3Timer_HugPortraits",
@@ -48,6 +48,6 @@ PATCHES = [
 			["description"] = "EEex_Options_TRANSLATION_Timer_HugPortraits_Description",
 			["widget"]      = EEex_Options_ToggleWidget.new(),
 		}),
-''', '''		-- EEex-PTEE: "Hug Portraits" hidden (no effect in Torment, the bars always touch the portrait)
+''', '''		-- EEex-PSTEE: "Hug Portraits" hidden (no effect in Torment, the bars always touch the portrait)
 '''),
 ]

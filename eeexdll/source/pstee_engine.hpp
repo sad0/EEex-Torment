@@ -1,11 +1,11 @@
-// EEex-PTEE: Torment.exe engine functions that have no BG2EE counterpart (or a different signature),
-// bound by name from EEex_scripts/extra_pattern_dbs/ptee.db (tools/port_extra.py). Used by the
+// EEex-PSTEE: Torment.exe engine functions that have no BG2EE counterpart (or a different signature),
+// bound by name from EEex_scripts/extra_pattern_dbs/pstee.db (tools/port_extra.py). Used by the
 // Torment rewrites of EEex's engine reimplementations (eeexdll/patch_sources.py).
 #pragma once
 
 #include "Baldur_generated.h"
 
-namespace PTEE {
+namespace PSTEE {
 
 	// Effective alignment of a sprite: for the Nameless One in Torment mode it is derived from the
 	// "Law"/"Good" global counters, otherwise from the AI type. Used by CGameEffectUsability (op319)

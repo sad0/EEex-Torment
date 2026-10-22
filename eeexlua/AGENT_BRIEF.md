@@ -11,7 +11,7 @@ layouts) is ported and tested. Labels like `EEex::Foo` / `CGameSprite::Override_
 EEex.dll exports: fine. `#OFFSET_OF(Type.field)` uses the Torment bindings: fine (but check the field exists
 in Torment: `bindings/` headers; if unsure, note it).
 
-## Tools (run from `E:\Enhanced Edition\EEex-PTEE\tools`, Python, read-only use)
+## Tools (run from `E:\Enhanced Edition\EEex-PSTEE\tools`, Python, read-only use)
 - `python hookreview.py <File>.lua [before] [after]` -> for every hook of the file: hook call, registers and
   frame slots its code reads, a BG->Torment register map guess, issues, and BG / Torment instructions side by
   side (`*` = the hook address). The register map is a heuristic: always confirm by reading the code.
@@ -46,7 +46,7 @@ Also read the WHOLE Lua file: hooks whose address comes from a variable / helper
 - `eeexlua/patches/<LuaFileNameWithoutExt>.py` defining `PATCHES = [(old, new), ...]`: exact text
   replacements on the upstream file (each `old` must match exactly once; `'@all:N old'` = exactly N matches;
   `'@file'` = whole-file replacement, avoid). Comment each patch with the Torment evidence (PT addresses).
-  Mark changed Lua lines with `-- EEex-PTEE:` or `; EEex-PTEE:` in asm. Torment-specific addresses relative
+  Mark changed Lua lines with `-- EEex-PSTEE:` or `; EEex-PSTEE:` in asm. Torment-specific addresses relative
   to a label are OK (`EEex_Label("X") + 9` through a label pair, see reference).
   Reference example: `eeexlua/patches/EEex_Sprite_Patch.py`.
 - `eeexlua/notes/<LuaFileNameWithoutExt>.md`: one line per hook (label, verdict: unchanged / patched /

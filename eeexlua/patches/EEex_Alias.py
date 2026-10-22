@@ -8,7 +8,7 @@
 PATCHES = [
     ('''	CAIAction.Construct1 = alias(CAIAction.Construct_Overload_ActionID_DestPoint_SpecificID_SpecificID2)''',
      '''	CAIAction.Construct1 = alias(CAIAction.Construct_Overload_ActionID_DestPoint_SpecificID_SpecificID2)
-	-- EEex-PTEE: Torment inlines ~CAIAction (no function to bind): the same five CString destructors in Lua
+	-- EEex-PSTEE: Torment inlines ~CAIAction (no function to bind): the same five CString destructors in Lua
 	CAIAction.Destruct = function(action)
 		CString.Destruct(action.m_string2)
 		CString.Destruct(action.m_string1)

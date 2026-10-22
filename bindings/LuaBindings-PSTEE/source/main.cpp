@@ -6,7 +6,7 @@ static void exportPattern(const String& name, void* value) {
 
 	PatternValueHandle handle;
 	if (sharedState().GetOrCreatePatternValue(name, PatternValueType::SINGLE, handle)) {
-		FPrintT(TEXT("[!][LuaBindings-PTEE.dll] exportPattern() - [%s].Type must be SINGLE\n"), name.c_str());
+		FPrintT(TEXT("[!][LuaBindings-PSTEE.dll] exportPattern() - [%s].Type must be SINGLE\n"), name.c_str());
 		return;
 	}
 
@@ -20,7 +20,7 @@ static constexpr void* getMemberPtr(T func) {
 }
 
 static void exportPatterns() {
-	// EEex-PTEE: inverse of CGameSprite::MakeGlobal, which Torment has unchanged (tools/fdiff.py: same code,
+	// EEex-PSTEE: inverse of CGameSprite::MakeGlobal, which Torment has unchanged (tools/fdiff.py: same code,
 	// field offsets only); all fields it uses are proven in the Torment header.
 	exportPattern(TEXT("CGameSprite::MakeLocal"), getMemberPtr(&CGameSprite::MakeLocal));
 }

@@ -9,9 +9,9 @@ import os, sys, glob, shutil, importlib.util
 HERE = os.path.dirname(os.path.abspath(__file__))
 UP = os.path.join(HERE, r'..\ref\EEex\EEex\copy')
 OUT = os.path.join(HERE, 'generated')
-GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
+GAME = r'E:\Enhanced Edition\Environnement de test\PSTEE (EEex dev)'
 # dev-only scripts (bindings/test/) loaded after EEex's startup in the dev game
-DEV_FILES = ['PTEE_SkipIntro', 'PTEE_SpellTest', 'PTEE_FeatureTest', 'PTEE_BatterySpells', 'PTEE_Battery']
+DEV_FILES = ['PSTEE_SkipIntro', 'PSTEE_SpellTest', 'PSTEE_FeatureTest', 'PSTEE_BatterySpells', 'PSTEE_Battery']
 
 
 def load_patches():
@@ -103,9 +103,9 @@ def deploy():
     ini = os.path.join(GAME, 'EEex.ini')
     if not os.path.exists(ini):
         shutil.copy(os.path.join(HERE, r'..\ref\EEex\EEex\loader\EEex.ini'), ini)
-    # dev only: skip the intro movies (bindings/test/PTEE_SkipIntro.lua), loaded after EEex's startup
+    # dev only: skip the intro movies (bindings/test/PSTEE_SkipIntro.lua), loaded after EEex's startup
     with open(os.path.join(scripts, 'EEex_Main.lua'), 'a', encoding='utf-8', newline='\n') as m:
-        m.write('\n-- EEex-PTEE dev deploy only\n')
+        m.write('\n-- EEex-PSTEE dev deploy only\n')
         for dev in DEV_FILES:
             shutil.copy(os.path.join(HERE, r'..\bindings\test', dev + '.lua'), scripts)
             m.write(f'EEex_DoFile("{dev}")\n')

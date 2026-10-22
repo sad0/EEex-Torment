@@ -2564,7 +2564,7 @@
   },
   "CMessageSpriteEquipment": {
    "pt": "0x30",
-   "why": "CMessage (0x10) + PTEE CGameSpriteEquipment (0x20)"
+   "why": "CMessage (0x10) + PSTEE CGameSpriteEquipment (0x20)"
   },
   "SDL_Event": {
    "pt": "0x38",

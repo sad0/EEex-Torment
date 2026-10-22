@@ -17,7 +17,7 @@ PATCHES = [
 		{"Hook-CAIScript::Construct()-OnCopy1", "rdi"},
 		{"Hook-CAIScript::Construct()-OnCopy2", "rsi"}, })
 	do
-	if EEex_TryLabel(entry[1]) then -- EEex-PTEE: no script-cache copy in Torment (labels undefined)
+	if EEex_TryLabel(entry[1]) then -- EEex-PSTEE: no script-cache copy in Torment (labels undefined)
 		EEex_HookBeforeCallWithLabels(EEex_Label(entry[1]), {'''),
     ('''				mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)]
 				mov rcx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
@@ -30,6 +30,6 @@ PATCHES = [
 				#DESTROY_SHADOW_SPACE
 			]]}
 		)
-	end -- EEex-PTEE
+	end -- EEex-PSTEE
 	end'''),
 ]

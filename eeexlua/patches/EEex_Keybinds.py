@@ -6,6 +6,6 @@ PATCHES = [
     ('''		if bOffInternal then
 			sprite:ReadyOffInternalList(buttonData, false)''',
      '''		if bOffInternal then
-			do return true end -- EEex-PTEE: not available in Torment (ReadyOffInternalList takes an array index)
+			do return true end -- EEex-PSTEE: not available in Torment (ReadyOffInternalList takes an array index)
 			sprite:ReadyOffInternalList(buttonData, false)'''),
 ]

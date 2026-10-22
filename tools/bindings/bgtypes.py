@@ -5,8 +5,8 @@
 #   globals: {name: type}  (pointer to the global object, i.e. the extern's declared type)
 import re, collections
 
-HDR = r'E:\Enhanced Edition\EEex-PTEE\build\bgout\Baldur_generated.h'
-LAY = r'E:\Enhanced Edition\EEex-PTEE\build\bgout\bg_layout.txt'
+HDR = r'E:\Enhanced Edition\EEex-PSTEE\build\bgout\Baldur_generated.h'
+LAY = r'E:\Enhanced Edition\EEex-PSTEE\build\bgout\bg_layout.txt'
 
 Field = collections.namedtuple('Field', 'name type off size')
 

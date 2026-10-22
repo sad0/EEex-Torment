@@ -6,7 +6,7 @@
 # All 85 other redirected functions: identical bodies BG vs PT (tools/fdiff.py ratio 1.000), function starts.
 PATCHES = [
     ('	redirectLuaProc("lua_resume")\n',
-     '	-- redirectLuaProc("lua_resume") -- EEex-PTEE: absent from Torment.exe (coroutine library stripped)\n'),
+     '	-- redirectLuaProc("lua_resume") -- EEex-PSTEE: absent from Torment.exe (coroutine library stripped)\n'),
     ('	redirectLuaProc("lua_xmove")\n',
-     '	-- redirectLuaProc("lua_xmove") -- EEex-PTEE: absent from Torment.exe (inlined in the debug library, which is redirected)\n'),
+     '	-- redirectLuaProc("lua_xmove") -- EEex-PSTEE: absent from Torment.exe (inlined in the debug library, which is redirected)\n'),
 ]

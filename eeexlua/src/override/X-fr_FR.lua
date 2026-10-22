@@ -1,5 +1,5 @@
 
--- EEex-PTEE: French strings (X-en_US.lua of the Torment port; tutoiement, as Torment's own French UI)
+-- EEex-PSTEE: French strings (X-en_US.lua of the Torment port; tutoiement, as Torment's own French UI)
 
 ----------
 -- Menu --

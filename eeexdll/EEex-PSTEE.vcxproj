@@ -39,8 +39,8 @@
     <ClCompile Include="$(ILROOT)lib_source\ImGui\implot_demo.cpp" />
     <ClCompile Include="$(ILROOT)lib_source\ImGui\implot_items.cpp" />
     <ClCompile Include="generated\Baldur_generated_internal_pointers.cpp" />
-    <ClCompile Include="source\ptee_stubs.cpp" />
-    <ClCompile Include="source\ptee_engine.cpp" />
+    <ClCompile Include="source\pstee_stubs.cpp" />
+    <ClCompile Include="source\pstee_engine.cpp" />
     <ClCompile Include="generated\EEexLua_generated.cpp" />
     <ClCompile Include="generated\EEexLua_generated_baseclass_offsets.cpp" />
   </ItemGroup>
@@ -78,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="COPY_TO_GAME.ps1" />
-    <None Include="eeex-ptee.def" />
+    <None Include="eeex-pstee.def" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="$(ILROOT)EEex-Core-Shared-Files\source\profiler_assembly.asm" />
@@ -89,7 +89,7 @@
     <ProjectGuid>{5d96a1b5-6b58-49d5-92c1-8164041dd87e}</ProjectGuid>
     <RootNamespace>EEexv2660</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup Label="EEexPTEE"><ILROOT>$(MSBuildProjectDirectory)\..\ref\InfinityLoader\</ILROOT><SolutionDir>$(ILROOT)</SolutionDir></PropertyGroup>
+  <PropertyGroup Label="EEexPSTEE"><ILROOT>$(MSBuildProjectDirectory)\..\ref\InfinityLoader\</ILROOT><SolutionDir>$(ILROOT)</SolutionDir></PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -122,12 +122,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>EEex</TargetName>
-    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\</OutDir>
+    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PSTEE\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\</OutDir>
+    <OutDir>$(MSBuildProjectDirectory)\..\build\EEex-PSTEE\</OutDir>
     <TargetName>EEex</TargetName>
-    <IntDir>$(MSBuildProjectDirectory)\..\build\EEex-PTEE\obj\</IntDir>
+    <IntDir>$(MSBuildProjectDirectory)\..\build\EEex-PSTEE\obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PSTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -149,7 +149,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>d3d9.lib;dwmapi.lib;ntdll.lib;opengl32.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderUtil.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>eeex-ptee.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>eeex-pstee.def</ModuleDefinitionFile>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
     </Link>
     
@@ -164,7 +164,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)generated;$(ProjectDir)source;$(ILROOT)EEex-Core-Shared-Files\source;$(ProjectDir)..\bindings\LuaBindings-PSTEE\stub;$(SolutionDir)EEex-Core-Shared-Files/headers/common;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex;$(SolutionDir)EEex-Core-Shared-Files/headers/EEex_external;$(SolutionDir)InfinityLoaderCommon/headers/common;$(SolutionDir)InfinityLoaderCommon/source/common;$(SolutionDir)lib_headers/imgui;$(SolutionDir)LuaBindingsCore/headers/common;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -174,7 +174,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalDependencies>d3d9.lib;dwmapi.lib;ntdll.lib;opengl32.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderCommon.lib;$(SolutionDir)$(Platform)\$(Configuration)\InfinityLoaderUtil.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaBindingsCore.lib;$(SolutionDir)$(Platform)\$(Configuration)\LuaProvider52\LuaProvider.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>eeex-ptee.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>eeex-pstee.def</ModuleDefinitionFile>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
     </Link>
     

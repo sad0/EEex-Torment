@@ -1,4 +1,4 @@
-; EEex-PTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db
+; EEex-PSTEE: Torment.exe v3.2.2.0 port of EEex/loader/v2.6.6.0/pattern_dbs/v2.6.6.0.db
 
 [CChitin::OnResizeWindow]
 Pattern=48896C2418565741564883EC50488BA9
@@ -9,34 +9,34 @@ Pattern=40534883EC20488BD94885C97458
 [CResFont::GetFont]
 Pattern=40534883EC20488BD9E852F4
 
-[PTEE-CGameSprite::GetEffectiveAlignment]
+[PSTEE-CGameSprite::GetEffectiveAlignment]
 Pattern=48895C2418574883EC3083
 
-[PTEE-uiNavigateEvent]
+[PSTEE-uiNavigateEvent]
 Pattern=48895C2408574883EC30488B05D7EF
 
-[PTEE-CGameAIBase::PartyHasItem]
+[PSTEE-CGameAIBase::PartyHasItem]
 Pattern=48895C24084889742410574883EC30488B056274
 
-[PTEE-CVariableHash::GetValue]
+[PSTEE-CVariableHash::GetValue]
 Pattern=405556574881ECA0000000488B0546
 
-[PTEE-CGameSprite::HasFistOfIron]
+[PSTEE-CGameSprite::HasFistOfIron]
 Pattern=40534883EC20488BD9BA7E
 
-[PTEE-SDL_SetHint]
+[PSTEE-SDL_SetHint]
 Pattern=41B801000000E905
 
-[PTEE-CInfinity::SetZoomEnabled]
+[PSTEE-CInfinity::SetZoomEnabled]
 Pattern=48895C2408574883EC208BFA488BD9399144
 
-[PTEE-CChitin::GetUIRect]
+[PSTEE-CChitin::GetUIRect]
 Pattern=0FB70585E027
 
-[PTEE-CVidMode::WindowToScreen]
+[PSTEE-CVidMode::WindowToScreen]
 Pattern=442B818C0100
 
-[PTEE-CAIScript::Read]
+[PSTEE-CAIScript::Read]
 Pattern=48895424105553565741544156
 
 [CAIScript::Read(CResRef,int)]
@@ -54,19 +54,19 @@ Pattern=7F14498B8DB0
 [Hook-drawItem()-FixForcedScrollbarDivideByZero2]
 Pattern=C745281200000041
 
-[Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()]
+[Hook-PSTEE-ExecuteActionHelper()-CDerivedStats::Reload()]
 Pattern=E8DDCFFEFF41
 
-[Data-PTEE-SpellAction()-CProjectile::DecodeProjectile()-RetPtr]
+[Data-PSTEE-SpellAction()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=488983F0470000458BEF0F
 
-[Data-PTEE-SpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
+[Data-PSTEE-SpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=488986F04700
 
-[Data-PTEE-ForceSpellAction()-CProjectile::DecodeProjectile()-RetPtr]
+[Data-PSTEE-ForceSpellAction()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=410FB70C2448
 
-[Data-PTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
+[Data-PSTEE-ForceSpellPointAction()-CProjectile::DecodeProjectile()-RetPtr]
 Pattern=410FB70E33FF
 
 [Hook-CScreenStart::TimerAsynchronousUpdate()-StartupMovies]
@@ -75,13 +75,13 @@ Pattern=488D1579AF2F
 [Hook-CScreenStart::TimerAsynchronousUpdate()-AfterStartupMovies]
 Pattern=84DB0F841704
 
-[Hook-PTEE-CInfGame::RestPartyPrivate()-HealPartyCall]
+[Hook-PSTEE-CInfGame::RestPartyPrivate()-HealPartyCall]
 Pattern=E80B06FFFF85
 
-[PTEE-g_nSpriteUpdateMask]
+[PSTEE-g_nSpriteUpdateMask]
 Pattern=0FB605FCE426
 Operations=ADD 3, PUSH, READ DWORD, ADD, ADD 4
 
-[PTEE-g_pChitin]
+[PSTEE-g_pChitin]
 Pattern=488B0DC1522D
 Operations=ADD 3, PUSH, READ DWORD, ADD, ADD 4

@@ -2,7 +2,7 @@
 import re,collections,struct,sys,json
 B=open(r'C:\Users\jnthn\Tools\gproj\Baldur_bg2ee.exe','rb').read()
 T=open(r'C:\Users\jnthn\Tools\gproj\Torment.exe','rb').read()
-dbs=[r'E:\Enhanced Edition\EEex-PTEE\ref\EEex\EEex\loader\InfinityLoader.db',r'E:\Enhanced Edition\EEex-PTEE\ref\EEex\EEex\loader\v2.7.3.0\pattern_dbs\v2.7.3.0.db']
+dbs=[r'E:\Enhanced Edition\EEex-PSTEE\ref\EEex\EEex\loader\InfinityLoader.db',r'E:\Enhanced Edition\EEex-PSTEE\ref\EEex\EEex\loader\v2.7.3.0\pattern_dbs\v2.7.3.0.db']
 entries={}
 for d in dbs:
     for name,pat,ops in re.findall(r'\[([^\]]+)\]\s*\nPattern=([0-9A-F]+)(?:\s*\nOperations=([^\n]*))?',open(d,encoding='utf-8').read()):

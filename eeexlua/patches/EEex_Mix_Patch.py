@@ -18,17 +18,17 @@ PATCHES = [
 				mov r9, qword ptr ds:[rsp+#LAST_FRAME_TOP(68h)] ; weaponAbility''',
      '''				mov rcx, rbx                                    ; attackingSprite
 				mov rdx, r15                                    ; targetSprite
-				mov r8, qword ptr ss:[rbp-0x68]                 ; weapon        ; EEex-PTEE: PT 0x434215
-				mov r9, qword ptr ss:[rbp-0x70]                 ; weaponAbility ; EEex-PTEE: PT 0x4337dd'''),
+				mov r8, qword ptr ss:[rbp-0x68]                 ; weapon        ; EEex-PSTEE: PT 0x434215
+				mov r9, qword ptr ss:[rbp-0x70]                 ; weaponAbility ; EEex-PSTEE: PT 0x4337dd'''),
     # Ranged: both Torment OnList() sites
     ('''	EEex_HookAfterCallWithLabels(EEex_Label("Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Ranged"), {''',
-     '''	-- EEex-PTEE: Torment has two copies of the ranged OnList() block (PT 0x433eb2 and 0x433fb8 = label + 0x106)
+     '''	-- EEex-PSTEE: Torment has two copies of the ranged OnList() block (PT 0x433eb2 and 0x433fb8 = label + 0x106)
 	local ptRangedOnList = EEex_Label("Hook-CGameSprite::Swing()-CImmunitiesWeapon::OnList()-Ranged")
 	local ptRangedOnList2 = ptRangedOnList + 0x106
 	if EEex_ReadU8(ptRangedOnList2) ~= 0xE8
 		or ptRangedOnList2 + 5 + EEex_Read32(ptRangedOnList2 + 1) ~= ptRangedOnList + 5 + EEex_Read32(ptRangedOnList + 1)
 	then
-		EEex_Error("[EEex-PTEE] Unexpected second CGameSprite::Swing() ranged OnList() call")
+		EEex_Error("[EEex-PSTEE] Unexpected second CGameSprite::Swing() ranged OnList() call")
 	end
 	for _, ptRangedOnListSite in ipairs({ptRangedOnList, ptRangedOnList2}) do
 	EEex_HookAfterCallWithLabels(ptRangedOnListSite, {'''),
@@ -38,8 +38,8 @@ PATCHES = [
 				mov r9, qword ptr ds:[rsp+#LAST_FRAME_TOP(68h)] ; weaponAbility''',
      '''				mov rcx, rbx                                    ; attackingSprite
 				mov rdx, r15                                    ; targetSprite
-				mov r8, r12                                     ; weapon        ; EEex-PTEE: PT 0x433e6f / 0x433f75
-				mov r9, qword ptr ss:[rbp-0x70]                 ; weaponAbility ; EEex-PTEE: PT 0x4337dd'''),
+				mov r8, r12                                     ; weapon        ; EEex-PSTEE: PT 0x433e6f / 0x433f75
+				mov r9, qword ptr ss:[rbp-0x70]                 ; weaponAbility ; EEex-PSTEE: PT 0x4337dd'''),
     ('''				#MANUAL_HOOK_EXIT(0)
 				; The consequence of not running the else block is that this boilerplate is not executed
 				mov rsi, qword ptr ss:[rsp+0x70]
@@ -50,10 +50,10 @@ PATCHES = [
 	)''',
      '''				#MANUAL_HOOK_EXIT(0)
 				; The consequence of not running the else block is that this boilerplate is not executed
-				mov rdi, qword ptr ss:[rbp-0x60] ; EEex-PTEE: PT 0x433f28 / 0x43402a (r13 is already target + 0xC)
+				mov rdi, qword ptr ss:[rbp-0x60] ; EEex-PSTEE: PT 0x433f28 / 0x43402a (r13 is already target + 0xC)
 				jmp #L(Hook-CGameSprite::Swing()-NoCImmunitiesWeaponElseContinue)
 			]]},
 		})
 	)
-	end -- EEex-PTEE: both ranged sites'''),
+	end -- EEex-PSTEE: both ranged sites'''),
 ]

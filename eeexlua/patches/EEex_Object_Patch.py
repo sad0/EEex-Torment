@@ -12,14 +12,14 @@ PATCHES = [
     ('''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13 #ENDL", {rspOffset}}, "CAIObjectType" end,
 				},
 				["returnType"] = EEex_LuaCallReturnType.Boolean,''',
-     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CAIObjectType" end, -- EEex-PTEE: rbx
+     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CAIObjectType" end, -- EEex-PSTEE: rbx
 				},
 				["returnType"] = EEex_LuaCallReturnType.Boolean,'''),
     # DefaultJmp: decodingAIType rbx, caller r13, nSpecialCaseI r12
     ('''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13 #ENDL", {rspOffset}}, "CAIObjectType" end,
 					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r12 #ENDL", {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end,
 					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r15 #ENDL", {rspOffset}} end,''',
-     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CAIObjectType" end, -- EEex-PTEE: rbx
-					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13 #ENDL", {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end, -- EEex-PTEE: r13
-					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r12 #ENDL", {rspOffset}} end, -- EEex-PTEE: r12 (loop index)'''),
+     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CAIObjectType" end, -- EEex-PSTEE: rbx
+					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13 #ENDL", {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end, -- EEex-PSTEE: r13
+					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r12 #ENDL", {rspOffset}} end, -- EEex-PSTEE: r12 (loop index)'''),
 ]

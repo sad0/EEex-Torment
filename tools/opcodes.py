@@ -6,7 +6,7 @@ import capstone
 from ilib import PE, BG_EXE
 from fmap import whole_ratio
 
-BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')
+BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')
 md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
 F = {int(k, 16): int(v[0], 16) for k, v in json.load(open('fmap.json')).items()}
 BN = {int(k, 16): v for k, v in json.load(open('bgnames.json')).items()}

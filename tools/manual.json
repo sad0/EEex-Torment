@@ -3,7 +3,7 @@
   "addr": "0x140ead",
   "method": "string xref + call graph",
   "conf": "high",
-  "note": "PTEE moved UI.MENU (res 0x408) loading out of dimmInit() into fn 0x140d10 ('Error loading menu: %s'); call uiLoadMenu(rcx=rdi) matches BG sequence lua_gettop/uiLoadMenu/lua_gettop/lua_pcallk; callee aligns 0.98 with BG uiLoadMenu"
+  "note": "PSTEE moved UI.MENU (res 0x408) loading out of dimmInit() into fn 0x140d10 ('Error loading menu: %s'); call uiLoadMenu(rcx=rdi) matches BG sequence lua_gettop/uiLoadMenu/lua_gettop/lua_pcallk; callee aligns 0.98 with BG uiLoadMenu"
  },
  "lua_xmove": {
   "unsupported": true,

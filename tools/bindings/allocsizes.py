@@ -10,7 +10,7 @@ from capstone import x86_const as X
 from ilib import PE, BG_EXE
 import bgtypes as T
 
-BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')
+BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')
 md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
 NEW = {'BG': 0x4f7a88, 'PT': 0x580078}
 

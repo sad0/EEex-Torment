@@ -1,5 +1,5 @@
 # Torment copy of upstream generate_bindings/in/manual_types.txt (inline engine helpers).
-# CMessageAddEffect has no m_CommType in PTEE (Run/Unmarshal: m_noSave at 0x18), so Construct()
+# CMessageAddEffect has no m_CommType in PSTEE (Run/Unmarshal: m_noSave at 0x18), so Construct()
 # must not write it. CInfinity::SetZoom has Torment's signature. Writes bindings/in/manual_types_pt.txt.
 import os
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -7,14 +7,14 @@ SRC = os.path.join(HERE, r'..\..\ref\InfinityLoader\Core-Shared-Files\generate_b
 s = open(SRC, encoding='utf-8').read()
 old = '\t\tm_CommType = commType;\n'
 assert s.count(old) == 1, 'upstream changed'
-s = s.replace(old, '\t\t// EEex-PTEE: no m_CommType in Torment\'s CMessageAddEffect\n')
+s = s.replace(old, '\t\t// EEex-PSTEE: no m_CommType in Torment\'s CMessageAddEffect\n')
 # Torment's CInfinity::SetZoom takes a third argument (PT 0x3096b0: bForce, r8b): without it, "Zoom Lock"
 # snaps the zoom back to the option value unless the world screen is auto-zooming. Vanilla callers pass false.
 old = '\tvoid SetZoom(float fZoom);\n'
 assert s.count(old) == 1, 'upstream changed'
 s = s.replace(old, '\tvoid SetZoom(float fZoom, bool bForce);\n')
 # Torment signatures of engine functions bound for Lua (tools/argcheck.py; argument values seen at the
-# Torment call sites, PTEE AUDIT.md). Lua callers must pass the new arguments (phase 5).
+# Torment call sites, PSTEE AUDIT.md). Lua callers must pass the new arguments (phase 5).
 SIG = [
     # CAIObjectType::GetShare(caller, checkBackList, bIgnoreRangeAndLOS): non-zero = range 10000, no LOS
     # check (PT 0x12b340); 21 of 24 callers pass 0
@@ -35,7 +35,7 @@ SIG = [
     # CAIScript::CAIScript(CResRef): Torment's constructor has no playerscript argument; it calls
     # CAIScript::Read(resref, 0) itself (PT 0x176d80 -> 0x12d240)
     ('$constructor_fake Construct(CResRef cNewResRef, int playerscript);\n', '$constructor_fake Construct(CResRef cNewResRef);\n'
-     # player scripts are re-read with Read(resref, 1), as CGameSprite::JoinParty does (EEex.dll PTEE::NewScript)
+     # player scripts are re-read with Read(resref, 1), as CGameSprite::JoinParty does (EEex.dll PSTEE::NewScript)
      '\t$pattern_name(Read(CResRef,int)) void Read(CResRef res, int bPlayerScript);\n'),
 ]
 for old, new in SIG:

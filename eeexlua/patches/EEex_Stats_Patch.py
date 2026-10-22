@@ -13,18 +13,18 @@ PATCHES = [
     ('''	EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CDerivedStats::GetAtOffset()-OutOfBoundsJmp"), 0, {
 		{"stack_mod", 8},''',
      '''	EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CDerivedStats::GetAtOffset()-OutOfBoundsJmp"), 0, {
-		-- EEex-PTEE: no stack_mod, Torment's GetAtOffset already did sub rsp, 38h (site 16-byte aligned)'''),
+		-- EEex-PSTEE: no stack_mod, Torment's GetAtOffset already did sub rsp, 38h (site 16-byte aligned)'''),
     ('''				#DESTROY_SHADOW_SPACE
 				#MANUAL_HOOK_EXIT(0)
 				ret''',
      '''				#DESTROY_SHADOW_SPACE
 				#MANUAL_HOOK_EXIT(0)
-				add rsp, 38h ; EEex-PTEE: Torment's GetAtOffset frame (PT 0x15fb57)
+				add rsp, 38h ; EEex-PSTEE: Torment's GetAtOffset frame (PT 0x15fb57)
 				ret'''),
     # Torment has a 5th CDerivedStats::Reload caller that BG lacks: a Torment-only sprite routine reached from
     # CGameAIBase::ExecuteAction (PT 0x1711cb -> 0x173c00), call at PT 0x17421e with the sprite in r15
     # (PT 0x174217 lea rcx, [r15+0xfe8]; 0x174229 mov rcx, r15). Label in the version
-    # extra DB (tools/port_extra.py, poc/extra_pattern_dbs/ptee.db).
+    # extra DB (tools/port_extra.py, poc/extra_pattern_dbs/pstee.db).
     ('''	EEex_HookAfterCallWithLabels(EEex_Label("Hook-CGameSprite::ProcessEffectList()-CDerivedStats::Reload()"), {
 		{"hook_integrity_watchdog_ignore_registers", {EEex_HookIntegrityWatchdogRegister.RAX}}},
 		statsReloadTemplate("rsi")
@@ -34,8 +34,8 @@ PATCHES = [
 		statsReloadTemplate("rsi")
 	)
 
-	-- EEex-PTEE: Torment-only CDerivedStats::Reload() call (PT 0x17421e, sprite in r15)
-	EEex_HookAfterCallWithLabels(EEex_Label("Hook-PTEE-ExecuteActionHelper()-CDerivedStats::Reload()"), {
+	-- EEex-PSTEE: Torment-only CDerivedStats::Reload() call (PT 0x17421e, sprite in r15)
+	EEex_HookAfterCallWithLabels(EEex_Label("Hook-PSTEE-ExecuteActionHelper()-CDerivedStats::Reload()"), {
 		{"hook_integrity_watchdog_ignore_registers", {EEex_HookIntegrityWatchdogRegister.RAX}}},
 		statsReloadTemplate("r15")
 	)'''),

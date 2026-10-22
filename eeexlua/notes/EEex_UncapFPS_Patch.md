@@ -1,7 +1,7 @@
 # EEex_UncapFPS_Patch.lua (Torment review)
 
 Patch: `patches/EEex_UncapFPS_Patch.py` (3 changes, identical to the phase 4d in-game test
-`bindings/test/make_uncap_test.py` -> `PTEE_UncapTest.lua`; the generated file was diffed against it: only comments
+`bindings/test/make_uncap_test.py` -> `PSTEE_UncapTest.lua`; the generated file was diffed against it: only comments
 differ). The C++ overrides/hooks are the phase 4d ports (eeexdll uncap_fps.cpp, AUDIT.md "Uncap FPS").
 
 | Line | Hook / label | Verdict | Evidence |

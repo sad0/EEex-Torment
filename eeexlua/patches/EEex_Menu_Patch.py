@@ -18,15 +18,15 @@ PATCHES = [
     # rbx, so an override would walk a uiMenu as if it were a uiItem (upstream bug, BG too). Use the override menu's
     # first item (uiMenu+0x28, as PT 0x4468d9 / 0x444634 read it).
     ('''			mov rbx, rax ; Override menu''',
-     '''			mov rbx, qword ptr ds:[rax+0x28] ; Override menu ; EEex-PTEE: its first item (uiMenu.items, PT 0x444634)'''),
+     '''			mov rbx, qword ptr ds:[rax+0x28] ; Override menu ; EEex-PSTEE: its first item (uiMenu.items, PT 0x444634)'''),
     # RenderListCallback()-drawItem() (PT 0x44aee1): the list item is in rdi (PT 0x44a5d2 mov rdi, [rcx+0x10], only
     # read afterwards; BG rsi). drawItem has the same 5 arguments (PT 0x44ea98 reads the 5th, menu, at [rbp+0x3b0]).
     ('''				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-40)], rsi''',
-     '''				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-40)], rdi ; EEex-PTEE: Torment keeps the list in rdi (PT 0x44a5d2)'''),
+     '''				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-40)], rdi ; EEex-PSTEE: Torment keeps the list in rdi (PT 0x44a5d2)'''),
     # drawItem()-AfterEnabledCheck (PT 0x44eb2b): the 5 restored bytes are `movups xmm0, [r13+0x40]`; Torment's
     # drawItem keeps the uiItem in r13 (PT 0x44ea9f mov r13, rcx; BG r15).
     ('''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r15", {rspOffset}, "#ENDL"}, "uiItem" end,''',
-     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13", {rspOffset}, "#ENDL"}, "uiItem" end, -- EEex-PTEE: r13'''),
+     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r13", {rspOffset}, "#ENDL"}, "uiItem" end, -- EEex-PSTEE: r13'''),
     # drawItem()-CheckScrollbarContentHeight: BG `cmp r13d, [r15+0x4c]; jle <hidden>` (near). Torment
     # (PT 0x450daf cmp esi, [r13+0x4c]) jumps with a short `jg <visible>` (PT 0x450db3 -> 0x450dc9), and when the
     # content fits it still shows the scrollbar if the item's forced-scrollbar expression ([r13+0x1b0]) is true:
@@ -36,18 +36,18 @@ PATCHES = [
     # path; (2) the je, with upstream's exact logic (success = hidden, fail = visible).
     ('''	EEex_HookConditionalJumpWithLabels(EEex_Label("Hook-drawItem()-CheckScrollbarContentHeight"), 0, {
 		{"hook_integrity_watchdog_ignore_registers_0", {''',
-     '''	-- EEex-PTEE: Torment's check is a short `jg <visible>` followed by the forced-scrollbar test
+     '''	-- EEex-PSTEE: Torment's check is a short `jg <visible>` followed by the forced-scrollbar test
 	-- (mov rcx, [r13+0x1b0]; call; test eax, eax; je <hidden>), see eeexlua/notes/EEex_Menu_Patch.md
-	local ptee_scrollbarCheck = EEex_Label("Hook-drawItem()-CheckScrollbarContentHeight")
-	if EEex_ReadU8(ptee_scrollbarCheck) ~= 0x7F or EEex_ReadU8(ptee_scrollbarCheck + 0x2) ~= 0x49
-		or EEex_ReadU8(ptee_scrollbarCheck + 0x10) ~= 0x0F or EEex_ReadU8(ptee_scrollbarCheck + 0x11) ~= 0x84
+	local pstee_scrollbarCheck = EEex_Label("Hook-drawItem()-CheckScrollbarContentHeight")
+	if EEex_ReadU8(pstee_scrollbarCheck) ~= 0x7F or EEex_ReadU8(pstee_scrollbarCheck + 0x2) ~= 0x49
+		or EEex_ReadU8(pstee_scrollbarCheck + 0x10) ~= 0x0F or EEex_ReadU8(pstee_scrollbarCheck + 0x11) ~= 0x84
 	then
-		EEex_Error("Unexpected instructions at [Hook-drawItem()-CheckScrollbarContentHeight] (EEex-PTEE)")
+		EEex_Error("Unexpected instructions at [Hook-drawItem()-CheckScrollbarContentHeight] (EEex-PSTEE)")
 	end
-	local _, ptee_scrollbarHidden = EEex_GetJmpInfo(ptee_scrollbarCheck + 0x10)
+	local _, pstee_scrollbarHidden = EEex_GetJmpInfo(pstee_scrollbarCheck + 0x10)
 
-	EEex_HookConditionalJumpOnSuccessWithLabels(ptee_scrollbarCheck, 7, {
-		{"ptee_scrollbar_hidden", ptee_scrollbarHidden},
+	EEex_HookConditionalJumpOnSuccessWithLabels(pstee_scrollbarCheck, 7, {
+		{"pstee_scrollbar_hidden", pstee_scrollbarHidden},
 		{"hook_integrity_watchdog_ignore_registers", {
 			EEex_HookIntegrityWatchdogRegister.RAX, EEex_HookIntegrityWatchdogRegister.RCX, EEex_HookIntegrityWatchdogRegister.RDX,
 			EEex_HookIntegrityWatchdogRegister.R8, EEex_HookIntegrityWatchdogRegister.R9, EEex_HookIntegrityWatchdogRegister.R10,
@@ -58,19 +58,19 @@ PATCHES = [
 			mov rdx, 1                                           ; bVisible
 			call #L(EEex::Fix_Hook_OnUIItemCheckRenderScrollbar)
 			test al, al
-			jz #L(ptee_scrollbar_hidden)
+			jz #L(pstee_scrollbar_hidden)
 		]]}
 	)
 
-	EEex_HookConditionalJumpWithLabels(ptee_scrollbarCheck + 0x10, 0, {
+	EEex_HookConditionalJumpWithLabels(pstee_scrollbarCheck + 0x10, 0, {
 		{"hook_integrity_watchdog_ignore_registers_0", {'''),
     ('''			mov rcx, r15                                         ; pItem
 			mov rdx, 1                                           ; bVisible''',
-     '''			mov rcx, r13                                         ; pItem ; EEex-PTEE: r13
+     '''			mov rcx, r13                                         ; pItem ; EEex-PSTEE: r13
 			mov rdx, 1                                           ; bVisible'''),
     ('''			mov rcx, r15                                         ; pItem
 			xor rdx, rdx                                         ; bVisible''',
-     '''			mov rcx, r13                                         ; pItem ; EEex-PTEE: r13
+     '''			mov rcx, r13                                         ; pItem ; EEex-PSTEE: r13
 			xor rdx, rdx                                         ; bVisible'''),
     # drawItem()-CheckApplyTextHardcodedScrollbarPad (PT 0x4504cf): Torment keeps the item width in r8d and applies
     # an 18-pixel pad: `and ecx, 0x12; sub r8d, ecx; mov [rbp+0x48], r8d` (83 E1 12 44 2B C1 44 89 45 48, 10 bytes;
@@ -101,13 +101,13 @@ PATCHES = [
 			call #L(EEex::Menu_Hook_CheckApplyTextScrollbarPad)
 		]]}
 	)''',
-     '''	-- EEex-PTEE: Torment applies an 18-pixel pad to the width kept in r8d, then stores it:
+     '''	-- EEex-PSTEE: Torment applies an 18-pixel pad to the width kept in r8d, then stores it:
 	-- and ecx, 0x12; sub r8d, ecx; mov dword ptr [rbp+0x48], r8d (83 E1 12 44 2B C1 44 89 45 48)
 	local paddingHookStart = EEex_Label("Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad")
 
 	for i, expectedByte in ipairs({0x83, 0xE1, 0x12, 0x44, 0x2B, 0xC1, 0x44, 0x89, 0x45}) do
 		if EEex_ReadU8(paddingHookStart + i - 1) ~= expectedByte then
-			EEex_Error("Unexpected instruction when reading stack offset for [Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad] (EEex-PTEE)")
+			EEex_Error("Unexpected instruction when reading stack offset for [Hook-drawItem()-CheckApplyTextHardcodedScrollbarPad] (EEex-PSTEE)")
 		end
 	end
 
@@ -130,9 +130,9 @@ PATCHES = [
 			call #L(EEex::Menu_Hook_CheckApplyTextScrollbarPad)
 			mov eax, dword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)]
 			cmp eax, dword ptr ss:[rbp+#$(1)] ]], {itemAreaWOffsetFromRbp}, [[ ; pad applied?
-			je ptee_no_pad
+			je pstee_no_pad
 			sub dword ptr ss:[rbp+#$(1)], 2 ]], {itemAreaWOffsetFromRbp}, [[ ; Torment's pad is 18, EEex.dll applies 16
-			ptee_no_pad:
+			pstee_no_pad:
 			mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
 			#DESTROY_SHADOW_SPACE
 		]]}

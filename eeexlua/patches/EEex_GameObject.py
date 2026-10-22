@@ -7,9 +7,9 @@ PATCHES = [
 	end''',
      '''		local vftable = EEex_ReadPtr(EEex_UDToPtr(object))
 		usertype = EEex_GameObject_Private_VFTableToUsertype[vftable]
-		if usertype == nil and EEex_Projectile_Private_PTEE_GetFallbackType then
-			-- EEex-PTEE: Torment-only projectile class -> nearest known base class (AddEffect vtable slot)
-			local projectileType = EEex_Projectile_Private_PTEE_GetFallbackType(vftable)
+		if usertype == nil and EEex_Projectile_Private_PSTEE_GetFallbackType then
+			-- EEex-PSTEE: Torment-only projectile class -> nearest known base class (AddEffect vtable slot)
+			local projectileType = EEex_Projectile_Private_PSTEE_GetFallbackType(vftable)
 			usertype = projectileType and EEex_Projectile_Private_CastUserTypes[projectileType]
 		end
 	end'''),

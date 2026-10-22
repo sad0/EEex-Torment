@@ -1,6 +1,6 @@
-# Release package: build/release/ = setup-EEex.exe (WeiDU) + EEex/ (mod folder), zipped to build/EEex-PTEE-<ver>.zip.
+# Release package: build/release/ = setup-EEex.exe (WeiDU) + EEex/ (mod folder), zipped to build/EEex-PSTEE-<ver>.zip.
 # Sources: installer/ (tp2, tra, readme), upstream InfinityLoader binaries (ref/EEex/EEex/loader, unchanged),
-# our builds (build/EEex-PTEE/EEex.dll, build/LuaBindings-PTEE/LuaBindings.dll), poc/ (Torment pattern DB, extra
+# our builds (build/EEex-PSTEE/EEex.dll, build/LuaBindings-PSTEE/LuaBindings.dll), poc/ (Torment pattern DB, extra
 # pattern DB, profiler names), eeexlua/generated/ (Lua port, no dev-only test files), eeexlua/src/patch/ (IDS).
 #   python tools/package.py        (run eeexlua/build.py and the DLL builds first: tools/rebuild_all.sh)
 import os, re, sys, shutil, zipfile
@@ -9,7 +9,7 @@ UP = os.path.join(REPO, r'ref\EEex\EEex')
 OUT = os.path.join(REPO, r'build\release')
 MOD = os.path.join(OUT, 'EEex')
 # dev-only scripts appended by eeexlua/build.py --deploy (never in eeexlua/generated, checked anyway)
-DEV_ONLY = re.compile(r'^PTEE_(SkipIntro|SpellTest|FeatureTest|UIProbe|AttackTrace|VisMapTest)\.lua$')
+DEV_ONLY = re.compile(r'^PSTEE_(SkipIntro|SpellTest|FeatureTest|UIProbe|AttackTrace|VisMapTest)\.lua$')
 
 
 def P(*a):
@@ -52,7 +52,7 @@ def main():
     os.makedirs(MOD)
     copy(P(r'tools\weidu\weidu.exe'), os.path.join(OUT, 'setup-EEex.exe'))
     copy(P('installer', 'EEex.tp2'), os.path.join(MOD, 'EEex.tp2'))
-    copy(P('installer', 'readme-EEex-PTEE.txt'), os.path.join(MOD, 'readme-EEex-PTEE.txt'))
+    copy(P('installer', 'readme-EEex-PSTEE.txt'), os.path.join(MOD, 'readme-EEex-PSTEE.txt'))
     for lang in ('english', 'french'):
         copy(P('installer', 'language', lang, 'setup.tra'), os.path.join(MOD, 'language', lang, 'setup.tra'))
     copy(os.path.join(UP, r'lib\always.tph'), os.path.join(MOD, r'lib\always.tph'))
@@ -63,16 +63,16 @@ def main():
               'LuaBindingsCore.dll', 'EEex.ini'):
         copy(os.path.join(UP, 'loader', f), os.path.join(ld, f))
     copy(os.path.join(UP, r'loader\Lua52\LuaProvider.dll'), os.path.join(ld, 'LuaProvider.dll'))
-    copy(P(r'build\EEex-PTEE\EEex.dll'), os.path.join(ld, 'EEex.dll'))
-    copy(P(r'build\LuaBindings-PTEE\LuaBindings.dll'), os.path.join(ld, 'LuaBindings.dll'))
+    copy(P(r'build\EEex-PSTEE\EEex.dll'), os.path.join(ld, 'EEex.dll'))
+    copy(P(r'build\LuaBindings-PSTEE\LuaBindings.dll'), os.path.join(ld, 'LuaBindings.dll'))
     copy(P(r'poc\InfinityLoader.db'), os.path.join(ld, 'InfinityLoader.db'))
     open(os.path.join(ld, 'InfinityLoader.ini'), 'w', encoding='utf-8', newline='\n').write(loader_ini())
-    copy(P(r'poc\extra_pattern_dbs\ptee.db'), os.path.join(ld, r'pattern_dbs\ptee.db'))
+    copy(P(r'poc\extra_pattern_dbs\pstee.db'), os.path.join(ld, r'pattern_dbs\pstee.db'))
     copy(P(r'poc\profiler\function_names.db'), os.path.join(ld, r'profiler\function_names.db'))
     # Lua port
     for sub in ('EEex_scripts', 'override'):
         copytree(P('eeexlua', 'generated', sub), os.path.join(MOD, 'copy', sub))
-    zpath = P('build', f'EEex-PTEE-{ver}.zip')
+    zpath = P('build', f'EEex-PSTEE-{ver}.zip')
     with zipfile.ZipFile(zpath, 'w', zipfile.ZIP_DEFLATED) as z:
         for root, _, files in os.walk(OUT):
             for f in sorted(files):

@@ -3,7 +3,7 @@
 import sys, collections
 from ilib import PE, BG_EXE
 from swemu import run, Sym
-BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')
+BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')
 
 
 def table(pe, f, gamekey, kindw='read', extra=None, skip=False):

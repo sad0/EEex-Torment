@@ -1,4 +1,4 @@
-// EEex-PTEE: stand-ins for the EEex.dll reimplementations that EEex never installs (debug.cpp:
+// EEex-PSTEE: stand-ins for the EEex.dll reimplementations that EEex never installs (debug.cpp:
 // CVidPalette::RealizeResource3d; engine_reimplementations.cpp is not compiled at all): no Lua patch jumps
 // to them and they are $nobinding (AUDIT.md). They log once if ever reached.
 
@@ -11,7 +11,7 @@
 static void notPorted(const char* name) {
 	static std::unordered_set<const char*> reported;
 	if (reported.insert(name).second) {
-		FPrint("[!][EEex.dll] %s is not ported to Torment.exe yet (EEex-PTEE); ignored\n", name);
+		FPrint("[!][EEex.dll] %s is not ported to Torment.exe yet (EEex-PSTEE); ignored\n", name);
 	}
 }
 

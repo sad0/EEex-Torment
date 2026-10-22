@@ -6,7 +6,7 @@
 #  3. Every name of EEex's file lying between two kept anchors with the same delta gets that delta, and
 #     must land on a function start (.pdata) of our exe.
 #  4. bgnames_merge.py merges these names into bgnames.json; BG -> PT through fmap.json; Torment-only
-#     names from port_extra.py's PTEE- labels.
+#     names from port_extra.py's PSTEE- labels.
 # Output: poc/profiler/function_names.db, report on stdout.
 import os, json, bisect
 from ilib import *
@@ -69,9 +69,9 @@ merged = {int(k, 16): v for k, v in json.load(open('bgnames.json')).items()} if 
 for r, n in merged.items():
     if r in F:
         pt.setdefault(F[r], n)
-# Torment-only engine functions bound by EEex-PTEE (port_extra.py LABELS 'PTEE-<name>': rva)
+# Torment-only engine functions bound by EEex-PSTEE (port_extra.py LABELS 'PSTEE-<name>': rva)
 import re
-for n, a in re.findall(r"'PTEE-([\w:]+)': (0x[0-9a-f]+)", open('port_extra.py').read()):
+for n, a in re.findall(r"'PSTEE-([\w:]+)': (0x[0-9a-f]+)", open('port_extra.py').read()):
     pt[int(a, 16)] = n
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 with open(OUT, 'w', newline='\r\n') as f:

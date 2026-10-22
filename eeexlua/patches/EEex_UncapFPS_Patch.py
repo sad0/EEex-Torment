@@ -10,12 +10,12 @@ PATCHES = [
     # restore the next instruction `add rbx, 0x5d8` (PT 0x35ba0c, 7 bytes, relocatable). pEvent stays in rdi
     # (PT 0x35ba4b add r8d, [rdi+0x1c]).
     ('EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp"), 0, {',
-     'EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp"), 7, { -- EEex-PTEE: short je, restore add rbx, 0x5d8'),
+     'EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CScreenWorld::OnEvent()-OnHandleMiddleMouseDragJmp"), 7, { -- EEex-PSTEE: short je, restore add rbx, 0x5d8'),
     # Screen-shake post block (Torment helper PT 0x307a50): the jne is near (PT 0x307a88, 6 bytes; BG short jne +
     # 3 restored bytes): nothing to restore. pInfinity in rbx (PT 0x307a5d mov rbx, rcx); jmp_success = the
     # helper's epilogue (PT 0x307b0e), whose caller (PT 0x19efd6) does not use rax.
     ('EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CInfinity::Render()-HandleScreenShakePostJmp"), 3, {',
-     'EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CInfinity::Render()-HandleScreenShakePostJmp"), 0, { -- EEex-PTEE: near jne'),
+     'EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CInfinity::Render()-HandleScreenShakePostJmp"), 0, { -- EEex-PSTEE: near jne'),
     # CGameArea::OnActivation: BG tail-jumps to CScreenMap's area-activated handler (jmp, pArea in rdx); Torment
     # calls it (PT 0x19d3ca call 0x33c6e0) and keeps pArea in rdi (callee-saved, PT 0x19d3c0 mov rdx, rdi,
     # still read at PT 0x19d3d4). Volatile registers are dead after the call (PT 0x19d3cf..0x19d42b write them
@@ -42,7 +42,7 @@ PATCHES = [
 			ret
 		]]}
 	)''',
-     '''	-- EEex-PTEE: Torment calls the map engine (no tail jump) and keeps pArea in rdi
+     '''	-- EEex-PSTEE: Torment calls the map engine (no tail jump) and keeps pArea in rdi
 	EEex_HookAfterCallWithLabels(EEex_Label("Hook-CGameArea::OnActivation()-LastCall"), {
 		{"hook_integrity_watchdog_ignore_registers", {
 			EEex_HookIntegrityWatchdogRegister.RAX, EEex_HookIntegrityWatchdogRegister.RCX, EEex_HookIntegrityWatchdogRegister.RDX,
@@ -50,7 +50,7 @@ PATCHES = [
 			EEex_HookIntegrityWatchdogRegister.R11
 		}}},
 		{[[
-			mov rcx, rdi ; EEex-PTEE: pArea in rdi
+			mov rcx, rdi ; EEex-PSTEE: pArea in rdi
 			call #L(EEex::UncapFPS_Hook_OnAfterAreaActivated)
 		]]}
 	)'''),

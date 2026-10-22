@@ -1,4 +1,4 @@
--- EEex-PTEE phase 4d test: install EEex's FoW-clearing creature cap fix (copied verbatim from
+-- EEex-PSTEE phase 4d test: install EEex's FoW-clearing creature cap fix (copied verbatim from
 -- EEex_Fix_Patch.lua, upstream v1.3.1) so the ported visibility_map.cpp runs in Torment.
 (function()
 	EEex_DisableCodeProtection()
@@ -49,7 +49,7 @@
 		]]}
 	)
 
-	EEex_HookBeforeRestoreWithLabels(EEex_Label("Hook-CVisibilityMap::Destruct()-FirstInstruction"), 0, 6, 6, { -- EEex-PTEE: push rsi; sub rsp, 0x20 (6 bytes)
+	EEex_HookBeforeRestoreWithLabels(EEex_Label("Hook-CVisibilityMap::Destruct()-FirstInstruction"), 0, 6, 6, { -- EEex-PSTEE: push rsi; sub rsp, 0x20 (6 bytes)
 		{"stack_mod", 8},
 		{"hook_integrity_watchdog_ignore_registers", {
 			EEex_HookIntegrityWatchdogRegister.RAX, EEex_HookIntegrityWatchdogRegister.RDX, EEex_HookIntegrityWatchdogRegister.R8,
@@ -67,5 +67,5 @@
 		]]}
 	)
 	EEex_EnableCodeProtection()
-	print("PTEE-TEST: visibility map overrides installed")
+	print("PSTEE-TEST: visibility map overrides installed")
 end)()

@@ -5,12 +5,12 @@ PATCHES = [
 	["type"]     = EEex_Options_EditType.new(),
 	["accessor"] = EEex_Options_ClampedAccessor.new({ ["min"] = 0, ["max"] = 1, ["floating"] = true }),
 	["storage"]  = EEex_Options_NumberLuaStorage.new({ ["section"] = "EEex", ["key"] = "Scale Module: Percentage" }),''',
-     '''	["default"]  = 100, -- EEex-PTEE: percent
+     '''	["default"]  = 100, -- EEex-PSTEE: percent
 	["type"]     = EEex_Options_EditType.new(),
 	["accessor"] = EEex_Options_ClampedAccessor.new({ ["min"] = 0, ["max"] = 100 }),
 	["storage"]  = EEex_Options_NumberLuaStorage.new({ ["section"] = "EEex", ["key"] = "Scale Module: Percent" }),'''),
-    ('''				["maxCharacters"] = 5,''', '''				["maxCharacters"] = 3, -- EEex-PTEE: 0..100'''),
-    ('''	B3Scale_Private_Percentage:set(p)''', '''	B3Scale_Private_Percentage:set(math.floor(p * 100 + 0.5)) -- EEex-PTEE: stored as percent'''),
+    ('''				["maxCharacters"] = 5,''', '''				["maxCharacters"] = 3, -- EEex-PSTEE: 0..100'''),
+    ('''	B3Scale_Private_Percentage:set(p)''', '''	B3Scale_Private_Percentage:set(math.floor(p * 100 + 0.5)) -- EEex-PSTEE: stored as percent'''),
     ('''		and 768 + (1 - B3Scale_Private_Percentage:get()) * (h - 768)''',
-     '''		and 768 + (1 - B3Scale_Private_Percentage:get() / 100) * (h - 768) -- EEex-PTEE: percent'''),
+     '''		and 768 + (1 - B3Scale_Private_Percentage:get() / 100) * (h - 768) -- EEex-PSTEE: percent'''),
 ]

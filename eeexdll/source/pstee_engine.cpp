@@ -1,8 +1,8 @@
-// EEex-PTEE: bindings for Torment-only engine functions (see ptee_engine.hpp).
+// EEex-PSTEE: bindings for Torment-only engine functions (see pstee_engine.hpp).
 
-#include "ptee_engine.hpp"
+#include "pstee_engine.hpp"
 
-namespace PTEE {
+namespace PSTEE {
 
 	byte (__fastcall* p_CGameSprite_GetEffectiveAlignment)(CGameSprite* pSprite, CAIObjectType* pType) = nullptr;
 	int (__fastcall* p_CGameEffect_CheckSave)(CGameEffect* pThis, CGameSprite* pTarget, byte* saveVSDeathRollRaw,
@@ -34,23 +34,23 @@ namespace PTEE {
 			pointerOut = reinterpret_cast<OutType>(sharedState().GetSinglePatternValue(patternHandle));
 		}
 		else {
-			FPrintT(TEXT("[!][EEex.dll] PTEE::bind() - Torment binding pattern [%s] missing (EEex_scripts/extra_pattern_dbs/ptee.db)\n"), patternName.c_str());
+			FPrintT(TEXT("[!][EEex.dll] PSTEE::bind() - Torment binding pattern [%s] missing (EEex_scripts/extra_pattern_dbs/pstee.db)\n"), patternName.c_str());
 		}
 	}
 
 	void BindEngine() {
-		bind(TEXT("PTEE-CGameSprite::GetEffectiveAlignment"), p_CGameSprite_GetEffectiveAlignment);
-		bind(TEXT("PTEE-uiNavigateEvent"), p_uiNavigateEvent);
-		bind(TEXT("PTEE-CGameAIBase::PartyHasItem"), p_CGameAIBase_PartyHasItem);
-		bind(TEXT("PTEE-CVariableHash::GetValue"), p_CVariableHash_GetValue);
-		bind(TEXT("PTEE-CGameSprite::HasFistOfIron"), p_CGameSprite_HasFistOfIron);
-		bind(TEXT("PTEE-g_nSpriteUpdateMask"), p_g_nSpriteUpdateMask);
-		bind(TEXT("PTEE-SDL_SetHint"), p_SDL_SetHint);
-		bind(TEXT("PTEE-CInfinity::SetZoomEnabled"), p_CInfinity_SetZoomEnabled);
-		bind(TEXT("PTEE-CChitin::GetUIRect"), p_CChitin_GetUIRect);
-		bind(TEXT("PTEE-g_pChitin"), p_g_pChitin);
-		bind(TEXT("PTEE-CVidMode::WindowToScreen"), p_CVidMode_WindowToScreen);
-		bind(TEXT("PTEE-CAIScript::Read"), p_CAIScript_Read);
+		bind(TEXT("PSTEE-CGameSprite::GetEffectiveAlignment"), p_CGameSprite_GetEffectiveAlignment);
+		bind(TEXT("PSTEE-uiNavigateEvent"), p_uiNavigateEvent);
+		bind(TEXT("PSTEE-CGameAIBase::PartyHasItem"), p_CGameAIBase_PartyHasItem);
+		bind(TEXT("PSTEE-CVariableHash::GetValue"), p_CVariableHash_GetValue);
+		bind(TEXT("PSTEE-CGameSprite::HasFistOfIron"), p_CGameSprite_HasFistOfIron);
+		bind(TEXT("PSTEE-g_nSpriteUpdateMask"), p_g_nSpriteUpdateMask);
+		bind(TEXT("PSTEE-SDL_SetHint"), p_SDL_SetHint);
+		bind(TEXT("PSTEE-CInfinity::SetZoomEnabled"), p_CInfinity_SetZoomEnabled);
+		bind(TEXT("PSTEE-CChitin::GetUIRect"), p_CChitin_GetUIRect);
+		bind(TEXT("PSTEE-g_pChitin"), p_g_pChitin);
+		bind(TEXT("PSTEE-CVidMode::WindowToScreen"), p_CVidMode_WindowToScreen);
+		bind(TEXT("PSTEE-CAIScript::Read"), p_CAIScript_Read);
 
 		void** pBaseEffectVtbl = nullptr;
 		bind(TEXT("Data-CGameEffect::vftable"), pBaseEffectVtbl);

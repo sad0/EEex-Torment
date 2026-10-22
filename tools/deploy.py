@@ -3,7 +3,7 @@
 import json, re, sys, shutil, os
 from ilib import parse_db, PT_DB, UP_DB
 
-GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
+GAME = r'E:\Enhanced Edition\Environnement de test\PSTEE (EEex dev)'
 dst = os.path.join(GAME, 'InfinityLoader.db')
 txt = open(PT_DB, encoding='utf-8').read()
 if '--stub-unresolved' in sys.argv:

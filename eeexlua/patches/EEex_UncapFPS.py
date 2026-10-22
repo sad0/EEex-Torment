@@ -6,7 +6,7 @@ PATCHES = [
 	["type"]     = EEex_Options_EditType.new(),
 	["accessor"] = EEex_Options_ClampedAccessor.new({ ["min"] = 1, ["max"] = 90 }),''',
      '''EEex_Options_Register("EEex_UncapFPS_AISpeed", EEex_Options_Option.new({
-	["default"]  = 40, -- EEex-PTEE: Torment's default
+	["default"]  = 40, -- EEex-PSTEE: Torment's default
 	["type"]     = EEex_Options_EditType.new(),
-	["accessor"] = EEex_Options_ClampedAccessor.new({ ["min"] = 10, ["max"] = 90 }), -- EEex-PTEE: Torment accepts 10..90'''),
+	["accessor"] = EEex_Options_ClampedAccessor.new({ ["min"] = 10, ["max"] = 90 }), -- EEex-PSTEE: Torment accepts 10..90'''),
 ]

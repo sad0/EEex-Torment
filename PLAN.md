@@ -1,4 +1,4 @@
-# EEex-PTEE plan
+# EEex-PSTEE plan
 
 Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE (EEex v1.3.1).
 
@@ -8,7 +8,7 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
 - Lua coroutine library is stripped from Torment.exe: `lua_resume` absent -> `Unsupported=1`.
 - ~57% of the 840 EEex patterns match uniquely as-is; byte-window voting (tools/port.py) ports many more.
 - Bubb13 already generated PSTEE struct headers in 2022 (InfinityLoader/LuaBindings-PSTEE), for an older exe.
-- PTEE loads UI.MENU outside `dimmInit()` (fn 0x140d10); the uiLoadMenu hook is the call at 0x140ead.
+- PSTEE loads UI.MENU outside `dimmInit()` (fn 0x140d10); the uiLoadMenu hook is the call at 0x140ead.
 - Torment keeps the BG link order (98.8% of mapped function pairs): used to map functions PST modified.
 - Some upstream patterns match uniquely in Torment but at the wrong place (e.g. GetQuickButtons, GetKitMask,
   lua_xmove -> lua_atpanic): unique != correct, every entry was cross-checked (see PATTERNS.md).
@@ -20,24 +20,24 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
 - Windows Defender flags InfinityLoader.exe (Behavior:Win32/DefenseEvasion.A!ml): game + repo folders
   must be excluded.
 - tools/gamectl.py drives the game window (screenshot of the game only, clicks, keys) for tests.
-- CGameSpriteEquipment is pointer-based in PTEE: `CItem** m_items` (slot count from ITMSLOTS.2DA), 0x20 bytes,
+- CGameSpriteEquipment is pointer-based in PSTEE: `CItem** m_items` (slot count from ITMSLOTS.2DA), 0x20 bytes,
   at CGameSprite+0xfb8. Slot indices match BG (FIST 10, SPECIAL 34, WEAPONS 35-38) except slot 9 = TATTOO3:
-  PTEE has no off-hand slot (EEex.cpp left-hand logic patched by eeexdll/patch_sources.py).
-- CDerivedStatsTemplate: PTEE inserts 12 bytes after m_nCHR (0x5a) and drops BG 0x27c (m_nClassTypeOverride*):
+  PSTEE has no off-hand slot (EEex.cpp left-hand logic patched by eeexdll/patch_sources.py).
+- CDerivedStatsTemplate: PSTEE inserts 12 bytes after m_nCHR (0x5a) and drops BG 0x27c (m_nClassTypeOverride*):
   +12 from m_nXPValue, +8 from 0x280. CMessageAddEffect has no m_CommType (manual_types_pt.txt).
 - EEex's v2.6.6.0 extra pattern DB matches neither our BG exe nor Torment: functions located by name
-  (function_names.db -> tools/bgnames.py -> ptnames.json), written to poc/extra_pattern_dbs/ptee.db.
-- Dev env skips the startup movies (PTEE_SkipIntro.lua, labels in ptee.db).
+  (function_names.db -> tools/bgnames.py -> ptnames.json), written to poc/extra_pattern_dbs/pstee.db.
+- Dev env skips the startup movies (PSTEE_SkipIntro.lua, labels in pstee.db).
 
 ## Phases
 1. [x] POC: loader + Lua 5.2 provider run EEex_Main.lua in Torment.exe (poc/, loader-only DB).
 2. [x] Port all engine patterns: 821 ported, 13 unsupported, full DB loads in-game (PATTERNS.md, tools/).
 3. [x] LuaBindings for v3.2.2.0: struct layouts solved from BG2EE types + code evidence (tools/bindings),
-       bindings/LuaBindings-PTEE builds LuaBindings.dll; in-game reads OK (party names, HP, XP, gold).
+       bindings/LuaBindings-PSTEE builds LuaBindings.dll; in-game reads OK (party names, HP, XP, gold).
        Bubb's 2022 LuaBindings-PSTEE was an empty skeleton (62 structs, all bytes undefined), not reused.
 4. [ ] Port EEex.dll (C++ hooks, EEex-Core-Shared-Files) to PSTEE structs.
        Done: eeexdll/ builds EEex.dll, loads in-game, EEex.* struct functions tested (equipment, left hand).
-       Not ported (stubs log once, ptee_stubs.cpp): Uncap FPS, visibility map, engine reimplementations,
+       Not ported (stubs log once, pstee_stubs.cpp): Uncap FPS, visibility map, engine reimplementations,
        debug.cpp; CGameSprite::MakeLocal pattern; function_names.db (profiler names).
        Field audit (tools/bindings/audit*.py, strict header build): 274/645 fields used by EEex.dll proven.
        Still unproven: CGameAIBase trigger lists/scripts, some CGameSprite/CDerivedStats/CChitin fields,
@@ -61,7 +61,7 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
          documented as never installed by EEex. Proof hardening on the way: packed-struct sizes, 61 BG
          names fixed (bgnames_merge.py), field evidence needs >= 2 aligned functions or a consistent
          neighbour (coverage.py, field_evidence_funcs.json). Uncap FPS ported and tested
-         in game (AUDIT.md). Extra-DB menu hooks located in Torment (ptee.db; drawItem keeps the uiItem in
+         in game (AUDIT.md). Extra-DB menu hooks located in Torment (pstee.db; drawItem keeps the uiItem in
          r13, CheckScrollbarContentHeight's jump is inverted: phase-5 Lua notes in AUDIT.md)
 5. [x] Port EEex Lua (77 files, ~24k lines) and drop BG-only features.
    Pipeline: eeexlua/build.py (upstream copy + eeexlua/patches/*.py), notes per file in eeexlua/notes/,
@@ -80,8 +80,8 @@ Target: Planescape: Torment EE v3.2.2.0 (Steam, x64, Lua 5.2). Reference: BG2EE 
 6. [ ] WeiDU installer, test on a real playthrough.
    - [x] 6a installer/EEex.tp2 (upstream tp2 name, labels and component numbers kept for mods that check EEex;
          Torment.exe v3.2.2.0 Steam size check; LuaJIT component dropped), English + French tra, readme.
-   - [x] 6b tools/package.py -> build/EEex-PTEE-v1.3.1-ptee1.zip; no dev-only files (checked).
-   - [x] 6c Clean install on a fresh Steam copy (PTEE (EEex release test)): all 9 components install, game boots,
+   - [x] 6b tools/package.py -> build/EEex-PSTEE-v1.3.1-ptee1.zip; no dev-only files (checked).
+   - [x] 6c Clean install on a fresh Steam copy (PSTEE (EEex release test)): all 9 components install, game boots,
          821 + 27 patterns resolved; full uninstall leaves no file behind.
    - [ ] 6d Real playthrough on the release install (John). 2026-10-21: Mortuary (tutorial area) played with
          Walkthrough + SadoQoL installed on top, no problem.

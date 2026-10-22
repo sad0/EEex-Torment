@@ -16,7 +16,7 @@ PATCHES = [
 						]], {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end,
 						function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], 1", {rspOffset}, "#ENDL"} end,''',
      '''						function(rspOffset) return {[[
-							mov qword ptr ss:[rsp+#$(1)], rdi ; EEex-PTEE: rdi (PT 0x16c914)
+							mov qword ptr ss:[rsp+#$(1)], rdi ; EEex-PSTEE: rdi (PT 0x16c914)
 						]], {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end,
 						function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], 1", {rspOffset}, "#ENDL"} end,'''),
     ('''			{"hook_integrity_watchdog_ignore_registers", {
@@ -30,16 +30,16 @@ PATCHES = [
 					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-24)], r9
 					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r10
 				]]},''',
-     '''			{"hook_integrity_watchdog_ignore_registers", { -- EEex-PTEE: rax / rdx / r8 / r9 live in Torment
+     '''			{"hook_integrity_watchdog_ignore_registers", { -- EEex-PSTEE: rax / rdx / r8 / r9 live in Torment
 				EEex_HookIntegrityWatchdogRegister.RCX, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11
 			}}},
 			EEex_FlattenTable({
 				{[[
 					#MAKE_SHADOW_SPACE(80)
-					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], rax ; EEex-PTEE
+					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], rax ; EEex-PSTEE
 					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)], rdx
-					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-24)], r8 ; EEex-PTEE
-					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r9 ; EEex-PTEE
+					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-24)], r8 ; EEex-PSTEE
+					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r9 ; EEex-PSTEE
 				]]},'''),
     ('''					call_error:
 					mov r10, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)]
@@ -49,10 +49,10 @@ PATCHES = [
 					#DESTROY_SHADOW_SPACE
 					cmp ecx, 0x1D7''',
      '''					call_error:
-					mov r9, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)] ; EEex-PTEE
-					mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-24)] ; EEex-PTEE
+					mov r9, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)] ; EEex-PSTEE
+					mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-24)] ; EEex-PSTEE
 					mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)]
-					mov rax, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)] ; EEex-PTEE
+					mov rax, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)] ; EEex-PSTEE
 					#DESTROY_SHADOW_SPACE
-					cmp eax, 0x1D7 ; EEex-PTEE: Torment compares eax (PT 0x40bd8b)'''),
+					cmp eax, 0x1D7 ; EEex-PSTEE: Torment compares eax (PT 0x40bd8b)'''),
 ]

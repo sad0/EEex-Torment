@@ -4,7 +4,7 @@ import re, struct, collections
 GAME = r'C:\Users\jnthn\Tools\gproj'
 BG_EXE = GAME + r'\Baldur_bg2ee.exe'
 PT_EXE = GAME + r'\Torment.exe'
-REPO = r'E:\Enhanced Edition\EEex-PTEE'
+REPO = r'E:\Enhanced Edition\EEex-PSTEE'
 UP_DB = REPO + r'\ref\EEex\EEex\loader\InfinityLoader.db'
 PT_DB = REPO + r'\poc\InfinityLoader.db'
 

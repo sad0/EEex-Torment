@@ -11,12 +11,12 @@
 #   registers are dead (the function returns void, rax holds a field value).
 PATCHES = [
     ('''	EEex_HookBeforeRestoreWithLabels(EEex_Label("Hook-CGameAIBase::ExecuteAction()-DefaultCase"), 0, 7, 7, {''',
-     '''	-- EEex-PTEE: the 7 overwritten bytes are lea rdx, [rip+X] (PT 0x172220): not restorable, rebuilt on the error path
+     '''	-- EEex-PSTEE: the 7 overwritten bytes are lea rdx, [rip+X] (PT 0x172220): not restorable, rebuilt on the error path
 	local ptExecuteActionDefaultCase = EEex_Label("Hook-CGameAIBase::ExecuteAction()-DefaultCase")
 	if EEex_ReadU8(ptExecuteActionDefaultCase) ~= 0x48 or EEex_ReadU8(ptExecuteActionDefaultCase + 1) ~= 0x8D
 		or EEex_ReadU8(ptExecuteActionDefaultCase + 2) ~= 0x15
 	then
-		EEex_Error("[EEex-PTEE] Unexpected CGameAIBase::ExecuteAction() default case")
+		EEex_Error("[EEex-PSTEE] Unexpected CGameAIBase::ExecuteAction() default case")
 	end
 	local ptExecuteActionDefaultCaseString = ptExecuteActionDefaultCase + 7 + EEex_Read32(ptExecuteActionDefaultCase + 3)
 	EEex_HookBeforeRestoreWithLabels(ptExecuteActionDefaultCase, 0, 0, 7, {'''),
@@ -26,7 +26,7 @@ PATCHES = [
 				},
 				["returnType"] = EEex_LuaCallReturnType.Number,''',
      '''					function(rspOffset) return {[[
-						mov qword ptr ss:[rsp+#$(1)], rdi ; EEex-PTEE: rdi (PT 0x16c914)
+						mov qword ptr ss:[rsp+#$(1)], rdi ; EEex-PSTEE: rdi (PT 0x16c914)
 					]], {rspOffset}}, "CGameAIBase", "EEex_GameObject_CastUT" end,
 				},
 				["returnType"] = EEex_LuaCallReturnType.Number,'''),
@@ -39,7 +39,7 @@ PATCHES = [
      '''				call_error:
 				#RESUME_SHADOW_ENTRY
 				#DESTROY_SHADOW_SPACE
-				mov rdx, #$(1) ; EEex-PTEE: string of the overwritten RIP-relative lea rdx
+				mov rdx, #$(1) ; EEex-PSTEE: string of the overwritten RIP-relative lea rdx
 			]], {ptExecuteActionDefaultCaseString}}
 		})
 	)'''),
@@ -50,7 +50,7 @@ PATCHES = [
 			jz #L(return)
 
 			mov rcx, rdi                                          ; pSprite''',
-     '''	-- EEex-PTEE: no last call in Torment; hook before the epilogue's mov rbx, [rsp+0x48] (PT 0x42bbd1, 5 bytes)
+     '''	-- EEex-PSTEE: no last call in Torment; hook before the epilogue's mov rbx, [rsp+0x48] (PT 0x42bbd1, 5 bytes)
 	EEex_HookBeforeRestoreWithLabels(EEex_Label("CGameSprite::SetCurrAction()-LastCall"), 0, 5, 5, {
 		{"hook_integrity_watchdog_ignore_registers", {
 			EEex_HookIntegrityWatchdogRegister.RAX, EEex_HookIntegrityWatchdogRegister.RCX, EEex_HookIntegrityWatchdogRegister.RDX,
@@ -58,8 +58,8 @@ PATCHES = [
 			EEex_HookIntegrityWatchdogRegister.R11
 		}}},
 		{[[
-			cmp word ptr ds:[rsi], 0 ; Don't call the hook for NoAction() since the engine spams it ; EEex-PTEE: action in rsi
+			cmp word ptr ds:[rsi], 0 ; Don't call the hook for NoAction() since the engine spams it ; EEex-PSTEE: action in rsi
 			jz #L(return)
 
-			mov rcx, rbx                                          ; pSprite ; EEex-PTEE: rbx'''),
+			mov rcx, rbx                                          ; pSprite ; EEex-PSTEE: rbx'''),
 ]

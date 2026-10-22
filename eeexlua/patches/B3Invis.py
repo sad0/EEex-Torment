@@ -13,7 +13,7 @@ PATCHES = [
     # instead of the r13 stats offset (0x1e90) when [rsi+0x4bbc] == 0. Same latent bug in BG (0x36bb76 targeted by
     # 0x36bb61 / 0x36bb6a). Restore 0: the fail path returns to PT 0x3dd9a4 and runs the engine's own instructions.
     ('''		EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CGameSprite::Render()-B3Invis"), 6, {''',
-     '''		EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CGameSprite::Render()-B3Invis"), 0, { -- EEex-PTEE: near jne, PT 0x3dd9a4 is a jump target'''),
+     '''		EEex_HookConditionalJumpOnSuccessWithLabels(EEex_Label("Hook-CGameSprite::Render()-B3Invis"), 0, { -- EEex-PSTEE: near jne, PT 0x3dd9a4 is a jump target'''),
     # RenderMarkers()-B3Invis1 (PT 0x3e1b2f: short jbe + 7-byte `cmp byte ptr [rsi+0x3c8d], dil`)
     ('''	EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CGameSprite::RenderMarkers()-B3Invis1"), 7, {
 		{"hook_integrity_watchdog_ignore_registers", {
@@ -22,15 +22,15 @@ PATCHES = [
      '''	EEex_HookConditionalJumpOnFailWithLabels(EEex_Label("Hook-CGameSprite::RenderMarkers()-B3Invis1"), 7, {
 		{"hook_integrity_watchdog_ignore_registers", {
 			EEex_HookIntegrityWatchdogRegister.RAX, EEex_HookIntegrityWatchdogRegister.RCX, EEex_HookIntegrityWatchdogRegister.RDX,
-			EEex_HookIntegrityWatchdogRegister.R9, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11 -- EEex-PTEE: r8 kept, r9 dead'''),
+			EEex_HookIntegrityWatchdogRegister.R9, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11 -- EEex-PSTEE: r8 kept, r9 dead'''),
     ('''				#MAKE_SHADOW_SPACE(40)
 				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], r9''',
      '''				#MAKE_SHADOW_SPACE(40)
-				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], r8 ; EEex-PTEE: Torment keeps the area in r8 (PT 0x3e1add)'''),
+				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], r8 ; EEex-PSTEE: Torment keeps the area in r8 (PT 0x3e1add)'''),
     ('''				mov r9, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
 				#DESTROY_SHADOW_SPACE
 				jnz #L(jmp_success)''',
-     '''				mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)] ; EEex-PTEE: r8
+     '''				mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)] ; EEex-PSTEE: r8
 				#DESTROY_SHADOW_SPACE
 				jnz #L(jmp_success)'''),
     # RenderMarkers()-B3Invis2 (PT 0x3e1bb5: 6-byte relocatable `mov eax, [rcx+0xb558]`; flags of PT 0x3e1bae cmp,
@@ -39,10 +39,10 @@ PATCHES = [
 				EEex_HookIntegrityWatchdogRegister.R8, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11
 			}}},''',
      '''			{"hook_integrity_watchdog_ignore_registers", {
-				EEex_HookIntegrityWatchdogRegister.R9, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11 -- EEex-PTEE: r8 kept
+				EEex_HookIntegrityWatchdogRegister.R9, EEex_HookIntegrityWatchdogRegister.R10, EEex_HookIntegrityWatchdogRegister.R11 -- EEex-PSTEE: r8 kept
 			}}},'''),
     ('''					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r9''',
-     '''					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r8 ; EEex-PTEE: Torment keeps the area in r8'''),
+     '''					mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)], r8 ; EEex-PSTEE: Torment keeps the area in r8'''),
     ('''					mov r9, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)]''',
-     '''					mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)] ; EEex-PTEE: r8'''),
+     '''					mov r8, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-32)] ; EEex-PSTEE: r8'''),
 ]

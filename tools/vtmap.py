@@ -5,7 +5,7 @@ import sys, json, struct, re
 import capstone
 from ilib import PE, BG_EXE
 R = json.load(open('port2.json')); G = json.load(open('gen_report.json'))
-BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')
+BG = PE(BG_EXE); PT = PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')
 F = {int(k, 16): int(v[0], 16) for k, v in json.load(open('fmap.json')).items()}
 BN = {int(k, 16): v for k, v in json.load(open('bgnames.json')).items()}
 md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)

@@ -1,4 +1,4 @@
-# Generated from Core fixup.py: every fixup tolerates fields made opaque by the PTEE layout.
+# Generated from Core fixup.py: every fixup tolerates fields made opaque by the PSTEE layout.
 
 from generate_bindings import relocateGroup
 

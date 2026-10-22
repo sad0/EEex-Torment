@@ -11,7 +11,7 @@ PATCHES = [
     ('''	EEex_HookBeforeCallWithLabels(EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()"), {
 		{"hook_integrity_watchdog_ignore_registers", {''',
      '''	EEex_HookBeforeCallWithLabels(EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()"), {
-		{"ptee_no_tooltip", EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()") + 9},
+		{"pstee_no_tooltip", EEex_Label("Hook-CGameSprite::SetCursor()-SetCharacterToolTip()") + 9},
 		{"hook_integrity_watchdog_ignore_registers", {'''),
     # Torment's SetCharacterToolTip takes the output CString* in rdx: the Lua call clobbers rdx, keep it (crash
     # in CString::CString with rdx = garbage on the first creature hover otherwise)
@@ -21,14 +21,14 @@ PATCHES = [
 			EEex_GenLuaCall("EEex_Sprite_Hook_CheckSuppressTooltip", {''',
      '''				#MAKE_SHADOW_SPACE(48)
 				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)], rcx
-				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)], rdx ; EEex-PTEE: CString* out argument
+				mov qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)], rdx ; EEex-PSTEE: CString* out argument
 			]]},
 			EEex_GenLuaCall("EEex_Sprite_Hook_CheckSuppressTooltip", {'''),
     ('''				mov rcx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
 				#DESTROY_SHADOW_SPACE
 				test rax, rax
 				jnz #L(return_skip)''',
-     '''				mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)] ; EEex-PTEE
+     '''				mov rdx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-16)] ; EEex-PSTEE
 				mov rcx, qword ptr ss:[rsp+#SHADOW_SPACE_BOTTOM(-8)]
 				#DESTROY_SHADOW_SPACE
 				test rax, rax
@@ -38,7 +38,7 @@ PATCHES = [
 				jnz #L(return_skip)''',
      '''				#DESTROY_SHADOW_SPACE
 				test rax, rax
-				jnz #L(ptee_no_tooltip) ; EEex-PTEE: Torment's no-tooltip path'''),
+				jnz #L(pstee_no_tooltip) ; EEex-PSTEE: Torment's no-tooltip path'''),
     # CGameSprite constructors: the sprite is in rbx (Construct1, PT 0x3b2ae8) / rdi (Construct2, PT 0x3b09f6)
     ('''	for _, labelName in ipairs({
 		"Hook-CGameSprite::Construct1()-FirstCall",
@@ -53,8 +53,8 @@ PATCHES = [
 		)
 	end''',
      '''	for _, labelEntry in ipairs({
-		{"Hook-CGameSprite::Construct1()-FirstCall", "rbx"}, -- EEex-PTEE: Torment keeps the sprite in rbx
-		{"Hook-CGameSprite::Construct2()-FirstCall", "rdi"}, -- EEex-PTEE: Torment keeps the sprite in rdi
+		{"Hook-CGameSprite::Construct1()-FirstCall", "rbx"}, -- EEex-PSTEE: Torment keeps the sprite in rbx
+		{"Hook-CGameSprite::Construct2()-FirstCall", "rdi"}, -- EEex-PSTEE: Torment keeps the sprite in rdi
 	}) do
 		EEex_HookAfterCallWithLabels(EEex_Label(labelEntry[1]), {
 			{"hook_integrity_watchdog_ignore_registers", {EEex_HookIntegrityWatchdogRegister.RAX}}},
@@ -70,22 +70,22 @@ PATCHES = [
 					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r15 #ENDL", {rspOffset}}, "CGameSprite" end,''',
      '''			EEex_GenLuaCall("EEex_Sprite_Hook_OnResetQuickListCounts", {
 				["args"] = {
-					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rdi #ENDL", {rspOffset}}, "CGameSprite" end, -- EEex-PTEE: rdi'''),
+					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rdi #ENDL", {rspOffset}}, "CGameSprite" end, -- EEex-PSTEE: rdi'''),
     # CGameEffectDamage::ApplyEffect (PT 0x1c7e50): effect in r15 (BG r14), source sprite at [rbp-0x70] (BG
     # [rbp-0x41]), target in rbx; none of them changes before the common exit (OnDone, PT 0x1c9c41)
     ('@all:2 ' + '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r14 #ENDL", {rspOffset}}, "CGameEffect" end,
 					function(rspOffset) return {[[
 						mov rax, qword ptr ss:[rbp-0x41]''',
-     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r15 #ENDL", {rspOffset}}, "CGameEffect" end, -- EEex-PTEE: r15
+     '''					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], r15 #ENDL", {rspOffset}}, "CGameEffect" end, -- EEex-PSTEE: r15
 					function(rspOffset) return {[[
-						mov rax, qword ptr ss:[rbp-0x70] ; EEex-PTEE: source sprite slot'''),
+						mov rax, qword ptr ss:[rbp-0x70] ; EEex-PSTEE: source sprite slot'''),
     # CGameSprite::SetCurrAction: the sprite is in rbx (PT 0x42b7ff lea rcx, [rbx+0x3f0])
     ('''			EEex_GenLuaCall("EEex_Sprite_Hook_OnSetCurrAction", {
 				["args"] = {
 					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rdi #ENDL", {rspOffset}}, "CGameSprite" end,''',
      '''			EEex_GenLuaCall("EEex_Sprite_Hook_OnSetCurrAction", {
 				["args"] = {
-					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CGameSprite" end, -- EEex-PTEE: rbx'''),
+					function(rspOffset) return {"mov qword ptr ss:[rsp+#$(1)], rbx #ENDL", {rspOffset}}, "CGameSprite" end, -- EEex-PSTEE: rbx'''),
     # GetProfBonuses callers: the item is the argument of the preceding CItem call (mov rcx, <item>)
     ('''	EEex_HookAfterCall(EEex_Label("Hook-CGameSprite::CheckCombatStats()-GetProfBonuses-SaveItem"), {[[
 		mov qword ptr ds:[#$(1)], rbx ]]''',
@@ -108,7 +108,7 @@ PATCHES = [
 		mov qword ptr ds:[#$(1)], r15 ]], {CGameSprite_Hit_SavedItem}, [[ #ENDL
 		mov qword ptr ds:[#$(1)], rsi ]], {CGameSprite_Hit_SavedItemAbilityNum}''',
      '''	EEex_HookAfterCall(EEex_Label("Hook-CGameSprite::Hit()-FirstCall"), {[[
-		mov rax, qword ptr ss:[rbp-0x39] ; EEex-PTEE: item slot
+		mov rax, qword ptr ss:[rbp-0x39] ; EEex-PSTEE: item slot
 		mov qword ptr ds:[#$(1)], rax ]], {CGameSprite_Hit_SavedItem}, [[ #ENDL
 		mov qword ptr ds:[#$(1)], r13 ]], {CGameSprite_Hit_SavedItemAbilityNum}'''),
 ]

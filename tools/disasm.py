@@ -4,7 +4,7 @@ import sys, re, json
 import capstone
 from ilib import PE, BG_EXE
 which, a0, a1 = sys.argv[1], int(sys.argv[2], 16), int(sys.argv[3], 16)
-pe = PE(BG_EXE) if which == 'BG' else PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')
+pe = PE(BG_EXE) if which == 'BG' else PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')
 names = {int(k, 16): v for k, v in json.load(open('bgnames.json' if which == 'BG' else 'ptnames.json')).items()}
 G = json.load(open('gen_report.json')); R = json.load(open('port2.json'))
 if which == 'PT':

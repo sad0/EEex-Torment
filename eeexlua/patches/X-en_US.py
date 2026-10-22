@@ -15,6 +15,6 @@ For example, a value of '50' would force the game to use a 50% scaling factor.''
 PATCHES += [
     ('''uiStrings["EEex_Options_TRANSLATION_Reset_to_Default"]     = "Reset to Default"''',
      '''uiStrings["EEex_Options_TRANSLATION_Reset_to_Default"]     = "Reset to Default"
-uiStrings["EEex_Options_TRANSLATION_Reset_All_to_Default"] = "Reset All" -- EEex-PTEE
-uiStrings["EEex_Options_TRANSLATION_Reset_All_Confirm"]    = "Reset every EEex option to its default value?" -- EEex-PTEE'''),
+uiStrings["EEex_Options_TRANSLATION_Reset_All_to_Default"] = "Reset All" -- EEex-PSTEE
+uiStrings["EEex_Options_TRANSLATION_Reset_All_Confirm"]    = "Reset every EEex option to its default value?" -- EEex-PSTEE'''),
 ]

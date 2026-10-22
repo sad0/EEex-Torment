@@ -6,7 +6,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, r'..\ref\InfinityLoader\EEex-Core-Shared-Files\source')
 OUT = os.path.join(HERE, r'generated\src')
 
-# PTEE item slots (ITMSLOTS.2DA) keep the BG2EE indices for FIST (10), SPECIAL/magic weapon (34) and
+# PSTEE item slots (ITMSLOTS.2DA) keep the BG2EE indices for FIST (10), SPECIAL/magic weapon (34) and
 # WEAPONS (35-38), but slot 9 is TATTOO3 and there is no shield / off-hand slot: nothing can attack
 # with the left hand.
 PATCHES = {
@@ -15,36 +15,36 @@ PATCHES = {
 {
 """, """bool EEex::CanAttackWithLeftHand(CGameSprite* pSprite)
 {
-	// EEex-PTEE: Torment has no off-hand slot (slot 9 is TATTOO3 in ITMSLOTS.2DA)
+	// EEex-PSTEE: Torment has no off-hand slot (slot 9 is TATTOO3 in ITMSLOTS.2DA)
 	return false;
 """),
         ("""	CItem *const pLeftHandItem = this->m_equipment.m_items[9];
 	const bool isLeftHand = lastSwing && pLeftHandItem != nullptr && pLeftHandItem->pRes->pHeader->itemType != 12;""",
-         """	// EEex-PTEE: Torment has no off-hand slot (slot 9 is TATTOO3 in ITMSLOTS.2DA)
+         """	// EEex-PSTEE: Torment has no off-hand slot (slot 9 is TATTOO3 in ITMSLOTS.2DA)
 	const bool isLeftHand = false;"""),
         # Bind Torment-only engine functions before anything else uses them
         ('''void EEex::InitEEex() {
 ''', '''void EEex::InitEEex() {
 
-	PTEE::BindEngine();
+	PSTEE::BindEngine();
 '''),
         ('''#include "Baldur_generated.h"
 ''', '''#include "Baldur_generated.h"
-#include "ptee_engine.hpp"
+#include "pstee_engine.hpp"
 '''),
         # op319 (CGameEffectUsability::CheckUsability), Torment rules (PT 0x1ed180): param2 = 8 compares
         # the effective alignment (Nameless One: from the Law/Good globals) and PT adds param2 = 12, a
-        # byte of the creature header at +0x87 (BG m_trackingTarget bytes, reused by PTEE).
+        # byte of the creature header at +0x87 (BG m_trackingTarget bytes, reused by PSTEE).
         ('''			case 8: {
 				match = pAIType->m_Alignment == this->m_effectAmount;
 				break;
 			}''', '''			case 8: {
-				// EEex-PTEE: Torment compares the effective alignment (PT 0x3c4fe0). The type is passed
+				// EEex-PSTEE: Torment compares the effective alignment (PT 0x3c4fe0). The type is passed
 				// by value: the callee destroys the copy (its CString), as the engine's caller expects.
 				alignas(CAIObjectType) byte aiTypeCopyStorage[sizeof(CAIObjectType)];
 				CAIObjectType *const pAITypeCopy = reinterpret_cast<CAIObjectType*>(aiTypeCopyStorage);
 				pAITypeCopy->Construct(pAIType);
-				match = PTEE::p_CGameSprite_GetEffectiveAlignment(pSprite, pAITypeCopy) == this->m_effectAmount;
+				match = PSTEE::p_CGameSprite_GetEffectiveAlignment(pSprite, pAITypeCopy) == this->m_effectAmount;
 				break;
 			}'''),
         ('''				#pragma warning(default:6054)
@@ -54,7 +54,7 @@ PATCHES = {
 				break;
 			}
 			case 12: {
-				// EEex-PTEE: Torment-only mode, creature header byte +0x87
+				// EEex-PSTEE: Torment-only mode, creature header byte +0x87
 				match = reinterpret_cast<const byte*>(&pSprite->m_baseStats)[0x87] == this->m_effectAmount;
 				break;
 			}
@@ -62,8 +62,8 @@ PATCHES = {
         # CGameEffect::CheckSave: Torment's saving-throw code differs from BG2EE's (similarity 0.41);
         # EEex's BG reimplementation is replaced by a call to PT's own base implementation.
         ('@body int EEex::Override_CGameEffect_CheckSave(', '''{
-	// EEex-PTEE: forward to Torment's own CGameEffect::CheckSave (PT rules)
-	return PTEE::p_CGameEffect_CheckSave(pEffect, pTarget, saveVSDeathRollRaw, saveVSWandsRollRaw, saveVSPolyRollRaw,
+	// EEex-PSTEE: forward to Torment's own CGameEffect::CheckSave (PT rules)
+	return PSTEE::p_CGameEffect_CheckSave(pEffect, pTarget, saveVSDeathRollRaw, saveVSWandsRollRaw, saveVSPolyRollRaw,
 		saveVSBreathRollRaw, saveVSSpellRollRaw, resistMagicRollRaw);
 }'''),
         # uiEventMenuStack, Torment version (PT 0x457b40): keyboard/controller navigation first, the overlay
@@ -84,7 +84,7 @@ PATCHES = {
 	bool handled = false;
 	int nIndex = getMenuStackTop();
 
-	if (PTEE::p_uiNavigateEvent(pEvent, pWindow)) {
+	if (PSTEE::p_uiNavigateEvent(pEvent, pWindow)) {
 		handled = true;
 	}
 	else if (*p_g_overlayMenu != nullptr) {
@@ -142,7 +142,7 @@ PATCHES = {
         ('''		const char *const pResBuffer = reinterpret_cast<char*>(pRes->Demand());
 
 		if (luaL_loadbufferx(L, pResBuffer, pRes->nSize, fullFileName->m_pchData, nullptr) == LUA_OK) {''',
-         '''		// EEex-PTEE: Torment reads the resource text CString (+0x58) and its length
+         '''		// EEex-PSTEE: Torment reads the resource text CString (+0x58) and its length
 		pRes->Demand();
 		alignas(CString) byte resTextStorage[sizeof(CString)];
 		CString *const pResText = reinterpret_cast<CString*>(resTextStorage);
@@ -155,7 +155,7 @@ PATCHES = {
         ('''		pRes->virtual_Dump();
 	}
 
-	EngineVal<CString> langFile{};''', '''		p_dimmDump(pRes); // EEex-PTEE: Torment releases the resource with dimmDump
+	EngineVal<CString> langFile{};''', '''		p_dimmDump(pRes); // EEex-PSTEE: Torment releases the resource with dimmDump
 	}
 
 	EngineVal<CString> langFile{};'''),
@@ -163,11 +163,11 @@ PATCHES = {
         # bubbles in Torment mode, fade, cached size, zoom already handled); EEex's override carries BG
         # renderer fixes only. Not to be installed on Torment (phase 5); never runs BG code if reached.
         ('@body void CGameText::Override_Render(', '''{
-	// EEex-PTEE: BG renderer fixes do not apply to Torment's CGameText::Render (see eeexdll/patch_sources.py)
+	// EEex-PSTEE: BG renderer fixes do not apply to Torment's CGameText::Render (see eeexdll/patch_sources.py)
 	static bool reported = false;
 	if (!reported) {
 		reported = true;
-		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PTEE); ignored\\n");
+		FPrint("[!][EEex.dll] CGameText::Override_Render must not be installed on Torment (EEex-PSTEE); ignored\\n");
 	}
 }'''),
         # Simulated attack rolls (EEex.GetWeaponHitChance / FakeAttackRoll): Torment's CGameSprite::Hit
@@ -178,7 +178,7 @@ PATCHES = {
 	/////////////////////
 
 	int nDamageTypeMod = 0;''', '''	////////////////////////////////////////////
-	// EEex-PTEE: Torment threshold modifiers //
+	// EEex-PSTEE: Torment threshold modifiers //
 	////////////////////////////////////////////
 
 	{
@@ -187,7 +187,7 @@ PATCHES = {
 		if ((nAnimationID == 0x7703 || static_cast<ushort>(nAnimationID + 0x0FB2) <= 1) && target->m_typeAI.m_EnemyAlly == 2)
 		{
 			CResRef ntoken { "NTOKEN" };
-			if (PTEE::p_CGameAIBase_PartyHasItem(pThis, &ntoken))
+			if (PSTEE::p_CGameAIBase_PartyHasItem(pThis, &ntoken))
 			{
 				*nTHAC0VsACDiffOut += 3;
 			}
@@ -201,7 +201,7 @@ PATCHES = {
 			alignas(CString) byte truceNameStorage[sizeof(CString)];
 			CString *const pTruceName = reinterpret_cast<CString*>(truceNameStorage);
 			CString::p_Construct_Overload_String(pTruceName, "Dead_Truce");
-			if (PTEE::p_CVariableHash_GetValue(&pGame->m_variables, pTruceName, 0) == 1)
+			if (PSTEE::p_CVariableHash_GetValue(&pGame->m_variables, pTruceName, 0) == 1)
 			{
 				*nTHAC0VsACDiffOut += 4;
 			}
@@ -220,16 +220,16 @@ PATCHES = {
 	if (bAllowAttackOfOpportunity && target->m_equipment.m_selectedWeapon == 10 && target->virtual_GetAIType()->m_Class != 20)''', '''	const byte nAbilityType = static_cast<byte>(pEffectiveWeaponAbility->type);
 	const bool bAllowAttackOfOpportunity = nAbilityType != 2 && nAbilityType != 4 && (pThis->m_equipment.m_selectedWeapon != 10 || pThis->virtual_GetAIType()->m_Class == 20);
 
-	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST)
+	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PSTEE::ENGINE_MODE_PST)
 	{
-		// EEex-PTEE: Torment skips the attack of opportunity entirely (no feedback either)
+		// EEex-PSTEE: Torment skips the attack of opportunity entirely (no feedback either)
 		*sFormatString = "";
 	}
 	else if (bAllowAttackOfOpportunity && target->m_equipment.m_selectedWeapon == 10 && target->virtual_GetAIType()->m_Class != 20)'''),
         # 3) state bit 22 does not make the target count as invisible in Torment mode
         ('''	if (!pThis->virtual_GetCanSeeInvisible() && ((target->GetActiveStats()->m_generalState & 0x10) != 0 || (target->GetActiveStats()->m_generalState & 0x400000) != 0))''',
          '''	if (!pThis->virtual_GetCanSeeInvisible() && ((target->GetActiveStats()->m_generalState & 0x10) != 0
-		|| (static_cast<int>(*CChitin::p_ENGINE_MODE) != PTEE::ENGINE_MODE_PST && (target->GetActiveStats()->m_generalState & 0x400000) != 0)))'''),
+		|| (static_cast<int>(*CChitin::p_ENGINE_MODE) != PSTEE::ENGINE_MODE_PST && (target->GetActiveStats()->m_generalState & 0x400000) != 0)))'''),
         # 4) Fist of Iron: +3 to the roll after the hated race bonus
         ('''		*sFormatString = " +Hated Race:0";
 	}
@@ -240,11 +240,11 @@ PATCHES = {
 	*sFeedbackString += sFormatString;
 
 	//////////////////////////////////
-	// EEex-PTEE: Torment Fist of Iron //
+	// EEex-PSTEE: Torment Fist of Iron //
 	//////////////////////////////////
 
 	{
-		const int nFistOfIron = PTEE::p_CGameSprite_HasFistOfIron(pThis) ? 3 : 0;
+		const int nFistOfIron = PSTEE::p_CGameSprite_HasFistOfIron(pThis) ? 3 : 0;
 		nCurModifiedAttackRoll.intVal += nFistOfIron;
 		sFormatString->Format(" +Fist of Iron:%d", nFistOfIron);
 		*sFeedbackString += sFormatString;
@@ -258,7 +258,7 @@ PATCHES = {
         # Torment's target searches (CGameArea::GetNearest, ...) also skip sprites whose PT-only activity flag
         # (+0x3910, cleared during spell cinematics) is 0: MatchObject follows the engine
         ('''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment
-''', '''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment || !PTEE::IsActiveCinematic(sprite)
+''', '''		if (!sprite.m_active || !sprite.m_activeAI || !sprite.m_activeImprisonment || !PSTEE::IsActiveCinematic(sprite)
 '''),
         # Torment has no CDerivedStats::m_disableSpells (op145 only knows the three spell-type flags)
         ('''		stats.m_disableSpells != exData.oldDisableSpells
@@ -266,24 +266,24 @@ PATCHES = {
 		!std::equal(''', '''		!std::equal('''),
         ('''		exData.oldDisableSpells = stats.m_disableSpells;
 ''', ''),
-        # Torment's CAIScript constructor has no player-script argument (PTEE::NewScript re-reads with the flag)
+        # Torment's CAIScript constructor has no player-script argument (PSTEE::NewScript re-reads with the flag)
         ('? newEngineObj<CAIScript>(pEffect->m_res, 0)', '? newEngineObj<CAIScript>(pEffect->m_res)'),
-        ('? newEngineObj<CAIScript>(pEffect->m_res2, pEffect->m_effectAmount2)', '? PTEE::NewScript(pEffect->m_res2, pEffect->m_effectAmount2 != 0)'),
+        ('? newEngineObj<CAIScript>(pEffect->m_res2, pEffect->m_effectAmount2)', '? PSTEE::NewScript(pEffect->m_res2, pEffect->m_effectAmount2 != 0)'),
         # WSPECIAL.2DA has no SPEED column in Torment (HIT, DAMAGE only): EEex's BG fix does not apply.
         ('@body void EEex::Fix_Hook_ImplementWSPECIALSpeedColumn(', '''{
-	// EEex-PTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement
+	// EEex-PSTEE: Torment's WSPECIAL.2DA has no SPEED column (HIT, DAMAGE); nothing to implement
 }'''),
     ],
     'uncap_fps.cpp': [
-        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "ptee_engine.hpp"\n'),
+        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "pstee_engine.hpp"\n'),
         # --- CChitin::WinMain / InitInstance (PT 0x4a65c0): SDL hint, frame rate 40 in [10,90], no frame-time log
         ('''	p_SDL_Log("%s %s\\n", CChitin::p_m_sGameName->m_pchData, sVersion->m_pchData);
 ''', '''	p_SDL_Log("%s %s\\n", CChitin::p_m_sGameName->m_pchData, sVersion->m_pchData);
 
-	// EEex-PTEE: Torment disables Alt+F4 window closing by SDL (handled by the engine)
-	if (PTEE::p_SDL_SetHint != nullptr)
+	// EEex-PSTEE: Torment disables Alt+F4 window closing by SDL (handled by the engine)
+	if (PSTEE::p_SDL_SetHint != nullptr)
 	{
-		PTEE::p_SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1");
+		PSTEE::p_SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1");
 	}
 '''),
         ('''	*CChitin::p_TIMER_UPDATES_PER_SECOND = p_BGGetPrivateProfileInt("Program Options", "Maximum Frame Rate", 30);
@@ -292,7 +292,7 @@ PATCHES = {
 	{
 		*CChitin::p_TIMER_UPDATES_PER_SECOND = 30;
 	}
-''', '''	// EEex-PTEE: Torment's default is 40 and any value outside [10, 90] falls back to it
+''', '''	// EEex-PSTEE: Torment's default is 40 and any value outside [10, 90] falls back to it
 	const int nMaxFrameRate = p_BGGetPrivateProfileInt("Program Options", "Maximum Frame Rate", 40);
 	*CChitin::p_TIMER_UPDATES_PER_SECOND = static_cast<uint>(nMaxFrameRate - 10) > 80 ? 40 : nMaxFrameRate;
 '''),
@@ -302,13 +302,13 @@ PATCHES = {
 		pThis->m_bLogFrames = 1;
 	}
 
-''', '''	// EEex-PTEE: Torment has no frame-time log ("Log Frame Times")
+''', '''	// EEex-PSTEE: Torment has no frame-time log ("Log Frame Times")
 
 '''),
         # --- CChitin::Update (PT 0x4a6350): the Lua stack is emptied after the leak dump; no frame-time log
         ('''	const TimeType nStartTime = getTime();
 
-	// Patch: Run "full ticks" at 30tps like normal''', '''	// EEex-PTEE: Torment empties the leaked values after printing them
+	// Patch: Run "full ticks" at 30tps like normal''', '''	// EEex-PSTEE: Torment empties the leaked values after printing them
 	if (const int nTop = lua_gettop(L); nTop > 0)
 	{
 		lua_settop(L, -1 - nTop);
@@ -324,7 +324,7 @@ PATCHES = {
 		/ pChitin->cVideo.pCurrentMode->nHeight               // Window height
 		/ (*CInfinity::p_MAXZOOM_OUT + 1.0f - fEffectiveZoom) // Zoom factor
 		* pGame->GetScrollSpeed());                           // Scroll speed
-''', '''	// EEex-PTEE: Torment's speed has no resolution factor; m_nScrollDelay (keyboard scroll ramp-up)
+''', '''	// EEex-PSTEE: Torment's speed has no resolution factor; m_nScrollDelay (keyboard scroll ramp-up)
 	// scales the option speed by (15 - delay) / 15
 	uint nScrollSpeed = pGame->GetScrollSpeed();
 	if (pInfinity->m_nScrollDelay != 0)
@@ -346,8 +346,8 @@ PATCHES = {
 
 	CBaldurChitin *const pChitin = *p_g_pBaldurChitin;''', '''	CBaldurChitin *const pChitin = *p_g_pBaldurChitin;
 
-	// EEex-PTEE: in Torment mode the view does not move while it is locked on a creature
-	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST && pChitin->m_pEngineWorld->m_scrollLockId != -1)
+	// EEex-PSTEE: in Torment mode the view does not move while it is locked on a creature
+	if (static_cast<int>(*CChitin::p_ENGINE_MODE) == PSTEE::ENGINE_MODE_PST && pChitin->m_pEngineWorld->m_scrollLockId != -1)
 	{
 		return;
 	}
@@ -363,28 +363,28 @@ PATCHES = {
 '''),
         # --- CVidTile::RenderTexture (PT 0x4aed20): no grey tone flag
         ('''	DrawTone drawTone = (dwFlags & 0x80000) != 0 ? DrawTone::DRAW_TONE_GREY : DrawTone::DRAW_TONE_NORMAL;''',
-         '''	// EEex-PTEE: Torment's tile renderer ignores the grey flag (dwFlags 0x80000)
+         '''	// EEex-PSTEE: Torment's tile renderer ignores the grey flag (dwFlags 0x80000)
 	DrawTone drawTone = DrawTone::DRAW_TONE_NORMAL;'''),
         # --- ZoomToMap / ResetZoom: Torment's "Disable Area Map Zoom" option (inverted, other field)
-        ('@all:2 pGame->m_options.m_bAreaMapZoom == 0', 'PTEE::IsAreaMapZoomDisabled(pGame->m_options)'),
+        ('@all:2 pGame->m_options.m_bAreaMapZoom == 0', 'PSTEE::IsAreaMapZoomDisabled(pGame->m_options)'),
         # --- CInfinity::FitViewPosition (PT 0x304c20): Torment margins, scroll lock, centered-axis scroll state
         ('@body static void fitViewPosition(CInfinity* pInfinity, int* pX, int* pY, CRect* pViewPort,',
-         open(os.path.join(HERE, 'source', 'ptee_fitviewposition.inc'), encoding='utf-8').read()),
+         open(os.path.join(HERE, 'source', 'pstee_fitviewposition.inc'), encoding='utf-8').read()),
         ('''	bool bWorldQuicklootOpen = false;
 ''', '''	bool bWorldQuicklootOpen = false;
-	bool bWorldActionbarLeftOpen = false; // EEex-PTEE: Torment-mode actionbar (WORLD_ACTIONBAR_LEFT[_TABLET])
+	bool bWorldActionbarLeftOpen = false; // EEex-PSTEE: Torment-mode actionbar (WORLD_ACTIONBAR_LEFT[_TABLET])
 '''),
         ('''	beforeWorldScreenDeactivatedMenuStates.bWorldQuicklootOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{ "WORLD_QUICKLOOT" });
 ''', '''	beforeWorldScreenDeactivatedMenuStates.bWorldQuicklootOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{ "WORLD_QUICKLOOT" });
 	beforeWorldScreenDeactivatedMenuStates.bWorldActionbarLeftOpen = p_uiIsMenuOnStack(EngineVal<CString, false>{
-		PTEE::UseTouchActionbar((*p_g_pBaldurChitin)->m_pObjectGame->m_options) ? "WORLD_ACTIONBAR_LEFT_TABLET" : "WORLD_ACTIONBAR_LEFT" });
+		PSTEE::UseTouchActionbar((*p_g_pBaldurChitin)->m_pObjectGame->m_options) ? "WORLD_ACTIONBAR_LEFT_TABLET" : "WORLD_ACTIONBAR_LEFT" });
 '''),
         # --- zoomOutToLocalMap (CScreenWorld::ZoomToMap, PT 0x3686e0): in Torment mode the map is fitted into
         #     the AREA_MAP_TARGET screen rect (Infinity_GetAreaScreen) instead of above AREA_MAP_BACKGROUND
         ('''	const float fViewPortWidthPercentOfArea = static_cast<short>(pInfinity->nAreaX) / static_cast<float>(nViewPortWidth);
 	const float fViewPortHeightPercentOfArea = static_cast<short>(pInfinity->nAreaY) / (nViewPortHeight - nAreaMapBackgroundHeight * pInfinity->m_fZoom);
-''', '''	// EEex-PTEE: Torment mode fits the area into AREA_MAP_TARGET's screen rect (x, y, w, h)
-	const bool bTormentMapTarget = static_cast<int>(*CChitin::p_ENGINE_MODE) == PTEE::ENGINE_MODE_PST;
+''', '''	// EEex-PSTEE: Torment mode fits the area into AREA_MAP_TARGET's screen rect (x, y, w, h)
+	const bool bTormentMapTarget = static_cast<int>(*CChitin::p_ENGINE_MODE) == PSTEE::ENGINE_MODE_PST;
 	int nMapTargetX = 0;
 	int nMapTargetY = 0;
 	float fMapTargetW = 0.0f;
@@ -413,7 +413,7 @@ PATCHES = {
 		static_cast<short>(pInfinity->nAreaX) / 2,
 		static_cast<short>(pInfinity->nAreaY) / 2 - static_cast<int>(nAreaMapBackgroundHeight * 0.5f * fViewPortPercentOfArea * pInfinity->m_fZoom)
 	};
-''', '''	// EEex-PTEE: Torment mode centres the area on AREA_MAP_TARGET (PT 0x3689da..0x368a5a)
+''', '''	// EEex-PSTEE: Torment mode centres the area on AREA_MAP_TARGET (PT 0x3689da..0x368a5a)
 	const CPoint ptTarget = bTormentMapTarget
 		? CPoint {
 			static_cast<int>((static_cast<short>(pInfinity->nAreaX) / 2) - fMapTargetW * 0.5f * fViewPortPercentOfArea)
@@ -428,10 +428,10 @@ PATCHES = {
         ('''	////////////////
 	// End dialog //
 	////////////////
-''', '''	// EEex-PTEE: with "Zoom Lock" Torment disables zooming again once the dialog view is restored (PT 0x357c07)
-	if (pGame->m_options.m_bZoomLock && PTEE::p_CInfinity_SetZoomEnabled != nullptr)
+''', '''	// EEex-PSTEE: with "Zoom Lock" Torment disables zooming again once the dialog view is restored (PT 0x357c07)
+	if (pGame->m_options.m_bZoomLock && PSTEE::p_CInfinity_SetZoomEnabled != nullptr)
 	{
-		PTEE::p_CInfinity_SetZoomEnabled(&pGame->m_gameAreas[pGame->m_visibleArea]->m_cInfinity, 0);
+		PSTEE::p_CInfinity_SetZoomEnabled(&pGame->m_gameAreas[pGame->m_visibleArea]->m_cInfinity, 0);
 	}
 
 	////////////////
@@ -458,7 +458,7 @@ PATCHES = {
 			p_uiPush("JOURNAL");
 		}
 	}
-''', '''	// EEex-PTEE: Torment swaps the dialog panel for the actionbar unless the store screen is active
+''', '''	// EEex-PSTEE: Torment swaps the dialog panel for the actionbar unless the store screen is active
 	// (no WORLD_DIALOG / JOURNAL checks, PT 0x357c96)
 	if (pChitin->pActiveEngine != pChitin->m_pEngineStore)
 	{
@@ -476,7 +476,7 @@ PATCHES = {
 	{
 		p_tooltip->on = true;
 	}
-''', '''	// EEex-PTEE: Torment also switches the tooltip off while the delay has not elapsed (or tooltips are off)
+''', '''	// EEex-PSTEE: Torment also switches the tooltip off while the delay has not elapsed (or tooltips are off)
 	if (nTooltipDelay == 99 || nCurTime < nTooltipEnableTime)
 	{
 		p_tooltip->on = false;
@@ -487,11 +487,11 @@ PATCHES = {
 	}
 '''),
         ('''	const SDL_Rect rWindow { 0, 0, *CVidMode::p_SCREENWIDTH, *CVidMode::p_SCREENHEIGHT };
-''', '''	// EEex-PTEE: Torment draws the menus inside its UI rect (screen inset by CChitin's UI edge fraction)
+''', '''	// EEex-PSTEE: Torment draws the menus inside its UI rect (screen inset by CChitin's UI edge fraction)
 	SDL_Rect rWindow { 0, 0, *CVidMode::p_SCREENWIDTH, *CVidMode::p_SCREENHEIGHT };
-	if (PTEE::p_CChitin_GetUIRect != nullptr && PTEE::p_g_pChitin != nullptr)
+	if (PSTEE::p_CChitin_GetUIRect != nullptr && PSTEE::p_g_pChitin != nullptr)
 	{
-		PTEE::p_CChitin_GetUIRect(*PTEE::p_g_pChitin, &rWindow);
+		PSTEE::p_CChitin_GetUIRect(*PSTEE::p_g_pChitin, &rWindow);
 	}
 '''),
         # --- middle-mouse drag (CScreenWorld::OnEvent PT 0x35ba23): Torment converts the motion deltas from
@@ -500,12 +500,12 @@ PATCHES = {
 	{
 		CPoint exactWorldCoordinateSpacePoint;
 		cursorToExactWorldCoordinateSpace(pInfinity, pEvent->motion.xrel, pEvent->motion.yrel, &exactWorldCoordinateSpacePoint);
-''', '''	// EEex-PTEE: motion deltas in internal screen pixels, as Torment computes them
+''', '''	// EEex-PSTEE: motion deltas in internal screen pixels, as Torment computes them
 	CPoint motion { pEvent->motion.xrel, pEvent->motion.yrel };
-	if (PTEE::p_CVidMode_WindowToScreen != nullptr)
+	if (PSTEE::p_CVidMode_WindowToScreen != nullptr)
 	{
 		CVidMode *const pVidMode = pChitin->cVideo.pCurrentMode;
-		PTEE::p_CVidMode_WindowToScreen(pVidMode, &motion, pVidMode->m_nScreenScrollX + pEvent->motion.xrel, pVidMode->m_nScreenScrollY + pEvent->motion.yrel);
+		PSTEE::p_CVidMode_WindowToScreen(pVidMode, &motion, pVidMode->m_nScreenScrollX + pEvent->motion.xrel, pVidMode->m_nScreenScrollY + pEvent->motion.yrel);
 	}
 
 	if (EEex::UncapFPS_RemoveMiddleMouseScrollMultiplier)
@@ -525,8 +525,8 @@ PATCHES = {
         # --- CInfinity::SetScrollDest (PT 0x309450): no clamping while a spell cinematic drives the camera
         ('''	int nFitX = this->m_ptScrollDest.x;
 	int nFitY = this->m_ptScrollDest.y;
-	fitViewPosition(this, &nFitX, &nFitY, &pInfinity->rViewPort, nullptr, true);''', '''	// EEex-PTEE: Torment's spell cinematics move the camera freely (CInfinity+0x45c)
-	if (PTEE::IsCinematicCamera(*this))
+	fitViewPosition(this, &nFitX, &nFitY, &pInfinity->rViewPort, nullptr, true);''', '''	// EEex-PSTEE: Torment's spell cinematics move the camera freely (CInfinity+0x45c)
+	if (PSTEE::IsCinematicCamera(*this))
 	{
 		return;
 	}
@@ -543,14 +543,14 @@ PATCHES = {
 	}
 
 	this->m_nScrollAttempts = 0;
-''', '''	// EEex-PTEE: Torment has no scroll-attempts failsafe (CInfinity::m_nScrollAttempts does not exist)
+''', '''	// EEex-PSTEE: Torment has no scroll-attempts failsafe (CInfinity::m_nScrollAttempts does not exist)
 '''),
     ],
     'visibility_map.cpp': [
-        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "ptee_engine.hpp"\n'),
+        ('#include "EEex.h"\n', '#include "EEex.h"\n#include "pstee_engine.hpp"\n'),
         # Torment's sprite update spreading mask is 7 (BG 1): vanilla CheckIfVisible keeps a sprite seen for
         # (mask + 1) * 4 = 32 ticks; BG's 8 makes every creature blink between two checks
-        ('@all:4 this->m_canBeSeen = 8;', 'this->m_canBeSeen = PTEE::CanBeSeenTicks();'),
+        ('@all:4 this->m_canBeSeen = 8;', 'this->m_canBeSeen = PSTEE::CanBeSeenTicks();'),
     ],
 }
 

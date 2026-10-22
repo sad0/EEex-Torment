@@ -1,6 +1,6 @@
 # Build a loader-only pattern DB for the POC: keep Lua/tolua/SDL/Hardcoded entries, drop EEex engine patterns.
 import re
-src=r'E:\Enhanced Edition\EEex-PTEE\poc\InfinityLoader.db'; dst=r'E:\Enhanced Edition\EEex-PTEE\poc\InfinityLoader.minimal.db'
+src=r'E:\Enhanced Edition\EEex-PSTEE\poc\InfinityLoader.db'; dst=r'E:\Enhanced Edition\EEex-PSTEE\poc\InfinityLoader.minimal.db'
 txt=open(src,encoding='utf-8').read()
 blocks=re.split(r'\n(?=\[)',txt)
 keep=[]; 

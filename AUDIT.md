@@ -34,9 +34,9 @@
 | uiEventMenuStack | EEex.cpp | 0.39 | **rewritten for PT**: keyboard/controller navigation first (PT 0x459ff0), overlay swallows, A-button skip, PT pass-through filter; EEex capture fix kept |
 | CGameSprite::Hit (fakeAttackRoll, getAttackChance, adjustFakeAttackRoll) | EEex.cpp | 0.56 | **ported to PT**: segment-by-segment diff of PT 0x4147b0 vs BG; PT adds NTOKEN (+3 needed) and Dead_Truce (+4 needed) threshold modifiers, Fist of Iron (+3 roll, opcode 382), skips attacks of opportunity and the state-bit-22 invisibility in Torment mode; crit hit/miss, luck, AC, hit bonus, hand, invisibility, range, hated race, protections identical (BG-only side effects are not simulated by EEex) |
 | CDerivedStats::GetAtOffset (extended stats) | Lua hook | n/a | valid: PT accepts the same engine stat range 1..202 (bound 0xc9), FIRST_EXTENDED_STAT_ID 203 stays |
-| CVisibilityMap::* + CGameSprite::CheckIfVisible / SetVisualRange + CGameArea::AddClairvoyanceObject (FoW-clearing cap, visibility_map.cpp) | EEex_Fix_Patch.lua | 0.99..1.00 (tools/fdiff.py, whole bodies) | **ported**: Torment's vismap is BG's (TraverseTree, ClimbWall, BuildTree, PrivateAddCharacter, GetTileCode identical; only m_nWidth moved to +8 and BG's m_nMapSize bounds checks are gone; readers mask 0x7FFF like BG; SSToVS table identical; no Torment-only caller). One constant differs: the sprite update spreading mask (BG 1, PT 7) gives m_canBeSeen = 32 in Torment, EEex hard-coded 8 -> every creature blinked; now `PTEE::CanBeSeenTicks()` (ptee.db label). In game: fog clears normally, no blinking, m_canBeSeen 24..32 as vanilla |
-| CGameArea::GetNearest (both overloads), AdjustTarget, CAIGroup::GroupSetTarget, CGameArea::GetTintColor, CVidPalette::RealizeResource3d (engine_reimplementations.cpp, debug.cpp) | none | 0.72..1.00 | **not installed by EEex**: no Lua patch jumps to them, all `$nobinding`: unreachable upstream code, kept out of the build (ptee_stubs.cpp) |
-| MatchObject (EEex_CheckMatch) | EEex.cpp | n/a | **patched**: Torment's target searches (GetNearest, GetAllInRange, ~40 sites) also require a Torment-only activity flag (CGameSprite +0x3910, cleared during spell cinematics such as Abyssal Fury / Celestial Host): `PTEE::IsActiveCinematic` |
+| CVisibilityMap::* + CGameSprite::CheckIfVisible / SetVisualRange + CGameArea::AddClairvoyanceObject (FoW-clearing cap, visibility_map.cpp) | EEex_Fix_Patch.lua | 0.99..1.00 (tools/fdiff.py, whole bodies) | **ported**: Torment's vismap is BG's (TraverseTree, ClimbWall, BuildTree, PrivateAddCharacter, GetTileCode identical; only m_nWidth moved to +8 and BG's m_nMapSize bounds checks are gone; readers mask 0x7FFF like BG; SSToVS table identical; no Torment-only caller). One constant differs: the sprite update spreading mask (BG 1, PT 7) gives m_canBeSeen = 32 in Torment, EEex hard-coded 8 -> every creature blinked; now `PSTEE::CanBeSeenTicks()` (pstee.db label). In game: fog clears normally, no blinking, m_canBeSeen 24..32 as vanilla |
+| CGameArea::GetNearest (both overloads), AdjustTarget, CAIGroup::GroupSetTarget, CGameArea::GetTintColor, CVidPalette::RealizeResource3d (engine_reimplementations.cpp, debug.cpp) | none | 0.72..1.00 | **not installed by EEex**: no Lua patch jumps to them, all `$nobinding`: unreachable upstream code, kept out of the build (pstee_stubs.cpp) |
+| MatchObject (EEex_CheckMatch) | EEex.cpp | n/a | **patched**: Torment's target searches (GetNearest, GetAllInRange, ~40 sites) also require a Torment-only activity flag (CGameSprite +0x3910, cleared during spell cinematics such as Abyssal Fury / Celestial Host): `PSTEE::IsActiveCinematic` |
 | CInfinity::*, CScreenWorld::*, CChitin::Update/WinMain, render (Uncap FPS) | stubs | 0.43..1.00 | phase 4d |
 
 | Projectile start positions (CProjectileBAM / SpellHit / TravelDoor) | EEex.cpp | 0.78 / 0.69 / 0.94 | valid: start/target/distance logic identical in PT's Fire functions (differences: DetermineHeight call, which EEex already uses; jump-table data with the same object-type mapping; a sound channel) |
@@ -56,12 +56,12 @@ changed slot hit the wrong function. Now:
 - slot map: same function (fmap) / same body, equal gaps between anchors, removed slots, destructor
   slot 0, inherited prefix = base map; consensus per introducing class across all solved classes;
 - check: 213/216 typed virtual calls in aligned BG/PT code agree (3 single-vote mispairings verified).
-Header: 710 vtbl structs in PT order (72 changed; PT-only slots = `ptee_slot_N`, removed slots dropped),
-65 unproven classes keep BG order renamed `ptee_unproven_*` (not callable). Of the 305 classes in
+Header: 710 vtbl structs in PT order (72 changed; PT-only slots = `pstee_slot_N`, removed slots dropped),
+65 unproven classes keep BG order renamed `pstee_unproven_*` (not callable). Of the 305 classes in
 EEex.dll's header, 7 are unproven and unused (CException, CFileException, CTimer; Steam interfaces kept
 as SDK ABI: same interface versions).
 
-## In-game test of the exports (bindings/test/EEex_Main.lua, save ptee-test)
+## In-game test of the exports (bindings/test/EEex_Main.lua, save pstee-test)
 All 19 standalone exports run without error on Torment: CanAttackWithLeftHand, GetWeaponHitChance (35%,
 full PT breakdown), FakeAttackRoll, IsImmuneToWeapon, GetExtendedStatValue, GetHighestRefreshRate,
 GetMicroseconds, Get/SetINIString (round trip), GetTextWidthHeight, IsDefaultAttackCursor,
@@ -89,7 +89,7 @@ engine's own PT functions run.
   EEex's spell-disable change detection compares the three type flags only.
 
 ## Uncap FPS (uncap_fps.cpp, ported; in-game test: smooth, edge/drag scroll, zoom, local map, dialog OK)
-Torment differences carried into EEex's reimplementations (eeexdll/patch_sources.py, ptee_engine.hpp):
+Torment differences carried into EEex's reimplementations (eeexdll/patch_sources.py, pstee_engine.hpp):
 - WinMain: SDL_SetHint("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4", "1"); Maximum Frame Rate default 40, valid
   10..90 (else 40); no frame-time log. Update: Lua stack emptied after the leak dump.
 - AdjustViewPosition: speed = scroll speed x (15 - m_nScrollDelay) / 15 / (MAXZOOM_OUT + 1 - zoom), no
@@ -126,7 +126,7 @@ Torment differences carried into EEex's reimplementations (eeexdll/patch_sources
   GetTargetShareType (+r8), CGameSprite::ReadyOffInternalList (+rdx), CProjectile::DecodeProjectile (+r8),
   CVidFont::GetStringHeight / GetStringLength (+r9b), CAIScript::Construct(CResRef,int) (no int). The
   Torment signatures are in bindings/in/make_manual_types_pt.py (manual_types_pt.txt). EEex.dll only builds
-  CAIScripts (op 82 / screen effects): patched to PTEE::NewScript(res, bPlayerScript), which re-reads the
+  CAIScripts (op 82 / screen effects): patched to PSTEE::NewScript(res, bPlayerScript), which re-reads the
   script with CAIScript::Read(res, 1) (PT 0x12d240) for player scripts. Lua callers are phase 5.
 
 ## Menu hooks of the version extra DB (EEex_Menu_Patch.lua, phase 5 notes)
@@ -158,17 +158,17 @@ overwritten bytes, relocatable restore bytes, call targets). Main Torment differ
 - Options: AI speed option default 40, range 10..90 (Torment's WinMain).
 - Projectile decode sources: Torment's spell actions (Spell/SpellNoDec, SpellPoint/SpellPointNoDec, ForceSpell family,
   ForceSpellPoint family) run Torment-only handlers that decode their projectile themselves: their 4 return
-  addresses are ptee.db labels mapped to the BG sources. 25 more decode calls live in PST-only projectile classes
+  addresses are pstee.db labels mapped to the BG sources. 25 more decode calls live in PST-only projectile classes
   (PT 0x25d..0x290) and op handler 0x1e5ba0: no BG counterpart, decodeSource is nil there.
 - Runtime-parsed script strings (ParseConditionalString / ParseResponseString, e.g. EEex_LuaTrigger in a string)
   lose spaces and most punctuation in both games (identical parser); compiled BCS keep them.
-- Modder feature battery (bindings/test/PTEE_FeatureTest.lua, F10 in the dev game): EEex triggers / objects /
+- Modder feature battery (bindings/test/PSTEE_FeatureTest.lua, F10 in the dev game): EEex triggers / objects /
   actions, extended stats, op400..403, 408, 409, script loading with the Torment constructor: 18/18 in game.
 - Known limitation: casting off the op214 internal list from a keybind (B3Hotkey / EEex_Keybinds) is disabled:
   Torment's ReadyOffInternalList takes an index into a different array than GetInternalButtonList's list.
 
-## Game-session battery (bindings/test/PTEE_Battery.lua, tools/battery.py)
-A scripted session on the dev game, run end to end by `python tools/battery.py` (69 pass / 0 fail on 2026-10-21; keys sent with PostMessage:
+## Game-session battery (bindings/test/PSTEE_Battery.lua, tools/battery.py)
+A scripted session on the dev game, run end to end by `python tools/battery.py` (69 pass / 0 fail on 2026-10-21, 66 / 0 on 2026-10-22 after the PSTEE rename and the CAIAction fix, from the save eeex-battery; keys sent with PostMessage:
 no focus change). Steps: API sweep (1095 calls on the 6 party members, 0 Lua error), companions join (party of 6,
 timer instances per portrait), XP, opcode extensions, op326, combat (rats + skeletons), 26 real casts (decode hook),
 126 player spells applied (SPWI/SPPR/SPIN), travel through 5 areas and back, rest, quick save, reload, companions leave.
@@ -201,7 +201,7 @@ Vanilla Torment behaviour found on the way (same without EEex, reproduced in the
     m_bPartyHurt stays 1, the loop never ends. The UI passes 10 in Torment (PT 0x36228b), so it ends. The area
     (no-rest Mortuary) is not the cause: the script action never checks CanRestParty; expected to hang anywhere
     with "heal party on rest" on and a hurt party (not re-tested).
-  - Fixed (John's choice, shipped in EEex_Fix_Patch.lua, label Hook-PTEE-CInfGame::RestPartyPrivate()-HealPartyCall;
+  - Fixed (John's choice, shipped in EEex_Fix_Patch.lua, label Hook-PSTEE-CInfGame::RestPartyPrivate()-HealPartyCall;
     live test 2026-10-21: party of 6 hurt in the Mortuary, scripted RestParty() twice, no hang, the memorized healing
     spells still heal). Design notes kept below.
   - Fix design: an EEex_Fix_Patch-style hook after the heal call in
@@ -209,5 +209,13 @@ Vanilla Torment behaviour found on the way (same without EEex, reproduced in the
     amount `[rsp+0x48]` is 0 (no progress possible). Keeps Torment's "RestParty() heals nothing" behaviour. The
     alternative, NOP the 2-byte `je` at PT 0x16ef13 (BG2EE behaviour, +1 HP per pass), changes how much a scripted
     RestParty() heals.
+- CAIAction has no out-of-line destructor in Torment (always inlined as 5 CString destructors): the phase-2 label
+  CAIAction::Destruct had resolved to CString::Destruct, so every EEex_Action_ExecuteResponseStringOnAIBaseInstantly
+  corrupted the heap (found by Party Stash's port). Fixed in EEex_Alias.lua; the battery runs it 5 times.
+- A Dustman guard (AR0201, 0201GD1 / DDUSTGU) talking to a party member still in transit between areas (no area yet)
+  crashes vanilla CScreenWorld::StartDialog (PT 0x3658a1, write through the null m_pArea). Only reachable by moving
+  party members one by one by script; the battery avoids AR0201.
+- In the Mortuary before the escape, companions added by script stop obeying once apart from the party (no travel,
+  no LeaveParty); reaching the Hive starts the escape plot. The battery travels between Mortuary floors only.
 - The scripted `Rest()` heals nobody; plot / cutscene SPL (BBRIDGE, BDBUMP...) applied by script start cutscenes;
   AR0500 triggers Morte's kidnapping (area event).

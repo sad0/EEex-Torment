@@ -1,12 +1,13 @@
-# Run the dev test battery (bindings/test/PTEE_Battery.lua) end to end in the running dev game, keys sent with
+# Run the dev test battery (bindings/test/PSTEE_Battery.lua) end to end in the running dev game, keys sent with
 # PostMessage (tools/gamekey.py: no focus change, nothing reaches other windows):
 #   F9 start -> wait for the PAUSE after the rest step (quick save done by the battery) -> write the newest save's
-#   folder name to EEex_scripts/PTEE_BatteryLoad.lua -> F6 load -> F9 resume -> wait for DONE -> print the results.
-#   python tools/battery.py [--started]   (--started: the battery was started by hand, follow it)
+#   folder name to EEex_scripts/PSTEE_BatteryLoad.lua -> F6 load -> F9 resume -> wait for DONE -> print the results.
+#   python tools/battery.py [--started] [--load <save folder>]   (--started: started by hand, follow it;
+#   --load: load that save first, e.g. 000000013-eeex-battery)
 import os, re, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
-GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
-LOG = os.path.join(GAME, 'EEex_PTEE.log')
+GAME = r'E:\Enhanced Edition\Environnement de test\PSTEE (EEex dev)'
+LOG = os.path.join(GAME, 'EEex_PSTEE.log')
 SAVES = os.path.join(os.path.expanduser('~'), r'Documents\Planescape Torment - Enhanced Edition\save')
 
 
@@ -17,14 +18,14 @@ def key(name):
 def lines_since(pos):
     with open(LOG, encoding='latin-1', errors='replace') as f:
         f.seek(pos)
-        return [l.rstrip('\n') for l in f.readlines() if 'PTEE-BATTERY' in l]
+        return [l.rstrip('\n') for l in f.readlines() if 'PSTEE-BATTERY' in l]
 
 
 def wait_for(pos, word, timeout):
     t0 = time.time()
     while time.time() - t0 < timeout:
         for l in lines_since(pos):
-            if 'PTEE-BATTERY: ' + word in l:
+            if 'PSTEE-BATTERY: ' + word in l:
                 return True
         time.sleep(2)
     return False
@@ -44,12 +45,30 @@ def newest_save_time():
     return max((newest_file(d) for d in save_dirs()), default=0)
 
 
+def load(name, pos):
+    """Load the save folder `name` through the battery's F6 key (EEex_scripts/PSTEE_BatteryLoad.lua)."""
+    with open(os.path.join(GAME, 'EEex_scripts', 'PSTEE_BatteryLoad.lua'), 'w', encoding='utf-8') as f:
+        f.write(f'PSTEE_BAT_LOAD = "{name}"\n')
+    seen = len([l for l in lines_since(pos) if 'PSTEE-BATTERY: LOAD' in l])
+    key('F6')
+    t0 = time.time()
+    while len([l for l in lines_since(pos) if 'PSTEE-BATTERY: LOAD' in l]) <= seen:
+        if time.time() - t0 > 30:
+            sys.exit('F6 load not seen')
+        time.sleep(2)
+    time.sleep(20)  # area loaded
+
+
 def main():
     pos = os.path.getsize(LOG)
+    if '--load' in sys.argv:
+        # start from a known save (e.g. 000000013-eeex-battery): a quick save left by a stopped run can be mid-travel
+        load(sys.argv[sys.argv.index('--load') + 1], pos)
+        pos = os.path.getsize(LOG)
     if '--started' in sys.argv:
         # battery already started by hand: follow it from its last START in the log
         data = open(LOG, 'rb').read()
-        pos = data.rfind(b'PTEE-BATTERY: START')
+        pos = data.rfind(b'PSTEE-BATTERY: START')
         if pos < 0:
             sys.exit('no START in the log')
     else:
@@ -74,18 +93,13 @@ def main():
         key('F4')
     else:
         sys.exit('no quick save written')
-    newest = max(save_dirs(), key=newest_file)
-    open(os.path.join(GAME, 'EEex_scripts', 'PTEE_BatteryLoad.lua'), 'w', encoding='utf-8').write(f'PTEE_BAT_LOAD = "{newest}"\n')
-    key('F6')
-    if not wait_for(pos, 'LOAD', 30):
-        sys.exit('F6 load not seen')
-    time.sleep(20)  # area loaded
+    load(max(save_dirs(), key=newest_file), pos)
     key('F9')
     if not wait_for(pos, 'DONE', 300):
         sys.exit('no DONE after the reload')
     for l in lines_since(pos):
-        if re.search(r'PTEE-BATTERY: (PASS|FAIL|DONE|PAUSE|LOAD)', l):
-            print(l.split('PTEE-BATTERY: ', 1)[1][:200])
+        if re.search(r'PSTEE-BATTERY: (PASS|FAIL|DONE|PAUSE|LOAD)', l):
+            print(l.split('PSTEE-BATTERY: ', 1)[1][:200])
 
 
 if __name__ == '__main__':

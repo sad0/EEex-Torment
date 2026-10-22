@@ -5,7 +5,7 @@ import sys, re, collections
 import capstone
 from ilib import PE, BG_EXE
 md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
-EXES = {'BG': PE(BG_EXE), 'PT': PE('E:/Enhanced Edition/Environnement de test/PTEE (EEex dev)/Torment.exe')}
+EXES = {'BG': PE(BG_EXE), 'PT': PE('E:/Enhanced Edition/Environnement de test/PSTEE (EEex dev)/Torment.exe')}
 
 
 def cstr(pe, a):

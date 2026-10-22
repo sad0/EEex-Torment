@@ -1447,7 +1447,7 @@ struct CMessageAddEffect : CMessage
 		m_targetId = target;
 		m_effect = effect;
 		m_noSave = noSave;
-		// EEex-PTEE: no m_CommType in Torment's CMessageAddEffect
+		// EEex-PSTEE: no m_CommType in Torment's CMessageAddEffect
 	}
 };
 

@@ -1,4 +1,4 @@
-// EEex-PTEE: Torment versions of the "Override_*" engine reimplementations bound to Lua by the generated
+// EEex-PSTEE: Torment versions of the "Override_*" engine reimplementations bound to Lua by the generated
 // bindings (LuaBindings-Core-Shared-Files/references/source/engine_reimplementations.cpp). EEex's own Lua
 // never calls them; they stay available to Lua code as in BG:
 //  - Override_AdjustTarget / Override_GetNearest2: EEex's copies of the vanilla routines, which Torment
@@ -15,7 +15,7 @@
 #include "Baldur_generated.h"
 #include "util.hpp"
 
-// CGameSprite +0x3910, right after m_activeImprisonment (+0x390c), see eeexdll/source/ptee_engine.hpp
+// CGameSprite +0x3910, right after m_activeImprisonment (+0x390c), see eeexdll/source/pstee_engine.hpp
 static bool isActiveCinematic(const CGameSprite& sprite) {
 	return reinterpret_cast<const int*>(&sprite.m_activeImprisonment)[1] != 0;
 }
@@ -35,7 +35,7 @@ void CAIGroup::Override_GroupSetTarget(CPoint target, int additive, ushort forma
 	static type_GroupSetTarget p_GroupSetTarget = []() -> type_GroupSetTarget {
 		PatternValueHandle handle;
 		if (sharedState().GetPatternValue(TEXT("CAIGroup::GroupSetTarget(CPoint,int,short,CPoint)"), handle) != PatternValueType::SINGLE) {
-			FPrintT(TEXT("[!][LuaBindings-PTEE.dll] CAIGroup::Override_GroupSetTarget() - pattern [CAIGroup::GroupSetTarget(CPoint,int,short,CPoint)] missing\n"));
+			FPrintT(TEXT("[!][LuaBindings-PSTEE.dll] CAIGroup::Override_GroupSetTarget() - pattern [CAIGroup::GroupSetTarget(CPoint,int,short,CPoint)] missing\n"));
 			return nullptr;
 		}
 		return reinterpret_cast<type_GroupSetTarget>(sharedState().GetSinglePatternValue(handle));

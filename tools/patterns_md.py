@@ -76,14 +76,14 @@ out.append('\nConfidence: **high** = two independent methods agree or exact code
            'or reviewed by hand with PST-specific code differences; **low** = best available guess, revisit in phase 4/5.\n')
 out.append('Scope: every entry was located and its surrounding code compared (normalized instructions, call targets, '
            'data references). Hook *bodies* (registers, stack offsets, restore sizes) were not re-validated one by one: '
-           'PTEE often uses other registers and struct offsets (e.g. CDerivedStats +8, CGameSprite fields shifted), so each '
+           'PSTEE often uses other registers and struct offsets (e.g. CDerivedStats +8, CGameSprite fields shifted), so each '
            'EEex hook must be checked when the Lua patches are ported (phase 5); known cases are listed below.\n')
 out.append('Addresses are RVAs in Torment.exe v3.2.2.0 (image base 0x140000000). For rel32 entries the address is the final target.\n')
 out.append('## Unsupported (tolerated by the loader; EEex Lua must guard these labels)\n')
 for n, r in sorted(G.items()):
     if r['status'] == 'unsupported':
         out.append(f"- `{n}`: {(M.get(n, {}).get('note') or r.get('note') or '').strip()}")
-out.append('\n## Phase 5 follow-ups (hook bodies / semantics differ in PTEE)\n')
+out.append('\n## Phase 5 follow-ups (hook bodies / semantics differ in PSTEE)\n')
 for n in sorted(phase5):
     out.append(f"- `{n}`: {M[n]['note']}")
 for c in ['Loader (Hardcoded_*)', 'Lua API', 'Engine functions & globals', 'VFTables', 'Data / return pointers', 'Hooks']:

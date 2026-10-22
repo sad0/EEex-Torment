@@ -4,8 +4,8 @@
 // Built by tools/package.py (installer/ + build outputs -> build/release/).
 BACKUP ~weidu_external/EEex/backup~
 AUTHOR ~Bubb (EEex), sad0 (Torment port)~
-VERSION ~v1.3.1-ptee1~
-README ~EEex/readme-EEex-PTEE.txt~
+VERSION ~v1.3.1-pstee2~
+README ~EEex/readme-EEex-PSTEE.txt~
 
 QUICK_MENU
 	ALWAYS_ASK

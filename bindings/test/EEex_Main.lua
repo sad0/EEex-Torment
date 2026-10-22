@@ -1,26 +1,26 @@
--- EEex-PTEE phase 3 test: load LuaBindings.dll (Torment layouts) and read a few engine structs.
--- Output goes to EEex_PTEE.log through print(). EEex_Main.lua runs while the main object is
+-- EEex-PSTEE phase 3 test: load LuaBindings.dll (Torment layouts) and read a few engine structs.
+-- Output goes to EEex_PSTEE.log through print(). EEex_Main.lua runs while the main object is
 -- being allocated, so engine reads are deferred to UI activity (Infinity_PushMenu wrapper).
 
 local function log(...)
 	local t = {}
 	for i = 1, select("#", ...) do t[#t + 1] = tostring((select(i, ...))) end
-	print("PTEE-TEST: " .. table.concat(t, " "))
+	print("PSTEE-TEST: " .. table.concat(t, " "))
 end
 
 local ok, err = pcall(function()
 	EEex_DoFile("EEex_Assembly")
 	EEex_DoFile("EEex_Assembly_Patch")
-	EEex_DoFile("PTEE_SkipIntro")
+	EEex_DoFile("PSTEE_SkipIntro")
 	-- Same as EEex_Main.lua: redirect the engine's tolua event functions to the bindings' versions
 	EEex_OpenLuaBindings("LuaBindings", function() EEex_DoFile("EEex_LuaBindings_Patch") end)
 	-- Phase 4: EEex.dll (C++ core) for Torment
 	EEex_OpenLuaBindings("EEex")
 	EEex.OnTargetExecutableInitialized()
 	-- Phase 4d: EEex's visibility map (FoW-clearing cap) reimplementation, installed like EEex_Fix_Patch.lua
-	EEex_DoFile("PTEE_VisMapTest")
+	EEex_DoFile("PSTEE_VisMapTest")
 	-- Phase 4d: EEex's Uncap FPS (render loop, scrolling, zoom), installed like EEex_UncapFPS_Patch.lua
-	EEex_DoFile("PTEE_UncapTest")
+	EEex_DoFile("PSTEE_UncapTest")
 end)
 log("EEex_OpenLuaBindings(LuaBindings + EEex)", ok, err)
 if ok then
@@ -82,7 +82,7 @@ local function dumpParty(game)
 	local sprite = EEex_CastUD(obj, "CGameSprite")
 	log("EEex.FormatPointerAsEngine:", EEex.FormatPointerAsEngine(EEex_UDToPtr(sprite)))
 	log("EEex.CanAttackWithLeftHand(party[0]):", EEex.CanAttackWithLeftHand(sprite))
-	-- PTEE CGameSpriteEquipment: items pointer + selected slot (ITMSLOTS: 10 = FIST, 35-38 = WEAPONS)
+	-- PSTEE CGameSpriteEquipment: items pointer + selected slot (ITMSLOTS: 10 = FIST, 35-38 = WEAPONS)
 	local eq = sprite.m_equipment
 	log("m_equipment.m_selectedWeapon:", eq.m_selectedWeapon, "ability:", eq.m_selectedWeaponAbility,
 		"m_pSprite==sprite:", EEex_UDToPtr(eq.m_pSprite) == EEex_UDToPtr(sprite))
@@ -105,8 +105,8 @@ local function dumpParty(game)
 	t("GetExtendedStatValue", function() return EEex.GetExtendedStatValue(sprite, 203) end)
 	t("GetHighestRefreshRate", function() return EEex.GetHighestRefreshRate() end)
 	t("GetMicroseconds", function() return EEex.GetMicroseconds() end)
-	t("SetINIString", function() return EEex.SetINIString("./EEex_PTEE_test.ini", "Test", "Key", "Value42") end)
-	t("GetINIString", function() return EEex.GetINIString("./EEex_PTEE_test.ini", "Test", "Key", "default") end)
+	t("SetINIString", function() return EEex.SetINIString("./EEex_PSTEE_test.ini", "Test", "Key", "Value42") end)
+	t("GetINIString", function() return EEex.GetINIString("./EEex_PSTEE_test.ini", "Test", "Key", "default") end)
 	t("GetTextWidthHeight", function() return EEex.GetTextWidthHeight("Hello Sigil", "BOOKMANI", 14, false) end)
 	t("IsDefaultAttackCursor", function() return EEex.IsDefaultAttackCursor() end)
 	t("IsMarshallingCopy", function() return EEex.IsMarshallingCopy() end)
@@ -152,8 +152,8 @@ local function dumpParty(game)
 	t("target generalState", function() return target.m_derivedStats.m_generalState, target.m_derivedStats.m_bSanctuary end)
 	t("caller vert list", function() return sprite:virtual_GetVertListPos() ~= nil, sprite:virtual_GetVertListType() end)
 	t("area vert sort count", function() return sprite.m_pArea.m_lVertSort.m_nCount end)
-	t("MatchObject counter", function() PTEE_MC = 0; local r = EEex.MatchObject(sprite, "PTEE_MC = PTEE_MC + 1 return true", 0, -1, 1); return r, PTEE_MC end)
-	t("MatchObject non-sprites", function() PTEE_MC = 0; local r = EEex.MatchObject(sprite, "PTEE_MC = PTEE_MC + 1 return true", 0, -1, 2 + 8 + 16 + 32); return r, PTEE_MC end)
+	t("MatchObject counter", function() PSTEE_MC = 0; local r = EEex.MatchObject(sprite, "PSTEE_MC = PSTEE_MC + 1 return true", 0, -1, 1); return r, PSTEE_MC end)
+	t("MatchObject non-sprites", function() PSTEE_MC = 0; local r = EEex.MatchObject(sprite, "PSTEE_MC = PSTEE_MC + 1 return true", 0, -1, 2 + 8 + 16 + 32); return r, PSTEE_MC end)
 end
 
 local engineDone, partyDone, ticks = false, false, 0

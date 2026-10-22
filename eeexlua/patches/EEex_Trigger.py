@@ -9,11 +9,11 @@
 # (TRIGGER.IDS lines in eeexlua/notes/EEex_Trigger_Patch.md).
 PATCHES = [
     ('	if triggerID == 0x410D then -- EEex_HasDispellableEffect',
-     '	if triggerID == 0x4112 then -- EEex_HasDispellableEffect ; EEex-PTEE: 0x410D is Torment\'s ExtraProficiency'),
+     '	if triggerID == 0x4112 then -- EEex_HasDispellableEffect ; EEex-PSTEE: 0x410D is Torment\'s ExtraProficiency'),
     ('	elseif triggerID == 0x410E then -- EEex_LuaTrigger',
-     '	elseif triggerID == 0x4113 then -- EEex_LuaTrigger ; EEex-PTEE: 0x410E is Torment\'s ExtraProficiencyGT'),
+     '	elseif triggerID == 0x4113 then -- EEex_LuaTrigger ; EEex-PSTEE: 0x410E is Torment\'s ExtraProficiencyGT'),
     ('	elseif triggerID == 0x410F then -- EEex_IsImmuneToOpcode',
-     '	elseif triggerID == 0x4114 then -- EEex_IsImmuneToOpcode ; EEex-PTEE: 0x410F is Torment\'s ExtraProficiencyLT'),
+     '	elseif triggerID == 0x4114 then -- EEex_IsImmuneToOpcode ; EEex-PSTEE: 0x410F is Torment\'s ExtraProficiencyLT'),
     ('	elseif triggerID == 0x4110 then -- EEex_MatchObject / EEex_MatchObjectEx',
-     '	elseif triggerID == 0x4115 then -- EEex_MatchObject / EEex_MatchObjectEx ; EEex-PTEE: 0x4110 is Torment\'s LastPersonTalkedTo'),
+     '	elseif triggerID == 0x4115 then -- EEex_MatchObject / EEex_MatchObjectEx ; EEex-PSTEE: 0x4110 is Torment\'s LastPersonTalkedTo'),
 ]

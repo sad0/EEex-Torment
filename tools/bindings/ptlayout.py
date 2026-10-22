@@ -91,9 +91,9 @@ for b in list(ev):
 
 pt_off = collections.defaultdict(dict)   # s -> item name -> pt offset
 class _SizeDict(dict):
-    """pt_size; PTEE_TRACE_SIZE=<struct> prints where that struct's size gets set."""
+    """pt_size; PSTEE_TRACE_SIZE=<struct> prints where that struct's size gets set."""
     def __setitem__(self, k, v):
-        if k == os.environ.get('PTEE_TRACE_SIZE'):
+        if k == os.environ.get('PSTEE_TRACE_SIZE'):
             import traceback
             print('size', k, v, ''.join(traceback.format_stack(limit=3)[:-1]), file=sys.stderr)
         dict.__setitem__(self, k, v)
@@ -116,7 +116,7 @@ for _s, _fs in MANUAL.get('fields', {}).items():
         if not _f.startswith('_'):
             pt_off[_s][_f] = int(_v['pt'], 16) if isinstance(_v, dict) else int(_v, 16)
             how[_s][_f] = 'manual'
-# manual item size change (BG inline array -> PTEE pointer): MSIZE[S][f]
+# manual item size change (BG inline array -> PSTEE pointer): MSIZE[S][f]
 MSIZE = collections.defaultdict(dict)
 for _s, _fs in MANUAL.get('fields', {}).items():
     for _f, _v in _fs.items():

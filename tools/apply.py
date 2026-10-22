@@ -1,6 +1,6 @@
-# Apply ported Torment patterns (ported.json) and Unsupported flags to the PTEE InfinityLoader.db.
+# Apply ported Torment patterns (ported.json) and Unsupported flags to the PSTEE InfinityLoader.db.
 import json,re,sys
-p=r'E:\Enhanced Edition\EEex-PTEE\poc\InfinityLoader.db'
+p=r'E:\Enhanced Edition\EEex-PSTEE\poc\InfinityLoader.db'
 db=open(p,encoding='utf-8').read()
 ported=json.load(open('ported.json'))
 unsupported=sys.argv[1:]
