@@ -2,7 +2,7 @@
 # PostMessage (tools/gamekey.py: no focus change, nothing reaches other windows):
 #   F9 start -> wait for the PAUSE after the rest step (quick save done by the battery) -> write the newest save's
 #   folder name to EEex_scripts/PTEE_BatteryLoad.lua -> F6 load -> F9 resume -> wait for DONE -> print the results.
-#   python tools/battery.py [--from-log]
+#   python tools/battery.py [--started]   (--started: the battery was started by hand, follow it)
 import os, re, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 GAME = r'E:\Enhanced Edition\Environnement de test\PTEE (EEex dev)'
@@ -30,20 +30,51 @@ def wait_for(pos, word, timeout):
     return False
 
 
+def newest_file(d):
+    # a save folder's own mtime does not change when a quick save rewrites its files: use its newest file
+    files = [os.path.join(SAVES, d, f) for f in os.listdir(os.path.join(SAVES, d))]
+    return max((os.path.getmtime(f) for f in files), default=0)
+
+
+def save_dirs():
+    return [d for d in os.listdir(SAVES) if os.path.isdir(os.path.join(SAVES, d))]
+
+
+def newest_save_time():
+    return max((newest_file(d) for d in save_dirs()), default=0)
+
+
 def main():
     pos = os.path.getsize(LOG)
-    # F9 is ignored until the world screen is up (save still loading): resend until the battery starts
-    for _ in range(20):
-        key('F9')
-        if wait_for(pos, 'START', 10):
-            break
+    if '--started' in sys.argv:
+        # battery already started by hand: follow it from its last START in the log
+        data = open(LOG, 'rb').read()
+        pos = data.rfind(b'PTEE-BATTERY: START')
+        if pos < 0:
+            sys.exit('no START in the log')
     else:
-        sys.exit('battery did not start')
+        # F9 only works on the world screen: after a failed try, Escape closes whatever screen is open
+        for i in range(20):
+            if i:
+                key('ESCAPE')
+                time.sleep(1)
+            key('F9')
+            if wait_for(pos, 'START', 10):
+                break
+        else:
+            sys.exit('battery did not start')
     if not wait_for(pos, 'PAUSE', 1500):
         sys.exit('no PAUSE (battery stuck?)')
-    time.sleep(5)   # quick save written
-    newest = max((d for d in os.listdir(SAVES) if os.path.isdir(os.path.join(SAVES, d))),
-                 key=lambda d: os.path.getmtime(os.path.join(SAVES, d)))
+    t_pause = time.time() - 30
+    # the battery quick saves at the PAUSE; the engine refuses while enemies are around: retry (F4) until written
+    for _ in range(12):
+        time.sleep(5)
+        if newest_save_time() > t_pause:
+            break
+        key('F4')
+    else:
+        sys.exit('no quick save written')
+    newest = max(save_dirs(), key=newest_file)
     open(os.path.join(GAME, 'EEex_scripts', 'PTEE_BatteryLoad.lua'), 'w', encoding='utf-8').write(f'PTEE_BAT_LOAD = "{newest}"\n')
     key('F6')
     if not wait_for(pos, 'LOAD', 30):

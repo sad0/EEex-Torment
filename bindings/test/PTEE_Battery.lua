@@ -228,26 +228,40 @@ step({ name = "api", run = function(S)
 	try("Trigger", function()
 		check("api", "trigger InParty(Myself)", EEex_Trigger_EvalConditionalStringAsAIBase("InParty(Myself)", t) == true)
 	end)
+	-- EEex_Action_ExecuteResponseStringOnAIBaseInstantly: copies / restores m_curAction through EEex_MemoryManager
+	-- (CAIAction copy + destructor; Torment inlines ~CAIAction, replaced in EEex_Alias.lua)
+	try("instant actions", function()
+		for i = 1, 5 do
+			EEex_Action_ExecuteResponseStringOnAIBaseInstantly('SetGlobal("PTEEBATI","GLOBAL",' .. i .. ')', t)
+		end
+		check("api", "instant action x5 (CAIAction copy + destruct)", EEex_GameState_GetGlobalInt("PTEEBATI") == 5,
+			EEex_GameState_GetGlobalInt("PTEEBATI"))
+	end)
 	check("api", "no Lua error in " .. calls .. " calls", errs == 0, errs .. " errors")
 end })
 
 -- 2. Companions join (party of 6), timers get one instance set per portrait
 step({ name = "companions", timeout = 30000, run = function(S)
+	-- fill the free party slots only, with companions not already in the party (nobody when the party is full)
 	S.before = EEex_Sprite_GetNumCharacters()
+	local inParty = {}
+	for _, s in ipairs(party()) do inParty[s.m_resref:get()] = true end
+	S.toJoin = {}
 	for _, c in ipairs(COMPANIONS) do
+		if #S.toJoin < 6 - S.before and not inParty[c] then table.insert(S.toJoin, c) end
+	end
+	for _, c in ipairs(S.toJoin) do
 		if #findAll(c) == 0 then q(tno(), 'CreateCreatureObject("' .. c .. '",Myself,0,0,0)') end
 	end
+	info("companions", "party of " .. S.before .. ", joining: " .. (#S.toJoin > 0 and table.concat(S.toJoin, ", ") or "nobody"))
 end, wait = function(S)
 	if not S.joined then
-		local all = true
-		for _, c in ipairs(COMPANIONS) do if #findAll(c) == 0 then all = false end end
-		if all then
-			for _, c in ipairs(COMPANIONS) do
-				local s = findAll(c)[1]
-				if EEex_Sprite_GetPortraitIndex(s) == -1 then q(s, "JoinParty()") end
-			end
-			S.joined = true
+		for _, c in ipairs(S.toJoin) do if #findAll(c) == 0 then return false end end
+		for _, c in ipairs(S.toJoin) do
+			local s = findAll(c)[1]
+			if EEex_Sprite_GetPortraitIndex(s) == -1 then q(s, "JoinParty()") end
 		end
+		S.joined = true
 		return false
 	end
 	return EEex_Sprite_GetNumCharacters() >= 6
@@ -676,6 +690,26 @@ function PTEE_Battery_Tick()
 end
 
 EEex_Menu_AddMainFileLoadedListener(function() EEex_Menu_LoadFile("PTEEBAT") end)
+
+-- the engine refuses to save with enemies around: the test removes the hostile creatures (EA >= 200) of the area
+function PTEE_BAT_ClearHostiles()
+	local t, n = tno(), 0
+	for _, obj in ipairs(EEex_Area_GetAllOfTypeStringInRange(t.m_pArea, t.m_pos.x, t.m_pos.y, "[ANYONE]", 0x7FFF, false, false)) do
+		if EEex_GameObject_IsSprite(obj, false) and obj.m_typeAI.m_EnemyAlly >= 200 and EEex_Sprite_GetPortraitIndex(obj) == -1 then
+			q(obj, "DestroySelf()")
+			n = n + 1
+		end
+	end
+	return n
+end
+
+-- F4: quick save again (the engine refuses it while enemies are around; tools/battery.py retries until one is written)
+EEex_Key_AddPressedListener(function(key)
+	if key ~= EEex_Key_GetFromName("F4") or B.running then return end
+	unpause()
+	log("SAVE", "quick save (" .. PTEE_BAT_ClearHostiles() .. " hostiles removed)")
+	worldScreen:OnQuickSaveButtonClick(false)
+end)
 
 -- F5: scripted RestParty() (vanilla Torment hang, fixed in EEex_Fix_Patch.lua): logs HP before, then after 20 s
 EEex_Key_AddPressedListener(function(key)

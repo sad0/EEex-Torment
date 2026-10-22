@@ -4,6 +4,7 @@
 import ctypes, ctypes.wintypes as W, sys, time
 user32 = ctypes.WinDLL('user32', use_last_error=True)
 VK = {f'F{i}': 0x6f + i for i in range(1, 13)}
+VK.update({'ESCAPE': 0x1b, 'RETURN': 0x0d, 'SPACE': 0x20})
 WM_KEYDOWN, WM_KEYUP = 0x100, 0x101
 
 
