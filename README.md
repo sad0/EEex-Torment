@@ -3,6 +3,10 @@
 A port of [Bubb's EEex](https://github.com/Bubb13/EEex) v1.3.1 (with InfinityLoader) to
 **Planescape: Torment: Enhanced Edition v3.2.2.0** (Steam build, x64, Lua 5.2).
 
+> **This is a fork of [EEex](https://github.com/Bubb13/EEex) and [InfinityLoader](https://github.com/Bubb13/InfinityLoader)
+> by Bubb, published with his permission. It supports PST:EE only.** For any other game, use the original EEex.
+> Report problems with this port here, not to Bubb.
+
 Everything EEex does on BG2EE runs on Torment: the loader, the full pattern database, LuaBindings for Torment's
 structs, EEex.dll, the whole Lua layer (hooks, opcodes 400-409, actions / triggers / objects, extended stats,
 options menu, B3 modules) and a WeiDU installer. Torment's own behaviour is kept where it differs from BG.
