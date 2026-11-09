@@ -60,6 +60,10 @@ def load(name, pos):
 
 
 def main():
+    # test copies never sync with Steam Cloud (test saves leaked into John's real cloud saves): steam_appid.txt must
+    # stay renamed to steam_appid.txt.disabled in the dev game
+    if os.path.exists(os.path.join(GAME, 'steam_appid.txt')):
+        sys.exit('steam_appid.txt present in the dev game: rename it to steam_appid.txt.disabled first (no Steam Cloud)')
     pos = os.path.getsize(LOG)
     if '--load' in sys.argv:
         # start from a known save (e.g. 000000013-eeex-battery): a quick save left by a stopped run can be mid-travel
